@@ -1,23 +1,25 @@
 import copy
 from sympy import sin, cos, tan, sqrt, pi, Float, Integer
-from symbolic_solver.aux_tools.utils import number_round
+from sympy.parsing import parse_expr
+from solver.aux_tools.utils import number_round
 
 
-class FormalLanguageParser:
+class Parser:
+    operator_predicate = ["Add", "Sub", "Mul", "Div", "Pow", "Mod", "Sqrt", "Sin", "Cos", "Tan"]
+
     @staticmethod
-    def _parse_one_predicate(s, make_vars=False):
+    def parse_geo_predicate(s, make_vars=False):
         """
         parse s to get predicate, para, and structural msg.
-        >> _parse_one_predicate('Predicate(ABC)')
+        >> parse_geo_predicate('Predicate(ABC)')
         ('Predicate', ['A', 'B', 'C'], [3])
-        >> _parse_one_predicate('Predicate(ABC, DE)', True)
+        >> parse_geo_predicate('Predicate(ABC, DE)', True)
         ('Predicate', ['a', 'b', 'c', 'd', 'e'], [3, 2])
         """
         predicate_name, para = s.split("(")
+        para = para.replace(")", "")
         if make_vars:
-            para = para.replace(")", "").lower()
-        else:
-            para = para.replace(")", "")
+            para = para.lower()
 
         if "," not in para:
             return predicate_name, list(para), [len(para)]
@@ -28,74 +30,155 @@ class FormalLanguageParser:
         return predicate_name, list("".join(para)), para_len
 
     @staticmethod
+    def parse_equal_predicate(s, make_vars=False):
+        """
+        Parse s to a Tree.
+        >> _parse_equal_predicate('Equal(LengthOfLine(OA),LengthOfLine(OB))', True)
+        ['Equal', [['LengthOfLine', ['o', 'a']], ['LengthOfLine', ['o', 'b']]]]
+        >> _parse_equal_predicate('Equal(Length(AB),Length(CD))')
+        ['Equal', [[Length, ['A', 'B']], [Length, ['C', 'D']]]]
+        """
+        s = s[6:len(s) - 1]
+        count = 0
+        m = 0
+        for i in range(len(s)):
+            if s[i] == "(":
+                count += 1
+            elif s[i] == ")":
+                count -= 1
+
+            if count == 0 and s[i] == ",":
+                m = i
+
+        if count != 0:
+            e_msg = "Sym stack not empty. Miss ')' in {}?.".format(s)
+            raise Exception(e_msg)
+
+        left = s[0:m]
+        right = s[m + 1:len(s)]
+        attrs = []
+        if left[0].isupper():
+            left, l_attrs = Parser.parse_to_tree(left, make_vars)
+            attrs += l_attrs
+        if right[0].isupper():
+            right, l_attrs = Parser.parse_to_tree(right, make_vars)
+            attrs += l_attrs
+
+        return ("Equal", (left, right)), attrs
+
+    @staticmethod
+    def parse_to_tree(s, make_vars=False):
+        attrs = []
+        i = 0
+        j = 0
+        stack = []
+        while j < len(s):
+            if s[j] == "(":
+                stack.append(s[i:j])
+                stack.append(s[j])
+                i = j + 1
+
+            elif s[j] == ",":
+                if i < j:
+                    stack.append(s[i: j])
+                    i = j + 1
+                else:
+                    i = i + 1
+
+            elif s[j] == ")":
+                if i < j:
+                    stack.append(s[i: j])
+                    i = j + 1
+                else:
+                    i = i + 1
+
+                paras = []
+                while stack[-1] != "(":
+                    paras.append(stack.pop())
+                stack.pop()  # pop '('
+                predicate = stack.pop()
+                if predicate in Parser.operator_predicate:  # not attribution
+                    stack.append((predicate, tuple(paras[::-1])))
+                else:  # attribution
+                    paras = tuple("".join(paras[::-1]).lower() if make_vars else "".join(paras[::-1]))
+                    stack.append((predicate, paras))
+                    attrs.append((predicate, paras))
+
+            j = j + 1
+
+        return stack.pop(), attrs
+
+
+class GDLParser(Parser):
+    @staticmethod
     def parse_predicate(predicate_GDL):
         """parse predicate_GDL to logic form."""
         parsed_GDL = {  # preset Construction
-            "FixLength": predicate_GDL["Preset"]["FixLength"],
-            "VariableLength": predicate_GDL["Preset"]["VariableLength"],
-            "Construction": predicate_GDL["Preset"]["Construction"],
-            "BasicEntity": predicate_GDL["Preset"]["BasicEntity"],
+            "FixLength": tuple(predicate_GDL["Preset"]["FixLength"]),
+            "VariableLength": tuple(predicate_GDL["Preset"]["VariableLength"]),
+            "Construction": tuple(predicate_GDL["Preset"]["Construction"]),
+            "BasicEntity": tuple(predicate_GDL["Preset"]["BasicEntity"]),
             "Entity": {},
             "Relation": {},
             "Attribution": {}
         }
         entities = predicate_GDL["Entity"]  # parse entity
         for item in entities:
-            name, para, para_len = FormalLanguageParser._parse_one_predicate(item, True)
+            name, para, para_len = GDLParser.parse_geo_predicate(item, True)
             parsed_GDL["Entity"][name] = {
-                "vars": para,
-                "para_len": para_len,
-                "ee_check": FormalLanguageParser._parse_ee_check(entities[item]["ee_check"]),
-                "multi": FormalLanguageParser._parse_multi(entities[item]["multi"]),
-                "extend": FormalLanguageParser._parse_extend(entities[item]["extend"])
+                "vars": tuple(para),
+                "para_len": tuple(para_len),
+                "ee_check": tuple(GDLParser.parse_ee_check(entities[item]["ee_check"])),
+                "multi": tuple(GDLParser.parse_multi(entities[item]["multi"])),
+                "extend": tuple(GDLParser.parse_extend(entities[item]["extend"]))
             }
 
         relations = predicate_GDL["Relation"]  # parse relation
         for item in relations:
-            name, para, para_len = FormalLanguageParser._parse_one_predicate(item, True)
+            name, para, para_len = GDLParser.parse_geo_predicate(item, True)
             if "fv_check" in relations[item]:
                 parsed_GDL["Relation"][name] = {
-                    "vars": para,
-                    "para_len": para_len,
-                    "ee_check": FormalLanguageParser._parse_ee_check(relations[item]["ee_check"]),
-                    "fv_check": FormalLanguageParser._parse_fv_check(relations[item]["fv_check"]),
-                    "multi": FormalLanguageParser._parse_multi(relations[item]["multi"]),
-                    "extend": FormalLanguageParser._parse_extend(relations[item]["extend"])
+                    "vars": tuple(para),
+                    "para_len": tuple(para_len),
+                    "ee_check": tuple(GDLParser.parse_ee_check(relations[item]["ee_check"])),
+                    "fv_check": tuple(GDLParser.parse_fv_check(relations[item]["fv_check"])),
+                    "multi": tuple(GDLParser.parse_multi(relations[item]["multi"])),
+                    "extend": tuple(GDLParser.parse_extend(relations[item]["extend"]))
                 }
             else:
                 parsed_GDL["Relation"][name] = {
-                    "vars": para,
-                    "para_len": para_len,
-                    "ee_check": FormalLanguageParser._parse_ee_check(relations[item]["ee_check"]),
-                    "multi": FormalLanguageParser._parse_multi(relations[item]["multi"]),
-                    "extend": FormalLanguageParser._parse_extend(relations[item]["extend"])
+                    "vars": tuple(para),
+                    "para_len": tuple(para_len),
+                    "ee_check": tuple(GDLParser.parse_ee_check(relations[item]["ee_check"])),
+                    "multi": tuple(GDLParser.parse_multi(relations[item]["multi"])),
+                    "extend": tuple(GDLParser.parse_extend(relations[item]["extend"]))
                 }
 
         attributions = predicate_GDL["Attribution"]  # parse attribution
         for item in attributions:
-            name, para, para_len = FormalLanguageParser._parse_one_predicate(item, True)
+            name, para, para_len = GDLParser.parse_geo_predicate(item, True)
             if "fv_check" in attributions[item]:
                 parsed_GDL["Attribution"][name] = {
-                    "vars": para,
-                    "para_len": para_len,
-                    "ee_check": FormalLanguageParser._parse_ee_check(attributions[item]["ee_check"]),
-                    "fv_check": FormalLanguageParser._parse_fv_check(attributions[item]["fv_check"]),
+                    "vars": tuple(para),
+                    "para_len": tuple(para_len),
+                    "ee_check": tuple(GDLParser.parse_ee_check(attributions[item]["ee_check"])),
+                    "fv_check": tuple(GDLParser.parse_fv_check(attributions[item]["fv_check"])),
                     "sym": attributions[item]["sym"],
-                    "multi": FormalLanguageParser._parse_multi(attributions[item]["multi"])
+                    "multi": tuple(GDLParser.parse_multi(attributions[item]["multi"]))
                 }
             else:
                 parsed_GDL["Attribution"][name] = {
-                    "vars": para,
-                    "para_len": para_len,
-                    "ee_check": FormalLanguageParser._parse_ee_check(attributions[item]["ee_check"]),
+                    "vars": tuple(para),
+                    "para_len": tuple(para_len),
+                    "ee_check": tuple(GDLParser.parse_ee_check(attributions[item]["ee_check"])),
                     "sym": attributions[item]["sym"],
-                    "multi": FormalLanguageParser._parse_multi(attributions[item]["multi"])
+                    "multi": tuple(GDLParser.parse_multi(attributions[item]["multi"]))
                 }
 
         return parsed_GDL
 
     @staticmethod
-    def _parse_ee_check(ee_check):
+    def parse_ee_check(ee_check):
         """
         parse ee_check to logic form.
         >> _parse_ee_check(['Triangle(ABC)'])
@@ -105,12 +188,12 @@ class FormalLanguageParser:
         """
         results = []
         for item in ee_check:
-            name, item_para, _ = FormalLanguageParser._parse_one_predicate(item, True)
-            results.append([name, item_para])
+            name, item_para, _ = GDLParser.parse_geo_predicate(item, True)
+            results.append((name, tuple(item_para)))
         return results
 
     @staticmethod
-    def _parse_fv_check(fv_check):
+    def parse_fv_check(fv_check):
         """
         parse fv_check to logic form.
         >> _parse_fv_check(['O,AB,CD'])
@@ -130,7 +213,7 @@ class FormalLanguageParser:
         return results
 
     @staticmethod
-    def _parse_multi(multi):
+    def parse_multi(multi):
         """
         parse multi to logic form.
         >> _parse_multi(['BCA', 'CAB'])
@@ -138,10 +221,10 @@ class FormalLanguageParser:
         >> _parse_multi(['M,BA'])
         [['m', 'b', 'a']]
         """
-        return [list(parsed_multi.replace(",", "").lower()) for parsed_multi in multi]
+        return [tuple(parsed_multi.replace(",", "").lower()) for parsed_multi in multi]
 
     @staticmethod
-    def _parse_extend(extend_items):
+    def parse_extend(extend_items):
         """
         parse extend to logic form.
         >> _parse_extend(['Equal(MeasureOfAngle(AOC),90)'])
@@ -152,11 +235,11 @@ class FormalLanguageParser:
         results = []
         for extend in extend_items:
             if extend.startswith("Equal"):
-                parsed_equal, _ = FormalLanguageParser._parse_equal_predicate(extend, True)
+                parsed_equal, _ = GDLParser.parse_equal_predicate(extend, True)
                 results.append(parsed_equal)
             else:
-                extend_name, extend_para, _ = FormalLanguageParser._parse_one_predicate(extend, True)
-                results.append([extend_name, extend_para])
+                extend_name, extend_para, _ = GDLParser.parse_geo_predicate(extend, True)
+                results.append((extend_name, tuple(extend_para)))
         return results
 
     @staticmethod
@@ -165,16 +248,16 @@ class FormalLanguageParser:
         parsed_GDL = {}
 
         for theorem_name in theorem_GDL:
-            name, para, para_len = FormalLanguageParser._parse_one_predicate(theorem_name, True)
+            name, para, para_len = GDLParser.parse_geo_predicate(theorem_name, True)
             p1 = set(para)
 
             body = {}
             branch_count = 1
             for branch in theorem_GDL[theorem_name]:
                 raw_premise_GDL = [theorem_GDL[theorem_name][branch]["premise"]]
-                parsed_premise, paras_list = FormalLanguageParser._parse_premise(raw_premise_GDL)
+                parsed_premise, paras_list = GDLParser.parse_premise(raw_premise_GDL)
                 raw_theorem_GDL = theorem_GDL[theorem_name][branch]["conclusion"]
-                parsed_conclusion, paras = FormalLanguageParser._parse_conclusion(raw_theorem_GDL)
+                parsed_conclusion, paras = GDLParser.parse_conclusion(raw_theorem_GDL)
 
                 p2 = set(paras)
                 if len(p2 - p1) > 0:
@@ -191,15 +274,15 @@ class FormalLanguageParser:
                     branch_count += 1
 
             parsed_GDL[name] = {
-                "vars": para,
-                "para_len": para_len,
+                "vars": tuple(para),
+                "para_len": tuple(para_len),
                 "body": body
             }
 
         for predicate in parsed_predicate_GDL["Entity"]:
-            conclusions = copy.copy(parsed_predicate_GDL["Entity"][predicate]["extend"])
+            conclusions = list(parsed_predicate_GDL["Entity"][predicate]["extend"])
             for multi in parsed_predicate_GDL["Entity"][predicate]["multi"]:
-                conclusions.append([predicate, multi])
+                conclusions.append((predicate, multi))
             if len(conclusions) == 0:
                 continue
 
@@ -216,20 +299,20 @@ class FormalLanguageParser:
                 "para_len": parsed_predicate_GDL["Entity"][predicate]["para_len"],
                 "body": {
                     "1": {
-                        "products": [[predicate, parsed_predicate_GDL["Entity"][predicate]["vars"]]],
-                        "logic_constraints": [],
-                        "algebra_constraints": [],
-                        "attr_in_algebra_constraints": [],
-                        "conclusions": conclusions,
-                        "attr_in_conclusions": []
+                        "products": ((predicate, parsed_predicate_GDL["Entity"][predicate]["vars"]),),
+                        "logic_constraints": (),
+                        "algebra_constraints": (),
+                        "attr_in_algebra_constraints": (),
+                        "conclusions": tuple(conclusions),
+                        "attr_in_conclusions": ()
                     }
                 }
             }
 
         for predicate in parsed_predicate_GDL["Relation"]:
-            conclusions = copy.copy(parsed_predicate_GDL["Relation"][predicate]["extend"])
+            conclusions = list(parsed_predicate_GDL["Relation"][predicate]["extend"])
             for multi in parsed_predicate_GDL["Relation"][predicate]["multi"]:
-                conclusions.append([predicate, multi])
+                conclusions.append((predicate, multi))
             if len(conclusions) == 0:
                 continue
 
@@ -246,19 +329,20 @@ class FormalLanguageParser:
                 "para_len": parsed_predicate_GDL["Relation"][predicate]["para_len"],
                 "body": {
                     "1": {
-                        "products": [[predicate, parsed_predicate_GDL["Relation"][predicate]["vars"]]],
-                        "logic_constraints": [],
-                        "algebra_constraints": [],
-                        "attr_in_algebra_constraints": [],
-                        "conclusions": conclusions,
-                        "attr_in_conclusions": []
+                        "products": ((predicate, parsed_predicate_GDL["Relation"][predicate]["vars"]),),
+                        "logic_constraints": (),
+                        "algebra_constraints": (),
+                        "attr_in_algebra_constraints": (),
+                        "conclusions": tuple(conclusions),
+                        "attr_in_conclusions": ()
                     }
                 }
             }
+
         return parsed_GDL
 
     @staticmethod
-    def _parse_premise(premise_GDL):
+    def parse_premise(premise_GDL):
         """
         Convert geometric logic statements into disjunctive normal forms.
         A&(B|C) ==> A&B|A&C ==> [[A, B], [A, C]]
@@ -323,13 +407,13 @@ class FormalLanguageParser:
             paras = []
             for j in range(len(premise_GDL[i])):
                 if "Equal" in premise_GDL[i][j]:
-                    premise_GDL[i][j], eq_attrs = FormalLanguageParser._parse_equal_predicate(premise_GDL[i][j], True)
+                    premise_GDL[i][j], eq_attrs = GDLParser.parse_equal_predicate(premise_GDL[i][j], True)
                     attrs += eq_attrs
                     for attr, para in eq_attrs:
                         paras += list(para)
                 else:
-                    predicate, para, _ = FormalLanguageParser._parse_one_predicate(premise_GDL[i][j], True)
-                    premise_GDL[i][j] = [predicate, para]
+                    predicate, para, _ = GDLParser.parse_geo_predicate(premise_GDL[i][j], True)
+                    premise_GDL[i][j] = (predicate, tuple(para))
                     paras += para
 
             product = []
@@ -345,17 +429,17 @@ class FormalLanguageParser:
                     existing_paras = existing_paras | set(premise_GDL[i][j][1])
                     product.append(premise_GDL[i][j])
             premise_GDL[i] = {
-                "products": product,
-                "logic_constraints": logic_constraint,
-                "algebra_constraints": algebra_constraint,
-                "attr_in_algebra_constraints": [[attr, list(para)] for attr, para in set(attrs)]
+                "products": tuple(product),
+                "logic_constraints": tuple(logic_constraint),
+                "algebra_constraints": tuple(algebra_constraint),
+                "attr_in_algebra_constraints": tuple([(attr, tuple(para)) for attr, para in set(attrs)])
             }
             paras_list.append(paras)
 
         return premise_GDL, paras_list
 
     @staticmethod
-    def _parse_conclusion(conclusion_GDL):
+    def parse_conclusion(conclusion_GDL):
         """
         parse conclusion to logic form.
         >> _parse_conclusion(['Similar(ABC,ADE)'])
@@ -365,27 +449,29 @@ class FormalLanguageParser:
         attrs = []
         for i in range(len(conclusion_GDL)):
             if "Equal" in conclusion_GDL[i]:
-                conclusion_GDL[i], eq_attrs = FormalLanguageParser._parse_equal_predicate(conclusion_GDL[i], True)
+                conclusion_GDL[i], eq_attrs = GDLParser.parse_equal_predicate(conclusion_GDL[i], True)
                 attrs += eq_attrs
                 for attr, para in eq_attrs:
                     paras += list(para)
             else:
-                predicate, para, _ = FormalLanguageParser._parse_one_predicate(conclusion_GDL[i], True)
-                conclusion_GDL[i] = [predicate, para]
+                predicate, para, _ = GDLParser.parse_geo_predicate(conclusion_GDL[i], True)
+                conclusion_GDL[i] = (predicate, tuple(para))
                 paras += para
 
         parsed_conclusion_GDL = {
-            "conclusions": conclusion_GDL,
-            "attr_in_conclusions": [[attr, list(para)] for attr, para in set(attrs)]
+            "conclusions": tuple(conclusion_GDL),
+            "attr_in_conclusions": tuple([(attr, tuple(para)) for attr, para in set(attrs)])
         }
         return parsed_conclusion_GDL, paras
+
+
+class CDLParser(Parser):
 
     @staticmethod
     def parse_problem(problem_CDL):
         """parse problem_CDL to logic form."""
         parsed_CDL = {
             "id": problem_CDL["problem_id"],
-            "annotation": problem_CDL["annotation"],
             "cdl": {
                 "construction_cdl": problem_CDL["construction_cdl"],
                 "text_cdl": problem_CDL["text_cdl"],
@@ -413,24 +499,32 @@ class FormalLanguageParser:
 
         for fl in problem_CDL["text_cdl"] + problem_CDL["image_cdl"]:
             if fl.startswith("Equal"):
-                parsed_equal, _ = FormalLanguageParser._parse_equal_predicate(fl)
+                parsed_equal, _ = CDLParser.parse_equal_predicate(fl)
                 parsed_CDL["parsed_cdl"]["text_and_image_cdl"].append(parsed_equal)
+            elif fl.startswith("Equation"):
+                fl = fl.replace("Equation(", "")
+                fl = fl[0:len(fl) - 1]
+                parsed_CDL["parsed_cdl"]["text_and_image_cdl"].append(("Equation", fl))
             else:
-                predicate, para, _ = FormalLanguageParser._parse_one_predicate(fl)
+                predicate, para, _ = CDLParser.parse_geo_predicate(fl)
                 parsed_CDL["parsed_cdl"]["text_and_image_cdl"].append([predicate, para])
 
         if problem_CDL["goal_cdl"].startswith("Value"):
             parsed_CDL["parsed_cdl"]["goal"]["type"] = "value"
-            parsed_goal, _ = FormalLanguageParser._parse_equal_predicate(problem_CDL["goal_cdl"])
-            parsed_CDL["parsed_cdl"]["goal"]["item"] = parsed_goal
+            parsed_goal = problem_CDL["goal_cdl"][6:len(problem_CDL["goal_cdl"]) - 1]
+            if parsed_goal[0].isupper():
+                parsed_CDL["parsed_cdl"]["goal"]["item"] = ("Value", CDLParser.parse_to_tree(parsed_goal))
+            else:
+                parsed_CDL["parsed_cdl"]["goal"]["item"] = ("Value", parsed_goal)
             parsed_CDL["parsed_cdl"]["goal"]["answer"] = problem_CDL["problem_answer"]
         elif problem_CDL["goal_cdl"].startswith("Equal"):
             parsed_CDL["parsed_cdl"]["goal"]["type"] = "equal"
-            parsed_goal, _ = FormalLanguageParser._parse_equal_predicate(problem_CDL["goal_cdl"])
+            parsed_goal, _ = CDLParser.parse_equal_predicate(problem_CDL["goal_cdl"])
             parsed_CDL["parsed_cdl"]["goal"]["item"] = parsed_goal
+            parsed_CDL["parsed_cdl"]["goal"]["answer"] = "0"
         elif problem_CDL["goal_cdl"].startswith("Relation"):
             parsed_CDL["parsed_cdl"]["goal"]["type"] = "logic"
-            predicate, para, _ = FormalLanguageParser._parse_one_predicate(
+            predicate, para, _ = CDLParser.parse_geo_predicate(
                 problem_CDL["goal_cdl"].split("(", 1)[1])
             parsed_CDL["parsed_cdl"]["goal"]["item"] = predicate
             parsed_CDL["parsed_cdl"]["goal"]["answer"] = para
@@ -446,75 +540,10 @@ class FormalLanguageParser:
             if "(" not in theorem:
                 results.append([theorem, None])
             else:
-                name, para, _ = FormalLanguageParser._parse_one_predicate(theorem)
+                name, para, _ = CDLParser.parse_geo_predicate(theorem)
                 results.append([name, para])
 
         return results
-
-    @staticmethod
-    def _parse_equal_predicate(s, make_vars=False):
-        """
-        Parse s to a Tree.
-        >> _parse_equal_predicate('Equal(LengthOfLine(OA),LengthOfLine(OB))', True)
-        ['Equal', [['LengthOfLine', ['o', 'a']], ['LengthOfLine', ['o', 'b']]]]
-        >> _parse_equal_predicate('Equal(Length(AB),Length(CD))')
-        ['Equal', [[Length, ['A', 'B']], [Length, ['C', 'D']]]]
-        """
-        attrs = []
-        i = 0
-        j = 0
-        stack = []
-        while j < len(s):
-            if s[j] == "(":
-                stack.append(s[i:j])
-                stack.append(s[j])
-                i = j + 1
-
-            elif s[j] == ",":
-                if i < j:
-                    stack.append(s[i: j])
-                    i = j + 1
-                else:
-                    i = i + 1
-
-            elif s[j] == ")":
-                if i < j:
-                    stack.append(s[i: j])
-                    i = j + 1
-                else:
-                    i = i + 1
-
-                paras = []
-                while stack[-1] != "(":
-                    paras.append(stack.pop())
-                stack.pop()  # pop '('
-                predicate = stack.pop()
-                if predicate in EquationParser.operator_predicate or \
-                        predicate in ["Value", "Equal", "Relation"]:  # not attribution
-                    stack.append([predicate, paras[::-1]])
-                else:  # attribution
-                    paras = list("".join(paras[::-1]).lower() if make_vars else "".join(paras[::-1]))
-                    stack.append([predicate, paras])
-                    attrs.append((predicate, tuple(paras)))
-
-            j = j + 1
-
-        if len(stack) > 1:
-            e_msg = "Sym stack not empty. Miss ')' in {}?.".format(s)
-            raise Exception(e_msg)
-        return stack.pop(), attrs
-
-
-class EquationParser:
-    operator_predicate = ["Add", "Sub", "Mul", "Div", "Pow", "Mod", "Sqrt", "Sin", "Cos", "Tan"]
-    operator = ["+", "-", "*", "/", "^", "@", "#", "$", "√", "%", "{", "}", "~"]
-    stack_priority = {"+": 1, "-": 1, "*": 2, "/": 2, "^": 3, "%": 3, "√": 4,
-                      "@": 4, "#": 4, "$": 4,
-                      "{": 0, "}": None, "~": 0,
-                      }
-    outside_priority = {"+": 1, "-": 1, "*": 2, "/": 2, "^": 3, "%": 3, "√": 4,
-                        "{": 5, "}": 0,
-                        "@": 4, "#": 4, "$": 4, "~": 0}
 
     @staticmethod
     def get_equation_from_tree(problem, tree, replaced=False, letters=None):
@@ -525,10 +554,10 @@ class EquationParser:
         >> get_expr_from_tree(problem, [['LengthOfLine', ['Z', 'X']], '2*x-14'])
         - 2.0*f_x + l_zx + 14.0
         """
-        left_expr = EquationParser.get_expr_from_tree(problem, tree[0], replaced, letters)
+        left_expr = CDLParser.get_expr_from_tree(problem, tree[0], replaced, letters)
         if left_expr is None:
             return None
-        right_expr = EquationParser.get_expr_from_tree(problem, tree[1], replaced, letters)
+        right_expr = CDLParser.get_expr_from_tree(problem, tree[1], replaced, letters)
         if right_expr is None:
             return None
         return left_expr - right_expr
@@ -549,8 +578,8 @@ class EquationParser:
                               True, {'a': 'X', 'b': 'Y', 'c': 'Z'})
         sin(pi*m_zxy/180)
         """
-        if not isinstance(tree, list):  # expr
-            return EquationParser._parse_expr(problem, tree)
+        if not isinstance(tree, tuple):  # expr
+            return CDLParser.parse_expr(problem, tree)
         if tree[0] in problem.predicate_GDL["Attribution"]:  # attr
             if not replaced:
                 return problem.get_sym_of_attr(tree[0], tuple(tree[1]))
@@ -561,7 +590,7 @@ class EquationParser:
         if tree[0] in ["Add", "Mul"]:  # operate
             expr_list = []
             for item in tree[1]:
-                expr = EquationParser.get_expr_from_tree(problem, item, replaced, letters)
+                expr = CDLParser.get_expr_from_tree(problem, item, replaced, letters)
                 if expr is None:
                     return None
                 expr_list.append(expr)
@@ -575,10 +604,10 @@ class EquationParser:
                     result *= expr
             return result
         elif tree[0] in ["Sub", "Div", "Pow", "Mod"]:
-            expr_left = EquationParser.get_expr_from_tree(problem, tree[1][0], replaced, letters)
+            expr_left = CDLParser.get_expr_from_tree(problem, tree[1][0], replaced, letters)
             if expr_left is None:
                 return None
-            expr_right = EquationParser.get_expr_from_tree(problem, tree[1][1], replaced, letters)
+            expr_right = CDLParser.get_expr_from_tree(problem, tree[1][1], replaced, letters)
             if expr_right is None:
                 return None
             if tree[0] == "Sub":
@@ -590,7 +619,7 @@ class EquationParser:
             else:
                 return expr_left % expr_right
         elif tree[0] in ["Sin", "Cos", "Tan", "Sqrt"]:
-            expr = EquationParser.get_expr_from_tree(problem, tree[1][0], replaced, letters)
+            expr = CDLParser.get_expr_from_tree(problem, tree[1][0], replaced, letters)
             if expr is None:
                 return None
             if tree[0] == "Sin":
@@ -606,89 +635,33 @@ class EquationParser:
             raise Exception(e_msg)
 
     @staticmethod
-    def _parse_expr(problem, expr):
-        """Parse the expression in <str> form into <symbolic> form"""
-        i = 0
-        expr_list = []
-        for j in range(len(expr)):  # to list
-            if expr[j] in EquationParser.operator:
-                if i < j:
-                    expr_list.append(expr[i:j])
-                expr_list.append(expr[j])
-                i = j + 1
-        if i < len(expr):
-            expr_list.append(expr[i:len(expr)])
-        expr_list.append("~")
-
-        expr_stack = []
-        operator_stack = ["~"]  # stack bottom element
-
-        i = 0
-        while i < len(expr_list):
-            unit = expr_list[i]
-            if unit in EquationParser.operator:  # operator
-                if EquationParser.stack_priority[operator_stack[-1]] < EquationParser.outside_priority[unit]:
-                    operator_stack.append(unit)
-                    i = i + 1
-                else:
-                    operator_unit = operator_stack.pop()
-                    if operator_unit == "+":
-                        expr_2 = expr_stack.pop()
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(expr_1 + expr_2)
-                    elif operator_unit == "-":
-                        expr_2 = expr_stack.pop()
-                        expr_1 = 0 if len(expr_stack) == 0 else expr_stack.pop()
-                        expr_stack.append(expr_1 - expr_2)
-                    elif operator_unit == "*":
-                        expr_2 = expr_stack.pop()
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(expr_1 * expr_2)
-                    elif operator_unit == "/":
-                        expr_2 = expr_stack.pop()
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(expr_1 / expr_2)
-                    elif operator_unit == "^":
-                        expr_2 = expr_stack.pop()
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(expr_1 ** expr_2)
-                    elif operator_unit == "%":
-                        expr_2 = expr_stack.pop()
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(expr_1 % expr_2)
-                    elif operator_unit == "√":
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(sqrt(expr_1))
-                    elif operator_unit == "@":  # sin
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(sin(expr_1))
-                    elif operator_unit == "#":  # cos
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(cos(expr_1))
-                    elif operator_unit == "$":  # tan
-                        expr_1 = expr_stack.pop()
-                        expr_stack.append(tan(expr_1))
-                    elif operator_unit == "{":  # 只有unit为"}"，才能到达这个判断
-                        i = i + 1
-                    elif operator_unit == "~":  # 只有unit为"~"，才能到达这个判断，表示表达式处理完成
+    def parse_expr(problem, expr):
+        """Parse expression to symbolic form."""
+        expr = parse_expr(expr)
+        valid = True
+        for sym in expr.free_symbols:
+            if "_" not in str(sym):
+                if problem.get_sym_of_attr("Free", str(sym)) is None:
+                    valid = False
+                    break
+            else:
+                sym, para = str(sym).split("_", 1)
+                para = tuple(para.upper())
+                attr_GDL = problem.predicate_GDL["Attribution"]
+                in_GDL = False
+                for attr_name in attr_GDL:
+                    if attr_GDL[attr_name]["sym"] == sym:
+                        in_GDL = True
+                        if problem.get_sym_of_attr(attr_name, para) is None:
+                            valid = False
                         break
-            else:  # symbol or number
-                if unit == "π":  # pi
-                    unit = pi
-                elif unit.isalpha():  # free sym
-                    unit = problem.get_sym_of_attr("Free", (unit,))
-                elif "." in unit:  # float
-                    unit = Float(unit)
-                else:  # int
-                    unit = Integer(unit)
-                expr_stack.append(unit)
-                i = i + 1
+                if not in_GDL:
+                    valid = False
+                    break
 
-        if len(expr_stack) > 1:
-            e_msg = "Wrong format: {}.".format(expr)
-            raise Exception(e_msg)
-
-        return number_round(expr_stack.pop())
+        if valid:
+            return expr
+        return None
 
 
 class InverseParser:

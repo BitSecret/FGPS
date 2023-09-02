@@ -1,0 +1,35 @@
+{
+  "problem_id": 6262,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8886",
+  "problem_level": 1,
+  "problem_text_cn": "过正方形ABCD的顶点作直线l,分别过A、C作L的垂线,垂足为E、F,若AE=3,CF=1,则AB=()",
+  "problem_text_en": "Draw a straight line l through the apex of the square ABCD, and draw a perpendicular line to L through A and C respectively. The vertical feet are E and F. If AE = N_0, CF = N_1, then AB = ()",
+  "problem_img": "6262.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(BC,CF,FE,EB)",
+    "Shape(AE,EF,FG,GD,DA)",
+    "Shape(FC,CG,GF)",
+    "Collinear(BEFG)",
+    "Collinear(CGD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AE),3)",
+    "Equal(LengthOfLine(CF),1)",
+    "Square(ABCD)",
+    "PerpendicularBetweenLine(BE,AE)",
+    "PerpendicularBetweenLine(CF,EF)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "sqrt(10)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BCF)",
+    "angle_addition(ABE,EBC)",
+    "congruent_triangle_judgment_aas(ABE,BCF)",
+    "congruent_triangle_property_line_equal(ABE,BCF)",
+    "right_triangle_judgment_angle(BEA)",
+    "right_triangle_property_pythagorean(BEA)"
+  ]
+}

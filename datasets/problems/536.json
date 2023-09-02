@@ -1,0 +1,35 @@
+{
+  "problem_id": 536,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-549",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of \\angle 6 if A B \\perp B C.",
+  "problem_img": "536.png",
+  "construction_cdl": [
+    "Shape(AD,DG,GA)",
+    "Shape(GB,BF,FG)",
+    "Shape(FB,BC,CF)",
+    "Shape(EF,FC)",
+    "Shape(AG,GF)",
+    "Collinear(DGFC)",
+    "Collinear(AGB)",
+    "Collinear(BFE)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AB,CB)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(AGF),104)",
+    "Equal(MeasureOfAngle(EFC),40)",
+    "Equal(MeasureOfAngle(ADG),36)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(FBC))",
+  "problem_answer": "26",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AGC,CGB)",
+    "adjacent_complementary_angle(EFC,CFB)",
+    "triangle_property_angle_sum(GBC)",
+    "triangle_property_angle_sum(FBC)"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "problem_id": 1623,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1683",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "W X Y Z is a square. If W T = 3, find m \\angle W T Z.",
+  "problem_img": "1623.png",
+  "construction_cdl": [
+    "Shape(WX,XT,TW)",
+    "Shape(XY,YT,TX)",
+    "Shape(TY,YZ,ZT)",
+    "Shape(WT,TZ,ZW)",
+    "Collinear(XTZ)",
+    "Collinear(YTW)"
+  ],
+  "text_cdl": [
+    "Square(WXYZ)",
+    "Equal(LengthOfLine(WT),3)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(WX,YX)",
+    "PerpendicularBetweenLine(XY,ZY)",
+    "PerpendicularBetweenLine(YZ,WZ)",
+    "PerpendicularBetweenLine(ZW,XW)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+  "problem_answer": "90",
+  "theorem_seqs": [
+    "line_addition(XT,TZ)",
+    "line_addition(YT,TW)",
+    "isosceles_triangle_judgment_line_equal(WXZ)",
+    "isosceles_triangle_property_angle_equal(WXZ)",
+    "triangle_property_angle_sum(WXZ)",
+    "parallelogram_property_diagonal_bisection(XYZW,T)",
+    "parallelogram_property_diagonal_bisection(YZWX,T)",
+    "rectangle_property_diagonal_equal(XYZW)",
+    "isosceles_triangle_judgment_line_equal(TZW)",
+    "isosceles_triangle_property_angle_equal(TZW)",
+    "triangle_property_angle_sum(TZW)"
+  ]
+}

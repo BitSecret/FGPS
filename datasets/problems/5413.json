@@ -1,0 +1,41 @@
+{
+  "problem_id": 5413,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5717",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,∠BAD的平分线交BC于点E,∠ABC的平分线交AD于点F,若BF=12,AB=10,则AE的长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, the bisector of ∠BAD intersects BC at point E, and the bisector of ∠ABC intersects AD at point F. If BF = N_0, AB = N_1, the length of AE is ()",
+  "problem_img": "5413.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OF,FA)",
+    "Shape(BE,EO,OB)",
+    "Shape(FO,OE,EF)",
+    "Shape(FE,EC,CD,DF)",
+    "Collinear(AFD)",
+    "Collinear(BEC)",
+    "Collinear(AOE)",
+    "Collinear(BOF)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BF),12)",
+    "Equal(LengthOfLine(AB),10)",
+    "Parallelogram(ABCD)",
+    "IsBisectorOfAngle(BF,ABC)",
+    "IsBisectorOfAngle(AE,DAB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AD,BC,F)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallel_property_ipsilateral_internal_angle(AD,BC)",
+    "parallel_property_alternate_interior_angle(EB,DA)",
+    "parallel_property_alternate_interior_angle(AF,BC)",
+    "isosceles_triangle_judgment_angle_equal(BEA)",
+    "isosceles_triangle_judgment_angle_equal(ABF)",
+    "cosine_theorem(BEA)",
+    "cosine_theorem(ABF)"
+  ]
+}

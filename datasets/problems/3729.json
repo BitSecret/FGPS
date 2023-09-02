@@ -1,0 +1,30 @@
+{
+  "problem_id": 3729,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1510",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC≌△DCB,∠A=80°,∠DBC=40°,则∠DCA的度数为()",
+  "problem_text_en": "As shown in the figure, △ABC ≌ △DCB, ∠A = N_0, ∠DBC = N_1, then the degree of ∠DCA is ()",
+  "problem_img": "3729.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(DE,EC,CD)",
+    "Shape(EB,BC,CE)",
+    "Collinear(AEC)",
+    "Collinear(BED)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EAB),80)",
+    "Equal(MeasureOfAngle(EBC),40)",
+    "MirrorCongruentBetweenTriangle(ABC,DBC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ECD))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_angle_equal(ABC,DBC)",
+    "mirror_congruent_triangle_property_angle_equal(CAB,BCD)",
+    "triangle_property_angle_sum(DBC)",
+    "angle_addition(BCE,ECD)"
+  ]
+}

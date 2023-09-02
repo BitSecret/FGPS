@@ -1,0 +1,36 @@
+{
+  "problem_id": 3754,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1558",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将三角尺的直角顶点放在直尺的一边上,∠1=30°,∠2=50°,则∠3的度数为()",
+  "problem_text_en": "As shown in the figure, put the vertex of the right angle of the triangle ruler on one side of the ruler, ∠1 = N_0, ∠2 = N_1, then the degree of ∠3 is ()",
+  "problem_img": "3754.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(DE,EF,FC,CD)",
+    "Shape(EB,BF,FE)",
+    "Shape(GD,DA)",
+    "Shape(ED,DG)",
+    "Shape(HE,ED)",
+    "Shape(BE,EH)",
+    "Collinear(ADEB)",
+    "Collinear(GDC)",
+    "Collinear(HEF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "ParallelBetweenLine(GC,HF)",
+    "Equal(MeasureOfAngle(CAD),30)",
+    "Equal(MeasureOfAngle(HED),50)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(GC,HF,D)",
+    "parallel_property_collinear_extend(FH,DG,E)",
+    "parallel_property_corresponding_angle(EH,DG,A)",
+    "adjacent_complementary_angle(GDA,ADC)",
+    "triangle_property_angle_sum(ADC)"
+  ]
+}

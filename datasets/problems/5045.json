@@ -1,0 +1,44 @@
+{
+  "problem_id": 5045,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4794",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、CD分别垂直于直线BC,AC和BD相交于E,过点E作EF⊥BC于F．若AB=80,CD=20,那么EF等于()",
+  "problem_text_en": "As shown in the figure, AB and CD are perpendicular to the straight line BC, AC and BD intersect at E, passing the point E as EF ⊥ BC at F. If AB = N_0, CD = N_1, then EF is equal to ()",
+  "problem_img": "5045.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BF,FE)",
+    "Shape(DE,EC,CD)",
+    "Shape(CE,EF,FC)",
+    "Collinear(AEC)",
+    "Collinear(BED)",
+    "Collinear(BFC)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AB,FB)",
+    "PerpendicularBetweenLine(BF,EF)",
+    "PerpendicularBetweenLine(FC,DC)",
+    "PerpendicularBetweenLine(EF,CF)",
+    "Equal(LengthOfLine(AB),80)",
+    "Equal(LengthOfLine(CD),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "parallel_judgment_per_per(BA,FE)",
+    "parallel_property_corresponding_angle(EF,AB,C)",
+    "similar_triangle_judgment_aa(CEF,CAB)",
+    "vertical_angle(BEA,DEC)",
+    "parallel_judgment_per_per(FE,CD)",
+    "parallel_judgment_par_par(BA,FE,CD)",
+    "parallel_property_alternate_interior_angle(BA,CD)",
+    "similar_triangle_judgment_aa(BEA,DEC)",
+    "similar_triangle_property_line_ratio(EAB,ECD)",
+    "similar_triangle_property_line_ratio(BEA,DEC)",
+    "line_addition(AE,EC)",
+    "similar_triangle_property_line_ratio(FCE,BCA)",
+    "similar_triangle_property_line_ratio(CEF,CAB)"
+  ]
+}

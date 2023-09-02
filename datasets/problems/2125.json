@@ -1,0 +1,28 @@
+{
+  "problem_id": 2125,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2217",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of \\angle 5.",
+  "problem_img": "2125.png",
+  "construction_cdl": [
+    "Shape(AC,CB,CBA)",
+    "Shape(BC,CD,CDB)",
+    "Shape(DC,CE,CED)",
+    "Shape(EC,CA,CAE)",
+    "Collinear(ACD)",
+    "Cocircular(C,AEDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(CDB),80)",
+    "Equal(MeasureOfArc(CAE),70)",
+    "IsCentreOfCircle(C,C)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ECA))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "arc_property_center_angle(CAE,C)"
+  ]
+}

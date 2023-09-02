@@ -1,0 +1,26 @@
+{
+  "problem_id": 2598,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-2726",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2598.png",
+  "construction_cdl": [
+    "Shape(LM,MN,NL)",
+    "Shape(XZ,ZY,YX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(NLM),65)",
+    "Equal(MeasureOfAngle(LMN),51)",
+    "Equal(MeasureOfAngle(YXZ),4*x)",
+    "Equal(MeasureOfAngle(XZY),MeasureOfAngle(NLM))",
+    "Equal(MeasureOfAngle(ZYX),MeasureOfAngle(LMN))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(XZY)"
+  ]
+}

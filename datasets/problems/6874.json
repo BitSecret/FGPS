@@ -1,0 +1,37 @@
+{
+  "problem_id": 6874,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10100",
+  "problem_level": 1,
+  "problem_text_cn": "如图，四边形ABCD内接于⊙O，DA＝DC，若∠CBE＝45°，则∠DAC的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6874.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DA,AC,CD)",
+    "Shape(DC,OCD)",
+    "Shape(CA,AB,BC)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Collinear(ABE)",
+    "Cocircular(O,DABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CBE),45)",
+    "Equal(LengthOfLine(DA),LengthOfLine(DC))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAC))",
+  "problem_answer": "67.5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ABC,CBE)",
+    "arc_property_circumference_angle_internal(OAC,B)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "arc_property_circumference_angle_external(OCD,A)",
+    "isosceles_triangle_judgment_line_equal(DAC)",
+    "isosceles_triangle_property_angle_equal(DAC)",
+    "triangle_property_angle_sum(DAC)"
+  ]
+}

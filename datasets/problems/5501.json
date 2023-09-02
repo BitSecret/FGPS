@@ -1,0 +1,40 @@
+{
+  "problem_id": 5501,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-5959",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,D,E,F分别为BC,AC,AB边的中点,AH⊥BC于H,FD=16,则HE等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, D, E, F are the midpoints of BC, AC, AB, AH ⊥ BC is in H, FD = N_0, then HE is equal to ()",
+  "problem_img": "5501.png",
+  "construction_cdl": [
+    "Shape(AF,FG,GA)",
+    "Shape(AG,GE,EA)",
+    "Shape(FB,BD,DF)",
+    "Shape(FD,DH,HG,GF)",
+    "Shape(EG,GH,HE)",
+    "Shape(EH,HC,CE)",
+    "Collinear(AFB)",
+    "Collinear(AEC)",
+    "Collinear(FGE)",
+    "Collinear(AGH)",
+    "Collinear(BDHC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,BC)",
+    "IsMidpointOfLine(E,AC)",
+    "IsMidpointOfLine(F,AB)",
+    "Equal(LengthOfLine(FD),16)",
+    "PerpendicularBetweenLine(BH,AH)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(HE))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_midpoint(DF,BCA)",
+    "midsegment_of_triangle_property_length(DF,BCA)",
+    "adjacent_complementary_angle(BHG,GHC)",
+    "right_triangle_judgment_angle(AHC)",
+    "median_of_triangle_judgment(HE,HCA)",
+    "right_triangle_property_length_of_median(AHC,E)"
+  ]
+}

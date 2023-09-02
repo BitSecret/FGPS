@@ -1,0 +1,29 @@
+{
+  "problem_id": 2198,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2295",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the figure. Round to the nearest hundredth, if necessary.",
+  "problem_img": "2198.png",
+  "construction_cdl": [
+    "Shape(EC,CN,NE)",
+    "Shape(CB,BN,NC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CN),2*sqrt(2))",
+    "Equal(LengthOfLine(CB),LengthOfLine(BN))",
+    "Equal(LengthOfLine(BN),LengthOfLine(EN))",
+    "Equal(LengthOfLine(EN),LengthOfLine(CE))",
+    "PerpendicularBetweenLine(NE,CE)",
+    "Square(CBNE)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(CBNE))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(NEC)",
+    "right_triangle_property_pythagorean(NEC)",
+    "quadrilateral_perimeter_formula(NECB)"
+  ]
+}

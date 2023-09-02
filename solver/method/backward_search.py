@@ -1,12 +1,11 @@
 from solver.core.engine import GoalFinder
 from solver.aux_tools.output import get_used_theorem
-from solver.solver.fw_search import Theorem
+from solver.method.forward_search import Theorem
 from collections import deque
 from enum import Enum
 from func_timeout import func_set_timeout
 from solver.problem.problem import Problem
-from solver.aux_tools.parser import EquationParser as EqParser
-from solver.aux_tools.parser import FormalLanguageParser as FLParser
+from solver.aux_tools.parser import GDLParser, CDLParser
 from solver.aux_tools.parser import InverseParser as IvParser
 from solver.core.engine import EquationKiller as EqKiller
 from solver.aux_tools.utils import rough_equal
@@ -229,7 +228,7 @@ class SuperNode:
             oppose = False
             if "~" in equal:
                 oppose = True
-            eq = EqParser.get_equation_from_tree(self.problem, item, True, letters)
+            eq = CDLParser.get_equation_from_tree(self.problem, item, True, letters)
             solved_eq = False
 
             result, premise = EqKiller.solve_target(eq, self.problem)
@@ -247,7 +246,7 @@ class SuperNode:
 
         for predicate, item in gpl["conclusions"]:
             if predicate == "Equal":  # algebra conclusion
-                eq = EqParser.get_equation_from_tree(self.problem, item, True, letters)
+                eq = CDLParser.get_equation_from_tree(self.problem, item, True, letters)
                 self.problem.add("Equation", eq, premises, theorem)
             else:  # logic conclusion
                 item = tuple(letters[i] for i in item)
@@ -267,8 +266,8 @@ class BackwardSearcher:
         :param max_depth: max search depth.
         :param strategy: <str>, 'df' or 'bf', use deep-first or breadth-first.
         """
-        self.predicate_GDL = FLParser.parse_predicate(predicate_GDL)
-        self.theorem_GDL = FLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
+        self.predicate_GDL = GDLParser.parse_predicate(predicate_GDL)
+        self.theorem_GDL = GDLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
         self.max_depth = max_depth
         self.strategy = strategy
         self.node_map = {}
@@ -283,7 +282,7 @@ class BackwardSearcher:
         """Init and return a problem by problem_CDL."""
         s_start_time = time.time()
         self.problem = Problem()
-        self.problem.load_problem_by_fl(self.predicate_GDL, FLParser.parse_problem(problem_CDL))  # load problem
+        self.problem.load_problem_by_fl(self.predicate_GDL, CDLParser.parse_problem(problem_CDL))  # load problem
         EqKiller.solve_equations(self.problem)
         self.problem.step("init_problem", time.time() - s_start_time)  # save applied theorem and update step
         SuperNode.snc = {}

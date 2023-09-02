@@ -1,0 +1,35 @@
+{
+  "problem_id": 4109,
+  "annotation": "QikeHuang_2023-05-07",
+  "source": "GeoQA-2551",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O中,弦AB、CD相交于点P,∠A=42°,∠B=35°,则∠APD的大小是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, chords AB and CD intersect at point P, ∠A = N_0, ∠B = N_1, then the size of ∠APD is ()",
+  "problem_img": "4109.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(CA,AP,PC)",
+    "Shape(PA,OAD,DP)",
+    "Shape(O)",
+    "Shape(BP,PD,DB)",
+    "Shape(CP,PB,PBC)",
+    "Shape(BD,ODB)",
+    "Collinear(CPD)",
+    "Collinear(APB)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DBA),35)",
+    "Equal(MeasureOfAngle(CAB),42)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DPA))",
+  "problem_answer": "77",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OAD,C)",
+    "triangle_property_angle_sum(APC)",
+    "adjacent_complementary_angle(DPA,APC)"
+  ]
+}

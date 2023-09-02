@@ -1,0 +1,32 @@
+{
+  "problem_id": 673,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-690",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If M N P Q \\sim X Y Z W, find the perimeter of X Y Z W.",
+  "problem_img": "673.png",
+  "construction_cdl": [
+    "Shape(WZ,ZY,YX,XW)",
+    "Shape(NM,MQ,QP,PN)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenQuadrilateral(QPNM,WZYX)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(NP),10)",
+    "Equal(LengthOfLine(WX),4)",
+    "Equal(LengthOfLine(QP),7)",
+    "Equal(LengthOfLine(QM),8)",
+    "Equal(LengthOfLine(NM),9)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(WZYX))",
+  "problem_answer": "17",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_line_ratio(QPNM,WZYX)",
+    "similar_quadrilateral_property_line_ratio(PNMQ,ZYXW)",
+    "similar_quadrilateral_property_line_ratio(NMQP,YXWZ)",
+    "similar_quadrilateral_property_line_ratio(MQPN,XWZY)",
+    "quadrilateral_perimeter_formula(WZYX)"
+  ]
+}

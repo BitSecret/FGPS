@@ -1,0 +1,30 @@
+{
+  "problem_id": 4446,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3409",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,∠BOC=60°,则∠BAC等于()",
+  "problem_text_en": "As shown in the figure, in ⊙O, ∠BOC = N_0, then ∠BAC is equal to ()",
+  "problem_img": "4446.png",
+  "construction_cdl": [
+    "Shape(OB,BD,DO)",
+    "Shape(DC,CA,AD)",
+    "Shape(BO,OD,DA,OAB)",
+    "Shape(CD,DB,OBC)",
+    "Shape(AC,OCA)",
+    "Collinear(ODC)",
+    "Collinear(BDA)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COB),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

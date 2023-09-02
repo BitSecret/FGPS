@@ -1,0 +1,23 @@
+{
+  "problem_id": 5857,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7884",
+  "problem_level": 1,
+  "problem_text_cn": "如图,传送带和地面所成斜坡的坡度为1:2,它把物体从地面点A处送到离地面2米高的B处,则物体从A到B所经过的路程为()",
+  "problem_text_en": "As shown in the figure, the slope of the slope formed by the conveyor belt and the ground is N_0:N_1, it sends the object from the ground point A to the point B higher than the ground N_2, then the distance the object travels from A to B is ()",
+  "problem_img": "5857.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AC,BC)",
+    "Equal(LengthOfLine(BC),2)",
+    "Equal(Tan(MeasureOfAngle(BAC)),1/2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "2*sqrt(5)",
+  "theorem_seqs": [
+    "sine_theorem(BAC)"
+  ]
+}

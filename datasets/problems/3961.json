@@ -1,0 +1,35 @@
+{
+  "problem_id": 3961,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1893",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,AB是⊙O直径,∠BAC=40°,则∠ADC的度数是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, AB is the diameter of ⊙O, ∠BAC = N_0, then the degree of ∠ADC is ()",
+  "problem_img": "3961.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(DA,AO,OE,ED)",
+    "Shape(EO,OA,AC,CE)",
+    "Shape(OAC,CA)",
+    "Shape(EC,CB,BE)",
+    "Shape(OCB,BC)",
+    "Shape(OBD,DE,EB)",
+    "Collinear(DEC)",
+    "Collinear(AOEB)",
+    "Cocircular(O,DACB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BAC),40)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "flat_angle(EOA)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "arc_property_circumference_angle_external(OCB,A)",
+    "arc_addition_measure(OAC,OCB)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": 1191,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-1231",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In A, the radius is 14 and C D = 22. Find E B. Round to the nearest hundredth.",
+  "problem_img": "1191.png",
+  "construction_cdl": [
+    "Shape(EC,ACB,BE)",
+    "Shape(AE,ED,DA)",
+    "Shape(EB,ABD,DE)",
+    "Shape(CE,EA,AD,ADC)",
+    "Collinear(CED)",
+    "Collinear(AEB)",
+    "Cocircular(A,CBD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(RadiusOfCircle(A),14)",
+    "Equal(LengthOfLine(CD),22)",
+    "PerpendicularBetweenLine(AE,DE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(EB))",
+  "problem_answer": "5.34",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(AB,A)",
+    "radius_of_circle_property_length_equal(AD,A)",
+    "adjacent_complementary_angle(CEA,AED)",
+    "circle_property_chord_perpendicular_bisect_chord(A,AE,CD)",
+    "line_addition(CE,ED)",
+    "line_addition(AE,EB)",
+    "right_triangle_judgment_angle(AED)",
+    "right_triangle_property_pythagorean(AED)"
+  ]
+}

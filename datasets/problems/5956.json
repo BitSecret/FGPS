@@ -1,0 +1,24 @@
+{
+  "problem_id": 5956,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8365",
+  "problem_level": 1,
+  "problem_text_cn": "有人说,数学家就是不用爬树或者把树砍倒就能够知道树高的人．小敏想知道校园内一棵大树的高,如图,她测得BC=10米,∠ACB=50°,请你帮助她算出树高AB约为()米．(注:①树垂直于地面；②供选用数据:sin50°≈0.77,cos50°≈0.64,tan50°≈1.2)",
+  "problem_text_en": "Some people say that a mathematician is someone who can know the height of a tree without climbing or cutting down the tree. Xiao Min wants to know the height of a big tree on the campus. As shown in the figure, she measured BC = N_0 and ∠ACB = N_1. Please help her calculate the height of the tree AB (). (Note: ①The tree is perpendicular to the ground; ②Data for selection: sinN_1 ≈N_2, cosN_1 ≈N_3, tanN_1 ≈N_4)",
+  "problem_img": "5956.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),10)",
+    "Equal(MeasureOfAngle(ACB),50)",
+    "Equal(MeasureOfAngle(CBA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "11.92",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ACB)",
+    "sine_theorem(BAC)"
+  ]
+}

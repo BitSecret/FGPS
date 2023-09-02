@@ -1,0 +1,25 @@
+{
+  "problem_id": 2944,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-131",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AC平分∠BAD,∠B=∠D,AB=8cm,则AD=()",
+  "problem_text_en": "As shown in the figure, AC equally divides ∠BAD, ∠B = ∠D, AB = N_0, then AD = ()",
+  "problem_img": "2944.png",
+  "construction_cdl": [
+    "Shape(DA,AC,CD)",
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(AC,DAB)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(MeasureOfAngle(ABC),MeasureOfAngle(CDA))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_judgment_aas(CDA,CAB)",
+    "mirror_congruent_triangle_property_line_equal(CDA,CAB)"
+  ]
+}

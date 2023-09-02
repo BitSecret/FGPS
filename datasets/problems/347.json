@@ -1,0 +1,26 @@
+{
+  "problem_id": 347,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-354",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "347.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CA),14)",
+    "Equal(LengthOfLine(AB),x)",
+    "Equal(LengthOfLine(BC),y)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "PerpendicularBetweenLine(AB,CB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "7*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "sine_theorem(ABC)"
+  ]
+}

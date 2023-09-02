@@ -1,0 +1,33 @@
+{
+  "problem_id": 2643,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2778",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2643.png",
+  "construction_cdl": [
+    "Shape(XW,AWX)",
+    "Shape(AYW,YT,TW)",
+    "Shape(ZY,AYW,WX,AXZ)",
+    "Shape(YZ,AZY)",
+    "Collinear(XWT)",
+    "Collinear(TYZ)",
+    "Cocircular(A,YWXZ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(LengthOfLine(XW),12)",
+    "Equal(LengthOfLine(TW),7)",
+    "Equal(LengthOfLine(ZY),x)",
+    "Equal(LengthOfLine(TY),6)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "97/6",
+  "theorem_seqs": [
+    "line_addition(TW,WX)",
+    "line_addition(TY,YZ)",
+    "circle_property_circular_power_segment_and_segment_line(TYZ,TWX,A)"
+  ]
+}

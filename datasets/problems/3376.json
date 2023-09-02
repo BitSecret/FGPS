@@ -1,0 +1,30 @@
+{
+  "problem_id": 3376,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-875",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=AC,AB的中垂线DE交AC于点D,交AB于点E,如果BC=10,△DBC的周长为22,那么AB=()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, AB's mid-perpendicular line DE crosses AC at vertex D, and crosses AB at vertex E. If BC = N_0 and the perimeter of △DBC is N_1, then AB = ()",
+  "problem_img": "3376.png",
+  "construction_cdl": [
+    "Shape(AE,ED,DA)",
+    "Shape(EB,BD,DE)",
+    "Shape(DB,BC,CD)",
+    "Collinear(AEB)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "Equal(PerimeterOfTriangle(DBC),22)",
+    "IsPerpendicularBisectorOfLine(DE,AB)",
+    "Equal(LengthOfLine(BC),10)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(DE,AB)",
+    "line_addition(AD,DC)",
+    "triangle_perimeter_formula(DBC)"
+  ]
+}

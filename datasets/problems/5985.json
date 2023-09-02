@@ -1,0 +1,40 @@
+{
+  "problem_id": 5985,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8442",
+  "problem_level": 1,
+  "problem_text_cn": "已知,如图,圆O的弦AB=AD,∠BOD=124°,点C在劣弧⁀{AB}上,则∠DCA的度数为()",
+  "problem_text_en": "It is known that, as shown in the figure, the chord of circle O is AB = AD, ∠BOD = N_0, and the point C is on the minor arc ⁀AB, then the degree of ∠DCA is ()",
+  "problem_img": "5985.png",
+  "construction_cdl": [
+    "Shape(DA,OAD)",
+    "Shape(DE,EA,AD)",
+    "Shape(AE,EO,OA)",
+    "Shape(AO,OB,BA)",
+    "Shape(AB,OBA)",
+    "Shape(OE,EC,CB,BO)",
+    "Shape(ED,DC,CE)",
+    "Shape(CD,ODC)",
+    "Shape(BC,OCB)",
+    "Collinear(DEO)",
+    "Collinear(CEA)",
+    "Cocircular(O,DCBA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AD))",
+    "Equal(MeasureOfAngle(BOE),124)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCE))",
+  "problem_answer": "90",
+  "theorem_seqs": [
+    "arc_property_center_angle(ODA,O)",
+    "arc_property_center_angle(OAD,O)",
+    "arc_property_circumference_angle_external(OAD,C)",
+    "round_angle(EOA,AOE)",
+    "round_angle(DCE,ECD)",
+    "congruent_arc_judgment_chord_equal(ODA,OAD)",
+    "congruent_arc_property_measure_equal(ODA,OAD)"
+  ]
+}

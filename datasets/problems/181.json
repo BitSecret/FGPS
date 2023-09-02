@@ -1,0 +1,28 @@
+{
+  "problem_id": 181,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-183",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral W X Y Z is inscribed in \\odot V. Find m \\angle Y.",
+  "problem_img": "181.png",
+  "construction_cdl": [
+    "Shape(VZW,WZ)",
+    "Shape(VWX,XW)",
+    "Shape(WXY,YX)",
+    "Shape(VYZ,ZY)",
+    "Shape(ZW,WX,XY,YZ)",
+    "Cocircular(V,ZWXY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(YZW),60)",
+    "Equal(MeasureOfAngle(ZWX),95)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(XYZ))",
+  "problem_answer": "85",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(VZX,Y)",
+    "arc_property_circumference_angle_internal(VZX,W)"
+  ]
+}

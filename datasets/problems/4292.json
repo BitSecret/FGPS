@@ -1,0 +1,28 @@
+{
+  "problem_id": 4292,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3095",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A,B,C是⊙O上的三点,且∠ABC=70°,则∠AOC的度数是()",
+  "problem_text_en": "As shown in the figure, A, B, C are three points on ⊙O, and ∠ABC = N_0, then the degree of ∠AOC is ()",
+  "problem_img": "4292.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CO,OA)",
+    "Shape(AO,OC,CA)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABC),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AOC))",
+  "problem_answer": "140",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_center_angle(OCA,O)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 4957,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4632",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D在AB边上,且AD=2BD,过点D作DE∥BC交AC于点E．若AE=2,则AC的长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, point D is on the edge of AB, and AD = N_0 BD, passing point D to draw DE ∥ BC intersecting AC at point E. If AE = N_1, then the length of AC is ()",
+  "problem_img": "4957.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AE),2)",
+    "Equal(LengthOfLine(AD),Mul(LengthOfLine(BD),2))",
+    "ParallelBetweenLine(DE,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_judgment_aa(ABC,ADE)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ABC,ADE)",
+    "similar_triangle_property_line_ratio(BCA,DEA)",
+    "similar_triangle_property_line_ratio(CAB,EAD)",
+    "line_addition(AD,DB)"
+  ]
+}

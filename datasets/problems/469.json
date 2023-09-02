@@ -1,0 +1,30 @@
+{
+  "problem_id": 469,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-479",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "469.png",
+  "construction_cdl": [
+    "Shape(BC,BCD,DB)",
+    "Shape(BD,BDH,HB)",
+    "Shape(BH,BHI,IB)",
+    "Shape(BI,BIC,CB)",
+    "Cocircular(B,DHIC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CBI),84)",
+    "Equal(MeasureOfAngle(IBH),16)",
+    "Equal(MeasureOfAngle(HBD),x)",
+    "PerpendicularBetweenLine(DB,CB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "170",
+  "theorem_seqs": [
+    "angle_addition(DBC,CBI)",
+    "angle_addition(IBH,HBD)",
+    "round_angle(DBI,IBD)"
+  ]
+}

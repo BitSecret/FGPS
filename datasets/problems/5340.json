@@ -1,0 +1,23 @@
+{
+  "problem_id": 5340,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5575",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC,∠C=90°,AB=10,BC=8,则sinA=()",
+  "problem_text_en": "As shown in the figure, at Rt△ABC, ∠C = N_0, AB = N_1, BC = N_2, then sinA = ()",
+  "problem_img": "5340.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(BC),8)",
+    "RightTriangle(BCA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(CAB)))",
+  "problem_answer": "4/5",
+  "theorem_seqs": [
+    "sine_theorem(BCA)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 5330,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5552",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的半径为5,△ABC是⊙O的内接三角形,连接OB、OC．若∠BAC与∠BOC互补,则弦BC的长为()",
+  "problem_text_en": "As shown in the figure, the radius of ⊙O is N_0, and △ABC is the inscribed triangle of ⊙O. Connect OB and OC. If ∠BAC and ∠BOC are complementary, the length of chord BC is ()",
+  "problem_img": "5330.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,BC,CO)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),5)",
+    "Equal(Add(MeasureOfAngle(CAB),MeasureOfAngle(COB)),180)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "5*sqrt(3)",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "cosine_theorem(OBC)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 5359,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5636",
+  "problem_level": 1,
+  "problem_text_cn": "若△ABC∽△ADE,若AB=6,AC=4,AD=3,则AE的长是()",
+  "problem_text_en": "If △ABC ∽ △ADE, if AB = N_0, AC = N_1, AD = N_2, then the length of AE is ()",
+  "problem_img": "5359.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(ADE,ABC)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(AD),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

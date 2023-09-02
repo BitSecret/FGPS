@@ -1,0 +1,24 @@
+{
+  "problem_id": 2326,
+  "annotation": "ChenyangMao_2023-04-09",
+  "source": "Geometry3k-2439",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle R S T.",
+  "problem_img": "2326.png",
+  "construction_cdl": [
+    "Shape(RS,ST,TR)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(TRS),70)",
+    "Equal(LengthOfLine(TR),LengthOfLine(SR))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(RST))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(RST)",
+    "isosceles_triangle_judgment_line_equal(RST)",
+    "isosceles_triangle_property_angle_equal(RST)"
+  ]
+}

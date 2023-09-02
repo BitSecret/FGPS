@@ -1,0 +1,38 @@
+{
+  "problem_id": 2890,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-58",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CD,AD平分∠BAC,若∠BAD=70°,则∠ACD的度数为()",
+  "problem_text_en": "As shown in the figure, AB ∥ CD, AD equally divide ∠BAC, if ∠BAD = N_0, then the degree of ∠ACD is ()",
+  "problem_img": "2890.png",
+  "construction_cdl": [
+    "Shape(EA,AF)",
+    "Shape(FA,AB)",
+    "Shape(CA,AE)",
+    "Shape(AC,CD,DA)",
+    "Shape(BA,AD)",
+    "Shape(AD,DH)",
+    "Shape(GC,CA)",
+    "Shape(IC,CG)",
+    "Shape(DC,CI)",
+    "Shape(JD,DC)",
+    "Shape(HD,DJ)",
+    "Collinear(EAB)",
+    "Collinear(GCDH)",
+    "Collinear(FACI)",
+    "Collinear(ADJ)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "IsBisectorOfAngle(AD,BAC)",
+    "Equal(MeasureOfAngle(BAD),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ACD)",
+    "parallel_property_alternate_interior_angle(AB,CD)"
+  ]
+}

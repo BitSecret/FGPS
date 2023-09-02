@@ -1,0 +1,43 @@
+{
+  "problem_id": 12,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-11",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot X, A B = 30, C D = 30, and m \\widehat C Z = 40. Find m \\widehat A B.",
+  "problem_img": "12.png",
+  "construction_cdl": [
+    "Shape(XBY,YM,MB)",
+    "Shape(XYA,AM,MY)",
+    "Shape(XM,MA,XAC,CN,NX)",
+    "Shape(NC,XCZ,ZN)",
+    "Shape(NZ,XZD,DN)",
+    "Shape(MX,XN,ND,XDB,BM)",
+    "Collinear(AMB)",
+    "Collinear(YMX)",
+    "Collinear(XNZ)",
+    "Collinear(CND)",
+    "Cocircular(X,ACZDBY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(X,X)",
+    "Equal(LengthOfLine(AB),30)",
+    "Equal(LengthOfLine(CD),30)",
+    "Equal(MeasureOfArc(XCZ),40)",
+    "PerpendicularBetweenLine(AM,YM)",
+    "PerpendicularBetweenLine(DN,ZN)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(XBA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "vertical_angle(CNX,DNZ)",
+    "circle_property_chord_perpendicular_bisect_arc(XCD,XNZ)",
+    "arc_addition_length(XCZ,XZD)",
+    "similar_arc_judgment_cocircular(XCZ,XCD)",
+    "similar_arc_property_length_ratio(XCZ,XCD)",
+    "similar_arc_property_measure_ratio(XCZ,XCD)",
+    "congruent_arc_judgment_chord_equal(XCD,XBA)",
+    "congruent_arc_property_measure_equal(XCD,XBA)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 4647,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3876",
+  "problem_level": 1,
+  "problem_text_cn": "如图,D为直径AB的延长线上一点,DC切⊙O于点G,若∠A=35°,则∠D=()",
+  "problem_text_en": "As shown in the figure, D is a point on the extended line of the diameter AB, DC tangents to ⊙O at point G, if ∠A = N_0, then ∠D = ()",
+  "problem_img": "4647.png",
+  "construction_cdl": [
+    "Shape(OAB,BO,OA)",
+    "Shape(AO,OC,CA)",
+    "Shape(OB,OBC,CO)",
+    "Shape(AC,OCA)",
+    "Shape(OBC,BD,DC)",
+    "Collinear(AOBD)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(DC,O)",
+    "Equal(MeasureOfAngle(CAD),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "tangent_of_circle_property_perpendicular(DC,O,O)",
+    "triangle_property_angle_sum(ODC)"
+  ]
+}

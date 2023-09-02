@@ -1,0 +1,29 @@
+{
+  "problem_id": 2401,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2516",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\triangle R S V \\cong \\triangle T V S. Find x.",
+  "problem_img": "2401.png",
+  "construction_cdl": [
+    "Shape(SR,RV,VS)",
+    "Shape(SV,VT,TS)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "CongruentBetweenTriangle(SRV,VTS)",
+    "Equal(LengthOfLine(TS),24.5)",
+    "Equal(LengthOfLine(VT),24)",
+    "Equal(LengthOfLine(SR),2*y-1)",
+    "Equal(MeasureOfAngle(RVS),78)",
+    "Equal(MeasureOfAngle(VTS),x)",
+    "PerpendicularBetweenLine(VS,RS)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(SRV)",
+    "congruent_triangle_property_angle_equal(RVS,TSV)"
+  ]
+}

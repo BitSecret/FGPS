@@ -1,0 +1,36 @@
+{
+  "problem_id": 1616,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1676",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1616.png",
+  "construction_cdl": [
+    "Shape(BC,CV,VB)",
+    "Shape(AC,CB,BA)",
+    "Shape(HG,GJ,JH)",
+    "Shape(HJ,JI,IH)",
+    "Collinear(ACV)",
+    "Collinear(GHI)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(VB),8)",
+    "Equal(LengthOfLine(HJ),9)",
+    "Equal(LengthOfLine(GJ),6)",
+    "Equal(LengthOfLine(BC),x)",
+    "PerpendicularBetweenLine(BC,VC)",
+    "PerpendicularBetweenLine(JH,GH)",
+    "Equal(MeasureOfAngle(BAC),MeasureOfAngle(CVB))",
+    "Equal(MeasureOfAngle(HGJ),MeasureOfAngle(CVB))",
+    "Equal(MeasureOfAngle(HGJ),MeasureOfAngle(HIJ))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "similar_triangle_judgment_aa(BCV,JHG)",
+    "similar_triangle_property_line_ratio(CVB,HGJ)",
+    "similar_triangle_property_line_ratio(VBC,GJH)"
+  ]
+}

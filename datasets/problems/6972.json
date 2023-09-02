@@ -1,0 +1,35 @@
+{
+  "problem_id": 6972,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10226",
+  "problem_level": 1,
+  "problem_text_cn": "如图，AB为⊙O的直径，C，D为⊙O上两点，若∠BCD＝44°，则∠ABD的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6972.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(DA,AO,OE,ED)",
+    "Shape(OBD,DB)",
+    "Shape(DE,EB,BD)",
+    "Shape(OA,OAC,CE,EO)",
+    "Shape(EC,CB,BE)",
+    "Shape(OCB,BC)",
+    "Collinear(AOEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(DCB),44)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABD))",
+  "problem_answer": "46",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(OBD,C)",
+    "triangle_property_angle_sum(ABD)"
+  ]
+}

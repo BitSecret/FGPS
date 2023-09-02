@@ -1,0 +1,27 @@
+{
+  "problem_id": 3021,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-229",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD是⊙O的内接四边形,∠B=70°,则∠D的度数是()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is the inscribed quadrilateral of ⊙O, ∠B = N_0, then the degree of ∠D is ()",
+  "problem_img": "3021.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AD)",
+    "Shape(AB,BC,CD,DA)",
+    "Cocircular(O,BCDA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABC),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_internal(OCA,D)"
+  ]
+}

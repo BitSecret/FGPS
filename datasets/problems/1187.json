@@ -1,0 +1,39 @@
+{
+  "problem_id": 1187,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-1227",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use rectangle L M N P, parallelogram L K M J to solve the problem. If m \\angle P L K = 110, find m \\angle L K M.",
+  "problem_img": "1187.png",
+  "construction_cdl": [
+    "Shape(PN,NJ,JP)",
+    "Shape(JN,NM,MJ)",
+    "Shape(JM,ML,LJ)",
+    "Shape(PJ,JL,LP)",
+    "Shape(LM,MK,KL)",
+    "Collinear(PJM)",
+    "Collinear(NJL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(PNML)",
+    "Parallelogram(LJMK)",
+    "Equal(MeasureOfAngle(KLP),110)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(MKL))",
+  "problem_answer": "140",
+  "theorem_seqs": [
+    "line_addition(PJ,JM)",
+    "line_addition(NJ,JL)",
+    "rectangle_property_diagonal_equal(PNML)",
+    "parallelogram_property_diagonal_bisection(PNML,J)",
+    "parallelogram_property_diagonal_bisection(NMLP,J)",
+    "parallelogram_property_opposite_line_equal(LJMK)",
+    "parallelogram_property_opposite_line_equal(JMKL)",
+    "isosceles_triangle_judgment_line_equal(KLM)",
+    "isosceles_triangle_property_angle_equal(KLM)",
+    "angle_addition(KLM,MLP)",
+    "triangle_property_angle_sum(LMK)"
+  ]
+}

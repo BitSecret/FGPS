@@ -1,0 +1,30 @@
+{
+  "problem_id": 2871,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-37",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AB=AC,∠A=36°,BD是AC边上的高,则∠DBC的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, ∠A = N_0, BD is the height on the edge of AC, then the degree of ∠DBC is ()",
+  "problem_img": "2871.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BC,CD)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(DAB),36)",
+    "IsAltitudeOfTriangle(BD,BCA)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(BD,AD)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DBC))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(DBC)"
+  ]
+}

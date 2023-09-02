@@ -1,0 +1,29 @@
+{
+  "problem_id": 6834,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-angle-10050",
+  "problem_level": 1,
+  "problem_text_cn": "如图，在平行四边形ABCD中，E为BC边上一点，连接AE．若AE平分∠BAD，∠D＝58°，则∠AEC的大小是（）",
+  "problem_text_en": "",
+  "problem_img": "6834.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EC,CD,DA)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsBisectorOfAngle(AE,DAB)",
+    "Equal(MeasureOfAngle(CDA),58)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AEC))",
+  "problem_answer": "119",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "parallel_property_ipsilateral_internal_angle(DC,AB)",
+    "triangle_property_angle_sum(ABE)",
+    "angle_addition(DAE,EAB)",
+    "adjacent_complementary_angle(BEA,AEC)"
+  ]
+}

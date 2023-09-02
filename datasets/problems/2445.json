@@ -1,0 +1,25 @@
+{
+  "problem_id": 2445,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2565",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find \\tan X.",
+  "problem_img": "2445.png",
+  "construction_cdl": [
+    "Shape(XA,AB,BX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BX),13)",
+    "Equal(LengthOfLine(XA),5)",
+    "PerpendicularBetweenLine(XA,BA)"
+  ],
+  "goal_cdl": "Value(Tan(MeasureOfAngle(BXA)))",
+  "problem_answer": "12/5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(XAB)",
+    "right_triangle_property_pythagorean(XAB)",
+    "cosine_theorem(XAB)"
+  ]
+}

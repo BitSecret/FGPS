@@ -1,0 +1,30 @@
+{
+  "problem_id": 3912,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1820",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,CD是弦,连接BD,OC,若∠AOC=120°,∠D的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, CD is the chord, connect BD, OC, if ∠AOC = N_0, the degree of ∠D is ()",
+  "problem_img": "3912.png",
+  "construction_cdl": [
+    "Shape(ODB,BD)",
+    "Shape(OBC,CO,OB)",
+    "Shape(OBC,CD,DB)",
+    "Shape(OCA,AO,OC)",
+    "Shape(OAD,ODB,BO,OA)",
+    "Collinear(BOA)",
+    "Cocircular(O,BCAD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AOC),120)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AOC,COB)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 6625,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9629",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是半圆的直径,点D是⁀{AC}的中点,∠ABC=50°,则∠DAB等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of the semicircle, point D is the midpoint of ⁀AC, ∠ABC = N_0, then ∠DAB is equal to ()",
+  "problem_img": "6625.png",
+  "construction_cdl": [
+    "Shape(BC,OCB)",
+    "Shape(CD,ODC)",
+    "Shape(DA,OAD)",
+    "Shape(AB,OBA)",
+    "Shape(BD,DC,CB)",
+    "Shape(DB,BA,AD)",
+    "Collinear(BOA)",
+    "Cocircular(O,BADC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfArc(OAD),MeasureOfArc(ODC))",
+    "Equal(MeasureOfAngle(CBA),50)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(ODC,B)",
+    "angle_addition(CBD,DBA)",
+    "diameter_of_circle_property_right_angle(ADB,O)",
+    "triangle_property_angle_sum(DBA)"
+  ]
+}

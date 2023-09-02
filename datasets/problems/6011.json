@@ -1,0 +1,44 @@
+{
+  "problem_id": 6011,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8485",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的一条弦,点C是⊙O上一动点,且∠ACB=30°,点E、F分别是AC、BC的中点,直线EF与⊙O交于G、H两点,若⊙O的半径为7,则GE+FH的最大值为()",
+  "problem_text_en": "As shown in the figure, AB is a chord of ⊙O, point C is the last moving point of ⊙O, and ∠ACB = N_0, points E and F are the midpoints of AC and BC respectively, and the straight lines EF and ⊙O intersect G and H. Point, if the radius of ⊙O is N_1, then the maximum value of GE + FH is ()",
+  "problem_img": "6011.png",
+  "construction_cdl": [
+    "Shape(GO,OC,OCG)",
+    "Shape(CO,OF,FC)",
+    "Shape(CF,FH,OHC)",
+    "Shape(HF,FB,OBH)",
+    "Shape(FO,OA,AB,BF)",
+    "Shape(AO,OG,OGA)",
+    "Shape(BA,OAB)",
+    "Collinear(GOFH)",
+    "Collinear(COA)",
+    "Collinear(CFB)",
+    "Cocircular(O,GABHC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OA),7)",
+    "Equal(MeasureOfAngle(FCO),30)",
+    "IsDiameterOfCircle(AC,O)",
+    "IsCentreOfCircle(O,O)",
+    "IsMidpointOfLine(F,CB)",
+    "IsMidpointOfLine(O,CA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(GO),LengthOfLine(FH)))",
+  "problem_answer": "10.5",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OG,O)",
+    "radius_of_circle_property_length_equal(OH,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "diameter_of_circle_property_right_angle(ABC,O)",
+    "midsegment_of_triangle_judgment_midpoint(OF,CAB)",
+    "midsegment_of_triangle_property_length(OF,CAB)",
+    "line_addition(CO,OA)",
+    "line_addition(OF,FH)",
+    "sine_theorem(ABC)"
+  ]
+}

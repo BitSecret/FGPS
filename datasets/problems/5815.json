@@ -1,0 +1,31 @@
+{
+  "problem_id": 5815,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7771",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AE交BC于点D,∠C=∠E,AD=3,BD=5,DC=2,则DE的长等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, AE intersects BC at point D, ∠C = ∠E, AD = N_0, BD = N_1, DC = N_2, then the length of DE is equal to ()",
+  "problem_img": "5815.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DC,CA)",
+    "Shape(DB,BE,ED)",
+    "Collinear(ADE)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),3)",
+    "Equal(LengthOfLine(BD),5)",
+    "Equal(LengthOfLine(DC),2)",
+    "Equal(MeasureOfAngle(DCA),MeasureOfAngle(BED))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "10/3",
+  "theorem_seqs": [
+    "vertical_angle(ADC,EDB)",
+    "mirror_similar_triangle_judgment_aa(ADC,BED)",
+    "mirror_similar_triangle_property_line_ratio(ADC,BED)",
+    "mirror_similar_triangle_property_line_ratio(CAD,EDB)"
+  ]
+}

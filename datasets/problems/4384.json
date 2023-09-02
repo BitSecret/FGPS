@@ -1,0 +1,35 @@
+{
+  "problem_id": 4384,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3308",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C、D在⊙O上,DE⊥OA,DF⊥OB,垂足分别为E,F,若∠EDF=50°,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, C, D are on ⊙O, DE ⊥ OA, DF ⊥ OB, and the feet of perpendicular are E, F respectively. If ∠EDF = N_0, then the degree of ∠C is ()",
+  "problem_img": "4384.png",
+  "construction_cdl": [
+    "Shape(AE,ED,ODA)",
+    "Shape(DE,EO,OF,FD)",
+    "Shape(DF,FB,OBD)",
+    "Shape(AC,CB,BO,OA)",
+    "Shape(CA,OAC)",
+    "Shape(BC,OCB)",
+    "Collinear(AEO)",
+    "Collinear(OFB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AE,DE)",
+    "PerpendicularBetweenLine(OF,DF)",
+    "Equal(MeasureOfAngle(FDE),50)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AED,DEO)",
+    "quadrilateral_property_angle_sum(DEOF)",
+    "arc_property_circumference_angle_external(OBA,C)",
+    "arc_property_center_angle(OBA,O)"
+  ]
+}

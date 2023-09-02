@@ -1,0 +1,36 @@
+{
+  "problem_id": 4438,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3396",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,CD是⊙O的直径,∠A=35°,则∠BCD的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, CD is the diameter of ⊙O, ∠A = N_0, then the degree of ∠BCD is ()",
+  "problem_img": "4438.png",
+  "construction_cdl": [
+    "Shape(DO,OC,OCD)",
+    "Shape(AE,ED,ODA)",
+    "Shape(AB,BE,EA)",
+    "Shape(BA,OAB)",
+    "Shape(DE,EC,CO,OD)",
+    "Shape(EB,BC,CE)",
+    "Shape(CB,OBC)",
+    "Collinear(DOC)",
+    "Collinear(DEB)",
+    "Collinear(AEC)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(DC,O)",
+    "Equal(MeasureOfAngle(CAB),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(OBC,D)",
+    "diameter_of_circle_property_right_angle(DBC,O)",
+    "triangle_property_angle_sum(DBC)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "problem_id": 3414,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-960",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠BAC=110°,若MP和NQ分别垂直平分AB和AC,则∠PAQ的度数是()",
+  "problem_text_en": "As shown in the figure, ∠BAC = N_0, if MP and NQ bisect AB and AC perpendicularly, then the degree of ∠PAQ is ()",
+  "problem_img": "3414.png",
+  "construction_cdl": [
+    "Shape(AM,MP,PA)",
+    "Shape(MB,BP,PM)",
+    "Shape(AP,PQ,QA)",
+    "Shape(AQ,QN,NA)",
+    "Shape(NQ,QC,CN)",
+    "Collinear(AMB)",
+    "Collinear(ANC)",
+    "Collinear(BPQC)"
+  ],
+  "text_cdl": [
+    "IsPerpendicularBisectorOfLine(PM,AB)",
+    "IsPerpendicularBisectorOfLine(QN,AC)",
+    "Equal(MeasureOfAngle(NAM),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(QAP))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(PM,AB)",
+    "perpendicular_bisector_property_distance_equal(QN,AC)",
+    "isosceles_triangle_judgment_line_equal(PAB)",
+    "isosceles_triangle_judgment_line_equal(QCA)",
+    "isosceles_triangle_property_angle_equal(PAB)",
+    "isosceles_triangle_property_angle_equal(QCA)",
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(QAP,PAM)",
+    "angle_addition(NAQ,QAP)",
+    "angle_addition(NAQ,QAM)"
+  ]
+}

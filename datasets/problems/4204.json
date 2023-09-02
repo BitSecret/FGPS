@@ -1,0 +1,34 @@
+{
+  "problem_id": 4204,
+  "annotation": "Yangli_2023-05-07",
+  "source": "GeoQA-2904",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知⊙O的两条弦AC,BD相交于点E,∠A=70°,∠C=50°,那么sin∠AEB的值为()",
+  "problem_text_en": "As shown in the figure, it is known that the two chords AC and BD of ⊙O intersect at point E, ∠A = N_0, ∠C = N_1, then the value of sin∠AEB is ()",
+  "problem_img": "4204.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(DE,EC,CD)",
+    "Shape(BA.OAB)",
+    "Shape(AE,ED,ODA)",
+    "Shape(DC,OCD)",
+    "Shape(CE,EB,OBC)",
+    "Collinear(BED)",
+    "Collinear(AEC)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ECD),50)",
+    "Equal(MeasureOfAngle(EAB),70)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(BEA)))",
+  "problem_answer": "0.8660254037844386",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODA,C)",
+    "arc_property_circumference_angle_external(ODA,B)",
+    "triangle_property_angle_sum(ABE)"
+  ]
+}

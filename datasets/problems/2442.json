@@ -1,0 +1,35 @@
+{
+  "problem_id": 2442,
+  "annotation": "Yangli_2023-04-23",
+  "source": "Geometry3k-2561",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "2442.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AD,DE,EB)",
+    "Shape(BA,AC,CB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(LengthOfLine(AD),5)",
+    "Equal(LengthOfLine(DE),6)",
+    "PerpendicularBetweenLine(AD,ED)",
+    "PerpendicularBetweenLine(DE,BE)",
+    "PerpendicularBetweenLine(EB,AB)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfQuadrilateral(BADE),AreaOfTriangle(BAC)))",
+  "problem_answer": "22.062746066806227",
+  "theorem_seqs": [
+    "quadrilateral_property_angle_sum(BADE)",
+    "parallel_judgment_ipsilateral_internal_angle(BE,AD)",
+    "parallel_judgment_ipsilateral_internal_angle(ED,BA)",
+    "parallelogram_judgment_parallel_and_parallel(BADE)",
+    "parallelogram_area_formula_sine(ADEB)",
+    "parallelogram_property_opposite_line_equal(DEBA)",
+    "cosine_theorem(CBA)",
+    "triangle_area_formula_sine(CBA)"
+  ]
+}

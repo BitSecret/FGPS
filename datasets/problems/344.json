@@ -1,0 +1,32 @@
+{
+  "problem_id": 344,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-350",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y in the figure.",
+  "problem_img": "344.png",
+  "construction_cdl": [
+    "Shape(GO,OI,IE,EG)",
+    "Shape(OH,HB,BI,IO)",
+    "Collinear(GOH)",
+    "Collinear(EIB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(GOI),3*y+1)",
+    "Equal(MeasureOfAngle(OIE),4*x-5)",
+    "Equal(MeasureOfAngle(HBI),3*x+11)",
+    "ParallelBetweenLine(GE,OI)",
+    "ParallelBetweenLine(OI,HB)",
+    "ParallelBetweenLine(HG,BE)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(BH,IO,E)",
+    "parallel_property_collinear_extend(HG,BE,O)",
+    "parallel_property_collinear_extend(EB,GO,I)",
+    "parallel_property_ipsilateral_internal_angle(OG,IE)"
+  ]
+}

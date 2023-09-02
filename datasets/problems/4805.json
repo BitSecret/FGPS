@@ -1,0 +1,45 @@
+{
+  "problem_id": 4805,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4226",
+  "problem_level": 1,
+  "problem_text_cn": "如图,如果直线AB与半径为2的⊙O相切于点C,D是⊙O上一点,且∠EDC=30°,弦EF∥AB,则EF的长是()",
+  "problem_text_en": "As shown in the figure, if the line AB is tangent to the ⊙O with a radius of N_0 at the point C, D is a point on the ⊙O, and ∠EDC = N_1, the chord EF ∥ AB, then the length of EF is ()",
+  "problem_img": "4805.png",
+  "construction_cdl": [
+    "Shape(OEC,CM,MO,OE)",
+    "Shape(OEC,CD,DE)",
+    "Shape(OCF,FM,MC)",
+    "Shape(OFE,EM,MF)",
+    "Shape(AC,CM)",
+    "Shape(OE,EM,MO)",
+    "Shape(MC,CB)",
+    "Collinear(ACB)",
+    "Collinear(OMC)",
+    "Collinear(EMF)",
+    "Cocircular(O,ECFD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(AC,O)",
+    "IsTangentOfCircle(BC,O)",
+    "Equal(RadiusOfCircle(O),2)",
+    "ParallelBetweenLine(EF,AB)",
+    "Equal(MeasureOfAngle(CDE),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "2*sqrt(3)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OE,O)",
+    "arc_property_circumference_angle_external(OEC,D)",
+    "arc_property_center_angle(OEC,O)",
+    "tangent_of_circle_property_perpendicular(AC,O,O)",
+    "parallel_property_collinear_extend(EF,AB,M)",
+    "parallel_property_collinear_extend(BA,ME,C)",
+    "parallel_property_corresponding_angle(CA,ME,O)",
+    "sine_theorem(EMO)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OM,EF)",
+    "line_addition(EM,MF)"
+  ]
+}

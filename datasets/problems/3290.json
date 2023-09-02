@@ -1,0 +1,29 @@
+{
+  "problem_id": 3290,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-607",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD是△ABC的外角∠CAE的平分线,∠B=30°,∠DAE=55°,则∠ACD的度数是()",
+  "problem_text_en": "As shown in the figure, AD is the bisector of the exterior angle of △ABC∠CAE, ∠B = N_0, ∠DAE = N_1, then the degree of ∠ACD is ()",
+  "problem_img": "3290.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Shape(EA,AD)",
+    "Collinear(BAE)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(AD,EAC)",
+    "Equal(MeasureOfAngle(ABC),30)",
+    "Equal(MeasureOfAngle(EAD),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "angle_addition(EAD,DAC)",
+    "adjacent_complementary_angle(EAC,CAB)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 674,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-691",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For trapezoid Q R S T, A and B are midpoints of the legs. Find A B.",
+  "problem_img": "674.png",
+  "construction_cdl": [
+    "Shape(TA,AB,BS,ST)",
+    "Shape(AQ,QR,RB,BA)",
+    "Collinear(TAQ)",
+    "Collinear(SBR)"
+  ],
+  "text_cdl": [
+    "Trapezoid(QRST)",
+    "IsMidsegmentOfQuadrilateral(AB,TQRS)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(TS),12)",
+    "Equal(LengthOfLine(QR),20)",
+    "Equal(MeasureOfAngle(STQ),120)",
+    "Equal(MeasureOfAngle(QRS),45)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "midsegment_of_quadrilateral_property_length(AB,TQRS)"
+  ]
+}

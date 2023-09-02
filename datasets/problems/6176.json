@@ -1,0 +1,37 @@
+{
+  "problem_id": 6176,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8747",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,∠OCB=35°,则∠A的度数等于()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, ∠OCB = N_0, then the degree of ∠A is equal to ()",
+  "problem_img": "6176.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(OD,DA,AO)",
+    "Shape(OB,BD,DO)",
+    "Shape(DB,BC,CD)",
+    "Shape(AD,DC,CA)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Collinear(BDA)",
+    "Collinear(ODC)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCO),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

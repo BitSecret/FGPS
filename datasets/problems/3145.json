@@ -1,0 +1,43 @@
+{
+  "problem_id": 3145,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-405",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB∥CD,∠1=50°,∠2=110°,则∠E的大小是().",
+  "problem_text_en": "As shown in the figure, the straight line AB ∥ CD, ∠1 = N_0, ∠2 = N_1, then the size of ∠E is ().",
+  "problem_img": "3145.png",
+  "construction_cdl": [
+    "Shape(EM,MP,PE)",
+    "Shape(AM,ME)",
+    "Shape(EP,PB)",
+    "Shape(QM,MA)",
+    "Shape(BP,PR)",
+    "Shape(MQ,QR,RP,PM)",
+    "Shape(CQ,QM)",
+    "Shape(PR,RD)",
+    "Shape(SQ,QC)",
+    "Shape(RQ,QS)",
+    "Shape(TR,RQ)",
+    "Shape(DR,RT)",
+    "Collinear(AMPB)",
+    "Collinear(CQRD)",
+    "Collinear(EMQS)",
+    "Collinear(EPRT)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "Equal(MeasureOfAngle(QMA),50)",
+    "Equal(MeasureOfAngle(TRQ),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(PEM))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "vertical_angle(QMA,EMP)",
+    "parallel_property_collinear_extend(AB,CD,P)",
+    "parallel_property_collinear_extend(DC,PA,R)",
+    "parallel_property_corresponding_angle(RC,PA,T)",
+    "adjacent_complementary_angle(RPM,MPE)",
+    "triangle_property_angle_sum(EMP)"
+  ]
+}

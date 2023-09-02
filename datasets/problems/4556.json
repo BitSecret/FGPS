@@ -1,0 +1,30 @@
+{
+  "problem_id": 4556,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3666",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC为⊙O的内接三角形,若∠ADC=115°,则∠AOC的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is the inscribed triangle of ⊙O, if ∠ADC = N_0, then the degree of ∠AOC is ()",
+  "problem_img": "4556.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(BA,AO,OC,CB)",
+    "Shape(BC,OCB)",
+    "Shape(OA,AC,CO)",
+    "Shape(AD,DC,CA)",
+    "Shape(DA,OAD)",
+    "Shape(CD,ODC)",
+    "Cocircular(O,ADCB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ADC),115)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COA))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_internal(OAC,D)",
+    "arc_property_center_angle(OAC,O)"
+  ]
+}

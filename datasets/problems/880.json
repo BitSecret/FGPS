@@ -1,0 +1,47 @@
+{
+  "problem_id": 880,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-909",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "假设AC垂直CD,ID垂直CD,Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "880.png",
+  "construction_cdl": [
+    "Shape(BA,AF,FB)",
+    "Shape(BF,FI,IB)",
+    "Shape(FE,ED,DI,IF)",
+    "Shape(AC,CE,EF,FA)",
+    "Collinear(AFI)",
+    "Collinear(BFE)",
+    "Collinear(CED)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AC,EC)",
+    "PerpendicularBetweenLine(ED,ID)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),3.6)",
+    "Equal(LengthOfLine(CD),9.2)",
+    "Equal(LengthOfLine(AB),LengthOfLine(BI))",
+    "Equal(LengthOfLine(AC),LengthOfLine(ID))",
+    "PerpendicularBetweenLine(CE,FE)",
+    "Equal(LengthOfLine(BE),8)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfTriangle(BAI),AreaOfQuadrilateral(ACDI)))",
+  "problem_answer": "53.36",
+  "theorem_seqs": [
+    "parallel_judgment_ipsilateral_internal_angle(CA,EF)",
+    "parallel_judgment_ipsilateral_internal_angle(CA,DI)",
+    "parallelogram_judgment_parallel_and_equal(DIAC)",
+    "parallel_property_collinear_extend(DC,IA,E)",
+    "parallel_property_collinear_extend(AI,CE,F)",
+    "parallel_property_corresponding_angle(EC,FA,B)",
+    "parallelogram_judgment_parallel_and_parallel(ACEF)",
+    "parallelogram_property_opposite_line_equal(IACD)",
+    "parallelogram_property_opposite_line_equal(ACEF)",
+    "line_addition(BF,FE)",
+    "altitude_of_triangle_judgment(BF,BAI)",
+    "triangle_area_formula_common(BAI)",
+    "parallelogram_area_formula_sine(ACDI)"
+  ]
+}

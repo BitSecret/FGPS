@@ -1,0 +1,38 @@
+{
+  "problem_id": 3539,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1166",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知DC∥FP,∠1=∠2,∠FED=32°,∠AGF=76°,FH平分∠EFG,则∠PFH的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that DC ∥ FP, ∠1 = ∠2, ∠FED = N_0, ∠AGF = N_1, FH bisects ∠EFG, then the degree of ∠PFH is ()",
+  "problem_img": "3539.png",
+  "construction_cdl": [
+    "Shape(EF,FP,PC,CE)",
+    "Shape(FE,ED)",
+    "Shape(FH,HP,PF)",
+    "Shape(FG,GB,BH,HF)",
+    "Shape(AG,GF)",
+    "Shape(MB,BG)",
+    "Collinear(AGB)",
+    "Collinear(DEC)",
+    "Collinear(CPHBM)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(MBG),MeasureOfAngle(HPF))",
+    "Equal(MeasureOfAngle(AGF),76)",
+    "Equal(MeasureOfAngle(FED),32)",
+    "ParallelBetweenLine(DE,FP)",
+    "IsBisectorOfAngle(FH,EFG)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(PFH))",
+  "problem_answer": "22",
+  "theorem_seqs": [
+    "parallel_judgment_corresponding_angle(BG,PF,M)",
+    "parallel_property_collinear_extend(BG,PF,A)",
+    "parallel_property_alternate_interior_angle(GA,PF)",
+    "parallel_property_alternate_interior_angle(DE,FP)",
+    "angle_addition(PFH,HFG)",
+    "angle_addition(EFP,PFH)"
+  ]
+}

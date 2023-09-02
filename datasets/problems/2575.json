@@ -1,0 +1,29 @@
+{
+  "problem_id": 2575,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-2703",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2575.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(AD,DB,BA)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),10)",
+    "Equal(LengthOfLine(BC),18)",
+    "Equal(LengthOfLine(AB),14)",
+    "Equal(LengthOfLine(BD),x)",
+    "Equal(MeasureOfAngle(BAD),MeasureOfAngle(DAC))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "10.5",
+  "theorem_seqs": [
+    "line_addition(CD,DB)",
+    "bisector_of_angle_judgment_angle_equal(AD,BAC)",
+    "bisector_of_angle_property_line_ratio(AD,BAC)"
+  ]
+}

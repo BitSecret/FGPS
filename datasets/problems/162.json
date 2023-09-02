@@ -1,0 +1,36 @@
+{
+  "problem_id": 162,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-164",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle 6.",
+  "problem_img": "162.png",
+  "construction_cdl": [
+    "Shape(CA,AE,EC)",
+    "Shape(EA,AN,NE)",
+    "Shape(AF,FN,NA)",
+    "Shape(CE,EB)",
+    "Shape(BE,EN)",
+    "Shape(EN,NJ)",
+    "Collinear(CAF)",
+    "Collinear(CEN)",
+    "Collinear(AEB)",
+    "Collinear(FNJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CEB),110)",
+    "Equal(MeasureOfAngle(ANE),30)",
+    "Equal(MeasureOfAngle(ENJ),130)",
+    "Equal(MeasureOfAngle(ECA),MeasureOfAngle(AFN))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CAE))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AEC,CEB)",
+    "adjacent_complementary_angle(FNE,ENJ)",
+    "triangle_property_angle_sum(CFN)",
+    "triangle_property_angle_sum(CAE)"
+  ]
+}

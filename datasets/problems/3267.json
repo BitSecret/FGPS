@@ -1,0 +1,29 @@
+{
+  "problem_id": 3267,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-573",
+  "problem_level": 1,
+  "problem_text_cn": "如图,m∥n,直线l分别交m,n于点A,点B,AC⊥AB,AC交直线n于点C,若∠1=35°,则∠2等于()",
+  "problem_text_en": "As shown in the figure, ∥ n and straight line l intersect respectively, n at vertex A, vertex B, AC ⊥ AB, AC intersects straight line n at vertex C, if ∠1 = N_0, then ∠2 is equal to ()",
+  "problem_img": "3267.png",
+  "construction_cdl": [
+    "Shape(EA,AD,DE)",
+    "Shape(AC,CD,DA)",
+    "Shape(AB,BC,CA)",
+    "Collinear(EAB)",
+    "Collinear(EDC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AD,BC)",
+    "PerpendicularBetweenLine(CA,BA)",
+    "Equal(MeasureOfAngle(EAD),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EAD,DAB)",
+    "angle_addition(DAC,CAB)",
+    "parallel_property_alternate_interior_angle(AD,BC)"
+  ]
+}

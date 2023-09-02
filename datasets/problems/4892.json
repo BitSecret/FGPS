@@ -1,0 +1,38 @@
+{
+  "problem_id": 4892,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4429",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD是⊙O的直径,BC与⊙O相切于点B,连结AB、OB、BD,若∠ABC=65°,∠ADB等于()",
+  "problem_text_en": "As shown in the figure, AD is the diameter of ⊙O, BC and ⊙O are tangent to point B. Connect AB, OB, and BD, if ∠ABC = N_0, ∠ADB is equal to ()",
+  "problem_img": "4892.png",
+  "construction_cdl": [
+    "Shape(AB,OBE,OEA)",
+    "Shape(AO,OB,BA)",
+    "Shape(BO,OD,DB)",
+    "Shape(BD,ODB)",
+    "Shape(DO,OA,OAD)",
+    "Shape(BC,CE,OBE)",
+    "Collinear(AOD)",
+    "Cocircular(O,ADBE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CB,O)",
+    "Equal(MeasureOfAngle(ABC),65)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADB))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(CB,O,O)",
+    "angle_addition(OBA,ABC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBA)",
+    "isosceles_triangle_property_angle_equal(OBA)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,D)",
+    "triangle_property_angle_sum(AOB)"
+  ]
+}

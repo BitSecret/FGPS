@@ -1,0 +1,32 @@
+{
+  "problem_id": 3991,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1940",
+  "problem_level": 1,
+  "problem_text_cn": "一条排污水管的横截面如图所示,已知排污水管的横截面圆半径OB=5m,横截面的圆心O到污水面的距离OC=3m,则污水面宽AB等于()",
+  "problem_text_en": "The cross section of a sewage pipe is shown as the figure. It is known that the radius of the cross sectional of the sewage pipe is OB = N_0, and the distance from the center O of the cross section to the sewage surface OC = N_1, then the width of sewage surface AB is equal to ()",
+  "problem_img": "3991.png",
+  "construction_cdl": [
+    "Shape(OC,CB,BO)",
+    "Shape(CA,OAB,BC)",
+    "Shape(OB,OBA,AC,CO)",
+    "Collinear(ACB)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OC,BC)",
+    "Equal(LengthOfLine(OB),5)",
+    "Equal(LengthOfLine(OC),3)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ACO,OCB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(OCB)",
+    "right_triangle_property_pythagorean(OCB)"
+  ]
+}

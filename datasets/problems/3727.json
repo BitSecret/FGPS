@@ -1,0 +1,42 @@
+{
+  "problem_id": 3727,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1506",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠1=∠2,∠3=30°,则∠4等于()",
+  "problem_text_en": "As shown in the figure, ∠1 = ∠2, ∠3 = N_0, then ∠4 is equal to ()",
+  "problem_img": "3727.png",
+  "construction_cdl": [
+    "Shape(AI,IB)",
+    "Shape(BI,IJ)",
+    "Shape(KI,IA)",
+    "Shape(JI,IK)",
+    "Shape(EK,KI)",
+    "Shape(IK,KE)",
+    "Shape(IK,KL)",
+    "Shape(LK,KF)",
+    "Shape(IJ,JC)",
+    "Shape(CJ,JD)",
+    "Shape(LJ,JI)",
+    "Shape(DJ,JL)",
+    "Shape(KL,LJ)",
+    "Shape(JL,LH)",
+    "Shape(GJ,JK)",
+    "Shape(HL,LG)",
+    "Collinear(AIJD)",
+    "Collinear(EKLH)",
+    "Collinear(BIKF)",
+    "Collinear(CJLG)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(JIK),30)",
+    "Equal(MeasureOfAngle(JLH),MeasureOfAngle(CJD))",
+    "ParallelBetweenLine(IJ,KL)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(IKL))",
+  "problem_answer": "150",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(IJ,KL)"
+  ]
+}

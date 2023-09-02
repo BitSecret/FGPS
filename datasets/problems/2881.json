@@ -1,0 +1,41 @@
+{
+  "problem_id": 2881,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-49",
+  "problem_level": 1,
+  "problem_text_cn": "在等腰直角三角形ABC中,AB=AC=4,点O为BC的中点,以O为圆心作⊙O交BC于点M、N,⊙O与AB、AC相切,切点分别为D、E,则⊙O的半径和∠MND的度数分别为()",
+  "problem_text_en": "In the isosceles right triangle ABC, AB = AC = N_0, point O is the midpoint of BC, and ⊙O intersects BC at points M and N with O as the midpoint. ⊙O is tangent to AB and AC, and the tangent points are respectively D, E, then the degree of ∠MND is ()",
+  "problem_img": "2881.png",
+  "construction_cdl": [
+    "Shape(DB,BM,ODM)",
+    "Shape(MO,OD,ODM)",
+    "Shape(DO,ON,ND)",
+    "Shape(DN,ONE,OED)",
+    "Shape(NC,CE,ONE)",
+    "Shape(EA,AD,OED)",
+    "Collinear(BMONC)",
+    "Collinear(ADB)",
+    "Collinear(AEC)",
+    "Cocircular(O,NEDM)"
+  ],
+  "text_cdl": [
+    "IsoscelesRightTriangle(ABC)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(AB),4)",
+    "IsMidpointOfLine(O,BC)",
+    "IsTangentOfCircle(AD,O)",
+    "IsTangentOfCircle(AE,O)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AD,O,O)",
+    "parallel_judgment_ipsilateral_internal_angle(AC,DO)",
+    "midsegment_of_triangle_judgment_parallel(OD,BCA)",
+    "midsegment_of_triangle_property_length(OD,BCA)",
+    "radius_of_circle_property_length_equal(OD,O)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 2656,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2792",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of \\angle 3 if m \\angle 4 = m \\angle 5.",
+  "problem_img": "2656.png",
+  "construction_cdl": [
+    "Shape(EB,BF,FE)",
+    "Shape(EF,FD,DE)",
+    "Shape(DF,FA,AD)",
+    "Shape(DA,AG,GD)",
+    "Shape(BC,CF,FB)",
+    "Collinear(EFC)",
+    "Collinear(BFAG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(BCF),MeasureOfAngle(FBC))",
+    "Equal(MeasureOfAngle(DFG),47)",
+    "Equal(MeasureOfAngle(FEB),63)",
+    "Equal(MeasureOfAngle(DAG),136)",
+    "Equal(MeasureOfAngle(EFD),69)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CFB))",
+  "problem_answer": "116",
+  "theorem_seqs": [
+    "angle_addition(EFD,DFA)",
+    "vertical_angle(EFA,CFB)"
+  ]
+}

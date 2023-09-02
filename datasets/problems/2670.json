@@ -1,0 +1,27 @@
+{
+  "problem_id": 2670,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2808",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x so that B E and A D are perpendicular.",
+  "problem_img": "2670.png",
+  "construction_cdl": [
+    "Shape(BF,FC)",
+    "Shape(CF,FD)",
+    "Collinear(BFE)",
+    "Collinear(AFD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "PerpendicularBetweenLine(BF,DF)",
+    "Equal(MeasureOfAngle(CFD),3*x)",
+    "Equal(MeasureOfAngle(BFC),6*x)",
+    "Equal(MeasureOfAngle(EFA),12*y-10)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "angle_addition(BFC,CFD)"
+  ]
+}

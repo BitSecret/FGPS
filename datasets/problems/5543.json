@@ -1,0 +1,33 @@
+{
+  "problem_id": 5543,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6741",
+  "problem_level": 1,
+  "problem_text_cn": "如图,OAB是以6cm为半径的扇形,AC切弧AB于点A交OB的延长线于点C,如果弧AB的长等于3cm,AC=4cm,则图中阴影部分的面积为()",
+  "problem_text_en": "As shown in the figure, OAB is a fan shape with N_0 as the radius. AC tangents the arc AB at point A and crosses the extension line of OB at point C. If the length of the arc AB is equal to N_1 and AC = N_2, then the area of the shaded part in the figure is ()",
+  "problem_img": "5543.png",
+  "construction_cdl": [
+    "Shape(OA,OAB,BO)",
+    "Shape(AC,CB,OAB)",
+    "Collinear(CBO)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),6)",
+    "Equal(LengthOfArc(OAB),3)",
+    "Equal(LengthOfLine(AC),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(AreaOfTriangle(OAC),AreaOfSector(OAB)))",
+  "problem_answer": "-5.424",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "arc_length_formula(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "sector_area_formula(OAB)",
+    "sine_theorem(ACO)",
+    "cosine_theorem(OAC)",
+    "triangle_area_formula_sine(COA)"
+  ]
+}

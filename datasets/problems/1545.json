@@ -1,0 +1,33 @@
+{
+  "problem_id": 1545,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1604",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The degree measure of minor arc \\widehat A C and major arc \\widehat A D C are x and y respectively. If m \\angle A B C = 70, find y.",
+  "problem_img": "1545.png",
+  "construction_cdl": [
+    "Shape(AB,BC,EAC)",
+    "Shape(EAC,CE,EA)",
+    "Shape(ECD,EDA,AE,EC)",
+    "Cocircular(E,ACD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(E,E)",
+    "IsTangentOfCircle(BA,E)",
+    "IsTangentOfCircle(BC,E)",
+    "Equal(MeasureOfAngle(ABC),70)",
+    "Equal(MeasureOfArc(EAC),x)",
+    "Equal(MeasureOfArc(ECA),y)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "250",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BA,E,E)",
+    "tangent_of_circle_property_perpendicular(BC,E,E)",
+    "quadrilateral_property_angle_sum(ABCE)",
+    "arc_property_center_angle(ECA,E)",
+    "round_angle(CEA,AEC)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 2457,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2577",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2457.png",
+  "construction_cdl": [
+    "Shape(SP,PT,TS)",
+    "Shape(PR,RT,TP)",
+    "Shape(UQ,QW,WU)",
+    "Shape(QV,VW,WQ)",
+    "Collinear(SPR)",
+    "Collinear(UQV)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(PT),13.5)",
+    "Equal(LengthOfLine(UQ),3)",
+    "Equal(LengthOfLine(SP),x)",
+    "Equal(LengthOfLine(WQ),9)",
+    "Equal(MeasureOfAngle(RTS),MeasureOfAngle(VWU))",
+    "Equal(MeasureOfAngle(TSR),MeasureOfAngle(UVW))",
+    "Equal(LengthOfLine(UQ),LengthOfLine(QV))",
+    "Equal(LengthOfLine(SP),LengthOfLine(PR))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4.5",
+  "theorem_seqs": [
+    "line_addition(SP,PR)",
+    "line_addition(UQ,QV)",
+    "mirror_similar_triangle_judgment_aa(RTS,UVW)",
+    "mirror_similar_triangle_property_line_ratio(RTS,UVW)",
+    "mirror_similar_triangle_property_line_ratio(TSR,WUV)",
+    "mirror_similar_triangle_judgment_sas(SPT,VWQ)",
+    "mirror_similar_triangle_property_line_ratio(SPT,VWQ)",
+    "mirror_similar_triangle_property_line_ratio(TSP,WQV)"
+  ]
+}

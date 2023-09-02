@@ -1,0 +1,25 @@
+{
+  "problem_id": 3700,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1459",
+  "problem_level": 1,
+  "problem_text_cn": "如图一棵大树在离地面9米高的B处断裂,树顶A落在离树底部C的12米处,则大树断裂之前的高度为()",
+  "problem_text_en": "As shown in the figure, a big tree breaks at B whose height is N_0 from the ground, and the top A of the tree falls at N_1 from the bottom C of the tree. The height before the break is ()",
+  "problem_img": "3700.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),9)",
+    "Equal(LengthOfLine(AC),12)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(Add(LengthOfLine(CB),LengthOfLine(BA)))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

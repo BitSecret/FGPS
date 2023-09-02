@@ -1,0 +1,27 @@
+{
+  "problem_id": 4480,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3473",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知∠ACB是⊙O的圆周角,∠ACB=35°,则圆心角∠AOB是()",
+  "problem_text_en": "As shown in the figure, it is known that ∠ACB is the circumferential angle of ⊙O, ∠ACB = N_0, then the central angle ∠AOB is ()",
+  "problem_img": "4480.png",
+  "construction_cdl": [
+    "Shape(OBC,CB)",
+    "Shape(OCA,AC)",
+    "Shape(OAB,BO,OA)",
+    "Shape(CA,AO,OB,BC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCA),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)"
+  ]
+}

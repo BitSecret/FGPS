@@ -1,10 +1,9 @@
-from symbolic_solver.problem.problem import Problem
-from symbolic_solver.aux_tools.parser import EquationParser as EqParser
-from symbolic_solver.aux_tools.parser import FormalLanguageParser as FLParser
-from symbolic_solver.aux_tools.parser import InverseParser as IvParser
-from symbolic_solver.core.engine import EquationKiller as EqKiller
-from symbolic_solver.core.engine import GeometryPredicateLogic as GeoLogic
-from symbolic_solver.aux_tools.utils import rough_equal
+from solver.problem.problem import Problem
+from solver.aux_tools.parser import GDLParser, CDLParser
+from solver.aux_tools.parser import InverseParser as IvParser
+from solver.core.engine import EquationKiller as EqKiller
+from solver.core.engine import GeometryPredicateLogic as GeoLogic
+from solver.aux_tools.utils import rough_equal
 import warnings
 import time
 
@@ -17,15 +16,15 @@ class Interactor:
         :param predicate_GDL: predicate GDL.
         :param theorem_GDL: theorem GDL.
         """
-        self.predicate_GDL = FLParser.parse_predicate(predicate_GDL)
-        self.theorem_GDL = FLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
+        self.predicate_GDL = GDLParser.parse_predicate(predicate_GDL)
+        self.theorem_GDL = GDLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
         self.problem = None
 
     def load_problem(self, problem_CDL):
         """Load problem through problem_CDL."""
         start_time = time.time()
         self.problem = Problem()
-        self.problem.load_problem_by_fl(self.predicate_GDL, FLParser.parse_problem(problem_CDL))  # load problem
+        self.problem.load_problem_by_fl(self.predicate_GDL, CDLParser.parse_problem(problem_CDL))  # load problem
         EqKiller.solve_equations(self.problem)  # Solve the equations after initialization
         self.problem.step("init_problem", time.time() - start_time)  # save applied theorem and update step
 
@@ -105,7 +104,7 @@ class Interactor:
                 oppose = False
                 if "~" in equal:
                     oppose = True
-                eq = EqParser.get_equation_from_tree(self.problem, item, True, letters)
+                eq = CDLParser.get_equation_from_tree(self.problem, item, True, letters)
                 solved_eq = False
 
                 result, premise = EqKiller.solve_target(eq, self.problem)
@@ -122,7 +121,7 @@ class Interactor:
 
             for predicate, item in gpl["conclusions"]:
                 if predicate == "Equal":  # algebra conclusion
-                    eq = EqParser.get_equation_from_tree(self.problem, item, True, letters)
+                    eq = CDLParser.get_equation_from_tree(self.problem, item, True, letters)
                     update = self.problem.add("Equation", eq, premises, theorem) or update
                 else:  # logic conclusion
                     item = tuple(letters[i] for i in item)

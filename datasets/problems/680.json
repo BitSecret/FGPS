@@ -1,0 +1,32 @@
+{
+  "problem_id": 680,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-697",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If K L M N is a parallelogram, find y.",
+  "problem_img": "680.png",
+  "construction_cdl": [
+    "Shape(KN,NJ,JK)",
+    "Shape(JN,NM,MJ)",
+    "Shape(JL,LK,KJ)",
+    "Shape(JM,ML,LJ)",
+    "Collinear(KJM)",
+    "Collinear(NJL)"
+  ],
+  "text_cdl": [
+    "Parallelogram(KNML)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(KL),3*y)",
+    "Equal(LengthOfLine(LJ),7)",
+    "Equal(LengthOfLine(LM),9*x)",
+    "Equal(LengthOfLine(KN),36)",
+    "Equal(LengthOfLine(NJ),y+15)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "-8",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(NMLK,J)"
+  ]
+}

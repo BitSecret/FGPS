@@ -1,0 +1,30 @@
+{
+  "problem_id": 5106,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4941",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一艘货轮由A地沿北偏东45°方向航行到C地,在C地改变航向航行到B地,此时观测到C地位于B地北偏西63°方向上,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, a freighter sails from A to C in the direction N_0 to the east by north, and changes course to B at C. At this time, it is observed that C is located in the direction of N_1 to the west of B, and then ∠C The degree is ()",
+  "problem_img": "5106.png",
+  "construction_cdl": [
+    "Shape(DA,AC)",
+    "Shape(FC,CA)",
+    "Shape(BC,CF)",
+    "Shape(CB,BE)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AD,FC)",
+    "ParallelBetweenLine(FC,BE)",
+    "ParallelBetweenLine(AD,BE)",
+    "Equal(MeasureOfAngle(DAC),45)",
+    "Equal(MeasureOfAngle(CBE),63)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "108",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,FC)",
+    "parallel_property_alternate_interior_angle(FC,BE)",
+    "angle_addition(BCF,FCA)"
+  ]
+}

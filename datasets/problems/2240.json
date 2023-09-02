@@ -1,0 +1,24 @@
+{
+  "problem_id": 2240,
+  "annotation": "Yangli_2023-04-09",
+  "source": "Geometry3k-2339",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Express the ratio of \\sin V as a decimal to the nearest hundredth.",
+  "problem_img": "2240.png",
+  "construction_cdl": [
+    "Shape(VW,WX,XV)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "PerpendicularBetweenLine(VW,XW)",
+    "Equal(LengthOfLine(XV),75)",
+    "Equal(LengthOfLine(VW),72)",
+    "Equal(LengthOfLine(XW),21)"
+  ],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(XVW)))",
+  "problem_answer": "0.28",
+  "theorem_seqs": [
+    "sine_theorem(XVW)"
+  ]
+}

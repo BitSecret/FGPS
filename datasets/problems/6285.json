@@ -1,0 +1,31 @@
+{
+  "problem_id": 6285,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-8975",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A,B是⊙O上的两点,AC是⊙O的切线,∠B=70°,则∠BAC等于()",
+  "problem_text_en": "As shown in the figure, A and B are two vertices on ⊙O, AC is the tangent of ⊙O, ∠B = N_0, then ∠BAC is equal to ()",
+  "problem_img": "6285.png",
+  "construction_cdl": [
+    "Shape(BO,OA,AB)",
+    "Shape(OAB,BA)",
+    "Shape(BA,AC)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CA,O)",
+    "Equal(MeasureOfAngle(ABO),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(CA,O,O)",
+    "angle_addition(OAB,BAC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)"
+  ]
+}

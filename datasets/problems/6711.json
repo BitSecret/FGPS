@@ -1,0 +1,32 @@
+{
+  "problem_id": 6711,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9752",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,∠BOC=50°,则∠D的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, ∠BOC = N_0, then the degree of ∠D is ()",
+  "problem_img": "6711.png",
+  "construction_cdl": [
+    "Shape(DB,BE,ED)",
+    "Shape(EC,CO,OE)",
+    "Shape(BD,ODB)",
+    "Shape(CE,EB,OBC)",
+    "Shape(AO,OC,OCA)",
+    "Shape(DE,EO,OA,OAD)",
+    "Collinear(BEOA)",
+    "Collinear(DEC)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COB),50)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

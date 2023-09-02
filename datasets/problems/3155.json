@@ -1,0 +1,33 @@
+{
+  "problem_id": 3155,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-422",
+  "problem_level": 1,
+  "problem_text_cn": "如图,甲、乙两盏路灯相距30米,一天晚上,当小刚从路灯甲底部向路灯乙底部直行25米时,发现自己的身影顶部正好接触到路灯乙的底部,已知小刚的身高为1.5米,那么路灯甲的高为()",
+  "problem_text_en": "As shown in the figure, the two street lamps A and B are separated by N_0. One night, when Xiaogang went straight N_1 from the bottom of street lamp A to the bottom of street lamp B, he found that the top of his figure just touched the bottom of street lamp B. It is known that Xiaogang's height is N_2, then the height of the street lamp is ()",
+  "problem_img": "3155.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DC,CA)",
+    "Shape(CD,DF,FC)",
+    "Shape(CF,FE)",
+    "Collinear(BDF)",
+    "Collinear(ACF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BA,DC)",
+    "ParallelBetweenLine(DC,FE)",
+    "Equal(LengthOfLine(BD),25)",
+    "Equal(LengthOfLine(BF),30)",
+    "Equal(LengthOfLine(CD),1.5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(BA,DC,F)",
+    "similar_triangle_judgment_aa(ABF,CDF)",
+    "line_addition(BD,DF)",
+    "similar_triangle_property_line_ratio(ABF,CDF)",
+    "similar_triangle_property_line_ratio(FAB,FCD)"
+  ]
+}

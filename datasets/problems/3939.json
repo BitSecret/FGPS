@@ -1,0 +1,41 @@
+{
+  "problem_id": 3939,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1860",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是圆O的直径,CD是圆O的弦,AB、CD的延长线交于点E,已知AB=2DE,∠E=16°,则∠ABC的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of circle O, CD is the chord of circle O, and the extended lines of AB and CD intersect at point E. Given that AB = 2 DE, ∠E = N_0, then the degree of ∠ABC is ()",
+  "problem_img": "3939.png",
+  "construction_cdl": [
+    "Shape(OCD,DC)",
+    "Shape(ODB,BC,CD)",
+    "Shape(ODB,BO,OD)",
+    "Shape(OBA,AO,OB)",
+    "Shape(OAC,CB,BO,OA)",
+    "Shape(ODB,DE,EB)",
+    "Shape(BD,DE,EB)",
+    "Collinear(AOBE)",
+    "Collinear(CDE)",
+    "Cocircular(O,ACDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),Mul(LengthOfLine(DE),2))",
+    "Equal(MeasureOfAngle(DEB),16)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CBA))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "line_addition(AO,OB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(DEO)",
+    "isosceles_triangle_property_angle_equal(DEO)",
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "triangle_property_angle_sum(BCE)",
+    "adjacent_complementary_angle(EBC,CBA)"
+  ]
+}

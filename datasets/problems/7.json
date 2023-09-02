@@ -1,0 +1,25 @@
+{
+  "problem_id": 7,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-6",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of angle STR.",
+  "problem_img": "7.png",
+  "construction_cdl": [
+    "Shape(TR,RS,ST)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(TR),7*sqrt(2))",
+    "Equal(LengthOfLine(TS),3*sqrt(2))",
+    "PerpendicularBetweenLine(RS,TS)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(STR))",
+  "problem_answer": "64.623",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(RST)",
+    "right_triangle_property_pythagorean(RST)",
+    "sine_theorem(RST)"
+  ]
+}

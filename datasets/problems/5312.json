@@ -1,0 +1,23 @@
+{
+  "problem_id": 5312,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5515",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一辆小车沿倾斜角为α的斜坡向上行驶13米,已知sinα=\\frac{5}{13},则小车上升的高度是()",
+  "problem_text_en": "As shown in the figure, a trolley drives up N_0 along a slope with an inclination angle of α, and it is known that sinα = \\frac{N_1}{N_2}, then the ascent height of the trolley is ()",
+  "problem_img": "5312.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),13)",
+    "Equal(Sin(MeasureOfAngle(CAB)),5/13)",
+    "Equal(MeasureOfAngle(ABC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "sine_theorem(CAB)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 1001,
+  "annotation": "NaZhu_2023-03-19",
+  "source": "Geometry3k-1032",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find K L.",
+  "problem_img": "1001.png",
+  "construction_cdl": [
+    "Shape(JM,MK,KJ)",
+    "Shape(KM,ML,LK)",
+    "Collinear(JKL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(LJ),12)",
+    "Equal(LengthOfLine(ML),LengthOfLine(MJ))",
+    "PerpendicularBetweenLine(MK,JK)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(KL))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(LKM,MKJ)",
+    "isosceles_triangle_judgment_line_equal(MLJ)",
+    "altitude_of_triangle_judgment(MK,MLJ)",
+    "isosceles_triangle_property_line_coincidence(MLJ,K)",
+    "line_addition(JK,KL)"
+  ]
+}

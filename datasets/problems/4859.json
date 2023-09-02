@@ -1,0 +1,37 @@
+{
+  "problem_id": 4859,
+  "annotation": "RunanWang_2023-05-21",
+  "source": "GeoQA-4362",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的切线,点B为切点,AO的延长线交⊙O于C点,若∠A=45°,AB=√{2},则AC等于()",
+  "problem_text_en": "As shown in the figure, AB is the tangent of ⊙O, point B is the tangent point, and the extended line of AO intersects ⊙O at point C, if ∠A = N_0, AB =√{N_1}, then AC is equal to ()",
+  "problem_img": "4859.png",
+  "construction_cdl": [
+    "Shape(AB,OMB,MA)",
+    "Shape(OM,OMB,BO)",
+    "Shape(OB,OBC,CO)",
+    "Shape(MO,OC,OCM)",
+    "Collinear(COMA)",
+    "Cocircular(O,MBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "IsTangentOfCircle(AB,O)",
+    "Equal(LengthOfLine(AB),sqrt(2))",
+    "Equal(MeasureOfAngle(CAB),45)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "2+sqrt(2)",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AB,O,O)",
+    "triangle_property_angle_sum(ABO)",
+    "isosceles_triangle_judgment_angle_equal(BOA)",
+    "right_triangle_judgment_angle(ABO)",
+    "right_triangle_property_pythagorean(ABO)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "line_addition(CO,OA)"
+  ]
+}

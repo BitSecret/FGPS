@@ -1,0 +1,32 @@
+{
+  "problem_id": 6495,
+  "annotation": "NaZhu_2023-06-04",
+  "source": "GeoQA-9405",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD中,对角线AC、BD相交于点O,E是AD的中点,连接OE,如果AB=8,那么OE为()",
+  "problem_text_en": "As shown in the figure, ▱ABCD, the diagonal AC and BD intersect at point O, E is the midpoint of AD, connecting OE, if AB = N_0, then OE is ()",
+  "problem_img": "6495.png",
+  "construction_cdl": [
+    "Shape(DE,EO,OD)",
+    "Shape(EA,AO,OE)",
+    "Shape(DO,OC,CD)",
+    "Shape(OA,AB,BO)",
+    "Shape(OB,BC,CO)",
+    "Collinear(DOB)",
+    "Collinear(AOC)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsMidpointOfLine(E,AD)",
+    "Equal(LengthOfLine(AB),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OE))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "midsegment_of_triangle_judgment_midpoint(EO,DAB)",
+    "midsegment_of_triangle_property_length(EO,DAB)"
+  ]
+}

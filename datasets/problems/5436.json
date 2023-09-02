@@ -1,0 +1,40 @@
+{
+  "problem_id": 5436,
+  "annotation": "Yangli_2023-05-21",
+  "source": "GeoQA-5775",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点O是AC的中点,将周长为8cm的平行四边形ABCD沿对角线AC方向平移AO长度得到平行四边形OB′C′D′,则四边形OECF的周长为()",
+  "problem_text_en": "As shown in the figure, point O is the midpoint of AC. Translate the parallelogram ABCD with the perimeter of N_0 along the diagonal AC by the length of AO to obtain the parallelogram OB′C′D′, then the perimeter of the quadrilateral OECF is ()",
+  "problem_img": "5436.png",
+  "construction_cdl": [
+    "Shape(CF,FO,OC)",
+    "Shape(CO,OE,EC)",
+    "Shape(OF,FD,DA,AO)",
+    "Shape(EO,OA,AB,BE)",
+    "Collinear(AOC)",
+    "Collinear(DFC)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsMidpointOfLine(O,AC)",
+    "IsMidpointOfLine(F,DC)",
+    "IsMidpointOfLine(E,BC)",
+    "Equal(PerimeterOfQuadrilateral(ABCD),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(OECF))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "quadrilateral_perimeter_formula(ABCD)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "midsegment_of_triangle_judgment_midpoint(OE,CAB)",
+    "midsegment_of_triangle_judgment_midpoint(FO,CDA)",
+    "midsegment_of_triangle_property_length(OE,CAB)",
+    "midsegment_of_triangle_property_length(FO,CDA)",
+    "line_addition(DF,FC)",
+    "line_addition(CE,EB)",
+    "quadrilateral_perimeter_formula(CFOE)"
+  ]
+}

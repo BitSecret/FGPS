@@ -1,0 +1,28 @@
+{
+  "problem_id": 6434,
+  "annotation": "JiaZou_2023-06-04",
+  "source": "GeoQA-9307",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD中,∠C=110°,BE平分∠ABC,则∠AEB等于()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, ∠C = N_0, BE equally divides ∠ABC, then ∠AEB is equal to ()",
+  "problem_img": "6434.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BC,CD,DE)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsBisectorOfAngle(BE,ABC)",
+    "Equal(MeasureOfAngle(BCD),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BEA))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(ABCD)",
+    "parallel_property_ipsilateral_internal_angle(AD,BC)",
+    "angle_addition(ABE,EBC)",
+    "triangle_property_angle_sum(ABE)"
+  ]
+}

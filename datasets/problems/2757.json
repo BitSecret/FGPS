@@ -1,0 +1,24 @@
+{
+  "problem_id": 2757,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-2904",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use the Pythagorean Theorem to find the length of the hypotenuse of the right triangle.",
+  "problem_img": "2757.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),5)",
+    "Equal(LengthOfLine(AB),12)",
+    "PerpendicularBetweenLine(BA,CA)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(CB))",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BAC)",
+    "right_triangle_property_pythagorean(BAC)"
+  ]
+}

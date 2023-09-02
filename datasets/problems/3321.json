@@ -1,0 +1,26 @@
+{
+  "problem_id": 3321,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-713",
+  "problem_level": 1,
+  "problem_text_cn": "如下图,一副三角板按如图方式摆放,且∠1比∠2大30°,则∠2为()",
+  "problem_text_en": "As shown in the figure below, a set of triangular plates are placed as shown in the figure, and ∠1 is larger than ∠2 by N_0, then ∠2 is ()",
+  "problem_img": "3321.png",
+  "construction_cdl": [
+    "Shape(AO,OC)",
+    "Shape(CO,OD)",
+    "Shape(DO,OB)",
+    "Collinear(AOB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AOC),Add(MeasureOfAngle(DOB),30))",
+    "Equal(MeasureOfAngle(COD),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DOB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "angle_addition(AOC,COD)",
+    "adjacent_complementary_angle(AOD,DOB)"
+  ]
+}

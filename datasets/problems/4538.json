@@ -1,0 +1,26 @@
+{
+  "problem_id": 4538,
+  "annotation": "XiaokaiZhang_2023-05-14",
+  "source": "GeoQA-3623",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD是圆内接四边形,如图⁀{BCD}的度数为240°,那么∠C等于()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is a quadrilateral inscribed in the circle. As shown in the figure, the degree of ⁀BCD is N_0, then ∠C is equal to ()",
+  "problem_img": "4538.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(DA,AB,BC,CD)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfArc(OBD),240)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_internal(OBD,C)"
+  ]
+}

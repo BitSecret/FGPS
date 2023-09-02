@@ -1,0 +1,27 @@
+{
+  "problem_id": 150,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-152",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "150.png",
+  "construction_cdl": [
+    "Shape(CF,FG,GC)",
+    "Shape(FA,AH,HG,GF)",
+    "Collinear(CFA)",
+    "Collinear(CGH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CG),20-3*x)",
+    "Equal(LengthOfLine(AF),1/2*y+20)",
+    "Equal(LengthOfLine(CF),3*y)",
+    "Equal(LengthOfLine(HG),2*x-5)",
+    "Equal(LengthOfLine(FC),LengthOfLine(AF))",
+    "ParallelBetweenLine(FG,AH)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "8",
+  "theorem_seqs": []
+}

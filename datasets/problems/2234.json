@@ -1,0 +1,31 @@
+{
+  "problem_id": 2234,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-2333",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\triangle D E F, P is the midpoint of D E, and Q is the midpoint of side D F. If E F = 3 x + 4 and P Q = 20, what is the value of x?",
+  "problem_img": "2234.png",
+  "construction_cdl": [
+    "Shape(QD,DP,PQ)",
+    "Shape(FQ,QP,PE,EF)",
+    "Collinear(DQF)",
+    "Collinear(DPE)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(P,DE)",
+    "IsMidpointOfLine(Q,DF)",
+    "Equal(LengthOfLine(EF),3*x+4)",
+    "Equal(LengthOfLine(PQ),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "line_addition(DP,PE)",
+    "line_addition(DQ,QF)",
+    "similar_triangle_judgment_sas(DPQ,DEF)",
+    "similar_triangle_property_line_ratio(PQD,EFD)",
+    "similar_triangle_property_line_ratio(DPQ,DEF)"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "problem_id": 921,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-950",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "A E is a tangent. If A D = 12 and F E = 18, how long is A E to the nearest tenth unit?",
+  "problem_img": "921.png",
+  "construction_cdl": [
+    "Shape(DAB,BA)",
+    "Shape(DBJ,JK,KB)",
+    "Shape(BK,KM,MA,AB)",
+    "Shape(AM,MF,DFA)",
+    "Shape(DFA,FE,EA)",
+    "Shape(DJC,CK,KJ)",
+    "Shape(MK,KC,CD,DM)",
+    "Shape(MD,DF,FM)",
+    "Shape(DC,DCH,HD)",
+    "Shape(DH,DHF,FD)",
+    "Shape(DHF,HG,GF)",
+    "Collinear(JKMF)",
+    "Collinear(BKC)",
+    "Collinear(AMDC)",
+    "Collinear(DFE)",
+    "Cocircular(D,ABJCHF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(D,D)",
+    "IsTangentOfCircle(EA,D)",
+    "Equal(LengthOfLine(AD),12)",
+    "Equal(LengthOfLine(FE),18)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "6*sqrt(21)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(DA,D)",
+    "radius_of_circle_property_length_equal(DF,D)",
+    "line_addition(DF,FE)",
+    "tangent_of_circle_property_perpendicular(EA,D,D)",
+    "right_triangle_judgment_angle(EAD)",
+    "right_triangle_property_pythagorean(EAD)"
+  ]
+}

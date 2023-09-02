@@ -1,0 +1,50 @@
+{
+  "problem_id": 3844,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1719",
+  "problem_level": 1,
+  "problem_text_cn": "如图,半径为5的⊙A中,弦BC,ED所对的圆心角分别是∠BAC,∠EAD,若DE=6,∠BAC+∠EAD=180°,则弦BC的弦心距长等于()",
+  "problem_text_en": "As shown in the figure, in ⊙A with a radius of N_0, the central angles of chords BC and ED are ∠BAC and ∠EAD, respectively. If DE = N_1, ∠BAC + ∠EAD = N_2, then the distance from the chord BC to the centre is equal to ()",
+  "problem_img": "3844.png",
+  "construction_cdl": [
+    "Shape(BH,HC,ACB)",
+    "Shape(CH,HA,AC)",
+    "Shape(AH,HB,BA)",
+    "Shape(AB,BF,FA)",
+    "Shape(CA,AD,ADC)",
+    "Shape(DA,AE,ED)",
+    "Shape(DE,AED)",
+    "Shape(EA,AF,AFE)",
+    "Shape(FB,ABF)",
+    "Collinear(FAC)",
+    "Collinear(CHB)",
+    "Cocircular(A,CBFED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "IsDiameterOfCircle(FC,A)",
+    "Equal(RadiusOfCircle(A),5)",
+    "Equal(LengthOfLine(ED),6)",
+    "Equal(Add(MeasureOfAngle(BAC),MeasureOfAngle(DAE)),180)",
+    "PerpendicularBetweenLine(CH,AH)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(HA))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(FAB,BAC)",
+    "arc_property_center_angle(ABF,A)",
+    "arc_property_center_angle(AED,A)",
+    "congruent_arc_judgment_measure_equal(ABF,AED)",
+    "congruent_arc_property_chord_equal(ABF,AED)",
+    "radius_of_circle_property_length_equal(AC,A)",
+    "radius_of_circle_property_length_equal(AB,A)",
+    "radius_of_circle_property_length_equal(AF,A)",
+    "isosceles_triangle_judgment_line_equal(ACB)",
+    "altitude_of_triangle_judgment(AH,ACB)",
+    "isosceles_triangle_property_line_coincidence(ACB,H)",
+    "midpoint_of_line_judgment(A,FC)",
+    "midsegment_of_triangle_judgment_midpoint(HA,CBF)",
+    "midsegment_of_triangle_property_length(HA,CBF)"
+  ]
+}

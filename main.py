@@ -1,10 +1,10 @@
-from FGPSolver.solver.solver import Interactor
-from FGPSolver.solver.fw_search import ForwardSearcher
-from FGPSolver.solver.bw_search import BackwardSearcher
-from FGPSolver.aux_tools.utils import *
-from FGPSolver.aux_tools.output import *
-from FGPSolver.aux_tools.parser import FormalLanguageParser as FLParser
-from FGPSolver.core.engine import EquationKiller as EqKiller
+from solver.method.interactive import Interactor
+from solver.method.forward_search import ForwardSearcher
+from solver.method.backward_search import BackwardSearcher
+from solver.aux_tools.utils import *
+from solver.aux_tools.output import *
+from solver.aux_tools.parser import GDLParser, CDLParser
+from solver.core.engine import EquationKiller as EqKiller
 from func_timeout import FunctionTimedOut
 import warnings
 import os
@@ -12,10 +12,9 @@ import argparse
 from colorama import init
 
 init(autoreset=True)
-path_preset = "data/preset/"
-path_formalized = "data/formalized-problems/"
-path_solved = "data/solved/"
-path_solved_problems = "data/solved/problems/"
+path_gdl = "datasets/gdl/"
+path_problems = "datasets/problems/"
+path_solved = "datasets/solved/"
 
 
 def get_args():
@@ -29,35 +28,29 @@ def get_args():
 
 
 def save_gdl():
-    solver = Interactor(load_json(path_preset + "predicate_GDL.json"),  # init solver
-                        load_json(path_preset + "theorem_GDL.json"))
-    save_json(solver.predicate_GDL, path_solved + "predicate_parsed.json")
-    save_json(solver.theorem_GDL, path_solved + "theorem_parsed.json")
-    exit(0)
+    solver = Interactor(load_json(path_gdl + "predicate_GDL.json"),  # init method
+                        load_json(path_gdl + "theorem_GDL.json"))
+    save_json(solver.predicate_GDL, path_gdl + "predicate_parsed.json")
+    save_json(solver.theorem_GDL, path_gdl + "theorem_parsed.json")
 
 
 def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check_search=None,
-          start_pid=1584, end_pid=9831):
-    """Run solver and load problem from problem_GDL."""
-    solver = Interactor(load_json(path_preset + "predicate_GDL.json"),  # init solver
-                        load_json(path_preset + "theorem_GDL.json"))
+          start_pid=1, end_pid=6981):
+    """Run method and load problem from problem_GDL."""
+    solver = Interactor(load_json(path_gdl + "predicate_GDL.json"),  # init method
+                        load_json(path_gdl + "theorem_GDL.json"))
     EqKiller.accurate_mode = acc_mode
 
     if auto:  # auto run all problems in formalized-problems
         warnings.filterwarnings("ignore")
         unsolved = []
-        print("pid\tannotation\tcorrect_answer\tsolved\tsolved_answer\tspend(s)")
-        for filename in os.listdir(path_formalized):
-            pid = int(filename.split(".")[0])
-            if pid < start_pid or pid > end_pid:
-                continue
+        print("pid\tcorrect_answer\tsolved\tsolved_answer\tspend(s)")
 
-            problem_CDL = load_json(path_formalized + filename)
-
-            if "notes" in problem_CDL:  # problems can't solve
-                if check_search is None:
-                    unsolved.append("{}\t{}\t{}".format(
-                        problem_CDL["problem_id"], problem_CDL["annotation"], problem_CDL["notes"]))
+        for pid in range(start_pid, end_pid + 1):
+            filename = "{}.json".format(pid)
+            try:
+                problem_CDL = load_json(path_problems + filename)
+            except FileNotFoundError:
                 continue
 
             try:  # try solve
@@ -77,13 +70,13 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
                     else:
                         continue
 
-                for theorem_name, theorem_para in FLParser.parse_theorem_seqs(theorem_seqs):
+                for theorem_name, theorem_para in CDLParser.parse_theorem_seqs(theorem_seqs):
                     solver.apply_theorem(theorem_name, theorem_para)
 
                 solver.problem.check_goal()  # check goal after applied theorem seqs
 
                 if clean_theorem and solver.problem.goal.solved:  # clean theorem
-                    problem_CDL = load_json(path_formalized + filename)
+                    problem_CDL = load_json(path_problems + filename)
                     _id, seqs = get_used_theorem(solver.problem)
                     if check_search is None:
                         problem_CDL["theorem_seqs"] = seqs
@@ -91,27 +84,27 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
                         problem_CDL["forward_search"] = seqs
                     elif check_search == "bw":
                         problem_CDL["backward_search"] = seqs
-                    save_json(problem_CDL, path_formalized + filename)
+                    save_json(problem_CDL, path_problems + filename)
 
                 simple_show(solver.problem)  # show solved msg
 
                 if save_CDL:  # save solved msg
                     save_json(
                         solver.problem.problem_CDL,
-                        path_solved_problems + "{}_parsed.json".format(problem_CDL["problem_id"])
+                        path_solved + "{}_parsed.json".format(problem_CDL["problem_id"])
                     )
                     save_step_msg(
                         solver.problem,
-                        path_solved_problems
+                        path_solved
                     )
                     save_solution_tree(
                         solver.problem,
-                        path_solved_problems
+                        path_solved
                     )
 
             except Exception as e:  # exception
-                msg = "Raise Exception <{}> in problem {}.".format(e, filename.split(".")[0])
-                unsolved.append("{}\t{}\t{}".format(problem_CDL["problem_id"], problem_CDL["annotation"], msg))
+                msg = "Raise Exception <{}> in problem {}.".format(e, pid)
+                unsolved.append("{}\t{}".format(problem_CDL["problem_id"], msg))
 
         print("\npid\tannotation\tnotes")
         for n in unsolved:  # show unsolved
@@ -121,11 +114,12 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
         while True:
             pid = input("pid:")
             filename = "{}.json".format(pid)
-            if filename not in os.listdir(path_formalized):
-                print("No file \'{}\' in \'{}\'.\n".format(filename, path_formalized))
+            try:
+                problem_CDL = load_json(path_problems + filename)
+            except FileNotFoundError:
+                print("No file \'{}\' in \'{}\'.\n".format(filename, path_problems))
                 continue
 
-            problem_CDL = load_json(path_formalized + filename)
             solver.load_problem(problem_CDL)
 
             theorem_seqs = []
@@ -144,13 +138,13 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
                     print("No backward search seqs.")
                     continue
 
-            for theorem_name, theorem_para in FLParser.parse_theorem_seqs(theorem_seqs):
+            for theorem_name, theorem_para in CDLParser.parse_theorem_seqs(theorem_seqs):
                 solver.apply_theorem(theorem_name, theorem_para)
 
             solver.problem.check_goal()  # check goal after applied theorem seqs
 
             if clean_theorem and solver.problem.goal.solved:  # clean theorem
-                problem_CDL = load_json(path_formalized + filename)
+                problem_CDL = load_json(path_problems + filename)
                 _id, seqs = get_used_theorem(solver.problem)
                 if check_search is None:
                     problem_CDL["theorem_seqs"] = seqs
@@ -158,27 +152,27 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
                     problem_CDL["forward_search"] = seqs
                 elif check_search == "bw":
                     problem_CDL["backward_search"] = seqs
-                save_json(problem_CDL, path_formalized + filename)
+                save_json(problem_CDL, path_problems + filename)
 
             show(solver.problem)  # show solving process
 
             if save_CDL:  # save solved msg
                 save_json(
                     solver.problem.problem_CDL,
-                    path_solved_problems + "{}_parsed.json".format(pid)
+                    path_solved + "{}_parsed.json".format(pid)
                 )
                 save_step_msg(
                     solver.problem,
-                    path_solved_problems
+                    path_solved
                 )
                 save_solution_tree(
                     solver.problem,
-                    path_solved_problems
+                    path_solved
                 )
 
 
 def search(direction="fw", strategy="df", auto=False, save_seqs=True,
-           start_pid=1584, end_pid=9831):
+           start_pid=1, end_pid=6981):
     """
     Solve problem by searching.
     :param direction: 'fw' or 'bw', forward search or backward search.
@@ -189,22 +183,22 @@ def search(direction="fw", strategy="df", auto=False, save_seqs=True,
     :param end_pid: end problem id.
     """
     warnings.filterwarnings("ignore")
-    if direction == "fw":    # forward search
-        searcher = ForwardSearcher(load_json(path_preset + "predicate_GDL.json"),  # init searcher
-                                   load_json(path_preset + "theorem_GDL.json"),
+    if direction == "fw":  # forward search
+        searcher = ForwardSearcher(load_json(path_gdl + "predicate_GDL.json"),  # init searcher
+                                   load_json(path_gdl + "theorem_GDL.json"),
                                    max_depth=5,
                                    strategy=strategy)
         if auto:
-            for filename in os.listdir(path_formalized):
+            for filename in os.listdir(path_problems):
                 pid = int(filename.split(".")[0])
                 if pid < start_pid or pid > end_pid:
                     continue
 
-                problem_CDL = load_json(path_formalized + filename)
+                problem_CDL = load_json(path_problems + filename)
                 if "notes" in problem_CDL or "forward_search" in problem_CDL:
                     continue
 
-                problem = searcher.get_problem(load_json(path_formalized + filename))
+                problem = searcher.get_problem(load_json(path_problems + filename))
 
                 try:
                     solved, seqs = searcher.search(problem)
@@ -215,42 +209,42 @@ def search(direction="fw", strategy="df", auto=False, save_seqs=True,
                 else:
                     print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
                     if solved and save_seqs:
-                        problem_CDL = load_json(path_formalized + filename)
+                        problem_CDL = load_json(path_problems + filename)
                         problem_CDL["forward_search"] = seqs
-                        save_json(problem_CDL, path_formalized + filename)
+                        save_json(problem_CDL, path_problems + filename)
 
         else:
             while True:
                 pid = input("pid:")
                 filename = "{}.json".format(pid)
-                if filename not in os.listdir(path_formalized):
-                    print("No file \'{}\' in \'{}\'.\n".format(filename, path_formalized))
+                if filename not in os.listdir(path_problems):
+                    print("No file \'{}\' in \'{}\'.\n".format(filename, path_problems))
                     continue
 
-                problem = searcher.get_problem(load_json(path_formalized + filename))
+                problem = searcher.get_problem(load_json(path_problems + filename))
                 solved, seqs = searcher.search(problem, strategy)
                 print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
                 if solved and save_seqs:  # clean theorem
-                    problem_CDL = load_json(path_formalized + filename)
+                    problem_CDL = load_json(path_problems + filename)
                     if "forward_search" not in problem_CDL:
                         problem_CDL["forward_search"] = seqs
-                        save_json(problem_CDL, path_formalized + filename)
-    else:    # backward search
-        searcher = BackwardSearcher(load_json(path_preset + "predicate_GDL.json"),  # init searcher
-                                    load_json(path_preset + "theorem_GDL.json"),
+                        save_json(problem_CDL, path_problems + filename)
+    else:  # backward search
+        searcher = BackwardSearcher(load_json(path_gdl + "predicate_GDL.json"),  # init searcher
+                                    load_json(path_gdl + "theorem_GDL.json"),
                                     max_depth=15,
                                     strategy=strategy)
         if auto:
-            for filename in os.listdir(path_formalized):
+            for filename in os.listdir(path_problems):
                 pid = int(filename.split(".")[0])
                 if pid < start_pid or pid > end_pid:
                     continue
 
-                problem_CDL = load_json(path_formalized + filename)
+                problem_CDL = load_json(path_problems + filename)
                 if "notes" in problem_CDL or "backward_search" in problem_CDL:
                     continue
 
-                searcher.init_problem(load_json(path_formalized + filename))
+                searcher.init_problem(load_json(path_problems + filename))
 
                 try:
                     solved, seqs = searcher.search()
@@ -261,30 +255,31 @@ def search(direction="fw", strategy="df", auto=False, save_seqs=True,
                 else:
                     print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
                     if solved and save_seqs:
-                        problem_CDL = load_json(path_formalized + filename)
+                        problem_CDL = load_json(path_problems + filename)
                         problem_CDL["backward_search"] = seqs
-                        save_json(problem_CDL, path_formalized + filename)
+                        save_json(problem_CDL, path_problems + filename)
         else:
             while True:
                 pid = input("pid:")
                 filename = "{}.json".format(pid)
-                if filename not in os.listdir(path_formalized):
-                    print("No file \'{}\' in \'{}\'.\n".format(filename, path_formalized))
+                if filename not in os.listdir(path_problems):
+                    print("No file \'{}\' in \'{}\'.\n".format(filename, path_problems))
                     continue
-                searcher.init_problem(load_json(path_formalized + filename))
+                searcher.init_problem(load_json(path_problems + filename))
                 solved, seqs = searcher.search()
 
                 print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
 
                 if solved and save_seqs:  # clean theorem
-                    problem_CDL = load_json(path_formalized + filename)
+                    problem_CDL = load_json(path_problems + filename)
                     if "backward_search" not in problem_CDL:
                         problem_CDL["backward_search"] = seqs
-                        save_json(problem_CDL, path_formalized + filename)
+                        save_json(problem_CDL, path_problems + filename)
 
 
 if __name__ == '__main__':
-    check(auto=True, clean_theorem=True, acc_mode=True)
+    # save_gdl()
+    check(auto=True, save_CDL=False)
     # save_gdl()
 
     # search(auto=False, save_seqs=True, direction="bw")

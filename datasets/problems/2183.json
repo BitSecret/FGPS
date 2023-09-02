@@ -1,0 +1,37 @@
+{
+  "problem_id": 2183,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2279",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Refer to the figure at the right. Find the value of m \\angle C B D if p \\parallel q.",
+  "problem_img": "2183.png",
+  "construction_cdl": [
+    "Shape(RB,BA)",
+    "Shape(AB,BD)",
+    "Shape(DB,BC)",
+    "Shape(CB,BR)",
+    "Shape(VC,CB)",
+    "Shape(BC,CE)",
+    "Shape(EC,CF)",
+    "Shape(FC,CV)",
+    "Collinear(ABCF)",
+    "Collinear(RBD)",
+    "Collinear(VCE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "ParallelBetweenLine(BD,CE)",
+    "Equal(MeasureOfAngle(ABD),3*x-60)",
+    "Equal(MeasureOfAngle(ECF),2*x+15)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DBC))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ABD,DBC)",
+    "adjacent_complementary_angle(FCV,VCA)",
+    "adjacent_complementary_angle(VCB,BCE)",
+    "adjacent_complementary_angle(ECF,FCV)",
+    "parallel_property_corresponding_angle(BD,CE,A)"
+  ]
+}

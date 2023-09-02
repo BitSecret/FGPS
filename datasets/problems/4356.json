@@ -1,0 +1,28 @@
+{
+  "problem_id": 4356,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-3255",
+  "problem_level": 1,
+  "problem_text_cn": "若AB∥CD,∠C=60°,则∠A+∠E等于()",
+  "problem_text_en": "If AB ∥ CD, ∠C = N_0, then ∠A + ∠E is equal to ()",
+  "problem_img": "4356.png",
+  "construction_cdl": [
+    "Shape(AF,FE,EA)",
+    "Shape(EF,FB)",
+    "Shape(FC,CD)",
+    "Collinear(EFC)",
+    "Collinear(AFB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(FB,CD)",
+    "Equal(MeasureOfAngle(FCD),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(EAF),MeasureOfAngle(FEA)))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(FB,CD,E)",
+    "adjacent_complementary_angle(AFE,EFB)",
+    "triangle_property_angle_sum(AFE)"
+  ]
+}

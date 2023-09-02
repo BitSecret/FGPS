@@ -1,0 +1,48 @@
+{
+  "problem_id": 4202,
+  "annotation": "Yangli_2023-05-07",
+  "source": "GeoQA-2897",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是半圆的直径,点D是⁀{AC}的中点,∠ABC=50°,则∠BCD等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of the semicircle, point D is the midpoint of ⁀AC, ∠ABC = N_0, then ∠BCD is equal to ()",
+  "problem_img": "4202.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Shape(CO,OB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(DC,OCD)",
+    "Shape(AD,ODA)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,BCDA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(OBC),50)",
+    "IsMidpointOfArc(D,OCA)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "115",
+  "theorem_seqs": [
+    "angle_addition(BCO,OCD)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)",
+    "adjacent_complementary_angle(AOC,COB)",
+    "congruent_arc_judgment_length_equal(OCD,ODA)",
+    "congruent_arc_property_measure_equal(OCD,ODA)",
+    "arc_property_center_angle(OCD,O)",
+    "arc_property_center_angle(ODA,O)",
+    "angle_addition(AOD,DOC)",
+    "isosceles_triangle_judgment_line_equal(OCD)",
+    "isosceles_triangle_property_angle_equal(OCD)",
+    "triangle_property_angle_sum(OCD)"
+  ]
+}

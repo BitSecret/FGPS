@@ -1,0 +1,40 @@
+{
+  "problem_id": 4493,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3500",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD内接于⊙O,F是⁀{CD}上一点,且⁀{DF}=⁀{BC},连接CF并延长交AD的延长线于点E,连接AC．若∠ABC=105°,∠BAC=30°,则∠E的度数为()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is inscribed in ⊙O, F is a point on ⁀CD, and ⁀DF = ⁀BC. Connect CF and extend to intersect the extended line of AD at point E, connect AC. If ∠ABC = N_0, ∠BAC = N_1, then the degree of ∠E is ()",
+  "problem_img": "4493.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCF,FC)",
+    "Shape(OFD,DC,CF)",
+    "Shape(ODA,AD)",
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Shape(OFD,FE,ED)",
+    "Collinear(ADE)",
+    "Collinear(CFE)",
+    "Cocircular(O,ABCFD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfArc(OBC),LengthOfArc(OFD))",
+    "Equal(MeasureOfAngle(ABC),105)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FED))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(OBC,OFD)",
+    "congruent_arc_property_measure_equal(OBC,OFD)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OFD,C)",
+    "arc_property_circumference_angle_internal(OCA,D)",
+    "adjacent_complementary_angle(EDC,CDA)",
+    "triangle_property_angle_sum(DCE)"
+  ]
+}

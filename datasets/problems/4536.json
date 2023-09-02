@@ -1,0 +1,24 @@
+{
+  "problem_id": 4536,
+  "annotation": "XiaokaiZhang_2023-05-14",
+  "source": "GeoQA-3605",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠A=100°,则弧⁀{BD}的度数是()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is inscribed in ⊙O, ∠A = N_0, then the degree of the minor arc ⁀BD is ()",
+  "problem_img": "4536.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OAB,BA)",
+    "Shape(DA,AB,OBD)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DAB),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfArc(ODB))",
+  "problem_answer": "160",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_internal(ODB,A)"
+  ]
+}

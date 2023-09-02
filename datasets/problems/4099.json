@@ -1,0 +1,27 @@
+{
+  "problem_id": 4099,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2508",
+  "problem_level": 1,
+  "problem_text_cn": "一天,爸爸带小明到建筑工地玩,看见一个如图所示的人字架,爸爸说:“小明,我考考你,这个人字架的夹角∠1等于130°,你知道∠3比∠2大多少吗？”小明马上得到了正确的答案,他的答案是()",
+  "problem_text_en": "One day, my father took Xiao Ming to a construction site and saw a herringbone as shown in the picture. Dad said, \"Xiao Ming, I will test you. The angle of this herringbone ∠1 is equal to N_0, you know that ∠3 is better than ∠ 2 How old is it?\" Xiao Ming got the correct answer immediately, his answer was ()",
+  "problem_img": "4099.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(EC,CB)",
+    "Shape(CB,BF)",
+    "Collinear(ABF)",
+    "Collinear(ACE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ECB),130)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(MeasureOfAngle(CBF),MeasureOfAngle(CAB)))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ABC,CBF)",
+    "adjacent_complementary_angle(ECB,BCA)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

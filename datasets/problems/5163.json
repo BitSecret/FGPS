@@ -1,0 +1,38 @@
+{
+  "problem_id": 5163,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5111",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、AC都是圆O的弦,OM⊥AB,ON⊥AC,垂足分别为M、N,如果MN=3,那么BC=()",
+  "problem_text_en": "As shown in the figure, AB and AC are both chords of circle O, OM ⊥ AB, ON ⊥ AC, and the vertical feet are M and N respectively. If MN = N_0, then BC = ()",
+  "problem_img": "5163.png",
+  "construction_cdl": [
+    "Shape(CN,NO,OM,MB,BC)",
+    "Shape(NM,MO,ON)",
+    "Shape(NA,AM,MN)",
+    "Shape(AN,NC,OCA)",
+    "Shape(BM,MA,OAB)",
+    "Shape(CB,OBC)",
+    "Collinear(ANC)",
+    "Collinear(AMB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(AM,OM)",
+    "PerpendicularBetweenLine(CN,ON)",
+    "Equal(LengthOfLine(MN),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OM,AB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,ON,CA)",
+    "line_addition(AN,NC)",
+    "line_addition(AM,MB)",
+    "similar_triangle_judgment_sas(ABC,AMN)",
+    "similar_triangle_property_line_ratio(BCA,MNA)",
+    "similar_triangle_property_line_ratio(ABC,AMN)"
+  ]
+}

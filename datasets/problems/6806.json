@@ -1,0 +1,35 @@
+{
+  "problem_id": 6806,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-angle-10013",
+  "problem_level": 1,
+  "problem_text_cn": "如图，△ABC为等边三角形，BO为中线，延长BA至D，使AD＝AO，则∠DOB的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6806.png",
+  "construction_cdl": [
+    "Shape(OD,DA,AO)",
+    "Shape(CO,OB,BC)",
+    "Shape(OA,AB,BO)",
+    "Collinear(DAB)",
+    "Collinear(COA)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(ABC)",
+    "IsMedianOfTriangle(BO,BCA)",
+    "Equal(LengthOfLine(AD),LengthOfLine(AO))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOD))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(ABC)",
+    "adjacent_complementary_angle(DAO,OAB)",
+    "adjacent_complementary_angle(AOD,DOC)",
+    "isosceles_triangle_judgment_line_equal(AOD)",
+    "isosceles_triangle_property_angle_equal(AOD)",
+    "triangle_property_angle_sum(ODA)",
+    "triangle_property_angle_sum(OAB)",
+    "triangle_property_angle_sum(ODB)",
+    "isosceles_triangle_property_line_coincidence(BCA,O)"
+  ]
+}

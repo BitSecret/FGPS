@@ -1,0 +1,33 @@
+{
+  "problem_id": 2645,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2781",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If A B C D is a rhombus, and m \\angle A B C = 70, what is m \\angle 1?",
+  "problem_img": "2645.png",
+  "construction_cdl": [
+    "Shape(CE,ED,DC)",
+    "Shape(CB,BE,EC)",
+    "Shape(EB,BA,AE)",
+    "Shape(EA,AD,DE)",
+    "Collinear(CEA)",
+    "Collinear(DEB)"
+  ],
+  "text_cdl": [
+    "Rhombus(CBAD)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CBA),70)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BAE))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(CBAD)",
+    "parallelogram_property_opposite_angle_equal(DCBA)",
+    "quadrilateral_property_angle_sum(CBAD)",
+    "kite_property_diagonal_perpendicular_bisection(ADCB,E)",
+    "perpendicular_bisector_property_bisector(AE,DB)",
+    "angle_addition(BAE,EAD)"
+  ]
+}

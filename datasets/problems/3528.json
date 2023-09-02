@@ -1,0 +1,32 @@
+{
+  "problem_id": 3528,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1146",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CE,∠B=60°,DM平分∠BDC,DM⊥DN,则∠NDE()",
+  "problem_text_en": "As shown in the figure, AB ∥ CE, ∠B = N_0, DM equally divides ∠BDC, DM ⊥ DN, then ∠NDE = ()",
+  "problem_img": "3528.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BA)",
+    "Shape(BD,DN)",
+    "Shape(ND,DE)",
+    "Shape(CD,DA)",
+    "Collinear(CDE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DBA),60)",
+    "PerpendicularBetweenLine(AD,ND)",
+    "ParallelBetweenLine(AB,CD)",
+    "IsBisectorOfAngle(DA,CDB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(NDE))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(DC,BA)",
+    "adjacent_complementary_angle(CDB,BDE)",
+    "angle_addition(CDA,ADB)",
+    "angle_addition(ADB,BDN)",
+    "angle_addition(BDN,NDE)"
+  ]
+}

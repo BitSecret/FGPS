@@ -1,0 +1,37 @@
+{
+  "problem_id": 4272,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3064",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,连接OA,OB,∠OBA=50°,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC. Connect OA, OB, ∠OBA = N_0, then the degree of ∠C is ()",
+  "problem_img": "4272.png",
+  "construction_cdl": [
+    "Shape(OA,AD,DO)",
+    "Shape(OD,DC,CO)",
+    "Shape(DA,AB,BD)",
+    "Shape(CD,DB,BC)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AO,OC,OCA)",
+    "Collinear(ODB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABD),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "problem_id": 2735,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-2881",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find E G if G is the incenter of \\triangle A B C.",
+  "problem_img": "2735.png",
+  "construction_cdl": [
+    "Shape(BE,EG,GB)",
+    "Shape(EA,AG,GE)",
+    "Shape(AD,DG,GA)",
+    "Shape(GD,DC,CG)",
+    "Shape(GC,CF,FG)",
+    "Shape(BG,GF,FB)",
+    "Collinear(BEA)",
+    "Collinear(ADC)",
+    "Collinear(CFB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsIncenterOfTriangle(G,BAC)",
+    "Equal(LengthOfLine(CG),13)",
+    "Equal(LengthOfLine(FC),12)",
+    "PerpendicularBetweenLine(GD,CD)",
+    "PerpendicularBetweenLine(CF,GF)",
+    "PerpendicularBetweenLine(GE,AE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(EG))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BEG,GEA)",
+    "adjacent_complementary_angle(CFG,GFB)",
+    "mirror_congruent_triangle_judgment_aas(GFB,GBE)",
+    "mirror_congruent_triangle_property_line_equal(BGF,BEG)",
+    "right_triangle_judgment_angle(CFG)",
+    "right_triangle_property_pythagorean(CFG)"
+  ]
+}

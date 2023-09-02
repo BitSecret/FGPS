@@ -1,0 +1,36 @@
+{
+  "problem_id": 6623,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9622",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C在圆O上,∠ABO=50°,则∠ACB的大小为()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are on circle O, ∠ABO = N_0, then the size of ∠ACB is ()",
+  "problem_img": "6623.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AO,OE,EC,OCA)",
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BC,CE)",
+    "Shape(AE,EO,OA)",
+    "Collinear(AEC)",
+    "Collinear(OEB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABO),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(ABO)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

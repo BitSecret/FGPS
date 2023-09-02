@@ -1,0 +1,35 @@
+{
+  "problem_id": 6008,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8481",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,AD是⊙O的直径,∠ABC=35°,则∠CAD的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, AD is the diameter of ⊙O, ∠ABC = N_0, then the degree of ∠CAD is ()",
+  "problem_img": "6008.png",
+  "construction_cdl": [
+    "Shape(CA,OAC)",
+    "Shape(CE,EA,AC)",
+    "Shape(CD,DO,OE,EC)",
+    "Shape(DC,OCD)",
+    "Shape(BE,EO,OD,ODB)",
+    "Shape(EB,BA,AE)",
+    "Shape(AB,OBA)",
+    "Collinear(DOEA)",
+    "Collinear(CEB)",
+    "Cocircular(O,BACD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EBA),35)",
+    "IsDiameterOfCircle(AD,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EAC))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "diameter_of_circle_property_right_angle(ACD,O)",
+    "triangle_property_angle_sum(CDA)"
+  ]
+}

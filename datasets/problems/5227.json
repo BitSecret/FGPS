@@ -1,0 +1,28 @@
+{
+  "problem_id": 5227,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5276",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD是∠ACB的平分线,∠EDC=25°,∠DCE=25°,∠B=70°,则∠BDC的度数为()",
+  "problem_text_en": "As shown in the figure, CD is the bisector of ∠ACB, ∠EDC = N_0, ∠DCE = N_1, ∠B = N_2, then the degree of ∠BDC is ()",
+  "problem_img": "5227.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CD)",
+    "Shape(ED,DC,CE)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(CD,BCE)",
+    "Equal(MeasureOfAngle(EDC),25)",
+    "Equal(MeasureOfAngle(DCE),25)",
+    "Equal(MeasureOfAngle(DBC),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "85",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(DBC)"
+  ]
+}

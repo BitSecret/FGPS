@@ -1,0 +1,40 @@
+{
+  "problem_id": 4465,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3448",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD内接于⊙O,AB为⊙O的直径,点C为⁀{BD}的中点,若∠DAB=50°,则∠ABC的大小是()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is inscribed in ⊙O, AB is the diameter of ⊙O, and point C is the midpoint of ⁀BD. If ∠DAB = N_0, then the size of ∠ABC is ()",
+  "problem_img": "4465.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OC,CD)",
+    "Shape(CO,OB,BC)",
+    "Shape(AD,ODA)",
+    "Shape(DC,OCD)",
+    "Shape(CB,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(LengthOfArc(OBC),LengthOfArc(OCD))",
+    "Equal(MeasureOfAngle(DAB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(OBC,OCD)",
+    "congruent_arc_property_measure_equal(OBC,OCD)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_addition_measure(OBC,OCD)",
+    "arc_property_center_angle(OBC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

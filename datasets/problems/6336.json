@@ -1,0 +1,27 @@
+{
+  "problem_id": 6336,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9149",
+  "problem_level": 1,
+  "problem_text_cn": "如图,构成伸缩门的基本图形是菱形,且每个小菱形的边长都为0.4米,伸缩门伸展到最宽时为8米,此时菱形的一个内角为60°．若中间隔板的厚度不计,则图中的n为()",
+  "problem_text_en": "As shown in the figure, the basic figure constituting the telescopic door is a rhombus, and the side length of each small rhombus is N_0. When the telescopic door is stretched to its widest, it is N_1. At this time, one of the inner corners of the rhombus is N_2. If the thickness of the middle partition plate is not counted, then n in the figure is ()",
+  "problem_img": "6336.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(BC,CD,DB)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AB),0.4)",
+    "Equal(MeasureOfAngle(DAB),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(8,LengthOfLine(BD)))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABD)",
+    "isosceles_triangle_property_angle_equal(ABD)",
+    "triangle_property_angle_sum(ABD)",
+    "isosceles_triangle_judgment_angle_equal(BDA)"
+  ]
+}

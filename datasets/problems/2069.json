@@ -1,0 +1,44 @@
+{
+  "problem_id": 2069,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2156",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is m \\angle 1 in the figure below?",
+  "problem_img": "2069.png",
+  "construction_cdl": [
+    "Shape(IK,KG)",
+    "Shape(GK,KD)",
+    "Shape(DK,KA)",
+    "Shape(KA,AB)",
+    "Shape(BA,AJ)",
+    "Shape(AJ,JM)",
+    "Shape(MJ,JH)",
+    "Shape(HJ,JF)",
+    "Shape(FJ,JA)",
+    "Shape(JA,AK)",
+    "Shape(AK,KI)",
+    "Collinear(GKA)",
+    "Collinear(DKI)",
+    "Collinear(AJH)",
+    "Collinear(MJF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(IKG),145)",
+    "Equal(MeasureOfAngle(HJF),130)",
+    "ParallelBetweenLine(MF,BA)",
+    "ParallelBetweenLine(BA,DI)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(KAJ))",
+  "problem_answer": "85",
+  "theorem_seqs": [
+    "angle_addition(KAB,BAJ)",
+    "vertical_angle(IKG,DKA)",
+    "vertical_angle(AJM,HJF)",
+    "parallel_property_collinear_extend(ID,AB,K)",
+    "parallel_property_collinear_extend(MF,BA,J)",
+    "parallel_property_ipsilateral_internal_angle(KD,AB)",
+    "parallel_property_ipsilateral_internal_angle(AB,JM)"
+  ]
+}

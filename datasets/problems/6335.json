@@ -1,0 +1,34 @@
+{
+  "problem_id": 6335,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9148",
+  "problem_level": 1,
+  "problem_text_cn": "如图,P为菱形ABCD对角线AC上一点,PE⊥AB于点E,PF⊥AD于点F,若PF=3cm,则点P到AB的距离PE的长是()",
+  "problem_text_en": "As shown in the figure, P is a point on the diagonal AC of the diamond ABCD, PE ⊥ AB is at point E, PF ⊥ AD is at point F, if PF = N_0, the length of the distance PE from point P to AB is ()",
+  "problem_img": "6335.png",
+  "construction_cdl": [
+    "Shape(FA,AP,PF)",
+    "Shape(AE,EP,PA)",
+    "Shape(FP,PC,CD,DF)",
+    "Shape(PE,EB,BC,CP)",
+    "Collinear(AFD)",
+    "Collinear(APC)",
+    "Collinear(AEB)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "PerpendicularBetweenLine(AE,PE)",
+    "PerpendicularBetweenLine(PF,AF)",
+    "Equal(LengthOfLine(PF),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(PE))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(DC,AB)",
+    "isosceles_triangle_judgment_line_equal(DAC)",
+    "isosceles_triangle_property_angle_equal(DAC)",
+    "bisector_of_angle_judgment_angle_equal(AP,FAE)",
+    "bisector_of_angle_property_distance_equal(AP,FAE)"
+  ]
+}

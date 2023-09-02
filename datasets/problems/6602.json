@@ -1,0 +1,34 @@
+{
+  "problem_id": 6602,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9586",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C,D是⊙O上的两点,若∠BCD=28°,则∠ABD()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C and D are two points on ⊙O, if ∠BCD = N_0, then ∠ABD()",
+  "problem_img": "6602.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(DE,EA,OAD)",
+    "Shape(BD,ODB)",
+    "Shape(CB,OBC)",
+    "Shape(CA,AE,EC)",
+    "Shape(CE,EB,BC)",
+    "Shape(ED,DB,BE)",
+    "Collinear(CED)",
+    "Collinear(AOEB)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(BCD),28)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "62",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "angle_addition(BCE,ECA)",
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OAD,C)"
+  ]
+}

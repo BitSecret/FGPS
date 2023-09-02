@@ -1,0 +1,45 @@
+{
+  "problem_id": 1525,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1583",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find \\angle DAB.",
+  "problem_img": "1525.png",
+  "construction_cdl": [
+    "Shape(AE,OEC,CA)",
+    "Shape(AD,ODE,EA)",
+    "Shape(OA,AC,CO)",
+    "Shape(OD,DA,AO)",
+    "Shape(OC,OCB,BO)",
+    "Shape(OB,OBD,DO)",
+    "Collinear(EAOB)",
+    "Collinear(CAD)",
+    "Cocircular(O,ECBD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfArc(ODE),3*a)",
+    "Equal(MeasureOfArc(OEC),5*a)",
+    "Equal(MeasureOfArc(OBD),6*a)",
+    "Equal(MeasureOfArc(OCB),4*a)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "arc_property_center_angle(ODE,O)",
+    "arc_property_center_angle(OEC,O)",
+    "arc_property_center_angle(OCB,O)",
+    "arc_property_center_angle(OBD,O)",
+    "angle_addition(COE,EOD)",
+    "angle_addition(COD,DOB)",
+    "round_angle(COB,BOC)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(ODC)",
+    "isosceles_triangle_property_angle_equal(ODC)",
+    "triangle_property_angle_sum(ODA)",
+    "triangle_property_angle_sum(COD)"
+  ]
+}

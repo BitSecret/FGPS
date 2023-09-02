@@ -1,0 +1,33 @@
+{
+  "problem_id": 1653,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1715",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Solve for x in the figure below.",
+  "problem_img": "1653.png",
+  "construction_cdl": [
+    "Shape(HE,OEH)",
+    "Shape(GI,IH,OHG)",
+    "Shape(FG,OGF)",
+    "Shape(EI,IF,OFE)",
+    "Shape(EH,HI,IE)",
+    "Shape(IG,GF,FI)",
+    "Collinear(EIG)",
+    "Collinear(HIF)",
+    "Cocircular(O,EHGF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(IEH),6*x+2)",
+    "Equal(MeasureOfAngle(GFI),3*x+23)",
+    "Equal(MeasureOfAngle(EHI),MeasureOfAngle(IGF))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "vertical_angle(HIE,FIG)",
+    "mirror_similar_triangle_judgment_aa(EHI,FIG)",
+    "mirror_similar_triangle_property_angle_equal(EHI,FIG)"
+  ]
+}

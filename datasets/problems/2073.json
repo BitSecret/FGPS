@@ -1,0 +1,32 @@
+{
+  "problem_id": 2073,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2160",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot G, m \\angle A G B = 30 and C G \\perp G D. Find m \\widehat F A B.",
+  "problem_img": "2073.png",
+  "construction_cdl": [
+    "Shape(GBA,AG,GB)",
+    "Shape(GA,GAF,FG)",
+    "Shape(GF,GFD,DG)",
+    "Shape(GD,GDC,CG)",
+    "Shape(GC,GCB,BG)",
+    "Collinear(BGF)",
+    "Collinear(AGD)",
+    "Cocircular(G,AFDCB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AGB),30)",
+    "PerpendicularBetweenLine(CG,DG)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(G,G)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(GBF))",
+  "problem_answer": "180",
+  "theorem_seqs": [
+    "flat_angle(FGB)",
+    "arc_property_center_angle(GBF,G)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 6709,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9749",
+  "problem_level": 1,
+  "problem_text_cn": "如图,以平行四边形ABCD的一边AB为直径作⊙O,若⊙O过点C,且∠AOC=70°,则∠A等于()",
+  "problem_text_en": "As shown in the figure, take one side AB of the parallelogram ABCD as the diameter as ⊙O, if ⊙O passes through point C, and ∠AOC = N_0, then ∠A is equal to ()",
+  "problem_img": "6709.png",
+  "construction_cdl": [
+    "Shape(AD,DC,OAC)",
+    "Shape(CO,OA,OAC)",
+    "Shape(OC,CB,BO)",
+    "Shape(BC,OCB)",
+    "Shape(AO,OB,OBA)",
+    "Collinear(AOB)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COA),70)",
+    "IsDiameterOfCircle(AB,O)",
+    "Parallelogram(DCBA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "145",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(DCBA)",
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "parallel_property_ipsilateral_internal_angle(AB,DC)"
+  ]
+}

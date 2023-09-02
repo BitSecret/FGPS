@@ -1,0 +1,30 @@
+{
+  "problem_id": 5738,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7545",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE∥BC,DE分别与AB、AC相交于点D、E,若EC=1,AC=3,则DE:BC的值为()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE ∥ BC, DE intersects AB and AC at points D and E respectively. If EC = N_0, AC = N_1, then the value of DE:BC is ()",
+  "problem_img": "5738.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(LengthOfLine(EC),1)",
+    "Equal(LengthOfLine(AC),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(DE),LengthOfLine(BC)))",
+  "problem_answer": "2/3",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "similar_triangle_judgment_aa(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)"
+  ]
+}

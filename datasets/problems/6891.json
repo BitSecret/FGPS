@@ -1,0 +1,36 @@
+{
+  "problem_id": 6891,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10122",
+  "problem_level": 1,
+  "problem_text_cn": "如图，等腰△ABC的顶角∠BAC＝50°，以AB为直径的半圆分别交BC，AC于点D，E．则DE的度数是（）",
+  "problem_text_en": "",
+  "problem_img": "6891.png",
+  "construction_cdl": [
+    "Shape(OEA,AE)",
+    "Shape(EA,AD,ODE)",
+    "Shape(AO,OB,BD,DA)",
+    "Shape(ODE,DC,CE)",
+    "Shape(OBD,DB)",
+    "Collinear(BDC)",
+    "Collinear(AOB)",
+    "Collinear(AEC)",
+    "Cocircular(O,ABDE)"
+  ],
+  "text_cdl": [
+    "IsoscelesTriangle(ABC)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CAB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfArc(ODE))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "altitude_of_triangle_judgment(AD,ABC)",
+    "isosceles_triangle_property_line_coincidence(ABC,D)",
+    "angle_addition(CAD,DAB)",
+    "arc_property_circumference_angle_external(ODE,A)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 2345,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2459",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "J K L M is a rectangle. M L P R is a rhombus. \\angle J M K \\cong \\angle R M P, m \\angle J M K = 55, and m \\angle M R P = 70. Find m \\angle K L P.",
+  "problem_img": "2345.png",
+  "construction_cdl": [
+    "Shape(JM,MK,KJ)",
+    "Shape(KM,ML,LK)",
+    "Shape(MR,RP,PM)",
+    "Shape(MP,PL,LM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(JMLK)",
+    "Rhombus(MRPL)",
+    "Equal(MeasureOfAngle(JMK),MeasureOfAngle(PMR))",
+    "Equal(MeasureOfAngle(JMK),55)",
+    "Equal(MeasureOfAngle(MRP),70)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(PLK))",
+  "problem_answer": "160",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(RPLM)",
+    "angle_addition(PLM,MLK)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 2713,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2857",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find G H in the kite.",
+  "problem_img": "2713.png",
+  "construction_cdl": [
+    "Shape(FG,GA,AF)",
+    "Shape(FA,AJ,JF)",
+    "Shape(AG,GH,HA)",
+    "Shape(AH,HJ,JA)",
+    "Collinear(GAJ)",
+    "Collinear(FAH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Kite(FGHJ)",
+    "Equal(LengthOfLine(HA),15)",
+    "Equal(LengthOfLine(AG),12)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(GH))",
+  "problem_answer": "sqrt(369)",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(HJFG,A)",
+    "right_triangle_judgment_angle(HAG)",
+    "right_triangle_property_pythagorean(HAG)"
+  ]
+}

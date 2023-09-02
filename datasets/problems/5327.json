@@ -1,0 +1,34 @@
+{
+  "problem_id": 5327,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5549",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC是⊙O的内接三角形,AD是⊙O的直径,∠ABC=45°,则∠CAD=()",
+  "problem_text_en": "As shown in the figure, △ABC is the inscribed triangle of ⊙O, AD is the diameter of ⊙O, ∠ABC = N_0, then ∠CAD = ()",
+  "problem_img": "5327.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(DE,EB,OBD)",
+    "Shape(CD,ODC)",
+    "Shape(AC,OCA)",
+    "Shape(BE,EA,AB)",
+    "Shape(CE,ED,DC)",
+    "Shape(EC,CA,AE)",
+    "Collinear(BEC)",
+    "Collinear(AOED)",
+    "Cocircular(O,BDCA)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AD,O)",
+    "Equal(MeasureOfAngle(ABC),45)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAD))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(DCA,O)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OCA,D)",
+    "triangle_property_angle_sum(DCA)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 2912,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-89",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD为⊙O的内接四边形,若∠BCD=110°,则∠BAD的度数为()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is the inscribed quadrilateral of ⊙O, if ∠BCD = N_0, then the degree of ∠BAD is ()",
+  "problem_img": "2912.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(DA,OAD)",
+    "Shape(CD,ODC)",
+    "Shape(BC,OCB)",
+    "Shape(CB,BD,DC)",
+    "Shape(BA,AD,DB)",
+    "Cocircular(O,CBAD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(DCB),110)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBD,C)",
+    "arc_property_circumference_angle_internal(OBD,A)"
+  ]
+}

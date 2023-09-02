@@ -1,0 +1,30 @@
+{
+  "problem_id": 5579,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7075",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PM是⊙O的切线,M为切点,OM=5,PM=12,则sin∠OPM的值为()",
+  "problem_text_en": "As shown in the figure, PM is the tangent of O, M is the tangent point, OM = N_0, PM = N_1, then the value of sin∠OPM is ()",
+  "problem_img": "5579.png",
+  "construction_cdl": [
+    "Shape(PA,OMA,MP)",
+    "Shape(AO,OM,OMA)",
+    "Shape(MO,OA,OAM)",
+    "Collinear(PAO)",
+    "Cocircular(O,AM)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(PM),12)",
+    "Equal(LengthOfLine(OM),5)",
+    "IsTangentOfCircle(PM,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(MPO)))",
+  "problem_answer": "5/13",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PM,O,O)",
+    "cosine_theorem(MPO)",
+    "cosine_theorem(POM)"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "problem_id": 1318,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-1366",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle K.",
+  "problem_img": "1318.png",
+  "construction_cdl": [
+    "Shape(JM,MK,KJ)",
+    "Shape(ML,LK,KM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(KJM),59)",
+    "Equal(MeasureOfAngle(MLK),67)",
+    "Equal(LengthOfLine(JM),LengthOfLine(JK))",
+    "Equal(LengthOfLine(ML),LengthOfLine(LK))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(LKJ))",
+  "problem_answer": "117",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(LKM)",
+    "isosceles_triangle_property_angle_equal(LKM)",
+    "isosceles_triangle_judgment_line_equal(JMK)",
+    "isosceles_triangle_property_angle_equal(JMK)",
+    "triangle_property_angle_sum(JMK)",
+    "triangle_property_angle_sum(MLK)",
+    "angle_addition(LKM,MKJ)"
+  ]
+}

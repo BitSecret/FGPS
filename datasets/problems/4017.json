@@ -1,0 +1,49 @@
+{
+  "problem_id": 4017,
+  "annotation": "YimingHe_2023-05-07",
+  "source": "GeoQA-2046",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD中,DC∥AB,BC=2,AB=AC=AD=3,则BD的长为()",
+  "problem_text_en": "As shown in the figure, in the quadrilateral ABCD, DC ∥ AB, BC = N_0, AB = AC = AD = N_1, then the length of BD is ()",
+  "problem_img": "4017.png",
+  "construction_cdl": [
+    "Shape(FD,ADF)",
+    "Shape(DF,FA,AD)",
+    "Shape(DA,AE,ED)",
+    "Shape(EA,AB,BE)",
+    "Shape(DE,EC,CD)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,ABC)",
+    "Shape(DC,ACD)",
+    "Shape(BA,AF,AFB)",
+    "Collinear(FAB)",
+    "Collinear(AEC)",
+    "Collinear(DEB)",
+    "Cocircular(A,DFBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "ParallelBetweenLine(DC,AB)",
+    "Equal(LengthOfLine(BC),2)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(LengthOfLine(AD),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "4*sqrt(2)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(AB,A)",
+    "radius_of_circle_property_length_equal(AF,A)",
+    "diameter_of_circle_judgment_pass_centre(FAB,A)",
+    "diameter_of_circle_property_right_angle(BDF,A)",
+    "parallel_property_alternate_interior_angle(DC,AB)",
+    "arc_property_circumference_angle_external(ADF,B)",
+    "arc_property_circumference_angle_external(ABC,D)",
+    "congruent_arc_judgment_measure_equal(ADF,ABC)",
+    "congruent_arc_property_chord_equal(ADF,ABC)",
+    "line_addition(FA,AB)",
+    "right_triangle_judgment_angle(BDF)",
+    "right_triangle_property_pythagorean(BDF)"
+  ]
+}

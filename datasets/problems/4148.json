@@ -1,0 +1,24 @@
+{
+  "problem_id": 4148,
+  "annotation": "XiaoxiaoJin_2023-05-07",
+  "source": "GeoQA-2739",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠A=90°,AC=9,sinB=0.6,则AB等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠A = N_0, AC = N_1, sinB = N_2, then AB is equal to ()",
+  "problem_img": "4148.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),9)",
+    "Equal(MeasureOfAngle(CAB),90)",
+    "Equal(Sin(MeasureOfAngle(ABC)),0.6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "sine_theorem(CAB)",
+    "cosine_theorem(ABC)"
+  ]
+}

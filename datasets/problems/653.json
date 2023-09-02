@@ -1,0 +1,28 @@
+{
+  "problem_id": 653,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-670",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure at the right, Y Z is the midsegment of trapezoid T W R V. Determine the value of x.",
+  "problem_img": "653.png",
+  "construction_cdl": [
+    "Shape(TY,YZ,ZW,WT)",
+    "Shape(YV,VR,RZ,ZY)",
+    "Collinear(TYV)",
+    "Collinear(WZR)"
+  ],
+  "text_cdl": [
+    "IsMidsegmentOfQuadrilateral(YZ,TVRW)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(WT),14.8)",
+    "Equal(LengthOfLine(ZY),8)",
+    "Equal(LengthOfLine(RV),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "1.2",
+  "theorem_seqs": [
+    "midsegment_of_quadrilateral_property_length(YZ,TVRW)"
+  ]
+}

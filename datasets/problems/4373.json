@@ -1,0 +1,41 @@
+{
+  "problem_id": 4373,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3289",
+  "problem_level": 1,
+  "problem_text_cn": "在直径为100cm的圆柱形油桶内装入一些油后,截面如本题图所示,若油面宽AB=80cm,则油的最大深度为()",
+  "problem_text_en": "After filling some oil in a cylindrical oil drum with a diameter of N_0, the cross section is as shown in the figure in this question. If the width of oil surface AB = N_1, the maximum depth of oil is ()",
+  "problem_img": "4373.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(AC,CO,OA)",
+    "Shape(OC,CB,BO)",
+    "Shape(DC,CA,OAD)",
+    "Shape(BC,CD,ODB)",
+    "Collinear(ACB)",
+    "Collinear(OCD)",
+    "Cocircular(O,ADB)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AC,OC)",
+    "Equal(DiameterOfCircle(O),100)",
+    "Equal(LengthOfLine(AB),80)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "circle_property_length_of_radius_and_diameter(O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "adjacent_complementary_angle(ACO,OCB)",
+    "mirror_congruent_triangle_judgment_hl(ACO,BOC)",
+    "mirror_congruent_triangle_property_line_equal(OAC,OCB)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(OCB)",
+    "right_triangle_property_pythagorean(OCB)",
+    "line_addition(OC,CD)"
+  ]
+}

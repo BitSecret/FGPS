@@ -1,0 +1,35 @@
+{
+  "problem_id": 4246,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-3022",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点B在⊙O上,弦AC∥OB,∠BOC=50°,则∠OAB=()",
+  "problem_text_en": "As shown in the figure, point B is on ⊙O, chord AC ∥ OB, ∠BOC = N_0, then ∠OAB = ()",
+  "problem_img": "4246.png",
+  "construction_cdl": [
+    "Shape(OA,AC,CO)",
+    "Shape(OA,AB,BO)",
+    "Shape(OAC,CA)",
+    "Shape(OCB,BA,AC)",
+    "Shape(OBA,AO,OB)",
+    "Shape(OCB,BO,OC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(OB,AC)",
+    "Equal(MeasureOfAngle(BOC),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAB))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "parallel_property_alternate_interior_angle(OB,AC)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "arc_property_center_angle(OCB,O)",
+    "arc_property_circumference_angle_external(OCB,A)"
+  ]
+}

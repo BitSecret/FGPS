@@ -1,0 +1,30 @@
+{
+  "problem_id": 2275,
+  "annotation": "DengfengYue_2023-04-16",
+  "source": "Geometry3k-2379",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Circle W has a radius of 4 units, \\odot Z has a radius of 7 units, and X Y = 2. Find I X.",
+  "problem_img": "2275.png",
+  "construction_cdl": [
+    "Collinear(IWXYZC)",
+    "Cocircular(W,YI)",
+    "Cocircular(Z,CX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(IY,W)",
+    "IsCentreOfCircle(W,W)",
+    "IsCentreOfCircle(Z,Z)",
+    "Equal(RadiusOfCircle(W),4)",
+    "Equal(RadiusOfCircle(Z),7)",
+    "Equal(LengthOfLine(XY),2)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(IX))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "circle_property_length_of_radius_and_diameter(W)",
+    "diameter_of_circle_property_length_equal(IY,W)",
+    "line_addition(IX,XY)"
+  ]
+}

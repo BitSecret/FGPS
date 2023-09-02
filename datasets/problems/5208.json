@@ -1,0 +1,37 @@
+{
+  "problem_id": 5208,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5213",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O直径,OB=6,弦CD=10,则弦心距OP的长为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, OB = N_0, chord CD = N_1, then the length of the center of the chord to OP is ()",
+  "problem_img": "5208.png",
+  "construction_cdl": [
+    "Shape(OAC,CO,OA)",
+    "Shape(OC,CP,PO)",
+    "Shape(OCB,BP,PC)",
+    "Shape(OBD,DP,PB)",
+    "Shape(ODA,AO,OP,PD)",
+    "Collinear(CPD)",
+    "Collinear(AOPB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OP,DP)",
+    "Equal(LengthOfLine(OB),6)",
+    "Equal(LengthOfLine(CD),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OP))",
+  "problem_answer": "sqrt(11)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "adjacent_complementary_angle(CPO,OPD)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OP,CD)",
+    "line_addition(CP,PD)",
+    "right_triangle_judgment_angle(CPO)",
+    "right_triangle_property_pythagorean(CPO)"
+  ]
+}

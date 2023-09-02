@@ -1,0 +1,29 @@
+{
+  "problem_id": 1138,
+  "annotation": "Yangli_2023-04-09",
+  "source": "Geometry3k-1177",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The area of trapezoid J K L M is 138 square feet. The area of trapezoid Q R S T is 5.52 square feet. If trapezoid J K L M \\sim trapezoid Q R S T, find the scale factor from trapezoid J K L M to trapezoid Q R S T.",
+  "problem_img": "1138.png",
+  "construction_cdl": [
+    "Shape(MJ,JK,KL,LM)",
+    "Shape(QR,RS,ST,TQ)"
+  ],
+  "text_cdl": [
+    "Trapezoid(MJKL)",
+    "Equal(AreaOfQuadrilateral(MJKL),138)",
+    "Trapezoid(QRST)",
+    "Equal(AreaOfQuadrilateral(QRST),5.52)",
+    "SimilarBetweenQuadrilateral(MJKL,STQR)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(JK),5)",
+    "Equal(LengthOfLine(QT),x)"
+  ],
+  "goal_cdl": "Value(RatioOfSimilarQuadrilateral(MJKL,STQR))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_area_square_ratio(MJKL,STQR)"
+  ]
+}

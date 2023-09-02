@@ -1,0 +1,28 @@
+{
+  "problem_id": 1350,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1398",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the triangle. Round to the nearest tenth if necessary.",
+  "problem_img": "1350.png",
+  "construction_cdl": [
+    "Shape(OC,CA,AO)",
+    "Shape(OA,AB,BO)",
+    "Collinear(CAB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(OB),21.5)",
+    "Equal(LengthOfLine(OC),8)",
+    "Equal(LengthOfLine(AC),15)",
+    "PerpendicularBetweenLine(OC,AC)",
+    "IsAltitudeOfTriangle(OC,OAB)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(OAB))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "triangle_area_formula_common(OAB)"
+  ]
+}

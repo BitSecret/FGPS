@@ -1,0 +1,24 @@
+{
+  "problem_id": 5654,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7322",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一斜坡上栽树,相邻在坡面上的距离AB=13m,水平距离为12m,则该斜坡坡度i为()",
+  "problem_text_en": "As shown in the figure, a tree is planted on a slope, the adjacent distance AB = N_0 on the slope, the horizontal distance is N_1, then the slope i of the slope is ()",
+  "problem_img": "5654.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),13)",
+    "Equal(LengthOfLine(BC),12)",
+    "Equal(MeasureOfAngle(BCA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(AC),LengthOfLine(BC)))",
+  "problem_answer": "5/12",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

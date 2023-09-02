@@ -1,0 +1,26 @@
+{
+  "problem_id": 1841,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1909",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the ratio of the measure of \\angle A C B to the measure of \\angle A O B?",
+  "problem_img": "1841.png",
+  "construction_cdl": [
+    "Shape(CA,OAC)",
+    "Shape(OA,AC,CB,BO)",
+    "Shape(BC,OCB)",
+    "Shape(OB,OBA,AO)",
+    "Cocircular(O,BAC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(Div(MeasureOfAngle(ACB),MeasureOfAngle(AOB)))",
+  "problem_answer": "0.5",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBA,C)",
+    "arc_property_center_angle(OBA,O)"
+  ]
+}

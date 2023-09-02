@@ -1,0 +1,42 @@
+{
+  "problem_id": 3191,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-477",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b,∠1=56°,∠2=37°,则∠3的度数为()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, ∠1 = N_0, ∠2 = N_1, then the degree of ∠3 is ()",
+  "problem_img": "3191.png",
+  "construction_cdl": [
+    "Shape(EM,MN,NE)",
+    "Shape(MP,PQ,QN,NM)",
+    "Shape(AM,ME)",
+    "Shape(EN,NB)",
+    "Shape(PM,MA)",
+    "Shape(BN,NQ)",
+    "Shape(CP,PM)",
+    "Shape(FP,PC)",
+    "Shape(QP,PF)",
+    "Shape(GQ,QP)",
+    "Shape(DQ,QG)",
+    "Shape(NQ,QD)",
+    "Collinear(EMPF)",
+    "Collinear(ENQG)",
+    "Collinear(AMNB)",
+    "Collinear(CPQD)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "Equal(MeasureOfAngle(PMA),56)",
+    "Equal(MeasureOfAngle(NEM),37)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(PQN))",
+  "problem_answer": "87",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(DC,BA,P)",
+    "parallel_property_collinear_extend(PC,BA,Q)",
+    "parallel_property_collinear_extend(AB,PQ,M)",
+    "parallel_property_alternate_interior_angle(AM,PQ)",
+    "triangle_property_angle_sum(EPQ)"
+  ]
+}

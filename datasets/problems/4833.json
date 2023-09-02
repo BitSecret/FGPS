@@ -1,0 +1,29 @@
+{
+  "problem_id": 4833,
+  "annotation": "RunanWang_2023-05-21",
+  "source": "GeoQA-4284",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=3,AC=2．当∠B最大时,BC的长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = N_0, AC = N_1. When ∠B is the largest, the length of BC is ()",
+  "problem_img": "4833.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)",
+    "Shape(A)",
+    "Cocircular(A,C)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)"
+  ],
+  "image_cdl": [
+    "IsTangentOfCircle(BC,A)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(AC),2)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "sqrt(5)",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BC,A,A)",
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

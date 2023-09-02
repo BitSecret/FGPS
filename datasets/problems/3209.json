@@ -1,0 +1,29 @@
+{
+  "problem_id": 3209,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-503",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D,E分别在AB和AC上,CD平分∠ACB,过点D作DE∥BC．已知∠EDC=40°,则∠AED的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, points D and E are on AB and AC respectively, CD bisects ∠ACB, and passing point D is DE ∥ BC. Given that ∠EDC = N_0, then the degree of ∠AED is ()",
+  "problem_img": "3209.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CD)",
+    "Shape(ED,DC,CE)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(CD,BCE)",
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(MeasureOfAngle(EDC),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DEA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(DE,BC)",
+    "angle_addition(BCD,DCE)",
+    "parallel_property_corresponding_angle(CB,ED,A)"
+  ]
+}

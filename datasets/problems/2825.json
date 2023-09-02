@@ -1,0 +1,35 @@
+{
+  "problem_id": 2825,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2974",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "P Q R S is a rhombus inscribed in a circle. Find m \\widehat S P.",
+  "problem_img": "2825.png",
+  "construction_cdl": [
+    "Shape(CPS,SP)",
+    "Shape(CSR,RS)",
+    "Shape(CRQ,QR)",
+    "Shape(CQP,PQ)",
+    "Shape(CP,PS,SC)",
+    "Shape(CS,SR,RC)",
+    "Shape(CR,RQ,QC)",
+    "Shape(CQ,QP,PC)",
+    "Collinear(PCR)",
+    "Collinear(SCQ)",
+    "Cocircular(C,PSRQ)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(C,C)"
+  ],
+  "image_cdl": [
+    "Rhombus(PSRQ)",
+    "IsCircumcenterOfQuadrilateral(C,PSRQ)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(CPS))",
+  "problem_answer": "90",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(PSRQ,C)",
+    "arc_property_center_angle(CPS,C)"
+  ]
+}

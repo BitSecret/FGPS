@@ -1,0 +1,44 @@
+{
+  "problem_id": 3655,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1359",
+  "problem_level": 1,
+  "problem_text_cn": "如图,平行四边形ABCD的对角线AC,BD相交于点O,点E,F分别是线段AO,BO的中点,若AC+BD=24厘米,△OAB的周长是18厘米,则EF为()",
+  "problem_text_en": "As shown in the figure, the diagonals AC and BD of the parallelogram ABCD intersect at point O, point E, and F are the midpoints of the line segments AO and BO respectively. If AC + BD = N_0 centimetres, the perimeter of △OAB is N_1 centimetres, then EF is()",
+  "problem_img": "3655.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FE,EA)",
+    "Shape(OE,EF,FO)",
+    "Shape(AE,EO,OD,DA)",
+    "Shape(OF,FB,BC,CO)",
+    "Shape(DO,OC,CD)",
+    "Collinear(AEOC)",
+    "Collinear(BFOD)"
+  ],
+  "text_cdl": [
+    "Equal(Add(LengthOfLine(AC),LengthOfLine(BD)),24)",
+    "Equal(PerimeterOfTriangle(ABO),18)",
+    "Parallelogram(ABCD)",
+    "IsMidpointOfLine(E,AO)",
+    "IsMidpointOfLine(F,BO)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "triangle_perimeter_formula(OEF)",
+    "triangle_perimeter_formula(ABO)",
+    "line_addition(AE,EO)",
+    "line_addition(AE,EC)",
+    "line_addition(AO,OC)",
+    "line_addition(EO,OC)",
+    "line_addition(BF,FO)",
+    "line_addition(BF,FD)",
+    "line_addition(BO,OD)",
+    "line_addition(FO,OD)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "midsegment_of_triangle_judgment_midpoint(EF,OAB)",
+    "midsegment_of_triangle_property_length(EF,OAB)"
+  ]
+}

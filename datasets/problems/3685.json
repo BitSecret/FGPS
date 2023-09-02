@@ -1,0 +1,36 @@
+{
+  "problem_id": 3685,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1434",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AB=AC,BC=12cm,点D在AC上,DC=4cm,将线段DC沿CB方向平移7cm得到线段EF,点E、F分别落在边AB、BC上,则△EBF的周长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, BC = N_0, point D is on AC, DC = N_1, translate the line segment DC along the CB direction by N_2 to get the line segment EF, vertices E and F fall on the edges AB and BC respectively, Then the perimeter of △EBF is ()",
+  "problem_img": "3685.png",
+  "construction_cdl": [
+    "Shape(AE,ED,DA)",
+    "Shape(EB,BF,FE)",
+    "Shape(DE,EF,FC,CD)",
+    "Collinear(BFC)",
+    "Collinear(AEB)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),12)",
+    "Equal(LengthOfLine(DC),4)",
+    "Equal(LengthOfLine(DC),LengthOfLine(EF))",
+    "Equal(LengthOfLine(FC),7)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "ParallelBetweenLine(DC,EF)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(EBF))",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "line_addition(BF,FC)",
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "parallel_property_corresponding_angle(FE,CD,B)",
+    "isosceles_triangle_judgment_angle_equal(EBF)",
+    "triangle_perimeter_formula(EBF)"
+  ]
+}

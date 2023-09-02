@@ -1,0 +1,34 @@
+{
+  "problem_id": 3108,
+  "annotation": "YimingHe_2023-04-23",
+  "source": "GeoQA-356",
+  "problem_level": 1,
+  "problem_text_cn": "如图一艘轮船由海平面上A地出发向南偏西40°的方向行驶40海里到达B地,再由B地向北偏西20°的方向行驶40海里到达C地,则A、C两地相距()",
+  "problem_text_en": "As shown in the figure, a ship departs from point A on the sea level and travels N_1 nautical miles in the direction of N_0 south by west to point B, and then travels N_3 nautical miles from point B to the direction of north by west N_2 to reach point C, then the distance between A and C is () ",
+  "problem_img": "3108.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)",
+    "Shape(EA,AB)",
+    "Shape(FB,BA)",
+    "Shape(CB,BF)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EAB),40)",
+    "Equal(MeasureOfAngle(CBF),20)",
+    "Equal(LengthOfLine(AB),40)",
+    "Equal(LengthOfLine(BC),40)",
+    "ParallelBetweenLine(AE,FB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AE,FB)",
+    "angle_addition(EAB,BAC)",
+    "angle_addition(CBF,FBA)",
+    "triangle_property_angle_sum(CBA)",
+    "isosceles_triangle_judgment_line_equal(BAC)",
+    "isosceles_triangle_property_angle_equal(BAC)",
+    "isosceles_triangle_judgment_angle_equal(CBA)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": 232,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-234",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the length of line DE, if AD=12 and BD=4.",
+  "problem_img": "232.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DE,EC)",
+    "Shape(ED,DB,BE)",
+    "Collinear(ADB)",
+    "Collinear(CEB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),12)",
+    "Equal(LengthOfLine(BD),4)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(AD,CD)",
+    "PerpendicularBetweenLine(DE,CE)",
+    "PerpendicularBetweenLine(EC,AC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "2*sqrt(3)",
+  "theorem_seqs": [
+    "line_addition(AD,DB)",
+    "adjacent_complementary_angle(BED,DEC)",
+    "mirror_similar_triangle_judgment_aa(CAD,BCA)",
+    "mirror_similar_triangle_property_line_ratio(CAD,BCA)",
+    "mirror_similar_triangle_property_line_ratio(DCA,CAB)",
+    "similar_triangle_judgment_aa(DBE,ABC)",
+    "similar_triangle_property_line_ratio(BED,BCA)",
+    "similar_triangle_property_line_ratio(EDB,CAB)"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "problem_id": 4232,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-2999",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠ABC和∠ACB的外角平分线交于点O,且∠BOC=40°,则∠A=()",
+  "problem_text_en": "As shown in the figure, in △ABC, the bisectors of the exterior angles of ∠ABC and ∠ACB intersects at point O, and ∠BOC = N_0, then ∠A = ()",
+  "problem_img": "4232.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(BO,OC,CB)",
+    "Shape(OB,BD)",
+    "Shape(EC,CO)",
+    "Collinear(ABD)",
+    "Collinear(ACE)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(BO,CBD)",
+    "IsBisectorOfAngle(CO,ECB)",
+    "Equal(MeasureOfAngle(BOC),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "flat_angle(ABD)",
+    "flat_angle(DBA)",
+    "flat_angle(ACE)",
+    "flat_angle(ECA)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(BOC)",
+    "angle_addition(ABD,DBC)",
+    "angle_addition(DBA,ABC)",
+    "angle_addition(ABC,CBD)",
+    "angle_addition(BCA,ACE)",
+    "angle_addition(CBO,OBD)",
+    "angle_addition(ECO,OCB)",
+    "angle_addition(BCE,ECA)",
+    "angle_addition(ECB,BCA)",
+    "adjacent_complementary_angle(ABC,CBD)",
+    "adjacent_complementary_angle(ECB,BCA)"
+  ]
+}

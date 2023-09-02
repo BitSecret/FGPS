@@ -1,0 +1,33 @@
+{
+  "problem_id": 6036,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8525",
+  "problem_level": 1,
+  "problem_text_cn": "如图,D是⊙O的直径,A、B是⊙O上的两点,若∠ADC=80°,则∠ABD的度数为()",
+  "problem_text_en": "As shown in the figure, D is the diameter of ⊙O, A and B are two vertices on ⊙O, if ∠ADC = N_0, then the degree of ∠ABD is ()",
+  "problem_img": "6036.png",
+  "construction_cdl": [
+    "Shape(AC,CO,OD,DA)",
+    "Shape(DA,AB,BD)",
+    "Shape(OAC,CA)",
+    "Shape(ODA,AD)",
+    "Shape(OBD,DB)",
+    "Shape(OCB,OBD,DO,OC)",
+    "Collinear(COD)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "Equal(MeasureOfAngle(CDA),80)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABD))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ACD)",
+    "diameter_of_circle_property_right_angle(DAC,O)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "arc_property_circumference_angle_external(ODA,B)"
+  ]
+}

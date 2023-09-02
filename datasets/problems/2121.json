@@ -1,0 +1,46 @@
+{
+  "problem_id": 2121,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2212",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. Assume the inscribed polygon is regular.",
+  "problem_img": "2121.png",
+  "construction_cdl": [
+    "Shape(AB,BI,IA)",
+    "Shape(BC,CH,HB)",
+    "Shape(AC,CB,BA)",
+    "Shape(IB,BH,HI)",
+    "Shape(AI,BIA)",
+    "Shape(HC,CA,BAH)",
+    "Shape(IH,BHI)",
+    "Collinear(IBC)",
+    "Collinear(ACH)",
+    "Cocircular(B,AHI)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(B,B)",
+    "EquilateralTriangle(AHI)",
+    "Equal(DiameterOfCircle(B),16)",
+    "IsCircumcenterOfTriangle(B,IAH)",
+    "PerpendicularBetweenLine(BC,HC)",
+    "Equal(Sub(AreaOfSector(BHI),AreaOfTriangle(IBH)),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "39.3",
+  "theorem_seqs": [
+    "circle_property_length_of_radius_and_diameter(B)",
+    "radius_of_circle_property_length_equal(BH,B)",
+    "radius_of_circle_property_length_equal(BI,B)",
+    "equilateral_triangle_property_angle(HIA)",
+    "isosceles_triangle_judgment_line_equal(BHI)",
+    "isosceles_triangle_property_angle_equal(BHI)",
+    "triangle_property_angle_sum(IBH)",
+    "triangle_property_angle_sum(CHI)",
+    "sine_theorem(IBH)",
+    "triangle_area_formula_sine(IBH)",
+    "arc_property_center_angle(BHI,B)",
+    "sector_area_formula(BHI)"
+  ]
+}

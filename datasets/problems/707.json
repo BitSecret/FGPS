@@ -1,0 +1,41 @@
+{
+  "problem_id": 707,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-727",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 9 = 75. Find the measure of \\angle 8.",
+  "problem_img": "707.png",
+  "construction_cdl": [
+    "Shape(LB,BD)",
+    "Shape(GB,BL)",
+    "Shape(DB,BF)",
+    "Shape(FB,BG)",
+    "Shape(BF,FM)",
+    "Shape(IF,FB)",
+    "Shape(MF,FJ)",
+    "Shape(JF,FI)",
+    "Shape(FJ,JE)",
+    "Shape(CJ,JF)",
+    "Shape(EJ,JT)",
+    "Shape(TJ,JC)",
+    "Collinear(LBFJT)",
+    "Collinear(DBG)",
+    "Collinear(MFI)",
+    "Collinear(EJC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(FJE),75)",
+    "ParallelBetweenLine(GD,IM)",
+    "ParallelBetweenLine(IM,CE)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(IFB))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(IM,CE,F)",
+    "parallel_property_collinear_extend(EC,MF,J)",
+    "parallel_property_corresponding_angle(FM,JE,B)",
+    "adjacent_complementary_angle(IFB,BFM)"
+  ]
+}

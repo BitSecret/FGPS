@@ -1,0 +1,39 @@
+{
+  "problem_id": 1989,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2073",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. Assume that any segment that appears to be tangent is tangent.",
+  "problem_img": "1989.png",
+  "construction_cdl": [
+    "Shape(BD,DH,CGH,GB)",
+    "Shape(CGH,HE,EG)",
+    "Shape(CHJ,JE,EH)",
+    "Shape(CE,EJ,JC)",
+    "Shape(CJ,CJF,FC)",
+    "Shape(GE,EC,CG)",
+    "Shape(GC,CF,CFG)",
+    "Shape(FB,BG,CFG)",
+    "Collinear(BGEJA)",
+    "Collinear(FCE)",
+    "Collinear(DHE)",
+    "Cocircular(C,FGHJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsTangentOfCircle(BF,C)",
+    "Equal(MeasureOfArc(CFG),5*x)",
+    "Equal(MeasureOfAngle(EBD),60)",
+    "Equal(MeasureOfArc(CJF),105)",
+    "PerpendicularBetweenLine(FB,DB)",
+    "PerpendicularBetweenLine(BD,HD)",
+    "PerpendicularBetweenLine(HE,CE)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "angle_addition(FBG,GBD)",
+    "circle_property_circular_power_tangent_and_segment_angle(BF,BGJ,C)"
+  ]
+}

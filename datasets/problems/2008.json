@@ -1,0 +1,28 @@
+{
+  "problem_id": 2008,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2093",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If Q R S T is a parallelogram. Find z.",
+  "problem_img": "2008.png",
+  "construction_cdl": [
+    "Shape(QT,TP,PQ)",
+    "Shape(PT,TS,SP)",
+    "Shape(PS,SR,RP)",
+    "Shape(PR,RQ,QP)",
+    "Collinear(QPS)",
+    "Collinear(RPT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(QTSR)",
+    "Equal(MeasureOfAngle(RQS),33)",
+    "Equal(MeasureOfAngle(TSQ),3*z)"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "11",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(QR,TS)"
+  ]
+}

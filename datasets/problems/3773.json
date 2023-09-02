@@ -1,0 +1,49 @@
+{
+  "problem_id": 3773,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1595",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,∠BAD的平分线交BC于点E,∠ABC的平分线交AD于点F,连接EF,若BF=12,AB=10,则AE的长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, the bisector of ∠BAD crosses BC at point E, and the bisector of ∠ABC crosses AD at point F, connecting EF, if BF = N_0, AB = N_1, then the length of AE is ()",
+  "problem_img": "3773.png",
+  "construction_cdl": [
+    "Shape(FA,AO,OF)",
+    "Shape(OA,AB,BO)",
+    "Shape(OB,BE,EO)",
+    "Shape(FO,OE,EF)",
+    "Shape(DF,FE,EC,CD)",
+    "Collinear(AFD)",
+    "Collinear(BEC)",
+    "Collinear(AOE)",
+    "Collinear(BOF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(BF),12)",
+    "Equal(LengthOfLine(AB),10)",
+    "IsBisectorOfAngle(AO,FAB)",
+    "IsBisectorOfAngle(BO,ABE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AD,BC,F)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallel_property_collinear_extend(CB,FA,E)",
+    "line_addition(BO,OF)",
+    "parallel_property_alternate_interior_angle(EB,DA)",
+    "parallel_property_alternate_interior_angle(AF,BC)",
+    "isosceles_triangle_judgment_angle_equal(ABF)",
+    "isosceles_triangle_judgment_angle_equal(BEA)",
+    "parallelogram_judgment_parallel_and_equal(FABE)",
+    "parallelogram_property_opposite_line_equal(ABEF)",
+    "kite_judgment_equal_and_equal(FABE)",
+    "kite_judgment_equal_and_equal(ABEF)",
+    "kite_property_diagonal_perpendicular_bisection(FABE,O)",
+    "kite_property_diagonal_perpendicular_bisection(ABEF,O)",
+    "right_triangle_judgment_angle(AOF)",
+    "right_triangle_property_pythagorean(AOF)",
+    "line_addition(AO,OE)"
+  ]
+}

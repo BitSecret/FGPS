@@ -1,0 +1,28 @@
+{
+  "problem_id": 930,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-959",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For the pair of similar figures, use the given areas to find x.",
+  "problem_img": "930.png",
+  "construction_cdl": [
+    "Shape(EF,FG,GH,HE)",
+    "Shape(BL,LA,AN,NB)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenQuadrilateral(EFGH,BLAN)",
+    "Equal(AreaOfQuadrilateral(EFGH),50)",
+    "Equal(AreaOfQuadrilateral(BLAN),72)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(EH),x)",
+    "Equal(LengthOfLine(BN),6)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_area_square_ratio(EFGH,BLAN)",
+    "similar_quadrilateral_property_line_ratio(HEFG,NBLA)"
+  ]
+}

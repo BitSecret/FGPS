@@ -1,0 +1,29 @@
+{
+  "problem_id": 1754,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1819",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1754.png",
+  "construction_cdl": [
+    "Shape(DA,AE,FDE)",
+    "Shape(FEB,BE)",
+    "Shape(FDE,EB,FBC,CD)",
+    "Shape(FCD,DC)",
+    "Collinear(ADC)",
+    "Collinear(AEB)",
+    "Cocircular(F,DEBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(DAE),33)",
+    "Equal(MeasureOfArc(FBC),x)",
+    "Equal(MeasureOfArc(FDE),51)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "117",
+  "theorem_seqs": [
+    "circle_property_circular_power_segment_and_segment_angle(ADC,AEB,F)"
+  ]
+}

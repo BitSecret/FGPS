@@ -1,0 +1,36 @@
+{
+  "problem_id": 6642,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9658",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是半圆的直径,∠ABC=50°,点D是⁀{AC}的中点,则∠DAB等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of the semicircle, ∠ABC = N_0, point D is the midpoint of ⁀AC, then ∠DAB is equal to ()",
+  "problem_img": "6642.png",
+  "construction_cdl": [
+    "Shape(CB,OBC)",
+    "Shape(ODC,CD)",
+    "Shape(OAD,DA)",
+    "Shape(AD,DC,CB,BO,OA)",
+    "Collinear(AOB)",
+    "Cocircular(O,ADCB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsMidpointOfArc(D,OAC)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CBA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODB,A)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "congruent_arc_judgment_length_equal(OAD,ODC)",
+    "congruent_arc_property_measure_equal(OAD,ODC)",
+    "flat_angle(BOA)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_addition_measure(OAD,ODC)",
+    "arc_addition_measure(OAD,ODB)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 4111,
+  "annotation": "QikeHuang_2023-05-07",
+  "source": "GeoQA-2553",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠C=90°,AB=10,BC=8,则sin∠A=()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠C = N_0, AB = N_1, BC = N_2, then sin∠A = ()",
+  "problem_img": "4111.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(BC),8)",
+    "Equal(MeasureOfAngle(ACB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(BAC)))",
+  "problem_answer": "4/5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_property_pythagorean(ACB)",
+    "sine_theorem(ACB)",
+    "sine_theorem(CBA)"
+  ]
+}

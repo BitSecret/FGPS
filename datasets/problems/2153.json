@@ -1,0 +1,25 @@
+{
+  "problem_id": 2153,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2247",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For isosceles trapezoid X Y Z W, find m \\angle W.",
+  "problem_img": "2153.png",
+  "construction_cdl": [
+    "Shape(AB,BX,XY,YA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsoscelesTrapezoid(BXYA)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(XY),20)",
+    "Equal(MeasureOfAngle(XYA),70)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ABX))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "isosceles_trapezoid_property_angle_equal(BXYA)",
+    "parallel_property_ipsilateral_internal_angle(BA,XY)"
+  ]
+}

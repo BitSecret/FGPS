@@ -1,0 +1,38 @@
+{
+  "problem_id": 5959,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8388",
+  "problem_level": 1,
+  "problem_text_cn": "如图,平行四边形ABCD中,过A作AM交BD于点P,交CD于点N,交BC的延长线于点M,若AB=7,AD=10,CM=4,则DN的长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, cross A to make AM and cross BD at vertex P, cross CD at vertex N, and cross the extended line of BC at point M. If AB = N_0, AD = N_1, CM = N_2, then the length of DN for()",
+  "problem_img": "5959.png",
+  "construction_cdl": [
+    "Shape(AB,BP,PA)",
+    "Shape(AP,PD,DA)",
+    "Shape(DP,PN,ND)",
+    "Shape(PB,BC,CN,NP)",
+    "Shape(NC,CM,MN)",
+    "Collinear(BPD)",
+    "Collinear(APNM)",
+    "Collinear(DNC)",
+    "Collinear(BCM)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),7)",
+    "Equal(LengthOfLine(AD),10)",
+    "Equal(LengthOfLine(CM),4)",
+    "Parallelogram(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DN))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CB,DA,M)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "line_addition(DN,NC)",
+    "parallel_property_alternate_interior_angle(MC,DA)",
+    "similar_triangle_judgment_aa(NDA,NCM)",
+    "similar_triangle_property_line_ratio(NDA,NCM)",
+    "similar_triangle_property_line_ratio(AND,MNC)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 6445,
+  "annotation": "JiaZou_2023-06-04",
+  "source": "GeoQA-9321",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,∠ODA=90°,AC=10cm,BD=6cm,则BC的长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, ∠ODA = N_0, AC = N_1, BD = N_2, then the length of BC is ()",
+  "problem_img": "6445.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OD)",
+    "Shape(OA,AB,BO)",
+    "Shape(OB,BC,CO)",
+    "Shape(OC,CD,DO)",
+    "Collinear(DOB)",
+    "Collinear(AOC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AC),10)",
+    "Equal(LengthOfLine(BD),6)",
+    "Equal(MeasureOfAngle(ODA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(DABC,O)",
+    "line_addition(DO,OB)",
+    "line_addition(AO,OC)",
+    "right_triangle_judgment_angle(ODA)",
+    "right_triangle_property_pythagorean(ODA)",
+    "parallelogram_property_opposite_line_equal(DABC)"
+  ]
+}

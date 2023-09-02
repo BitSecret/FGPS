@@ -1,0 +1,28 @@
+{
+  "problem_id": 1790,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1856",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of \\parallelogram T R V W.",
+  "problem_img": "1790.png",
+  "construction_cdl": [
+    "Shape(TW,WA,AV,VR,RT)",
+    "Collinear(WAV)"
+  ],
+  "text_cdl": [
+    "Parallelogram(TWVR)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(TR),18)",
+    "Equal(LengthOfLine(WT),12)",
+    "Equal(MeasureOfAngle(TWV),60)",
+    "PerpendicularBetweenLine(WA,TA)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(TWVR))",
+  "problem_answer": "108*sqrt(3)",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(RTWV)",
+    "parallelogram_area_formula_sine(TWVR)"
+  ]
+}

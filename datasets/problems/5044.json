@@ -1,0 +1,33 @@
+{
+  "problem_id": 5044,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4793",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,EF∥AB,DE:DA=2:5,若CD=8,则EF的长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, EF ∥ AB, DE:DA=N_0:N_1, if CD = N_2, the length of EF is ()",
+  "problem_img": "5044.png",
+  "construction_cdl": [
+    "Shape(DE,EF,FD)",
+    "Shape(EA,AB,BF,FE)",
+    "Shape(DF,FB,BC,CD)",
+    "Collinear(DEA)",
+    "Collinear(DFB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "ParallelBetweenLine(EF,AB)",
+    "Equal(LengthOfLine(CD),8)",
+    "Equal(Div(LengthOfLine(DE),LengthOfLine(DA)),2/5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "16/5",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallel_property_corresponding_angle(EF,AB,D)",
+    "parallel_property_corresponding_angle(BA,FE,D)",
+    "similar_triangle_judgment_aa(DEF,DAB)",
+    "similar_triangle_property_line_ratio(FDE,BDA)",
+    "similar_triangle_property_line_ratio(DEF,DAB)"
+  ]
+}

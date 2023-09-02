@@ -1,0 +1,35 @@
+{
+  "problem_id": 4752,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4111",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的切线,A为切点,BO的延长线交⊙O于点C,∠OAC=35°,则∠B的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the tangent of ⊙O, A is the tangent point, the extended line of BO intersects ⊙O at point C, ∠OAC = N_0, then the degree of ∠B is ()",
+  "problem_img": "4752.png",
+  "construction_cdl": [
+    "Shape(CO,OD,ODC)",
+    "Shape(AC,OCA)",
+    "Shape(AO,OC,CA)",
+    "Shape(DO,OA,OAD)",
+    "Shape(AB,BD,OAD)",
+    "Collinear(CODB)",
+    "Cocircular(O,CA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAO),35)",
+    "IsTangentOfCircle(BA,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABD))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "tangent_of_circle_property_perpendicular(BA,O,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "angle_addition(CAO,OAB)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

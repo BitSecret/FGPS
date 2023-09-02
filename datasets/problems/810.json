@@ -1,0 +1,34 @@
+{
+  "problem_id": 810,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-836",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "810.png",
+  "construction_cdl": [
+    "Shape(AY,YE,EA)",
+    "Shape(EY,YF,FE)",
+    "Collinear(AEF)",
+    "Shape(DX,XB,BD)",
+    "Shape(BX,XC,CB)",
+    "Collinear(DBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(YE),x)",
+    "Equal(LengthOfLine(YF),6.5)",
+    "Equal(LengthOfLine(XB),12)",
+    "Equal(LengthOfLine(XC),13)",
+    "Equal(MeasureOfAngle(YFE),MeasureOfAngle(XCB))",
+    "PerpendicularBetweenLine(FE,YE)",
+    "PerpendicularBetweenLine(CB,XB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "similar_triangle_judgment_aa(YFE,XCB)",
+    "similar_triangle_property_line_ratio(EYF,BXC)",
+    "similar_triangle_property_line_ratio(FEY,CBX)"
+  ]
+}

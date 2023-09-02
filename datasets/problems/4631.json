@@ -1,0 +1,36 @@
+{
+  "problem_id": 4631,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3838",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O与BC相切于点B,弦AB∥OC,若∠C=40°,则∠AOB的度数是()",
+  "problem_text_en": "As shown in the figure, ⊙O and BC are tangent to vertex B, chord AB ∥ OC, if ∠C = N_0, then the degree of ∠AOB is ()",
+  "problem_img": "4631.png",
+  "construction_cdl": [
+    "Shape(OM,OMA,AO)",
+    "Shape(OA,AB,BO)",
+    "Shape(OB,OBM,MO)",
+    "Shape(BA,OAB)",
+    "Shape(OBM,BC,CM)",
+    "Collinear(OMC)",
+    "Cocircular(O,ABM)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(OC,AB)",
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CB,O)",
+    "Equal(MeasureOfAngle(BCO),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "tangent_of_circle_property_perpendicular(CB,O,O)",
+    "parallel_property_alternate_interior_angle(OC,AB)",
+    "triangle_property_angle_sum(OBC)",
+    "sine_theorem(OAB)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

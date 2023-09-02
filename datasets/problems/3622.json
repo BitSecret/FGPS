@@ -1,0 +1,32 @@
+{
+  "problem_id": 3622,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1299",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知钝角三角形ABC,将△ABC绕点A按逆时针方向旋转110°得到△AB′C′,连接BB′,若AC′∥BB′,则∠CAB′的度数为()",
+  "problem_text_en": "As shown in the figure, given the obtuse triangle ABC, rotate △ABC counterclockwise around point A by N_0 to get △AB′C′, connect BB′, if AC′ ∥ BB′, then the degree of ∠CAB′ is ()",
+  "problem_img": "3622.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CB,BD,DA)",
+    "Shape(AD,DE,EA)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(ABC,ADE)",
+    "Equal(MeasureOfAngle(DAB),110)",
+    "ParallelBetweenLine(AE,BD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAC))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "congruent_triangle_property_line_equal(CAB,EAD)",
+    "isosceles_triangle_judgment_line_equal(ABD)",
+    "isosceles_triangle_property_angle_equal(ABD)",
+    "triangle_property_angle_sum(ABD)",
+    "parallel_property_ipsilateral_internal_angle(AE,BD)",
+    "angle_addition(EAD,DAB)",
+    "angle_addition(DAC,CAB)",
+    "congruent_triangle_property_angle_equal(ABC,ADE)"
+  ]
+}

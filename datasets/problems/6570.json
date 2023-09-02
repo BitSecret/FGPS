@@ -1,0 +1,31 @@
+{
+  "problem_id": 6570,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9527",
+  "problem_level": 1,
+  "problem_text_cn": "如下图,在平行四边形ABCD中,AE平分∠BAD交DC边于点E,DF⊥AE于F,已知∠ADF=50°,∠C的度数为()",
+  "problem_text_en": "As shown in the figure below, in the parallelogram ABCD, AE bisects ∠BAD intersects the DC edge at point E, DF ⊥ AE at F, and it is known that ∠ADF = N_0, the degree of ∠C is ()",
+  "problem_img": "6570.png",
+  "construction_cdl": [
+    "Shape(DA,AF,FD)",
+    "Shape(DF,FE,ED)",
+    "Shape(EF,FA,AB,BC,CE)",
+    "Collinear(AFE)",
+    "Collinear(DEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(DABC)",
+    "IsBisectorOfAngle(AE,DAB)",
+    "PerpendicularBetweenLine(DF,EF)",
+    "Equal(MeasureOfAngle(FDA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AFD,DFE)",
+    "triangle_property_angle_sum(DAF)",
+    "angle_addition(DAE,EAB)",
+    "parallelogram_property_opposite_angle_equal(ABCD)"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "problem_id": 6249,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8857",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的直径AB=10cm,CD⊥AB,OE=3cm,则CD的长()cm．",
+  "problem_text_en": "As shown in the figure, the diameter of ⊙O AB = N_0, CD ⊥ AB, OE = N_1, then the length of CD ().",
+  "problem_img": "6249.png",
+  "construction_cdl": [
+    "Shape(OD,DE,EO)",
+    "Shape(OAD,DO,OA)",
+    "Shape(ODB,BE,ED)",
+    "Shape(OBC,CE,EB)",
+    "Shape(OCA,AO,OE,EC)",
+    "Collinear(AOEB)",
+    "Collinear(CED)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(OE),3)",
+    "PerpendicularBetweenLine(DE,OE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "line_addition(AO,OE)",
+    "line_addition(AO,OB)",
+    "line_addition(AE,EB)",
+    "line_addition(OE,EB)",
+    "line_addition(CE,ED)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,DC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "right_triangle_judgment_angle(DEO)",
+    "right_triangle_property_pythagorean(DEO)"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "problem_id": 4355,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-3252",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⁀{AB}是半圆,O为AB中点,C、D两点在⁀{AB}上,且AD∥OC,连接BC、BD．若⁀{CD}=62°,则弧AD的度数为何？()",
+  "problem_text_en": "As shown in the figure, ⁀AB is a semicircle, O is the midpoint of AB, the two points C and D are on ⁀AB, and AD ∥ OC, connecting BC and BD. If ⁀CD = N_0, what is the degree? ()",
+  "problem_img": "4355.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(AO,OD,DA)",
+    "Shape(OCD,DE,EC)",
+    "Shape(OBC,CB)",
+    "Shape(OE,ED,DO)",
+    "Shape(BC,CE,EB)",
+    "Shape(OB,BE,EO)",
+    "Collinear(AOB)",
+    "Collinear(DEB)",
+    "Collinear(CEO)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "ParallelBetweenLine(AD,OC)",
+    "Equal(MeasureOfArc(OCD),62)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfArc(ODA))",
+  "problem_answer": "56",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCD,O)",
+    "parallel_property_alternate_interior_angle(AD,OC)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(ODA)",
+    "arc_property_center_angle(ODA,O)"
+  ]
+}

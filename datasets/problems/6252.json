@@ -1,0 +1,36 @@
+{
+  "problem_id": 6252,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8867",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的半径为10,AB为弦,OC⊥AB,垂足为E．如果CE=4,那么AB的长是()",
+  "problem_text_en": "As shown in the figure, the radius of ⊙O is N_0, AB is the chord, OC ⊥ AB, and the foot of perpendicular is E. If CE = N_1, then the length of AB is ()",
+  "problem_img": "6252.png",
+  "construction_cdl": [
+    "Shape(OB,BE,EO)",
+    "Shape(OAB,BO,OE,EA)",
+    "Shape(OBC,CE,EB)",
+    "Shape(OCA,AE,EC)",
+    "Collinear(AEB)",
+    "Collinear(OEC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CE),4)",
+    "Equal(RadiusOfCircle(O),10)",
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(BE,OE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "line_addition(AE,EB)",
+    "line_addition(OE,EC)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,BA)",
+    "right_triangle_judgment_angle(BEO)",
+    "right_triangle_property_pythagorean(BEO)"
+  ]
+}

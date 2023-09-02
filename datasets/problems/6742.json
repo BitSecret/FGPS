@@ -1,0 +1,28 @@
+{
+  "problem_id": 6742,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9800",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,∠ABC=30°,则∠AOC的度数为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, ∠ABC = N_0, then the degree of ∠AOC is ()",
+  "problem_img": "6742.png",
+  "construction_cdl": [
+    "Shape(AO,OC,OCA)",
+    "Shape(CO,OB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABC),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AOC))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCA,O)",
+    "arc_property_circumference_angle_external(OCA,B)"
+  ]
+}

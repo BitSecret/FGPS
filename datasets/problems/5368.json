@@ -1,0 +1,35 @@
+{
+  "problem_id": 5368,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5648",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ACD与△ABD关于AD所在的直线成轴对称,B、D、C三点共线,若AC=3,BD=2,则△ABC的周长是()",
+  "problem_text_en": "As shown in the figure, △ACD and △ABD are axisymmetric with respect to the line where AD is located, and the three points B, D, and C are collinear. If AC = N_0, BD = N_1, then the perimeter of △ABC is ()",
+  "problem_img": "5368.png",
+  "construction_cdl": [
+    "Shape(AE,ED,DA)",
+    "Shape(EB,BD,DE)",
+    "Shape(AD,DF,FA)",
+    "Shape(DC,CF,FD)",
+    "Collinear(AEB)",
+    "Collinear(AFC)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(ABD,ADC)",
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(LengthOfLine(BD),2)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(AE,DE)",
+    "PerpendicularBetweenLine(DF,AF)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_line_equal(ABD,ADC)",
+    "mirror_congruent_triangle_property_line_equal(DAB,DCA)",
+    "line_addition(BD,DC)",
+    "triangle_perimeter_formula(ABC)"
+  ]
+}

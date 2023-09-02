@@ -1,0 +1,34 @@
+{
+  "problem_id": 2165,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2260",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 4 = 101. Find the measure of \\angle 7.",
+  "problem_img": "2165.png",
+  "construction_cdl": [
+    "Shape(KJ,JE)",
+    "Shape(EJ,JA)",
+    "Shape(AJ,JN)",
+    "Shape(NJ,JK)",
+    "Shape(HN,NJ)",
+    "Shape(JN,NF)",
+    "Shape(FN,NI)",
+    "Shape(IN,NH)",
+    "Collinear(KJA)",
+    "Collinear(HNF)",
+    "Collinear(EJNI)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(NJK),101)",
+    "ParallelBetweenLine(KJ,HF)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(FNI))",
+  "problem_answer": "79",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(FH,JK,N)",
+    "parallel_property_corresponding_angle(NH,JK,I)",
+    "adjacent_complementary_angle(FNI,INH)"
+  ]
+}

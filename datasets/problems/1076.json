@@ -1,0 +1,25 @@
+{
+  "problem_id": 1076,
+  "annotation": "NaZhu_2023-03-19",
+  "source": "Geometry3k-1112",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of \\angle T to the nearest tenth.",
+  "problem_img": "1076.png",
+  "construction_cdl": [
+    "Shape(RS,ST,TR)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(RS),8)",
+    "Equal(LengthOfLine(TS),12)",
+    "PerpendicularBetweenLine(RS,TS)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(STR))",
+  "problem_answer": "33.7",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(RST)",
+    "right_triangle_property_pythagorean(RST)",
+    "cosine_theorem(TRS)"
+  ]
+}

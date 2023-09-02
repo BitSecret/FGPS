@@ -1,0 +1,33 @@
+{
+  "problem_id": 4619,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3796",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABD的外接圆,若∠A=135°,则∠BDO的度数为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABD, if ∠A = N_0, then the degree of ∠BDO is ()",
+  "problem_img": "4619.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OAB,BA)",
+    "Shape(DA,AB,BD)",
+    "Shape(DB,BO,OD)",
+    "Shape(DO,OB,OBD)",
+    "Cocircular(O,DAB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DAB),135)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ODB))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "arc_property_center_angle(ODB,O)",
+    "round_arc(OBD,ODB)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "triangle_property_angle_sum(BOD)",
+    "sine_theorem(ODB)"
+  ]
+}

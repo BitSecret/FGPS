@@ -1,0 +1,49 @@
+{
+  "problem_id": 4942,
+  "annotation": "DengfengYue_2023-05-14",
+  "source": "GeoQA-4597",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知△ABC,AB=6,AC=5,D是边AB的中点,E是边AC上一点,∠ADE=∠C,∠BAC的平分线分别交DE、BC于点F、G,那么\\frac{AF}{AG}的值为()",
+  "problem_text_en": "As shown in the figure, it is known that △ABC, AB = N_0, AC = N_1, D is the midpoint of side AB, E is a point on edge AC, ∠ADE = ∠C, the bisector of ∠BAC intersects DE and BC at point F and point G respectively, then the value of \\frac AFAG is ()",
+  "problem_img": "4942.png",
+  "construction_cdl": [
+    "Shape(AD,DF,FA)",
+    "Shape(AF,FE,EA)",
+    "Shape(DB,BG,GF,FD)",
+    "Shape(FG,GC,CE,EF)",
+    "Collinear(ADB)",
+    "Collinear(DFE)",
+    "Collinear(AFG)",
+    "Collinear(AEC)",
+    "Collinear(BGC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,AB)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(AC),5)",
+    "Equal(MeasureOfAngle(ADE),MeasureOfAngle(GCE))",
+    "IsBisectorOfAngle(AG,CAB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(AF),LengthOfLine(AG)))",
+  "problem_answer": "3/5",
+  "theorem_seqs": [
+    "mirror_similar_triangle_judgment_aa(FAD,GCA)",
+    "mirror_similar_triangle_judgment_aa(EAD,BCA)",
+    "mirror_similar_triangle_judgment_aa(GCA,FAD)",
+    "mirror_similar_triangle_judgment_aa(BCA,EAD)",
+    "mirror_similar_triangle_property_line_ratio(FAD,GCA)",
+    "mirror_similar_triangle_property_line_ratio(ADF,AGC)",
+    "mirror_similar_triangle_property_line_ratio(DFA,CAG)",
+    "mirror_similar_triangle_property_line_ratio(EAD,BCA)",
+    "mirror_similar_triangle_property_line_ratio(ADE,ABC)",
+    "mirror_similar_triangle_property_line_ratio(DEA,CAB)",
+    "mirror_similar_triangle_property_line_ratio(GCA,FAD)",
+    "mirror_similar_triangle_property_line_ratio(CAG,DFA)",
+    "mirror_similar_triangle_property_line_ratio(AGC,ADF)",
+    "mirror_similar_triangle_property_line_ratio(BCA,EAD)",
+    "mirror_similar_triangle_property_line_ratio(CAB,DEA)",
+    "mirror_similar_triangle_property_line_ratio(ABC,ADE)",
+    "line_addition(AD,DB)"
+  ]
+}

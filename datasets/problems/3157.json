@@ -1,0 +1,35 @@
+{
+  "problem_id": 3157,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-424",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b,∠1=120°,则∠2的度数是()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, ∠1 = N_0, then the degree of ∠2 is ()",
+  "problem_img": "3157.png",
+  "construction_cdl": [
+    "Shape(BC,CA)",
+    "Shape(AC,CD)",
+    "Shape(FC,CB)",
+    "Shape(DC,CF)",
+    "Shape(EF,FC)",
+    "Shape(CF,FG)",
+    "Shape(HF,FE)",
+    "Shape(GF,FH)",
+    "Collinear(BCD)",
+    "Collinear(EFG)",
+    "Collinear(ACFH)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BD,EG)",
+    "Equal(MeasureOfAngle(ACD),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EFC))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(BD,EG,C)",
+    "parallel_property_collinear_extend(GE,DC,F)",
+    "parallel_property_corresponding_angle(CD,FG,A)",
+    "adjacent_complementary_angle(EFC,CFG)"
+  ]
+}

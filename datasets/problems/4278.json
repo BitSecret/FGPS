@@ -1,0 +1,30 @@
+{
+  "problem_id": 4278,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3073",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的直径AB=8,点C在⊙O上,∠ABC=30°,则AC的长是()",
+  "problem_text_en": "As shown in the figure, the diameter of ⊙O is AB = N_0, point C is on ⊙O, ∠ABC = N_1, then the length of AC is ()",
+  "problem_img": "4278.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(CA,OAC)",
+    "Shape(AC,CB,BA)",
+    "Shape(BC,OCB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(MeasureOfAngle(CBA),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(AOB,O)",
+    "diameter_of_circle_property_right_angle(ACB,O)",
+    "sine_theorem(ACB)"
+  ]
+}

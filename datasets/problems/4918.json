@@ -1,0 +1,30 @@
+{
+  "problem_id": 4918,
+  "annotation": "DengfengYue_2023-05-14",
+  "source": "GeoQA-4501",
+  "problem_level": 1,
+  "problem_text_cn": "如图,某学生利用标杆测量一棵大树的高度,如果标杆EC的高为2m,并测得BC=3m,CA=1m,那么树DB的高度是()",
+  "problem_text_en": "As shown in the figure, a student uses a benchmark to measure the height of a big tree. If the height of the benchmark EC is N_0, and the measured BC = N_1, CA = N_2, then the height of the tree DB is ()",
+  "problem_img": "4918.png",
+  "construction_cdl": [
+    "Shape(EA,AC,CE)",
+    "Shape(DE,EC,CB,BD)",
+    "Collinear(DEA)",
+    "Collinear(BCA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(LengthOfLine(CA),1)",
+    "Equal(LengthOfLine(EC),2)",
+    "Equal(MeasureOfAngle(ABD),MeasureOfAngle(ACE))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "line_addition(AC,CB)",
+    "similar_triangle_judgment_aa(EAC,DAB)",
+    "similar_triangle_property_line_ratio(EAC,DAB)",
+    "similar_triangle_property_line_ratio(ACE,ABD)"
+  ]
+}

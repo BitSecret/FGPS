@@ -1,0 +1,36 @@
+{
+  "problem_id": 1788,
+  "annotation": "NaZhu_2023-03-26",
+  "source": "Geometry3k-1854",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "J H, J P, and P H are midsegments of \\triangle K L M. Find x.",
+  "problem_img": "1788.png",
+  "construction_cdl": [
+    "Shape(PK,KJ,JP)",
+    "Shape(PJ,JH,HP)",
+    "Shape(LP,PH,HL)",
+    "Shape(HJ,JM,MH)",
+    "Collinear(KPL)",
+    "Collinear(KJM)",
+    "Collinear(MHL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsMidsegmentOfTriangle(HJ,MLK)",
+    "IsMidsegmentOfTriangle(JP,KML)",
+    "IsMidsegmentOfTriangle(PH,LKM)",
+    "Equal(LengthOfLine(HP),25)",
+    "Equal(LengthOfLine(KM),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "line_addition(MH,HL)",
+    "midsegment_of_triangle_property_parallel(PH,LKM)",
+    "parallel_property_corresponding_angle(PH,KM,L)",
+    "similar_triangle_judgment_aa(HLP,MLK)",
+    "similar_triangle_property_line_ratio(LPH,LKM)",
+    "similar_triangle_property_line_ratio(PHL,KML)"
+  ]
+}

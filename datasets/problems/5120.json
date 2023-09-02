@@ -1,0 +1,33 @@
+{
+  "problem_id": 5120,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4977",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、CD相交于点O,OC=2,OD=3,AC∥BD,EF是△ODB的中位线,且EF=2,则AC的长为()",
+  "problem_text_en": "As shown in the figure, AB and CD intersect at point O, OC = N_0, OD = N_1, AC ∥ BD, EF is the median line of △ODB, and EF = N_2, then the length of AC is ()",
+  "problem_img": "5120.png",
+  "construction_cdl": [
+    "Shape(AO,OC,CA)",
+    "Shape(OE,EF,FO)",
+    "Shape(ED,DB,BF,FE)",
+    "Collinear(AOFB)",
+    "Collinear(COED)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AC,DB)",
+    "Equal(LengthOfLine(OC),2)",
+    "Equal(LengthOfLine(OD),3)",
+    "IsMidsegmentOfTriangle(EF,ODB)",
+    "Equal(LengthOfLine(EF),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "8/3",
+  "theorem_seqs": [
+    "midsegment_of_triangle_property_length(EF,ODB)",
+    "parallel_property_alternate_interior_angle(AC,DB)",
+    "similar_triangle_judgment_aa(OCA,ODB)",
+    "similar_triangle_property_line_ratio(OCA,ODB)",
+    "similar_triangle_property_line_ratio(AOC,BOD)"
+  ]
+}

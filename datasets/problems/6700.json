@@ -1,0 +1,32 @@
+{
+  "problem_id": 6700,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9730",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、CD都是⊙O的弦,且AB⊥CD．若∠CDB=62°,则∠ACD的大小为()",
+  "problem_text_en": "As shown in the figure, AB and CD are both ⊙O strings, and AB ⊥ CD. If ∠CDB = N_0, then the size of ∠ACD is ()",
+  "problem_img": "6700.png",
+  "construction_cdl": [
+    "Shape(CA,OAC)",
+    "Shape(AC,CE,EA)",
+    "Shape(DE,EB,BD)",
+    "Shape(AE,ED,ODA)",
+    "Shape(DB,OBD)",
+    "Shape(BE,EC,OCB)",
+    "Collinear(CED)",
+    "Collinear(AEB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(CE,AE)",
+    "Equal(MeasureOfAngle(BDC),62)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACD))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCB,A)",
+    "arc_property_circumference_angle_external(OCB,D)",
+    "triangle_property_angle_sum(ACE)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 5600,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7136",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,E为BC中点,连接AE交对角线BD于F,BF=2,则FD等于()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, E is the midpoint of BC, connecting AE to the diagonal line BD to F, BF = N_0, then FD is equal to ()",
+  "problem_img": "5600.png",
+  "construction_cdl": [
+    "Shape(AF,FD,DA)",
+    "Shape(AB,BF,FA)",
+    "Shape(FB,BE,EF)",
+    "Shape(DF,FE,EC,CD)",
+    "Collinear(AFE)",
+    "Collinear(BEC)",
+    "Collinear(BFD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsMidpointOfLine(E,BC)",
+    "Equal(LengthOfLine(BF),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(FD))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(BE,EC)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallel_property_alternate_interior_angle(EB,DA)",
+    "similar_triangle_judgment_aa(FDA,FBE)",
+    "similar_triangle_property_line_ratio(FDA,FBE)",
+    "similar_triangle_property_line_ratio(AFD,EFB)"
+  ]
+}

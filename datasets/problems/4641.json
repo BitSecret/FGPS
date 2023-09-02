@@ -1,0 +1,44 @@
+{
+  "problem_id": 4641,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3862",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA,PB分别与⊙O相切于点A,B、过圆上点C作⊙O的切线EF分别交PA,PB于点E,F,若PA=4,则△PEF的周长是()",
+  "problem_text_en": "As shown in the figure, PA and PB are tangent to ⊙O at points A, B, and the tangent EF of ⊙O through point C on the circle intersects PA and PB at points E and F respectively. If PA = N_0, then the perimeter of △PEF is ()",
+  "problem_img": "4641.png",
+  "construction_cdl": [
+    "Shape(PF,FC,CE,EP)",
+    "Shape(CF,FB,OCB)",
+    "Shape(AE,EC,OAC)",
+    "Shape(OAC,OCB,BO,OA)",
+    "Shape(AO,OB,OBA)",
+    "Collinear(PEA)",
+    "Collinear(PFB)",
+    "Collinear(ECF)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "IsTangentOfCircle(EC,O)",
+    "IsTangentOfCircle(FC,O)",
+    "Equal(LengthOfLine(PA),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(PFE))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "tangent_of_circle_judgment_perpendicular(EA,O,O)",
+    "tangent_of_circle_judgment_perpendicular(FB,O,O)",
+    "tangent_of_circle_property_length_equal(PA,PB,O)",
+    "tangent_of_circle_property_length_equal(EC,EA,O)",
+    "tangent_of_circle_property_length_equal(FC,FB,O)",
+    "line_addition(PE,EA)",
+    "line_addition(PF,FB)",
+    "line_addition(EC,CF)",
+    "triangle_perimeter_formula(PFE)"
+  ]
+}

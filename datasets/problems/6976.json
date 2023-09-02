@@ -1,0 +1,39 @@
+{
+  "problem_id": 6976,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10230",
+  "problem_level": 1,
+  "problem_text_cn": "如图，AB为⊙O的直径，点C为AB上一点，点D在⊙O上，AD＝AC，连接DC并延长交⊙O于点E，连接OE，若∠BAD＝30°，则∠COE的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6976.png",
+  "construction_cdl": [
+    "Shape(ODB,BC,CD)",
+    "Shape(OAD,DA)",
+    "Shape(DC,CO,OA,AD)",
+    "Shape(OBE,EC,CB)",
+    "Shape(CE,EO,OC)",
+    "Shape(OE,EA,AO)",
+    "Shape(OEA,AE)",
+    "Collinear(BCOA)",
+    "Collinear(ECD)",
+    "Cocircular(O,BEAD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(LengthOfLine(AD),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(BAD),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EOC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ADC)",
+    "isosceles_triangle_property_angle_equal(ADC)",
+    "triangle_property_angle_sum(ADC)",
+    "arc_property_circumference_angle_external(OEA,D)",
+    "arc_property_center_angle(OEA,O)",
+    "flat_angle(AOC)",
+    "angle_addition(AOE,EOC)"
+  ]
+}

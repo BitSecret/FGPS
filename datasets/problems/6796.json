@@ -1,0 +1,32 @@
+{
+  "problem_id": 6796,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-angle-10002",
+  "problem_level": 1,
+  "problem_text_cn": "如图，直线l1∥l2，△ABC是等边三角形．若∠1＝40°，则∠2的大小为（）",
+  "problem_text_en": "",
+  "problem_img": "6796.png",
+  "construction_cdl": [
+    "Shape(AE,ED,DA)",
+    "Shape(LD,DF)",
+    "Shape(DE,EG,GF,FD)",
+    "Shape(GB,BC,CF,FG)",
+    "Collinear(AEGB)",
+    "Collinear(EDL)",
+    "Collinear(ADFC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(ED,GF)",
+    "EquilateralTriangle(ABC)",
+    "Equal(MeasureOfAngle(EGF),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(LDF))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(ABC)",
+    "parallel_property_corresponding_angle(ED,GF,A)",
+    "triangle_property_angle_sum(AED)",
+    "vertical_angle(EDA,LDF)"
+  ]
+}

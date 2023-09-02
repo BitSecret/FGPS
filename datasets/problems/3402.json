@@ -1,0 +1,35 @@
+{
+  "problem_id": 3402,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-933",
+  "problem_level": 1,
+  "problem_text_cn": "如图,把一个直角三角尺的直角顶点放在直尺的一边上,若∠1=50°,则∠2=()",
+  "problem_text_en": "As shown in the figure, put the right-angled vertex of a right triangle ruler on one side of the ruler, if ∠1 = N_0, then ∠2 = ()",
+  "problem_img": "3402.png",
+  "construction_cdl": [
+    "Shape(FE,EA)",
+    "Shape(BE,EG)",
+    "Shape(CF,FE)",
+    "Shape(EG,GD)",
+    "Shape(EF,FG,GE)",
+    "Shape(HF,FC)",
+    "Shape(DG,GI)",
+    "Collinear(AEB)",
+    "Collinear(CFGD)",
+    "Collinear(EFH)",
+    "Collinear(EGI)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(HFC),50)",
+    "Equal(MeasureOfAngle(GEF),90)",
+    "ParallelBetweenLine(AE,CF)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BEG))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(FC,EA,H)",
+    "angle_addition(GEF,FEA)",
+    "adjacent_complementary_angle(BEG,GEA)"
+  ]
+}

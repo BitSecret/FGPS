@@ -1,0 +1,38 @@
+{
+  "problem_id": 3387,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-897",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD是半圆的直径,点C是弧BD的中点,∠BAD=70°,则∠ADC等于()",
+  "problem_text_en": "As shown in the figure, AD is the diameter of the semicircle, point C is the midpoint of the arc BD, ∠BAD = N_0, then ∠ADC is equal to ()",
+  "problem_img": "3387.png",
+  "construction_cdl": [
+    "Shape(BA,AO,OD,DB)",
+    "Shape(CB,BD,DC)",
+    "Shape(AB,OBA)",
+    "Shape(BC,OCB)",
+    "Shape(CD,ODC)",
+    "Collinear(AOD)",
+    "Cocircular(O,DCBA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AD,O)",
+    "IsMidpointOfArc(C,ODB)",
+    "Equal(MeasureOfAngle(BAD),70)",
+    "Equal(LengthOfLine(CD),LengthOfLine(CB))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADC))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODB,A)",
+    "arc_property_circumference_angle_internal(ODB,C)",
+    "isosceles_triangle_judgment_line_equal(CBD)",
+    "isosceles_triangle_property_angle_equal(CBD)",
+    "diameter_of_circle_property_right_angle(DBA,O)",
+    "triangle_property_angle_sum(CBD)",
+    "triangle_property_angle_sum(BAD)",
+    "angle_addition(ADB,BDC)"
+  ]
+}

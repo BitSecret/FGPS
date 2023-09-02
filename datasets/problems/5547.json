@@ -1,0 +1,23 @@
+{
+  "problem_id": 5547,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6768",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一个斜坡长130m,坡顶离水平地面的距离为50m,那么这个斜坡的坡度为()",
+  "problem_text_en": "As shown in the figure, a slope is N_0 long, and the distance between the top of the slope and the horizontal ground is N_1, then the slope of this slope is ()",
+  "problem_img": "5547.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "RightTriangle(BCA)",
+    "Equal(LengthOfLine(AB),130)",
+    "Equal(LengthOfLine(CA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(AC),LengthOfLine(BC)))",
+  "problem_answer": "5/12",
+  "theorem_seqs": [
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

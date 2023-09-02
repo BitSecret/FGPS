@@ -1,0 +1,37 @@
+{
+  "problem_id": 3374,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-869",
+  "problem_level": 1,
+  "problem_text_cn": "已知如图,在⊙O中,OA⊥OB,∠A=35°,则弧CD的度数为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, OA ⊥ OB, ∠A = N_0, then the degree of arc CD is ()",
+  "problem_img": "3374.png",
+  "construction_cdl": [
+    "Shape(BO,OC,CB)",
+    "Shape(CO,OD,ODC)",
+    "Shape(BC,OCB)",
+    "Shape(DA,AC,ODC)",
+    "Shape(DO,OB,OBD)",
+    "Collinear(BCA)",
+    "Collinear(ODA)",
+    "Cocircular(O,DCB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DAC),35)",
+    "Equal(MeasureOfAngle(BOD),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfArc(ODC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(OAB)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCB)",
+    "isosceles_triangle_property_angle_equal(OCB)",
+    "triangle_property_angle_sum(OCB)",
+    "angle_addition(BOC,COD)",
+    "arc_property_center_angle(ODC,O)"
+  ]
+}

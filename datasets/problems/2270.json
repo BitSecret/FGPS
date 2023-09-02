@@ -1,0 +1,25 @@
+{
+  "problem_id": 2270,
+  "annotation": "Yangli_2023-04-09",
+  "source": "Geometry3k-2374",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find P N.",
+  "problem_img": "2270.png",
+  "construction_cdl": [
+    "Shape(PN,NM,MP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(NM),11)",
+    "Equal(MeasureOfAngle(PNM),120)",
+    "Equal(MeasureOfAngle(MPN),MeasureOfAngle(NMP))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(PN))",
+  "problem_answer": "11",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(MPN)",
+    "sine_theorem(MPN)",
+    "sine_theorem(PNM)"
+  ]
+}

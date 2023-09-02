@@ -1,0 +1,33 @@
+{
+  "problem_id": 6777,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9881",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA为⊙O的切线,A为切点,PO交⊙O于点B,OA=3,OP=6,那么∠BAP的度数是()",
+  "problem_text_en": "As shown in the figure, PA is the tangent of ⊙O, A is the tangent point, PO intersects ⊙O at point B, OA = N_0, OP = N_1, then the degree of ∠BAP is ()",
+  "problem_img": "6777.png",
+  "construction_cdl": [
+    "Shape(OA,AB,BO)",
+    "Shape(BA,OAB)",
+    "Shape(BA,AP)",
+    "Shape(AO,OB,OBA)",
+    "Shape(AP,PB,OAB)",
+    "Collinear(OBP)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OP),6)",
+    "Equal(LengthOfLine(OA),3)",
+    "IsTangentOfCircle(PA,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(APB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "right_triangle_judgment_angle(OAP)",
+    "right_triangle_property_pythagorean(OAP)",
+    "cosine_theorem(POA)"
+  ]
+}

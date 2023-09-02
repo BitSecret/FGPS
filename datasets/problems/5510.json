@@ -1,0 +1,36 @@
+{
+  "problem_id": 5510,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-5978",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=AC=13,该三角形的面积为65,点D是边BC上任意一点,则点D分别到边AB,AC的距离之和等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC = N_0, the area of ​​the triangle is N_1, and the point D is any point on BC, then the sum of the distances from the point D to the sides AB and AC is equal to ()",
+  "problem_img": "5510.png",
+  "construction_cdl": [
+    "Shape(CM,MD,DC)",
+    "Shape(DN,NB,BD)",
+    "Shape(MA,AD,DM)",
+    "Shape(DA,AN,ND)",
+    "Collinear(CDB)",
+    "Collinear(CMA)",
+    "Collinear(BNA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),13)",
+    "Equal(LengthOfLine(AC),13)",
+    "Equal(AreaOfTriangle(ABC),65)",
+    "Equal(MeasureOfAngle(CMD),90)",
+    "PerpendicularBetweenLine(AN,DN)"
+  ],
+  "image_cdl": [
+    "Equal(AreaOfTriangle(ABC),Add(AreaOfTriangle(DCA),AreaOfTriangle(DAB)))"
+  ],
+  "goal_cdl": "Value(Add(LengthOfLine(DN),LengthOfLine(DM)))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "altitude_of_triangle_judgment(DN,DAB)",
+    "altitude_of_triangle_judgment(DM,DCA)",
+    "triangle_area_formula_common(DCA)",
+    "triangle_area_formula_common(DAB)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 193,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-195",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "193.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)",
+    "Shape(CA,AD,DC)",
+    "Collinear(BAD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),x)",
+    "Equal(LengthOfLine(AC),y)",
+    "Equal(LengthOfLine(CD),z)",
+    "Equal(LengthOfLine(AB),12)",
+    "Equal(LengthOfLine(AD),4)",
+    "PerpendicularBetweenLine(BA,CA)",
+    "PerpendicularBetweenLine(DC,BC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8*sqrt(3)",
+  "theorem_seqs": [
+    "line_addition(BA,AD)",
+    "mirror_similar_triangle_judgment_aa(CBA,DCB)",
+    "mirror_similar_triangle_property_line_ratio(ACB,CBD)",
+    "mirror_similar_triangle_property_line_ratio(CBA,DCB)"
+  ]
+}

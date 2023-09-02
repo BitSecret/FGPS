@@ -1,0 +1,38 @@
+{
+  "problem_id": 2738,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-2884",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find B C if A B = 6, A F = 8, B C = x, C D = y, D E = 2 y - 3, and F E = x + \\frac { 10 } { 3 }.",
+  "problem_img": "2738.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FA)",
+    "Shape(BC,CD,DF,FB)",
+    "Shape(FD,DE,EF)",
+    "Collinear(ABC)",
+    "Collinear(CDE)",
+    "Collinear(EFA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(AF),8)",
+    "Equal(LengthOfLine(BC),x)",
+    "Equal(LengthOfLine(CD),y)",
+    "Equal(LengthOfLine(DE),2*y-3)",
+    "Equal(LengthOfLine(FE),x+10/3)",
+    "ParallelBetweenLine(BF,CD)",
+    "ParallelBetweenLine(CB,DF)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "line_addition(AB,BC)",
+    "line_addition(EF,FA)",
+    "parallel_property_corresponding_angle(BF,CD,A)",
+    "similar_triangle_judgment_aa(FAB,EAC)",
+    "similar_triangle_property_line_ratio(FAB,EAC)",
+    "similar_triangle_property_line_ratio(BFA,CEA)"
+  ]
+}

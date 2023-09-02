@@ -1,0 +1,37 @@
+{
+  "problem_id": 4793,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4192",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的弦,AC是⊙O的切线,A为切点,BC经过圆心,∠B=20°,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the chord of ⊙O, AC is the tangent of ⊙O, A is the tangent point, BC passes through the center of the circle, ∠B = N_0, then the degree of ∠C is ()",
+  "problem_img": "4793.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(CA,ODA,DC)",
+    "Shape(OAB,BA)",
+    "Shape(OBD,DO,OB)",
+    "Shape(AO,OD,ODA)",
+    "Collinear(BODC)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CA,O)",
+    "IsDiameterOfCircle(BD,O)",
+    "Equal(MeasureOfAngle(ABO),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(ABO)",
+    "triangle_property_angle_sum(CAO)",
+    "tangent_of_circle_property_perpendicular(CA,O,O)",
+    "adjacent_complementary_angle(BOA,AOD)"
+  ]
+}

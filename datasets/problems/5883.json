@@ -1,0 +1,28 @@
+{
+  "problem_id": 5883,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7941",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CD,\\frac{AO}{OD}=\\frac{2}{3},则△AOB的周长与△DOC的周长比是()",
+  "problem_text_en": "As shown in the figure, AB ∥ CD, \\frac{AO}{OD}=\\frac{N_0}{N_1}, then the ratio of the perimeter of △AOB to the perimeter of △DOC is ()",
+  "problem_img": "5883.png",
+  "construction_cdl": [
+    "Shape(BA,AO,OB)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AOD)",
+    "Collinear(BOC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "Equal(Div(LengthOfLine(AO),LengthOfLine(OD)),2/3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(PerimeterOfTriangle(AOB),PerimeterOfTriangle(DOC)))",
+  "problem_answer": "2/3",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,CD)",
+    "similar_triangle_judgment_aa(OBA,OCD)",
+    "similar_triangle_property_line_ratio(BAO,CDO)",
+    "similar_triangle_property_perimeter_ratio(OBA,OCD)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 4570,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3702",
+  "problem_level": 1,
+  "problem_text_cn": "如图．△ABC为⊙O的内接三角形,AB=2,∠C=30°,则⊙O的半径为()",
+  "problem_text_en": "As shown in the figure. △ABC is the inscribed triangle of ⊙O, AB = N_0, ∠C = N_1, then the radius of ⊙O is ()",
+  "problem_img": "4570.png",
+  "construction_cdl": [
+    "Shape(CA,OAC)",
+    "Shape(AB,OBA)",
+    "Shape(BD,ODB)",
+    "Shape(DE,EC,OCD)",
+    "Shape(BE,ED,DB)",
+    "Shape(AE,EB,BA)",
+    "Shape(AC,CE,EA)",
+    "Collinear(AEOD)",
+    "Collinear(CEB)",
+    "Cocircular(O,ACDB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),2)",
+    "Equal(MeasureOfAngle(ACB),30)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AD,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBA,C)",
+    "arc_property_circumference_angle_external(OBA,D)",
+    "diameter_of_circle_property_right_angle(DBA,O)",
+    "sine_theorem(ADB)",
+    "diameter_of_circle_property_length_equal(AD,O)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

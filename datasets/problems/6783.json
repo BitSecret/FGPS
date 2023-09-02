@@ -1,0 +1,36 @@
+{
+  "problem_id": 6783,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9902",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AP为圆O的切线,P为切点,OA交圆O于点B,若∠A=40°,则∠APB等于()",
+  "problem_text_en": "As shown in the figure, AP is the tangent of circle O, P is the tangent point, OA intersects circle O at point B, if ∠A = N_0, then ∠APB is equal to ()",
+  "problem_img": "6783.png",
+  "construction_cdl": [
+    "Shape(BA,AP,OBP)",
+    "Shape(BP,PO,OB)",
+    "Shape(PB,OBP)",
+    "Shape(BO,OP,OPB)",
+    "Collinear(OBA)",
+    "Cocircular(O,BP)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BAP),40)",
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(AP,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(APB))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OP,O)",
+    "tangent_of_circle_property_perpendicular(AP,O,O)",
+    "triangle_property_angle_sum(POA)",
+    "isosceles_triangle_judgment_line_equal(OBP)",
+    "isosceles_triangle_property_angle_equal(OBP)",
+    "triangle_property_angle_sum(POB)",
+    "angle_addition(APB,BPO)"
+  ]
+}

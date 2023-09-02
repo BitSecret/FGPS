@@ -1,0 +1,32 @@
+{
+  "problem_id": 6953,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10207",
+  "problem_level": 1,
+  "problem_text_cn": "如图，四边形ABCD内接于⊙O，如果它的一个外角∠DCE＝64°，那么∠BOD的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6953.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OAB,BA)",
+    "Shape(AB,BO,OD,DA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(OB,BC,CD,DO)",
+    "Collinear(BCE)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DCE),64)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DOB))",
+  "problem_answer": "128",
+  "theorem_seqs": [
+    "flat_angle(BCE)",
+    "angle_addition(BCD,DCE)",
+    "arc_property_circumference_angle_internal(OBD,C)",
+    "arc_property_center_angle(OBD,O)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 3053,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-272",
+  "problem_level": 1,
+  "problem_text_cn": "已知,如图,AD与BC相交于点O,AB∥CD,如果∠B=20°,∠D=40°,那么∠BOD为()",
+  "problem_text_en": "As shown in the figure, it is known that AD and BC intersect at point O, AB ∥ CD, if ∠B = N_0, ∠D = N_1, then ∠BOD is ()",
+  "problem_img": "3053.png",
+  "construction_cdl": [
+    "Shape(AO,OB,BA)",
+    "Shape(OC,CD,DO)",
+    "Shape(CO,OA)",
+    "Shape(BO,OD)",
+    "Collinear(AOD)",
+    "Collinear(BOC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "Equal(MeasureOfAngle(OBA),20)",
+    "Equal(MeasureOfAngle(CDO),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOD))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,CD)",
+    "triangle_property_angle_sum(AOB)",
+    "adjacent_complementary_angle(AOB,BOD)"
+  ]
+}

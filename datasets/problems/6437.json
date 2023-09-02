@@ -1,0 +1,41 @@
+{
+  "problem_id": 6437,
+  "annotation": "JiaZou_2023-06-04",
+  "source": "GeoQA-9312",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD的对角线AC、BD相交于点O,点E、F分别是线段AO、BO的中点,若EF=3,△COD的周长是18,则▱ABCD的两条对角线的和是()",
+  "problem_text_en": "As shown in the figure, the diagonal AC and BD of ▱ABCD intersect at point O, and points E and F are the midpoints of the line segments AO and BO respectively. If EF = N_0 and the perimeter of △COD is N_1, then the two The sum of the diagonals is ()",
+  "problem_img": "6437.png",
+  "construction_cdl": [
+    "Shape(AE,EO,OD,DA)",
+    "Shape(AB,BF,FE,EA)",
+    "Shape(EF,FO,OE)",
+    "Shape(OF,FB,BC,CO)",
+    "Shape(DO,OC,CD)",
+    "Collinear(AEOC)",
+    "Collinear(BFOD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsMidpointOfLine(E,AO)",
+    "IsMidpointOfLine(F,BO)",
+    "Equal(LengthOfLine(EF),3)",
+    "Equal(PerimeterOfTriangle(DOC),18)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(AC),LengthOfLine(BD)))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "line_addition(AE,EO)",
+    "line_addition(BF,FO)",
+    "similar_triangle_judgment_sas(OEF,OAB)",
+    "similar_triangle_property_line_ratio(FOE,BOA)",
+    "similar_triangle_property_line_ratio(OEF,OAB)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "triangle_perimeter_formula(OCD)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)"
+  ]
+}

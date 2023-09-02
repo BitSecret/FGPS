@@ -1,0 +1,35 @@
+{
+  "problem_id": 3243,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-546",
+  "problem_level": 1,
+  "problem_text_cn": "如图,OA=OB,OC=OD,∠O=60°,∠C=25°则∠BED的度数是()",
+  "problem_text_en": "As shown in the figure, OA = OB, OC = OD, ∠O = N_0, ∠C = N_1, then the degree of ∠BED is ()",
+  "problem_img": "3243.png",
+  "construction_cdl": [
+    "Shape(EC,CA,AE)",
+    "Shape(DE,EB,BD)",
+    "Shape(EA,AO,OB,BE)",
+    "Collinear(CEB)",
+    "Collinear(AED)",
+    "Collinear(CAO)",
+    "Collinear(OBD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OA),LengthOfLine(OB))",
+    "Equal(LengthOfLine(OC),LengthOfLine(OD))",
+    "Equal(MeasureOfAngle(AOB),60)",
+    "Equal(MeasureOfAngle(ECA),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DEB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(COB)",
+    "mirror_congruent_triangle_judgment_sas(OBC,ODA)",
+    "mirror_congruent_triangle_property_angle_equal(COB,DAO)",
+    "flat_angle(OBD)",
+    "angle_addition(OBE,EBD)",
+    "triangle_property_angle_sum(DEB)"
+  ]
+}

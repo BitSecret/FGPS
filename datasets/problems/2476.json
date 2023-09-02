@@ -1,0 +1,30 @@
+{
+  "problem_id": 2476,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-2598",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of \\triangle R U W if \\triangle R U W \\sim \\triangle S T V, S T = 24, V S = 12, V T = 18 and U W = 21.",
+  "problem_img": "2476.png",
+  "construction_cdl": [
+    "Shape(WR,RU,UW)",
+    "Shape(VS,ST,TV)",
+    "Collinear(R,S,T,U)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenTriangle(WRU,VST)",
+    "Equal(LengthOfLine(ST),24)",
+    "Equal(LengthOfLine(VS),12)",
+    "Equal(LengthOfLine(TV),18)",
+    "Equal(LengthOfLine(UW),21)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(WRU))",
+  "problem_answer": "63",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(WRU,VST)",
+    "similar_triangle_property_line_ratio(RUW,STV)",
+    "similar_triangle_property_line_ratio(UWR,TVS)",
+    "triangle_perimeter_formula(WRU)"
+  ]
+}

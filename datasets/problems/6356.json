@@ -1,0 +1,33 @@
+{
+  "problem_id": 6356,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9184",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,对角线AC,BD分别等于8和6,将BD沿CB的方向平移,使D与A重合,B与CB延长线上的点E重合,则四边形AEBD的面积等于()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, the diagonal AC and BD are equal to N_0 and N_1, respectively. BD is translated along the direction of CB, so that D coincides with A, and B coincides with the point E on the extended line line of CB, then the area of ​​the quadrilateral AEBD equal()",
+  "problem_img": "6356.png",
+  "construction_cdl": [
+    "Shape(AE,EB,BA)",
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Shape(OB,BC,CO)",
+    "Collinear(AOC)",
+    "Collinear(BOD)",
+    "Collinear(EBC)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AC),8)",
+    "Equal(LengthOfLine(BD),6)",
+    "Rhombus(AEBD)",
+    "MirrorCongruentBetweenQuadrilateral(ABCD,EBDA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(AEBD))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "kite_area_formula_diagonal(ABCD)",
+    "mirror_congruent_quadrilateral_property_area_equal(ABCD,EBDA)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 1471,
+  "annotation": "YanjunGuo_2023-04-09",
+  "source": "Geometry3k-1525",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For the pair of similar figures, find the area of the green figure.",
+  "problem_img": "1471.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)",
+    "Shape(DE,EF,FD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenTriangle(DEF,BCA)",
+    "Equal(LengthOfLine(AB),18)",
+    "Equal(LengthOfLine(FD),10)",
+    "Equal(AreaOfTriangle(DEF),25)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(BCA))",
+  "problem_answer": "81",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(EFD,CAB)",
+    "similar_triangle_property_area_square_ratio(EFD,CAB)"
+  ]
+}

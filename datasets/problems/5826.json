@@ -1,0 +1,44 @@
+{
+  "problem_id": 5826,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7815",
+  "problem_level": 1,
+  "problem_text_cn": "如图,边长分别为2和6的正方形ABCD和CEFG并排放在一起,连接BD并延长交EG于点T,交FG于点P．则GT=()",
+  "problem_text_en": "As shown in the figure, the squares ABCD and CEFG with edge lengths N_0 and N_1 are placed edge by edge, connecting BD and extending the intersection EG at point T, and intersection FG at point P. Then GT = ()",
+  "problem_img": "5826.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BC,CD)",
+    "Shape(GD,DT,TG)",
+    "Shape(TD,DC,CE,ET)",
+    "Shape(GT,TP,PG)",
+    "Shape(PT,TE,EF,FP)",
+    "Collinear(GPF)",
+    "Collinear(GDC)",
+    "Collinear(BCE)",
+    "Collinear(BDTP)",
+    "Collinear(GTE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CD),2)",
+    "Equal(LengthOfLine(GC),6)",
+    "IsMedianOfTriangle(GT,GDP)",
+    "Square(ABCD)",
+    "Square(GCEF)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(GT))",
+  "problem_answer": "2*sqrt(2)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(PGD)",
+    "line_addition(GD,DC)",
+    "isosceles_triangle_judgment_line_equal(CDB)",
+    "isosceles_triangle_property_angle_equal(CDB)",
+    "triangle_property_angle_sum(DBC)",
+    "triangle_property_angle_sum(GDP)",
+    "vertical_angle(GDT,CDB)",
+    "isosceles_triangle_judgment_angle_equal(GDP)",
+    "right_triangle_property_pythagorean(PGD)",
+    "right_triangle_property_length_of_median(PGD,T)"
+  ]
+}

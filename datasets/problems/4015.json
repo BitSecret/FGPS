@@ -1,0 +1,39 @@
+{
+  "problem_id": 4015,
+  "annotation": "YimingHe_2023-05-07",
+  "source": "GeoQA-2024",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,∠BAC=30°,CD⊥AB于点E,BE=2,则AC的长为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, ∠BAC = N_0, CD ⊥ AB is at point E, BE = N_1, then the length of AC is ()",
+  "problem_img": "4015.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(AO,OE,EC,CA)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(DO,OA,OAD)",
+    "Shape(OD,DE,EO)",
+    "Shape(BE,ED,ODB)",
+    "Collinear(AOEB)",
+    "Collinear(CED)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "PerpendicularBetweenLine(AE,CE)",
+    "Equal(LengthOfLine(BE),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "4*sqrt(3)",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "adjacent_complementary_angle(AEC,CEB)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(CEB)",
+    "sine_theorem(BCE)",
+    "sine_theorem(CAB)"
+  ]
+}

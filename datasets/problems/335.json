@@ -1,0 +1,31 @@
+{
+  "problem_id": 335,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-340",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find A B.",
+  "problem_img": "335.png",
+  "construction_cdl": [
+    "Shape(FAD,DE,EA)",
+    "Shape(FCA,AE,EC)",
+    "Shape(FDB,BF,FE,ED)",
+    "Shape(FBC,CE,EF,FB)",
+    "Collinear(DEC)",
+    "Collinear(AEFB)",
+    "Cocircular(F,ADBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(EA),12)",
+    "Equal(LengthOfLine(DE),24)",
+    "Equal(LengthOfLine(CE),24)",
+    "Equal(LengthOfLine(EB),x)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "circle_property_circular_power_chord_and_chord(AEB,DEC,F)",
+    "line_addition(AE,EB)"
+  ]
+}

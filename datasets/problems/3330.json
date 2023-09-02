@@ -1,0 +1,33 @@
+{
+  "problem_id": 3330,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-732",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB∥CF,E为DF的中点,若AB=8㎝,CF=5㎝,则BD为()．",
+  "problem_text_en": "As shown in the figure, it is known that AB ∥ CF and E are the midpoints of DF. If AB = N_0 cm and CF = N_1 cm, then BD is ().",
+  "problem_img": "3330.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DB,BC,CE)",
+    "Shape(FE,EC,CF)",
+    "Collinear(ADB)",
+    "Collinear(AEC)",
+    "Collinear(DEF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BA,CF)",
+    "IsMidpointOfLine(E,DF)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(CF),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DB))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "vertical_angle(DEA,FEC)",
+    "parallel_property_alternate_interior_angle(BA,CF)",
+    "congruent_triangle_judgment_aas(DEA,FEC)",
+    "congruent_triangle_property_line_equal(EAD,ECF)",
+    "line_addition(AD,DB)"
+  ]
+}

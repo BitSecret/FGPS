@@ -1,0 +1,35 @@
+{
+  "problem_id": 3629,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1310",
+  "problem_level": 1,
+  "problem_text_cn": "已知:如图,AB//CD,∠1=50°,那么∠2等于()",
+  "problem_text_en": "Known: As shown in the figure, AB // CD, ∠1 = N_0, then ∠2 is equal to ()",
+  "problem_img": "3629.png",
+  "construction_cdl": [
+    "Shape(AF,FE)",
+    "Shape(EF,FB)",
+    "Shape(BF,FG)",
+    "Shape(FG,GD)",
+    "Shape(DG,GH)",
+    "Shape(HG,GC)",
+    "Shape(CG,GF)",
+    "Shape(GF,FA)",
+    "Collinear(AFB)",
+    "Collinear(CGD)",
+    "Collinear(EFGH)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EFB),50)",
+    "ParallelBetweenLine(AB,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DGH))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AB,CD,F)",
+    "parallel_property_collinear_extend(DC,BF,G)",
+    "parallel_property_corresponding_angle(FB,GD,E)",
+    "adjacent_complementary_angle(FGD,DGH)"
+  ]
+}

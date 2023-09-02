@@ -1,0 +1,28 @@
+{
+  "problem_id": 871,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-900",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "a = 8, b = 15, and c = 17, find \\cos B.",
+  "problem_img": "871.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [
+    "Equal(a,8)",
+    "Equal(b,15)",
+    "Equal(c,17)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),c)",
+    "Equal(LengthOfLine(CB),a)",
+    "Equal(LengthOfLine(CA),b)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(Cos(MeasureOfAngle(ABC)))",
+  "problem_answer": "8/17",
+  "theorem_seqs": [
+    "cosine_theorem(BCA)"
+  ]
+}

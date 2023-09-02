@@ -1,0 +1,45 @@
+{
+  "problem_id": 1591,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1651",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth.",
+  "problem_img": "1591.png",
+  "construction_cdl": [
+    "Shape(AG,GF,FA)",
+    "Shape(AF,FC,CD,DA)",
+    "Shape(GE,EB,BF,FG)",
+    "Collinear(GFC)",
+    "Collinear(AGE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),21)",
+    "Equal(LengthOfLine(DC),9)",
+    "Equal(LengthOfLine(AE),16)",
+    "Equal(LengthOfLine(BF),7)",
+    "Equal(LengthOfLine(EB),6)",
+    "PerpendicularBetweenLine(DA,GA)",
+    "PerpendicularBetweenLine(CD,AD)",
+    "PerpendicularBetweenLine(FC,DC)",
+    "PerpendicularBetweenLine(GE,BE)",
+    "PerpendicularBetweenLine(EB,FB)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfQuadrilateral(AGCD),AreaOfQuadrilateral(GEBF)))",
+  "problem_answer": "231",
+  "theorem_seqs": [
+    "parallel_judgment_per_per(CF,DA)",
+    "parallel_judgment_per_per(DC,AG)",
+    "parallel_judgment_per_per(EG,BF)",
+    "parallel_property_collinear_extend(CF,DA,G)",
+    "parallelogram_judgment_parallel_and_parallel(AGCD)",
+    "parallelogram_area_formula_sine(CDAG)",
+    "rectangle_judgment_right_angle(CDAG)",
+    "adjacent_complementary_angle(AGF,FGE)",
+    "perpendicular_judgment_angle(FG,EG)",
+    "parallel_judgment_per_per(GF,EB)",
+    "parallelogram_judgment_parallel_and_parallel(GEBF)",
+    "parallelogram_area_formula_sine(EBFG)"
+  ]
+}

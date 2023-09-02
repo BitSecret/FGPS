@@ -1,0 +1,52 @@
+{
+  "problem_id": 5016,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4733",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC为等边三角形,点E在BA的延长线上,点D在BC边上,且ED=EC．若△ABC的边长为4,AE=2,则BD的长为()",
+  "problem_text_en": "As shown in the figure, △ABC is an equilateral triangle, point E is on the extended line of BA, point D is on the side of BC, and ED = EC. If the side length of △ABC is N_0, AE = N_1, then the length of BD is ()",
+  "problem_img": "5016.png",
+  "construction_cdl": [
+    "Shape(EA,AF,FE)",
+    "Shape(FA,AB,BD,DF)",
+    "Shape(FD,DC,CF)",
+    "Shape(FC,CE,EF)",
+    "Shape(EC,CG,GE)",
+    "Collinear(EFD)",
+    "Collinear(AFC)",
+    "Collinear(BDCG)",
+    "Collinear(EAB)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(ABC)",
+    "Equal(LengthOfLine(AE),2)",
+    "Equal(LengthOfLine(ED),LengthOfLine(EC))",
+    "Equal(LengthOfLine(CG),LengthOfLine(BD))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(EDC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(CAB)",
+    "isosceles_triangle_property_angle_equal(EDC)",
+    "flat_angle(BDC)",
+    "flat_angle(BCG)",
+    "angle_addition(BDE,EDC)",
+    "angle_addition(BCE,ECG)",
+    "mirror_congruent_triangle_judgment_sas(DEB,CGE)",
+    "mirror_congruent_triangle_property_angle_equal(BDE,GEC)",
+    "equilateral_triangle_property_angle(ABC)",
+    "similar_triangle_judgment_aa(FDC,EDG)",
+    "similar_triangle_judgment_aa(ABC,EBG)",
+    "line_addition(BD,DC)",
+    "line_addition(BD,DG)",
+    "line_addition(BC,CG)",
+    "line_addition(DC,CG)",
+    "line_addition(EA,AB)",
+    "similar_triangle_property_line_ratio(FDC,EDG)",
+    "similar_triangle_property_line_ratio(ABC,EBG)",
+    "similar_triangle_property_line_ratio(CAB,GEB)"
+  ]
+}

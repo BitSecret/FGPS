@@ -1,0 +1,42 @@
+{
+  "problem_id": 2792,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2940",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot X, A B = 30, C D = 30, and m \\widehat C Z = 40. Find m \\widehat C D.",
+  "problem_img": "2792.png",
+  "construction_cdl": [
+    "Shape(XBY,YM,MB)",
+    "Shape(XYA,AM,MY)",
+    "Shape(XAC,CN,NX,XM,MA)",
+    "Shape(XCZ,ZN,NC)",
+    "Shape(XZD,DN,NZ)",
+    "Shape(XDB,BM,MX,XN,ND)",
+    "Collinear(AMB)",
+    "Collinear(YMX)",
+    "Collinear(CND)",
+    "Collinear(XNZ)",
+    "Cocircular(X,ACZDBY)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(X,X)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),30)",
+    "Equal(LengthOfLine(CD),30)",
+    "Equal(MeasureOfArc(XCZ),40)",
+    "PerpendicularBetweenLine(AM,YM)",
+    "PerpendicularBetweenLine(DN,ZN)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(XCD))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DNZ,ZNC)",
+    "adjacent_complementary_angle(ZNC,CNX)",
+    "circle_property_chord_perpendicular_bisect_arc(XCD,XNZ)",
+    "congruent_arc_judgment_length_equal(XCZ,XZD)",
+    "congruent_arc_property_measure_equal(XCZ,XZD)",
+    "arc_addition_measure(XCZ,XZD)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 3718,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1490",
+  "problem_level": 1,
+  "problem_text_cn": "如图,菱形纸片ABCD中,∠A=60°,折叠菱形纸片ABCD,使点C落在DP(P为AB中点)所在的直线上,得到经过点D的折痕DE.则∠ADP的大小为()",
+  "problem_text_en": "As shown in the figure, in the diamond-shaped paper ABCD, ∠A = N_0, fold the diamond-shaped paper ABCD so that point C falls on the line where DP (P is the midpoint of AB) is located, and the crease DE passing through point D is obtained. Then ∠ADP The size is ()",
+  "problem_img": "3718.png",
+  "construction_cdl": [
+    "Shape(DA,AP,PD)",
+    "Shape(EF,FB,BE)",
+    "Shape(PC,CF,FP)",
+    "Shape(DP,PF,FE,ED)",
+    "Collinear(APB)",
+    "Collinear(DPC)",
+    "Collinear(CFE)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(P,AB)",
+    "Equal(MeasureOfAngle(DAP),60)",
+    "PerpendicularBetweenLine(AP,DP)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(PDA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(DAP)"
+  ]
+}

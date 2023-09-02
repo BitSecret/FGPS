@@ -1,0 +1,33 @@
+{
+  "problem_id": 2425,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2543",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of \\triangle B C D, if \\triangle B C D \\sim \\triangle F D E, C D = 12, F D = 5, F E = 4, and D E = 8.",
+  "problem_img": "2425.png",
+  "construction_cdl": [
+    "Shape(BC,CD,DB)",
+    "Shape(FD,DE,EF)",
+    "Shape(BD,DF,FA,AB)",
+    "Collinear(ABC)",
+    "Collinear(CDE)",
+    "Collinear(EFA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenTriangle(BCD,FDE)",
+    "Equal(LengthOfLine(CD),12)",
+    "Equal(LengthOfLine(DF),5)",
+    "Equal(LengthOfLine(EF),4)",
+    "Equal(LengthOfLine(DE),8)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(BCD))",
+  "problem_answer": "25.5",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(BCD,FDE)",
+    "similar_triangle_property_line_ratio(CDB,DEF)",
+    "similar_triangle_property_line_ratio(DBC,EFD)",
+    "triangle_perimeter_formula(BCD)"
+  ]
+}

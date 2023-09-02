@@ -1,0 +1,24 @@
+{
+  "problem_id": 5555,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6813",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一艘海轮位于灯塔P的北偏东30°方向,距离灯塔60海里的A处,它沿正南方向航行一段时间后,到达位于灯塔P的南偏东45°方向上的B处,这时,海轮所在的B处与灯塔P的距离为()",
+  "problem_text_en": "As shown in the figure, a sea vessel is located in the N_0 direction of the north-east of the lighthouse P, and is N_1 nautical miles away from the lighthouse at a point. At time, the distance between B where the ship is located and lighthouse P is ()",
+  "problem_img": "5555.png",
+  "construction_cdl": [
+    "Shape(AP,PB,BA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PA),60)",
+    "Equal(MeasureOfAngle(BAP),30)",
+    "Equal(MeasureOfAngle(PBA),45)",
+    "Equal(MeasureOfAngle(APB),105)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BP))",
+  "problem_answer": "30*sqrt(2)",
+  "theorem_seqs": [
+    "sine_theorem(PBA)"
+  ]
+}

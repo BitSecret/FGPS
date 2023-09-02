@@ -1,0 +1,39 @@
+{
+  "problem_id": 4023,
+  "annotation": "JiaZou_2023-05-07",
+  "source": "GeoQA-2124",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC中,∠ACB=90°,∠B=34°,以BC为直径的⊙O交AB于点D,E是⊙O上一点,且=,连接OE,过点E作EF⊥OE,交AC的延长线于点F,则∠F的度数为()",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠ACB = N_0, ∠B = N_1, ⊙O with BC as the diameter intersects AB at point D, E is a point on ⊙O, and =, connects OE, and crosses point E to draw EF ⊥ OE, intersect the extended line of AC at point F, then the degree of ∠F is ()",
+  "problem_img": "4023.png",
+  "construction_cdl": [
+    "Shape(DB,OBD)",
+    "Shape(CO,OD,ODC)",
+    "Shape(BD,DO,OB)",
+    "Shape(EO,OC,OCE)",
+    "Shape(BO,OE,OEB)",
+    "Shape(DA,AC,ODC)",
+    "Shape(CF,FE,OCE)",
+    "Collinear(BOC)",
+    "Collinear(BDA)",
+    "Collinear(ACF)",
+    "Cocircular(O,DCEB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "CongruentBetweenArc(ODC,OCE)",
+    "Equal(MeasureOfAngle(ACB),90)",
+    "Equal(MeasureOfAngle(FEO),90)",
+    "Equal(MeasureOfAngle(CBA),34)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CFE))",
+  "problem_answer": "112",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODC,B)",
+    "congruent_arc_property_measure_equal(ODC,OCE)",
+    "arc_property_center_angle(OCE,O)",
+    "adjacent_complementary_angle(ACO,OCF)",
+    "quadrilateral_property_angle_sum(OCFE)"
+  ]
+}

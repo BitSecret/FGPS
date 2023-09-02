@@ -1,0 +1,30 @@
+{
+  "problem_id": 1303,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-1350",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For trapezoid J K L M, A and B are midpoints of the legs. If A B = 57 and K L = 21, find J M.",
+  "problem_img": "1303.png",
+  "construction_cdl": [
+    "Shape(KA,AB,BL,LK)",
+    "Shape(AJ,JM,MB,BA)",
+    "Collinear(KAJ)",
+    "Collinear(LBM)"
+  ],
+  "text_cdl": [
+    "Trapezoid(KJML)"
+  ],
+  "image_cdl": [
+    "IsMidpointOfLine(A,KJ)",
+    "IsMidpointOfLine(B,LM)",
+    "Equal(LengthOfLine(AB),57)",
+    "Equal(LengthOfLine(KL),21)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(JM))",
+  "problem_answer": "93",
+  "theorem_seqs": [
+    "midsegment_of_quadrilateral_judgment_midpoint(AB,KJML)",
+    "midsegment_of_quadrilateral_property_length(AB,KJML)"
+  ]
+}

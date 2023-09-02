@@ -1,0 +1,32 @@
+{
+  "problem_id": 6189,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8767",
+  "problem_level": 1,
+  "problem_text_cn": "如图OA=OB=OC,且∠ACB=40°,则∠AOB的度数大小为()",
+  "problem_text_en": "As shown in the figure OA = OB = OC, and ∠ACB = N_0, then the degree of ∠AOB is ()",
+  "problem_img": "6189.png",
+  "construction_cdl": [
+    "Shape(AO,OC,OCA)",
+    "Shape(OD,DC,CO)",
+    "Shape(CD,DB,BC)",
+    "Shape(OA,AD,DO)",
+    "Shape(DA,AB,BD)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Collinear(ODB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCA),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)"
+  ]
+}

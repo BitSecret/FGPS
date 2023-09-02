@@ -1,0 +1,35 @@
+{
+  "problem_id": 6213,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8802",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,CD是直径,∠B=50°,则∠ACD的度数是()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribe of △ABC, CD is the diameter, ∠B = N_0, then the degree of ∠ACD is ()",
+  "problem_img": "6213.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CA,AE,EC)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(AD,DE,EA)",
+    "Shape(DA,OAD)",
+    "Shape(BE,ED,ODB)",
+    "Collinear(COED)",
+    "Collinear(AEB)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "Equal(MeasureOfAngle(ABC),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(CAD,O)",
+    "arc_property_circumference_angle_external(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "triangle_property_angle_sum(CAD)"
+  ]
+}

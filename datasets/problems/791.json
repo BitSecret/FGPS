@@ -1,0 +1,35 @@
+{
+  "problem_id": 791,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-817",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x so that m \\parallel n.",
+  "problem_img": "791.png",
+  "construction_cdl": [
+    "Shape(EH,HI)",
+    "Shape(BH,HE)",
+    "Shape(FH,HB)",
+    "Shape(IH,HF)",
+    "Shape(DF,FH)",
+    "Shape(HF,FG)",
+    "Shape(CF,FD)",
+    "Shape(GF,FC)",
+    "Collinear(BHI)",
+    "Collinear(DFG)",
+    "Collinear(EHFC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BH,DF)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CFD),7*x-38)",
+    "Equal(MeasureOfAngle(EHI),178-3*x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "21.6",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(FD,HB,C)",
+    "vertical_angle(EHI,FHB)"
+  ]
+}

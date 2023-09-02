@@ -1,0 +1,27 @@
+{
+  "problem_id": 5463,
+  "annotation": "Yangli_2023-05-21",
+  "source": "GeoQA-5875",
+  "problem_level": 1,
+  "problem_text_cn": "某商场一楼与二楼之间的手扶电梯如图所示．其中AB、CD分别表示一楼、二楼地面的水平线,∠ABC=150°,BC的长是8m,则乘电梯从点B到点C上升的高度h是()",
+  "problem_text_en": "The escalator between the first and second floors of a shopping mall is shown in the figure. Among them, AB and CD represent the horizontal line of the ground on the first floor and the second floor respectively, ∠ABC = N_0, the length of BC is N_1, then the height h ascending from point B to point C by the elevator is ()",
+  "problem_img": "5463.png",
+  "construction_cdl": [
+    "Shape(CB,BD,DC)",
+    "Shape(AB,BC)",
+    "Collinear(ABD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),8)",
+    "Equal(MeasureOfAngle(ABC),150)",
+    "RightTriangle(BDC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "flat_angle(ABD)",
+    "angle_addition(ABC,CBD)",
+    "sine_theorem(CBD)"
+  ]
+}

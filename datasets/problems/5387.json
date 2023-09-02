@@ -1,0 +1,28 @@
+{
+  "problem_id": 5387,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5672",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,△ABC中,AB+BC=10,A、C关于直线DE对称,则△BCD的周长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB + BC = N_0, A and C are symmetrical with respect to the straight line DE, then the perimeter of △BCD is ()",
+  "problem_img": "5387.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CD)",
+    "Shape(ED,DC,CE)",
+    "Collinear(AEC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "IsPerpendicularBisectorOfLine(DE,CA)",
+    "Equal(Add(LengthOfLine(AB),LengthOfLine(BC)),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(DBC))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(DE,CA)",
+    "line_addition(AD,DB)",
+    "triangle_perimeter_formula(DBC)"
+  ]
+}

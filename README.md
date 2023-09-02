@@ -20,7 +20,7 @@ The easiest way to get the source is to use pip:
 
 Alternately you can get the source by cloning the FormalGeo repository:
 
-	# Create python environment using Conda
+	# Create Python environment using Conda
 	conda create -n FormalGeo python=3.10
 	conda activate FormalGeo
 

@@ -1,0 +1,36 @@
+{
+  "problem_id": 1997,
+  "annotation": "YimingHe_2023-03-26",
+  "source": "Geometry3k-2081",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1997.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(AD,DB,BA)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),z)",
+    "Equal(LengthOfLine(AD),y)",
+    "Equal(LengthOfLine(BD),6)",
+    "Equal(LengthOfLine(AC),x)",
+    "Equal(LengthOfLine(CD),4)",
+    "PerpendicularBetweenLine(BA,CA)",
+    "PerpendicularBetweenLine(AD,BD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "2*sqrt(10)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDA,ADB)",
+    "right_triangle_judgment_angle(ADB)",
+    "right_triangle_judgment_angle(CDA)",
+    "right_triangle_judgment_angle(BAC)",
+    "right_triangle_property_pythagorean(ADB)",
+    "right_triangle_property_pythagorean(CDA)",
+    "right_triangle_property_pythagorean(BAC)",
+    "line_addition(CD,DB)"
+  ]
+}

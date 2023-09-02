@@ -1,0 +1,33 @@
+{
+  "problem_id": 4954,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4627",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,D、E分别是AB和AC上的点且DE∥BC,若AD=6,BD=3,AE=4,则EC的长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, D and E are points on AB and AC respectively and DE ∥ BC, if AD = N_0, BD = N_1, AE = N_2, then the length of EC is ()",
+  "problem_img": "4954.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),6)",
+    "Equal(LengthOfLine(BD),3)",
+    "Equal(LengthOfLine(AE),4)",
+    "ParallelBetweenLine(DE,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "line_addition(AD,DB)",
+    "line_addition(AE,EC)"
+  ]
+}

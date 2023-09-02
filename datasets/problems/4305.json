@@ -1,0 +1,34 @@
+{
+  "problem_id": 4305,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3133",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、CD都是⊙O的弦,且AB⊥CD．若∠CDB=64°,则∠ACD的大小为()",
+  "problem_text_en": "As shown in the figure, AB and CD are both chords of ⊙O, and AB ⊥ CD. If ∠CDB = N_0, then the size of ∠ACD is ()",
+  "problem_img": "4305.png",
+  "construction_cdl": [
+    "Shape(CA,OAC)",
+    "Shape(AE,ED,ODA)",
+    "Shape(DB,OBD)",
+    "Shape(BE,EC,OCB)",
+    "Shape(AC,CE,EA)",
+    "Shape(DE,EB,BD)",
+    "Collinear(AEB)",
+    "Collinear(CED)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(CE,AE)",
+    "Equal(MeasureOfAngle(BDC),64)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACD))",
+  "problem_answer": "26",
+  "theorem_seqs": [
+    "vertical_angle(CEA,DEB)",
+    "triangle_property_angle_sum(DEB)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "arc_property_circumference_angle_external(ODA,B)"
+  ]
+}

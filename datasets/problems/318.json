@@ -1,0 +1,39 @@
+{
+  "problem_id": 318,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-322",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find U B if \\triangle R S T \\sim \\triangle U V W, T A and W B are medians, T A = 8, R A = 3, W B = 3 x - 6, and U B = x + 2.",
+  "problem_img": "318.png",
+  "construction_cdl": [
+    "Shape(TR,RA,AT)",
+    "Shape(TA,AS,ST)",
+    "Shape(WU,UB,BW)",
+    "Shape(WB,BV,VW)",
+    "Collinear(RAS)",
+    "Collinear(UBV)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(TA),8)",
+    "Equal(LengthOfLine(RA),3)",
+    "Equal(LengthOfLine(WB),3*x-6)",
+    "Equal(LengthOfLine(UB),x+2)",
+    "SimilarBetweenTriangle(RST,UVW)",
+    "IsMedianOfTriangle(TA,TRS)",
+    "IsMedianOfTriangle(WB,WUV)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(UB))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "similar_triangle_property_angle_equal(RST,UVW)",
+    "similar_triangle_property_line_ratio(TRS,WUV)",
+    "similar_triangle_property_line_ratio(STR,VWU)",
+    "line_addition(RA,AS)",
+    "line_addition(UB,BV)",
+    "similar_triangle_judgment_sas(RAT,UBW)",
+    "similar_triangle_property_line_ratio(RAT,UBW)",
+    "similar_triangle_property_line_ratio(TRA,WUB)"
+  ]
+}

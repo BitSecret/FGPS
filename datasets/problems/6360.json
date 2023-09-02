@@ -1,0 +1,33 @@
+{
+  "problem_id": 6360,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9200",
+  "problem_level": 1,
+  "problem_text_cn": "已知:在菱形ABCD中,对角线AC、BD交于点O,点E是线段AD的中点,若OE=3,则菱形的边长为()",
+  "problem_text_en": "It is known that in the diamond ABCD, the diagonal AC and BD intersect at the point O, and the point E is the midpoint of the line segment AD. If OE = N_0, the side length of the diamond is ()",
+  "problem_img": "6360.png",
+  "construction_cdl": [
+    "Shape(DE,EO,OD)",
+    "Shape(EA,AO,OE)",
+    "Shape(DO,OC,CD)",
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Collinear(AED)",
+    "Collinear(DOB)",
+    "Collinear(AOC)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "IsMidpointOfLine(E,AD)",
+    "Equal(LengthOfLine(OE),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "right_triangle_judgment_angle(AOD)",
+    "median_of_triangle_judgment(OE,ODA)",
+    "right_triangle_property_length_of_median(AOD,E)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 4614,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3786",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,∠A=80°,则∠BOC等于()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, ∠A = N_0, then ∠BOC is equal to ()",
+  "problem_img": "4614.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,BC,CO)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),80)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "160",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

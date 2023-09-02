@@ -1,0 +1,33 @@
+{
+  "problem_id": 6013,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8487",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,∠ACB=35°,则∠OAB的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, ∠ACB = N_0, then the degree of ∠OAB is ()",
+  "problem_img": "6013.png",
+  "construction_cdl": [
+    "Shape(BO,OA,AB)",
+    "Shape(BA,OAB)",
+    "Shape(BC,CA,AO,OB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BCA),35)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAB))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

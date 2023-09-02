@@ -1,0 +1,40 @@
+{
+  "problem_id": 5353,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5609",
+  "problem_level": 1,
+  "problem_text_cn": "已知水平放置的圆柱形排水管道,管道截面半径是1m,若水面高0.2m．则排水管道截面的水面宽度为()",
+  "problem_text_en": "It is known that for a horizontally placed cylindrical drainage pipe, the radius of the pipe section is N_0, if the water surface is high N_1. Then the width of the water surface of the drainage pipe section is ()",
+  "problem_img": "5353.png",
+  "construction_cdl": [
+    "Shape(OA,AB,BO)",
+    "Shape(OB,BC,CO)",
+    "Shape(BA,OAD,DB)",
+    "Shape(CB,BD,ODC)",
+    "Shape(OC,OCA,AO)",
+    "Collinear(ABC)",
+    "Collinear(OBD)",
+    "Cocircular(O,ADC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(BD),0.2)",
+    "Equal(RadiusOfCircle(O),1)",
+    "PerpendicularBetweenLine(AB,OB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "1.2",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ABO,OBC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "line_addition(AB,BC)",
+    "line_addition(OB,BD)",
+    "right_triangle_judgment_angle(ABO)",
+    "right_triangle_judgment_angle(OBC)",
+    "right_triangle_property_pythagorean(ABO)",
+    "right_triangle_property_pythagorean(OBC)"
+  ]
+}

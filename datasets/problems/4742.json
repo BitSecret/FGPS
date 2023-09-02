@@ -1,0 +1,49 @@
+{
+  "problem_id": 4742,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4084",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、AC是⊙O的弦,过点B作⊙O的切线交AC的延长线于点D,点E是弧AC的中点,连接AE,若∠EAB=65°,则∠D的度数是()",
+  "problem_text_en": "As shown in the figure, AB and AC are the chords of ⊙O, passing point B to draw the tangent of ⊙O which intersects the extended line of AC at point D, point E is the midpoint of arc AC. Connect AE, if ∠EAB = N_0, then the degree of ∠D is ()",
+  "problem_img": "4742.png",
+  "construction_cdl": [
+    "Shape(AE,OEA)",
+    "Shape(AG,GE,EA)",
+    "Shape(EG,GF,FE)",
+    "Shape(EF,FC,OCE)",
+    "Shape(BA,OAB)",
+    "Shape(AB,BO,OG,GA)",
+    "Shape(FG,GO,OB,BF)",
+    "Shape(CF,FB,OBC)",
+    "Shape(BD,DC,OBC)",
+    "Collinear(AGFCD)",
+    "Collinear(BFE)",
+    "Collinear(OGE)",
+    "Cocircular(O,BCEA)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(G,AC)",
+    "Equal(MeasureOfAngle(EAB),65)",
+    "IsTangentOfCircle(DB,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BDC))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBE,O)",
+    "arc_property_circumference_angle_external(OBE,A)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "tangent_of_circle_property_perpendicular(DB,O,O)",
+    "triangle_property_angle_sum(EOB)",
+    "isosceles_triangle_judgment_line_equal(OBE)",
+    "isosceles_triangle_property_angle_equal(OBE)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OG,CA)",
+    "vertical_angle(AFE,CFB)",
+    "vertical_angle(OGA,EGF)",
+    "triangle_property_angle_sum(EGF)",
+    "angle_addition(OBF,FBD)",
+    "triangle_property_angle_sum(FBD)"
+  ]
+}

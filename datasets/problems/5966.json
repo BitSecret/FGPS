@@ -1,0 +1,37 @@
+{
+  "problem_id": 5966,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8405",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的半径为2,直线PA、PB为⊙O的切线,A、B为切点,若PA⊥PB,则OP的长为()",
+  "problem_text_en": "As shown in the figure, the radius of ⊙O is N_0, the straight lines PA and PB are the tangents of ⊙O, and A and B are the tangent points. If PA ⊥ PB, the length of OP is ()",
+  "problem_img": "5966.png",
+  "construction_cdl": [
+    "Shape(CP,PA,OCA)",
+    "Shape(BP,PC,OBC)",
+    "Shape(AO,OC,OCA)",
+    "Shape(CO,OB,OBC)",
+    "Collinear(PCO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BPA),90)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(RadiusOfCircle(O),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OP))",
+  "problem_answer": "2*sqrt(2)",
+  "theorem_seqs": [
+    "angle_addition(BPC,CPA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "mirror_congruent_triangle_judgment_hl(PAO,POB)",
+    "mirror_congruent_triangle_property_angle_equal(PAO,POB)",
+    "sine_theorem(OPA)"
+  ]
+}

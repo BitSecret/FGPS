@@ -1,0 +1,32 @@
+{
+  "problem_id": 4192,
+  "annotation": "Yangli_2023-05-07",
+  "source": "GeoQA-2867",
+  "problem_level": 1,
+  "problem_text_cn": "在Rt△ABC中,∠ACB=90°,CD⊥AB于点D,若AC=3,BC=4,则tanα等于()",
+  "problem_text_en": "In Rt△ABC, ∠ACB = N_0, CD ⊥ AB at point D, if AC = N_1, BC = N_2, then tanα is equal to ()",
+  "problem_img": "4192.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DB,BC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(MeasureOfAngle(BCA),90)",
+    "PerpendicularBetweenLine(AD,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Tan(MeasureOfAngle(DCA)))",
+  "problem_answer": "0.75",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)",
+    "triangle_property_angle_sum(CAB)",
+    "adjacent_complementary_angle(ADC,CDB)",
+    "triangle_property_angle_sum(CDB)",
+    "angle_addition(BCD,DCA)",
+    "cosine_theorem(ABC)"
+  ]
+}

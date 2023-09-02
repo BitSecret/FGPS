@@ -1,0 +1,30 @@
+{
+  "problem_id": 3978,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1922",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠C=90°,AE平分∠BAC,BD⊥AE交AE的延长线于D．若∠1=24°,则∠EAB等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠C = N_0, AE bisects ∠BAC, BD ⊥ AE intersects the extended line of AE at D. If ∠1 = N_1, then ∠EAB is equal to ()",
+  "problem_img": "3978.png",
+  "construction_cdl": [
+    "Shape(CA,AE,EC)",
+    "Shape(DE,EB,BD)",
+    "Shape(EA,AB,BE)",
+    "Collinear(CEB)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(EBD),24)",
+    "Equal(MeasureOfAngle(BCA),90)",
+    "Equal(MeasureOfAngle(BDA),90)",
+    "IsBisectorOfAngle(AD,CAB)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CAE)",
+    "triangle_property_angle_sum(DEB)",
+    "vertical_angle(AEC,DEB)"
+  ]
+}

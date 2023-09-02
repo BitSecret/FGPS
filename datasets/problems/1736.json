@@ -1,0 +1,30 @@
+{
+  "problem_id": 1736,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1801",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "W X Y Z is a parallelogram. Find m \\angle X W Z.",
+  "problem_img": "1736.png",
+  "construction_cdl": [
+    "Shape(XW,WA,AX)",
+    "Shape(AW,WZ,ZA)",
+    "Shape(AZ,ZY,YA)",
+    "Shape(XA,AY,YX)",
+    "Collinear(XAZ)",
+    "Collinear(WAY)"
+  ],
+  "text_cdl": [
+    "Parallelogram(WZYX)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(YXA),33)",
+    "Equal(MeasureOfAngle(AXW),82)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(XWZ))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "angle_addition(YXA,AXW)",
+    "parallel_property_ipsilateral_internal_angle(XY,WZ)"
+  ]
+}

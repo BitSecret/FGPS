@@ -1,0 +1,30 @@
+{
+  "problem_id": 5705,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7459",
+  "problem_level": 1,
+  "problem_text_cn": "在△ABC中,DE∥BC,AD:AB=3:4,△ABC的面积等于48,则△ADE的面积等于()",
+  "problem_text_en": "In △ABC, DE ∥ BC, AD:AB = N_0:N_1, the area of △ABC is equal to N_2, then the area of △ADE is equal to ()",
+  "problem_img": "5705.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),3/4)",
+    "Equal(AreaOfTriangle(ABC),48)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(ADE))",
+  "problem_answer": "27",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_area_square_ratio(ADE,ABC)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 5810,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7759",
+  "problem_level": 1,
+  "problem_text_cn": "如图,若AP=PB,∠APB=2∠ACB,AC与PB交于点D,且PB=5,PD=3,则AD•DC等于()",
+  "problem_text_en": "As shown in the figure, if AP = PB, ∠APB = N_0 ∠ACB, AC and PB intersect at point D, and PB = N_1, PD = N_2, then AD•DC is equal to ()",
+  "problem_img": "5810.png",
+  "construction_cdl": [
+    "Shape(PA,AD,DP)",
+    "Shape(DA,AB,BD)",
+    "Shape(CD,DB,BC)",
+    "Shape(QA,AP,PQ)",
+    "Collinear(ADC)",
+    "Collinear(QPDB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PB),5)",
+    "Equal(LengthOfLine(PD),3)",
+    "Equal(LengthOfLine(AP),LengthOfLine(PB))",
+    "Equal(LengthOfLine(PQ),LengthOfLine(PB))",
+    "Equal(MeasureOfAngle(BPA),Mul(MeasureOfAngle(BCD),2))",
+    "Equal(MeasureOfAngle(BPA),Add(MeasureOfAngle(PQA),MeasureOfAngle(QAP)))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Mul(LengthOfLine(AD),LengthOfLine(DC)))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "line_addition(QP,PD)",
+    "line_addition(PD,DB)",
+    "isosceles_triangle_judgment_line_equal(PQA)",
+    "isosceles_triangle_property_angle_equal(PQA)",
+    "vertical_angle(ADQ,CDB)",
+    "mirror_similar_triangle_judgment_aa(ADQ,BCD)",
+    "mirror_similar_triangle_property_line_ratio(ADQ,BCD)",
+    "mirror_similar_triangle_property_line_ratio(QAD,CDB)"
+  ]
+}

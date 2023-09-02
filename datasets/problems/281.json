@@ -1,0 +1,31 @@
+{
+  "problem_id": 281,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-285",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find R T.",
+  "problem_img": "281.png",
+  "construction_cdl": [
+    "Shape(SW,WR,RS)",
+    "Shape(VT,TR,RV)",
+    "Collinear(SRV)",
+    "Collinear(WRT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(WS),8)",
+    "Equal(LengthOfLine(WR),x+6)",
+    "Equal(LengthOfLine(VT),10)",
+    "Equal(LengthOfLine(RT),2*x+6)",
+    "Equal(MeasureOfAngle(SWR),MeasureOfAngle(VTR))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(RT))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "vertical_angle(WRS,TRV)",
+    "similar_triangle_judgment_aa(SWR,VTR)",
+    "similar_triangle_property_line_ratio(SWR,VTR)",
+    "similar_triangle_property_line_ratio(RSW,RVT)"
+  ]
+}

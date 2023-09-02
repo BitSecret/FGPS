@@ -1,0 +1,34 @@
+{
+  "problem_id": 5460,
+  "annotation": "Yangli_2023-05-21",
+  "source": "GeoQA-5870",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D、E分别是边AB、AC上的点,DE垂直平分AB,∠C=90°,∠BAC=15°．若BC=3cm,则AE的长度为()",
+  "problem_text_en": "As shown in the figure, in △ABC, points D and E are points on sides AB and AC respectively, DE bisects AB perpendicularly, ∠C = N_0, ∠BAC = N_1. If BC = N_2, then the length of AE is ()",
+  "problem_img": "5460.png",
+  "construction_cdl": [
+    "Shape(DA,AE,ED)",
+    "Shape(BD,DE,EB)",
+    "Shape(BE,EC,CB)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(MeasureOfAngle(ECB),90)",
+    "Equal(MeasureOfAngle(DAE),15)",
+    "IsPerpendicularBisectorOfLine(ED,BA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ACB)",
+    "perpendicular_bisector_property_distance_equal(ED,BA)",
+    "isosceles_triangle_judgment_line_equal(EBA)",
+    "isosceles_triangle_property_angle_equal(EBA)",
+    "angle_addition(CBE,EBD)",
+    "triangle_property_angle_sum(BEC)",
+    "sine_theorem(BEC)"
+  ]
+}

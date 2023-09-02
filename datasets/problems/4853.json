@@ -1,0 +1,36 @@
+{
+  "problem_id": 4853,
+  "annotation": "RunanWang_2023-05-21",
+  "source": "GeoQA-4342",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA,PB分别与⊙O相切于A,B两点,点C是劣弧AB上一动点(不与A,B重合),∠P=70°,则∠C=()",
+  "problem_text_en": "As shown in the figure, PA and PB are tangent to ⊙O at two points A and B respectively. Point C is a moving point on minor arc AB (not coincident with A and B), ∠P = N_0, then ∠C = ()",
+  "problem_img": "4853.png",
+  "construction_cdl": [
+    "Shape(PA,OCA,OBC,BP)",
+    "Shape(OCA,AC)",
+    "Shape(OBC,CB)",
+    "Shape(AO,OB,BC,CA)",
+    "Shape(AD,DB,BO,OA)",
+    "Shape(OAD,DA)",
+    "Shape(ODN,ND)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(MeasureOfAngle(BPA),70)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "125",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "quadrilateral_property_angle_sum(BPAO)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_internal(OBA,C)"
+  ]
+}

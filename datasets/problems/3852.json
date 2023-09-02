@@ -1,0 +1,32 @@
+{
+  "problem_id": 3852,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1730",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆O的直径BC=6,A是圆O上的一点,∠C=30°,则AB的长度是()",
+  "problem_text_en": "As shown in the figure, the diameter of circle O is BC = N_0, A is a point on circle O, ∠C = N_1, then the length of AB is ()",
+  "problem_img": "3852.png",
+  "construction_cdl": [
+    "Shape(CB,OBC)",
+    "Shape(CA,AO,OC)",
+    "Shape(OA,AB,BO)",
+    "Shape(AC,OCA)",
+    "Shape(BA,OAB)",
+    "Collinear(COB)",
+    "Cocircular(O,CAB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(DiameterOfCircle(O),6)",
+    "IsDiameterOfCircle(CB,O)",
+    "Equal(MeasureOfAngle(BCA),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(CB,O)",
+    "diameter_of_circle_property_right_angle(CAB,O)",
+    "sine_theorem(BCA)"
+  ]
+}

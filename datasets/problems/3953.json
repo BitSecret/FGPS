@@ -1,0 +1,32 @@
+{
+  "problem_id": 3953,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1879",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,弦AB、CD相交于点M,连接BC、AD,∠AMD=100°,∠A=30°,则∠B=()",
+  "problem_text_en": "As shown in the figure, in ⊙O, chords AB and CD intersect at point M, connect BC and AD, ∠AMD = N_0, ∠A = N_1, then ∠B = ()",
+  "problem_img": "3953.png",
+  "construction_cdl": [
+    "Shape(OCB,BC)",
+    "Shape(MC,CB,BM)",
+    "Shape(OBD,DM,MB)",
+    "Shape(ODA,AD)",
+    "Shape(MD,DA,AM)",
+    "Shape(OAC,AM,MA)",
+    "Collinear(CMD)",
+    "Collinear(AMB)",
+    "Cocircular(O,BDAC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(DAM),30)",
+    "Equal(MeasureOfAngle(AMD),100)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CBM))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "triangle_property_angle_sum(AMD)"
+  ]
+}

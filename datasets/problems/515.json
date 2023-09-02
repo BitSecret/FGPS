@@ -1,0 +1,36 @@
+{
+  "problem_id": 515,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-527",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of x in the diagram.",
+  "problem_img": "515.png",
+  "construction_cdl": [
+    "Shape(HD,DF)",
+    "Shape(BI,ID)",
+    "Shape(CG,GI)",
+    "Shape(AF,FG)",
+    "Shape(DI,IG,GF,FD)",
+    "Collinear(HDI)",
+    "Collinear(BIG)",
+    "Collinear(CGF)",
+    "Collinear(DFA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(HDF),3*x+2)",
+    "Equal(MeasureOfAngle(AFG),2*x)",
+    "Equal(MeasureOfAngle(BID),x+5)",
+    "Equal(MeasureOfAngle(CGB),2*x+1)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "44",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(HDF,FDI)",
+    "adjacent_complementary_angle(BID,DIG)",
+    "adjacent_complementary_angle(CGI,IGF)",
+    "adjacent_complementary_angle(AFG,GFD)",
+    "quadrilateral_property_angle_sum(DIGF)"
+  ]
+}

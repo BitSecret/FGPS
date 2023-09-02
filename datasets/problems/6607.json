@@ -1,0 +1,35 @@
+{
+  "problem_id": 6607,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9594",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点D是弧⁀{AC}的中点,∠ABC=52°,则∠DAB等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, point D is the midpoint of arc ⁀AC, ∠ABC = N_0, then ∠DAB is equal to ()",
+  "problem_img": "6607.png",
+  "construction_cdl": [
+    "Shape(BC,OCB)",
+    "Shape(CD,ODC)",
+    "Shape(DA,OAD)",
+    "Shape(AB,OBA)",
+    "Shape(CB,BD,DC)",
+    "Shape(DB,BA,AD)",
+    "Collinear(BOA)",
+    "Cocircular(O,ADCB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfArc(OAD),MeasureOfArc(ODC))",
+    "Equal(MeasureOfAngle(CBA),52)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "64",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_external(ODC,B)",
+    "arc_addition_measure(OAD,ODC)",
+    "diameter_of_circle_property_right_angle(ADB,O)",
+    "triangle_property_angle_sum(DBA)"
+  ]
+}

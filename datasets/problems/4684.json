@@ -1,0 +1,39 @@
+{
+  "problem_id": 4684,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3970",
+  "problem_level": 1,
+  "problem_text_cn": "如图,半径为4的⊙O与含有30°角的真角三角板ABC的边AC切于点A,将直角三角板沿CA边所在的直线向左平移,当平移到AB与⊙O相切时,该直角三角板平移的距离为()",
+  "problem_text_en": "As shown in the figure, the ⊙O with a radius of N_0 is tangent to the edge AC of the equilateral triangle ABC with N_1 angles at the point A, and the right triangle is translated to the left along the line where the CA side is located. When the translation is tangent to AB and ⊙O, The translation distance of the right triangle plate is ()",
+  "problem_img": "4684.png",
+  "construction_cdl": [
+    "Shape(AD,OED,EA)",
+    "Shape(OED,DO,OE)",
+    "Shape(OD,ODC,CO)",
+    "Shape(DB,BC,ODC)",
+    "Collinear(AEOC)",
+    "Collinear(ADB)",
+    "Cocircular(O,EDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(EC,O)",
+    "IsTangentOfCircle(AD,O)",
+    "IsTangentOfCircle(BD,O)",
+    "IsTangentOfCircle(BC,O)",
+    "Equal(LengthOfLine(DO),4)",
+    "Equal(LengthOfLine(OC),4)",
+    "Equal(MeasureOfAngle(OAD),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "4*sqrt(3)",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AD,O,O)",
+    "tangent_of_circle_property_perpendicular(BC,O,O)",
+    "triangle_property_angle_sum(ABC)",
+    "line_addition(AO,OC)",
+    "sine_theorem(OAD)",
+    "sine_theorem(CAB)"
+  ]
+}

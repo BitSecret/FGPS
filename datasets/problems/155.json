@@ -1,0 +1,45 @@
+{
+  "problem_id": 155,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-157",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of quadrilateral A B C D.",
+  "problem_img": "155.png",
+  "construction_cdl": [
+    "Shape(AB,BI,IA)",
+    "Shape(IB,BC,CH,HI)",
+    "Shape(HC,CD,DH)",
+    "Collinear(AIHD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),27)",
+    "Equal(LengthOfLine(CH),7)",
+    "Equal(MeasureOfAngle(ABC),135)",
+    "PerpendicularBetweenLine(HI,BI)",
+    "PerpendicularBetweenLine(CH,IH)",
+    "ParallelBetweenLine(IH,BC)",
+    "Equal(LengthOfLine(BA),LengthOfLine(CD))"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+  "problem_answer": "40+14*sqrt(2)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(HIB,BIA)",
+    "adjacent_complementary_angle(DHC,CHA)",
+    "parallel_judgment_ipsilateral_internal_angle(HC,IB)",
+    "parallelogram_judgment_parallel_and_parallel(IBCH)",
+    "parallelogram_property_opposite_line_equal(IBCH)",
+    "parallel_property_ipsilateral_internal_angle(IH,BC)",
+    "angle_addition(ABI,IBC)",
+    "triangle_property_angle_sum(ABI)",
+    "sine_theorem(IAB)",
+    "sine_theorem(BIA)",
+    "mirror_congruent_triangle_judgment_hl(BIA,CDH)",
+    "mirror_congruent_triangle_property_line_equal(BIA,CDH)",
+    "line_addition(AI,IH)",
+    "line_addition(AH,HD)",
+    "parallelogram_property_opposite_line_equal(BCHI)",
+    "quadrilateral_perimeter_formula(ABCD)"
+  ]
+}

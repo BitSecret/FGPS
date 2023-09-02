@@ -1,0 +1,25 @@
+{
+  "problem_id": 184,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-186",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure at the right, which can be true if m \\parallel l and m \\angle 1 = 73?",
+  "problem_img": "184.png",
+  "construction_cdl": [
+    "Shape(TC,CB)",
+    "Shape(CD,DE,EB,BC)",
+    "Shape(ED,DG)",
+    "Collinear(TCDG)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(CB,DE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Equal(Add(MeasureOfAngle(TCB),MeasureOfAngle(EDG)),180)",
+  "problem_answer": "0",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(CB,DE,T)",
+    "adjacent_complementary_angle(CDE,EDG)"
+  ]
+}

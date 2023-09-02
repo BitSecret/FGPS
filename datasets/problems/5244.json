@@ -1,0 +1,28 @@
+{
+  "problem_id": 5244,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5326",
+  "problem_level": 1,
+  "problem_text_cn": "将图1中五边形纸片ABCDE的A点以BE为折线向下翻折,点A恰好落在CD上,如图2所示；再分别以图2中的AB,AE为折线,将C,D两点向上翻折,使得A、B、C、D、E五点均在同一平面上,如图3所示．若图1中∠A=122°,则图3中∠CAD的度数为()",
+  "problem_text_en": "Fold down point A of the pentagonal paper ABCDE in Figure 1 with BE as the fold line, and point A just falls on the CD, as shown in Figure 2; then use AB and AE in Figure 2 as the fold lines, respectively. Fold the two points C and D upward so that the five points A, B, C, D, and E are all on the same plane, as shown in Figure 3. If ∠A = N_0 in Figure 1, then the degree of ∠CAD in Figure 3 is ()",
+  "problem_img": "5244.png",
+  "construction_cdl": [
+    "Shape(FB,BE,EF)",
+    "Shape(BA,AE,EB)",
+    "Shape(BC,CA,AB)",
+    "Shape(EA,AD,DE)",
+    "Collinear(CAD)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(EFB,EBA)",
+    "Equal(MeasureOfAngle(EFB),122)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(CAB),MeasureOfAngle(EAD)))",
+  "problem_answer": "58",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_angle_equal(FBE,AEB)",
+    "angle_addition(CAB,BAE)",
+    "adjacent_complementary_angle(CAE,EAD)"
+  ]
+}

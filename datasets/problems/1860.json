@@ -1,0 +1,41 @@
+{
+  "problem_id": 1860,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1930",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, a \\parallel b, c \\parallel d, and m \\angle 4 = 57. Find the measure of \\angle 10.",
+  "problem_img": "1860.png",
+  "construction_cdl": [
+    "Shape(IF,FA)",
+    "Shape(AF,FE)",
+    "Shape(FE,EB)",
+    "Shape(BE,EC)",
+    "Shape(DF,FI)",
+    "Shape(CE,EG)",
+    "Shape(HD,DF)",
+    "Shape(EG,GJ)",
+    "Shape(LD,DH)",
+    "Shape(GD,DL)",
+    "Shape(KG,GD)",
+    "Shape(JG,GK)",
+    "Shape(FD,DG,GE,EF)",
+    "Collinear(AFDL)",
+    "Collinear(BEGK)",
+    "Collinear(IFEC)",
+    "Collinear(HDGJ)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(FE,DG)",
+    "ParallelBetweenLine(DF,GE)",
+    "Equal(MeasureOfAngle(BEC),57)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FDG))",
+  "problem_answer": "57",
+  "theorem_seqs": [
+    "vertical_angle(BEC,GEI)",
+    "parallelogram_judgment_parallel_and_parallel(FDGE)",
+    "parallelogram_property_opposite_angle_equal(DGEF)"
+  ]
+}

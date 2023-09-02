@@ -1,0 +1,33 @@
+{
+  "problem_id": 2223,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-2321",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "2223.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)",
+    "Shape(AN,NC,CA)",
+    "Collinear(BCN)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(NB),12)",
+    "Equal(LengthOfLine(AB),z)",
+    "Equal(LengthOfLine(NC),8)",
+    "Equal(LengthOfLine(AN),x)",
+    "Equal(LengthOfLine(AC),y)",
+    "PerpendicularBetweenLine(NC,AC)",
+    "PerpendicularBetweenLine(BA,NA)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "4*sqrt(2)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(NCA)",
+    "mirror_similar_triangle_judgment_aa(ANC,BAN)",
+    "mirror_similar_triangle_property_line_ratio(CAN,ANB)",
+    "mirror_similar_triangle_property_line_ratio(ANC,BAN)",
+    "right_triangle_property_pythagorean(NCA)"
+  ]
+}

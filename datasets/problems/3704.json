@@ -1,0 +1,39 @@
+{
+  "problem_id": 3704,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1466",
+  "problem_level": 1,
+  "problem_text_cn": "如图,把一块直角三角板的直角顶点放在直尺的一边上,若∠2=42°,则∠1=()",
+  "problem_text_en": "As shown in the figure, put the right-angle vertex of a right-angled triangle plate on one edge of the ruler, if ∠2 = N_0, then ∠1 = ()",
+  "problem_img": "3704.png",
+  "construction_cdl": [
+    "Shape(OE,EF,FO)",
+    "Shape(EO,OA)",
+    "Shape(CE,EO)",
+    "Shape(GE,EC)",
+    "Shape(FE,EG)",
+    "Shape(HF,FE)",
+    "Shape(DF,FH)",
+    "Shape(OF,FD)",
+    "Shape(BO,OF)",
+    "Collinear(AOB)",
+    "Collinear(CEFD)",
+    "Collinear(OEG)",
+    "Collinear(OFH)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BOF),42)",
+    "PerpendicularBetweenLine(HO,GO)",
+    "ParallelBetweenLine(EC,OA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(GEC))",
+  "problem_answer": "48",
+  "theorem_seqs": [
+    "angle_addition(BOF,FOE)",
+    "angle_addition(BOE,EOA)",
+    "flat_angle(BOA)",
+    "parallel_property_ipsilateral_internal_angle(EC,OA)",
+    "adjacent_complementary_angle(GEC,CEO)"
+  ]
+}

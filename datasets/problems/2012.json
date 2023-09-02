@@ -1,0 +1,28 @@
+{
+  "problem_id": 2012,
+  "annotation": "YimingHe_2023-03-26",
+  "source": "Geometry3k-2098",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth.",
+  "problem_img": "2012.png",
+  "construction_cdl": [
+    "Shape(CH,HA,AC)",
+    "Shape(AH,HB,BA)",
+    "Collinear(CHB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AH),4)",
+    "Equal(LengthOfLine(BC),6)",
+    "Equal(LengthOfLine(HC),LengthOfLine(BH))",
+    "PerpendicularBetweenLine(AH,BH)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(BAC))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CHA,AHB)",
+    "altitude_of_triangle_judgment(AH,ACB)",
+    "triangle_area_formula_common(ACB)"
+  ]
+}

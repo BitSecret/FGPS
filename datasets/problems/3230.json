@@ -1,0 +1,31 @@
+{
+  "problem_id": 3230,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-529",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ODC是由△OAB绕点O顺时针旋转30°后得到的图形,若点D恰好落在AB上,则∠ADO的度数是()",
+  "problem_text_en": "As shown in the figure, △ODC is the figure obtained after △OAB rotates clockwise around point O by N_0. If point D happens to fall on AB, then the degree of ∠ADO is ()",
+  "problem_img": "3230.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OD)",
+    "Shape(ED,DO,OE)",
+    "Shape(BD,DE,EB)",
+    "Shape(EO,OC,CE)",
+    "Collinear(ADB)",
+    "Collinear(OEB)",
+    "Collinear(DEC)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(AOB,DOC)",
+    "Equal(MeasureOfAngle(AOD),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ODA))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "congruent_triangle_property_line_equal(BAO,CDO)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(AOD)"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "problem_id": 4436,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3394",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,连接OA、OB,∠AOB=50°,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC. Connect OA and OB, ∠AOB = N_0, then the degree of ∠C is ()",
+  "problem_img": "4436.png",
+  "construction_cdl": [
+    "Shape(OA,AE,EO)",
+    "Shape(EA,AB,BE)",
+    "Shape(EB,BC,CE)",
+    "Shape(AO,OE,EC,OCA)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Collinear(AEC)",
+    "Collinear(OEB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 2593,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-2721",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If P R \\parallel K L, K N = 9, L N = 16, and P M = 2K P, find K M.",
+  "problem_img": "2593.png",
+  "construction_cdl": [
+    "Shape(NL,LR,RQ,QN)",
+    "Shape(KN,NQ,QP,PK)",
+    "Shape(QR,RM,MQ)",
+    "Shape(PQ,QM,MP)",
+    "Collinear(LNK)",
+    "Collinear(RQP)",
+    "Collinear(LRM)",
+    "Collinear(KPM)",
+    "Collinear(NQM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "ParallelBetweenLine(PR,KL)",
+    "Equal(LengthOfLine(KN),9)",
+    "Equal(LengthOfLine(LN),16)",
+    "Equal(LengthOfLine(PM),2*x)",
+    "Equal(LengthOfLine(KP),x)",
+    "Equal(LengthOfLine(KM),3*x)",
+    "PerpendicularBetweenLine(RM,PM)",
+    "PerpendicularBetweenLine(KN,MN)",
+    "Equal(RatioOfMirrorSimilarTriangle(LMK,MKN),5/3)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "mirror_similar_triangle_judgment_aa(LMK,MKN)",
+    "mirror_similar_triangle_property_line_ratio(LMK,MKN)"
+  ]
+}

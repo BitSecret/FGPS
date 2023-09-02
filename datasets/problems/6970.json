@@ -1,0 +1,39 @@
+{
+  "problem_id": 6970,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10224",
+  "problem_level": 1,
+  "problem_text_cn": "如图，⊙O是等边△ABC的外接圆，点D是弧BC上的点，且∠CAD＝20°，则∠ACD的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6970.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EC,CA)",
+    "Shape(OCA,AC)",
+    "Shape(EB,BD,DE)",
+    "Shape(CE,ED,DC)",
+    "Shape(OBD,DB)",
+    "Shape(ODC,CD)",
+    "Collinear(BEC)",
+    "Collinear(AED)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "Point(O)",
+    "IsCentreOfCircle(O,O)",
+    "EquilateralTriangle(ABC)",
+    "Equal(MeasureOfAngle(CAD),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(ABC)",
+    "angle_addition(CAD,DAB)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(OBD,C)",
+    "equilateral_triangle_property_angle(CAB)",
+    "angle_addition(DCB,BCA)"
+  ]
+}

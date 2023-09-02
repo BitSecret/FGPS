@@ -1,0 +1,28 @@
+{
+  "problem_id": 1959,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2038",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "A B C D \\sim Q S R P. Find x.",
+  "problem_img": "1959.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CB,BA)",
+    "Shape(PR,RS,SQ,QP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenQuadrilateral(ADCB,QPRS)",
+    "Equal(MeasureOfAngle(BAD),82)",
+    "Equal(MeasureOfAngle(QPR),97)",
+    "Equal(MeasureOfAngle(PRS),3*y-13)",
+    "Equal(MeasureOfAngle(ADC),x+34)",
+    "Equal(MeasureOfAngle(RSQ),98)",
+    "Equal(MeasureOfAngle(DCB),83)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "63",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_angle_equal(DCBA,PRSQ)"
+  ]
+}

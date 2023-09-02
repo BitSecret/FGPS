@@ -1,0 +1,30 @@
+{
+  "problem_id": 169,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-171",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In rhombus A B C D, A B = 2 x + 3 and B C = 5 x. Find m \\angle B C D if m \\angle A B C = 83.2.",
+  "problem_img": "169.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DC,CE)",
+    "Shape(EC,CB,BE)",
+    "Shape(AE,EB,BA)",
+    "Collinear(AEC)",
+    "Collinear(DEB)"
+  ],
+  "text_cdl": [
+    "Rhombus(ADCB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),2*x+3)",
+    "Equal(LengthOfLine(BC),5*x)",
+    "Equal(MeasureOfAngle(CBA),83.2)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DCB))",
+  "problem_answer": "96.8",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(CD,BA)"
+  ]
+}

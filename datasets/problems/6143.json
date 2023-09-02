@@ -1,0 +1,33 @@
+{
+  "problem_id": 6143,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8702",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C、D是⊙O上的点,CD⊥AB于E,若∠ADC=50°,则∠BCD=()",
+  "problem_text_en": "As shown in the figure, A, B, C, D are vertices on O, CD ⊥ AB is in E, if ∠ADC = N_0, then ∠BCD = ()",
+  "problem_img": "6143.png",
+  "construction_cdl": [
+    "Shape(BC,OCB)",
+    "Shape(CB,BE,EC)",
+    "Shape(CE,EA,OAC)",
+    "Shape(DE,EB,OBD)",
+    "Shape(ED,DA,AE)",
+    "Shape(AD,ODA)",
+    "Collinear(BEA)",
+    "Collinear(CED)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BEC),90)",
+    "Equal(MeasureOfAngle(CDA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "triangle_property_angle_sum(CBE)"
+  ]
+}

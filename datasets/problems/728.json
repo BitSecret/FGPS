@@ -1,0 +1,35 @@
+{
+  "problem_id": 728,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-753",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "728.png",
+  "construction_cdl": [
+    "Shape(CY,YW,WC)",
+    "Shape(CW,WX,XC)",
+    "Shape(CX,XZ,ZC)",
+    "Shape(WY,AYW)",
+    "Shape(XW,AWX)",
+    "Shape(ZX,AXZ)",
+    "Shape(YC,CZ,AZY)",
+    "Collinear(WCZ)",
+    "Collinear(YCX)",
+    "Cocircular(A,WXZY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(AYW),154)",
+    "Equal(MeasureOfAngle(WCY),128)",
+    "Equal(MeasureOfArc(AXZ),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "102",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(AYW,X)",
+    "arc_property_circumference_angle_external(AXZ,W)",
+    "adjacent_complementary_angle(XCW,WCY)",
+    "triangle_property_angle_sum(XCW)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 6206,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8792",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,∠BAC=30°,则劣弧BC的度数是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, ∠BAC = N_0, then the degree of the minor arc BC is ()",
+  "problem_img": "6206.png",
+  "construction_cdl": [
+    "Shape(BO,OD,DA,OAB)",
+    "Shape(OB,BD,DO)",
+    "Shape(CD,DB,OBC)",
+    "Shape(AD,DC,CA)",
+    "Shape(AC,OCA)",
+    "Collinear(ODC)",
+    "Collinear(ADB)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfArc(OBC))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

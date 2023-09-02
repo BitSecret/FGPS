@@ -1,0 +1,29 @@
+{
+  "problem_id": 4575,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3711",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,AB是直径,∠A=30°,则∠ABC的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, AB is the diameter, ∠A = N_0, then the degree of ∠ABC is ()",
+  "problem_img": "4575.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CA,AO,OC)",
+    "Shape(CO,OB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),30)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

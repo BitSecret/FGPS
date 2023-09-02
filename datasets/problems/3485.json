@@ -1,0 +1,26 @@
+{
+  "problem_id": 3485,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1085",
+  "problem_level": 1,
+  "problem_text_cn": "一副三角板如图摆放,且∠1的度数比∠2度数大54度,则∠1的度数是()",
+  "problem_text_en": "A set of triangular plates are placed as shown, and the degree of ∠1 is N_0 degrees greater than the degree of ∠2, then the degree of ∠1 is ()",
+  "problem_img": "3485.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(DB,BA)",
+    "Shape(CB,BE)",
+    "Collinear(DBE)"
+  ],
+  "text_cdl": [
+    "RightTriangle(ABC)",
+    "Equal(Sub(MeasureOfAngle(DBA),MeasureOfAngle(CBE)),54)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "72",
+  "theorem_seqs": [
+    "angle_addition(DBA,ABC)",
+    "adjacent_complementary_angle(DBC,CBE)"
+  ]
+}

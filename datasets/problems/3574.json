@@ -1,0 +1,38 @@
+{
+  "problem_id": 3574,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1215",
+  "problem_level": 1,
+  "problem_text_cn": "在△ABC中,AB=AC,D、E分别在BC、AC上,AD=AE,∠CDE=20°,则∠BAD的度数为()",
+  "problem_text_en": "In △ABC, AB = AC, D and E are respectively on BC and AC, AD = AE, ∠CDE = N_0, then the degree of ∠BAD is ()",
+  "problem_img": "3574.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DC,CE)",
+    "Collinear(BDC)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(AD),LengthOfLine(AE))",
+    "Equal(MeasureOfAngle(EDC),20)",
+    "Equal(MeasureOfAngle(ADE),x)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ADE)",
+    "isosceles_triangle_property_angle_equal(ADE)",
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(ABD)",
+    "triangle_property_angle_sum(ADE)",
+    "triangle_property_angle_sum(EDC)",
+    "triangle_property_angle_sum(ADC)",
+    "triangle_property_angle_sum(ABC)",
+    "adjacent_complementary_angle(BDA,ADC)",
+    "adjacent_complementary_angle(CED,DEA)"
+  ]
+}

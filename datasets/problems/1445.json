@@ -1,0 +1,35 @@
+{
+  "problem_id": 1445,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1498",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the angle measure of \\angle 1.",
+  "problem_img": "1445.png",
+  "construction_cdl": [
+    "Shape(IF,FB)",
+    "Shape(BF,FE)",
+    "Shape(FE,EG)",
+    "Shape(GE,EC)",
+    "Shape(DF,FI)",
+    "Shape(FD,DE,EF)",
+    "Shape(CE,ED)",
+    "Shape(HD,DF)",
+    "Shape(AD,DH)",
+    "Shape(ED,DA)",
+    "Collinear(BFDA)",
+    "Collinear(HDEC)",
+    "Collinear(IFEC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(GEC),52)",
+    "Equal(MeasureOfAngle(CFA),38)",
+    "PerpendicularBetweenLine(DF,DE)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DFI))",
+  "problem_answer": "142",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EFD,DFI)"
+  ]
+}

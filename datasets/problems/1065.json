@@ -1,0 +1,33 @@
+{
+  "problem_id": 1065,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1100",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x if \\odot M \\cong \\odot N.",
+  "problem_img": "1065.png",
+  "construction_cdl": [
+    "Shape(MST,TS)",
+    "Shape(ST,TM,MS)",
+    "Shape(MT,MTV,VM)",
+    "Shape(MV,VU,UM)",
+    "Shape(MU,MUS,SM)",
+    "Shape(UV,MVU)",
+    "Collinear(SMV)",
+    "Collinear(TMU)",
+    "Cocircular(M,STVU)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(M,M)",
+    "Equal(MeasureOfArc(MST),2*x)",
+    "Equal(MeasureOfArc(MVU),5*x-27)",
+    "Equal(LengthOfLine(ST),LengthOfLine(VU))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "congruent_arc_judgment_chord_equal(MST,MVU)",
+    "congruent_arc_property_measure_equal(MST,MVU)"
+  ]
+}

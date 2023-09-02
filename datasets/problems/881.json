@@ -1,0 +1,38 @@
+{
+  "problem_id": 881,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-910",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Each pair of polygons is similar. Find y.",
+  "problem_img": "881.png",
+  "construction_cdl": [
+    "Shape(BD,DA,AF,FB)",
+    "Shape(LM,MN,NO,OL)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenQuadrilateral(BDAF,LMNO)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(LO),10)",
+    "Equal(LengthOfLine(LM),8)",
+    "Equal(LengthOfLine(MN),16)",
+    "Equal(LengthOfLine(DB),12)",
+    "Equal(LengthOfLine(AF),y+1)",
+    "Equal(LengthOfLine(AD),x-3)",
+    "PerpendicularBetweenLine(BD,AD)",
+    "PerpendicularBetweenLine(FB,DB)",
+    "PerpendicularBetweenLine(OL,ML)",
+    "PerpendicularBetweenLine(LM,NM)",
+    "Equal(LengthOfLine(FB),LengthOfLine(AF))",
+    "Equal(LengthOfLine(LO),LengthOfLine(NO))",
+    "Equal(MeasureOfAngle(DAF),MeasureOfAngle(MNO))",
+    "Equal(MeasureOfAngle(AFB),MeasureOfAngle(NOL))"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_line_ratio(BDAF,LMNO)",
+    "similar_quadrilateral_property_line_ratio(AFBD,NOLM)"
+  ]
+}

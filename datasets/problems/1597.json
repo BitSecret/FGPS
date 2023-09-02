@@ -1,0 +1,49 @@
+{
+  "problem_id": 1597,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1657",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 1 = 53. Find the measure of \\angle 4.",
+  "problem_img": "1597.png",
+  "construction_cdl": [
+    "Shape(GW,WL)",
+    "Shape(LW,WX)",
+    "Shape(XW,WY)",
+    "Shape(YW,WG)",
+    "Shape(WX,XE)",
+    "Shape(EX,XN)",
+    "Shape(NX,XZ)",
+    "Shape(ZX,XW)",
+    "Shape(IY,YW)",
+    "Shape(WY,YZ)",
+    "Shape(ZY,YM)",
+    "Shape(MY,YI)",
+    "Shape(YZ,ZX)",
+    "Shape(XZ,ZK)",
+    "Shape(KZ,ZH)",
+    "Shape(HZ,ZY)",
+    "Collinear(GWXN)",
+    "Collinear(IYZK)",
+    "Collinear(MYWL)",
+    "Collinear(HZXE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(LWX),53)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(GN,IK)",
+    "ParallelBetweenLine(ML,HE)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(KZH))",
+  "problem_answer": "127",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(GN,IK,W)",
+    "parallel_property_collinear_extend(KI,NW,Y)",
+    "parallel_property_collinear_extend(ML,HE,Y)",
+    "parallel_property_collinear_extend(EH,LY,Z)",
+    "parallel_property_corresponding_angle(WN,YK,L)",
+    "parallel_property_ipsilateral_internal_angle(YL,ZE)",
+    "vertical_angle(YZX,KZH)"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": 5567,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6836",
+  "problem_level": 1,
+  "problem_text_cn": "一艘轮船由海平面上A地出发向南偏西60°的方向行驶40海里到达B地,再由B地向北偏西30°的方向行驶30海里到达C地,则A、C两地相距()",
+  "problem_text_en": "A ship departs from point A on sea level, travels N_1 nautical miles in the direction of south by west N_0 to point B, and then travels N_3 nautical miles from point B in the direction of west by north N_2 to point C, then the distance between A and C is ( )",
+  "problem_img": "5567.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),40)",
+    "Equal(LengthOfLine(BC),30)",
+    "Equal(MeasureOfAngle(CBA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CBA)",
+    "right_triangle_property_pythagorean(CBA)"
+  ]
+}

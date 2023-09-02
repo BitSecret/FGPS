@@ -1,5 +1,5 @@
 import copy
-from symbolic_solver.aux_tools.parser import EquationParser as EqParser
+from solver.aux_tools.parser import CDLParser
 
 
 class Condition:
@@ -66,11 +66,15 @@ class Condition:
         :return added: <bool>, indicate whether the addition was successful.
         :return _id: <int>, id of condition, if not added, return None.
         """
+
         if not self.has(predicate, item):
             self.items.append((predicate, item, tuple(set(premise)), theorem, self.step_count))
             self.items_group[predicate].append(item)
 
-            self.id_of_item[(predicate, item)] = self.id_count
+            if predicate == "Equation":
+                self.id_of_item[(predicate, str(item))] = self.id_count
+            else:
+                self.id_of_item[(predicate, item)] = self.id_count
             self.ids_of_predicate[predicate].append(self.id_count)
             self.ids_of_step[self.step_count].append(self.id_count)
 
@@ -91,7 +95,7 @@ class Condition:
         :return exist: <bool>, indicate whether the addition was successful.
         """
         if predicate == "Equation":
-            return item in self.items_group[predicate] or -item in self.items_group[predicate]
+            return item in self.items_group["Equation"] or -item in self.items_group["Equation"]
         else:
             return item in self.items_group[predicate]
 
@@ -100,6 +104,8 @@ class Condition:
         self.ids_of_step[self.step_count] = []
 
     def get_id_by_predicate_and_item(self, predicate, item):
+        if predicate == "Equation":
+            item = str(item)
         return self.id_of_item[(predicate, item)]
 
     def get_items_by_predicate(self, predicate):
@@ -122,9 +128,13 @@ class Condition:
         return ids, items
 
     def get_premise_by_predicate_and_item(self, predicate, item):
+        if predicate == "Equation":
+            item = str(item)
         return self.items[self.id_of_item[(predicate, item)]][2]
 
     def get_theorem_by_predicate_and_item(self, predicate, item):
+        if predicate == "Equation":
+            item = str(item)
         return self.items[self.id_of_item[(predicate, item)]][3]
 
 
@@ -143,11 +153,11 @@ class Goal:
         """Initial goal by formal language."""
         if goal_CDL["type"] == "value":
             self.type = "algebra"
-            self.item = EqParser.get_expr_from_tree(problem, goal_CDL["item"][1][0])
-            self.answer = EqParser.get_expr_from_tree(problem, goal_CDL["answer"])
+            self.item = CDLParser.get_expr_from_tree(problem, goal_CDL["item"][1][0])
+            self.answer = CDLParser.get_expr_from_tree(problem, goal_CDL["answer"])
         elif goal_CDL["type"] == "equal":
             self.type = "algebra"
-            self.item = EqParser.get_equation_from_tree(problem, goal_CDL["item"][1])
+            self.item = CDLParser.get_equation_from_tree(problem, goal_CDL["item"][1])
             self.answer = 0
         elif goal_CDL["type"] == "logic":
             self.type = "logic"

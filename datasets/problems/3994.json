@@ -1,0 +1,34 @@
+{
+  "problem_id": 3994,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1946",
+  "problem_level": 1,
+  "problem_text_cn": "如图为一条圆柱形排水管的横截面,已知圆心O到水面的距离OC是3dm,水面宽AB是8dm,排水管的截面的直径是()",
+  "problem_text_en": "The picture shows the cross section of a cylindrical drainage pipe. It is known that the distance OC from the center of the circle O to the water surface is N_0 d, the water surface width AB is N_1 d, and the diameter of the cross section of the drainage pipe is ()",
+  "problem_img": "3994.png",
+  "construction_cdl": [
+    "Shape(OA,AC,CO)",
+    "Shape(OAB,BA)",
+    "Shape(OC,CB,OBA,AO)",
+    "Collinear(ACB)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "PerpendicularBetweenLine(OC,BC)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(OC),3)",
+    "Equal(LengthOfLine(AB),8)"
+  ],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ACO,OCB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(ACO)",
+    "right_triangle_property_pythagorean(ACO)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

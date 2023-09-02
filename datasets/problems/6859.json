@@ -1,0 +1,32 @@
+{
+  "problem_id": 6859,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10083",
+  "problem_level": 1,
+  "problem_text_cn": "如图，已知BC是⊙O的直径，∠AOC＝58°，则∠A的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6859.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(BA,AO,OB)",
+    "Shape(CO,OA,OAC)",
+    "Shape(BC,OCB)",
+    "Collinear(BOC)",
+    "Cocircular(O,BAC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COA),58)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAO))",
+  "problem_answer": "29",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "isosceles_triangle_judgment_line_equal(OBA)",
+    "isosceles_triangle_property_angle_equal(OBA)"
+  ]
+}

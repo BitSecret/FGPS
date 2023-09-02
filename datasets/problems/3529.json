@@ -1,0 +1,28 @@
+{
+  "problem_id": 3529,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1147",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB,CD被BC所截,若AB∥CD,∠1=45°,∠2=35°,则∠3=()",
+  "problem_text_en": "As shown in the figure, the straight lines AB and CD are cut by BC. If AB ∥ CD, ∠1 = N_0, ∠2 = N_1, then ∠3 = ()",
+  "problem_img": "3529.png",
+  "construction_cdl": [
+    "Shape(CB,BA)",
+    "Shape(EC,CD,DE)",
+    "Shape(BE,ED)",
+    "Collinear(CEB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CBA),45)",
+    "Equal(MeasureOfAngle(CDE),35)",
+    "ParallelBetweenLine(AB,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BED))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,CD)",
+    "triangle_property_angle_sum(ECD)",
+    "adjacent_complementary_angle(BED,DEC)"
+  ]
+}

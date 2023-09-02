@@ -1,0 +1,41 @@
+{
+  "problem_id": 5434,
+  "annotation": "Yangli_2023-05-21",
+  "source": "GeoQA-5764",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD的周长为60cm,AC,BD相交于点O,EO⊥BD交AD于点E,则△ABE的周长为()",
+  "problem_text_en": "As shown in the figure, the perimeter of ▱ABCD is N_0, AC, BD intersect at point O, and EO ⊥ BD intersects at point E, then the perimeter of △ABE is ()",
+  "problem_img": "5434.png",
+  "construction_cdl": [
+    "Shape(DO,OC,CD)",
+    "Shape(OB,BC,CO)",
+    "Shape(EA,AF,FE)",
+    "Shape(EF,FO,OE)",
+    "Shape(DE,EO,OD)",
+    "Shape(OF,FB,BO)",
+    "Shape(AB,BF,FA)",
+    "Collinear(AFOC)",
+    "Collinear(BOD)",
+    "Collinear(AED)",
+    "Collinear(BFE)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "PerpendicularBetweenLine(EO,DO)",
+    "Equal(PerimeterOfQuadrilateral(ABCD),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(ABE))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "line_addition(AE,ED)",
+    "adjacent_complementary_angle(BEO,EOD)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "triangle_perimeter_formula(ABE)",
+    "quadrilateral_perimeter_formula(ABCD)",
+    "mirror_congruent_triangle_judgment_sas(OEB,ODE)",
+    "mirror_congruent_triangle_property_line_equal(OEB,ODE)"
+  ]
+}

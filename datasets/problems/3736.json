@@ -1,0 +1,30 @@
+{
+  "problem_id": 3736,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1524",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB∥CD,AE平分∠CAB,∠ACD=40°,则∠AEC的度数是()",
+  "problem_text_en": "As shown in the figure, the straight line AB ∥ CD, AE bisects ∠CAB, ∠ACD = N_0, then the degree of ∠AEC is ()",
+  "problem_img": "3736.png",
+  "construction_cdl": [
+    "Shape(AC,CE,EA)",
+    "Shape(DA,AB)",
+    "Shape(BA,AE)",
+    "Collinear(DAC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ACE),40)",
+    "ParallelBetweenLine(AB,CE)",
+    "IsBisectorOfAngle(AE,BAC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CEA))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(AB,CE,D)",
+    "angle_addition(DAB,BAE)",
+    "angle_addition(DAE,EAC)",
+    "flat_angle(DAC)",
+    "triangle_property_angle_sum(ACE)"
+  ]
+}

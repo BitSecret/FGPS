@@ -1,0 +1,27 @@
+{
+  "problem_id": 368,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-375",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the measure of \\angle K L M.",
+  "problem_img": "368.png",
+  "construction_cdl": [
+    "Shape(JL,LM,MJ)",
+    "Shape(ML,LK,KM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(JM),LengthOfLine(MK))",
+    "Equal(MeasureOfAngle(JLM),6*x+8)",
+    "Equal(MeasureOfAngle(MLK),9*x-4)",
+    "PerpendicularBetweenLine(MJ,LJ)",
+    "PerpendicularBetweenLine(LK,MK)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(MLK))",
+  "problem_answer": "32",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_judgment_hl(LKM,LMJ)",
+    "mirror_congruent_triangle_property_angle_equal(LKM,LMJ)"
+  ]
+}

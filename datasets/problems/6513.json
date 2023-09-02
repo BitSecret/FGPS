@@ -1,0 +1,44 @@
+{
+  "problem_id": 6513,
+  "annotation": "NaZhu_2023-06-04",
+  "source": "GeoQA-9431",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD中,EF过对角线的交点O,AB=4,AD=3,OF=1.5,则四边形BCEF的周长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, EF crosses the diagonal intersection O, AB = N_0, AD = N_1, OF = N_2, then the perimeter of the quadrilateral BCEF is ()",
+  "problem_img": "6513.png",
+  "construction_cdl": [
+    "Shape(DO,OE,ED)",
+    "Shape(DA,AO,OD)",
+    "Shape(EO,OC,CE)",
+    "Shape(OA,AF,FO)",
+    "Shape(OF,FB,BO)",
+    "Shape(OB,BC,CO)",
+    "Collinear(AOC)",
+    "Collinear(EOF)",
+    "Collinear(BOD)",
+    "Collinear(DEC)",
+    "Collinear(AFB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(LengthOfLine(AD),3)",
+    "Equal(LengthOfLine(OF),1.5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(BCEF))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(BA,CD)",
+    "vertical_angle(DOE,BOF)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "congruent_triangle_judgment_aas(EDO,FBO)",
+    "congruent_triangle_property_line_equal(DOE,BOF)",
+    "congruent_triangle_property_line_equal(OED,OFB)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "line_addition(EO,OF)",
+    "line_addition(DE,EC)",
+    "quadrilateral_perimeter_formula(BCEF)"
+  ]
+}

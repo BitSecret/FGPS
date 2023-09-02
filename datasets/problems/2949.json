@@ -1,0 +1,29 @@
+{
+  "problem_id": 2949,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-137",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ACB中,∠ACB=100°,∠A=20°,D是AB上一点．将△ABC沿CD折叠,使点B落在AC边上的B′处,则∠ADB′等于()",
+  "problem_text_en": "As shown in the figure, in △ACB, ∠ACB = N_0, ∠A = N_1, D is a point on AB. Fold △ABC along CD so that point B falls at B′ on the edge of AC, then ∠ADB′ is equal to ()",
+  "problem_img": "2949.png",
+  "construction_cdl": [
+    "Shape(AE,ED,DA)",
+    "Shape(EC,CD,DE)",
+    "Shape(DC,CB,BD)",
+    "Collinear(AEC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ACB),100)",
+    "Equal(MeasureOfAngle(DAE),20)",
+    "Equal(MeasureOfAngle(CBD),MeasureOfAngle(DEC))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EDA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ACB)",
+    "adjacent_complementary_angle(AED,DEC)",
+    "triangle_property_angle_sum(AED)"
+  ]
+}

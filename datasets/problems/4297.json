@@ -1,0 +1,32 @@
+{
+  "problem_id": 4297,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3106",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C,D是圆上两点,∠AOC=100°,则∠D的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, vertices C and D are two vertices on the circle, ∠AOC = N_0, then the degree of ∠D is ()",
+  "problem_img": "4297.png",
+  "construction_cdl": [
+    "Shape(BD,ODB)",
+    "Shape(DB,BE,ED)",
+    "Shape(DE,EA,OAD)",
+    "Shape(AO,OC,OCA)",
+    "Shape(OE,EC,CO)",
+    "Shape(CE,EB,OBC)",
+    "Collinear(BEOA)",
+    "Collinear(DEC)",
+    "Cocircular(O,DBCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AOC),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EDB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AOC,COB)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

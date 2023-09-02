@@ -1,0 +1,33 @@
+{
+  "problem_id": 2802,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2951",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the figure.",
+  "problem_img": "2802.png",
+  "construction_cdl": [
+    "Shape(BD,DH,HB)",
+    "Shape(HD,DA,AC,CH)",
+    "Collinear(BHC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),8)",
+    "Equal(LengthOfLine(CB),10)",
+    "Equal(LengthOfLine(AD),4)",
+    "Equal(LengthOfLine(HC),4)",
+    "Equal(LengthOfLine(HD),8)",
+    "PerpendicularBetweenLine(AC,BC)",
+    "PerpendicularBetweenLine(DA,CA)",
+    "PerpendicularBetweenLine(DH,BH)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(BDAC))",
+  "problem_answer": "32",
+  "theorem_seqs": [
+    "line_addition(BH,HC)",
+    "right_triangle_judgment_angle(DHB)",
+    "right_triangle_property_pythagorean(DHB)",
+    "quadrilateral_perimeter_formula(BDAC)"
+  ]
+}

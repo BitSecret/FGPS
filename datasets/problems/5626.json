@@ -1,0 +1,30 @@
+{
+  "problem_id": 5626,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7219",
+  "problem_level": 1,
+  "problem_text_cn": "如右图,△ABC中,DE∥BC,\\frac{AD}{AB}=\\frac{2}{5},DE=3,则BC的长为()",
+  "problem_text_en": "As shown on the right, in △ABC, DE ∥ BC, \\frac{AD}{AB}=\\frac{N_0}{N_1},DE=N_2,then the length of BC is ()",
+  "problem_img": "5626.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),2/5)",
+    "Equal(LengthOfLine(DE),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "7.5",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

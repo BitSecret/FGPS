@@ -1,0 +1,33 @@
+{
+  "problem_id": 6068,
+  "annotation": "RunanWang_2023-06-04",
+  "source": "GeoQA-8581",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在以BD为直径的⊙O上,⁀{AB}=⁀{BC},若∠AOB=70°,则∠BDC的度数是()",
+  "problem_text_en": "As shown in the figure, on ⊙O with BD as the diameter, ⁀AB = ⁀BC, if ∠AOB = N_0, then the degree of ∠BDC is ()",
+  "problem_img": "6068.png",
+  "construction_cdl": [
+    "Shape(ODA,AO,OD)",
+    "Shape(OAB,BO,OA)",
+    "Shape(OBC,CD,DO,OB)",
+    "Shape(OCD,DC)",
+    "Collinear(DOB)",
+    "Cocircular(O,DABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfArc(OAB),LengthOfArc(OBC))",
+    "Equal(MeasureOfAngle(BOA),70)",
+    "IsDiameterOfCircle(BD,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(OAB,OBC)",
+    "congruent_arc_property_measure_equal(OAB,OBC)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

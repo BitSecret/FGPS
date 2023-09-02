@@ -1,0 +1,33 @@
+{
+  "problem_id": 2310,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2418",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram A B C D to find m \\angle A D C.",
+  "problem_img": "2310.png",
+  "construction_cdl": [
+    "Shape(DF,FA,AD)",
+    "Shape(AF,FB,BA)",
+    "Shape(FC,CB,BF)",
+    "Shape(DC,CF,FD)",
+    "Collinear(DFB)",
+    "Collinear(CFA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(DCBA)",
+    "Equal(MeasureOfAngle(FAD),20)",
+    "Equal(MeasureOfAngle(BAF),32)",
+    "Equal(MeasureOfAngle(CBF),40.1)",
+    "Equal(LengthOfLine(DA),9)",
+    "Equal(LengthOfLine(BA),6)",
+    "Equal(LengthOfLine(FC),6.86)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ADC))",
+  "problem_answer": "128",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(AB,DC)",
+    "angle_addition(BAF,FAD)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 5325,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5547",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,∠BAC=30°,BC=8,则⊙O半径为()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, ∠BAC = N_0, BC = N_1, then the radius of ⊙O is ()",
+  "problem_img": "5325.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(OC,OCA,AE,EO)",
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BC,CE)",
+    "Shape(OE,EC,CO)",
+    "Collinear(AEC)",
+    "Collinear(BEO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),8)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "triangle_property_angle_sum(BCO)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "isosceles_triangle_judgment_angle_equal(COB)"
+  ]
+}

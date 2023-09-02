@@ -1,0 +1,34 @@
+{
+  "problem_id": 1195,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-1235",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x in the figure.",
+  "problem_img": "1195.png",
+  "construction_cdl": [
+    "Shape(PD,DK)",
+    "Shape(KD,DJ)",
+    "Shape(MD,DP)",
+    "Shape(JD,DM)",
+    "Shape(AM,MD)",
+    "Shape(DM,MB)",
+    "Collinear(KDM)",
+    "Collinear(PDJ)",
+    "Collinear(AMB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(KDJ),4*x)",
+    "Equal(MeasureOfAngle(AMD),56)",
+    "ParallelBetweenLine(DJ,MB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "31",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(DJ,MB,P)",
+    "parallel_property_collinear_extend(BM,DP,A)",
+    "parallel_property_corresponding_angle(MA,DP,K)",
+    "adjacent_complementary_angle(PDK,KDJ)"
+  ]
+}

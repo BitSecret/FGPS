@@ -1,0 +1,33 @@
+{
+  "problem_id": 98,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-99",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "A D and C G are diameters of \\odot B. Find m \\widehat A C F.",
+  "problem_img": "98.png",
+  "construction_cdl": [
+    "Shape(BCA,AB,BC)",
+    "Shape(BAG,GB,BA)",
+    "Shape(BGF,FB,BG)",
+    "Shape(BFD,DB,BF)",
+    "Shape(BDC,CB,BD)",
+    "Collinear(ABD)",
+    "Collinear(CBG)",
+    "Cocircular(B,CAGFD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(B,B)",
+    "Equal(MeasureOfAngle(CBD),55)",
+    "Equal(MeasureOfAngle(FBG),35)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(BFA))",
+  "problem_answer": "270",
+  "theorem_seqs": [
+    "vertical_angle(CBD,GBA)",
+    "angle_addition(FBG,GBA)",
+    "round_angle(FBA,ABF)",
+    "arc_property_center_angle(BFA,B)"
+  ]
+}

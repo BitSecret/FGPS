@@ -1,0 +1,28 @@
+{
+  "problem_id": 2911,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-88",
+  "problem_level": 1,
+  "problem_text_cn": "在某次活动课中,甲、乙两个学习小组于同一时刻在阳光下对校园中一些物体进行了测量.下面是他们通过测量得到的一些信息:如图1,甲组测得一根直立于平地,长为80cm的竹竿的影长为60cm.如图2,乙组测得学校旗杆的影长为900cm.则旗杆的长为()",
+  "problem_text_en": "In an activity class, the two study groups A and B measured some objects in the campus at the same time in the sun. The following is some information they obtained through the measurement: As shown in Figure 1, the group A measured a piece of upright In Pingdi, the shadow length of a bamboo pole with a length of N_0 is N_1. As shown in Figure 2, the shadow length of the school flagpole measured by Group B is N_2. Then the length of the flagpole is ()",
+  "problem_img": "2911.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(DE,EF,FD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),80)",
+    "Equal(LengthOfLine(BC),60)",
+    "Equal(LengthOfLine(EF),900)",
+    "SimilarBetweenTriangle(ABC,DEF)",
+    "PerpendicularBetweenLine(AB,CB)",
+    "PerpendicularBetweenLine(DE,FE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "1200",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(ABC,DEF)",
+    "similar_triangle_property_line_ratio(CAB,FDE)"
+  ]
+}

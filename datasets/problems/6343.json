@@ -1,0 +1,28 @@
+{
+  "problem_id": 6343,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9162",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD是菱形,两对角线的长分别为AC=26cm,BD=10cm,菱形ABCD的面积是()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is a rhombus, and the lengths of the two diagonals are AC = N_0, BD = N_1, and the area of ​​the diamond ABCD is ()",
+  "problem_img": "6343.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(BC,CO,OB)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AOC)",
+    "Collinear(BOD)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AC),26)",
+    "Equal(LengthOfLine(BD),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "kite_area_formula_diagonal(ABCD)"
+  ]
+}

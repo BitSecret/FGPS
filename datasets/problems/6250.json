@@ -1,0 +1,39 @@
+{
+  "problem_id": 6250,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8859",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AC为⊙O的弦,半径OB⊥AC于点D,若∠ACB=22.5°,AD=1,则DB的长度为()",
+  "problem_text_en": "As shown in the figure, AC is the chord of ⊙O, the radius OB ⊥ AC at point D, if ∠ACB = N_0, AD = N_1, then the length of DB is ()",
+  "problem_img": "6250.png",
+  "construction_cdl": [
+    "Shape(OA,AD,DO)",
+    "Shape(DB,BC,CD)",
+    "Shape(OAB,BD,DA)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AO,OD,DC)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AD),1)",
+    "Equal(MeasureOfAngle(BCA),22.5)",
+    "PerpendicularBetweenLine(AD,OD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DB))",
+  "problem_answer": "sqrt(2)-1",
+  "theorem_seqs": [
+    "line_addition(OD,DB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "triangle_property_angle_sum(OAD)",
+    "isosceles_triangle_judgment_angle_equal(DOA)",
+    "right_triangle_judgment_angle(ADO)",
+    "right_triangle_property_pythagorean(ADO)"
+  ]
+}

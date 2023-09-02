@@ -1,0 +1,35 @@
+{
+  "problem_id": 6624,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9623",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,BC是⊙O的弦．若∠OBC=60°,则∠BAC的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, and BC is the chord of ⊙O. If ∠OBC = N_0, then the degree of ∠BAC is ()",
+  "problem_img": "6624.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(CA,AO,OC)",
+    "Shape(CO,OB,BC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(OBC),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(COB)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

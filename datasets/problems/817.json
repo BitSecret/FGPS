@@ -1,0 +1,33 @@
+{
+  "problem_id": 817,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-844",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "817.png",
+  "construction_cdl": [
+    "Shape(BC,CD,DB)",
+    "Shape(BD,DA,AB)",
+    "Collinear(CDA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),y)",
+    "Equal(LengthOfLine(BD),12)",
+    "Equal(LengthOfLine(CA),x)",
+    "Equal(MeasureOfAngle(BCD),60)",
+    "PerpendicularBetweenLine(BD,AD)",
+    "Equal(LengthOfLine(BC),LengthOfLine(BA))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8*sqrt(3)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDB,BDA)",
+    "triangle_property_angle_sum(CDB)",
+    "sine_theorem(CDB)",
+    "sine_theorem(BCD)",
+    "perpendicular_bisector_judgment_distance_equal(BD,CA)",
+    "line_addition(CD,DA)"
+  ]
+}

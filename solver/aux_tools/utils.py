@@ -1,11 +1,12 @@
 import json
 from sympy import Float
+
 expr_sym = [
-    "√",   # sqrt
-    "π"    # pi
+    "√",  # sqrt
+    "π"  # pi
 ]
 geo_sym = [
-    "△",   # triangle
+    "△",  # triangle
     "∠",  # angle
     "⊙",
     "▱"

@@ -1,0 +1,23 @@
+{
+  "problem_id": 5662,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7344",
+  "problem_level": 1,
+  "problem_text_cn": "如下图,某超市的自动扶梯长度为13米,该自动扶梯到达的最大高度是5米,设自动扶梯与地面所成的角为θ,则tanθ=()",
+  "problem_text_en": "As shown in the figure below, the length of the escalator in a supermarket is N_0, and the maximum height reached by the escalator is N_1. Assuming that the angle between the escalator and the ground is θ, then tanθ = ()",
+  "problem_img": "5662.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),13)",
+    "Equal(LengthOfLine(BC),5)",
+    "Equal(MeasureOfAngle(ABC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Tan(MeasureOfAngle(CAB)))",
+  "problem_answer": "5/12",
+  "theorem_seqs": [
+    "sine_theorem(CAB)"
+  ]
+}

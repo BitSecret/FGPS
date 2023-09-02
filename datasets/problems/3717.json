@@ -1,0 +1,33 @@
+{
+  "problem_id": 3717,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1489",
+  "problem_level": 1,
+  "problem_text_cn": "已知:如图,菱形ABCD中,对角线AC与BD相交于点O,AC=6cm,BD=8cm,则菱形ABCD的边长为()",
+  "problem_text_en": "Known: As shown in the figure, in the diamond ABCD, the diagonal AC and BD intersect at the point O, AC = N_0, BD = N_1, then the edge length of the diamond ABCD is ()",
+  "problem_img": "3717.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(BC,CO,OB)",
+    "Shape(OC,CD,DO)",
+    "Shape(AO,OD,DA)",
+    "Collinear(AOC)",
+    "Collinear(BOD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),6)",
+    "Equal(LengthOfLine(BD),8)",
+    "Rhombus(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)",
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
+    "right_triangle_judgment_angle(AOD)",
+    "right_triangle_property_pythagorean(AOD)"
+  ]
+}

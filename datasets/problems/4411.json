@@ -1,0 +1,36 @@
+{
+  "problem_id": 4411,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3360",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C是⊙O上的三个点,若∠C=28°,则∠OBA的度数为()",
+  "problem_text_en": "As shown in the figure, A, B, and C are the three points on ⊙O, if ∠C = N_0, then the degree of ∠OBA is ()",
+  "problem_img": "4411.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DC,OCA)",
+    "Shape(AD,DO,OA)",
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BC,CD)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BCA),28)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABO))",
+  "problem_answer": "62",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

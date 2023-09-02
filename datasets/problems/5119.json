@@ -1,0 +1,36 @@
+{
+  "problem_id": 5119,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4973",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,M为BC的中点,MI∥CA,且MI与∠A的平分线AI相交于点I．若AB=10,AC=16,则MI长度为()",
+  "problem_text_en": "As shown in the figure, in △ABC, M is the midpoint of BC, MI ∥ CA, and MI intersects the bisector AI of ∠A at vertex I. If AB = N_0, AC = N_1, the length of MI is ()",
+  "problem_img": "5119.png",
+  "construction_cdl": [
+    "Shape(AD,DI,IA)",
+    "Shape(AI,IM,MC,CA)",
+    "Shape(BM,MI,ID,DB)",
+    "Collinear(DIM)",
+    "Collinear(BMC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(M,BC)",
+    "ParallelBetweenLine(AC,IM)",
+    "IsBisectorOfAngle(AI,CAD)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(AC),16)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(MI))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(MI,CA,D)",
+    "parallel_property_alternate_interior_angle(ID,CA)",
+    "isosceles_triangle_judgment_angle_equal(DIA)",
+    "midsegment_of_triangle_judgment_parallel(MD,BCA)",
+    "midsegment_of_triangle_property_length(MD,BCA)",
+    "line_addition(AD,DB)",
+    "line_addition(DI,IM)"
+  ]
+}

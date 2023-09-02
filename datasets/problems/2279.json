@@ -1,0 +1,25 @@
+{
+  "problem_id": 2279,
+  "annotation": "Yangli_2023-04-09",
+  "source": "Geometry3k-2383",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "2279.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(LengthOfLine(BC),x)",
+    "Equal(MeasureOfAngle(CBA),45)",
+    "Equal(LengthOfLine(AB),y)",
+    "PerpendicularBetweenLine(AC,BC)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "3*sqrt(2)",
+  "theorem_seqs": [
+    "sine_theorem(ACB)"
+  ]
+}

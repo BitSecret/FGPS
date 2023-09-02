@@ -1,0 +1,26 @@
+{
+  "problem_id": 5056,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4809",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,BC=3,AC=4,若△ABC∽△BDC,则CD=()",
+  "problem_text_en": "As shown in the figure, in △ABC, BC = N_0, AC = N_1, if △ABC ∽ △BDC, then CD = ()",
+  "problem_img": "5056.png",
+  "construction_cdl": [
+    "Shape(CD,DB,BC)",
+    "Shape(DA,AB,BD)",
+    "Collinear(CDA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(LengthOfLine(AC),4)",
+    "MirrorSimilarBetweenTriangle(ABC,BCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "9/4",
+  "theorem_seqs": [
+    "mirror_similar_triangle_property_line_ratio(BCA,DBC)",
+    "mirror_similar_triangle_property_line_ratio(ABC,BCD)"
+  ]
+}

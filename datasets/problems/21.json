@@ -1,0 +1,26 @@
+{
+  "problem_id": 21,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-20",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y so that the quadrilateral is a parallelogram.",
+  "problem_img": "21.png",
+  "construction_cdl": [
+    "Shape(AB,BX,XC,CA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABXC)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(XCA),y+58)",
+    "Equal(MeasureOfAngle(ABX),5*y-6)",
+    "Equal(MeasureOfAngle(CAB),3*x-17)",
+    "Equal(MeasureOfAngle(BXC),2*x+24)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(BXCA)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 1386,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1435",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find S T.",
+  "problem_img": "1386.png",
+  "construction_cdl": [
+    "Shape(QR,RS,SQ)",
+    "Shape(RP,PT,TS,SR)",
+    "Collinear(QRP)",
+    "Collinear(QST)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(QS),x)",
+    "Equal(LengthOfLine(QT),20)",
+    "Equal(LengthOfLine(RS),12)",
+    "Equal(LengthOfLine(PT),16)",
+    "ParallelBetweenLine(RS,PT)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(ST))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(RS,PT,Q)",
+    "parallel_property_corresponding_angle(TP,SR,Q)",
+    "similar_triangle_judgment_aa(QRS,QPT)",
+    "similar_triangle_property_line_ratio(QRS,QPT)",
+    "similar_triangle_property_line_ratio(RSQ,PTQ)",
+    "line_addition(QS,ST)"
+  ]
+}

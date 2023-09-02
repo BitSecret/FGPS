@@ -1,0 +1,38 @@
+{
+  "problem_id": 3138,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-395",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在三角形ABC中,∠ACB=90°,∠B=50°,将此三角形绕点C沿顺时针方向旋转后得到三角形A′B′C,若点B′恰好落在线段AB上,AC、A′B′交于点O,则∠COA′的度数是()",
+  "problem_text_en": "As shown in the figure, in the triangle ABC, ∠ACB = N_0, ∠B = N_1, rotate this triangle clockwise around the point C to obtain the triangle A′B′C, if the point B′ happens to fall on the line segment AB, AC , A′B′ intersect at point O, then the degree of ∠COA′ is ()",
+  "problem_img": "3138.png",
+  "construction_cdl": [
+    "Shape(AD,DO,OA)",
+    "Shape(DB,BC,CD)",
+    "Shape(DC,CO,OD)",
+    "Shape(OC,CE,EO)",
+    "Collinear(ADB)",
+    "Collinear(DOE)",
+    "Collinear(AOC)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(ABC,EDC)",
+    "Equal(MeasureOfAngle(BCA),90)",
+    "Equal(MeasureOfAngle(ABC),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EOC))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "congruent_triangle_property_line_equal(ABC,EDC)",
+    "isosceles_triangle_judgment_line_equal(CDB)",
+    "congruent_triangle_property_angle_equal(BCA,DCE)",
+    "isosceles_triangle_property_angle_equal(CDB)",
+    "angle_addition(ODC,CDB)",
+    "adjacent_complementary_angle(ADO,ODB)",
+    "triangle_property_angle_sum(ADO)",
+    "adjacent_complementary_angle(COD,DOA)",
+    "adjacent_complementary_angle(EOC,COD)"
+  ]
+}

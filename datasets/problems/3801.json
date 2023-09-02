@@ -1,0 +1,31 @@
+{
+  "problem_id": 3801,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1650",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A是量角器直径的一个端点,点B在半圆周上,点P在⁀{AB}上,点Q在AB上,且PB=PQ．若点P对应140°(40°),则∠PQB的度数为()",
+  "problem_text_en": "As shown in the figure, point A is an end point of the diameter of the protractor, point B is on the half circle, point P is on ⁀AB, point Q is on AB, and PB = PQ. If point P corresponds to N_0 (N_1), then the degree of ∠PQB is ()",
+  "problem_img": "3801.png",
+  "construction_cdl": [
+    "Shape(O,O)",
+    "Shape(AO,OC,OCB,BQ,QA)",
+    "Shape(PQ,QB,BP)",
+    "Shape(AQ,QP,OPA)",
+    "Shape(BP,0BP)",
+    "Collinear(AOC)",
+    "Collinear(AQB)",
+    "Cocircular(O,ABP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(PQ),LengthOfLine(BP))",
+    "Equal(MeasureOfAngle(BPQ),40)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(PQB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(PQB)",
+    "triangle_property_angle_sum(PQB)",
+    "isosceles_triangle_property_angle_equal(PQB)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 732,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-757",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot F, G K = 14 and m \\widehat G H K = 142. Find m \\widehat G H.",
+  "problem_img": "732.png",
+  "construction_cdl": [
+    "Shape(GF,FJ,JG)",
+    "Shape(JH,FHG,GJ)",
+    "Shape(FG,FGM,MF)",
+    "Shape(JF,FM,FMK,KJ)",
+    "Shape(HJ,JK,FKH)",
+    "Collinear(GJK)",
+    "Collinear(MFJH)",
+    "Cocircular(F,GMKH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(F,F)",
+    "Equal(LengthOfLine(GK),14)",
+    "Equal(MeasureOfArc(FKG),122)",
+    "Equal(LengthOfLine(MF),8)",
+    "PerpendicularBetweenLine(HJ,KJ)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(FHG))",
+  "problem_answer": "61.04",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(GJH,HJK)",
+    "adjacent_complementary_angle(MJG,GJH)",
+    "adjacent_complementary_angle(HJK,KJM)",
+    "circle_property_chord_perpendicular_bisect_chord(F,FJ,KG)",
+    "line_addition(GJ,JK)",
+    "radius_of_circle_property_length_equal(FM,F)",
+    "radius_of_circle_property_length_equal(FG,F)",
+    "sine_theorem(GFJ)",
+    "arc_property_center_angle(FHG,F)"
+  ]
+}

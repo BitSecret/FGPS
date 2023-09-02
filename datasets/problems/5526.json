@@ -1,0 +1,38 @@
+{
+  "problem_id": 5526,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-6577",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆心角为60°的扇形中,弦AB=4,则扇形面积为()",
+  "problem_text_en": "As shown in the figure, in the sector with the central angle of N_0, chord AB = N_1, then the area of the sector is ()",
+  "problem_img": "5526.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DB,BC)",
+    "Shape(BA,CAB)",
+    "Shape(AC,CB,CBA)",
+    "Collinear(ADB)",
+    "Cocircular(C,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(C,C)",
+    "PerpendicularBetweenLine(AD,CD)",
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(MeasureOfAngle(BCA),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfSector(CAB))",
+  "problem_answer": "8/3*pi",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(CA,C)",
+    "radius_of_circle_property_length_equal(CB,C)",
+    "isosceles_triangle_judgment_line_equal(CAB)",
+    "altitude_of_triangle_judgment(CD,CAB)",
+    "isosceles_triangle_property_line_coincidence(CAB,D)",
+    "line_addition(AD,DB)",
+    "angle_addition(BCD,DCA)",
+    "sine_theorem(ADC)",
+    "arc_property_center_angle(CAB,C)",
+    "sector_area_formula(CAB)"
+  ]
+}

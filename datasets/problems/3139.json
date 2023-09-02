@@ -1,0 +1,45 @@
+{
+  "problem_id": 3139,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-396",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知a、b、c、d四条直线,a∥b,c∥d,∠1=110°,则∠2等于()",
+  "problem_text_en": "As shown in the figure, given four straight lines a, b, c, d, a ∥ b, c ∥ d, ∠1 = N_0, then ∠2 is equal to ()",
+  "problem_img": "3139.png",
+  "construction_cdl": [
+    "Shape(CD,DA)",
+    "Shape(AD,DE)",
+    "Shape(DE,EB)",
+    "Shape(BE,EF)",
+    "Shape(HD,DC)",
+    "Shape(FE,EI)",
+    "Shape(GH,HD)",
+    "Shape(EI,IJ)",
+    "Shape(KH,HG)",
+    "Shape(IH,HK)",
+    "Shape(LI,IH)",
+    "Shape(JI,IL)",
+    "Shape(DH,HI,IE,ED)",
+    "Collinear(CDEF)",
+    "Collinear(GHIJ)",
+    "Collinear(ADHK)",
+    "Collinear(BEIL)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CDA),110)",
+    "ParallelBetweenLine(CF,GJ)",
+    "ParallelBetweenLine(KA,LB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EIJ))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(KA,LB,D)",
+    "parallel_property_collinear_extend(BL,AD,E)",
+    "parallel_property_corresponding_angle(DA,EB,C)",
+    "adjacent_complementary_angle(DEB,BEF)",
+    "parallel_property_collinear_extend(CF,GJ,E)",
+    "parallel_property_collinear_extend(JG,FE,I)",
+    "parallel_property_corresponding_angle(EF,IJ,B)"
+  ]
+}

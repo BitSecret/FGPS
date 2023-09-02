@@ -1,0 +1,38 @@
+{
+  "problem_id": 5334,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5559",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点O是△ABC的内心,若∠A=70°,则∠BOC的度数是()",
+  "problem_text_en": "As shown in the figure, point O is the incenter of △ABC, if ∠A = N_0, then the degree of ∠BOC is ()",
+  "problem_img": "5334.png",
+  "construction_cdl": [
+    "Shape(AD,OED,EA)",
+    "Shape(ON,ONE,OED,ODM,MO)",
+    "Shape(OM,OMF,OFN,NO)",
+    "Shape(ODM,DB,BM)",
+    "Shape(OMF,MB,BF)",
+    "Shape(OFN,FC,CN)",
+    "Shape(ONE,NC,CE)",
+    "Collinear(ADB)",
+    "Collinear(BFC)",
+    "Collinear(AEC)",
+    "Collinear(BMO)",
+    "Collinear(ONC)",
+    "Cocircular(O,DMFNE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsIncenterOfTriangle(O,ABC)",
+    "Equal(MeasureOfAngle(CAB),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "125",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(ABO,OBC)",
+    "angle_addition(BCO,OCA)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 2950,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-138",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AD为△ABC的角平分线,BE为△ABC的高,∠C=70°,∠ABC=48°,那么∠3是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AD is the angle bisector of △ABC, BE is the height of △ABC, ∠C = N_0, ∠ABC = N_1, then ∠3 is () ",
+  "problem_img": "2950.png",
+  "construction_cdl": [
+    "Shape(CE,EF,FD,DC)",
+    "Shape(EA,AF,FE)",
+    "Shape(FA,AB,BF)",
+    "Shape(FB,BD,DF)",
+    "Collinear(EFB)",
+    "Collinear(AFD)",
+    "Collinear(CEA)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DCE),70)",
+    "Equal(MeasureOfAngle(ABC),48)",
+    "IsBisectorOfAngle(AD,EAB)",
+    "IsAltitudeOfTriangle(BE,BCA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DFB))",
+  "problem_answer": "59",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(EAF,FAB)",
+    "triangle_property_angle_sum(ABE)",
+    "triangle_property_angle_sum(ABF)",
+    "adjacent_complementary_angle(DFB,BFA)"
+  ]
+}

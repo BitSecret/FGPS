@@ -1,0 +1,35 @@
+{
+  "problem_id": 6221,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8814",
+  "problem_level": 1,
+  "problem_text_cn": "如图,若AB是⊙O的直径,CD是⊙O的弦,∠ABD=55°,则∠BCD的度数为()",
+  "problem_text_en": "As shown in the figure, if AB is the diameter of ⊙O, CD is the chord of ⊙O, ∠ABD = N_0, then the degree of ∠BCD is ()",
+  "problem_img": "6221.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(AO,OE,ED,DA)",
+    "Shape(OAC,CE,EO,OA)",
+    "Shape(OCB,BC)",
+    "Shape(EC,CB,BE)",
+    "Shape(OBD,DB)",
+    "Shape(DE,EB,BD)",
+    "Collinear(AOEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABD),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCB))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(AOB,O)",
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(OBD,C)",
+    "triangle_property_angle_sum(DAB)"
+  ]
+}

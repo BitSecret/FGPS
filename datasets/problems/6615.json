@@ -1,0 +1,31 @@
+{
+  "problem_id": 6615,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9608",
+  "problem_level": 1,
+  "problem_text_cn": "如图,把直角三角板的直角顶点O放在破损玻璃镜的圆周上,两直角边与圆弧分别交于点M、N,量得OM=8cm,ON=6cm,则该圆玻璃镜的半径是()",
+  "problem_text_en": "As shown in the figure, the right-angled vertex O of the right-angled triangle is placed on the perimeter of the broken glass mirror, and the two right-angled sides and the arc intersect at the points M and N respectively, and the measurement is OM = N_0, ON = N_1, then the radius of the round glass mirror is()",
+  "problem_img": "6615.png",
+  "construction_cdl": [
+    "Shape(OM,EMO)",
+    "Shape(NO,EON)",
+    "Shape(MN,ONM)",
+    "Shape(ON,NM,MO)",
+    "Cocircular(E,ONM)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OM),8)",
+    "Equal(LengthOfLine(ON),6)",
+    "Equal(MeasureOfAngle(MON),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(E))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(MON)",
+    "right_triangle_property_pythagorean(MON)",
+    "diameter_of_circle_judgment_right_angle(MON,E)",
+    "diameter_of_circle_property_length_equal(NM,E)",
+    "circle_property_length_of_radius_and_diameter(E)"
+  ]
+}

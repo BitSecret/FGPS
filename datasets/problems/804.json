@@ -1,0 +1,36 @@
+{
+  "problem_id": 804,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-830",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "804.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DB,BC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),y)",
+    "Equal(LengthOfLine(BC),z)",
+    "Equal(LengthOfLine(CD),x)",
+    "Equal(LengthOfLine(AD),9)",
+    "Equal(LengthOfLine(DB),16)",
+    "PerpendicularBetweenLine(AD,CD)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ADC,CDB)",
+    "right_triangle_judgment_angle(ADC)",
+    "right_triangle_judgment_angle(CDB)",
+    "right_triangle_judgment_angle(BCA)",
+    "line_addition(AD,DB)",
+    "right_triangle_property_pythagorean(ADC)",
+    "right_triangle_property_pythagorean(CDB)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": 5190,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5184",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在半径为10的⊙O中,半径OC垂直于弦AB于点D,AB=16,则CD的长为()",
+  "problem_text_en": "As shown in the figure, in the ⊙O with a radius of N_0, the radius OC is perpendicular to the chord AB to the point D, AB = N_1, then the length of CD is ()",
+  "problem_img": "5190.png",
+  "construction_cdl": [
+    "Shape(OAB,BD,DO,OA)",
+    "Shape(OBC,CD,DB)",
+    "Shape(OCA,AD,DC)",
+    "Shape(AO,OD,DA)",
+    "Collinear(ADB)",
+    "Collinear(CDO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OD,AD)",
+    "Equal(RadiusOfCircle(O),10)",
+    "Equal(LengthOfLine(AB),16)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "adjacent_complementary_angle(BDO,ODA)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OD,BA)",
+    "line_addition(AD,DB)",
+    "right_triangle_judgment_angle(ODA)",
+    "right_triangle_property_pythagorean(ODA)",
+    "line_addition(CD,DO)"
+  ]
+}

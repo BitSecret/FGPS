@@ -1,5 +1,5 @@
 from solver.problem.problem import Problem
-from solver.aux_tools.parser import FormalLanguageParser as FLParser
+from solver.aux_tools.parser import GDLParser, CDLParser
 from solver.aux_tools.parser import InverseParser as IvParser
 from solver.core.engine import EquationKiller as EqKiller
 from solver.core.engine import GeometryPredicateLogic as GeoLogic
@@ -226,8 +226,8 @@ class ForwardSearcher:
         :param max_depth: max search depth.
         :param strategy: <str>, 'df' or 'bf', use deep-first or breadth-first.
         """
-        self.predicate_GDL = FLParser.parse_predicate(predicate_GDL)
-        self.theorem_GDL = FLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
+        self.predicate_GDL = GDLParser.parse_predicate(predicate_GDL)
+        self.theorem_GDL = GDLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
         self.max_depth = max_depth
         self.strategy = strategy
 
@@ -257,7 +257,7 @@ class ForwardSearcher:
         """Init and return a problem by problem_CDL."""
         s_start_time = time.time()
         problem = Problem()
-        problem.load_problem_by_fl(self.predicate_GDL, FLParser.parse_problem(problem_CDL))  # load problem
+        problem.load_problem_by_fl(self.predicate_GDL, CDLParser.parse_problem(problem_CDL))  # load problem
         EqKiller.solve_equations(problem)
         problem.step("init_problem", time.time() - s_start_time)  # save applied theorem and update step
 

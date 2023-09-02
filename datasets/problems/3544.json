@@ -1,0 +1,28 @@
+{
+  "problem_id": 3544,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1172",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB与EF相交于点M,∠EMB=88°,∠1=60°,要使AB∥CD,则将直线AB绕点M逆时针旋转的度数为()",
+  "problem_text_en": "As shown in the figure, the straight line AB and EF intersect at the point M, ∠EMB = N_0, ∠1 = N_1, to make AB ∥ CD, the degree of rotation of the straight line AB counterclockwise around the point M is ()",
+  "problem_img": "3544.png",
+  "construction_cdl": [
+    "Shape(EM,MH)",
+    "Shape(HM,MB)",
+    "Shape(BM,MC)",
+    "Shape(MC,CD)",
+    "Collinear(EMC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EMB),88)",
+    "Equal(MeasureOfAngle(MCD),60)",
+    "ParallelBetweenLine(MH,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(HMB))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(MH,CD,E)",
+    "angle_addition(EMH,HMB)"
+  ]
+}

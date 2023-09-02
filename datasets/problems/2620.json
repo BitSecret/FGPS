@@ -1,0 +1,33 @@
+{
+  "problem_id": 2620,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-2751",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If \\frac { I J } { X J } = \\frac { H J } { Y J }, m \\angle W X J = 130 and m \\angle W Z G = 20, find m \\angle Y I Z.",
+  "problem_img": "2620.png",
+  "construction_cdl": [
+    "Shape(JH,HI,IJ)",
+    "Shape(WX,XH)",
+    "Shape(IY,YZ,ZI)",
+    "Shape(HX,XY,YI,IH)",
+    "Collinear(HIZ)",
+    "Collinear(XHJ)",
+    "Collinear(JIY)",
+    "Collinear(WXYZ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(Mul(LengthOfLine(JH),LengthOfLine(JX)),Mul(LengthOfLine(JI),LengthOfLine(JY)))",
+    "Equal(MeasureOfAngle(WXJ),130)",
+    "Equal(MeasureOfAngle(YZI),20)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ZIY))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(WXJ,JXY)",
+    "mirror_similar_triangle_judgment_sas(JHI,JXY)",
+    "mirror_similar_triangle_property_angle_equal(IJH,XYJ)",
+    "vertical_angle(HIJ,ZIY)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 4439,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3397",
+  "problem_level": 1,
+  "problem_text_cn": "已知:如图,AB是圆O的直径,CD为弦,连AD、AC,∠CAB=55°,则∠D=()",
+  "problem_text_en": "It is known that: as shown in the figure, AB is the diameter of circle O, CD is the chord,. Connect AD, AC, ∠CAB = N_0, then ∠D = ()",
+  "problem_img": "4439.png",
+  "construction_cdl": [
+    "Shape(CE,EO,OB,BC)",
+    "Shape(CA,AE,EC)",
+    "Shape(AD,DE,EA)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Shape(DA,OAD)",
+    "Shape(BO,OE,ED,ODB)",
+    "Collinear(AEOB)",
+    "Collinear(CED)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CAB),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADC))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(BCA)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OCA,D)"
+  ]
+}

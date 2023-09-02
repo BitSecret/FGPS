@@ -1,0 +1,43 @@
+{
+  "problem_id": 5022,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4743",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD是△ABC的中线,E是AD上的一点,且AE=\\frac{1}{3}AD,CE交AB于点F．若AF=1cm,则AB=()cm．",
+  "problem_text_en": "As shown in the figure, AD is the midline of △ABC, E is a vertex on AD, and AE=\\frac{N_0}{N_1}AD, CE intersects AB at vertex F. If AF = N_2, then AB = ().",
+  "problem_img": "5022.png",
+  "construction_cdl": [
+    "Shape(AF,FE,EA)",
+    "Shape(EF,FG,GD,DE)",
+    "Shape(GB,BD,DG)",
+    "Shape(AE,EC,CA)",
+    "Shape(ED,DC,CE)",
+    "Collinear(AED)",
+    "Collinear(BDC)",
+    "Collinear(FEC)",
+    "Collinear(AFGB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DG,CF)",
+    "ParallelBetweenLine(GD,FC)",
+    "Equal(LengthOfLine(AF),1)",
+    "Equal(LengthOfLine(BG),LengthOfLine(GF))",
+    "Equal(LengthOfLine(BD),LengthOfLine(CD))",
+    "Equal(Div(LengthOfLine(AE),LengthOfLine(AD)),1/3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(AF,FG)",
+    "line_addition(AF,FB)",
+    "line_addition(AG,GB)",
+    "line_addition(FG,GB)",
+    "parallel_property_collinear_extend(FC,GD,E)",
+    "parallel_property_corresponding_angle(FC,GD,A)",
+    "parallel_property_corresponding_angle(DG,EF,A)",
+    "similar_triangle_judgment_aa(AFE,AGD)",
+    "similar_triangle_property_line_ratio(FEA,GDA)",
+    "similar_triangle_property_line_ratio(EAF,DAG)"
+  ]
+}

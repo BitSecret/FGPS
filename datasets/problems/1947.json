@@ -1,0 +1,37 @@
+{
+  "problem_id": 1947,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2026",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the variable of b to the nearest tenth. Assume that segments that appear to be tangent are tangent.",
+  "problem_img": "1947.png",
+  "construction_cdl": [
+    "Shape(GB,BF,HGF)",
+    "Shape(HGF,FA,AG)",
+    "Shape(HFD,DA,AF)",
+    "Shape(HDE,EA,AD)",
+    "Shape(HEG,GA,AE)",
+    "Collinear(GAD)",
+    "Collinear(BFAE)",
+    "Cocircular(H,EGFD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsTangentOfCircle(BG,H)",
+    "Equal(LengthOfLine(AE),6)",
+    "Equal(LengthOfLine(AG),b)",
+    "Equal(LengthOfLine(AD),8)",
+    "Equal(LengthOfLine(AF),a)",
+    "Equal(LengthOfLine(BG),10)",
+    "Equal(LengthOfLine(BF),4)"
+  ],
+  "goal_cdl": "Value(b)",
+  "problem_answer": "11.25",
+  "theorem_seqs": [
+    "circle_property_circular_power_tangent_and_segment_line(BG,BFE,H)",
+    "line_addition(BF,FE)",
+    "line_addition(FA,AE)",
+    "circle_property_circular_power_chord_and_chord(EAF,GAD,H)"
+  ]
+}

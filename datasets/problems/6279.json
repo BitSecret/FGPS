@@ -1,0 +1,29 @@
+{
+  "problem_id": 6279,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-8953",
+  "problem_level": 1,
+  "problem_text_cn": "如图．⊙O的半径为5．AB和⊙O切于点B．OA=13．则AB=()",
+  "problem_text_en": "As shown in the figure. The radius of ⊙O is N_0. AB ia tangent to ⊙O at point B. OA = N_1. Then AB = ()",
+  "problem_img": "6279.png",
+  "construction_cdl": [
+    "Shape(OC,OCB,BO)",
+    "Shape(CA,AB,OCB)",
+    "Collinear(ACO)",
+    "Cocircular(O,CB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(AB,O)",
+    "Equal(LengthOfLine(OA),13)",
+    "Equal(LengthOfLine(OB),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AB,O,O)",
+    "right_triangle_judgment_angle(ABO)",
+    "right_triangle_property_pythagorean(ABO)"
+  ]
+}

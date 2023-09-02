@@ -1,0 +1,29 @@
+{
+  "problem_id": 5801,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7740",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CD,AD与BC交于点O,已知AB=2,CD=3,则△AOB与△COD的面积比是()",
+  "problem_text_en": "As shown in the figure, AB ∥ CD, AD and BC intersect at point O, given that AB = N_0, CD = N_1, then the area ratio of △AOB to △COD is ()",
+  "problem_img": "5801.png",
+  "construction_cdl": [
+    "Shape(AO,OB,BA)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AOD)",
+    "Collinear(BOC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),2)",
+    "Equal(LengthOfLine(CD),3)",
+    "ParallelBetweenLine(AB,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(AreaOfTriangle(AOB),AreaOfTriangle(OCD)))",
+  "problem_answer": "4/9",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,CD)",
+    "similar_triangle_judgment_aa(OBA,OCD)",
+    "similar_triangle_property_line_ratio(OBA,OCD)",
+    "similar_triangle_property_area_square_ratio(OBA,OCD)"
+  ]
+}

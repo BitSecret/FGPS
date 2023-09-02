@@ -1,0 +1,36 @@
+{
+  "problem_id": 6868,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10094",
+  "problem_level": 1,
+  "problem_text_cn": "如图，点A、B、C、D、E都是⊙O上的点，AC=AE，∠B＝128°，则∠D的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6868.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(DC,OCD)",
+    "Shape(DE,ODE)",
+    "Shape(AE,OEA)",
+    "Shape(AB,BC,CD,DA)",
+    "Shape(AD,DE,EA)",
+    "Cocircular(O,ABCDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfArc(OAC),LengthOfArc(OEA))",
+    "Equal(MeasureOfAngle(ABC),128)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDE))",
+  "problem_answer": "104",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(OAC,OEA)",
+    "congruent_arc_property_measure_equal(OAC,OEA)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OEA,D)",
+    "arc_property_circumference_angle_internal(OAC,B)",
+    "arc_property_circumference_angle_internal(OCA,D)",
+    "angle_addition(CDA,ADE)"
+  ]
+}

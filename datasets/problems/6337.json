@@ -1,0 +1,35 @@
+{
+  "problem_id": 6337,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9152",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD是菱形,∠ABC=120°,AD=2,则对角线AC的长是()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is a rhombus, ∠ABC = N_0, AD = N_1, then the length of the diagonal AC is ()",
+  "problem_img": "6337.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OD)",
+    "Shape(DO,OC,CD)",
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Collinear(AOC)",
+    "Collinear(DOB)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(ABC),120)",
+    "Equal(LengthOfLine(AD),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "2*sqrt(3)",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "isosceles_triangle_judgment_line_equal(ABD)",
+    "isosceles_triangle_property_angle_equal(ABD)",
+    "angle_addition(ABD,DBC)",
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "sine_theorem(ABO)",
+    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
+    "line_addition(AO,OC)"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "problem_id": 6132,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8688",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,弦CD⊥AB,E为⁀{BC}上一点,若∠CEA=28°,则∠ABD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, chord CD ⊥ AB, E is a point of ⁀BC, if ∠CEA = N_0, then the degree of ∠ABD is ()",
+  "problem_img": "6132.png",
+  "construction_cdl": [
+    "Shape(CE,OEC)",
+    "Shape(EC,CF,FE)",
+    "Shape(FA,AG,GF)",
+    "Shape(AF,FC,OCA)",
+    "Shape(EF,FG,GO,OB,OBE)",
+    "Shape(DG,GA,OAD)",
+    "Shape(GD,DB,BO,OG)",
+    "Shape(BD,ODB)",
+    "Collinear(CFGD)",
+    "Collinear(AFE)",
+    "Collinear(AGOB)",
+    "Cocircular(O,ADBEC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(AG,CG)",
+    "PerpendicularBetweenLine(CG,BG)",
+    "PerpendicularBetweenLine(DG,AG)",
+    "PerpendicularBetweenLine(BG,DG)",
+    "Equal(MeasureOfAngle(AEC),28)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_arc(OCD,OGA)",
+    "congruent_arc_judgment_length_equal(OCA,OAD)",
+    "congruent_arc_property_measure_equal(OCA,OAD)",
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OCA,E)"
+  ]
+}

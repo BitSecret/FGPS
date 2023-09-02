@@ -1,0 +1,49 @@
+{
+  "problem_id": 860,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-889",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If m \\widehat F E = 118, m \\widehat A B = 108, m \\angle E G B = 52, and m \\angle E F B = 30. Find m \\widehat A C.",
+  "problem_img": "860.png",
+  "construction_cdl": [
+    "Shape(OEB,BE)",
+    "Shape(OE,EB,BO)",
+    "Shape(OBA,AB)",
+    "Shape(OAC,CB,BA)",
+    "Shape(GB,BC,CG)",
+    "Shape(OCF,FG,GC)",
+    "Shape(GE,EO,OB,BG)",
+    "Shape(OFE,EF)",
+    "Shape(GF,FE,EG)",
+    "Shape(OAC,AD,DC)",
+    "Collinear(DAB)",
+    "Collinear(DCGE)",
+    "Collinear(FGB)",
+    "Cocircular(O,ACFEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfArc(OFE),118)",
+    "Equal(MeasureOfArc(OBA),108)",
+    "Equal(MeasureOfAngle(BGE),52)",
+    "Equal(MeasureOfAngle(GFE),30)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(OAC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OEB,F)",
+    "arc_property_circumference_angle_external(OEB,C)",
+    "flat_angle(CGE)",
+    "angle_addition(CGB,BGE)",
+    "triangle_property_angle_sum(BCG)",
+    "arc_property_circumference_angle_external(OCF,B)",
+    "arc_property_center_angle(OEB,O)",
+    "arc_property_center_angle(OBE,O)",
+    "arc_addition_measure(OAC,OCE)",
+    "arc_addition_measure(OBA,OAE)",
+    "arc_addition_measure(OCF,OFE)",
+    "round_angle(BOE,EOB)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 6472,
+  "annotation": "JiaZou_2023-06-04",
+  "source": "GeoQA-9364",
+  "problem_level": 1,
+  "problem_text_cn": "如图,平行四边形ABCD的周长为20cm,AB≠AD,AC、BD相交于点0,EO⊥BD交AD于点E,则△ABE的周长为()",
+  "problem_text_en": "As shown in the figure, the perimeter of the parallelogram ABCD is N_0, AB≠AD, AC and BD intersect at point N_1, EO⊥ BD intersects at point E, then the perimeter of △ABE is ()",
+  "problem_img": "6472.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FA)",
+    "Shape(AF,FE,EA)",
+    "Shape(BO,OF,FB)",
+    "Shape(FO,OE,EF)",
+    "Shape(OB,BC,CO)",
+    "Shape(OC,CD,DO)",
+    "Shape(OD,DE,EO)",
+    "Collinear(AED)",
+    "Collinear(AFOC)",
+    "Collinear(BOD)",
+    "Collinear(BFE)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "PerpendicularBetweenLine(BO,EO)",
+    "Equal(PerimeterOfQuadrilateral(ABCD),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(ABE))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "perpendicular_bisector_judgment_per_and_mid(EO,BD)",
+    "perpendicular_bisector_property_distance_equal(EO,BD)",
+    "line_addition(AE,ED)",
+    "quadrilateral_perimeter_formula(ABCD)",
+    "triangle_perimeter_formula(BEA)"
+  ]
+}

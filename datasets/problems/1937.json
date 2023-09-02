@@ -1,0 +1,30 @@
+{
+  "problem_id": 1937,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2016",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot S, m \\angle T S R = 42. Find m \\widehat K T.",
+  "problem_img": "1937.png",
+  "construction_cdl": [
+    "Shape(STK,KS,ST)",
+    "Shape(SKE,ES,SK)",
+    "Shape(SER,RS,SE)",
+    "Shape(SRT,TS,SR)",
+    "Collinear(RSK)",
+    "Collinear(TSE)",
+    "Cocircular(S,RTKE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(S,S)",
+    "Equal(MeasureOfAngle(TSR),42)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(STK))",
+  "problem_answer": "138",
+  "theorem_seqs": [
+    "flat_angle(KSR)",
+    "angle_addition(KST,TSR)",
+    "arc_property_center_angle(STK,S)"
+  ]
+}

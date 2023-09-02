@@ -1,0 +1,44 @@
+{
+  "problem_id": 4788,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4180",
+  "problem_level": 1,
+  "problem_text_cn": "如图1,⊙O的直径AB=2,⊙O的切线CD与AB的延长线交于点C,D为切点,∠C=30°,则AD等于()",
+  "problem_text_en": "As shown in figure 1, the diameter of ⊙O AB = N_0, the tangent CD of ⊙O and the extended line of AB intersect at point C, D is the tangent point, ∠C = N_1, then AD is equal to ()",
+  "problem_img": "4788.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OD)",
+    "Shape(OBD,DO,OB)",
+    "Shape(ODA,AD)",
+    "Shape(OAB,BO,OA)",
+    "Shape(CD,OBD,BC)",
+    "Collinear(AOBC)",
+    "Cocircular(O,DAB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CD,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(DiameterOfCircle(O),2)",
+    "Equal(MeasureOfAngle(OCD),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "sqrt(3)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AOD,DOB)",
+    "triangle_property_angle_sum(DAO)",
+    "triangle_property_angle_sum(DOC)",
+    "triangle_property_angle_sum(DAC)",
+    "sine_theorem(AOD)",
+    "sine_theorem(ODA)",
+    "sine_theorem(DOC)",
+    "sine_theorem(DAC)",
+    "sine_theorem(ACD)",
+    "sine_theorem(CDA)",
+    "tangent_of_circle_property_perpendicular(CD,O,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

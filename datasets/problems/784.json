@@ -1,0 +1,31 @@
+{
+  "problem_id": 784,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-809",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find H J.",
+  "problem_img": "784.png",
+  "construction_cdl": [
+    "Shape(JH,HK,KJ)",
+    "Shape(PQ,QN,NP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(PN),8)",
+    "Equal(LengthOfLine(NQ),12)",
+    "Equal(LengthOfLine(PQ),20)",
+    "Equal(LengthOfLine(JH),4*x+7)",
+    "Equal(LengthOfLine(JK),25)",
+    "Equal(LengthOfLine(KH),6*x-2)",
+    "Equal(MeasureOfAngle(KJH),MeasureOfAngle(PQN))",
+    "Equal(MeasureOfAngle(JHK),MeasureOfAngle(QNP))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(HJ))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "similar_triangle_judgment_aa(KJH,PQN)",
+    "similar_triangle_property_line_ratio(KJH,PQN)",
+    "similar_triangle_property_line_ratio(HKJ,NPQ)"
+  ]
+}

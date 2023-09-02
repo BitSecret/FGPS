@@ -1,0 +1,33 @@
+{
+  "problem_id": 6327,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9131",
+  "problem_level": 1,
+  "problem_text_cn": "如图,菱形ABCD的周长为24cm,对角线AC、BD相交于O点,E是AD的中点,连接OE,则线段OE的长等于()",
+  "problem_text_en": "As shown in the figure, the perimeter of the diamond ABCD is N_0, the diagonal AC and BD intersect at point O, and E is the midpoint of AD, connecting OE, then the length of the line segment OE is equal to ()",
+  "problem_img": "6327.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OE,EA)",
+    "Shape(EO,OD,DE)",
+    "Shape(OB,BC,CO)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AED)",
+    "Collinear(AOC)",
+    "Collinear(BOD)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(PerimeterOfQuadrilateral(ABCD),24)",
+    "IsMidpointOfLine(E,AD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OE))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "quadrilateral_perimeter_formula(ABCD)",
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "midsegment_of_triangle_judgment_midpoint(EO,DAB)",
+    "midsegment_of_triangle_property_length(EO,DAB)"
+  ]
+}

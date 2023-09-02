@@ -1,0 +1,34 @@
+{
+  "problem_id": 5101,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4924",
+  "problem_level": 1,
+  "problem_text_cn": "如图,C、D是线段AB上的两个点,CD=3cm,M是AC的中点,N是DB的中点,AB=9.8cm,那么线段MN的长等于()",
+  "problem_text_en": "As shown in the figure, C and D are two points on the line segment AB, CD = N_0, M is the midpoint of AC, N is the midpoint of DB, AB = N_1, then the length of the line segment MN is equal to ()",
+  "problem_img": "5101.png",
+  "construction_cdl": [
+    "Collinear(AMCDNB)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(M,AC)",
+    "IsMidpointOfLine(N,DB)",
+    "Equal(LengthOfLine(CD),3)",
+    "Equal(LengthOfLine(AB),9.8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(MN))",
+  "problem_answer": "6.4",
+  "theorem_seqs": [
+    "line_addition(AM,MC)",
+    "line_addition(AM,MD)",
+    "line_addition(AM,MN)",
+    "line_addition(AM,MB)",
+    "line_addition(AC,CD)",
+    "line_addition(AC,CN)",
+    "line_addition(AC,CB)",
+    "line_addition(AD,DN)",
+    "line_addition(AD,DB)",
+    "line_addition(AN,NB)",
+    "line_addition(MC,CD)"
+  ]
+}

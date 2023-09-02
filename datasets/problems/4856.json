@@ -1,0 +1,33 @@
+{
+  "problem_id": 4856,
+  "annotation": "RunanWang_2023-05-21",
+  "source": "GeoQA-4354",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的弦,AC是⊙O的切线,A为切点,BC经过圆心．若∠B=25°,则∠C的大小等于()",
+  "problem_text_en": "As shown in the figure, AB is the chord of ⊙O, AC is the tangent of ⊙O, A is the tangent point, and BC passes through the center of the circle. If ∠B = N_0, then the size of ∠C is equal to ()",
+  "problem_img": "4856.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OM,OMA)",
+    "Shape(OMA,MC,CA)",
+    "Shape(MO,OB,BM)",
+    "Collinear(BOMC)",
+    "Cocircular(O,ABM)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "IsTangentOfCircle(CA,O)",
+    "Equal(MeasureOfAngle(ABC),25)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_center_angle(OMA,O)",
+    "arc_property_circumference_angle_external(OMA,B)",
+    "tangent_of_circle_property_perpendicular(CA,O,O)",
+    "triangle_property_angle_sum(AOC)"
+  ]
+}

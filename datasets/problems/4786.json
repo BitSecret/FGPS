@@ -1,0 +1,38 @@
+{
+  "problem_id": 4786,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4178",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,C为⊙O外一点,过点C作⊙O的切线,切点为B,连结AC交⊙O于D,∠C=38°．点E在AB右侧的半圆上运动(不与A、B重合),则∠AED的大小是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C is a vertex outside of ⊙O, crossing vertex C is the tangent of ⊙O, and the tangent vertex is B, connecting AC to ⊙O and D, ∠C = N_0. vertex E moves on the semicircle on the right edge of AB (not coincident with A and B), then the size of ∠AED is ()",
+  "problem_img": "4786.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BO,OA)",
+    "Shape(ODB,BD)",
+    "Shape(OBE,EA,AO,OB)",
+    "Shape(OEA,AE)",
+    "Shape(OAD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(DC,CB,ODB)",
+    "Collinear(AOB)",
+    "Collinear(CDA)",
+    "Cocircular(O,DBEA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CB,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(DCB),38)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DEA))",
+  "problem_answer": "38",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(ADB,O)",
+    "tangent_of_circle_property_perpendicular(CB,O,O)",
+    "triangle_property_angle_sum(ADB)",
+    "triangle_property_angle_sum(BAC)",
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OAD,E)"
+  ]
+}

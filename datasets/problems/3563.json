@@ -1,0 +1,33 @@
+{
+  "problem_id": 3563,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1193",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的弦,PA是⊙O的切线,若∠PAB=40°,则∠AOB=()",
+  "problem_text_en": "As shown in the figure, AB is the chord of ⊙O, PA is the tangent of ⊙O, if ∠PAB = N_0, then ∠AOB = ()",
+  "problem_img": "3563.png",
+  "construction_cdl": [
+    "Shape(AP,PB,OAB)",
+    "Shape(BA,OAB)",
+    "Shape(AB,BO,OA)",
+    "Shape(OB,OBA,AO)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(PA,O)",
+    "Equal(MeasureOfAngle(BAP),40)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "angle_addition(OAB,BAP)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(ABO)"
+  ]
+}

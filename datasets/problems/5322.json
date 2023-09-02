@@ -1,0 +1,33 @@
+{
+  "problem_id": 5322,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5544",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在边长为1的正方形网格中,连接格点D、N和E、C,DN和EC相交于点P,tan∠CPN为()",
+  "problem_text_en": "As shown in the figure, in a square grid with edge length N_0. Connect grid points D, N and E, C, DN and EC intersect at point P, then tan∠CPN is ()",
+  "problem_img": "5322.png",
+  "construction_cdl": [
+    "Shape(DP,PC,CD)",
+    "Shape(CP,PN,NC)",
+    "Shape(PE,EN,NP)",
+    "Collinear(DPN)",
+    "Collinear(CPE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CN),1)",
+    "Equal(LengthOfLine(DC),3)",
+    "Equal(MeasureOfAngle(CEN),45)",
+    "ParallelBetweenLine(DC,EN)",
+    "RightTriangle(NCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Tan(MeasureOfAngle(CPN)))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "right_triangle_property_pythagorean(NCD)",
+    "sine_theorem(NCD)",
+    "parallel_property_alternate_interior_angle(DC,EN)",
+    "triangle_property_angle_sum(PEN)",
+    "adjacent_complementary_angle(CPN,NPE)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 5536,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6711",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆心角都是90°的扇形OAB与扇形OCD叠放在一起,OA=3,OC=1,分别连接AC、BD,则图中阴影部分的面积为()",
+  "problem_text_en": "As shown in the figure, the sector OAB and the sector OCD whose central angles are all N_0 are stacked together, OA = N_1, OC = N_2, respectively connect AC and BD, then the area of ​​the shaded part in the figure is ()",
+  "problem_img": "5536.png",
+  "construction_cdl": [
+    "Shape(OB,OBA,AO)",
+    "Shape(OA,OAB,BO)",
+    "Shape(QD,QDC,CQ)",
+    "Shape(QC,QCD,DQ)",
+    "Cocircular(O,BA)",
+    "Cocircular(Q,DC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsCentreOfCircle(Q,Q)",
+    "Equal(LengthOfLine(OA),3)",
+    "Equal(LengthOfLine(QC),1)",
+    "Equal(MeasureOfAngle(AOB),90)",
+    "Equal(MeasureOfAngle(CQD),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(AreaOfSector(OBA),AreaOfSector(QDC)))",
+  "problem_answer": "2*pi",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(QC,Q)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_center_angle(QDC,Q)",
+    "sector_area_formula(OBA)",
+    "sector_area_formula(QDC)"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "problem_id": 573,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-587",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the triangle.",
+  "problem_img": "573.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(AD,DB,BA)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),13)",
+    "Equal(LengthOfLine(DB),29)",
+    "Equal(LengthOfLine(CD),6)",
+    "PerpendicularBetweenLine(CD,AD)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(ADB))",
+  "problem_answer": "71.741",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDA,ADB)",
+    "right_triangle_judgment_angle(CDA)",
+    "right_triangle_judgment_angle(ADB)",
+    "right_triangle_property_pythagorean(CDA)",
+    "right_triangle_property_pythagorean(ADB)",
+    "triangle_perimeter_formula(ADB)"
+  ]
+}

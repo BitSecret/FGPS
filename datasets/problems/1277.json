@@ -1,0 +1,25 @@
+{
+  "problem_id": 1277,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1323",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1277.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),8)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(AB),x)",
+    "PerpendicularBetweenLine(CA,BA)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4*sqrt(3)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CAB)",
+    "right_triangle_property_pythagorean(CAB)"
+  ]
+}

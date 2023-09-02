@@ -1,0 +1,32 @@
+{
+  "problem_id": 4880,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4403",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线BC与⊙O相切于点A,AD是⊙O的弦,连接OD,若∠DAC=50°,则∠ODA的度数为()",
+  "problem_text_en": "As shown in the figure, the straight line BC is tangent to ⊙O at point A, AD is the chord of ⊙O. Connect OD, if ∠DAC = N_0, then the degree of ∠ODA is ()",
+  "problem_img": "4880.png",
+  "construction_cdl": [
+    "Shape(AO,OD,ODA)",
+    "Shape(DO,OA,AD)",
+    "Shape(DA,OAD)",
+    "Shape(AC,CD,OAD)",
+    "Cocircular(O,AD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CA,O)",
+    "Equal(MeasureOfAngle(DAC),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADO))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(CA,O,O)",
+    "angle_addition(OAD,DAC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OAD)",
+    "isosceles_triangle_property_angle_equal(OAD)"
+  ]
+}

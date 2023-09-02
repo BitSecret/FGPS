@@ -1,0 +1,32 @@
+{
+  "problem_id": 6443,
+  "annotation": "JiaZou_2023-06-04",
+  "source": "GeoQA-9319",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,点E是DC边上一点,连接AE、BE,已知AE是∠DAB的平分线,BE是∠CBA的平分线,若AE=3,BE=2,则三角形ABE的面积为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, point E is a point on the side of DC, connecting AE and BE. It is known that AE is the bisector of ∠DAB, and BE is the bisector of ∠CBA. If AE = N_0, BE = N_1, it is parallel The area of ​​the Triangle ABE is ()",
+  "problem_img": "6443.png",
+  "construction_cdl": [
+    "Shape(DA,AE,ED)",
+    "Shape(EA,AB,BE)",
+    "Shape(EB,BC,CE)",
+    "Collinear(DEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsBisectorOfAngle(AE,DAB)",
+    "IsBisectorOfAngle(BE,ABC)",
+    "Equal(LengthOfLine(AE),3)",
+    "Equal(LengthOfLine(BE),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(ABE))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(AD,BC)",
+    "angle_addition(DAE,EAB)",
+    "angle_addition(ABE,EBC)",
+    "triangle_property_angle_sum(ABE)",
+    "triangle_area_formula_sine(EAB)"
+  ]
+}

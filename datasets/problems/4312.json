@@ -1,0 +1,37 @@
+{
+  "problem_id": 4312,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3143",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的弦,AB=6,点C是⊙O上的一个动点,且∠ACB=45°,若点M、N分别是AB、BC的中点,则MN长的最大值是()",
+  "problem_text_en": "As shown in the figure, AB is the chord of ⊙O, AB = N_0, point C is a moving point on ⊙O, and ∠ACB = N_1, if points M and N are the midpoints of AB and BC, then the maximum value of the length of MN is ()",
+  "problem_img": "4312.png",
+  "construction_cdl": [
+    "Shape(AO,OC,OCA)",
+    "Shape(OA,AM,MN,NC,CO)",
+    "Shape(MB,BN,NM)",
+    "Shape(CN,NB,OBC)",
+    "Shape(BM,MA,OAB)",
+    "Collinear(COA)",
+    "Collinear(CNB)",
+    "Collinear(AMB)",
+    "Cocircular(O,CAB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(MeasureOfAngle(BCA),45)",
+    "IsMidpointOfLine(N,CB)",
+    "IsMidpointOfLine(M,AB)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AC,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(MN))",
+  "problem_answer": "3*sqrt(2)",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(ABC,O)",
+    "sine_theorem(ABC)",
+    "midsegment_of_triangle_judgment_midpoint(NM,BCA)",
+    "midsegment_of_triangle_property_length(NM,BCA)"
+  ]
+}

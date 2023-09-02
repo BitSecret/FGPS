@@ -1,0 +1,41 @@
+{
+  "problem_id": 6889,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10120",
+  "problem_level": 1,
+  "problem_text_cn": "如图，AB是⊙O的直径，C，D是⊙O上的两点，且点C为优弧BAD的中点，连接CD，CB，OD，CD与AB交于点F．若∠ABC＝20°，则∠AOD的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6889.png",
+  "construction_cdl": [
+    "Shape(OCA,AF,FC)",
+    "Shape(OC,CF,FO)",
+    "Shape(CO,OB,BC)",
+    "Shape(OBC,CB)",
+    "Shape(FA,OAD,DF)",
+    "Shape(OF,FD,DO)",
+    "Shape(BO,OD,ODB)",
+    "Collinear(AFOB)",
+    "Collinear(CFD)",
+    "Cocircular(O,CADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(ABC),20)",
+    "IsMidpointOfArc(C,OBD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DOA))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCA,O)",
+    "arc_property_center_angle(OCD,O)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_addition_measure(OBC,OCA)",
+    "flat_angle(AOB)",
+    "angle_addition(DOF,FOC)",
+    "congruent_arc_judgment_length_equal(OCD,OBC)",
+    "congruent_arc_property_measure_equal(OCD,OBC)"
+  ]
+}

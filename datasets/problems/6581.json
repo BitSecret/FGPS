@@ -1,0 +1,43 @@
+{
+  "problem_id": 6581,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9549",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,AC、BD相交于点O,点E、F分别在边AD、BC上,EF经过点O．如果AB=3,BC=5,EF=AB,那么四边形CDEF的周长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, AC and BD intersect at point O, points E and F are on edges AD and BC respectively, and EF passes through point O. If AB = N_0, BC = N_1, EF = AB, then the perimeter of the quadrilateral CDEF is ()",
+  "problem_img": "6581.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(EA,AO,OE)",
+    "Shape(OB,BF,FO)",
+    "Shape(EO,OD,DE)",
+    "Shape(OF,FC,CO)",
+    "Shape(DO,OC,CD)",
+    "Collinear(AED)",
+    "Collinear(BFC)",
+    "Collinear(AOC)",
+    "Collinear(BOD)",
+    "Collinear(EOF)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),5)",
+    "Equal(LengthOfLine(EF),LengthOfLine(AB))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(EFCD))",
+  "problem_answer": "11",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AD,BC,E)",
+    "parallel_property_collinear_extend(CB,EA,F)",
+    "parallel_property_alternate_interior_angle(AE,FC)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "congruent_triangle_judgment_aas(OFC,OEA)",
+    "congruent_triangle_property_line_equal(OFC,OEA)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "line_addition(AE,ED)",
+    "quadrilateral_perimeter_formula(EFCD)"
+  ]
+}

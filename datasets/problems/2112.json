@@ -1,0 +1,48 @@
+{
+  "problem_id": 2112,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2202",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. Round to the nearest tenth.",
+  "problem_img": "2112.png",
+  "construction_cdl": [
+    "Shape(OH,FBH,BO)",
+    "Shape(PB,FJB,JP)",
+    "Shape(FJB,FBH,HF,FJ)",
+    "Shape(FH,FHG,FGJ,JF)",
+    "Shape(HN,NG,FHG)",
+    "Shape(GM,MJ,FGJ)",
+    "Collinear(OBP)",
+    "Collinear(OHN)",
+    "Collinear(NGM)",
+    "Collinear(MJP)",
+    "Collinear(HFJ)",
+    "Cocircular(F,BHGJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(HJ,F)",
+    "IsCentreOfCircle(F,F)",
+    "IsTangentOfCircle(NH,F)",
+    "Equal(LengthOfLine(ON),18)",
+    "Equal(LengthOfLine(MN),18)",
+    "PerpendicularBetweenLine(HN,GN)",
+    "PerpendicularBetweenLine(GM,JM)",
+    "PerpendicularBetweenLine(JP,BP)",
+    "PerpendicularBetweenLine(BO,HO)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfQuadrilateral(ONMP),AreaOfCircle(F)))",
+  "problem_answer": "69.53",
+  "theorem_seqs": [
+    "parallelogram_judgment_angle_and_angle(ONMP)",
+    "tangent_of_circle_property_perpendicular(NH,F,F)",
+    "quadrilateral_property_angle_sum(HNMJ)",
+    "parallelogram_judgment_angle_and_angle(HNMJ)",
+    "parallelogram_property_opposite_line_equal(NMJH)",
+    "diameter_of_circle_property_length_equal(HJ,F)",
+    "circle_property_length_of_radius_and_diameter(F)",
+    "circle_area_formula(F)",
+    "parallelogram_area_formula_sine(ONMP)"
+  ]
+}

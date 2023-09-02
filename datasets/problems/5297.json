@@ -1,0 +1,24 @@
+{
+  "problem_id": 5297,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5485",
+  "problem_level": 1,
+  "problem_text_cn": "2018年4月12日上午,中央军委在南海海域隆重举行海上阅兵,展示人民海军崭新面貌,激发强国强军坚定信念．如图,一艘补给舰位于一艘综合登陆舰P的北偏东60°方向,与综合登陆舰P的距离为40海里的A处,补给舰沿正南方向航行一段时间后,到达位于综合登陆舰P的南偏东30°方向上的B处,则此时补给舰所在位置B处与综合登陆舰P之间的距离为()",
+  "problem_text_en": "On the morning of N_1, N_2, N_0, the Central Military Commission held a grand naval parade in the South China Sea to showcase the new look of the People's Navy and inspire firm belief in a strong nation and an army. As shown in the figure, a supply ship is located in the direction N_3 east by north of an integrated landing ship P, and the distance from the integrated landing ship P is N_4 nautical miles. At B in the direction N_5 to the east of the ship P, then the distance between the position B of the supply ship and the integrated landing ship P at this time is ()",
+  "problem_img": "5297.png",
+  "construction_cdl": [
+    "Shape(PB,BA,AP)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AP),40)",
+    "Equal(MeasureOfAngle(APB),90)",
+    "Equal(MeasureOfAngle(PBA),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BP))",
+  "problem_answer": "40*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(PBA)",
+    "sine_theorem(PBA)"
+  ]
+}

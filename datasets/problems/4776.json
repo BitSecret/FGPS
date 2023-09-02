@@ -1,0 +1,36 @@
+{
+  "problem_id": 4776,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4159",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C、D在⊙O上,∠CDB=20°,过点C作⊙O的切线交AB的延长线于点E,则∠E等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, points C and D are on ⊙O, ∠CDB = N_0, cross point C to draw the tangent of ⊙O intersects the extended line of AB at point E, then ∠E is equal to ()",
+  "problem_img": "4776.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CO,OF,FC)",
+    "Shape(CF,FB,OBC)",
+    "Shape(BE,EC,OBC)",
+    "Shape(AO,OC,CA)",
+    "Shape(FD,DB,BF)",
+    "Shape(BD,ODB)",
+    "Shape(DF,FO,OA,OAD)",
+    "Collinear(CFD)",
+    "Collinear(AOFBE)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(FDB),20)",
+    "IsTangentOfCircle(EC,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BEC))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,D)",
+    "arc_property_center_angle(OBC,O)",
+    "tangent_of_circle_property_perpendicular(EC,O,O)",
+    "triangle_property_angle_sum(COE)"
+  ]
+}

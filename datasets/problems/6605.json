@@ -1,0 +1,32 @@
+{
+  "problem_id": 6605,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9591",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD是⊙O的直径,弦DE∥OA,若∠D的度数是50°,则∠C的度数是()",
+  "problem_text_en": "As shown in the figure, CD is the diameter of ⊙O, chord DE ∥ OA, if the degree of ∠D is N_0, then the degree of ∠C is ()",
+  "problem_img": "6605.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(DO,OA,OAD)",
+    "Shape(ED,ODE)",
+    "Shape(CD,DE,OEC)",
+    "Shape(OC,CA,AO)",
+    "Collinear(COD)",
+    "Cocircular(O,ADEC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CDE),50)",
+    "ParallelBetweenLine(AO,DE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AO,DE)",
+    "arc_property_center_angle(OAD,O)",
+    "arc_property_circumference_angle_external(OAD,C)"
+  ]
+}

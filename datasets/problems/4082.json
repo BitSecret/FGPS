@@ -1,0 +1,28 @@
+{
+  "problem_id": 4082,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2437",
+  "problem_level": 1,
+  "problem_text_cn": "如图,铁路口栏杆短臂长1米,长臂长12米,当短臂端点下降0.5米时,长臂端点升高()",
+  "problem_text_en": "As shown in the figure, the length of short arm of the railroad crossing railing is N_0 and the length of the long arm is N_1. When the end of the short arm is lowered by N_2, the end of the long arm is raised ()",
+  "problem_img": "4082.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(CE,ED,DC)",
+    "Collinear(ACE)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),1)",
+    "Equal(LengthOfLine(CD),12)",
+    "Equal(LengthOfLine(AB),0.5)",
+    "SimilarBetweenTriangle(CAB,CED)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(CAB,CED)",
+    "similar_triangle_property_line_ratio(ABC,EDC)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 2778,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2925",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure.",
+  "problem_img": "2778.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AD,DC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),12)",
+    "Equal(HeightOfQuadrilateral(CBAD),10)",
+    "PerpendicularBetweenLine(CB,AB)",
+    "PerpendicularBetweenLine(CB,AB)",
+    "PerpendicularBetweenLine(BA,DA)",
+    "PerpendicularBetweenLine(AD,CD)",
+    "PerpendicularBetweenLine(DC,BC)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CBAD))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "parallel_judgment_per_per(BC,AD)",
+    "parallel_judgment_per_per(AB,DC)",
+    "parallelogram_judgment_parallel_and_parallel(CBAD)",
+    "parallelogram_area_formula_common(CBAD)"
+  ]
+}

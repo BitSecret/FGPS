@@ -1,0 +1,26 @@
+{
+  "problem_id": 1482,
+  "annotation": "YanjunGuo_2023-04-09",
+  "source": "Geometry3k-1537",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the length of E F?",
+  "problem_img": "1482.png",
+  "construction_cdl": [
+    "Shape(DE,EF,FD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(FDE),42)",
+    "Equal(MeasureOfAngle(EFD),4*x+11)",
+    "Equal(LengthOfLine(FE),2*x-3)",
+    "Equal(LengthOfLine(DE),LengthOfLine(DF))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "26",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(DEF)",
+    "isosceles_triangle_property_angle_equal(DEF)",
+    "triangle_property_angle_sum(DEF)"
+  ]
+}

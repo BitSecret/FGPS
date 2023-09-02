@@ -1,0 +1,26 @@
+{
+  "problem_id": 914,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-943",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find X A.",
+  "problem_img": "914.png",
+  "construction_cdl": [
+    "Shape(XY,YA,AX)",
+    "Shape(AY,YZ,ZA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AZ),4)",
+    "PerpendicularBetweenLine(AX,YX)",
+    "PerpendicularBetweenLine(YZ,AZ)",
+    "Equal(MeasureOfAngle(XYA),MeasureOfAngle(AYZ))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(XA))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_judgment_aas(AXY,AYZ)",
+    "mirror_congruent_triangle_property_line_equal(YAX,YZA)"
+  ]
+}

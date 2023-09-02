@@ -1,0 +1,32 @@
+{
+  "problem_id": 4705,
+  "annotation": "XiaoxiaoJin_2023-05-14",
+  "source": "GeoQA-4009",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,AD,CD是弦,连接OC并延长,交过点A的切线于点B,若∠ADC=25°,则∠ABO的度数为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, AD and CD are chords. Connect OC and extend, and it intersects the tangent of point A at point B. If ∠ADC = N_0, then the degree of ∠ABO is ()",
+  "problem_img": "4705.png",
+  "construction_cdl": [
+    "Shape(CB,BA,OCA)",
+    "Shape(AO,OC,OCA)",
+    "Shape(AD,DC,CO,OA)",
+    "Shape(DA,OAD)",
+    "Shape(CD,ODC)",
+    "Collinear(OCB)",
+    "Cocircular(O,ADC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ADC),25)",
+    "IsTangentOfCircle(BA,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BA,O,O)",
+    "arc_property_center_angle(OCA,O)",
+    "arc_property_circumference_angle_external(OCA,D)",
+    "triangle_property_angle_sum(BAO)"
+  ]
+}

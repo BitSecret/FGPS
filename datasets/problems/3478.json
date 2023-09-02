@@ -1,0 +1,28 @@
+{
+  "problem_id": 3478,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1071",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BC⊥AE,垂足为C,过C作CD∥AB,若∠ECD=43°,则∠B=()",
+  "problem_text_en": "As shown in the figure, BC ⊥ AE, the foot of perpendicular is C, and the C is used as CD ∥ AB, if ∠ECD = N_0, then ∠B = ()",
+  "problem_img": "3478.png",
+  "construction_cdl": [
+    "Shape(EC,CD)",
+    "Shape(DC,CB)",
+    "Shape(CA,AB,BC)",
+    "Collinear(ACE)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(BC,AC)",
+    "ParallelBetweenLine(CD,AB)",
+    "Equal(MeasureOfAngle(ECD),43)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "47",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ECB,BCA)",
+    "angle_addition(ECD,DCB)",
+    "parallel_property_alternate_interior_angle(CD,AB)"
+  ]
+}

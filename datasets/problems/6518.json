@@ -1,0 +1,28 @@
+{
+  "problem_id": 6518,
+  "annotation": "NaZhu_2023-06-04",
+  "source": "GeoQA-9437",
+  "problem_level": 1,
+  "problem_text_cn": "如图▱ABCD中,点P在AD上,且AP:DP=1:2,若图中阴影部分的面积为3,▱ABCD的面积为()",
+  "problem_text_en": "As shown in the figure ▱ABCD, the point P is on AD, and AP:DP = N_0:N_1, if the area of ​​the shaded part in the figure is N_2, the area of ​​▱ABCD is ()",
+  "problem_img": "6518.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CP,PA)",
+    "Shape(PC,CM,MP)",
+    "Shape(DM,MC,CD)",
+    "Collinear(APMD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(Div(LengthOfLine(AP),LengthOfLine(PD)),1/2)",
+    "Equal(AreaOfTriangle(PCD),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "triangle_area_formula_sine(DPC)",
+    "line_addition(AP,PD)",
+    "parallelogram_area_formula_sine(CDAB)"
+  ]
+}

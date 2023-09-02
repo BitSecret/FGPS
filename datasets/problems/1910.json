@@ -1,0 +1,44 @@
+{
+  "problem_id": 1910,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1985",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. Round to the nearest tenth if necessary.",
+  "problem_img": "1910.png",
+  "construction_cdl": [
+    "Shape(AC,CE,EA)",
+    "Shape(BF,FD,DB)",
+    "Shape(EC,CA,AD,DF,FB,BE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(EB),10)",
+    "Equal(LengthOfLine(DB),5*sqrt(2))",
+    "Equal(LengthOfLine(EC),5)",
+    "Equal(LengthOfLine(BF),5)",
+    "Equal(LengthOfLine(EC),LengthOfLine(AC))",
+    "Equal(LengthOfLine(BF),LengthOfLine(DF))",
+    "PerpendicularBetweenLine(BE,AE)",
+    "PerpendicularBetweenLine(EA,DA)",
+    "PerpendicularBetweenLine(AD,BD)",
+    "PerpendicularBetweenLine(DB,EB)",
+    "PerpendicularBetweenLine(AC,EC)",
+    "PerpendicularBetweenLine(BF,DF)",
+    "Equal(LengthOfLine(AC),HeightOfTriangle(ACE))",
+    "Equal(LengthOfLine(BF),HeightOfTriangle(BFD))",
+    "Equal(LengthOfLine(EA),HeightOfQuadrilateral(EADB))"
+  ],
+  "goal_cdl": "Value(Sub(Sub(AreaOfQuadrilateral(EADB),AreaOfTriangle(BFD)),AreaOfTriangle(EAC)))",
+  "problem_answer": "45.710",
+  "theorem_seqs": [
+    "parallel_judgment_per_per(EB,AD)",
+    "parallel_judgment_per_per(AE,DB)",
+    "parallelogram_judgment_parallel_and_parallel(EADB)",
+    "parallelogram_property_opposite_line_equal(EADB)",
+    "parallelogram_property_opposite_line_equal(ADBE)",
+    "triangle_area_formula_common(ACE)",
+    "triangle_area_formula_common(BFD)",
+    "parallelogram_area_formula_sine(EADB)"
+  ]
+}

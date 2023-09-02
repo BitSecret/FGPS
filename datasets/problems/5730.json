@@ -1,0 +1,30 @@
+{
+  "problem_id": 5730,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7529",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE∥BC,\\frac{DE}{BC}=\\frac{2}{3},△ADE的面积是8,则四边形DBCE的面积是()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE ∥ BC, \\frac{DE}{BC}=\\frac{N_0}{N_1}, the area of ​​△ADE is N_2, then the area of ​​the quadrilateral DBCE is ()",
+  "problem_img": "5730.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(LengthOfLine(DE),2)",
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(AreaOfTriangle(ADE),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(AreaOfTriangle(ABC),AreaOfTriangle(ADE)))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "similar_triangle_judgment_aa(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_area_square_ratio(EAD,CAB)"
+  ]
+}

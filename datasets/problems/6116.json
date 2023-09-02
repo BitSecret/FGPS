@@ -1,0 +1,33 @@
+{
+  "problem_id": 6116,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8666",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C在⊙O上,∠ABC=30°,则∠OAC等于()",
+  "problem_text_en": "As shown in the figure, vertices A, B, and C are on ⊙O, ∠ABC = N_0, then ∠OAC is equal to ()",
+  "problem_img": "6116.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(BA,AO,OC,CB)",
+    "Shape(BC,OCB)",
+    "Shape(OA,AC,CO)",
+    "Shape(CA,OAC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CBA),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAC))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OAC)",
+    "isosceles_triangle_property_angle_equal(OAC)",
+    "triangle_property_angle_sum(OAC)"
+  ]
+}

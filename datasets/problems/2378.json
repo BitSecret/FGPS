@@ -1,0 +1,38 @@
+{
+  "problem_id": 2378,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2493",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot M, F L = 24, H J = 48, and m \\widehat H P = 65. Find F G.",
+  "problem_img": "2378.png",
+  "construction_cdl": [
+    "Shape(MKF,FL,LK)",
+    "Shape(MFH,HN,NM,ML,LF)",
+    "Shape(MHP,PN,NH)",
+    "Shape(MPJ,JN,NP)",
+    "Shape(MJG,GL,LM,MN,NJ)",
+    "Shape(MGK,KL,LG)",
+    "Collinear(FLG)",
+    "Collinear(HNJ)",
+    "Collinear(KLM)",
+    "Collinear(MNP)",
+    "Cocircular(M,FHPJGK)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(M,M)",
+    "Equal(LengthOfLine(FL),24)",
+    "Equal(LengthOfLine(HJ),48)",
+    "Equal(MeasureOfArc(MHP),65)",
+    "PerpendicularBetweenLine(KL,GL)",
+    "PerpendicularBetweenLine(JN,PN)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(FG))",
+  "problem_answer": "48",
+  "theorem_seqs": [
+    "line_addition(FL,LG)",
+    "adjacent_complementary_angle(KLG,GLM)",
+    "circle_property_chord_perpendicular_bisect_chord(M,ML,GF)"
+  ]
+}

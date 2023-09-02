@@ -1,0 +1,32 @@
+{
+  "problem_id": 654,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-671",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If P Q \\cong Q S, Q R \\cong R S, and m \\angle P R S = 72, what is the measure of \\angle Q P S?",
+  "problem_img": "654.png",
+  "construction_cdl": [
+    "Shape(SR,RQ,QS)",
+    "Shape(SQ,QP,PS)",
+    "Collinear(RQP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(PQ),LengthOfLine(QS))",
+    "Equal(LengthOfLine(QR),LengthOfLine(RS))",
+    "Equal(MeasureOfAngle(SRP),72)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(QPS))",
+  "problem_answer": "27",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(SRQ)",
+    "triangle_property_angle_sum(SQP)",
+    "triangle_property_angle_sum(RPS)",
+    "isosceles_triangle_judgment_line_equal(RQS)",
+    "isosceles_triangle_property_angle_equal(RQS)",
+    "isosceles_triangle_judgment_line_equal(QPS)",
+    "isosceles_triangle_property_angle_equal(QPS)",
+    "adjacent_complementary_angle(RQS,SQP)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 890,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-919",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of x.",
+  "problem_img": "890.png",
+  "construction_cdl": [
+    "Shape(AN,ANX,XA)",
+    "Shape(AX,AXN,NA)",
+    "Cocircular(A,XN)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(MeasureOfAngle(XAN),78)",
+    "Equal(LengthOfLine(XA),3)",
+    "Equal(LengthOfArc(ANX),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4.08",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(AX,A)",
+    "arc_property_center_angle(ANX,A)",
+    "arc_length_formula(ANX)"
+  ]
+}

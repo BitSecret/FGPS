@@ -1,0 +1,30 @@
+{
+  "problem_id": 5392,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5680",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AC=BC,点D在BC的延长线上,AE∥BD,点ED在AC同侧,若∠CAE=118°,则∠B的大小为()",
+  "problem_text_en": "As shown in the figure, in △ABC, AC = BC, point D is on the extended line of BC, AE ∥ BD, point ED is on the same side of AC, if ∠CAE = N_0, then the size of ∠B is ()",
+  "problem_img": "5392.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(EA,AC)",
+    "Shape(AC,CD)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),LengthOfLine(BC))",
+    "Equal(MeasureOfAngle(EAC),118)",
+    "ParallelBetweenLine(AE,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "31",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(AE,CD)",
+    "adjacent_complementary_angle(BCA,ACD)",
+    "isosceles_triangle_judgment_line_equal(CAB)",
+    "isosceles_triangle_property_angle_equal(CAB)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

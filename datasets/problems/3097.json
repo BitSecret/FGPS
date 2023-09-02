@@ -1,0 +1,35 @@
+{
+  "problem_id": 3097,
+  "annotation": "YimingHe_2023-04-23",
+  "source": "GeoQA-336",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b,直线c与直线a,b相交,若∠1=56°,则∠2等于()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, the straight line c intersects the straight lines a and b, if ∠1 = N_0, then ∠2 is equal to ()",
+  "problem_img": "3097.png",
+  "construction_cdl": [
+    "Shape(CG,GA)",
+    "Shape(AG,GD)",
+    "Shape(HG,GC)",
+    "Shape(DG,GH)",
+    "Shape(EH,HG)",
+    "Shape(GH,HF)",
+    "Shape(BH,HE)",
+    "Shape(FH,HB)",
+    "Collinear(CGD)",
+    "Collinear(EHF)",
+    "Collinear(AGHB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(CD,EF)",
+    "Equal(MeasureOfAngle(BHE),56)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AGD))",
+  "problem_answer": "56",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CD,EF,G)",
+    "parallel_property_collinear_extend(FE,GC,H)",
+    "parallel_property_corresponding_angle(HE,GC,B)",
+    "vertical_angle(AGD,HGC)"
+  ]
+}

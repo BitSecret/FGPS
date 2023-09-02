@@ -1,0 +1,36 @@
+{
+  "problem_id": 6338,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9154",
+  "problem_level": 1,
+  "problem_text_cn": "如图为菱形ABCD与△ABE的重叠情形,其中D在BE上．若AB=17,BD=16,AE=25,则DE的长度为何？()",
+  "problem_text_en": "The picture shows the overlap of diamond ABCD and △ABE, where D is on BE. If AB = N_0, BD = N_1, AE = N_2, what is the length of DE? ()",
+  "problem_img": "6338.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(BC,CO,OB)",
+    "Shape(OC,CD,DO)",
+    "Shape(AD,DE,EA)",
+    "Collinear(AOC)",
+    "Collinear(BODE)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AB),17)",
+    "Equal(LengthOfLine(BD),16)",
+    "Equal(LengthOfLine(AE),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "line_addition(BO,OD)",
+    "right_triangle_judgment_angle(AOD)",
+    "right_triangle_property_pythagorean(AOD)",
+    "right_triangle_judgment_angle(AOE)",
+    "right_triangle_property_pythagorean(AOE)",
+    "line_addition(OD,DE)"
+  ]
+}

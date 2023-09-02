@@ -1,0 +1,37 @@
+{
+  "problem_id": 6701,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9732",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的直径CD过弦EF的中点G,∠EOD=50°,∠DCF等于()",
+  "problem_text_en": "As shown in the figure, the diameter CD of ⊙O crosses the midpoint G of chord EF, ∠EOD = N_0, ∠DCF is equal to ()",
+  "problem_img": "6701.png",
+  "construction_cdl": [
+    "Shape(EO,OC,OCE)",
+    "Shape(OE,EG,GO)",
+    "Shape(CO,OG,GF,FC)",
+    "Shape(CF,OFC)",
+    "Shape(DG,GE,OED)",
+    "Shape(FG,GD,ODF)",
+    "Collinear(COGD)",
+    "Collinear(EGF)",
+    "Cocircular(O,CEDF)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "Equal(MeasureOfAngle(DOE),50)",
+    "Equal(LengthOfLine(EG),LengthOfLine(GF))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FCD))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "arc_property_center_angle(OED,O)",
+    "arc_property_circumference_angle_external(ODF,C)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OG,EF)",
+    "circle_property_chord_perpendicular_bisect_arc(OEF,OGD)",
+    "congruent_arc_judgment_length_equal(OED,ODF)",
+    "congruent_arc_property_measure_equal(OED,ODF)"
+  ]
+}

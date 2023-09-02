@@ -1,0 +1,29 @@
+{
+  "problem_id": 1244,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1285",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find b.",
+  "problem_img": "1244.png",
+  "construction_cdl": [
+    "Shape(DB,BA,AD)",
+    "Shape(DA,AC,CD)",
+    "Collinear(BAC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CD),27)",
+    "Equal(LengthOfLine(CA),b)",
+    "Equal(LengthOfLine(BD),15)",
+    "Equal(LengthOfLine(CB),28)",
+    "Equal(MeasureOfAngle(ADB),MeasureOfAngle(CDA))"
+  ],
+  "goal_cdl": "Value(b)",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "line_addition(BA,AC)",
+    "bisector_of_angle_judgment_angle_equal(DA,CDB)",
+    "bisector_of_angle_property_line_ratio(DA,CDB)"
+  ]
+}

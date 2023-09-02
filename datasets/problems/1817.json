@@ -1,0 +1,38 @@
+{
+  "problem_id": 1817,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1885",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the diameter of circle M.",
+  "problem_img": "1817.png",
+  "construction_cdl": [
+    "Shape(MYV,VW,WY)",
+    "Shape(MW,WV,VM)",
+    "Shape(MVZ,ZM,MV)",
+    "Shape(MZX,XW,WM,MZ)",
+    "Shape(MXY,YW,WX)",
+    "Collinear(VWX)",
+    "Collinear(YWMZ)",
+    "Cocircular(M,YVZX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(M,M)",
+    "Equal(LengthOfLine(WY),10.5)",
+    "Equal(LengthOfLine(VW),17)",
+    "Equal(LengthOfLine(XW),17)"
+  ],
+  "goal_cdl": "Value(DiameterOfCircle(M))",
+  "problem_answer": "38.02",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(MV,M)",
+    "radius_of_circle_property_length_equal(MY,M)",
+    "line_addition(YW,WM)",
+    "midpoint_of_line_judgment(W,VX)",
+    "circle_property_chord_perpendicular_bisect_chord(M,MW,XV)",
+    "right_triangle_judgment_angle(MWV)",
+    "right_triangle_property_pythagorean(MWV)",
+    "circle_property_length_of_radius_and_diameter(M)"
+  ]
+}

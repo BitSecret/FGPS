@@ -1,0 +1,34 @@
+{
+  "problem_id": 4728,
+  "annotation": "XiaoxiaoJin_2023-05-14",
+  "source": "GeoQA-4062",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,MN切⊙O于点A,若∠BAN=50°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed to ⊙O, MN is tangent to ⊙O at point A, if ∠BAN = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4728.png",
+  "construction_cdl": [
+    "Shape(CA,AO,OE,EC)",
+    "Shape(AC,OCA)",
+    "Shape(EO,OA,AB,BE)",
+    "Shape(BA,OAB)",
+    "Shape(CE,ED,ODC)",
+    "Shape(DE,EB,OBD)",
+    "Shape(BA,AN)",
+    "Collinear(AOED)",
+    "Collinear(CEB)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(NA,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BAN),50)",
+    "IsDiameterOfCircle(AD,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "circle_property_angle_of_osculation(OAB,N)"
+  ]
+}

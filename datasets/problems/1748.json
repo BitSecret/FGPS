@@ -1,0 +1,43 @@
+{
+  "problem_id": 1748,
+  "annotation": "NaZhu_2023-03-26",
+  "source": "Geometry3k-1813",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Points S, T, and U are the midpoints of D E, E F, and D F, respectively. Find z.",
+  "problem_img": "1748.png",
+  "construction_cdl": [
+    "Shape(ES,SA,AE)",
+    "Shape(EA,AT,TE)",
+    "Shape(SD,DA,AS)",
+    "Shape(AD,DU,UA)",
+    "Shape(TA,AF,FT)",
+    "Shape(AU,UF,FA)",
+    "Collinear(ESD)",
+    "Collinear(ETF)",
+    "Collinear(DUF)",
+    "Collinear(SAF)",
+    "Collinear(EAU)",
+    "Collinear(DAT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsMidpointOfLine(S,DE)",
+    "IsMidpointOfLine(T,EF)",
+    "IsMidpointOfLine(U,DF)",
+    "Equal(LengthOfLine(EA),y)",
+    "Equal(LengthOfLine(AT),2*x-5)",
+    "Equal(LengthOfLine(AS),4*z)",
+    "Equal(LengthOfLine(DA),6)",
+    "Equal(LengthOfLine(FA),4.6)",
+    "Equal(LengthOfLine(AU),2.9)"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "0.575",
+  "theorem_seqs": [
+    "median_of_triangle_judgment(DT,DFE)",
+    "median_of_triangle_judgment(FS,FED)",
+    "centroid_of_triangle_judgment_intersection(A,EDF,S,T)",
+    "centroid_of_triangle_property_line_ratio(A,FED,S)"
+  ]
+}

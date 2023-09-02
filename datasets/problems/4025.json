@@ -1,0 +1,49 @@
+{
+  "problem_id": 4025,
+  "annotation": "JiaZou_2023-05-07",
+  "source": "GeoQA-2167",
+  "problem_level": 1,
+  "problem_text_cn": "如图,M、F是⊙A上的两点,AM的垂直平分线与⊙A交于B、C两点,与线段AF交于D点,连接DM,若∠MBF=20°,则∠DMF=()",
+  "problem_text_en": "As shown in the figure, M and F are two points on ⊙A, the perpendicular bisector of AM and ⊙A intersects at two points B and C, and the line segment AF intersects at point D, connecting DM, if ∠MBF = N_0, then ∠DMF = ()",
+  "problem_img": "4025.png",
+  "construction_cdl": [
+    "Shape(AE,ED,DA)",
+    "Shape(EG,GI,ID,DE)",
+    "Shape(GM,MI,IG)",
+    "Shape(IM,MF,FI)",
+    "Shape(IF,FD,DI)",
+    "Shape(BG,GE,EB)",
+    "Shape(BM,MG,GB)",
+    "Shape(MB,OBM)",
+    "Shape(FM,OMF)",
+    "Shape(CD,DF,OFC)",
+    "Shape(BE,EA,AD,DC,OCB)",
+    "Collinear(BEDC)",
+    "Collinear(BGF)",
+    "Collinear(AEGM)",
+    "Collinear(ADF)",
+    "Collinear(MID)",
+    "Cocircular(A,BMFC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "IsPerpendicularBisectorOfLine(DE,AM)",
+    "Equal(MeasureOfAngle(FBM),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DMF))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(AMF,B)",
+    "arc_property_center_angle(AMF,A)",
+    "radius_of_circle_property_length_equal(AM,A)",
+    "radius_of_circle_property_length_equal(AF,A)",
+    "isosceles_triangle_judgment_line_equal(AMF)",
+    "isosceles_triangle_property_angle_equal(AMF)",
+    "triangle_property_angle_sum(AMF)",
+    "perpendicular_bisector_property_distance_equal(DE,AM)",
+    "isosceles_triangle_judgment_line_equal(DAM)",
+    "isosceles_triangle_property_angle_equal(DAM)",
+    "angle_addition(AMD,DMF)"
+  ]
+}

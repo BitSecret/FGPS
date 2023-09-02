@@ -1,0 +1,44 @@
+{
+  "problem_id": 874,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-903",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Points S, T, and U are the midpoints of D E, E F, and D F, respectively. Find x.",
+  "problem_img": "874.png",
+  "construction_cdl": [
+    "Shape(ES,SA,AE)",
+    "Shape(SD,DA,AS)",
+    "Shape(AD,DU,UA)",
+    "Shape(AU,UF,FA)",
+    "Shape(AF,FT,TA)",
+    "Shape(AT,TE,EA)",
+    "Collinear(ESD)",
+    "Collinear(DUF)",
+    "Collinear(FTE)",
+    "Collinear(EAU)",
+    "Collinear(SAF)",
+    "Collinear(DAT)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(S,DE)",
+    "IsMidpointOfLine(U,DF)",
+    "IsMidpointOfLine(T,EF)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(EA),y)",
+    "Equal(LengthOfLine(AT),2*x-5)",
+    "Equal(LengthOfLine(AB),4*z)",
+    "Equal(LengthOfLine(DA),6)",
+    "Equal(LengthOfLine(FA),4.6)",
+    "Equal(LengthOfLine(AU),2.9)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "median_of_triangle_judgment(DT,DFE)",
+    "median_of_triangle_judgment(EU,EDF)",
+    "centroid_of_triangle_judgment_intersection(A,FED,T,U)",
+    "centroid_of_triangle_property_line_ratio(A,DFE,T)"
+  ]
+}

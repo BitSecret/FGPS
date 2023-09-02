@@ -1,0 +1,24 @@
+{
+  "problem_id": 6831,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-angle-10046",
+  "problem_level": 1,
+  "problem_text_cn": "如图，在▱ABCD中，若∠A＝2∠B，则∠D的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6831.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(Mul(MeasureOfAngle(DAB),1),Mul(MeasureOfAngle(ABC),2))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(ABCD)",
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "quadrilateral_property_angle_sum(ABCD)"
+  ]
+}

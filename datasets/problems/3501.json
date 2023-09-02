@@ -1,0 +1,33 @@
+{
+  "problem_id": 3501,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1106",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,已知AB=AC,DE垂直平分AC,∠A=50°,则∠DCB的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, it is known that AB = AC, DE bisects AC perpendicularly, ∠A = N_0, then the degree of ∠DCB is ()",
+  "problem_img": "3501.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DC,CE)",
+    "Shape(DB,BC,CD)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "IsPerpendicularBisectorOfLine(DE,CA)",
+    "Equal(MeasureOfAngle(CAB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "perpendicular_bisector_property_distance_equal(DE,CA)",
+    "isosceles_triangle_judgment_line_equal(DCA)",
+    "isosceles_triangle_property_angle_equal(DCA)",
+    "angle_addition(BCD,DCA)"
+  ]
+}

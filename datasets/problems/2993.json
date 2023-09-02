@@ -1,0 +1,42 @@
+{
+  "problem_id": 2993,
+  "annotation": "NaZhu_2023-04-16",
+  "source": "GeoQA-196",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,弦AC∥半径OB,∠BOC=50°,则∠OAB的度数为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, chord AC ∥ radius OB, ∠BOC = N_0, then the degree of ∠OAB is ()",
+  "problem_img": "2993.png",
+  "construction_cdl": [
+    "Shape(OBA,AO,OB)",
+    "Shape(OAC,CA)",
+    "Shape(OCB,BD,DC)",
+    "Shape(OA,AD,DO)",
+    "Shape(OD,DB,BO)",
+    "Shape(DA,AC,CD)",
+    "Collinear(ADB)",
+    "Collinear(ODC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(OB,AC)",
+    "Equal(MeasureOfAngle(BOD),50)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(OAD))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(OB,AC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OAC)",
+    "isosceles_triangle_property_angle_equal(OAC)",
+    "triangle_property_angle_sum(OAC)",
+    "angle_addition(BOD,DOA)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

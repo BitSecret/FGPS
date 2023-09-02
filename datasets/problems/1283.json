@@ -1,0 +1,30 @@
+{
+  "problem_id": 1283,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-1329",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For the pair of similar figures, use the given areas to find the scale factor of the blue to the green figure.",
+  "problem_img": "1283.png",
+  "construction_cdl": [
+    "Shape(CE,EF,FD,DC)",
+    "Shape(EH,HF,FE)",
+    "Shape(AB,BL,LT,TA)",
+    "Shape(BG,GL,LB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenQuadrilateral(CEFD,ABLT)",
+    "Equal(LengthOfLine(GB),14)",
+    "PerpendicularBetweenLine(BG,LG)",
+    "Equal(LengthOfLine(EH),x)",
+    "PerpendicularBetweenLine(EH,FH)",
+    "Equal(AreaOfQuadrilateral(CEFD),27)",
+    "Equal(AreaOfQuadrilateral(ABLT),147)"
+  ],
+  "goal_cdl": "Value(RatioOfSimilarQuadrilateral(CEFD,ABLT))",
+  "problem_answer": "3/7",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_area_square_ratio(CEFD,ABLT)"
+  ]
+}

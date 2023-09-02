@@ -1,0 +1,52 @@
+{
+  "problem_id": 5124,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4983",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BD为△ABC的内角平分线,CE为△ABC的外角平分线,AD⊥BD于D,AE⊥CE于E,延长AD交BC的延长线于F,连接DE,设BC=2,AC=3,AB=4,则DE的长为()",
+  "problem_text_en": "As shown in the figure, BD is the bisector of inner angle of △ABC, CE is the bisector of exterior angle of △ABC, AD ⊥ BD at D, AE ⊥ CE at E, extend the extended line of AD and BC at F, connect DE, set BC = N_0 , AC = N_1, AB = N_2, then the length of DE is ()",
+  "problem_img": "5124.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(OB,BC,CO)",
+    "Shape(OC,CH,HD,DO)",
+    "Shape(DH,HE,ED)",
+    "Shape(HC,CF,FH)",
+    "Shape(EH,HF,FG,GE)",
+    "Collinear(AOC)",
+    "Collinear(ADHF)",
+    "Collinear(AEG)",
+    "Collinear(BOD)",
+    "Collinear(EHC)",
+    "Collinear(BCFG)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(BD,ABC)",
+    "IsBisectorOfAngle(CE,ACG)",
+    "PerpendicularBetweenLine(BD,AD)",
+    "PerpendicularBetweenLine(CE,AE)",
+    "Equal(LengthOfLine(BC),2)",
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(LengthOfLine(AB),4)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(FD,BD)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "1/2",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_judgment_aas(ABD,FDB)",
+    "line_addition(BC,CF)",
+    "adjacent_complementary_angle(GEC,CEA)",
+    "mirror_congruent_triangle_judgment_aas(ACE,GEC)",
+    "mirror_congruent_triangle_property_line_equal(BDA,BFD)",
+    "mirror_congruent_triangle_property_line_equal(DAB,DBF)",
+    "mirror_congruent_triangle_property_line_equal(CEA,CGE)",
+    "mirror_congruent_triangle_property_line_equal(EAC,ECG)",
+    "line_addition(CF,FG)",
+    "midsegment_of_triangle_judgment_midpoint(DE,AFG)",
+    "midsegment_of_triangle_property_length(DE,AFG)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 2253,
+  "annotation": "DengfengYue_2023-04-16",
+  "source": "Geometry3k-2355",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of x.",
+  "problem_img": "2253.png",
+  "construction_cdl": [
+    "Shape(EA,AC,CE)",
+    "Shape(AD,DB,BC,CA)",
+    "Shape(AG,GD,DA)",
+    "Shape(FC,CB,BF)",
+    "Shape(DH,HB,BD)",
+    "Collinear(EAD)",
+    "Collinear(ACF)",
+    "Collinear(CBH)",
+    "Collinear(GDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(EAC),x+15)",
+    "Equal(MeasureOfAngle(FCB),106)",
+    "Equal(MeasureOfAngle(GDA),x-10)",
+    "Equal(MeasureOfAngle(HBD),2*x-35)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "71",
+  "theorem_seqs": [
+    "flat_angle(EAD)",
+    "flat_angle(GDB)",
+    "flat_angle(HBC)",
+    "flat_angle(FCA)",
+    "angle_addition(EAC,CAD)",
+    "angle_addition(GDA,ADB)",
+    "angle_addition(HBD,DBC)",
+    "angle_addition(FCB,BCA)",
+    "quadrilateral_property_angle_sum(ADBC)"
+  ]
+}

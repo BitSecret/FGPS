@@ -1,0 +1,33 @@
+{
+  "problem_id": 4254,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-3038",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,弦AB,CD相交于点P,若∠A=55°,∠APD=80°,则∠B等于()",
+  "problem_text_en": "As shown in the figure, in ⊙O, chords AB and CD intersect at point P, if ∠A = N_0, ∠APD = N_1, then ∠B is equal to ()",
+  "problem_img": "4254.png",
+  "construction_cdl": [
+    "Shape(PC,CB,BP)",
+    "Shape(AP,PD,DA)",
+    "Shape(OAC,CP,PA)",
+    "Shape(OCB,BC)",
+    "Shape(ODA,AD)",
+    "Shape(OBD,DP,PB)",
+    "Collinear(CPD)",
+    "Collinear(APB)",
+    "Cocircular(O,CBDA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DAP),55)",
+    "Equal(MeasureOfAngle(APD),80)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBP))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(APD)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_external(OAC,D)"
+  ]
+}

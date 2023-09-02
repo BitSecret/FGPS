@@ -1,0 +1,31 @@
+{
+  "problem_id": 2471,
+  "annotation": "Yangli_2023-04-23",
+  "source": "Geometry3k-2592",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region.",
+  "problem_img": "2471.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)",
+    "Shape(AC,BCA)",
+    "Shape(AB,BC,BCA)",
+    "Cocircular(B,CA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(B,B)",
+    "Equal(LengthOfLine(BC),6)",
+    "Equal(MeasureOfAngle(ABC),240)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfSector(BAC),AreaOfTriangle(BAC)))",
+  "problem_answer": "22.110654574957625",
+  "theorem_seqs": [
+    "round_angle(CBA,ABC)",
+    "radius_of_circle_property_length_equal(BC,B)",
+    "radius_of_circle_property_length_equal(BA,B)",
+    "triangle_area_formula_sine(BAC)",
+    "arc_property_center_angle(BAC,B)",
+    "sector_area_formula(BAC)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 205,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-207",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find B E.",
+  "problem_img": "205.png",
+  "construction_cdl": [
+    "Shape(BA,AE,EB)",
+    "Shape(BE,ED,DC,CB)",
+    "Collinear(ABC)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CD),3.5)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(AC),5)",
+    "Equal(LengthOfLine(DE),3)",
+    "Equal(LengthOfLine(AE),y)",
+    "Equal(LengthOfLine(BE),x)",
+    "ParallelBetweenLine(EB,DC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BE))",
+  "problem_answer": "2.1",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(EB,DC,A)",
+    "similar_triangle_judgment_aa(BAE,CAD)",
+    "similar_triangle_property_line_ratio(EBA,DCA)",
+    "similar_triangle_property_line_ratio(AEB,ADC)"
+  ]
+}

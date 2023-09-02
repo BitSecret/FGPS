@@ -1,0 +1,32 @@
+{
+  "problem_id": 4369,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3280",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD是⊙O的弦,O是圆心,把⊙O的劣弧沿着CD对折,A是对折后劣弧上的一点,∠CAD=110°,则∠B的度数是()",
+  "problem_text_en": "As shown in the figure, CD is the chord of ⊙O, O is the center of the circle, fold the minor arc of ⊙O in half along CD, A is a point on the minor arc after folding in half, ∠CAD = N_0, then the degree of ∠B is ()",
+  "problem_img": "4369.png",
+  "construction_cdl": [
+    "Shape(CB,OBC)",
+    "Shape(CA,AD,DB,BC)",
+    "Shape(BD,ODB)",
+    "Shape(CD,DA,AC)",
+    "Shape(CE,ED,DC)",
+    "Shape(EC,OCE)",
+    "Shape(DE,OED)",
+    "Cocircular(O,CEDB)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(ACD,EDC)",
+    "Equal(MeasureOfAngle(DAC),110)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBC))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_angle_equal(ACD,EDC)",
+    "arc_property_circumference_angle_internal(OCD,E)",
+    "arc_property_circumference_angle_external(OCD,B)"
+  ]
+}

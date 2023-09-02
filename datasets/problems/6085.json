@@ -1,0 +1,36 @@
+{
+  "problem_id": 6085,
+  "annotation": "RunanWang_2023-06-04",
+  "source": "GeoQA-8605",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BD是⊙O的直径,圆周角∠CBD=20°,则圆周角∠A等于()",
+  "problem_text_en": "As shown in the figure, BD is the diameter of ⊙O, and the angel of circumference ∠CBD = N_0, then the angel of circumference ∠A is equal to ()",
+  "problem_img": "6085.png",
+  "construction_cdl": [
+    "Shape(OBA,AB)",
+    "Shape(BA,AE,EO,OB)",
+    "Shape(BO,OE,EC,CB)",
+    "Shape(OCB,BC)",
+    "Shape(EA,AD,DE)",
+    "Shape(OAD,DA)",
+    "Shape(ODC,CE,ED)",
+    "Collinear(BOED)",
+    "Collinear(AEC)",
+    "Cocircular(O,BADC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CBD),20)",
+    "IsDiameterOfCircle(BD,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BAC))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BAD,O)",
+    "arc_property_circumference_angle_external(ODC,B)",
+    "arc_property_circumference_angle_external(ODC,A)",
+    "angle_addition(BAE,EAD)"
+  ]
+}

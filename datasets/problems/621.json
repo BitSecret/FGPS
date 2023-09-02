@@ -1,0 +1,25 @@
+{
+  "problem_id": 621,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-638",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "621.png",
+  "construction_cdl": [
+    "Shape(XY,YZ,ZX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(ZX),14)",
+    "Equal(LengthOfLine(XY),7)",
+    "Equal(LengthOfLine(ZY),x)",
+    "PerpendicularBetweenLine(XY,ZY)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "7*sqrt(3)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(XYZ)",
+    "right_triangle_property_pythagorean(XYZ)"
+  ]
+}

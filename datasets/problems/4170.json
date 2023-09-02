@@ -1,0 +1,36 @@
+{
+  "problem_id": 4170,
+  "annotation": "Yangli_2023-05-07",
+  "source": "GeoQA-2811",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点O为△ABC内一点,OA=OB=OC,且∠ABO=40°,则∠ACB的大小是()",
+  "problem_text_en": "As shown in the figure, point O is a point in △ABC, OA = OB = OC, and ∠ABO = N_0, then the size of ∠ACB is ()",
+  "problem_img": "4170.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Shape(AO,OC,CA)",
+    "Shape(AC,OCA)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OA),LengthOfLine(OB))",
+    "Equal(LengthOfLine(OA),LengthOfLine(OC))",
+    "Equal(LengthOfLine(OC),LengthOfLine(OB))",
+    "Equal(MeasureOfAngle(ABO),40)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

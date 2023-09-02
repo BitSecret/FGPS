@@ -1,0 +1,28 @@
+{
+  "problem_id": 3043,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-256",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C在圆O上,∠A=60°,则∠BOC=()",
+  "problem_text_en": "As shown in the figure, vertices A, B, and C are on circle O, ∠A = N_0, then ∠BOC = ()",
+  "problem_img": "3043.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OB,OBC,CO)",
+    "Shape(OCA,AC)",
+    "Shape(AB,BO,OC,CA)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),60)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

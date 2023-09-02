@@ -1,0 +1,40 @@
+{
+  "problem_id": 1091,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-1128",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral A B C D is inscribed in \\odot Z such that m \\angle B Z A = 104, m \\widehat C B = 94, and A B \\parallel D C. Find m \\widehat A D C.",
+  "problem_img": "1091.png",
+  "construction_cdl": [
+    "Shape(BA,AZ,ZB)",
+    "Shape(BE,EC,CB)",
+    "Shape(EA,AD,DE)",
+    "Shape(CE,ED,DC)",
+    "Shape(BZ,ZA,AE,EB)",
+    "Shape(AB,ZBA)",
+    "Shape(BC,ZCB)",
+    "Shape(CD,ZDC)",
+    "Shape(DA,ZAD)",
+    "Collinear(BED)",
+    "Collinear(AEC)",
+    "Cocircular(Z,BADC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AZB),104)",
+    "Equal(MeasureOfArc(ZCB),94)",
+    "ParallelBetweenLine(AB,DC)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(Z,Z)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(ZAC))",
+  "problem_answer": "162",
+  "theorem_seqs": [
+    "arc_property_center_angle(ZBA,Z)",
+    "arc_property_circumference_angle_external(ZBA,C)",
+    "arc_property_circumference_angle_external(ZCB,A)",
+    "triangle_property_angle_sum(ACB)",
+    "arc_property_circumference_angle_external(ZAC,B)"
+  ]
+}

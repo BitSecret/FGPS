@@ -1,0 +1,30 @@
+{
+  "problem_id": 2694,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2837",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find a in the given parallelogram.",
+  "problem_img": "2694.png",
+  "construction_cdl": [
+    "Shape(WY,YA,AW)",
+    "Shape(AY,YZ,ZA)",
+    "Shape(AZ,ZX,XA)",
+    "Shape(WA,AX,XW)",
+    "Collinear(WAZ)",
+    "Collinear(YAX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(WYZX)",
+    "Equal(LengthOfLine(YA),2)",
+    "Equal(LengthOfLine(XA),a-7)",
+    "Equal(LengthOfLine(WA),10)",
+    "Equal(LengthOfLine(AZ),2*b-6)"
+  ],
+  "goal_cdl": "Value(a)",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(YZXW,A)"
+  ]
+}

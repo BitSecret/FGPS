@@ -1,0 +1,35 @@
+{
+  "problem_id": 6321,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9116",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,∠A=60°,E、F分别是AB、AD的中点．若EF=2,则菱形ABCD的周长为()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, ∠A = N_0, E and F are the midpoints of AB and AD respectively. If EF = N_1, then the perimeter of the diamond ABCD is ()",
+  "problem_img": "6321.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BD,DF,FE)",
+    "Shape(BC,CD,DB)",
+    "Collinear(AEB)",
+    "Collinear(AFD)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(FAE),60)",
+    "IsMidpointOfLine(E,AB)",
+    "IsMidpointOfLine(F,AD)",
+    "Equal(LengthOfLine(EF),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_midpoint(EF,ABD)",
+    "midsegment_of_triangle_property_length(EF,ABD)",
+    "isosceles_triangle_judgment_line_equal(ABD)",
+    "isosceles_triangle_property_angle_equal(ABD)",
+    "triangle_property_angle_sum(ABD)",
+    "isosceles_triangle_judgment_angle_equal(BDA)",
+    "quadrilateral_perimeter_formula(ABCD)"
+  ]
+}

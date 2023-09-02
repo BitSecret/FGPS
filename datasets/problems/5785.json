@@ -1,0 +1,40 @@
+{
+  "problem_id": 5785,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7697",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,E是AC上一点,EF⊥AB于点F,且\\frac{AE}{EF}=\\frac{3}{4},BC=10,则BC的弦心距OD等于()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed to ⊙O, E is a point on AC, EF ⊥ AB at point F, and \\frac{AE}{EF}=\\frac{N_0}{N_1},BC=N_2, then the distance from the chord BC to the centre OD is equal to ()",
+  "problem_img": "5785.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BO,OC,CF,FE)",
+    "Shape(OB,BD,DO)",
+    "Shape(OD,DC,CO)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Collinear(AEB)",
+    "Collinear(AFC)",
+    "Collinear(BDC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),10)",
+    "Equal(MeasureOfAngle(CAB),MeasureOfAngle(DOB))",
+    "Equal(Div(LengthOfLine(AE),LengthOfLine(EF)),3/4)",
+    "PerpendicularBetweenLine(BD,OD)",
+    "PerpendicularBetweenLine(AE,FE)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OD))",
+  "problem_answer": "15/4",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OD,BC)",
+    "line_addition(BD,DC)",
+    "mirror_similar_triangle_judgment_aa(BDO,FAE)",
+    "mirror_similar_triangle_property_line_ratio(BDO,FAE)",
+    "mirror_similar_triangle_property_line_ratio(OBD,AEF)"
+  ]
+}

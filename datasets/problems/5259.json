@@ -1,0 +1,28 @@
+{
+  "problem_id": 5259,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5364",
+  "problem_level": 1,
+  "problem_text_cn": "如图,C是线段AB上一点,AC=4,BC=6,点M、N分别是线段AC、BC的中点,则MN=()",
+  "problem_text_en": "As shown in the figure, C is a point on the line segment AB, AC = N_0, BC = N_1, points M and N are the midpoints of the line segments AC and BC respectively, then MN = ()",
+  "problem_img": "5259.png",
+  "construction_cdl": [
+    "Collinear(AMCNB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(BC),6)",
+    "IsMidpointOfLine(M,AC)",
+    "IsMidpointOfLine(N,CB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(MN))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(AM,MC)",
+    "line_addition(AM,MN)",
+    "line_addition(AC,CN)",
+    "line_addition(AC,CB)",
+    "line_addition(AN,NB)"
+  ]
+}

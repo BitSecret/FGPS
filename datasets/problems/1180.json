@@ -1,0 +1,35 @@
+{
+  "problem_id": 1180,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1220",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "1180.png",
+  "construction_cdl": [
+    "Shape(CB,BD,DC)",
+    "Shape(CD,DA,AC)",
+    "Collinear(BDA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CA),y)",
+    "Equal(LengthOfLine(CD),x)",
+    "Equal(LengthOfLine(BD),8)",
+    "Equal(LengthOfLine(AD),3)",
+    "PerpendicularBetweenLine(AC,BC)",
+    "PerpendicularBetweenLine(BD,CD)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "sqrt(33)",
+  "theorem_seqs": [
+    "line_addition(BD,DA)",
+    "adjacent_complementary_angle(BDC,CDA)",
+    "right_triangle_judgment_angle(BDC)",
+    "right_triangle_judgment_angle(CDA)",
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_property_pythagorean(BDC)",
+    "right_triangle_property_pythagorean(CDA)",
+    "right_triangle_property_pythagorean(ACB)"
+  ]
+}

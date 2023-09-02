@@ -1,0 +1,49 @@
+{
+  "problem_id": 5111,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4960",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,中线BD与CE相交于点O,F、G分别是BO、CO的中点,连接AO,若AO=6,四边形DEFG的周长为14,则BC=()",
+  "problem_text_en": "As shown in the figure, in △ABC, the midline BD and CE intersect at point O, F and G are the midpoints of BO and CO respectively. Connect AO, if AO = N_0, the perimeter of the quadrilateral DEFG is N_1, then BC = ()",
+  "problem_img": "5111.png",
+  "construction_cdl": [
+    "Shape(AE,EH,HA)",
+    "Shape(AH,HD,DA)",
+    "Shape(EO,OH,HE)",
+    "Shape(HO,OD,DH)",
+    "Shape(EF,FO,OE)",
+    "Shape(OF,FG,GO)",
+    "Shape(OG,GD,DO)",
+    "Shape(EB,BF,FE)",
+    "Shape(FB,BC,CG,GF)",
+    "Shape(DG,GC,CD)",
+    "Collinear(AEB)",
+    "Collinear(AHO)",
+    "Collinear(ADC)",
+    "Collinear(EHD)",
+    "Collinear(BFOD)",
+    "Collinear(EOGC)"
+  ],
+  "text_cdl": [
+    "IsMedianOfTriangle(BD,BCA)",
+    "IsMedianOfTriangle(CE,CAB)",
+    "IsMidpointOfLine(F,OB)",
+    "IsMidpointOfLine(G,OC)",
+    "Equal(LengthOfLine(AO),6)",
+    "Equal(PerimeterOfQuadrilateral(EFGD),14)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "quadrilateral_perimeter_formula(EFGD)",
+    "midsegment_of_triangle_judgment_midpoint(FG,OBC)",
+    "midsegment_of_triangle_judgment_midpoint(FE,BOA)",
+    "midsegment_of_triangle_judgment_midpoint(DG,CAO)",
+    "midsegment_of_triangle_judgment_midpoint(ED,ABC)",
+    "midsegment_of_triangle_property_length(FG,OBC)",
+    "midsegment_of_triangle_property_length(FE,BOA)",
+    "midsegment_of_triangle_property_length(DG,CAO)",
+    "midsegment_of_triangle_property_length(ED,ABC)"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "problem_id": 5457,
+  "annotation": "Yangli_2023-05-21",
+  "source": "GeoQA-5864",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一棵树在一次强台风中于离地面4米处折断倒下,倒下部分与地面成30°夹角,这棵树在折断前的高度为()米．",
+  "problem_text_en": "As shown in the figure, a tree broke and fell at a distance N_0 from the ground during a strong typhoon, and the fallen part formed an angle N_1 with the ground. The height of the tree before the break was ().",
+  "problem_img": "5457.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(MeasureOfAngle(BCA),30)",
+    "PerpendicularBetweenLine(AB,CB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(AB),LengthOfLine(AC)))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "sine_theorem(ABC)"
+  ]
+}

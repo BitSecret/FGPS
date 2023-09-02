@@ -1,0 +1,37 @@
+{
+  "problem_id": 3179,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-461",
+  "problem_level": 1,
+  "problem_text_cn": "如图,两个直角三角形重叠在一起,将其中一个三角形沿着点B到点C的方向平移到△DEF的位置,∠B=90°,AB=8,DH=3,平移距离为4,求阴影部分的面积为()",
+  "problem_text_en": "As shown in the figure, two right triangles are overlapped, and one of the triangles is translated from point B to point C to the position of △DEF, ∠B = N_0, AB = N_1, DH = N_2, the translation distance is N_3, and the area of ​​the shaded part is () ",
+  "problem_img": "3179.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EH,HA)",
+    "Shape(HE,EC,CH)",
+    "Shape(DH,HC,CF,FD)",
+    "Collinear(AHC)",
+    "Collinear(DHE)",
+    "Collinear(BECF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BA,EH)",
+    "CongruentBetweenTriangle(ABC,DEF)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(DH),3)",
+    "Equal(LengthOfLine(BE),4)",
+    "RightTriangle(ABC)",
+    "RightTriangle(DEF)",
+    "PerpendicularBetweenLine(BE,HE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABEH))",
+  "problem_answer": "26",
+  "theorem_seqs": [
+    "congruent_triangle_property_line_equal(CAB,FDE)",
+    "line_addition(DH,HE)",
+    "trapezoid_judgment_parallel(BEHA)",
+    "right_trapezoid_judgment_right_angle(BEHA)",
+    "right_trapezoid_area_formular(BEHA)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 5232,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5288",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示的四边形中,若去掉一个50°的角得到一个五边形,则∠1+∠2等于()",
+  "problem_text_en": "In the quadrilateral as shown in the figure, if you remove a corner of N_0 to get a pentagon, then ∠1 + ∠2 is equal to ()",
+  "problem_img": "5232.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DE,EF,FA)",
+    "Shape(BC,CD,DB)",
+    "Collinear(CBA)",
+    "Collinear(CDE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ACE),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(ABD),MeasureOfAngle(BDE)))",
+  "problem_answer": "230",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BCD)",
+    "adjacent_complementary_angle(ABD,DBC)",
+    "adjacent_complementary_angle(CDB,BDE)"
+  ]
+}

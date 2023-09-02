@@ -1,0 +1,26 @@
+{
+  "problem_id": 2236,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-2335",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the perimeter of the right triangle below? Round your answer to the nearest tenth if necessary.",
+  "problem_img": "2236.png",
+  "construction_cdl": [
+    "Shape(CD,DB,BC)"
+  ],
+  "text_cdl": [
+    "RightTriangle(CDB)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(BCD),55)",
+    "Equal(LengthOfLine(BC),14)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(CDB))",
+  "problem_answer": "33.5",
+  "theorem_seqs": [
+    "sine_theorem(BCD)",
+    "right_triangle_property_pythagorean(CDB)",
+    "triangle_perimeter_formula(CDB)"
+  ]
+}

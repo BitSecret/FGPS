@@ -1,0 +1,26 @@
+{
+  "problem_id": 6476,
+  "annotation": "JiaZou_2023-06-04",
+  "source": "GeoQA-9369",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,CE⊥AB,点E为垂足,如果∠D=55°,则∠BCE=()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, CE ⊥ AB, point E is the foot of perpendicular, if ∠D = N_0, then ∠BCE = ()",
+  "problem_img": "6476.png",
+  "construction_cdl": [
+    "Shape(AE,EC,CD,DA)",
+    "Shape(EB,BC,CE)",
+    "Collinear(BEA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "PerpendicularBetweenLine(CE,BE)",
+    "Equal(MeasureOfAngle(CDA),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCE))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "triangle_property_angle_sum(EBC)"
+  ]
+}

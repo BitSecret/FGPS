@@ -1,0 +1,41 @@
+{
+  "problem_id": 2554,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-2681",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "2554.png",
+  "construction_cdl": [
+    "Shape(BD,DA,AB)",
+    "Shape(BA,AC,CB)",
+    "Collinear(DAC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BD),x)",
+    "Equal(LengthOfLine(BC),z)",
+    "Equal(LengthOfLine(AD),4)",
+    "Equal(LengthOfLine(AB),y)",
+    "Equal(LengthOfLine(AC),6)",
+    "PerpendicularBetweenLine(CB,DB)",
+    "PerpendicularBetweenLine(BA,CA)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "2*sqrt(6)",
+  "theorem_seqs": [
+    "line_addition(DA,AC)",
+    "adjacent_complementary_angle(DAB,BAC)",
+    "triangle_property_angle_sum(BDA)",
+    "triangle_property_angle_sum(BAC)",
+    "triangle_property_angle_sum(BDC)",
+    "sine_theorem(BDA)",
+    "sine_theorem(DAB)",
+    "sine_theorem(ABD)",
+    "sine_theorem(BAC)",
+    "sine_theorem(ACB)",
+    "sine_theorem(CBA)",
+    "sine_theorem(BDC)",
+    "sine_theorem(DCB)"
+  ]
+}

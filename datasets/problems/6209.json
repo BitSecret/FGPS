@@ -1,0 +1,32 @@
+{
+  "problem_id": 6209,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8795",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O直径,C、D是⊙O上两点,且$⁀}=⁀}$,若∠AOC=140°,则∠A=()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C and D are two vertices on ⊙O, and $⁀ = ⁀$, if ∠AOC = N_0, then ∠A = ()",
+  "problem_img": "6209.png",
+  "construction_cdl": [
+    "Shape(CO,OA,OAC)",
+    "Shape(BO,OC,OCB)",
+    "Shape(DA,AB,OBD)",
+    "Shape(AD,ODA)",
+    "Collinear(AOB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfArc(OCB),LengthOfArc(OBD))",
+    "Equal(MeasureOfAngle(COA),140)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BOC,COA)",
+    "congruent_arc_judgment_length_equal(OCB,OBD)",
+    "arc_property_center_angle(OCB,O)",
+    "congruent_arc_property_measure_equal(OCB,OBD)",
+    "arc_property_circumference_angle_external(OBD,A)"
+  ]
+}

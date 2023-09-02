@@ -1,0 +1,38 @@
+{
+  "problem_id": 3227,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-526",
+  "problem_level": 1,
+  "problem_text_cn": "把矩形ABCD沿EF对折后使两部分叠合,如图所示,若∠AEF=115°,则∠1=()",
+  "problem_text_en": "Fold the rectangle ABCD in half along EF to make the two parts overlap, as shown in the figure, if ∠AEF = N_0, then ∠1 = ()",
+  "problem_img": "3227.png",
+  "construction_cdl": [
+    "Shape(EA,AB,BF,FE)",
+    "Shape(HE,EP,PH)",
+    "Shape(DP,PG,GF,FC,CD)",
+    "Shape(PE,EF,FG,GP)",
+    "Collinear(AEPD)",
+    "Collinear(BFC)",
+    "Collinear(HPG)"
+  ],
+  "text_cdl": [
+    "Rectangle(ABCD)",
+    "MirrorCongruentBetweenQuadrilateral(EABF,EFGH)",
+    "Equal(MeasureOfAngle(FEA),115)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(GFC))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "mirror_congruent_quadrilateral_property_angle_equal(EABF,EFGH)",
+    "mirror_congruent_quadrilateral_property_angle_equal(ABFE,HEFG)",
+    "mirror_congruent_quadrilateral_property_angle_equal(BFEA,GHEF)",
+    "parallel_judgment_ipsilateral_internal_angle(AE,BF)",
+    "parallel_judgment_ipsilateral_internal_angle(GF,HE)",
+    "parallel_property_ipsilateral_internal_angle(FB,EA)",
+    "parallel_property_ipsilateral_internal_angle(EH,FG)",
+    "angle_addition(BFE,EFG)",
+    "flat_angle(BFC)",
+    "angle_addition(BFG,GFC)"
+  ]
+}

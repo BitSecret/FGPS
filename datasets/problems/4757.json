@@ -1,0 +1,41 @@
+{
+  "problem_id": 4757,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4117",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O的内接四边形ABCD中,AB是直径,∠BCD=115°,过D点的切线PD与射线BA交于点P,则∠ADP的度数为()",
+  "problem_text_en": "As shown in the figure, in the inscribed quadrilateral ABCD of ⊙O, AB is the diameter, ∠BCD = N_0, the tangent PD passing through the point D and the radial BA intersect at the point P, then the degree of ∠ADP is ()",
+  "problem_img": "4757.png",
+  "construction_cdl": [
+    "Shape(DP,PA,OAD)",
+    "Shape(AD,OAD)",
+    "Shape(OD,DA,AO)",
+    "Shape(CD,DO,OB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(DC,OCD)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(PAOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BCD),115)",
+    "IsTangentOfCircle(PD,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADP))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "tangent_of_circle_property_perpendicular(PD,O,O)",
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "round_angle(DOB,BOD)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "angle_addition(ODA,ADP)"
+  ]
+}

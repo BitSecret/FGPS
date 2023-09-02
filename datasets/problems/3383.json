@@ -1,0 +1,33 @@
+{
+  "problem_id": 3383,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-887",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊿ABC内接于⊙O,若∠OAB=28°则∠C的大小为()",
+  "problem_text_en": "As shown in the figure, ⊿ABC is inscribed in ⊙O, if ∠OAB = N_0, then the size of ∠C is ()",
+  "problem_img": "3383.png",
+  "construction_cdl": [
+    "Shape(CA,AO,OB,BC)",
+    "Shape(AC,OCA)",
+    "Shape(OA,AB,BO)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OAB),28)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "62",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

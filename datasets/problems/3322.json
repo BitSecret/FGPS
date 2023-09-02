@@ -1,0 +1,26 @@
+{
+  "problem_id": 3322,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-717",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将两块三角板的直角顶点重合后叠放在一起,若∠1=40°,则∠2的度数为()",
+  "problem_text_en": "As shown in the figure, the right-angled vertices of the two triangle plates are overlapped and stacked together. If ∠1 = N_0, then the degree of ∠2 is ()",
+  "problem_img": "3322.png",
+  "construction_cdl": [
+    "Shape(AO,OB)",
+    "Shape(BO,OC)",
+    "Shape(CO,OD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AOC),90)",
+    "Equal(MeasureOfAngle(BOD),90)",
+    "Equal(MeasureOfAngle(AOB),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "angle_addition(AOB,BOC)",
+    "angle_addition(BOC,COD)"
+  ]
+}

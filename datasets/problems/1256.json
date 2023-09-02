@@ -1,0 +1,34 @@
+{
+  "problem_id": 1256,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1298",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Each pair of polygons is similar. Find y.",
+  "problem_img": "1256.png",
+  "construction_cdl": [
+    "Shape(KJ,JL,LK)",
+    "Shape(RQ,QS,SR)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(KJL,RQS)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(RS),8)",
+    "Equal(LengthOfLine(RQ),4)",
+    "Equal(LengthOfLine(KJ),6)",
+    "Equal(LengthOfLine(LK),12)",
+    "Equal(MeasureOfAngle(RQS),80)",
+    "Equal(MeasureOfAngle(QSR),x)",
+    "Equal(MeasureOfAngle(JLK),30)",
+    "Equal(MeasureOfAngle(LKJ),y)",
+    "Equal(MeasureOfAngle(KJL),MeasureOfAngle(RQS))",
+    "Equal(MeasureOfAngle(JLK),MeasureOfAngle(QSR))",
+    "Equal(MeasureOfAngle(LKJ),MeasureOfAngle(SRQ))"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(KJL)"
+  ]
+}

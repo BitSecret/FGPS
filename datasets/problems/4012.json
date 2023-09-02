@@ -1,0 +1,52 @@
+{
+  "problem_id": 4012,
+  "annotation": "YimingHe_2023-05-07",
+  "source": "GeoQA-2004",
+  "problem_level": 1,
+  "problem_text_cn": "如图,以四边形ABCD各顶点为圆心,以1为半径画圆,则图形中扇形(阴影)部分的面积之和是()",
+  "problem_text_en": "As shown in the figure, taking each vertex of the quadrilateral ABCD as the center and drawing a circle with N_0 as the radius, the sum of the area of ​​the sector (shaded) part in the figure is ()",
+  "problem_img": "4012.png",
+  "construction_cdl": [
+    "Shape(FA,FE,AEF)",
+    "Shape(EA,AF,AFE)",
+    "Shape(HD,DG,DGH)",
+    "Shape(GD,DH,DHG)",
+    "Shape(MB,BN,BNM)",
+    "Shape(NB,BM,BMN)",
+    "Shape(LC,CI,CIL)",
+    "Shape(IC,CL,CLI)",
+    "Shape(AFE,FM,BNM,NL,CIL,IH,DGH,GE)",
+    "Collinear(AFMB)",
+    "Collinear(BNLC)",
+    "Collinear(CIHD)",
+    "Collinear(DGEA)",
+    "Cocircular(A,FE)",
+    "Cocircular(B,NM)",
+    "Cocircular(D,GH)",
+    "Cocircular(C,IL)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "IsCentreOfCircle(B,B)",
+    "IsCentreOfCircle(C,C)",
+    "IsCentreOfCircle(D,D)",
+    "Equal(RadiusOfCircle(A),1)",
+    "Equal(RadiusOfCircle(B),1)",
+    "Equal(RadiusOfCircle(C),1)",
+    "Equal(RadiusOfCircle(D),1)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(AreaOfSector(AFE),AreaOfSector(BNM),AreaOfSector(CIL),AreaOfSector(DGH)))",
+  "problem_answer": "pi",
+  "theorem_seqs": [
+    "quadrilateral_property_angle_sum(ABCD)",
+    "arc_property_center_angle(AFE,A)",
+    "arc_property_center_angle(BNM,B)",
+    "arc_property_center_angle(DGH,D)",
+    "arc_property_center_angle(CIL,C)",
+    "sector_area_formula(AFE)",
+    "sector_area_formula(BNM)",
+    "sector_area_formula(DGH)",
+    "sector_area_formula(CIL)"
+  ]
+}

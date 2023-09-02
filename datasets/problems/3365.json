@@ -1,0 +1,33 @@
+{
+  "problem_id": 3365,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-849",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O为△ABC的外接圆,∠BAC=55°,则∠OBC的度数为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, ∠BAC = N_0, then the degree of ∠OBC is ()",
+  "problem_img": "3365.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,BC,CO)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OBC))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

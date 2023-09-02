@@ -1,0 +1,27 @@
+{
+  "problem_id": 3336,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-756",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB⊥BD、AC⊥CD,∠CAD=35°,则∠ADC=()",
+  "problem_text_en": "As shown in the figure, given that AB ⊥ BD, AC ⊥ CD, ∠CAD = N_0, then ∠ADC = ()",
+  "problem_img": "3336.png",
+  "construction_cdl": [
+    "Shape(AO,OB,BA)",
+    "Shape(OD,DC,CO)",
+    "Shape(OA,AD,DO)",
+    "Collinear(BOD)",
+    "Collinear(AOC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAD),35)",
+    "PerpendicularBetweenLine(OB,AB)",
+    "PerpendicularBetweenLine(DC,OC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADC))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ADC)"
+  ]
+}

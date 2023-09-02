@@ -1,0 +1,29 @@
+{
+  "problem_id": 1617,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1677",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For trapezoid Q R T U, V and S are midpoints of the legs. If Q R = 12 and U T = 22, find V S.",
+  "problem_img": "1617.png",
+  "construction_cdl": [
+    "Shape(QV,VS,SR,RQ)",
+    "Shape(VU,UT,TS,SV)",
+    "Collinear(QVU)",
+    "Collinear(RST)"
+  ],
+  "text_cdl": [
+    "Trapezoid(QUTR)",
+    "Equal(LengthOfLine(QR),12)",
+    "Equal(LengthOfLine(UT),22)",
+    "IsMidpointOfLine(V,QU)",
+    "IsMidpointOfLine(S,RT)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(VS))",
+  "problem_answer": "17",
+  "theorem_seqs": [
+    "midsegment_of_quadrilateral_judgment_midpoint(VS,QUTR)",
+    "midsegment_of_quadrilateral_property_length(VS,QUTR)"
+  ]
+}

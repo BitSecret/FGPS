@@ -1,0 +1,22 @@
+{
+  "problem_id": 4654,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3896",
+  "problem_level": 1,
+  "problem_text_cn": "⊙O是半径为1的圆,点O到直线L的距离为3,过直线L上的任一点P作⊙O的切线,切点为Q；若以PQ为边作正方形PQRS,则正方形PQRS的面积最小为()",
+  "problem_text_en": "⊙O is a circle with a radius of N_0, the distance from point O to line L is N_1, draw a tangent of ⊙O through any point P on the straight line L , and the tangent point is Q; if PQ is taken as the edge to make the square PQRS, then the minimum area of the square PQRS is ()",
+  "problem_img": "4654.png",
+  "construction_cdl": [
+    "Shape(SR,RQ,QP,PS)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(QP),2*sqrt(2))",
+    "Square(SRQP)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(SRQP))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "parallelogram_area_formula_sine(PSRQ)"
+  ]
+}

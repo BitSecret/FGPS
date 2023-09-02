@@ -1,0 +1,39 @@
+{
+  "problem_id": 444,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-454",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot P, m \\widehat E N = 66 and m \\angle G P M = 89. Find m \\angle G N M.",
+  "problem_img": "444.png",
+  "construction_cdl": [
+    "Shape(GE,PEG)",
+    "Shape(MG,PGM)",
+    "Shape(NM,PMN)",
+    "Shape(EN,PNE)",
+    "Shape(GP,PB,BE,EG)",
+    "Shape(GM,MP,PG)",
+    "Shape(PM,MB,BP)",
+    "Shape(BM,MN,NB)",
+    "Shape(BN,NE,EB)",
+    "Collinear(GPBN)",
+    "Collinear(MBE)",
+    "Cocircular(P,GMNE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(P,P)",
+    "Equal(MeasureOfArc(PNE),66)",
+    "Equal(MeasureOfAngle(MPG),89)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(MNG))",
+  "problem_answer": "44.5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(NPM,MPG)",
+    "triangle_property_angle_sum(PMN)",
+    "radius_of_circle_property_length_equal(PM,P)",
+    "radius_of_circle_property_length_equal(PN,P)",
+    "isosceles_triangle_judgment_line_equal(PMN)",
+    "isosceles_triangle_property_angle_equal(PMN)"
+  ]
+}

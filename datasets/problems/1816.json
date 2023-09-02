@@ -1,0 +1,27 @@
+{
+  "problem_id": 1816,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-1883",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1816.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),y)",
+    "Equal(LengthOfLine(AC),14)",
+    "Equal(MeasureOfAngle(CBA),30)",
+    "Equal(LengthOfLine(AB),x)",
+    "PerpendicularBetweenLine(BA,CA)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "14*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BAC)",
+    "sine_theorem(BAC)",
+    "sine_theorem(CBA)"
+  ]
+}

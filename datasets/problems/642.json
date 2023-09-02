@@ -1,0 +1,25 @@
+{
+  "problem_id": 642,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-659",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "642.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),x-4)",
+    "Equal(LengthOfLine(AB),x)",
+    "Equal(LengthOfLine(BC),8)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

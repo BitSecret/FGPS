@@ -1,0 +1,28 @@
+{
+  "problem_id": 92,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-93",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "92.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(CB,BD,DC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),y)",
+    "Equal(LengthOfLine(CD),12)",
+    "Equal(MeasureOfAngle(CBD),x)",
+    "Equal(LengthOfLine(BD),12)",
+    "PerpendicularBetweenLine(BD,CD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(DCB)",
+    "isosceles_triangle_property_angle_equal(DCB)",
+    "triangle_property_angle_sum(DCB)"
+  ]
+}

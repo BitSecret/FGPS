@@ -1,0 +1,36 @@
+{
+  "problem_id": 1858,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-1928",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "1858.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(DC,CB,BD)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),3)",
+    "Equal(LengthOfLine(DB),12)",
+    "Equal(LengthOfLine(AC),y)",
+    "Equal(LengthOfLine(CD),x)",
+    "Equal(LengthOfLine(BC),z)",
+    "PerpendicularBetweenLine(CD,AD)",
+    "PerpendicularBetweenLine(AC,BC)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "3*sqrt(5)",
+  "theorem_seqs": [
+    "line_addition(AD,DB)",
+    "adjacent_complementary_angle(BDC,CDA)",
+    "right_triangle_judgment_angle(CDA)",
+    "right_triangle_judgment_angle(BDC)",
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_property_pythagorean(CDA)",
+    "right_triangle_property_pythagorean(BDC)",
+    "right_triangle_property_pythagorean(ACB)"
+  ]
+}

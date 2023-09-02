@@ -1,0 +1,26 @@
+{
+  "problem_id": 3998,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1955",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠C=30°,AD为BC边上的高,且∠DAB=20°,则∠BAC的度数为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠C = N_0, AD is the height on the edge of BC, and ∠DAB = N_1, then the degree of ∠BAC is ()",
+  "problem_img": "3998.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DC,CA)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(BCA),30)",
+    "Equal(MeasureOfAngle(DAB),20)",
+    "PerpendicularBetweenLine(BD,AD)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABD)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

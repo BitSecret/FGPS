@@ -1,0 +1,32 @@
+{
+  "problem_id": 2390,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2505",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the rhombus.",
+  "problem_img": "2390.png",
+  "construction_cdl": [
+    "Shape(BD,DE,EB)",
+    "Shape(DA,AE,ED)",
+    "Shape(AC,CE,EA)",
+    "Shape(CB,BE,EC)",
+    "Collinear(BEA)",
+    "Collinear(DEC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rhombus(BDAC)",
+    "Equal(LengthOfLine(DE),12)",
+    "Equal(LengthOfLine(AE),7)",
+    "Equal(LengthOfLine(AE),LengthOfLine(BE))",
+    "Equal(LengthOfLine(CE),LengthOfLine(DE))"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(BDAC))",
+  "problem_answer": "168",
+  "theorem_seqs": [
+    "line_addition(BE,EA)",
+    "line_addition(DE,EC)",
+    "kite_area_formula_diagonal(BDAC)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 4574,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3710",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,∠A=50°,则∠OCB等于()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, ∠A = N_0, then ∠OCB is equal to ()",
+  "problem_img": "4574.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,BC,CO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCO))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "triangle_property_angle_sum(OBC)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)"
+  ]
+}

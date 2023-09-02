@@ -1,0 +1,26 @@
+{
+  "problem_id": 5142,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5034",
+  "problem_level": 1,
+  "problem_text_cn": "如图,若D是AB中点,E是BC中点,若AC=8,EC=3,AD=()",
+  "problem_text_en": "As shown in the figure, if D is the midpoint of AB and E is the midpoint of BC, if AC = N_0, EC = N_1, AD = ()",
+  "problem_img": "5142.png",
+  "construction_cdl": [
+    "Collinear(ADBEC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,AB)",
+    "IsMidpointOfLine(E,BC)",
+    "Equal(LengthOfLine(AC),8)",
+    "Equal(LengthOfLine(EC),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "line_addition(BE,EC)",
+    "line_addition(AB,BC)",
+    "line_addition(AD,DB)"
+  ]
+}

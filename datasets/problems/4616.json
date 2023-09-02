@@ -1,0 +1,33 @@
+{
+  "problem_id": 4616,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3790",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是等边三角形ABC的外接圆,⊙O的半径为2,则等边三角形ABC的边长为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of the equilateral triangle ABC, and the radius of ⊙O is N_0, then the edge length of the equilateral triangle ABC is ()",
+  "problem_img": "4616.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OB,BC,CA)",
+    "Shape(OAB,BA)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "EquilateralTriangle(ABC)",
+    "Equal(RadiusOfCircle(O),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "2*sqrt(3)",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(CAB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "cosine_theorem(OAB)"
+  ]
+}

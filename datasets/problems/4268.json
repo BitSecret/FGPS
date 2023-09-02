@@ -1,0 +1,37 @@
+{
+  "problem_id": 4268,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3058",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C、D四个点均在⊙O上,∠AOD=50°,AO∥DC,则∠B的度数为()",
+  "problem_text_en": "As shown in the figure, the four points A, B, C, and D are all on ⊙O, ∠AOD = N_0, AO ∥ DC, then the degree of ∠B is ()",
+  "problem_img": "4268.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(BA,AO,OC,CB)",
+    "Shape(OD,DC,CO)",
+    "Shape(DO,OA,OAD)",
+    "Shape(CD,ODC)",
+    "Shape(BC,OCB)",
+    "Cocircular(O,BADC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(AO,DC)",
+    "Equal(MeasureOfAngle(DOA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBA))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AO,DC)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(ODC)",
+    "isosceles_triangle_property_angle_equal(ODC)",
+    "triangle_property_angle_sum(ODC)",
+    "angle_addition(COD,DOA)",
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_external(OAC,B)"
+  ]
+}

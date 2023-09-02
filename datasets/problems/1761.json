@@ -1,0 +1,30 @@
+{
+  "problem_id": 1761,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1826",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of \\parallelogram A B C D.",
+  "problem_img": "1761.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EB,BA)",
+    "Shape(DC,CE,ED)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ADCB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(DC),4)",
+    "Equal(LengthOfLine(DA),10)",
+    "Equal(LengthOfLine(DE),5)",
+    "PerpendicularBetweenLine(DE,BE)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ADCB))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(ADCB)",
+    "parallelogram_property_opposite_line_equal(DCBA)",
+    "quadrilateral_perimeter_formula(ADCB)"
+  ]
+}

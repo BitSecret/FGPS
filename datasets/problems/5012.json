@@ -1,0 +1,47 @@
+{
+  "problem_id": 5012,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4721",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,D、F在AB边上,E、G在AC边上,DE∥FG∥BC,且AD:DF:FB=3:2:1,若AG=15,则CE的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, D and F are on the edge of AB, E and G are on the edge of AC, DE ∥ FG ∥ BC, and AD:DF:FB=N_0:N_1:N_2, if AG = N_3, the length of CE is ()",
+  "problem_img": "5012.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DF,FG,GE,ED)",
+    "Shape(FB,BC,CG,GF)",
+    "Collinear(ADFB)",
+    "Collinear(AEGC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,FG)",
+    "ParallelBetweenLine(FG,BC)",
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(LengthOfLine(AG),15)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(DF)),3/2)",
+    "Equal(Div(LengthOfLine(DF),LengthOfLine(FB)),2/1)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CE))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "line_addition(AD,DF)",
+    "line_addition(AD,DB)",
+    "line_addition(AF,FB)",
+    "line_addition(DF,FB)",
+    "line_addition(AE,EG)",
+    "line_addition(AE,EC)",
+    "line_addition(AG,GC)",
+    "line_addition(EG,GC)",
+    "parallel_property_corresponding_angle(DE,FG,A)",
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(GF,ED,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,AFG)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,FGA)",
+    "similar_triangle_property_line_ratio(EAD,GAF)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

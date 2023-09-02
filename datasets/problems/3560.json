@@ -1,0 +1,27 @@
+{
+  "problem_id": 3560,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1190",
+  "problem_level": 1,
+  "problem_text_cn": "如图,有一块含45°角的直角三角板的两个顶点放在直尺的对边上.如果∠2=60°,则∠1=()",
+  "problem_text_en": "As shown in the figure, the two vertices of a right triangle with N_0 angles are placed on the opposite edges of the ruler. If ∠2 = N_1, then ∠1 = ()",
+  "problem_img": "3560.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(DB,BC,CD)",
+    "Shape(CB,BE)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABC),45)",
+    "Equal(MeasureOfAngle(ADC),60)",
+    "ParallelBetweenLine(DC,BE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBE))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DC,BE,A)",
+    "angle_addition(DBC,CBE)"
+  ]
+}

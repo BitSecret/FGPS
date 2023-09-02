@@ -1,0 +1,33 @@
+{
+  "problem_id": 6035,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8523",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD中,AB=AC=AD,∠CBD=23°,则∠CAD为()",
+  "problem_text_en": "As shown in the figure, in the quadrilateral ABCD, AB = AC = AD, ∠CBD = N_0, then ∠CAD is ()",
+  "problem_img": "6035.png",
+  "construction_cdl": [
+    "Shape(DA,AE,ED)",
+    "Shape(CD,DE,EC)",
+    "Shape(EA,AB,BE)",
+    "Shape(CE,EB,BC)",
+    "Shape(ABC,CB)",
+    "Shape(ACD,DC)",
+    "Collinear(DEB)",
+    "Collinear(AEC)",
+    "Cocircular(A,BCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(AB),LengthOfLine(AD))",
+    "Equal(MeasureOfAngle(DBC),23)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAC))",
+  "problem_answer": "46",
+  "theorem_seqs": [
+    "arc_property_center_angle(ACD,A)",
+    "arc_property_circumference_angle_external(ACD,B)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 4642,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3866",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O的内接四边形ABCD中,AB是直径,∠BCD=120°,过点D的切线PD与直线AB交于点P,则∠ADP的度数为()",
+  "problem_text_en": "As shown in the figure, in the inscribed quadrilateral ABCD of ⊙O, AB is the diameter, ∠BCD = N_0, the tangent PD passing through the point D and the straight line AB intersect at the point P, then the degree of ∠ADP is ()",
+  "problem_img": "4642.png",
+  "construction_cdl": [
+    "Shape(DP,PA,ODA)",
+    "Shape(ODA,AD)",
+    "Shape(OD,DA,AO)",
+    "Shape(OCD,DC)",
+    "Shape(BC,CD,DO,OB)",
+    "Shape(OBC,CB)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(PAOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PD,O)",
+    "Equal(MeasureOfAngle(BCD),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADP))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "round_arc(ODB,OBD)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "sine_theorem(ODA)",
+    "tangent_of_circle_property_perpendicular(PD,O,O)",
+    "angle_addition(ODA,ADP)"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "problem_id": 5007,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4709",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE∥BC,DF∥AC,EG∥AB,且AE:EC=3:2,若BC=10,则FG的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE ∥ BC, DF ∥ AC, EG ∥ AB, and AE:EC=N_0:N_1, if BC = N_2, then the length of FG is ()",
+  "problem_img": "5007.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BF,FD)",
+    "Shape(ED,DF,FG,GE)",
+    "Shape(EG,GC,CE)",
+    "Collinear(ADB)",
+    "Collinear(AEC)",
+    "Collinear(BFGC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(DFCE)",
+    "Equal(Div(LengthOfLine(AE),LengthOfLine(EC)),3/2)",
+    "ParallelBetweenLine(DE,BC)",
+    "ParallelBetweenLine(DE,FC)",
+    "ParallelBetweenLine(DF,AC)",
+    "ParallelBetweenLine(DF,EC)",
+    "ParallelBetweenLine(EG,AB)",
+    "Equal(LengthOfLine(BC),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(FG))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "line_addition(BF,FG)",
+    "line_addition(BF,FC)",
+    "line_addition(BG,GC)",
+    "line_addition(FG,GC)",
+    "parallel_property_collinear_extend(CB,ED,G)",
+    "parallel_property_collinear_extend(BA,GE,D)",
+    "parallelogram_judgment_parallel_and_parallel(DBGE)",
+    "parallelogram_property_opposite_line_equal(FCED)",
+    "parallelogram_property_opposite_line_equal(BGED)",
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CF,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)"
+  ]
+}

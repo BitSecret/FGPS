@@ -1,0 +1,36 @@
+{
+  "problem_id": 733,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-758",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find Q X if E X = 24 and D E = 7.",
+  "problem_img": "733.png",
+  "construction_cdl": [
+    "Shape(DA,DAQ,QD)",
+    "Shape(DQ,DQE,ED)",
+    "Shape(DE,DET,TD)",
+    "Shape(DT,DTA,AD)",
+    "Shape(AX,XQ,DAQ)",
+    "Shape(QX,XE,DQE)",
+    "Collinear(XQDT)",
+    "Cocircular(D,AQET)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(D,D)",
+    "Equal(LengthOfLine(EX),24)",
+    "Equal(LengthOfLine(DE),7)",
+    "PerpendicularBetweenLine(XE,DE)",
+    "PerpendicularBetweenLine(DA,XA)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(QX))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(DE,D)",
+    "radius_of_circle_property_length_equal(DQ,D)",
+    "right_triangle_judgment_angle(XED)",
+    "right_triangle_property_pythagorean(XED)",
+    "line_addition(XQ,QD)"
+  ]
+}

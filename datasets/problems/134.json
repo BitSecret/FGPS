@@ -1,0 +1,33 @@
+{
+  "problem_id": 134,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-136",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the parallelogram.",
+  "problem_img": "134.png",
+  "construction_cdl": [
+    "Shape(BD,DE,EC,CB)",
+    "Shape(CE,EA,AC)",
+    "Collinear(DEA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(BDAC)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(CB),44)",
+    "Equal(MeasureOfAngle(ACE),30)",
+    "Equal(LengthOfLine(EA),19)",
+    "PerpendicularBetweenLine(DE,CE)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(BDAC))",
+  "problem_answer": "836*sqrt(3)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DEC,CEA)",
+    "triangle_property_angle_sum(CEA)",
+    "sine_theorem(EAC)",
+    "altitude_of_quadrilateral_judgment_right_vertex(CE,BDAC)",
+    "parallelogram_property_opposite_line_equal(DACB)",
+    "parallelogram_area_formula_common(BDAC)"
+  ]
+}

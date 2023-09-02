@@ -1,0 +1,33 @@
+{
+  "problem_id": 683,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-700",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If A B = 6, B C = 4, and A E = 9, find E D.",
+  "problem_img": "683.png",
+  "construction_cdl": [
+    "Shape(BA,AE,EB)",
+    "Shape(BE,ED,DC,CB)",
+    "Collinear(ABC)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(LengthOfLine(AE),9)",
+    "ParallelBetweenLine(EB,DC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(ED))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(EB,DC,A)",
+    "parallel_property_corresponding_angle(CD,BE,A)",
+    "similar_triangle_judgment_aa(ADC,AEB)",
+    "line_addition(AB,BC)",
+    "line_addition(AE,ED)",
+    "similar_triangle_property_line_ratio(DCA,EBA)",
+    "similar_triangle_property_line_ratio(CAD,BAE)"
+  ]
+}

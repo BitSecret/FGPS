@@ -1,0 +1,28 @@
+{
+  "problem_id": 2726,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2871",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the kite.",
+  "problem_img": "2726.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DB,BE)",
+    "Shape(CE,EB,BC)",
+    "Shape(AE,EC,CA)",
+    "Collinear(AEB)",
+    "Collinear(DEC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Kite(ADBC)",
+    "Equal(LengthOfLine(DC),21)",
+    "Equal(LengthOfLine(AB),32)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ADBC))",
+  "problem_answer": "336",
+  "theorem_seqs": [
+    "kite_area_formula_diagonal(ADBC)"
+  ]
+}

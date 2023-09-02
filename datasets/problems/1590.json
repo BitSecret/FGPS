@@ -1,0 +1,41 @@
+{
+  "problem_id": 1590,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1650",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth, if necessary.",
+  "problem_img": "1590.png",
+  "construction_cdl": [
+    "Shape(LB,BE,ED,DL)",
+    "Shape(LD,DC,CL)",
+    "Shape(CD,DE,EA,AC)",
+    "Collinear(LDE)",
+    "Collinear(BEA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(LD),15)",
+    "Equal(LengthOfLine(DE),20)",
+    "Equal(LengthOfLine(BE),16)",
+    "Equal(LengthOfLine(AE),28)",
+    "PerpendicularBetweenLine(LD,CD)",
+    "PerpendicularBetweenLine(DE,AE)",
+    "PerpendicularBetweenLine(AC,DC)",
+    "PerpendicularBetweenLine(EA,CA)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfTriangle(LBE),AreaOfTriangle(LDC),AreaOfQuadrilateral(CDEA)))",
+  "problem_answer": "1050",
+  "theorem_seqs": [
+    "line_addition(LD,DE)",
+    "adjacent_complementary_angle(BED,DEA)",
+    "parallel_judgment_per_per(ED,AC)",
+    "parallel_judgment_per_per(AE,CD)",
+    "parallelogram_judgment_parallel_and_parallel(ACDE)",
+    "parallelogram_property_opposite_line_equal(ACDE)",
+    "parallelogram_property_opposite_line_equal(CDEA)",
+    "parallelogram_area_formula_sine(EACD)",
+    "triangle_area_formula_sine(ELB)",
+    "triangle_area_formula_sine(DCL)"
+  ]
+}

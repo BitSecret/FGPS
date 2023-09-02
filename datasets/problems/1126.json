@@ -1,0 +1,34 @@
+{
+  "problem_id": 1126,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-1163",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "A square with 5 - centimeter sides is inscribed in a circle. What is the circumference of the circle? Round your answer to the nearest tenth of a centimeter.",
+  "problem_img": "1126.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BA)",
+    "Shape(AB,BC,CA)",
+    "Shape(DA,EAD)",
+    "Shape(BD,EDB)",
+    "Shape(CB,EBC)",
+    "Shape(AC,ECA)",
+    "Collinear(AEB)",
+    "Cocircular(E,ADBC)"
+  ],
+  "text_cdl": [
+    "Square(ADBC)",
+    "Equal(LengthOfLine(AD),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfCircle(E))",
+  "problem_answer": "22.21",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ADB)",
+    "right_triangle_property_pythagorean(ADB)",
+    "diameter_of_circle_judgment_right_angle(ADB,E)",
+    "diameter_of_circle_property_length_equal(AB,E)",
+    "circle_property_length_of_radius_and_diameter(E)",
+    "circle_perimeter_formula(E)"
+  ]
+}

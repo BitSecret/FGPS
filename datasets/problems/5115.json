@@ -1,0 +1,43 @@
+{
+  "problem_id": 5115,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4967",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC,AB=8,AC=5,BC=7,AD是△ABC外角平分线,CD⊥AD于D,E是BC的中点,则DE=()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = N_0, AC = N_1, BC = N_2, AD is the bisector of the exterior angle of △ABC, CD ⊥ AD is at D, E is the midpoint of BC, then DE = ()",
+  "problem_img": "5115.png",
+  "construction_cdl": [
+    "Shape(MA,AD,DM)",
+    "Shape(AB,BE,EO,OA)",
+    "Shape(OE,EC,CO)",
+    "Shape(AO,OD,DA)",
+    "Shape(OC,CD,DO)",
+    "Collinear(BAM)",
+    "Collinear(BEC)",
+    "Collinear(AOC)",
+    "Collinear(EOD)",
+    "Collinear(CDM)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(CD,AD)",
+    "IsBisectorOfAngle(AD,MAC)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(AC),5)",
+    "Equal(LengthOfLine(BC),7)",
+    "IsMidpointOfLine(E,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "6.5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDA,ADM)",
+    "triangle_property_angle_sum(ACD)",
+    "triangle_property_angle_sum(ADM)",
+    "isosceles_triangle_judgment_angle_equal(ACM)",
+    "altitude_of_triangle_judgment(AD,ACM)",
+    "isosceles_triangle_property_line_coincidence(ACM,D)",
+    "line_addition(BA,AM)",
+    "midsegment_of_triangle_judgment_midpoint(DE,CMB)",
+    "midsegment_of_triangle_property_length(DE,CMB)"
+  ]
+}

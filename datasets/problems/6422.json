@@ -1,0 +1,32 @@
+{
+  "problem_id": 6422,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9293",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD的对角线AC,BD相交于O,E是边BC的中点,连接OE,已知AB=6,那么OE的长是()",
+  "problem_text_en": "As shown in the figure, the diagonal AC and BD of ▱ABCD intersect at O, and E is the midpoint of edge BC, connecting OE, and it is known that AB = N_0, then the length of OE is ()",
+  "problem_img": "6422.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Shape(AB,BO,OA)",
+    "Shape(CO,OE,EC)",
+    "Shape(OB,BE,EO)",
+    "Collinear(AOC)",
+    "Collinear(DOB)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsMidpointOfLine(E,BC)",
+    "Equal(LengthOfLine(AB),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OE))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "midsegment_of_triangle_judgment_midpoint(OE,CAB)",
+    "midsegment_of_triangle_property_length(OE,CAB)"
+  ]
+}

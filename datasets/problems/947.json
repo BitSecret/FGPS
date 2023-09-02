@@ -1,0 +1,42 @@
+{
+  "problem_id": 947,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-976",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "M C = 7, R M = 4, and A T = 16. Find R B.",
+  "problem_img": "947.png",
+  "construction_cdl": [
+    "Shape(AR,RM,MA)",
+    "Shape(MR,RC,CM)",
+    "Shape(MC,CT,TM)",
+    "Shape(MT,TB,BM)",
+    "Shape(MB,BS,SM)",
+    "Shape(MS,SA,AM)",
+    "Collinear(ARC)",
+    "Collinear(CTB)",
+    "Collinear(BSA)",
+    "Collinear(AMT)",
+    "Collinear(BMR)",
+    "Collinear(CMS)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(MC),7)",
+    "Equal(LengthOfLine(RM),4)",
+    "Equal(LengthOfLine(AT),16)"
+  ],
+  "image_cdl": [
+    "IsCentroidOfTriangle(M,ACB)",
+    "Equal(LengthOfLine(MC),7)",
+    "Equal(LengthOfLine(RM),4)",
+    "Equal(LengthOfLine(SA),LengthOfLine(SB))",
+    "Equal(LengthOfLine(CT),LengthOfLine(TB))",
+    "Equal(LengthOfLine(AR),LengthOfLine(RC))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(RB))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "centroid_of_triangle_property_line_ratio(M,BAC,R)",
+    "line_addition(RM,MB)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 2353,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2467",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle N C L.",
+  "problem_img": "2353.png",
+  "construction_cdl": [
+    "Shape(CMR,RC,CM)",
+    "Shape(CRL,LC,CR)",
+    "Shape(CLN,NC,CL)",
+    "Shape(CNM,MC,CN)",
+    "Collinear(MCL)",
+    "Cocircular(C,RLNM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(MCN),60)",
+    "Equal(MeasureOfAngle(LCR),3*x+5)",
+    "Equal(MeasureOfAngle(MCR),x-1)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(NCL))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(MCN,NCL)"
+  ]
+}

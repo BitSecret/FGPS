@@ -1,0 +1,31 @@
+{
+  "problem_id": 5467,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5882",
+  "problem_level": 1,
+  "problem_text_cn": "如图折叠直角三角形纸片的直角,使点C落在斜边AB上的点E处,已知CD=1,∠B=30°,则BD的长是()",
+  "problem_text_en": "As shown in the figure, fold the right angle of the right triangle paper so that point C falls on the point E on the hypotenuse AB. It is known that CD = N_0, ∠B = N_1, then the length of BD is ()",
+  "problem_img": "5467.png",
+  "construction_cdl": [
+    "Shape(EB,BD,DE)",
+    "Shape(AE,ED,DA)",
+    "Shape(AD,DC,CA)",
+    "Collinear(BEA)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DCA),90)",
+    "MirrorCongruentBetweenTriangle(AED,ADC)",
+    "Equal(LengthOfLine(CD),1)",
+    "Equal(MeasureOfAngle(EBD),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_line_equal(AED,ADC)",
+    "adjacent_complementary_angle(AED,DEB)",
+    "mirror_congruent_triangle_property_angle_equal(EDA,CAD)",
+    "sine_theorem(DEB)"
+  ]
+}

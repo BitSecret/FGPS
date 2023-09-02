@@ -1,0 +1,37 @@
+{
+  "problem_id": 5982,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8437",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C、D是⊙O上两点,CD⊥AB,若∠DAB=70°,则∠BOC=()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C and D are two points on ⊙O, CD ⊥ AB, if ∠DAB = N_0, then ∠BOC = ()",
+  "problem_img": "5982.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DO,OB,OBD)",
+    "Shape(DE,EO,OD)",
+    "Shape(DA,AE,ED)",
+    "Shape(CE,EA,OAC)",
+    "Shape(OE,EC,CO)",
+    "Shape(BO,OC,OCB)",
+    "Collinear(AEOB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DAE),70)",
+    "IsDiameterOfCircle(AB,O)",
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(AE,DE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOC))",
+  "problem_answer": "140",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(DAE)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "arc_property_center_angle(OAC,O)",
+    "flat_angle(BOE)",
+    "angle_addition(BOC,COE)"
+  ]
+}

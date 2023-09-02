@@ -1,0 +1,32 @@
+{
+  "problem_id": 499,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-510",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the ratio of the area of \\triangle A B C to the area of square B C D E, if BC = 1.",
+  "problem_img": "499.png",
+  "construction_cdl": [
+    "Shape(ED,DC,CB,BE)",
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [
+    "Square(EDCB)",
+    "Equal(LengthOfLine(BC),1)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(ED,CD)",
+    "Equal(LengthOfLine(BA),LengthOfLine(BC))",
+    "Equal(LengthOfLine(BC),LengthOfLine(AC))"
+  ],
+  "goal_cdl": "Value(Div(AreaOfTriangle(ABC),AreaOfQuadrilateral(EDCB)))",
+  "problem_answer": "sqrt(3)/4",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_judgment_line_equal(BCA)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(ABC)",
+    "equilateral_triangle_property_angle(ABC)",
+    "triangle_area_formula_sine(ABC)",
+    "parallelogram_area_formula_sine(EDCB)"
+  ]
+}

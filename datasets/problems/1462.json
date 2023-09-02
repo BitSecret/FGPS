@@ -1,0 +1,36 @@
+{
+  "problem_id": 1462,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1516",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot D, D E \\cong E C, m \\widehat C F = 60, and D E \\perp E C. Find m \\angle 5.",
+  "problem_img": "1462.png",
+  "construction_cdl": [
+    "Shape(DBA,AB)",
+    "Shape(BA,AD,DG,GB)",
+    "Shape(GD,DC,CG)",
+    "Shape(DEB,BG,GE)",
+    "Shape(EG,GC,CE)",
+    "Shape(EC,DCE)",
+    "Shape(CD,DA,AF,FC)",
+    "Shape(FA,DAF)",
+    "Shape(CF,DFC)",
+    "Collinear(BGC)",
+    "Collinear(ADC)",
+    "Collinear(DGE)",
+    "Cocircular(D,AFCEB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(DE),LengthOfLine(EC))",
+    "Equal(MeasureOfArc(DFC),60)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(DG,BG)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CAF))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(DFC,A)"
+  ]
+}

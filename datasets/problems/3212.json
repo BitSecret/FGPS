@@ -1,0 +1,36 @@
+{
+  "problem_id": 3212,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-507",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠ACB=90°,∠A=40°,以C为圆心,CB为半径的圆交AB于点D,连接CD,则∠ACD=()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠ACB = N_0, ∠A = N_1, the circle with C as the center and CB as the radius intersects AB at point D. Connect CD, then ∠ACD = ()",
+  "problem_img": "3212.png",
+  "construction_cdl": [
+    "Shape(CEB,BC,CE)",
+    "Shape(CBD,DB)",
+    "Shape(CDE,EC,CD)",
+    "Shape(CDE,DA,AE)",
+    "Shape(CB,BD,DC)",
+    "Collinear(AEC)",
+    "Collinear(ADB)",
+    "Cocircular(C,BDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(C,C)",
+    "Equal(MeasureOfAngle(ECB),90)",
+    "Equal(MeasureOfAngle(DAE),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ECD))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ACB)",
+    "radius_of_circle_property_length_equal(CB,C)",
+    "radius_of_circle_property_length_equal(CD,C)",
+    "isosceles_triangle_judgment_line_equal(CBD)",
+    "isosceles_triangle_property_angle_equal(CBD)",
+    "triangle_property_angle_sum(DCB)",
+    "angle_addition(ACD,DCB)"
+  ]
+}

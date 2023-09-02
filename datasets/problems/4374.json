@@ -1,0 +1,29 @@
+{
+  "problem_id": 4374,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3292",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,若∠AOB=130°,则∠ACB的度数是()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, if ∠AOB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4374.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(AB,BO,OA)",
+    "Shape(AC,CB,BA)",
+    "Shape(BC,OCB)",
+    "Shape(CA,OAC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BOA),130)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "115",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBA,O)",
+    "round_angle(BOA,AOB)",
+    "arc_property_circumference_angle_external(OBA,C)"
+  ]
+}

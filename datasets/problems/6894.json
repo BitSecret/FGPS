@@ -1,0 +1,44 @@
+{
+  "problem_id": 6894,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10126",
+  "problem_level": 1,
+  "problem_text_cn": "如图，AB为⊙O的直径，弦CD⊥AB于点E，连接AC，OC，OD，若∠COD＝80°，则∠A的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6894.png",
+  "construction_cdl": [
+    "Shape(OA,AC,CO)",
+    "Shape(EO,OC,CE)",
+    "Shape(DO,OE,ED)",
+    "Shape(OBD,DE,EB)",
+    "Shape(OCB,BE,EC)",
+    "Collinear(AOEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(OED),90)",
+    "Equal(MeasureOfAngle(CEO),90)",
+    "Equal(MeasureOfAngle(DOC),80)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OAC)",
+    "isosceles_triangle_judgment_line_equal(OCD)",
+    "isosceles_triangle_property_angle_equal(OAC)",
+    "isosceles_triangle_property_angle_equal(OCD)",
+    "triangle_property_angle_sum(OAC)",
+    "triangle_property_angle_sum(EOC)",
+    "triangle_property_angle_sum(DOE)",
+    "triangle_property_angle_sum(OCD)",
+    "flat_angle(EOA)",
+    "angle_addition(EOC,COA)"
+  ]
+}

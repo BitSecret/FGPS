@@ -1,0 +1,41 @@
+{
+  "problem_id": 1307,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-1354",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, the vertices of quadrilateral A B C D intersect square E F G H and divide its sides into segments with measure that have a ratio of 1:2. Find the ratio between the areas of A B C D and E F G H.",
+  "problem_img": "1307.png",
+  "construction_cdl": [
+    "Shape(CE,EB,BC)",
+    "Shape(BH,HA,AB)",
+    "Shape(AG,GD,DA)",
+    "Shape(CD,DF,FC)",
+    "Shape(BA,AD,DC,CB)",
+    "Collinear(EBH)",
+    "Collinear(HAG)",
+    "Collinear(GDF)",
+    "Collinear(FCE)"
+  ],
+  "text_cdl": [
+    "Square(EHGF)",
+    "Square(BADC)",
+    "Equal(LengthOfLine(BH),Mul(LengthOfLine(EB),2))",
+    "Equal(LengthOfLine(AG),Mul(LengthOfLine(HA),2))",
+    "Equal(LengthOfLine(DF),Mul(LengthOfLine(DG),2))",
+    "Equal(LengthOfLine(CE),Mul(LengthOfLine(CF),2))"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(EH),9)"
+  ],
+  "goal_cdl": "Value(Div(AreaOfQuadrilateral(BADC),AreaOfQuadrilateral(EHGF)))",
+  "problem_answer": "5/9",
+  "theorem_seqs": [
+    "line_addition(EB,BH)",
+    "line_addition(HA,AG)",
+    "right_triangle_judgment_angle(BHA)",
+    "right_triangle_property_pythagorean(BHA)",
+    "parallelogram_area_formula_sine(BADC)",
+    "parallelogram_area_formula_sine(EHGF)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 6292,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-8987",
+  "problem_level": 1,
+  "problem_text_cn": "已知正方形桌子桌面边长为80cm,要买一块正方形桌布,如图铺设时,四周垂下的桌布都是等腰直角三角形,且桌面四个角的顶点恰好在桌布边上,那么要买桌布的边长是()cm(精确到个位,备用数据:√{2}≈1.4,√{3}≈1.7)",
+  "problem_text_en": "Given that the edge length of the square table top is N_0, you need to buy a square tablecloth. When laying as shown, the hanging tablecloths all around are isosceles right triangles, and the vertices of the four corners of the tabletop are exactly on the edge of the tablecloth, then you need to buy the edge length of the tablecloth is() (accurate to the ones place, spare data: N_1 ≈N_2, N_3 ≈N_4",
+  "problem_img": "6292.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CA),80)",
+    "Equal(LengthOfLine(AB),LengthOfLine(BC))",
+    "Equal(MeasureOfAngle(CBA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Mul(2,LengthOfLine(AB)))",
+  "problem_answer": "113.1370849",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(BCA)",
+    "isosceles_triangle_property_angle_equal(BCA)",
+    "triangle_property_angle_sum(ABC)",
+    "sine_theorem(ABC)",
+    "sine_theorem(BCA)",
+    "sine_theorem(CAB)"
+  ]
+}

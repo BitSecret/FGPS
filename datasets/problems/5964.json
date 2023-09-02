@@ -1,0 +1,40 @@
+{
+  "problem_id": 5964,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8403",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB与⊙O切于点C,OA=OB,若⊙O的直径为8cm,AB=10cm,那么OA的长是()",
+  "problem_text_en": "As shown in the figure, AB and ⊙O are tangent to point C, OA = OB, if the diameter of ⊙O is N_0, AB = N_1, then the length of OA is ()",
+  "problem_img": "5964.png",
+  "construction_cdl": [
+    "Shape(EO,OC,OCE)",
+    "Shape(CO,OD,ODC)",
+    "Shape(DA,AC,ODC)",
+    "Shape(CB,BE,OCE)",
+    "Collinear(ADO)",
+    "Collinear(BEO)",
+    "Collinear(ACB)",
+    "Cocircular(O,DCE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OB),LengthOfLine(OA))",
+    "Equal(LengthOfLine(AB),10)",
+    "IsTangentOfCircle(AC,O)",
+    "IsTangentOfCircle(BC,O)",
+    "Equal(DiameterOfCircle(O),8)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OA))",
+  "problem_answer": "sqrt(41)",
+  "theorem_seqs": [
+    "line_addition(AC,CB)",
+    "circle_property_length_of_radius_and_diameter(O)",
+    "tangent_of_circle_property_perpendicular(AC,O,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "altitude_of_triangle_judgment(OC,OAB)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_line_coincidence(OAB,C)",
+    "cosine_theorem(COA)"
+  ]
+}

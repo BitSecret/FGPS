@@ -1,0 +1,33 @@
+{
+  "problem_id": 2190,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-2287",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "2190.png",
+  "construction_cdl": [
+    "Shape(BA,AD,DB)",
+    "Shape(DA,AC,CD)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CBA),x)",
+    "Equal(LengthOfLine(AC),24)",
+    "Equal(LengthOfLine(AB),36)",
+    "Equal(MeasureOfAngle(DAC),y)",
+    "PerpendicularBetweenLine(AC,DC)",
+    "Equal(LengthOfLine(BD),LengthOfLine(CD))"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "29.2",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_property_pythagorean(ACB)",
+    "line_addition(BD,DC)",
+    "right_triangle_judgment_angle(ACD)",
+    "right_triangle_property_pythagorean(ACD)",
+    "sine_theorem(DAC)"
+  ]
+}

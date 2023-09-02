@@ -1,0 +1,35 @@
+{
+  "problem_id": 1201,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-1241",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral A B C D is a rectangle. m \\angle 2 = 40. Find m \\angle 6.",
+  "problem_img": "1201.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BD,DE)",
+    "Shape(ED,DC,CE)",
+    "Shape(AE,EC,CA)",
+    "Collinear(BEC)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(ABDC)",
+    "Equal(MeasureOfAngle(EAB),40)",
+    "PerpendicularBetweenLine(AB,DB)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(EBD))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "rectangle_property_diagonal_equal(ABDC)",
+    "parallelogram_property_diagonal_bisection(ABDC,E)",
+    "parallelogram_property_diagonal_bisection(BDCA,E)",
+    "line_addition(BE,EC)",
+    "line_addition(AE,ED)",
+    "isosceles_triangle_judgment_line_equal(EAB)",
+    "isosceles_triangle_property_angle_equal(EAB)",
+    "angle_addition(ABE,EBD)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 2402,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2517",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\overrightarrow B A and \\overrightarrow B C are opposite rays and \\overrightarrow B D bisects \\angle A B F. If m \\angle F B C = 2 x + 25 and m \\angle A B F = 10 x - 1, find m \\angle D B F.",
+  "problem_img": "2402.png",
+  "construction_cdl": [
+    "Shape(AB,BD)",
+    "Shape(DB,BF)",
+    "Shape(FB,BC)",
+    "Collinear(ABC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsBisectorOfAngle(BD,ABF)",
+    "Equal(MeasureOfAngle(FBC),2*x+25)",
+    "Equal(MeasureOfAngle(ABF),10*x-1)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DBF))",
+  "problem_answer": "64.5",
+  "theorem_seqs": [
+    "angle_addition(ABD,DBF)",
+    "adjacent_complementary_angle(ABF,FBC)"
+  ]
+}

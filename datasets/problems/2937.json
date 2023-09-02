@@ -1,0 +1,30 @@
+{
+  "problem_id": 2937,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-121",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC≌△DEF,点A与D,B与E分别是对应顶点,且测得BC=5cm,BF=7cm,则EC长为()",
+  "problem_text_en": "As shown in the figure, △ABC ≌ △DEF, points A and D, B and E are the corresponding vertices, and the measured BC = N_0, BF = N_1, then the length of EC is ()",
+  "problem_img": "2937.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EM,MA)",
+    "Shape(ME,EC,CM)",
+    "Shape(DM,MC,CF,FD)",
+    "Collinear(AMC)",
+    "Collinear(EMD)",
+    "Collinear(BECF)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(ABC,DEF)",
+    "Equal(LengthOfLine(BC),5)",
+    "Equal(LengthOfLine(BF),7)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "line_addition(BC,CF)",
+    "congruent_triangle_property_line_equal(ABC,DEF)",
+    "line_addition(EC,CF)"
+  ]
+}

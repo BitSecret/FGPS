@@ -1,0 +1,29 @@
+{
+  "problem_id": 3334,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-743",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是斜靠在墙上的一个梯子,梯脚B距墙1.4m,梯上点D距墙DE=1.2m,BD长0.5m,且△ADE∽△ABC,则梯子的长为()",
+  "problem_text_en": "As shown in the figure, AB is a ladder leaning against the wall, the foot of the ladder B is away from the wall N_0, the point D on the ladder is away from the wall DE = N_1, BD is long N_2, and △ADE ∽ △ABC, then the length of the ladder is ()",
+  "problem_img": "3334.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),1.4)",
+    "Equal(LengthOfLine(DE),1.2)",
+    "Equal(LengthOfLine(BD),0.5)",
+    "SimilarBetweenTriangle(ADE,ABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "3.5",
+  "theorem_seqs": [
+    "line_addition(AD,DB)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

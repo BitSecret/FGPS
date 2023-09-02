@@ -1,0 +1,38 @@
+{
+  "problem_id": 6559,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9500",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,BC切⊙O于点B,CO交⊙O于点D,AD的延长线交于点E,若∠C=30°,则∠A的大小是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, BC tangents ⊙O at point B, CO intersects ⊙O at point D, and the extended line line of AD intersects at point E. If ∠C = N_0, then the size of ∠A is ()",
+  "problem_img": "6559.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(DA,AO,OD)",
+    "Shape(BO,OA,OAB)",
+    "Shape(DO,OB,OBD)",
+    "Shape(BC,CD,OBD)",
+    "Collinear(ODC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "IsTangentOfCircle(CB,O)",
+    "Equal(MeasureOfAngle(BCO),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(CB,O,O)",
+    "triangle_property_angle_sum(COB)",
+    "adjacent_complementary_angle(AOD,DOB)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(ODA)"
+  ]
+}

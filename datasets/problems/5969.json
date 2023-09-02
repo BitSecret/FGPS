@@ -1,0 +1,33 @@
+{
+  "problem_id": 5969,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8411",
+  "problem_level": 1,
+  "problem_text_cn": "如图PA、PB分别切⊙O于点A、B,∠P=70°,点C是⊙O上的一点,则∠C的度数等于()",
+  "problem_text_en": "As shown in the figure, PA and PB are tangent to ⊙O at points A and B respectively, ∠P = N_0, point C is a point on ⊙O, then the degree of ∠C is equal to ()",
+  "problem_img": "5969.png",
+  "construction_cdl": [
+    "Shape(OA,AC,CB,BO)",
+    "Shape(CA,OAC)",
+    "Shape(BC,OCB)",
+    "Shape(AO,OB,OBA)",
+    "Shape(BP,PA,OBA)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(MeasureOfAngle(BPA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)",
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "quadrilateral_property_angle_sum(AOBP)"
+  ]
+}

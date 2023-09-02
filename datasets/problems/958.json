@@ -1,0 +1,27 @@
+{
+  "problem_id": 958,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-987",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "958.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)",
+    "Shape(BA,AD,DB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BD),40)",
+    "Equal(LengthOfLine(AD),32)",
+    "Equal(LengthOfLine(AB),x)",
+    "PerpendicularBetweenLine(BC,AC)",
+    "PerpendicularBetweenLine(AD,BD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8*sqrt(41)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ADB)",
+    "right_triangle_property_pythagorean(ADB)"
+  ]
+}

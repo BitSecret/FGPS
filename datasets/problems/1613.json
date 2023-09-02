@@ -1,0 +1,31 @@
+{
+  "problem_id": 1613,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1673",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find Q S.",
+  "problem_img": "1613.png",
+  "construction_cdl": [
+    "Shape(PT,TQ,QP)",
+    "Shape(QR,RS,SQ)",
+    "Collinear(TQS)",
+    "Collinear(PQR)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(PQ),6-x)",
+    "Equal(LengthOfLine(QR),6+x)",
+    "Equal(LengthOfLine(TQ),3)",
+    "Equal(LengthOfLine(SQ),3+x)",
+    "ParallelBetweenLine(TP,RS)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(QS))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(TP,RS)",
+    "similar_triangle_judgment_aa(QPT,QRS)",
+    "similar_triangle_property_line_ratio(TQP,SQR)",
+    "similar_triangle_property_line_ratio(PTQ,RSQ)"
+  ]
+}

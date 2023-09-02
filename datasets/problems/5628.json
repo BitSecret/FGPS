@@ -1,0 +1,33 @@
+{
+  "problem_id": 5628,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7237",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点F在平行四边形ABCD的边AB上,且\\frac{AF}{BF}=\\frac{3}{4},射线CF交DA的延长线于点E,如果AD=8,则AE的长为()",
+  "problem_text_en": "As shown in the figure, the point F is on the edge AB of the parallelogram ABCD, and \\frac {AF}{BF} =\\frac{N_0}{N_1}, the ray CF crosses the extended line line of DA at point E, if AD = N_2, then the length of AE is ()",
+  "problem_img": "5628.png",
+  "construction_cdl": [
+    "Shape(EF,FA,AE)",
+    "Shape(FB,BC,CF)",
+    "Shape(AF,FC,CD,DA)",
+    "Collinear(EAD)",
+    "Collinear(BFA)",
+    "Collinear(EFC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(Div(LengthOfLine(AF),LengthOfLine(BF)),3/4)",
+    "Equal(LengthOfLine(AD),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallel_property_collinear_extend(AD,BC,E)",
+    "parallel_property_alternate_interior_angle(EA,BC)",
+    "similar_triangle_judgment_aa(FBC,FAE)",
+    "similar_triangle_property_line_ratio(FBC,FAE)",
+    "similar_triangle_property_line_ratio(CFB,EFA)"
+  ]
+}

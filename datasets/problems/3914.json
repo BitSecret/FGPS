@@ -1,0 +1,37 @@
+{
+  "problem_id": 3914,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1823",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C、D在⊙O上,OB∥CD,∠A=25°,则∠BOD等于()",
+  "problem_text_en": "As shown in the figure, points A, B, C, D are on ⊙O, OB ∥ CD, ∠A = N_0, then ∠BOD is equal to ()",
+  "problem_img": "3914.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CO,OB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AB,BO,OD)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OC,CD,DO)",
+    "Cocircular(O,BCDA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(BO,CD)",
+    "Equal(MeasureOfAngle(CAB),25)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DOB))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "angle_addition(DOC,COB)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OCD)",
+    "isosceles_triangle_property_angle_equal(OCD)",
+    "triangle_property_angle_sum(OCD)",
+    "parallel_property_alternate_interior_angle(BO,CD)"
+  ]
+}

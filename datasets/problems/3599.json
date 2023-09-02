@@ -1,0 +1,24 @@
+{
+  "problem_id": 3599,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1254",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一次飓风灾害中,一棵大树在离地面3米处折断,树的顶端落在离树杆底部4米处,那么这棵树折断之前的高度是()",
+  "problem_text_en": "As shown in the figure, in a hurricane disaster, a big tree broke at N_0 from the ground, and the top of the tree fell at N_1 from the bottom of the tree pole, then the height of the tree before the break was ()",
+  "problem_img": "3599.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AB,CB)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(AB),LengthOfLine(AC)))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ABC)",
+    "right_triangle_property_pythagorean(ABC)"
+  ]
+}

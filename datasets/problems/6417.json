@@ -1,0 +1,33 @@
+{
+  "problem_id": 6417,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9285",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,AB=5,对角线交于点O,△OCD的周长为23,则▱ABCD的两条对角线长的和是()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, AB = N_0, the diagonal intersects at point O, and the perimeter of △OCD is N_1, then the sum of the two diagonal lengths of ▱ABCD is ()",
+  "problem_img": "6417.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Shape(BC,CO,OB)",
+    "Collinear(AOC)",
+    "Collinear(BOD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(PerimeterOfTriangle(OCD),23)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(AC),LengthOfLine(BD)))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "triangle_perimeter_formula(DOC)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)"
+  ]
+}

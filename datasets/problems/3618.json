@@ -1,0 +1,27 @@
+{
+  "problem_id": 3618,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1293",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,D、E分别是AB、AC边上的点,DE∥BC,∠ADE=35°,∠C=120°,则∠A为()",
+  "problem_text_en": "As shown in the figure, in △ABC, D and E are points on edges AB and AC respectively, DE ∥ BC, ∠ADE = N_0, ∠C = N_1, then ∠A is ()",
+  "problem_img": "3618.png",
+  "construction_cdl": [
+    "Shape(EA,AD,DE)",
+    "Shape(CE,ED,DB,BC)",
+    "Collinear(AEC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(MeasureOfAngle(ADE),35)",
+    "Equal(MeasureOfAngle(BCA),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EAD))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "triangle_property_angle_sum(ADE)"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "problem_id": 4477,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3469",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD为⊙O的内接四边形．弦AB与DC的延长线相交于点G,AO⊥CD,垂足为E,连接BD,∠GBC=48°,则∠DBC的度数为()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is the inscribed quadrilateral of ⊙O. The extension line of chord AB and DC intersect at point G, AO ⊥ CD, the vertical foot is E, connect BD, ∠GBC = N_0, then the degree of ∠DBC is ()",
+  "problem_img": "4477.png",
+  "construction_cdl": [
+    "Shape(OAD,DA)",
+    "Shape(ODC,CE,ED)",
+    "Shape(OCB,BC)",
+    "Shape(OBA,AB)",
+    "Shape(AD,DH,HA)",
+    "Shape(OH,HD,DO)",
+    "Shape(OD,DE,EO)",
+    "Shape(BA,AH,HB)",
+    "Shape(OCB,CG,GB)",
+    "Shape(BH,HO,OE,EC,CB)",
+    "Collinear(AHOE)",
+    "Collinear(BHD)",
+    "Collinear(ABG)",
+    "Collinear(DECG)",
+    "Cocircular(O,ADCB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OE,CE)",
+    "Equal(MeasureOfAngle(GBC),48)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBD))",
+  "problem_answer": "84",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(GBC,CBA)",
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_internal(OAC,D)",
+    "adjacent_complementary_angle(DEO,OEC)",
+    "triangle_property_angle_sum(EAD)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OAD)",
+    "isosceles_triangle_property_angle_equal(OAD)",
+    "triangle_property_angle_sum(OAD)",
+    "arc_property_center_angle(OAD,O)",
+    "angle_addition(CBH,HBA)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 3711,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1478",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB为⊙O的直径,∠ABD=20°,则∠BCD等于()",
+  "problem_text_en": "As shown in the figure, it is known that AB is the diameter of ⊙O, ∠ABD = N_0, then ∠BCD is equal to ()",
+  "problem_img": "3711.png",
+  "construction_cdl": [
+    "Shape(AE,EC,CA)",
+    "Shape(CE,EO,OB,BC)",
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DO,OE)",
+    "Shape(OD,DB,BO)",
+    "Shape(DA,OAD)",
+    "Shape(BD,ODB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Collinear(AEOB)",
+    "Collinear(CED)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DBO),20)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCE))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(ODB)",
+    "isosceles_triangle_property_angle_equal(ODB)",
+    "triangle_property_angle_sum(ODB)",
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_circumference_angle_external(ODB,C)"
+  ]
+}

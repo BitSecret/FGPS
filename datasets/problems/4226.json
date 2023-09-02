@@ -1,0 +1,41 @@
+{
+  "problem_id": 4226,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-2983",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,弦CD⊥AB,垂足为点E．点G是⁀{AC}上的任意一点,延长AG交DC的延长线于点F,连接GC,GD,AD．若∠BAD=25°,则∠AGD等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, the chord CD ⊥ AB, and the vertical foot is the point E. Point G is any point on ⁀AC. Extend the extended line between AG and DC at point F and connect GC, GD, AD. If ∠BAD = N_0, then ∠AGD is equal to ()",
+  "problem_img": "4226.png",
+  "construction_cdl": [
+    "Shape(FG,OCG,CF)",
+    "Shape(OCG,GC)",
+    "Shape(GA,AO,OE,EC,CG)",
+    "Shape(OBC,CE,EB)",
+    "Shape(EO,OA,AD,DE)",
+    "Shape(ODB,BD)",
+    "Shape(BE,ED,DB)",
+    "Shape(GA,AD,DG)",
+    "Shape(OAD,DA)",
+    "Shape(OGA,AG)",
+    "Collinear(AOEB)",
+    "Collinear(FCED)",
+    "Collinear(AGF)",
+    "Cocircular(O,ADBCG)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(AE,CE)",
+    "PerpendicularBetweenLine(DE,EA)",
+    "Equal(MeasureOfAngle(BAD),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DGA))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(AOB,O)",
+    "diameter_of_circle_property_right_angle(ADB,O)",
+    "triangle_property_angle_sum(ADB)",
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OAD,G)"
+  ]
+}

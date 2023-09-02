@@ -1,0 +1,32 @@
+{
+  "problem_id": 4571,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3705",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AB=AC,∠BAC=70°,⊙O是△ABC的外接圆,点D在劣弧⁀{AC}上,则∠D的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, ∠BAC = N_0, ⊙O is the circumscribed circle of △ABC, point D is on the minor arc ⁀AC, then the degree of ∠D is ()",
+  "problem_img": "4571.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Shape(AD,ODA)",
+    "Shape(DC,OCD)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),70)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "125",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_internal(OCA,D)"
+  ]
+}

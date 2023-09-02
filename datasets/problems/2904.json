@@ -1,0 +1,32 @@
+{
+  "problem_id": 2904,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-80",
+  "problem_level": 1,
+  "problem_text_cn": "如图,测得BD=\"120\"m,DC=\"60\"m,EC=\"50\"m,则河宽AB为()．",
+  "problem_text_en": "As shown in the figure, the measured BD = \"N_0\", DC = \"N_1\", EC = \"N_2\", then width of the river AB is ().",
+  "problem_img": "2904.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DE,EC,CD)",
+    "Collinear(ADE)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BD),120)",
+    "Equal(LengthOfLine(CD),60)",
+    "Equal(LengthOfLine(EC),50)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(AB,DB)",
+    "PerpendicularBetweenLine(EC,DC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "vertical_angle(CDE,BDA)",
+    "similar_triangle_judgment_aa(ABD,ECD)",
+    "similar_triangle_property_line_ratio(ABD,ECD)",
+    "similar_triangle_property_line_ratio(DAB,DEC)"
+  ]
+}

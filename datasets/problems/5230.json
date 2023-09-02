@@ -1,0 +1,26 @@
+{
+  "problem_id": 5230,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5285",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB=10cm,点O为线段AB上的任意一点,C为AO的中点,D为OB的中点,则线段CD长为()",
+  "problem_text_en": "As shown in the figure, AB = N_0, point O is any point on the line segment AB, C is the midpoint of AO, D is the midpoint of OB, then the length of the line segment CD is ()",
+  "problem_img": "5230.png",
+  "construction_cdl": [
+    "Collinear(ACODB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),10)",
+    "IsMidpointOfLine(C,AO)",
+    "IsMidpointOfLine(D,OB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(AC,CO)",
+    "line_addition(OD,DB)",
+    "line_addition(AO,OB)",
+    "line_addition(CO,OD)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 5201,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5201",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线l与⊙O相交于A,B两点,且与半径OC垂直,垂足为H,已知AB=16厘米,OB=10厘米．CH=()",
+  "problem_text_en": "As shown in the figure, the straight line l and ⊙O intersect at two points A and B and are perpendicular to the radius OC. The vertical foot is H. It is known that AB = N_0 cm, OB = N_1 cm. CH = ()",
+  "problem_img": "5201.png",
+  "construction_cdl": [
+    "Shape(OAC,CH,HA)",
+    "Shape(OCB,BH,HC)",
+    "Shape(OH,HB,BO)",
+    "Shape(OBA,AH,HO,OB)",
+    "Collinear(AHB)",
+    "Collinear(OHC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(AH,OH)",
+    "Equal(LengthOfLine(AB),16)",
+    "Equal(LengthOfLine(OB),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CH))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OH,AB)",
+    "line_addition(AH,HB)",
+    "right_triangle_judgment_angle(OHB)",
+    "right_triangle_property_pythagorean(OHB)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "line_addition(OH,HC)"
+  ]
+}

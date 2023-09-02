@@ -1,0 +1,34 @@
+{
+  "problem_id": 6166,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8733",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平面直角坐标系中,⊙A经过原点O,并且分别与x轴、y轴交于B、C两点,已知B(8,0),C(0,6),则⊙A的半径为()",
+  "problem_text_en": "As shown in the figure, in the plane rectangular coordinate system, ⊙A passes through the origin O, and intersects the x-axis and y-axis at two points B and C respectively. It is known that B(N_0,N_1),C(N_2,N_3), then the length of the radius of ⊙A is ()",
+  "problem_img": "6166.png",
+  "construction_cdl": [
+    "Shape(CB,ABC)",
+    "Shape(CO,OB,BC)",
+    "Shape(OC,ACO)",
+    "Shape(BO,AOB)",
+    "Collinear(CAB)",
+    "Cocircular(A,COB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "IsDiameterOfCircle(BC,A)",
+    "Equal(LengthOfLine(CO),6)",
+    "Equal(LengthOfLine(BO),8)",
+    "Equal(MeasureOfAngle(COB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CA))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(COB)",
+    "right_triangle_property_pythagorean(COB)",
+    "radius_of_circle_property_length_equal(AC,A)",
+    "radius_of_circle_property_length_equal(AB,A)",
+    "line_addition(CA,AB)"
+  ]
+}

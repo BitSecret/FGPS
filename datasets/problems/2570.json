@@ -1,0 +1,27 @@
+{
+  "problem_id": 2570,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2698",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "W T Y \\cong T W Y. Find x.",
+  "problem_img": "2570.png",
+  "construction_cdl": [
+    "Shape(XT,TY,YX)",
+    "Shape(XTY,YT)",
+    "Shape(XYW,WY)",
+    "Shape(XY,YW,WX)",
+    "Shape(XWT,TX,XW)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "MirrorCongruentBetweenTriangle(XTY,XYW)",
+    "Equal(LengthOfLine(TY),4*x)",
+    "Equal(LengthOfLine(WY),2*x+10)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_line_equal(XTY,XYW)"
+  ]
+}

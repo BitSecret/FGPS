@@ -1,0 +1,34 @@
+{
+  "problem_id": 5188,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5181",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,AB是弦,OC⊥AB,垂足为C,若AB=16,OC=6,则⊙O的直径等于()",
+  "problem_text_en": "As shown in the figure, in ⊙O, AB is the chord, OC ⊥ AB, the foot of perpendicular is C, if AB = N_0, OC = N_1, then the diameter of ⊙O is equal to ()",
+  "problem_img": "5188.png",
+  "construction_cdl": [
+    "Shape(OAB,BC,CA)",
+    "Shape(OA,AC,CO)",
+    "Shape(OBA,AO,OC,CB)",
+    "Collinear(ACB)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OC,BC)",
+    "Equal(LengthOfLine(AB),16)",
+    "Equal(LengthOfLine(OC),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ACO,OCB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(ACO)",
+    "right_triangle_property_pythagorean(ACO)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "problem_id": 6144,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8703",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⁀{AB}是半圆,O为AB中点,C、D两点在⁀{AB}上,且AD∥OC,连接BC、BD．若⁀{CD}=63°,则⁀{AD}的度数是()",
+  "problem_text_en": "As shown in the figure, ⁀AB is a semicircle, O is the midpoint of AB, the two vertices C and D are on ⁀AB, and AD ∥ OC, connecting BC and BD. If ⁀CD = N_0, then the degree of ⁀AD is ()",
+  "problem_img": "6144.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DA,AE,ED)",
+    "Shape(EA,AO,OF,FE)",
+    "Shape(DE,EC,OCD)",
+    "Shape(CF,FB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(FO,OB,BF)",
+    "Shape(CE,EF,FC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(DEFB)",
+    "Collinear(AEC)",
+    "Collinear(CFO)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(AD,OC)",
+    "Equal(MeasureOfAngle(DBC),31.5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABD))",
+  "problem_answer": "27",
+  "theorem_seqs": [
+    "angle_addition(DAC,CAO)",
+    "arc_property_circumference_angle_external(OCD,A)",
+    "arc_property_circumference_angle_external(OCD,B)",
+    "diameter_of_circle_judgment_pass_centre(AOB,O)",
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "parallel_property_alternate_interior_angle(AD,OC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "triangle_property_angle_sum(DAB)"
+  ]
+}

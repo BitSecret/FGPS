@@ -1,0 +1,37 @@
+{
+  "problem_id": 3318,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-705",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,∠BAC=30°,BC=12,则⊙O的直径为()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, ∠BAC = N_0, BC = N_1, then the diameter of ⊙O is ()",
+  "problem_img": "3318.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CA,AE,EO,OC)",
+    "Shape(DE,EA,OAD)",
+    "Shape(ED,DB,BE)",
+    "Shape(CO,OE,EB,BC)",
+    "Shape(BD,ODB)",
+    "Shape(CB,OBC)",
+    "Collinear(AEB)",
+    "Collinear(COED)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(BC),12)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(DOC,O)",
+    "diameter_of_circle_property_right_angle(DBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(OBC,D)",
+    "sine_theorem(CDB)",
+    "diameter_of_circle_property_length_equal(DC,O)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": 6948,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10202",
+  "problem_level": 1,
+  "problem_text_cn": "如图，A，B，C是半径为1的⊙O上的三个点，若AB＝√2，∠CAB＝30°，则∠ABC的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6948.png",
+  "construction_cdl": [
+    "Shape(OA,AD,DO)",
+    "Shape(OD,DC,OCA,AO)",
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BC,CD)",
+    "Shape(OAB,BAD)",
+    "Shape(OBC,CB)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),1)",
+    "Equal(LengthOfLine(AB),sqrt(2))",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "right_triangle_judgment_pythagorean_inverse(BOA)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

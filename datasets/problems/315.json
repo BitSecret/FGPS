@@ -1,0 +1,46 @@
+{
+  "problem_id": 315,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-319",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. Assume that all polygons that appear to be regular are regular. Round to the nearest tenth.",
+  "problem_img": "315.png",
+  "construction_cdl": [
+    "Shape(NQG,NGE,EN,NQ)",
+    "Shape(NEF,NFQ,QN,NE)",
+    "Shape(NGE,GD,DE)",
+    "Shape(NEF,EC,CF)",
+    "Shape(NFQ,FB,BQ)",
+    "Shape(NQG,QB,BG)",
+    "Collinear(ENQB)",
+    "Collinear(DGB)",
+    "Collinear(CFB)",
+    "Collinear(DEC)",
+    "Cocircular(N,GEFQ)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(DCB)",
+    "IsIncenterOfTriangle(N,DCB)",
+    "IsCentroidOfTriangle(N,DCB)",
+    "IsTangentOfCircle(DE,N)",
+    "IsTangentOfCircle(BG,N)",
+    "IsTangentOfCircle(CF,N)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(N,N)",
+    "Equal(LengthOfLine(EN),3)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfTriangle(DCB),AreaOfCircle(N)))",
+  "problem_answer": "18.5",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(DE,N,N)",
+    "equilateral_triangle_property_angle(DCB)",
+    "centroid_of_triangle_property_line_ratio(N,BDC,E)",
+    "line_addition(EN,NB)",
+    "sine_theorem(BDE)",
+    "triangle_area_formula_sine(DCB)",
+    "radius_of_circle_property_length_equal(NE,N)",
+    "circle_area_formula(N)"
+  ]
+}

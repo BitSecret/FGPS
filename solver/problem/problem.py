@@ -1,7 +1,7 @@
-from symbolic_solver.problem.condition import Condition, Goal
-from symbolic_solver.aux_tools.parser import EquationParser as EqParser
-from symbolic_solver.aux_tools.utils import rough_equal
-from symbolic_solver.core.engine import EquationKiller as EqKiller
+from solver.problem.condition import Condition, Goal
+from solver.aux_tools.parser import CDLParser
+from solver.aux_tools.utils import rough_equal
+from solver.core.engine import EquationKiller as EqKiller
 import warnings
 from itertools import combinations
 from sympy import symbols
@@ -23,10 +23,10 @@ class Problem:
         """Load problem through problem CDL."""
         self.predicate_GDL = predicate_GDL  # gdl
         self.problem_CDL = problem_CDL  # cdl
-        fix_length_predicates = copy.copy(self.predicate_GDL["FixLength"])
+        fix_length_predicates = list(self.predicate_GDL["FixLength"])
         fix_length_predicates += list(self.predicate_GDL["Entity"])
         fix_length_predicates += list(self.predicate_GDL["Relation"])
-        variable_length_predicates = copy.copy(self.predicate_GDL["VariableLength"])
+        variable_length_predicates = list(self.predicate_GDL["VariableLength"])
         self.condition = Condition()
         self.condition.init_by_fl(fix_length_predicates, variable_length_predicates)
 
@@ -34,7 +34,7 @@ class Problem:
 
         for predicate, item in problem_CDL["parsed_cdl"]["text_and_image_cdl"]:  # conditions of text_and_image
             if predicate == "Equal":
-                self.add("Equation", EqParser.get_equation_from_tree(self, item), (-1,), "prerequisite")
+                self.add("Equation", CDLParser.get_equation_from_tree(self, item), (-1,), "prerequisite")
             else:
                 self.add(predicate, tuple(item), (-1,), "prerequisite")
 
@@ -467,7 +467,7 @@ class Problem:
 
             for extended_predicate, para in item_GDL["extend"]:  # extended
                 if extended_predicate == "Equal":
-                    self.add("Equation", EqParser.get_equation_from_tree(self, para, True, letters), (_id,), "extended")
+                    self.add("Equation", CDLParser.get_equation_from_tree(self, para, True, letters), (_id,), "extended")
                 else:
                     self.add(extended_predicate, tuple(letters[i] for i in para), (_id,), "extended")
 
@@ -646,7 +646,7 @@ class Problem:
             return self.condition.sym_of_attr[(attr, item)]
 
         if attr == "Free":
-            sym = symbols("f_" + "".join(item).lower())
+            sym = symbols("".join(item))
             self.condition.sym_of_attr[(attr, item)] = sym  # add sym
             self.condition.value_of_sym[sym] = None  # init symbol's value
             self.condition.attr_of_sym[sym] = (attr, (item,))  # add attr

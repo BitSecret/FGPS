@@ -1,0 +1,40 @@
+{
+  "problem_id": 4824,
+  "annotation": "RunanWang_2023-05-21",
+  "source": "GeoQA-4269",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC的三边分别切⊙O于D,E,F,若∠A=50°,则∠DEF=()",
+  "problem_text_en": "As shown in the figure, the three edges of △ABC are tangent ⊙O to D, E, F respectively, if ∠A = N_0, then ∠DEF = ()",
+  "problem_img": "4824.png",
+  "construction_cdl": [
+    "Shape(AD,OFD,FA)",
+    "Shape(OFD,DO,OF)",
+    "Shape(DB,BE,ODE)",
+    "Shape(ODE,ED)",
+    "Shape(OD,DE,EF,FO)",
+    "Shape(OEF,FE)",
+    "Shape(OEF,EC,CF)",
+    "Collinear(ADB)",
+    "Collinear(BEC)",
+    "Collinear(AFC)",
+    "Cocircular(O,DEF)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "IsTangentOfCircle(AD,O)",
+    "IsTangentOfCircle(AF,O)",
+    "IsTangentOfCircle(BE,O)",
+    "Equal(MeasureOfAngle(CAB),50)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DEF))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AD,O,O)",
+    "tangent_of_circle_property_perpendicular(AF,O,O)",
+    "quadrilateral_property_angle_sum(FADO)",
+    "arc_property_center_angle(OFD,O)",
+    "arc_property_circumference_angle_external(OFD,E)"
+  ]
+}

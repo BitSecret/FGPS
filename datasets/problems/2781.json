@@ -1,0 +1,32 @@
+{
+  "problem_id": 2781,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-2928",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find C F if B F bisects \\angle A B C and A C \\parallel E D, B A = 6, B C = 7.5, A C = 9, and D E = 9.",
+  "problem_img": "2781.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FA)",
+    "Shape(FB,BC,CF)",
+    "Shape(FC,CD,DE,EF)",
+    "Collinear(BFE)",
+    "Collinear(BCD)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(BF,ABC)",
+    "ParallelBetweenLine(CF,DE)",
+    "Equal(LengthOfLine(BA),6)",
+    "Equal(LengthOfLine(BC),7.5)",
+    "Equal(LengthOfLine(AC),9)",
+    "Equal(LengthOfLine(DE),9)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CF))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "bisector_of_angle_property_line_ratio(BF,ABC)",
+    "line_addition(AF,FC)"
+  ]
+}

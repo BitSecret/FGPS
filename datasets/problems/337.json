@@ -1,0 +1,31 @@
+{
+  "problem_id": 337,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-342",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "337.png",
+  "construction_cdl": [
+    "Shape(DA,AH,HD)",
+    "Shape(DH,HF,FC,CD)",
+    "Shape(CF,FB,BC)",
+    "Collinear(AHFB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(DA),8)",
+    "Equal(LengthOfLine(DH),x)",
+    "Equal(MeasureOfAngle(DAB),30)",
+    "Equal(MeasureOfAngle(ABC),45)",
+    "Equal(LengthOfLine(HF),6)",
+    "PerpendicularBetweenLine(AH,DH)",
+    "PerpendicularBetweenLine(CF,BF)",
+    "ParallelBetweenLine(DC,AB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "sine_theorem(DAH)"
+  ]
+}

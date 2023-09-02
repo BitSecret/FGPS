@@ -1,0 +1,32 @@
+{
+  "problem_id": 2113,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2203",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot F, m \\angle D F A = 50 and C F \\perp F B. Find m \\widehat B E.",
+  "problem_img": "2113.png",
+  "construction_cdl": [
+    "Shape(FC,FCD,DF)",
+    "Shape(FD,FDA,AF)",
+    "Shape(FA,FAE,EF)",
+    "Shape(FE,FEB,BF)",
+    "Shape(FB,FBC,CF)",
+    "Collinear(AFB)",
+    "Collinear(DFE)",
+    "Cocircular(F,AEBCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AFD),50)",
+    "PerpendicularBetweenLine(CF,BF)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(F,F)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(FEB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "vertical_angle(AFD,BFE)",
+    "arc_property_center_angle(FEB,F)"
+  ]
+}

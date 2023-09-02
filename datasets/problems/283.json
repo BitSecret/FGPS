@@ -1,0 +1,26 @@
+{
+  "problem_id": 283,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-287",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "283.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),y)",
+    "Equal(LengthOfLine(BC),x)",
+    "Equal(LengthOfLine(CA),7*sqrt(2))",
+    "Equal(MeasureOfAngle(CAB),45)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BCA)",
+    "sine_theorem(ABC)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 2420,
+  "annotation": "Yangli_2023-04-23",
+  "source": "Geometry3k-2537",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of \\angle A F B on \\odot F with diameter A C.",
+  "problem_img": "2420.png",
+  "construction_cdl": [
+    "Shape(BF,FC,FCB)",
+    "Shape(CF,FD,FDC)",
+    "Shape(DF,FA,FAD)",
+    "Shape(AF,FB,FBA)",
+    "Collinear(AFC)",
+    "Cocircular(F,BADC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(F,F)",
+    "Equal(MeasureOfAngle(BFC),72)",
+    "Equal(MeasureOfAngle(DFA),2*a-5)",
+    "Equal(MeasureOfAngle(CFD),4*a-1)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AFB))",
+  "problem_answer": "108",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AFB,BFC)"
+  ]
+}

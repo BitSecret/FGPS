@@ -1,0 +1,42 @@
+{
+  "problem_id": 6656,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9677",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⁀{AB}是半圆,连接AB,点O为AB的中点,点C、D在⁀{AB}上,连接AD、CO、BC、BD、OD．若∠COD=62°,且AD∥OC,则∠ABD的大小是()",
+  "problem_text_en": "As shown in the figure, ⁀AB is a semicircle. Connect AB, point O is the midpoint of AB, points C and D are on ⁀AB, connecting AD, CO, BC, BD, OD. If ∠COD = N_0 and AD ∥ OC, then the size of ∠ABD is ()",
+  "problem_img": "6656.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(DA,AO,OD)",
+    "Shape(DO,OM,MD)",
+    "Shape(DM,MC,OCD)",
+    "Shape(MO,OB,BM)",
+    "Shape(CM,MB,BC)",
+    "Shape(CB,OBC)",
+    "Collinear(AOB)",
+    "Collinear(OMC)",
+    "Collinear(DMB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "ParallelBetweenLine(AD,OC)",
+    "Equal(MeasureOfAngle(DOC),62)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABD))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,OC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "sine_theorem(ODA)",
+    "triangle_property_angle_sum(ODA)",
+    "arc_property_center_angle(ODA,O)",
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(ODA,B)"
+  ]
+}

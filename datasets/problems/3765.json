@@ -1,0 +1,48 @@
+{
+  "problem_id": 3765,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1582",
+  "problem_level": 1,
+  "problem_text_cn": "如图,是我国古代著名的“赵爽弦图”的示意图,此图是由四个全等的直角三角形拼接而成,其中AE=10,BE=24,则EF的长是()",
+  "problem_text_en": "As shown in the figure, it is a schematic diagram of the famous \"Zhao Shuang String Diagram\" in ancient China. This picture is made up of four congruent right triangles, where AE = N_0, BE = N_1, then the length of EF is ()",
+  "problem_img": "3765.png",
+  "construction_cdl": [
+    "Shape(EA,AB,BH,HE)",
+    "Shape(CF,FH,HB,BC)",
+    "Shape(DG,GF,FC,CD)",
+    "Shape(DA,AE,EG,GD)",
+    "Shape(GE,EF,FG)",
+    "Shape(FE,EH,HF)",
+    "Collinear(AEG)",
+    "Collinear(BHE)",
+    "Collinear(DGF)",
+    "Collinear(CFH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "RightTriangle(BEA)",
+    "RightTriangle(AGD)",
+    "RightTriangle(DFC)",
+    "RightTriangle(CHB)",
+    "Equal(MeasureOfAngle(EHF),90)",
+    "Equal(MeasureOfAngle(GEH),90)",
+    "Equal(MeasureOfAngle(HFG),90)",
+    "Equal(MeasureOfAngle(FGE),90)",
+    "CongruentBetweenTriangle(BEA,AGD)",
+    "CongruentBetweenTriangle(BEA,CHB)",
+    "CongruentBetweenTriangle(BEA,DFC)",
+    "Equal(LengthOfLine(AE),10)",
+    "Equal(LengthOfLine(BE),24)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "14*sqrt(2)",
+  "theorem_seqs": [
+    "congruent_triangle_property_line_equal(BEA,AGD)",
+    "congruent_triangle_property_line_equal(ABE,DAG)",
+    "congruent_triangle_property_line_equal(ABE,CDF)",
+    "line_addition(AE,EG)",
+    "line_addition(DG,GF)",
+    "right_triangle_judgment_angle(FGE)",
+    "right_triangle_property_pythagorean(FGE)"
+  ]
+}

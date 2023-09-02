@@ -1,0 +1,34 @@
+{
+  "problem_id": 6865,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10091",
+  "problem_level": 1,
+  "problem_text_cn": "如图，已知CD为⊙O的直径，过点D的弦DE平行于半径OA，若弧CE的度数是92°，则∠C的度数是（）",
+  "problem_text_en": "",
+  "problem_img": "6865.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CA,AO,OC)",
+    "Shape(CO,OE,OEC)",
+    "Shape(OD,DE,EO)",
+    "Shape(ED,ODE)",
+    "Shape(DO,OA,OAD)",
+    "Collinear(COD)",
+    "Cocircular(O,CADE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "ParallelBetweenLine(AO,DE)",
+    "Equal(MeasureOfArc(OEC),92)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OCA))",
+  "problem_answer": "23",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAD,C)",
+    "arc_property_circumference_angle_external(OEC,D)",
+    "parallel_property_alternate_interior_angle(AO,DE)",
+    "arc_property_center_angle(OAD,O)"
+  ]
+}

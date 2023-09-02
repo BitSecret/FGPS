@@ -1,12 +1,12 @@
 import copy
 from sympy import symbols, solve, Float
 from func_timeout import func_set_timeout, FunctionTimedOut
-from symbolic_solver.aux_tools.utils import number_round
-from symbolic_solver.aux_tools.parser import EquationParser as EqParser
-from symbolic_solver.aux_tools.utils import rough_equal
+from solver.aux_tools.utils import number_round
+from solver.aux_tools.parser import CDLParser
+from solver.aux_tools.utils import rough_equal
 import warnings
 from itertools import permutations
-from symbolic_solver.aux_tools.output import save_equations_hyper_graph
+from solver.aux_tools.output import save_equations_hyper_graph
 
 
 class EquationKiller:
@@ -607,7 +607,7 @@ class GeometryPredicateLogic:
 
             for predicate, item in conclusions:
                 if predicate == "Equal":  # algebra conclusion
-                    eq = EqParser.get_equation_from_tree(problem, item, True, letters)
+                    eq = CDLParser.get_equation_from_tree(problem, item, True, letters)
                     conclusion.append(("Equation", eq))
                 else:  # logic conclusion
                     item = tuple(letters[i] for i in item)
@@ -748,7 +748,7 @@ class GeometryPredicateLogic:
                 letters = {}
                 for j in range(len(r1_vars)):
                     letters[r1_vars[j]] = r1_items[i][j]
-                eq = EqParser.get_equation_from_tree(problem, r2_algebra[1], True, letters)
+                eq = CDLParser.get_equation_from_tree(problem, r2_algebra[1], True, letters)
                 try:
                     result, premise = EquationKiller.solve_target(eq, problem)
                 except FunctionTimedOut:
@@ -765,7 +765,7 @@ class GeometryPredicateLogic:
                 letters = {}
                 for j in range(len(r1_vars)):
                     letters[r1_vars[j]] = r1_items[i][j]
-                eq = EqParser.get_equation_from_tree(problem, r2_algebra[1], True, letters)
+                eq = CDLParser.get_equation_from_tree(problem, r2_algebra[1], True, letters)
                 try:
                     result, premise = EquationKiller.solve_target(eq, problem)
                 except FunctionTimedOut:
@@ -913,7 +913,7 @@ class GoalFinder:
                     continue
 
                 for _, tree in theorem_GDL[t_name]["body"][t_branch]["algebra_constraints"]:
-                    eq = EqParser.get_equation_from_tree(problem, tree, True, letters)
+                    eq = CDLParser.get_equation_from_tree(problem, tree, True, letters)
                     if eq is None:
                         passed = False
                         break

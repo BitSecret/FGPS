@@ -1,0 +1,30 @@
+{
+  "problem_id": 2510,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-2634",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "X Y and X Z are midsegments of \\triangle R S T. Find S T.",
+  "problem_img": "2510.png",
+  "construction_cdl": [
+    "Shape(RY,YX,XR)",
+    "Shape(XY,YT,TZ,ZX)",
+    "Shape(SX,XZ,ZS)",
+    "Collinear(RXS)",
+    "Collinear(RYT)",
+    "Collinear(TZS)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsMidsegmentOfTriangle(YX,RTS)",
+    "IsMidsegmentOfTriangle(XZ,SRT)",
+    "Equal(LengthOfLine(RT),13)",
+    "Equal(LengthOfLine(XY),7)",
+    "Equal(MeasureOfAngle(ZXY),124)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(TS))",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "midsegment_of_triangle_property_length(YX,RTS)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 4304,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3128",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O直径,点C在⊙O上,若∠ABC=55°,则∠BAC的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, point C is on ⊙O, if ∠ABC = N_0, then the degree of ∠BAC is ()",
+  "problem_img": "4304.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Shape(CA,AO,OB,BC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(ABC),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

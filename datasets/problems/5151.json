@@ -1,0 +1,25 @@
+{
+  "problem_id": 5151,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5073",
+  "problem_level": 1,
+  "problem_text_cn": "如图,C,D是线段AB上两点．若CB=4cm,DB=7cm,且D是AC的中点,则AB=()",
+  "problem_text_en": "As shown in the figure, C and D are two points on the line segment AB. If CB = N_0, DB = N_1, and D is the midpoint of AC, then AB = ()",
+  "problem_img": "5151.png",
+  "construction_cdl": [
+    "Collinear(ADCB)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,AC)",
+    "Equal(LengthOfLine(CB),4)",
+    "Equal(LengthOfLine(DB),7)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "line_addition(DC,CB)",
+    "line_addition(AD,DC)",
+    "line_addition(AC,CB)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 4445,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3408",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC为⊙O的内接三角形,AB为⊙O的直径,点D在⊙O上,∠ADC=54°,则∠BAC的度数等于()",
+  "problem_text_en": "As shown in the figure, △ABC is the inscribed triangle of ⊙O, AB is the diameter of ⊙O, point D is on ⊙O, ∠ADC = N_0, then the degree of ∠BAC is equal to ()",
+  "problem_img": "4445.png",
+  "construction_cdl": [
+    "Shape(DA,AE,ED)",
+    "Shape(AC,CE,EA)",
+    "Shape(EC,CB,BO,OE)",
+    "Shape(DE,EO,OB,OBD)",
+    "Shape(AD,ODA)",
+    "Shape(CA,OAC)",
+    "Shape(BC,OCB)",
+    "Collinear(AEOB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CDA),54)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAC))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,D)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "diameter_of_circle_property_right_angle(ACB,O)",
+    "triangle_property_angle_sum(ACB)"
+  ]
+}

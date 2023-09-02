@@ -1,0 +1,30 @@
+{
+  "problem_id": 995,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-1026",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest hundredth, if necessary.",
+  "problem_img": "995.png",
+  "construction_cdl": [
+    "Shape(CB,BN,NC)",
+    "Shape(CN,NE,EC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CN),2*sqrt(2))",
+    "Equal(LengthOfLine(CB),LengthOfLine(BN))",
+    "Equal(LengthOfLine(BN),LengthOfLine(EN))",
+    "Equal(LengthOfLine(EN),LengthOfLine(CE))",
+    "PerpendicularBetweenLine(CB,NB)",
+    "PerpendicularBetweenLine(NE,CE)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CBNE))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CBN)",
+    "right_triangle_property_pythagorean(CBN)",
+    "parallelogram_judgment_equal_and_equal(CBNE)",
+    "parallelogram_area_formula_sine(CBNE)"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "problem_id": 5622,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7212",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知E是正方形ABCD的边AD的延长线上一点,BE交AD于点F,若CD=6,FD=2,则ED的长是()",
+  "problem_text_en": "As shown in the figure, it is known that E is a point on the extended line of the edge AD of the square ABCD, BE intersects AD at point F, if CD = N_0, FD = N_1, then the length of ED is ()",
+  "problem_img": "5622.png",
+  "construction_cdl": [
+    "Shape(EF,FD,DE)",
+    "Shape(FA,AB,BF)",
+    "Shape(FB,BC,CD,DF)",
+    "Collinear(AFD)",
+    "Collinear(EDC)",
+    "Collinear(EFB)"
+  ],
+  "text_cdl": [
+    "Square(ABCD)",
+    "Equal(LengthOfLine(CD),6)",
+    "Equal(LengthOfLine(FD),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(ED))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AD,BC,F)",
+    "parallel_property_corresponding_angle(FD,BC,E)",
+    "parallel_property_corresponding_angle(CB,DA,E)",
+    "line_addition(ED,DC)",
+    "similar_triangle_judgment_aa(EFD,EBC)",
+    "similar_triangle_property_line_ratio(EFD,EBC)",
+    "similar_triangle_property_line_ratio(FDE,BCE)"
+  ]
+}

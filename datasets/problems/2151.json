@@ -1,0 +1,29 @@
+{
+  "problem_id": 2151,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-2245",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find L M.",
+  "problem_img": "2151.png",
+  "construction_cdl": [
+    "Shape(JM,MF,FJ)",
+    "Shape(JF,FL,LJ)",
+    "Collinear(MFL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(JM),8.5)",
+    "Equal(LengthOfLine(JL),8.5)",
+    "Equal(LengthOfLine(FM),6)",
+    "PerpendicularBetweenLine(JF,LF)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(LM))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(MFJ,JFL)",
+    "mirror_congruent_triangle_judgment_hl(MFJ,LJF)",
+    "mirror_congruent_triangle_property_line_equal(JMF,JFL)",
+    "line_addition(MF,FL)"
+  ]
+}

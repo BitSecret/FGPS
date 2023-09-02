@@ -1,0 +1,35 @@
+{
+  "problem_id": 3921,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1834",
+  "problem_level": 1,
+  "problem_text_cn": "如图:已知AB是⊙O的直径,点C在⊙O上,点D在半径OA上(不与点O,A重合)．若∠COA=60°,∠CDO=70°,∠ACD的度数是()",
+  "problem_text_en": "As shown in the figure: It is known that AB is the diameter of ⊙O, point C is on ⊙O, and point D is on radius OA (not coincident with points O and A). If ∠COA = N_0, ∠CDO = N_1, the degree of ∠ACD is ()",
+  "problem_img": "3921.png",
+  "construction_cdl": [
+    "Shape(OAB,BO,OD,DA)",
+    "Shape(OBC,CO,OB)",
+    "Shape(OCA,AC)",
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DO,OC)",
+    "Collinear(ADOB)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AOC),60)",
+    "Equal(MeasureOfAngle(CDO),70)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "triangle_property_angle_sum(OCA)",
+    "triangle_property_angle_sum(DCA)",
+    "adjacent_complementary_angle(ADC,CDO)"
+  ]
+}

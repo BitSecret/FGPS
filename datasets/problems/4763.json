@@ -1,0 +1,32 @@
+{
+  "problem_id": 4763,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4132",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC的边AC与⊙O相交于C,D两点,且经过圆心O,边AB与⊙O相切,切点为B．如果∠A=34°,那么∠C等于()",
+  "problem_text_en": "As shown in the figure, the edge AC and ⊙O of △ABC intersect at two points C and D, and pass through the center O. The edge AB is tangent to ⊙O, and the tangent point is B. If ∠A = N_0, then ∠C is equal to ()",
+  "problem_img": "4763.png",
+  "construction_cdl": [
+    "Shape(CB,OBC)",
+    "Shape(CO,OB,BC)",
+    "Shape(BO,OD,ODB)",
+    "Shape(DO,OC,OCD)",
+    "Shape(DA,AB,ODB)",
+    "Collinear(CODA)",
+    "Cocircular(O,DBC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DAB),34)",
+    "IsTangentOfCircle(AB,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCO))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AB,O,O)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_circumference_angle_external(ODB,C)"
+  ]
+}

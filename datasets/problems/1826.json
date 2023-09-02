@@ -1,0 +1,46 @@
+{
+  "problem_id": 1826,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-1894",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find E H if \\triangle A B C \\sim \\triangle D E F, B G is an altitude of \\triangle A B C, E H is an altitude of \\triangle D E F, B G = 3, B F = 4, F C = 2, and C E = 1.",
+  "problem_img": "1826.png",
+  "construction_cdl": [
+    "Shape(AB,BG,GA)",
+    "Shape(GB,BF,FI,IG)",
+    "Shape(IF,FC,CI)",
+    "Shape(IC,CE,EH,HI)",
+    "Shape(HE,ED,DH)",
+    "Collinear(AGIC)",
+    "Collinear(FIHD)",
+    "Collinear(BFCE)"
+  ],
+  "text_cdl": [
+    "MirrorSimilarBetweenTriangle(ABC,DFE)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(BG),HeightOfTriangle(ABC))",
+    "Equal(LengthOfLine(EH),HeightOfTriangle(DFE))",
+    "Equal(LengthOfLine(BG),3)",
+    "Equal(LengthOfLine(BF),4)",
+    "Equal(LengthOfLine(FC),2)",
+    "Equal(LengthOfLine(CE),1)",
+    "Equal(LengthOfLine(BG),3)",
+    "PerpendicularBetweenLine(BG,AG)",
+    "PerpendicularBetweenLine(EH,FH)",
+    "PerpendicularBetweenLine(AB,FB)",
+    "PerpendicularBetweenLine(CE,DE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(EH))",
+  "problem_answer": "3/2",
+  "theorem_seqs": [
+    "line_addition(BF,FC)",
+    "line_addition(FC,CE)",
+    "mirror_similar_triangle_property_angle_equal(CAB,FED)",
+    "adjacent_complementary_angle(IGB,BGA)",
+    "mirror_similar_triangle_judgment_aa(BCG,EHF)",
+    "mirror_similar_triangle_property_line_ratio(CGB,FEH)",
+    "mirror_similar_triangle_property_line_ratio(GBC,HFE)"
+  ]
+}

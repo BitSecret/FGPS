@@ -1,0 +1,36 @@
+{
+  "problem_id": 1356,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-1404",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "m \\angle B Z A = 104, m \\widehat C B = 94, and A B \\parallel D C. Find m \\angle B D A.",
+  "problem_img": "1356.png",
+  "construction_cdl": [
+    "Shape(ZBA,AB)",
+    "Shape(ZB,BA,AZ)",
+    "Shape(EB,BZ,ZA,AE)",
+    "Shape(EA,AD,DE)",
+    "Shape(ZAD,DA)",
+    "Shape(ED,DC,CE)",
+    "Shape(ZDC,CD)",
+    "Shape(BE,EC,CB)",
+    "Shape(ECB,BC)",
+    "Collinear(BED)",
+    "Collinear(CEA)",
+    "Cocircular(Z,ADCB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(Z,Z)",
+    "Equal(MeasureOfAngle(AZB),104)",
+    "Equal(MeasureOfArc(ZCB),94)",
+    "ParallelBetweenLine(AB,DC)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ADB))",
+  "problem_answer": "52",
+  "theorem_seqs": [
+    "arc_property_center_angle(ZBA,Z)",
+    "arc_property_circumference_angle_external(ZBA,D)"
+  ]
+}

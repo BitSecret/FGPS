@@ -1,0 +1,38 @@
+{
+  "problem_id": 6576,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9537",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在等腰△ABC中,AB=AC=5,BC=6,E是BC边上的任意一点,过E作EM∥AB,交AC于M,EN∥AC,交AB于N,那么平行四边形AMEN的周长是()",
+  "problem_text_en": "As shown in the figure, in isosceles △ABC, AB = AC = N_0, BC = N_1, E is any point on the edge of BC, pass E as EM ∥ AB, cross AC to M, EN ∥ AC, cross AB to N, Then the perimeter of the parallelogram AMEN is ()",
+  "problem_img": "6576.png",
+  "construction_cdl": [
+    "Shape(AN,NE,EM,MA)",
+    "Shape(NB,BE,EN)",
+    "Shape(ME,EC,CM)",
+    "Collinear(ANB)",
+    "Collinear(BEC)",
+    "Collinear(CMA)"
+  ],
+  "text_cdl": [
+    "IsoscelesTriangle(ABC)",
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(AC),5)",
+    "Equal(LengthOfLine(BC),6)",
+    "ParallelBetweenLine(EN,CA)",
+    "ParallelBetweenLine(ME,AB)",
+    "Parallelogram(ANEM)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ANEM))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "parallel_property_corresponding_angle(EN,CA,B)",
+    "isosceles_triangle_judgment_angle_equal(NBE)",
+    "quadrilateral_perimeter_formula(ANEM)",
+    "parallelogram_property_opposite_line_equal(ANEM)",
+    "parallelogram_property_opposite_line_equal(NEMA)",
+    "line_addition(AN,NB)"
+  ]
+}

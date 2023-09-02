@@ -1,0 +1,35 @@
+{
+  "problem_id": 750,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-775",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x so that p \\parallel q.",
+  "problem_img": "750.png",
+  "construction_cdl": [
+    "Shape(FC,CA)",
+    "Shape(PC,CF)",
+    "Shape(AC,CD)",
+    "Shape(DC,CP)",
+    "Shape(CD,DG)",
+    "Shape(ED,DC)",
+    "Shape(GD,DB)",
+    "Shape(BD,DE)",
+    "Collinear(ECDB)",
+    "Collinear(ACP)",
+    "Collinear(GDE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "ParallelBetweenLine(PA,EG)",
+    "Equal(MeasureOfAngle(ACB),5*x+21)",
+    "Equal(MeasureOfAngle(CDG),12*x+6)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(PA,EG,C)",
+    "parallel_property_collinear_extend(GE,AC,D)",
+    "parallel_property_ipsilateral_internal_angle(CA,DG)"
+  ]
+}

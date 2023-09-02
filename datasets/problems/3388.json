@@ -1,0 +1,26 @@
+{
+  "problem_id": 3388,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-898",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将△ABC绕点A按顺时针方向旋转120°得到△ADE,点B的对应点是点E,点C的对应点是点D,若∠BAC=35°,则∠CAE的度数为()",
+  "problem_text_en": "As shown in the figure, rotate △ABC around point A clockwise by N_0 to get △ADE, the corresponding point of point B is point E, the corresponding point of point C is point D, if ∠BAC = N_1, then the degree of ∠CAE is ( )",
+  "problem_img": "3388.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)",
+    "Shape(EA,AD,DE)",
+    "Shape(CA,AE)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(ACB,ADE)",
+    "Equal(MeasureOfAngle(CAD),120)",
+    "Equal(MeasureOfAngle(BAC),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAE))",
+  "problem_answer": "85",
+  "theorem_seqs": [
+    "congruent_triangle_property_angle_equal(ACB,ADE)",
+    "angle_addition(CAE,EAD)"
+  ]
+}

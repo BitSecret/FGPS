@@ -1,0 +1,37 @@
+{
+  "problem_id": 623,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-640",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot T, Z V = 1, and T W = 13. Find X V.",
+  "problem_img": "623.png",
+  "construction_cdl": [
+    "Shape(TZX,XV,VZ)",
+    "Shape(TYZ,ZV,VY)",
+    "Shape(TV,VX,XT)",
+    "Shape(WT,TX,TXW)",
+    "Shape(VT,TW,TWY,YV)",
+    "Collinear(ZVTW)",
+    "Collinear(XVY)",
+    "Cocircular(T,ZXWY)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(ZV),1)",
+    "Equal(LengthOfLine(TW),13)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(T,T)",
+    "PerpendicularBetweenLine(TV,XV)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(XV))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(TW,T)",
+    "radius_of_circle_property_length_equal(TX,T)",
+    "radius_of_circle_property_length_equal(TZ,T)",
+    "line_addition(ZV,VT)",
+    "right_triangle_judgment_angle(TVX)",
+    "right_triangle_property_pythagorean(TVX)"
+  ]
+}

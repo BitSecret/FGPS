@@ -1,0 +1,32 @@
+{
+  "problem_id": 6185,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8758",
+  "problem_level": 1,
+  "problem_text_cn": "已知AB是⊙O的直径,过点A的弦AD平行于半径OC,若∠A=70°,则∠B等于()",
+  "problem_text_en": "Knowing that AB is the diameter of O, the chord AD passing point A is parallel to the radius OC, if ∠A = N_0, then ∠B is equal to ()",
+  "problem_img": "6185.png",
+  "construction_cdl": [
+    "Shape(DA,AB,OBD)",
+    "Shape(AD,ODA)",
+    "Shape(CO,OA,OAC)",
+    "Shape(BO,OC,CB)",
+    "Shape(BC,OCB)",
+    "Collinear(BOA)",
+    "Cocircular(O,DACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "ParallelBetweenLine(AD,CO)",
+    "Equal(MeasureOfAngle(DAO),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBO))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,CO)",
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_external(OAC,B)"
+  ]
+}

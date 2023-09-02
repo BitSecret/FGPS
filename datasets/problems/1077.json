@@ -1,0 +1,33 @@
+{
+  "problem_id": 1077,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1113",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram A B C D to find x.",
+  "problem_img": "1077.png",
+  "construction_cdl": [
+    "Shape(BA,AF,FB)",
+    "Shape(FA,AD,DF)",
+    "Shape(CF,FD,DC)",
+    "Shape(CB,BF,FC)",
+    "Collinear(BFD)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(ADCB)",
+    "Equal(LengthOfLine(BC),3*y-4)",
+    "Equal(MeasureOfAngle(DCF),54)",
+    "Equal(LengthOfLine(DC),25)",
+    "Equal(LengthOfLine(BA),5*x)",
+    "Equal(MeasureOfAngle(FAD),49)",
+    "Equal(MeasureOfAngle(ADB),34)",
+    "Equal(LengthOfLine(DA),29)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(DCBA)"
+  ]
+}

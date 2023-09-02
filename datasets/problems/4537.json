@@ -1,0 +1,30 @@
+{
+  "problem_id": 4537,
+  "annotation": "XiaokaiZhang_2023-05-14",
+  "source": "GeoQA-3606",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD是⊙O的内接四边形,若∠B=75°,∠C=85°,则∠D-∠A的度数差为()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is the inscribed quadrilateral of ⊙O, if ∠B = N_0, ∠C = N_1, then the degree difference of ∠D-∠A is ()",
+  "problem_img": "4537.png",
+  "construction_cdl": [
+    "Shape(OBA,AB)",
+    "Shape(OAD,DA)",
+    "Shape(ODC,CD)",
+    "Shape(OCB,BC)",
+    "Shape(AD,DC,CB,BA)",
+    "Cocircular(O,ADCB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CBA),75)",
+    "Equal(MeasureOfAngle(DCB),85)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(MeasureOfAngle(ADC),MeasureOfAngle(BAD)))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_internal(OAC,D)",
+    "arc_property_circumference_angle_external(OBD,C)",
+    "arc_property_circumference_angle_internal(OBD,A)"
+  ]
+}

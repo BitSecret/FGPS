@@ -1,0 +1,30 @@
+{
+  "problem_id": 3499,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1104",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,在△ABC中,AC=DC=DB,∠A=40°,则∠B等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, AC = DC = DB, ∠A = N_0, then ∠B is equal to ()",
+  "problem_img": "3499.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DB,BC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CA),LengthOfLine(CD))",
+    "Equal(LengthOfLine(DC),LengthOfLine(DB))",
+    "Equal(MeasureOfAngle(CAD),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(CAD)",
+    "isosceles_triangle_property_angle_equal(CAD)",
+    "adjacent_complementary_angle(ADC,CDB)",
+    "isosceles_triangle_judgment_line_equal(DBC)",
+    "isosceles_triangle_property_angle_equal(DBC)",
+    "triangle_property_angle_sum(DBC)"
+  ]
+}

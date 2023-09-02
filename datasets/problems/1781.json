@@ -1,0 +1,40 @@
+{
+  "problem_id": 1781,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1847",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot F, F H \\cong F L and F K = 17. Find K M.",
+  "problem_img": "1781.png",
+  "construction_cdl": [
+    "Shape(FJG,GJ)",
+    "Shape(FMK,KL,LM)",
+    "Shape(FKJ,JH,HF,FK)",
+    "Shape(FGM,MF,FH,HG)",
+    "Shape(KF,FL,LK)",
+    "Shape(LF,FM,ML)",
+    "Collinear(HFL)",
+    "Collinear(JHG)",
+    "Collinear(KLM)",
+    "Cocircular(F,JGMK)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(FK),17)",
+    "Equal(LengthOfLine(FH),LengthOfLine(FL))"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(F,F)",
+    "Equal(LengthOfLine(FL),8)",
+    "PerpendicularBetweenLine(JH,FH)",
+    "PerpendicularBetweenLine(FL,KL)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(KM))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(MLF,FLK)",
+    "right_triangle_judgment_angle(FLK)",
+    "right_triangle_property_pythagorean(FLK)",
+    "circle_property_chord_perpendicular_bisect_chord(F,FL,MK)",
+    "line_addition(KL,LM)"
+  ]
+}

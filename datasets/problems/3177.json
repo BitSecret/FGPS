@@ -1,0 +1,34 @@
+{
+  "problem_id": 3177,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-458",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O的内接五边形ABCDE中,∠CAD=35°,∠AED=115°,则∠B的度数是()",
+  "problem_text_en": "As shown in the figure, in the inscribed pentagon ABCDE of ⊙O, ∠CAD = N_0, ∠AED = N_1, then the degree of ∠B is ()",
+  "problem_img": "3177.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(DC,OCD)",
+    "Shape(ED,ODE)",
+    "Shape(AE,OEA)",
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Shape(AD,DE,EA)",
+    "Cocircular(O,ABCDE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DAC),35)",
+    "Equal(MeasureOfAngle(DEA),115)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_internal(ODA,E)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "triangle_property_angle_sum(ACD)",
+    "arc_property_circumference_angle_internal(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": 4894,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4433",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA切⊙O于点A,直线PBC经过点圆心O,若∠P=30°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, PA is tangent to ⊙O at point A, and straight line PBC passes through point center O, if ∠P = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4894.png",
+  "construction_cdl": [
+    "Shape(AP,PB,OAB)",
+    "Shape(BO,OA,OAB)",
+    "Shape(AO,OC,CA)",
+    "Shape(AC,OCA)",
+    "Shape(CO,OB,OBC)",
+    "Collinear(PBOC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "Equal(MeasureOfAngle(APB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "triangle_property_angle_sum(AOC)",
+    "triangle_property_angle_sum(APO)",
+    "triangle_property_angle_sum(APC)",
+    "adjacent_complementary_angle(POA,AOC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)"
+  ]
+}

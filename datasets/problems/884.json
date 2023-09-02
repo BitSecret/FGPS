@@ -1,0 +1,27 @@
+{
+  "problem_id": 884,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-913",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "884.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)",
+    "Shape(GH,HF,FG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(FGH),2*x)",
+    "Equal(MeasureOfAngle(ACB),80)",
+    "Equal(MeasureOfAngle(CBA),MeasureOfAngle(GHF))",
+    "PerpendicularBetweenLine(BA,CA)",
+    "PerpendicularBetweenLine(HF,GF)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "similar_triangle_judgment_aa(CBA,GHF)",
+    "similar_triangle_property_angle_equal(CBA,GHF)"
+  ]
+}

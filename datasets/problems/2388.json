@@ -1,0 +1,36 @@
+{
+  "problem_id": 2388,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2503",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. ",
+  "problem_img": "2388.png",
+  "construction_cdl": [
+    "Shape(DEC,CE)",
+    "Shape(DCB,BD,DC)",
+    "Shape(DBE,EB)",
+    "Shape(EC,CD,DB,BE)",
+    "Collinear(CDB)",
+    "Cocircular(D,ECB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(BC,D)",
+    "IsDiameterOfCircle(CB,D)",
+    "IsCentreOfCircle(D,D)",
+    "Equal(LengthOfLine(EC),5)",
+    "Equal(MeasureOfAngle(DBE),30)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfCircle(D),AreaOfTriangle(ECB)))",
+  "problem_answer": "56.889",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BEC,D)",
+    "sine_theorem(CBE)",
+    "diameter_of_circle_property_length_equal(CB,D)",
+    "circle_property_length_of_radius_and_diameter(D)",
+    "circle_area_formula(D)",
+    "triangle_area_formula_sine(CBE)",
+    "triangle_property_angle_sum(ECB)"
+  ]
+}

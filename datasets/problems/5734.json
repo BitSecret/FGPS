@@ -1,0 +1,46 @@
+{
+  "problem_id": 5734,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7536",
+  "problem_level": 1,
+  "problem_text_cn": "如图，D是BC中点，求证∠NMD=∠BCA",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠A = N_0, AB = N_1, AC = N_2, point D is the midpoint of side BC, point M is a moving point on side AB, and point N is a moving point on side AC , And ∠MDN = N_3, then cos∠DMN is ()",
+  "problem_img": "5734.png",
+  "construction_cdl": [
+    "Shape(OAM,MA)",
+    "Shape(AM,ME,EA)",
+    "Shape(AE,EN,NA)",
+    "Shape(ONA,AN)",
+    "Shape(MB,BF,OMF)",
+    "Shape(OMF,FD,DM)",
+    "Shape(MD,DE,EM)",
+    "Shape(ED,DN,NE)",
+    "Shape(ODN,ND)",
+    "Shape(OFD,DF)",
+    "Shape(DC,CN,ODN)",
+    "Collinear(AMB)",
+    "Collinear(ANC)",
+    "Collinear(BFDC)",
+    "Collinear(AED)",
+    "Collinear(MEN)",
+    "Cocircular(O,AMFDN)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,BC)",
+    "IsDiameterOfCircle(MN,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Equal(MeasureOfAngle(NMD),MeasureOfAngle(BCA))",
+  "problem_answer": "4/5",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(NAM,O)",
+    "right_triangle_judgment_angle(CAB)",
+    "median_of_triangle_judgment(AD,ABC)",
+    "right_triangle_property_length_of_median(CAB,D)",
+    "line_addition(BD,DC)",
+    "isosceles_triangle_judgment_line_equal(DCA)",
+    "isosceles_triangle_property_angle_equal(DCA)",
+    "arc_property_circumference_angle_external(ODN,M)",
+    "arc_property_circumference_angle_external(ODN,A)"
+  ]
+}

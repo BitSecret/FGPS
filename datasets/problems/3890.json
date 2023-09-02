@@ -1,0 +1,35 @@
+{
+  "problem_id": 3890,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1788",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BC是⊙O的直径,A,D是⊙O上的两点,连接AB,AD,BD,若∠ADB=70°,则∠ABC的度数是()",
+  "problem_text_en": "As shown in the figure, BC is the diameter of ⊙O, A, D are two points on ⊙O, connecting AB, AD, BD, if ∠ADB = N_0, then the degree of ∠ABC is ()",
+  "problem_img": "3890.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EC,CA)",
+    "Shape(AC,OCA)",
+    "Shape(DB,OBD)",
+    "Shape(EB,BD,DE)",
+    "Shape(CE,ED,ODC)",
+    "Collinear(BOEC)",
+    "Collinear(AED)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(BC,O)",
+    "Equal(MeasureOfAngle(BDA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(CAB,O)",
+    "arc_property_circumference_angle_external(OAB,D)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

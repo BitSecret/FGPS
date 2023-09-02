@@ -1,0 +1,32 @@
+{
+  "problem_id": 4393,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3327",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,DC是弦,若∠COB=68°,则∠BDC的度数等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O and DC is the chord. If ∠COB = N_0, then the degree of ∠BDC is equal to ()",
+  "problem_img": "4393.png",
+  "construction_cdl": [
+    "Shape(DC,OCD)",
+    "Shape(DE,EC,CD)",
+    "Shape(AO,OE,ED,ODA)",
+    "Shape(EO,OB,BE)",
+    "Shape(CE,EB,OBC)",
+    "Collinear(DEB)",
+    "Collinear(OEC)",
+    "Collinear(AOB)",
+    "Cocircular(O,BCDA)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(COB),68)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "34",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,D)",
+    "arc_property_center_angle(OBC,O)"
+  ]
+}

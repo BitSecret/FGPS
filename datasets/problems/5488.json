@@ -1,0 +1,34 @@
+{
+  "problem_id": 5488,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5945",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC中,∠ACB=90°,∠A=30°,D,E,F分别为AB,AD,AC的中点,若CB=4,则EF的长度为()",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠ACB = N_0, ∠A = N_1, D, E, F are the midpoints of AB, AD, AC, respectively. If CB = N_2, the length of EF is ()",
+  "problem_img": "5488.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(ED,DC,CF,FE)",
+    "Shape(DB,BC,CD)",
+    "Collinear(AEDB)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "RightTriangle(BCA)",
+    "IsMidpointOfLine(D,AB)",
+    "IsMidpointOfLine(E,AD)",
+    "IsMidpointOfLine(F,AC)",
+    "Equal(LengthOfLine(CB),4)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "sine_theorem(BCA)",
+    "median_of_triangle_judgment(CD,CAB)",
+    "right_triangle_property_length_of_median(BCA,D)",
+    "midsegment_of_triangle_judgment_midpoint(EF,ADC)",
+    "midsegment_of_triangle_property_length(EF,ADC)"
+  ]
+}

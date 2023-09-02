@@ -1,0 +1,32 @@
+{
+  "problem_id": 4260,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-3047",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C、D、E在⊙O上,若∠ACE=25°,∠BDE=15°,则圆心角∠AOB的大小为()",
+  "problem_text_en": "As shown in the figure, the points A, B, C, D, and E are on ⊙O, if ∠ACE = N_0, ∠BDE = N_1, then the size of the central angle ∠AOB is ()",
+  "problem_img": "4260.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(OBD,DB)",
+    "Shape(ODC,CE,ED)",
+    "Shape(OAE,EC,CA)",
+    "Shape(OEB,BD,DE)",
+    "Shape(OAE,OEB,BO,OA)",
+    "Cocircular(O,AEBDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ECA),25)",
+    "Equal(MeasureOfAngle(BDE),15)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_addition_measure(OAE,OEB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAE,C)",
+    "arc_property_circumference_angle_external(OEB,D)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 579,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-593",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find \\angle 3.",
+  "problem_img": "579.png",
+  "construction_cdl": [
+    "Shape(BC,FCE,EB)",
+    "Shape(BE,FED,DB)",
+    "Shape(BD,DA,AB)",
+    "Shape(AD,FDA)",
+    "Shape(BA,FAC,CB)",
+    "Collinear(EBFA)",
+    "Collinear(CBD)",
+    "Cocircular(F,EDAC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(FAC),120)",
+    "Equal(MeasureOfArc(FED),100)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DBE))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(FED,A)",
+    "arc_property_circumference_angle_external(FAC,D)",
+    "triangle_property_angle_sum(ABD)",
+    "adjacent_complementary_angle(ABD,DBE)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 4610,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3780",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠A=70°,O为△ABC的外心,则∠BOC的度数为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠A = N_0, O is the circumcenter of △ABC, then the degree of ∠BOC is ()",
+  "problem_img": "4610.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,BC,CO)",
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(AC,OCA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "140",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

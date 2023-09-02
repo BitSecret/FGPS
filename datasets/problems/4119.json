@@ -1,0 +1,29 @@
+{
+  "problem_id": 4119,
+  "annotation": "QikeHuang_2023-05-07",
+  "source": "GeoQA-2611",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC中,∠C=90°,BC=4,AC=3,CD⊥AB于D,设∠ACD=α,则\\cosα的值为()",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠C = N_0, BC = N_1, AC = N_2, CD ⊥ AB at point D, set ∠ACD = α, then the value of cosα is ()",
+  "problem_img": "4119.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(CD,DB,BC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(MeasureOfAngle(BCA),90)",
+    "PerpendicularBetweenLine(AD,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Cos(MeasureOfAngle(DCA)))",
+  "problem_answer": "4/5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)",
+    "sine_theorem(BCA)",
+    "triangle_property_angle_sum(ADC)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 4331,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3190",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AC是⊙O直径,AC=4,∠BAC=30°,点D是弦AB上的一个动点,那么\\1/2*DB+OD的最小值为()",
+  "problem_text_en": "As shown in the figure, AC is the diameter of ⊙O, AC = N_0, ∠BAC = N_1, point D is a moving point on chord AB, then the minimum value of \\frac{N_2}{N_3} DB + OD is ()",
+  "problem_img": "4331.png",
+  "construction_cdl": [
+    "Shape(OBA,AB)",
+    "Shape(BA,AO,OD,DB)",
+    "Shape(BD,DC,CB)",
+    "Shape(OCB,BC)",
+    "Shape(OA,OAC,CD,DO)",
+    "Collinear(AODC)",
+    "Cocircular(O,BAC)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AC,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(MeasureOfAngle(BAC),30)",
+    "PerpendicularBetweenLine(BD,CD)",
+    "PerpendicularBetweenLine(AD,BD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "sqrt(3)",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(CBA,O)",
+    "triangle_property_angle_sum(BAC)",
+    "sine_theorem(BAD)",
+    "sine_theorem(ACB)"
+  ]
+}

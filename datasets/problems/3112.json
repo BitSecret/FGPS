@@ -1,0 +1,28 @@
+{
+  "problem_id": 3112,
+  "annotation": "YimingHe_2023-04-23",
+  "source": "GeoQA-363",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△OAB绕点O逆时针旋转80°得到△OCD,若∠A=110°,∠D=40°,则∠α的度数是()",
+  "problem_text_en": "As shown in the figure, △OAB rotates N_0 anticlockwise around point O to get △OCD, if ∠A = N_1, ∠D = N_2, then the degree of ∠α is ()",
+  "problem_img": "3112.png",
+  "construction_cdl": [
+    "Shape(DC,CO,OD)",
+    "Shape(DO,OA)",
+    "Shape(AO,OB,BA)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(AOB,COD)",
+    "Equal(MeasureOfAngle(COA),80)",
+    "Equal(MeasureOfAngle(BAO),110)",
+    "Equal(MeasureOfAngle(ODC),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DOA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "congruent_triangle_property_angle_equal(AOB,COD)",
+    "triangle_property_angle_sum(DCO)",
+    "angle_addition(COD,DOA)"
+  ]
+}

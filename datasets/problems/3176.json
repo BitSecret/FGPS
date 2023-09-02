@@ -1,0 +1,27 @@
+{
+  "problem_id": 3176,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-457",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A．B．C在⊙D上,∠ABC=70°,则∠ADC的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, C is on ⊙D, ∠ABC = N_0, then the degree of ∠ADC is ()",
+  "problem_img": "3176.png",
+  "construction_cdl": [
+    "Shape(BA,AD,DC,CB)",
+    "Shape(AB,OBA)",
+    "Shape(CD,DA,OAC)",
+    "Shape(BC,OCB)",
+    "Cocircular(D,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(D,D)",
+    "Equal(MeasureOfAngle(CBA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "140",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(DAC,B)",
+    "arc_property_center_angle(DAC,D)"
+  ]
+}

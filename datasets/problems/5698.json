@@ -1,0 +1,34 @@
+{
+  "problem_id": 5698,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7443",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,在等边△ABC中,D为BC边上一点,E为AC边上一点,且∠ADB+∠EDC=120°,BD=3,CE=2,则△ABC的边长为()",
+  "problem_text_en": "As shown in the figure, in the equilateral △ABC, D is a point on the edge of BC, E is a point on the edge of AC, and ∠ADB + ∠EDC = N_0, BD = N_1, CE = N_2, then the edge length of △ABC is ()",
+  "problem_img": "5698.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DC,CE)",
+    "Collinear(BDC)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(ABC)",
+    "Equal(Add(MeasureOfAngle(BDA),MeasureOfAngle(EDC)),120)",
+    "Equal(LengthOfLine(BD),3)",
+    "Equal(LengthOfLine(CE),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(BCA)",
+    "equilateral_triangle_property_angle(CAB)",
+    "triangle_property_angle_sum(ABD)",
+    "similar_triangle_judgment_aa(DAB,EDC)",
+    "similar_triangle_property_line_ratio(DAB,EDC)",
+    "similar_triangle_property_line_ratio(ABD,DCE)",
+    "line_addition(BD,DC)"
+  ]
+}

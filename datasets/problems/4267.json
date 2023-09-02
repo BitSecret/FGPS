@@ -1,0 +1,34 @@
+{
+  "problem_id": 4267,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3057",
+  "problem_level": 1,
+  "problem_text_cn": "如图,OA,OB分别为⊙O的半径,若CD⊥OA,CE⊥OB,垂足分别为D,E,∠P=70°,则∠DCE的度数为()",
+  "problem_text_en": "As shown in the figure, OA and OB are the radius of ⊙O respectively. If CD ⊥ OA, CE ⊥ OB, and the vertical feet are D, E, ∠P = N_0, then the degree of ∠DCE is ()",
+  "problem_img": "4267.png",
+  "construction_cdl": [
+    "Shape(AD,DC,OCA)",
+    "Shape(CD,DO,OE,EC)",
+    "Shape(CE,EB,OBC)",
+    "Shape(BP,OPB)",
+    "Shape(BO,OA,AP,PB)",
+    "Shape(PA,OAP)",
+    "Collinear(OEB)",
+    "Collinear(ADO)",
+    "Cocircular(O,CAPB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(APB),70)",
+    "Equal(MeasureOfAngle(CDO),90)",
+    "Equal(MeasureOfAngle(OEC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ECD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBA,P)",
+    "arc_property_center_angle(OBA,O)",
+    "quadrilateral_property_angle_sum(CDOE)"
+  ]
+}

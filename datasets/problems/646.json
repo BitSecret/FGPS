@@ -1,0 +1,26 @@
+{
+  "problem_id": 646,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-663",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the value of \\tan x?",
+  "problem_img": "646.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),13)",
+    "Equal(LengthOfLine(BC),5)",
+    "Equal(MeasureOfAngle(BAC),x)",
+    "Equal(LengthOfLine(AC),12)",
+    "PerpendicularBetweenLine(AC,BC)"
+  ],
+  "goal_cdl": "Value(Tan(x))",
+  "problem_answer": "5/12",
+  "theorem_seqs": [
+    "sine_theorem(ACB)",
+    "sine_theorem(CBA)"
+  ]
+}

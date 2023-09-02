@@ -1,0 +1,32 @@
+{
+  "problem_id": 4903,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4446",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,AB为直径,PC为⊙O的切线,且∠A=30°,则∠P的度数为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, AB is the diameter, PC is the tangent of ⊙O, and ∠A = N_0, then the degree of ∠P is ()",
+  "problem_img": "4903.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(OA,AC,CO)",
+    "Shape(CA,OAC)",
+    "Shape(BO,OC,OCB)",
+    "Shape(CP,PB,OCB)",
+    "Collinear(AOBP)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PC,O)",
+    "Equal(MeasureOfAngle(OAC),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CPB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCB,O)",
+    "arc_property_circumference_angle_external(OCB,A)",
+    "tangent_of_circle_property_perpendicular(PC,O,O)",
+    "triangle_property_angle_sum(OCP)"
+  ]
+}

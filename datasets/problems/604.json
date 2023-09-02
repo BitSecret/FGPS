@@ -1,0 +1,42 @@
+{
+  "problem_id": 604,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-621",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 12 = 64. Find the measure of \\angle 4.",
+  "problem_img": "604.png",
+  "construction_cdl": [
+    "Shape(JD,DW)",
+    "Shape(WD,DU)",
+    "Shape(DU,UA)",
+    "Shape(AU,UL)",
+    "Shape(HD,DJ)",
+    "Shape(BH,HD)",
+    "Shape(IH,HB)",
+    "Shape(DH,HE,EU,UD)",
+    "Shape(EH,HI)",
+    "Shape(KE,EH)",
+    "Shape(LU,UE)",
+    "Shape(UE,EN)",
+    "Shape(NE,EK)",
+    "Collinear(WDHI)",
+    "Collinear(AUEK)",
+    "Collinear(JDUL)",
+    "Collinear(BHEN)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(UEN),64)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(IW,KA)",
+    "ParallelBetweenLine(JL,BN)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AUL))",
+  "problem_answer": "64",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(JL,BN,U)",
+    "parallel_property_collinear_extend(NB,LU,E)",
+    "parallel_property_corresponding_angle(UL,EN,A)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 2088,
+  "annotation": "YimingHe_2023-03-26",
+  "source": "Geometry3k-2175",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2088.png",
+  "construction_cdl": [
+    "Shape(CA,AE,EC)",
+    "Shape(CF,FA,AC)",
+    "Shape(DF,FB,BD)",
+    "Shape(GD,DB,BG)",
+    "Collinear(EAFB)",
+    "Collinear(CFDG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CE),14)",
+    "Equal(LengthOfLine(BG),8)",
+    "Equal(LengthOfLine(BF),10)",
+    "Equal(MeasureOfAngle(AEC),MeasureOfAngle(BGD))",
+    "Equal(LengthOfLine(CF),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "17.5",
+  "theorem_seqs": [
+    "vertical_angle(CFE,GFB)",
+    "mirror_similar_triangle_judgment_aa(CFE,BGF)",
+    "mirror_similar_triangle_property_line_ratio(FEC,FBG)",
+    "mirror_similar_triangle_property_line_ratio(ECF,GFB)"
+  ]
+}

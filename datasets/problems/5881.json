@@ -1,0 +1,36 @@
+{
+  "problem_id": 5881,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7937",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知等边三角形ABC的边长是9,P为BC上一点,且BP=3,D为AC上一点,∠APD=60°,则线段CD的长是()",
+  "problem_text_en": "As shown in the figure, it is known that the edge length of the equilateral triangle ABC is N_0, P is a point on BC, and BP = N_1, D is a point on AC, ∠APD = N_2, then the length of the line segment CD is ()",
+  "problem_img": "5881.png",
+  "construction_cdl": [
+    "Shape(AB,BP,PA)",
+    "Shape(AP,PD,DA)",
+    "Shape(DP,PC,CD)",
+    "Collinear(BPC)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(ABC)",
+    "Equal(LengthOfLine(AB),9)",
+    "Equal(LengthOfLine(BP),3)",
+    "Equal(MeasureOfAngle(APD),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(BCA)",
+    "equilateral_triangle_property_angle(CAB)",
+    "triangle_property_angle_sum(ABP)",
+    "angle_addition(BPA,APD)",
+    "adjacent_complementary_angle(BPD,DPC)",
+    "line_addition(BP,PC)",
+    "similar_triangle_judgment_aa(PAB,DPC)",
+    "similar_triangle_property_line_ratio(PAB,DPC)",
+    "similar_triangle_property_line_ratio(ABP,PCD)"
+  ]
+}

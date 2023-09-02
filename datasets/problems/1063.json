@@ -1,0 +1,32 @@
+{
+  "problem_id": 1063,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1098",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find M P.",
+  "problem_img": "1063.png",
+  "construction_cdl": [
+    "Shape(MQ,QN,NM)",
+    "Shape(QP,PO,ON,NQ)",
+    "Collinear(MQP)",
+    "Collinear(MNO)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(MQ),5)",
+    "Equal(LengthOfLine(ON),3+3/5)",
+    "Equal(LengthOfLine(MN),6)",
+    "ParallelBetweenLine(QN,PO)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(MP))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(QN,PO,M)",
+    "parallel_property_corresponding_angle(OP,NQ,M)",
+    "line_addition(MN,NO)",
+    "similar_triangle_judgment_aa(MQN,MPO)",
+    "similar_triangle_property_line_ratio(QNM,POM)",
+    "similar_triangle_property_line_ratio(NMQ,OMP)"
+  ]
+}

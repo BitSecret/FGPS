@@ -1,0 +1,44 @@
+{
+  "problem_id": 6290,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-8985",
+  "problem_level": 1,
+  "problem_text_cn": "如图,正方形ABCD的对角线交于点0,∠BAC的平分线交BD于点E,若正方形的边长是1cm,则DE的长是()",
+  "problem_text_en": "As shown in the figure, the diagonal of the square ABCD intersects at point N_0, and the bisector of ∠BAC intersects at point E. If the edge length of the square is N_1, then the length of DE is ()",
+  "problem_img": "6290.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(OE,EB,BC,CO)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AOC)",
+    "Collinear(BEOD)"
+  ],
+  "text_cdl": [
+    "Square(ABCD)",
+    "Equal(LengthOfLine(AB),1)",
+    "Equal(MeasureOfAngle(CAB),45)",
+    "IsBisectorOfAngle(AE,OAB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "isosceles_triangle_judgment_line_equal(ABD)",
+    "isosceles_triangle_property_angle_equal(ABD)",
+    "triangle_property_angle_sum(ABE)",
+    "triangle_property_angle_sum(AEO)",
+    "triangle_property_angle_sum(ABO)",
+    "triangle_property_angle_sum(AED)",
+    "sine_theorem(ABE)",
+    "sine_theorem(BEA)",
+    "sine_theorem(EAB)",
+    "sine_theorem(AEO)",
+    "sine_theorem(EOA)",
+    "sine_theorem(OAE)",
+    "sine_theorem(AOD)",
+    "sine_theorem(EDA)"
+  ]
+}

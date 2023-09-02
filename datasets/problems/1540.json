@@ -1,0 +1,26 @@
+{
+  "problem_id": 1540,
+  "annotation": "QikeHuang_2023-04-09",
+  "source": "Geometry3k-1599",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle v.",
+  "problem_img": "1540.png",
+  "construction_cdl": [
+    "Shape(AV,VB,BA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(VBA),52)",
+    "Equal(MeasureOfAngle(AVB),v)",
+    "Equal(LengthOfLine(AV),12)",
+    "Equal(LengthOfLine(BV),12)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AVB))",
+  "problem_answer": "76",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(VBA)",
+    "isosceles_triangle_property_angle_equal(VBA)",
+    "triangle_property_angle_sum(AVB)"
+  ]
+}

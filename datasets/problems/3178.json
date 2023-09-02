@@ -1,0 +1,33 @@
+{
+  "problem_id": 3178,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-460",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b,AC⊥AB,AC交直线b于点C,∠2=42°,则∠1的度数是()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, AC ⊥ AB, AC intersects the straight line b at point C, ∠2 = N_0, then the degree of ∠1 is ()",
+  "problem_img": "3178.png",
+  "construction_cdl": [
+    "Shape(DA,AF)",
+    "Shape(EA,AD)",
+    "Shape(FA,AC)",
+    "Shape(BA,AE)",
+    "Shape(AC,CG)",
+    "Shape(AB,BC,CA)",
+    "Collinear(EAF)",
+    "Collinear(BAD)",
+    "Collinear(BCG)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(EF,BG)",
+    "PerpendicularBetweenLine(CA,BA)",
+    "Equal(MeasureOfAngle(DAF),42)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "48",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(EF,BG,A)",
+    "parallel_property_corresponding_angle(AF,BG,D)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 3670,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1399",
+  "problem_level": 1,
+  "problem_text_cn": "如图,若AB∥CD,则∠α=130°,∠β=80°,则∠γ=()",
+  "problem_text_en": "As shown in the figure, if AB ∥ CD, then ∠α = N_0, ∠β = N_1, then ∠γ = ()",
+  "problem_img": "3670.png",
+  "construction_cdl": [
+    "Shape(EA,AB)",
+    "Shape(FE,EA)",
+    "Shape(EC,CD)",
+    "Shape(CE,EF)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EAB),130)",
+    "Equal(MeasureOfAngle(CEA),80)",
+    "ParallelBetweenLine(BA,FE)",
+    "ParallelBetweenLine(FE,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ECD))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "angle_addition(CEF,FEA)",
+    "parallel_property_ipsilateral_internal_angle(EF,AB)",
+    "parallel_property_alternate_interior_angle(FE,CD)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "problem_id": 4799,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4207",
+  "problem_level": 1,
+  "problem_text_cn": "如图,菱形ABCD的边长为10,圆O分别与AB、AD相切于E、F两点,且与BG相切于G点．若AO=5,且圆O的半径为3,则BG的长度为何？()",
+  "problem_text_en": "As shown in the figure, the edge length of the diamond ABCD is N_0, and the circle O is tangent to AB and AD at two vertices E and F, and tangent to BG at vertex G. If AO = N_1 and the radius of circle O is N_2, what is the length of BG? ()",
+  "problem_img": "4799.png",
+  "construction_cdl": [
+    "Shape(HA,AE,OHE)",
+    "Shape(OHE,EO,OH)",
+    "Shape(FA,AH,OFH)",
+    "Shape(OFH,HO,OF)",
+    "Shape(OEG,GO,OE)",
+    "Shape(EB,BG,OEG)",
+    "Shape(OGF,FO,OG)",
+    "Shape(GB,BC,CG)",
+    "Shape(OGF,GC,CD,DF)",
+    "Collinear(AEB)",
+    "Collinear(AHO)",
+    "Collinear(AFD)",
+    "Cocircular(O,HEGF)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AB),10)",
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(BE,O)",
+    "IsTangentOfCircle(BG,O)",
+    "IsTangentOfCircle(AE,O)",
+    "IsTangentOfCircle(AF,O)",
+    "Equal(RadiusOfCircle(O),3)",
+    "Equal(LengthOfLine(AO),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BG))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AE,O,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "right_triangle_judgment_angle(AEO)",
+    "right_triangle_property_pythagorean(AEO)",
+    "line_addition(AE,EB)",
+    "tangent_of_circle_property_length_equal(BE,BG,O)"
+  ]
+}

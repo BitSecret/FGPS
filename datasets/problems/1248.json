@@ -1,0 +1,36 @@
+{
+  "problem_id": 1248,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1289",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1248.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BA)",
+    "Shape(BD,DC,CB)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),y)",
+    "Equal(LengthOfLine(BC),z)",
+    "Equal(LengthOfLine(BD),x)",
+    "Equal(LengthOfLine(AD),9)",
+    "Equal(LengthOfLine(CD),4)",
+    "PerpendicularBetweenLine(CB,AB)",
+    "PerpendicularBetweenLine(BD,CD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "line_addition(AD,DC)",
+    "adjacent_complementary_angle(ADB,BDC)",
+    "right_triangle_judgment_angle(ADB)",
+    "right_triangle_judgment_angle(BDC)",
+    "right_triangle_judgment_angle(CBA)",
+    "right_triangle_property_pythagorean(ADB)",
+    "right_triangle_property_pythagorean(BDC)",
+    "right_triangle_property_pythagorean(CBA)"
+  ]
+}

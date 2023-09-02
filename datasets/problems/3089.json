@@ -1,0 +1,33 @@
+{
+  "problem_id": 3089,
+  "annotation": "YimingHe_2023-04-23",
+  "source": "GeoQA-323",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB∥CD,∠1=136°,∠E为直角,则∠C等于()",
+  "problem_text_en": "As shown in the figure, the straight line AB ∥ CD, ∠1 = N_0, ∠E is a right angle, then ∠C is equal to ()",
+  "problem_img": "3089.png",
+  "construction_cdl": [
+    "Shape(HA,AB)",
+    "Shape(BA,AE)",
+    "Shape(CE,EM)",
+    "Shape(ME,EA)",
+    "Shape(EC,CD)",
+    "Collinear(HAE)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "ParallelBetweenLine(AB,ME)",
+    "ParallelBetweenLine(ME,CD)",
+    "Equal(MeasureOfAngle(CEA),90)",
+    "Equal(MeasureOfAngle(HAB),136)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ECD))",
+  "problem_answer": "46",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(HAB,BAE)",
+    "parallel_property_alternate_interior_angle(AB,ME)",
+    "parallel_property_alternate_interior_angle(ME,CD)",
+    "angle_addition(CEM,MEA)"
+  ]
+}

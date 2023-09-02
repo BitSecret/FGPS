@@ -1,0 +1,30 @@
+{
+  "problem_id": 4548,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3649",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆心角∠AOB=120°,P是⁀{AB}上任一点(不与A,B重合),点C在AP的延长线上,则∠BPC等于()",
+  "problem_text_en": "As shown in the figure, the central angle ∠AOB = N_0, P is any point on ⁀AB (not coincident with A, B), point C is on the extended line of AP, then ∠BPC is equal to ()",
+  "problem_img": "4548.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(OA,AP,PB,BO)",
+    "Shape(PA,OAP)",
+    "Shape(BP,OPB)",
+    "Shape(PC,CB,OPB)",
+    "Collinear(APC)",
+    "Cocircular(O,APB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BOA),120)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BPC))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_internal(OAB,P)",
+    "adjacent_complementary_angle(APB,BPC)"
+  ]
+}

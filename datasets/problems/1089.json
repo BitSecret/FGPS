@@ -1,0 +1,34 @@
+{
+  "problem_id": 1089,
+  "annotation": "NaZhu_2023-03-19",
+  "source": "Geometry3k-1126",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Q is the centroid and B E = 9. Find Q E.",
+  "problem_img": "1089.png",
+  "construction_cdl": [
+    "Shape(BF,FQ,QB)",
+    "Shape(FA,AQ,QF)",
+    "Shape(QA,AE,EQ)",
+    "Shape(QE,EC,CQ)",
+    "Shape(BQ,QD,DB)",
+    "Shape(QC,CD,DQ)",
+    "Collinear(BFA)",
+    "Collinear(AEC)",
+    "Collinear(BDC)",
+    "Collinear(BQE)",
+    "Collinear(FQC)",
+    "Collinear(AQD)"
+  ],
+  "text_cdl": [
+    "IsCentroidOfTriangle(Q,BAC)",
+    "Equal(LengthOfLine(BE),9)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(QE))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "line_addition(BQ,QE)",
+    "centroid_of_triangle_property_line_ratio(Q,BAC,E)"
+  ]
+}

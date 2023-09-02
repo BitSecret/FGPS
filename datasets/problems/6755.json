@@ -1,0 +1,34 @@
+{
+  "problem_id": 6755,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9825",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C是圆上一点,∠BAC=70°,则∠OCB为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, point C is a point on the circle, ∠BAC = N_0, then ∠OCB is ()",
+  "problem_img": "6755.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(AC,OCA)",
+    "Shape(CA,AO,OC)",
+    "Shape(CO,OB,BC)",
+    "Shape(CB,OBC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAO),70)",
+    "IsDiameterOfCircle(AB,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCO))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

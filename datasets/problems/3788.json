@@ -1,0 +1,35 @@
+{
+  "problem_id": 3788,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1627",
+  "problem_level": 1,
+  "problem_text_cn": "如图,矩形ABCD的对角线交于点O．若∠BAO=55°,则∠AOD等于()",
+  "problem_text_en": "As shown in the figure, the diagonal of the rectangle ABCD intersects at the point O. If ∠BAO = N_0, then ∠AOD is equal to ()",
+  "problem_img": "3788.png",
+  "construction_cdl": [
+    "Shape(OA,AB,BO)",
+    "Shape(OD,DA,AO)",
+    "Shape(OB,BC,CO)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AOC)",
+    "Collinear(BOD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(ABCD)",
+    "Equal(MeasureOfAngle(OAB),55)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AOD))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "angle_addition(DAO,OAB)",
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)",
+    "rectangle_property_diagonal_equal(ABCD)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(ODA)"
+  ]
+}

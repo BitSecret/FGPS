@@ -1,0 +1,34 @@
+{
+  "problem_id": 5585,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7091",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD是Rt△ABC斜边上的高,AC=4,BC=3,则cos∠BCD的值是()",
+  "problem_text_en": "As shown in the figure, CD is the height on the hypotenuse of Rt△ABC, AC = N_0, BC = N_1, then the value of cos∠BCD is ()",
+  "problem_img": "5585.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(CD,DB,BC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "IsAltitudeOfTriangle(CD,CAB)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(BC),3)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(Cos(MeasureOfAngle(BCD)))",
+  "problem_answer": "4/5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ADC)",
+    "right_triangle_judgment_angle(CDB)",
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(ADC)",
+    "right_triangle_property_pythagorean(CDB)",
+    "right_triangle_property_pythagorean(BCA)",
+    "line_addition(AD,DB)",
+    "sine_theorem(BCD)"
+  ]
+}

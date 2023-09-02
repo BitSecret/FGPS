@@ -1,0 +1,32 @@
+{
+  "problem_id": 501,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-512",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Each pair of polygons is similar. Find C E.",
+  "problem_img": "501.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(ED,DC,CE)",
+    "Collinear(DCB)",
+    "Collinear(ACE)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(ABC,EDC)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(DC),6)",
+    "Equal(LengthOfLine(CE),12-x)",
+    "Equal(LengthOfLine(AC),x+7)",
+    "Equal(LengthOfLine(CB),4)",
+    "PerpendicularBetweenLine(AB,CB)",
+    "PerpendicularBetweenLine(ED,CD)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(CE))",
+  "problem_answer": "11.4",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(BCA,DCE)",
+    "similar_triangle_property_line_ratio(ABC,EDC)"
+  ]
+}

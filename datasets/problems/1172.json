@@ -1,0 +1,25 @@
+{
+  "problem_id": 1172,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1212",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In right triangle A B C shown below, what is the measure of \\angle A to the nearest tenth of a degree?",
+  "problem_img": "1172.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "RightTriangle(ACB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),35)",
+    "Equal(LengthOfLine(BC),22)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BAC))",
+  "problem_answer": "38.944",
+  "theorem_seqs": [
+    "cosine_theorem(ACB)",
+    "cosine_theorem(CBA)"
+  ]
+}

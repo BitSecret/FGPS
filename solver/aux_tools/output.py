@@ -1,5 +1,5 @@
-from symbolic_solver.aux_tools.parser import InverseParser
-from symbolic_solver.aux_tools.utils import save_json
+from solver.aux_tools.parser import InverseParser
+from solver.aux_tools.utils import save_json
 from sympy import Float
 from graphviz import Digraph, Graph
 import os
@@ -11,8 +11,7 @@ def simple_show(problem):
     for step in problem.timing:
         time_sum += problem.timing[step][1]
 
-    printed = "{}\t{}\t{}\t".format(
-        problem.problem_CDL["id"], problem.problem_CDL["annotation"], str(problem.goal.answer))
+    printed = "{}\t{}\t".format(problem.problem_CDL["id"], str(problem.goal.answer))
     if problem.goal.solved:
         printed += "\033[32m1\033[0m\t"
     else:

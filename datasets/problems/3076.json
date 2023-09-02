@@ -1,0 +1,32 @@
+{
+  "problem_id": 3076,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-304",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将一张长方形纸片ABCD沿EF折叠,点D、C分别落在D′、C′的位置处,若∠1=56°,则∠EGB的度数是()",
+  "problem_text_en": "As shown in the figure, a rectangular piece of paper ABCD is folded along EF, and points D and C fall at the positions of D′ and C′ respectively. If ∠1 = N_0, then the degree of ∠EFB is ()",
+  "problem_img": "3076.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FE,EA)",
+    "Shape(EF,FG,GE)",
+    "Shape(EG,GC,CD,DE)",
+    "Collinear(AED)",
+    "Collinear(BFGC)"
+  ],
+  "text_cdl": [
+    "Rectangle(ABCD)",
+    "IsBisectorOfAngle(EG,DEF)",
+    "Equal(MeasureOfAngle(FEA),56)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BGE))",
+  "problem_answer": "62",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DEF,FEA)",
+    "angle_addition(DEG,GEF)",
+    "angle_addition(GEF,FEA)",
+    "parallel_property_collinear_extend(AD,BC,E)",
+    "parallel_property_collinear_extend(CB,EA,G)",
+    "parallel_property_ipsilateral_internal_angle(GB,EA)"
+  ]
+}

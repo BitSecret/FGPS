@@ -1,0 +1,41 @@
+{
+  "problem_id": 4277,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3072",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A,B,C三点在已知的圆上,在△ABC中,∠ABC=70°,∠ACB=30°,D是⁀{BAC}的中点,连接DB,DC,则∠DBC的度数为()",
+  "problem_text_en": "As shown in the figure, the three points A, B, and C are on a known circle. In △ABC, ∠ABC = N_0, ∠ACB = N_1, D is the midpoint of ⁀BAC, connect DB, DC, then the degree of ∠DBC for()",
+  "problem_img": "4277.png",
+  "construction_cdl": [
+    "Shape(AE,ED,ODA)",
+    "Shape(DE,EC,CD)",
+    "Shape(DC,OCD)",
+    "Shape(BA,OAB)",
+    "Shape(AB,BE,EA)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Collinear(AEC)",
+    "Collinear(BED)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsMidpointOfArc(D,OCB)",
+    "Equal(MeasureOfAngle(ABC),70)",
+    "Equal(MeasureOfAngle(BCA),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBC))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CEB)",
+    "triangle_property_angle_sum(CDB)",
+    "triangle_property_angle_sum(ABC)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(OBC,D)",
+    "congruent_arc_judgment_length_equal(ODB,OCD)",
+    "congruent_arc_property_chord_equal(ODB,OCD)",
+    "isosceles_triangle_judgment_line_equal(DBC)",
+    "isosceles_triangle_property_angle_equal(DBC)"
+  ]
+}

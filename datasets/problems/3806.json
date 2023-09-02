@@ -1,0 +1,40 @@
+{
+  "problem_id": 3806,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1660",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点D、E分别是⊙O的内接正三角形ABC的AB、AC边上的中点,若⊙O的半径为2,则DE的长等于()",
+  "problem_text_en": "As shown in the figure, points D and E are the midpoints on the AB and AC edges of the inscribed regular triangle ABC of ⊙O respectively. If the radius of ⊙O is N_0, then the length of DE is equal to ()",
+  "problem_img": "3806.png",
+  "construction_cdl": [
+    "Shape(AD,DB,OAB)",
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BO,OC,CE,ED)",
+    "Shape(OB,BC,CO)",
+    "Shape(BC,OBC)",
+    "Shape(CE,EA,OCA)",
+    "Collinear(ADB)",
+    "Collinear(CEA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "EquilateralTriangle(ABC)",
+    "IsMidpointOfLine(D,AB)",
+    "IsMidpointOfLine(E,CA)",
+    "Equal(RadiusOfCircle(O),2)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "sqrt(3)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "equilateral_triangle_property_angle(ABC)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "cosine_theorem(OBC)",
+    "midsegment_of_triangle_judgment_midpoint(DE,ABC)",
+    "midsegment_of_triangle_property_length(DE,ABC)"
+  ]
+}

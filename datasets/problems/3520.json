@@ -1,0 +1,31 @@
+{
+  "problem_id": 3520,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1134",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠C=90°,∠BAC=70°,将△ABC绕点A顺时针旋转70°,B,C旋转后的对应点分别是B′和C′,连接BB′,则∠ABB′的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠C = N_0, ∠BAC = N_1, rotate △ABC clockwise around point A by N_2, B and C after the corresponding vertices are B′ and C′ respectively, connect BB′, then ∠The degree of ABB′ is ()",
+  "problem_img": "3520.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AE,EB)",
+    "Shape(BE,ED,DB)",
+    "Shape(DE,EA,AD)",
+    "Collinear(BEA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BCA),90)",
+    "Equal(MeasureOfAngle(DEA),90)",
+    "Equal(MeasureOfAngle(CAB),70)",
+    "Equal(MeasureOfAngle(BAD),70)",
+    "CongruentBetweenTriangle(CAB,EAD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "congruent_triangle_property_line_equal(CAB,EAD)",
+    "isosceles_triangle_judgment_line_equal(ADB)",
+    "isosceles_triangle_property_angle_equal(ADB)",
+    "triangle_property_angle_sum(ADB)"
+  ]
+}

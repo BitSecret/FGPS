@@ -1,0 +1,29 @@
+{
+  "problem_id": 2009,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2094",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram J K L M to find m \\angle J M L if J K = 2 b + 3 and J M = 3 a.",
+  "problem_img": "2009.png",
+  "construction_cdl": [
+    "Shape(JM,MR,RJ)",
+    "Shape(RM,ML,LR)",
+    "Shape(RL,LK,KR)",
+    "Shape(JR,RK,KJ)",
+    "Collinear(JRL)",
+    "Collinear(MRK)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(JMLK)",
+    "Equal(MeasureOfAngle(RLK),70)",
+    "Equal(MeasureOfAngle(MLJ),30)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(JML))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "angle_addition(MLR,RLK)",
+    "parallel_property_ipsilateral_internal_angle(MJ,LK)"
+  ]
+}

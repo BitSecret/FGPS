@@ -1,0 +1,27 @@
+{
+  "problem_id": 1729,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1794",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\odot J \\cong \\odot K and \\widehat M N \\cong \\widehat P Q. Find P Q.",
+  "problem_img": "1729.png",
+  "construction_cdl": [
+    "Shape(QP,JPN,NM,JMQ)",
+    "Shape(MN,JNM)",
+    "Shape(PQ,JQP)",
+    "Cocircular(J,NMQP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(NM),2*x+1)",
+    "Equal(LengthOfLine(PQ),3*x-7)",
+    "Equal(MeasureOfArc(JNM),MeasureOfArc(JQP))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(PQ))",
+  "problem_answer": "17",
+  "theorem_seqs": [
+    "congruent_arc_judgment_measure_equal(JNM,JQP)",
+    "congruent_arc_property_chord_equal(JNM,JQP)"
+  ]
+}

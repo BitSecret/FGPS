@@ -1,0 +1,38 @@
+{
+  "problem_id": 3918,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1829",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BC是半圆O的直径,D,E是⁀{BC}上两点,连接BD,CE并延长交于点A,连接OD,OE．如果∠A=70°,那么∠DOE的度数为()",
+  "problem_text_en": "As shown in the figure, BC is the diameter of the semicircle O, D and E are two points on ⁀BC, connecting BD, CE and extending to the point A, connecting OD, OE. If ∠A = N_0, then the degree of ∠DOE is ()",
+  "problem_img": "3918.png",
+  "construction_cdl": [
+    "Shape(OCE,EC)",
+    "Shape(OED,DO,OE)",
+    "Shape(OED,EA,AD)",
+    "Shape(ODB,BD)",
+    "Shape(BO,OD,DB)",
+    "Shape(OC,CE,EO)",
+    "Shape(CD,DB,BO,OC)",
+    "Shape(CA,AD,DC)",
+    "Collinear(BOC)",
+    "Collinear(BDA)",
+    "Collinear(AEC)",
+    "Cocircular(O,CEDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(EAD),70)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DOE))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ADC)",
+    "arc_property_circumference_angle_external(OED,C)",
+    "arc_property_center_angle(OED,O)",
+    "diameter_of_circle_judgment_pass_centre(BOC,O)",
+    "diameter_of_circle_property_right_angle(CDB,O)",
+    "adjacent_complementary_angle(ADC,CDB)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 6966,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10220",
+  "problem_level": 1,
+  "problem_text_cn": "如图，点A，B，C在⊙O上，∠ACB＝38°，则∠AOB等于（）",
+  "problem_text_en": "",
+  "problem_img": "6966.png",
+  "construction_cdl": [
+    "Shape(OCA,AO,OD,DC)",
+    "Shape(OA,AD,DO)",
+    "Shape(DA,OAB,BD)",
+    "Shape(DB,BC,CD)",
+    "Shape(OBC,CB)",
+    "Collinear(ODB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCA),38)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "76",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)"
+  ]
+}

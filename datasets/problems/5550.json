@@ -1,0 +1,21 @@
+{
+  "problem_id": 5550,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6784",
+  "problem_level": 1,
+  "problem_text_cn": "如图,斜坡AB的坡比1:1.5,BC⊥AC,若AC=6m,则BC的高度是()",
+  "problem_text_en": "As shown in the figure, the slope ratio of slope AB is N_0:N_1, BC ⊥ AC, if AC = N_2, then the height of BC is ()",
+  "problem_img": "5550.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "RightTriangle(ACB)",
+    "Equal(LengthOfLine(AC),6)",
+    "Equal(Div(LengthOfLine(BC),LengthOfLine(AC)),1/1.5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "4",
+  "theorem_seqs": []
+}

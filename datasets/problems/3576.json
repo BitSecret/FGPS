@@ -1,0 +1,30 @@
+{
+  "problem_id": 3576,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1217",
+  "problem_level": 1,
+  "problem_text_cn": "如图AB∥CD,∠ABE=120°,∠ECD=25°,则∠E=()",
+  "problem_text_en": "As shown in the figure AB ∥ CD, ∠ABE = N_0, ∠ECD = N_1, then ∠E = ()",
+  "problem_img": "3576.png",
+  "construction_cdl": [
+    "Shape(CE,EF)",
+    "Shape(FE,EB)",
+    "Shape(EB,BA)",
+    "Shape(EC,CD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EBA),120)",
+    "Equal(MeasureOfAngle(ECD),25)",
+    "ParallelBetweenLine(AB,FE)",
+    "ParallelBetweenLine(AB,CD)",
+    "ParallelBetweenLine(FE,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CEB))",
+  "problem_answer": "85",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(EF,BA)",
+    "parallel_property_alternate_interior_angle(FE,CD)",
+    "angle_addition(CEF,FEB)"
+  ]
+}

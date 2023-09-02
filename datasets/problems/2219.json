@@ -1,0 +1,29 @@
+{
+  "problem_id": 2219,
+  "annotation": "DengfengYue_2023-04-16",
+  "source": "Geometry3k-2317",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot S, m \\angle T S R = 42. Find m \\widehat E R T.",
+  "problem_img": "2219.png",
+  "construction_cdl": [
+    "Shape(SR,SRT,TS)",
+    "Shape(ST,STK,KS)",
+    "Shape(SK,SKE,ES)",
+    "Shape(SE,SER,RS)",
+    "Collinear(TSE)",
+    "Collinear(RSK)",
+    "Cocircular(S,RTKE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(S,S)",
+    "Equal(MeasureOfAngle(TSR),42)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(SET))",
+  "problem_answer": "180",
+  "theorem_seqs": [
+    "flat_angle(TSE)",
+    "arc_property_center_angle(SET,S)"
+  ]
+}

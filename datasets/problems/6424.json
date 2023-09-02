@@ -1,0 +1,52 @@
+{
+  "problem_id": 6424,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9296",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD的对角线相交于点O,且AB≠AD,过点O作OE⊥BD交BC于点E．若△CDE的周长为8cm,则▱ABCD的周长为()",
+  "problem_text_en": "As shown in the figure, the diagonals of ▱ABCD intersect at point O, and AB≠AD, passing point O is OE ⊥ BD intersects BC at point E. If the perimeter of △CDE is N_0, then the perimeter of ▱ABCD is ()",
+  "problem_img": "6424.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BE,EO)",
+    "Shape(OE,EF,FO)",
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OF,FD)",
+    "Shape(FC,CD,DF)",
+    "Shape(FE,EC,CF)",
+    "Collinear(AOFC)",
+    "Collinear(BOD)",
+    "Collinear(BEC)",
+    "Collinear(EFD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "PerpendicularBetweenLine(EO,BO)",
+    "Equal(PerimeterOfTriangle(CDE),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)",
+    "line_addition(BE,EC)",
+    "triangle_perimeter_formula(ABO)",
+    "triangle_perimeter_formula(AOD)",
+    "triangle_perimeter_formula(ABD)",
+    "triangle_perimeter_formula(DOC)",
+    "triangle_perimeter_formula(CDE)",
+    "triangle_perimeter_formula(OBC)",
+    "triangle_perimeter_formula(DAC)",
+    "triangle_perimeter_formula(ABC)",
+    "triangle_perimeter_formula(BCD)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "adjacent_complementary_angle(DOE,EOB)",
+    "mirror_congruent_triangle_judgment_sas(OBE,OED)",
+    "mirror_congruent_triangle_property_line_equal(OBE,OED)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "quadrilateral_perimeter_formula(ABCD)"
+  ]
+}

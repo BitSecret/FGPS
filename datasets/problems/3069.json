@@ -1,0 +1,31 @@
+{
+  "problem_id": 3069,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-295",
+  "problem_level": 1,
+  "problem_text_cn": "如图,为了测量某棵树的高度,小刚用长为2m的竹竿作测量工具,移动竹竿,使竹竿、树的顶端的影子恰好落在地面的同一点,此时,竹竿与这一点相距6m,与树距15m,那么这颗树的高度为()",
+  "problem_text_en": "As shown in the figure, in order to measure the height of a tree, Xiaogang uses a bamboo pole with a length of N_0 as a measuring tool, and moves the bamboo pole so that the shadow of the bamboo pole and the top of the tree falls on the same point on the ground. At this time, the bamboo pole is separated from this point N_1, the distance from the tree N_2, then the height of the tree is ()",
+  "problem_img": "3069.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DB,BC,CE)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(LengthOfLine(AD),6)",
+    "Equal(LengthOfLine(DE),2)",
+    "Equal(LengthOfLine(DB),15)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CB))",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "similar_triangle_judgment_aa(EAD,CAB)",
+    "line_addition(AD,DB)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ADE,ABC)"
+  ]
+}

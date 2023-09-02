@@ -1,0 +1,46 @@
+{
+  "problem_id": 4968,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4649",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线l1∥l2∥l3,若AB=3,BC=4,则\\frac{DE}{DF}的值是()",
+  "problem_text_en": "As shown in the figure, the straight line l1∥l2∥l3, if AB=N_0,BC=N_1, then the value of \\frac{DE}{DF} is ()",
+  "problem_img": "4968.png",
+  "construction_cdl": [
+    "Shape(MA,AD,DM)",
+    "Shape(AB,BE,ED,DA)",
+    "Shape(BC,CF,FE,EB)",
+    "Collinear(MABC)",
+    "Collinear(MDEF)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(MA),5)",
+    "Equal(LengthOfLine(CB),4)",
+    "Equal(LengthOfLine(DE),3)",
+    "ParallelBetweenLine(AD,BE)",
+    "ParallelBetweenLine(AD,CF)",
+    "ParallelBetweenLine(BE,CF)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DF))",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(AD,BE,M)",
+    "parallel_property_corresponding_angle(BE,CF,M)",
+    "parallel_property_corresponding_angle(EB,DA,M)",
+    "parallel_property_corresponding_angle(FC,EB,M)",
+    "line_addition(MA,AB)",
+    "line_addition(MB,BC)",
+    "line_addition(MD,DE)",
+    "line_addition(MD,DF)",
+    "line_addition(ME,EF)",
+    "line_addition(DE,EF)",
+    "similar_triangle_judgment_aa(MAD,MBE)",
+    "similar_triangle_judgment_aa(MBE,MCF)",
+    "similar_triangle_property_line_ratio(ADM,BEM)",
+    "similar_triangle_property_line_ratio(DMA,EMB)",
+    "similar_triangle_property_line_ratio(BEM,CFM)",
+    "similar_triangle_property_line_ratio(EMB,FMC)"
+  ]
+}

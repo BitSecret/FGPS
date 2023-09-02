@@ -1,0 +1,41 @@
+{
+  "problem_id": 5508,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-5975",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知∠AOB=30°,点P在OA上,点C、D在OB上,且PC=PD,若OP=CD,则∠OPD的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that ∠AOB = N_0, point P is on OA, points C and D are on OB, and PC = PD, if OP = CD, then the degree of ∠OPD is ()",
+  "problem_img": "5508.png",
+  "construction_cdl": [
+    "Shape(PO,OC,CP)",
+    "Shape(PC,CE,EP)",
+    "Shape(PE,ED,DP)",
+    "Shape(AP,PD,DB,BA)",
+    "Collinear(OPA)",
+    "Collinear(OCEDB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PC),LengthOfLine(PD))",
+    "Equal(LengthOfLine(OP),LengthOfLine(CD))",
+    "Equal(MeasureOfAngle(AOB),30)",
+    "PerpendicularBetweenLine(OE,PE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DPO))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "sine_theorem(POE)",
+    "isosceles_triangle_judgment_line_equal(PCD)",
+    "altitude_of_triangle_judgment(PE,PCD)",
+    "isosceles_triangle_property_line_coincidence(PCD,E)",
+    "line_addition(CE,ED)",
+    "adjacent_complementary_angle(OCP,PCE)",
+    "adjacent_complementary_angle(ODP,PDB)",
+    "isosceles_triangle_judgment_line_equal(EDP)",
+    "isosceles_triangle_property_angle_equal(PCD)",
+    "isosceles_triangle_property_angle_equal(EDP)",
+    "triangle_property_angle_sum(EDP)",
+    "triangle_property_angle_sum(POE)",
+    "angle_addition(DPE,EPO)"
+  ]
+}

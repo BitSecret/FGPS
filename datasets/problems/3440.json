@@ -1,0 +1,30 @@
+{
+  "problem_id": 3440,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-1003",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C,D在⊙O上,若∠B=100°,则∠ADE的度数是()",
+  "problem_text_en": "As shown in the figure, points A, B, C, D are on ⊙O, if ∠B = N_0, then the degree of ∠ADE is ()",
+  "problem_img": "3440.png",
+  "construction_cdl": [
+    "Shape(OAD,DA)",
+    "Shape(ODC,CD)",
+    "Shape(OCB,BC)",
+    "Shape(OBA,AB)",
+    "Shape(AD,DC,CB,BA)",
+    "Shape(ED,DA)",
+    "Collinear(EDC)",
+    "Cocircular(O,ADCB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CBA),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EDA))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_internal(OAC,D)",
+    "adjacent_complementary_angle(EDA,ADC)"
+  ]
+}

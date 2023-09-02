@@ -1,0 +1,26 @@
+{
+  "problem_id": 900,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-929",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "900.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),15)",
+    "Equal(LengthOfLine(BC),x)",
+    "Equal(MeasureOfAngle(CBA),60)",
+    "Equal(LengthOfLine(AB),y)",
+    "PerpendicularBetweenLine(AC,BC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CBA)",
+    "sine_theorem(CBA)"
+  ]
+}

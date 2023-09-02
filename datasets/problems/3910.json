@@ -1,0 +1,33 @@
+{
+  "problem_id": 3910,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1815",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,CD是⊙O的弦,∠ADC=26°,则∠CAB的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, CD is the chord of ⊙O, ∠ADC = N_0, then the degree of ∠CAB is ()",
+  "problem_img": "3910.png",
+  "construction_cdl": [
+    "Shape(OAD,DA)",
+    "Shape(ODB,BC,CD)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AC)",
+    "Shape(CA,AD,DC)",
+    "Shape(CA,AB,BC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ADC),26)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "64",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(AOB,O)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "arc_property_circumference_angle_external(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

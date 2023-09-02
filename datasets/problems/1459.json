@@ -1,0 +1,32 @@
+{
+  "problem_id": 1459,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1513",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "1459.png",
+  "construction_cdl": [
+    "Shape(DH,HF,FD)",
+    "Shape(FH,HB,BF)",
+    "Shape(DE,EH,HD)",
+    "Shape(HE,EB,BH)",
+    "Collinear(FHE)",
+    "Collinear(DHB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rhombus(DEBF)",
+    "Equal(LengthOfLine(HF),21)",
+    "Equal(LengthOfLine(BH),74)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(DEBF))",
+  "problem_answer": "3108",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(DEBF,H)",
+    "parallelogram_property_diagonal_bisection(EBFD,H)",
+    "line_addition(FH,HE)",
+    "line_addition(DH,HB)",
+    "kite_area_formula_diagonal(DEBF)"
+  ]
+}

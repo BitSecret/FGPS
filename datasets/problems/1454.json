@@ -1,0 +1,26 @@
+{
+  "problem_id": 1454,
+  "annotation": "YanjunGuo_2023-04-09",
+  "source": "Geometry3k-1507",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. Round to the nearest hundredth.",
+  "problem_img": "1454.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),19)",
+    "Equal(MeasureOfAngle(ABC),27)",
+    "Equal(LengthOfLine(BC),x)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "16.93",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)",
+    "cosine_theorem(BCA)"
+  ]
+}

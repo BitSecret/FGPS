@@ -1,0 +1,31 @@
+{
+  "problem_id": 1893,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1968",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find R S if P Q = 12, Q R = 2, and T S = 3.",
+  "problem_img": "1893.png",
+  "construction_cdl": [
+    "Shape(PQ,AQP)",
+    "Shape(QP,APT,TS,ASQ)",
+    "Shape(ST,ATS)",
+    "Shape(SR,RQ,ASR)",
+    "Collinear(PQR)",
+    "Collinear(TSR)",
+    "Cocircular(A,PTSQ)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PQ),12)",
+    "Equal(LengthOfLine(QR),2)",
+    "Equal(LengthOfLine(TS),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(RS))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "circle_property_circular_power_segment_and_segment_line(RQP,RST,A)",
+    "line_addition(PQ,QR)",
+    "line_addition(TS,SR)"
+  ]
+}

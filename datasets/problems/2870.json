@@ -1,0 +1,35 @@
+{
+  "problem_id": 2870,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-35",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠CAB=70°,将△ABC绕点A逆时针旋转到△AFE的位置,使得CE∥AB,则∠BAF的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠CAB = N_0, rotate △ABC counterclockwise around point A to the position of △AB′C′, so that CC′ ∥ AB, then the degree of ∠BAB′ is ()",
+  "problem_img": "2870.png",
+  "construction_cdl": [
+    "Shape(FE,EC,CD,DF)",
+    "Shape(CE,EA,AC)",
+    "Shape(DC,CA,AD)",
+    "Shape(DA,AB,BD)",
+    "Collinear(ADF)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(ABC,AFE)",
+    "Equal(MeasureOfAngle(CAB),70)",
+    "ParallelBetweenLine(EC,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(EC,AB)",
+    "congruent_triangle_property_line_equal(BCA,FEA)",
+    "isosceles_triangle_judgment_line_equal(ACE)",
+    "isosceles_triangle_property_angle_equal(ACE)",
+    "triangle_property_angle_sum(ACE)",
+    "congruent_triangle_property_angle_equal(ABC,AFE)",
+    "angle_addition(EAC,CAF)",
+    "angle_addition(CAF,DAB)"
+  ]
+}

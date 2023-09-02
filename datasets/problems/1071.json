@@ -1,0 +1,28 @@
+{
+  "problem_id": 1071,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1107",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the quadrilateral.",
+  "problem_img": "1071.png",
+  "construction_cdl": [
+    "Shape(CE,ED,DC)",
+    "Shape(BC,CD,DB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(CEDB)",
+    "Equal(LengthOfLine(EC),70)",
+    "Equal(LengthOfLine(DB),70)",
+    "Equal(MeasureOfAngle(EDC),60)",
+    "PerpendicularBetweenLine(CE,DE)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CEDB))",
+  "problem_answer": "2829.016",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CED)",
+    "sine_theorem(EDC)",
+    "parallelogram_area_formula_sine(CEDB)"
+  ]
+}

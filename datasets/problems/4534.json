@@ -1,0 +1,35 @@
+{
+  "problem_id": 4534,
+  "annotation": "XiaokaiZhang_2023-05-14",
+  "source": "GeoQA-3598",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O_{1}与⊙O_{2}有两个公共点A、B,圆心O_{2}在⊙O_{1}上,∠ACB=70°,则∠ADB等于()",
+  "problem_text_en": "As shown in the figure, ⊙O_{N_0} and ⊙O_{N_1} have two common points A and B, the center O_{N_2} is on ⊙O_{N_3}, ∠ACB = N_4, then ∠ADB is equal to ()",
+  "problem_img": "4534.png",
+  "construction_cdl": [
+    "Shape(PAD,DA)",
+    "Shape(PDB,BD)",
+    "Shape(AD,DB,OAB)",
+    "Shape(OAB,BO,OA)",
+    "Shape(POA,AO)",
+    "Shape(PBO,OB)",
+    "Shape(CA,POA,PBO,BC)",
+    "Shape(OCA,AC)",
+    "Shape(OBC,CB)",
+    "Cocircular(P,DBOA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_internal(PBA,O)",
+    "arc_property_circumference_angle_external(PBA,D)"
+  ]
+}

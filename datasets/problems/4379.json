@@ -1,0 +1,35 @@
+{
+  "problem_id": 4379,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3303",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的直径AB垂直于弦CD,∠CAB=36°,则∠BCD的大小是()",
+  "problem_text_en": "As shown in the figure, the diameter AB of ⊙O is perpendicular to the chord CD, ∠CAB = N_0, then the size of ∠BCD is ()",
+  "problem_img": "4379.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(AO,OE,EC,CA)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(AD,DE,EO,OA)",
+    "Shape(BE,ED,ODB)",
+    "Shape(DA,OAD)",
+    "Collinear(AOEB)",
+    "Collinear(CED)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AE,CE)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CAB),36)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(AEC)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "angle_addition(BCE,ECA)"
+  ]
+}

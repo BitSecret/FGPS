@@ -1,0 +1,27 @@
+{
+  "problem_id": 3506,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1112",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD是△ABC的角平分线,AE是△ABD的角平分线,若∠BAC=76°,则∠EAD的度数是()",
+  "problem_text_en": "As shown in the figure, AD is the angular bisector of △ABC, AE is the angular bisector of △ABD, if ∠BAC = N_0, then the degree of ∠EAD is ()",
+  "problem_img": "3506.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,ED,DA)",
+    "Shape(AD,DC,CA)",
+    "Collinear(BEDC)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(AD,CAB)",
+    "IsBisectorOfAngle(AE,DAB)",
+    "Equal(MeasureOfAngle(CAB),76)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAE))",
+  "problem_answer": "19",
+  "theorem_seqs": [
+    "angle_addition(CAD,DAB)",
+    "angle_addition(DAE,EAB)"
+  ]
+}

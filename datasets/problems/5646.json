@@ -1,0 +1,23 @@
+{
+  "problem_id": 5646,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7300",
+  "problem_level": 1,
+  "problem_text_cn": "某河堤横断面如图所示,河堤高BC=8m,迎水坡坡角∠BAC=30°,则AB的长为()",
+  "problem_text_en": "The cross section of a river embankment is shown in the figure, the height of the river embankment BC = N_0, and the slope angle of the water-facing slope ∠BAC = N_1, then the length of AB is ()",
+  "problem_img": "5646.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),8)",
+    "Equal(MeasureOfAngle(BCA),90)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "sine_theorem(BCA)"
+  ]
+}

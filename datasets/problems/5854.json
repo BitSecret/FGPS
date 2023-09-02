@@ -1,0 +1,23 @@
+{
+  "problem_id": 5854,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7878",
+  "problem_level": 1,
+  "problem_text_cn": "某地区准备修建一座高AB=6m的过街天桥,已知天桥的坡面AC与地面BC的夹角∠ACB的余弦值为\\frac{4}{5},则坡面AC的长度为()",
+  "problem_text_en": "A certain area is going to build an overpass with height AB = N_0. It is known that the the cosine of angle between the slope AC of the overpass and the ground BC ∠ACB is \\frac{N_1}{N_2}, so the length of the slope AC is ()",
+  "problem_img": "5854.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AB,CB)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(Cos(MeasureOfAngle(BCA)),4/5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "sine_theorem(ABC)"
+  ]
+}

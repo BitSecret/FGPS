@@ -1,0 +1,29 @@
+{
+  "problem_id": 866,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-895",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find z.",
+  "problem_img": "866.png",
+  "construction_cdl": [
+    "Shape(DC,CE,ED)",
+    "Shape(DE,EB,BD)",
+    "Collinear(CEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BE),z)",
+    "Equal(LengthOfLine(BC),32)",
+    "Equal(LengthOfLine(BD),15)",
+    "Equal(LengthOfLine(CD),9)",
+    "Equal(MeasureOfAngle(BDE),MeasureOfAngle(EDC))"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "bisector_of_angle_judgment_angle_equal(DE,BDC)",
+    "bisector_of_angle_property_line_ratio(DE,BDC)",
+    "line_addition(CE,EB)"
+  ]
+}

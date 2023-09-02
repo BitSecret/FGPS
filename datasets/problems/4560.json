@@ -1,0 +1,33 @@
+{
+  "problem_id": 4560,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3678",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,∠OCA=38°,则∠ABC的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, ∠OCA = N_0, then the degree of ∠ABC is ()",
+  "problem_img": "4560.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(AB,BC,CO,OA)",
+    "Shape(AO,OC,CA)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OCA),38)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "52",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "triangle_property_angle_sum(AOC)",
+    "arc_property_center_angle(OCA,O)",
+    "arc_property_circumference_angle_external(OCA,B)"
+  ]
+}

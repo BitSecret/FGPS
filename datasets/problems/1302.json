@@ -1,0 +1,37 @@
+{
+  "problem_id": 1302,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-1349",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot O, E C and A B are diameters, and \\angle B O D \\cong \\angle D O E \\cong \\angle E O F \\cong \\angle F O A. Find m \\widehat C B F.",
+  "problem_img": "1302.png",
+  "construction_cdl": [
+    "Shape(OB,OBD,DO)",
+    "Shape(OD,ODE,EO)",
+    "Shape(OE,OEF,FO)",
+    "Shape(OF,OFA,AO)",
+    "Shape(OA,OAC,OC)",
+    "Shape(OC,OCB,BO)",
+    "Collinear(AOB)",
+    "Collinear(COE)",
+    "Cocircular(O,BDEFAC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DOB),MeasureOfAngle(EOD))",
+    "Equal(MeasureOfAngle(EOD),MeasureOfAngle(FOE))",
+    "Equal(MeasureOfAngle(FOE),MeasureOfAngle(AOF))",
+    "PerpendicularBetweenLine(CO,AO)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(O,CF))",
+  "problem_answer": "225",
+  "theorem_seqs": [
+    "vertical_angle(EOB,COA)",
+    "angle_addition(EOD,DOB)",
+    "flat_angle(EOC)",
+    "angle_addition(FOE,EOC)",
+    "arc_property_center_angle(OCF,O)"
+  ]
+}

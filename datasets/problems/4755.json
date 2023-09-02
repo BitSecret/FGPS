@@ -1,0 +1,35 @@
+{
+  "problem_id": 4755,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4114",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O与AB相切于点A,BO与⊙O交于点C,∠BAC=30°,则∠B等于()",
+  "problem_text_en": "As shown in the figure, ⊙O is tangent to AB at point A, BO and ⊙O intersect at point C, ∠BAC = N_0, then ∠B is equal to ()",
+  "problem_img": "4755.png",
+  "construction_cdl": [
+    "Shape(AO,OC,OCA)",
+    "Shape(OA,AC,CO)",
+    "Shape(CA,OAC)",
+    "Shape(AB,BC,OAC)",
+    "Collinear(OCB)",
+    "Cocircular(O,AC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),30)",
+    "IsTangentOfCircle(BA,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "tangent_of_circle_property_perpendicular(BA,O,O)",
+    "angle_addition(OAC,CAB)",
+    "isosceles_triangle_judgment_line_equal(OAC)",
+    "isosceles_triangle_property_angle_equal(OAC)",
+    "triangle_property_angle_sum(OAC)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 4533,
+  "annotation": "XiaokaiZhang_2023-05-14",
+  "source": "GeoQA-3596",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙C过原点,且与两坐标轴分别交于点A、点B,点A的坐标为(0,2),M是劣弧OB上一点,∠BMO=120°,则⊙C的半径长为()",
+  "problem_text_en": "As shown in the figure, ⊙C crosses the origin and intersects the two coordinate axes at point A and point B respectively. The coordinates of point A are(N_0,N_1), M is a point on the minor arc OB, ∠BMO = N_2, then the length of the radius of ⊙C is ()",
+  "problem_img": "4533.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BC,CA)",
+    "Shape(OCA,AC)",
+    "Shape(OBM,MB)",
+    "Shape(CB,BM,MC)",
+    "Shape(OMC,CM)",
+    "Cocircular(O,BMCA)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(LengthOfLine(AC),2)",
+    "Equal(MeasureOfAngle(BMC),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "arc_property_circumference_angle_internal(OBC,M)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "triangle_property_angle_sum(ABC)",
+    "sine_theorem(ABC)",
+    "diameter_of_circle_property_length_equal(AB,O)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

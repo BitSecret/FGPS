@@ -1,0 +1,46 @@
+{
+  "problem_id": 5564,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6833",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知灯塔M方圆一定范围内有镭射辅助信号,一艘轮船在海上从南向北方向以一定的速度匀速航行,轮船在A处测得灯塔M在北偏东30°方向,行驶1小时后到达B处,此时刚好进入灯塔M的镭射信号区,测得灯塔M在北偏东45°方向,则轮船通过灯塔M的镭射信号区的时间为()",
+  "problem_text_en": "As shown in the figure, it is known that there is a laser auxiliary signal within a certain range of the lighthouse M. A ship is sailing at a constant speed from south by north at a constant speed at sea. The ship measured at A and measured that the lighthouse M was in the direction N_0 to the east by north, and it traveled N_1. Arrived at point B after hours, and just entered the laser signal area of ​​lighthouse M at this time. It is measured that lighthouse M is in the direction of N_2 east by north, then the time for the ship to pass the laser signal area of ​​lighthouse M is ()",
+  "problem_img": "5564.png",
+  "construction_cdl": [
+    "Shape(MC,CD,DM)",
+    "Shape(MD,DB,BM)",
+    "Shape(MB,BA,AM)",
+    "Collinear(CDBA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),1)",
+    "Equal(LengthOfLine(MC),LengthOfLine(MB))",
+    "Equal(MeasureOfAngle(CAM),30)",
+    "Equal(MeasureOfAngle(CBM),45)",
+    "IsPerpendicularBisectorOfLine(MD,CB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CB))",
+  "problem_answer": "sqrt(3)-1",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(MCB)",
+    "isosceles_triangle_property_angle_equal(MCB)",
+    "triangle_property_angle_sum(MCD)",
+    "triangle_property_angle_sum(MDB)",
+    "triangle_property_angle_sum(MBA)",
+    "triangle_property_angle_sum(MCB)",
+    "sine_theorem(MCD)",
+    "sine_theorem(CDM)",
+    "sine_theorem(DMC)",
+    "sine_theorem(MDB)",
+    "sine_theorem(DBM)",
+    "sine_theorem(BMD)",
+    "sine_theorem(MBA)",
+    "sine_theorem(BAM)",
+    "sine_theorem(AMB)",
+    "sine_theorem(MCB)",
+    "sine_theorem(CBM)",
+    "sine_theorem(BMC)",
+    "sine_theorem(MDA)"
+  ]
+}

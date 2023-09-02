@@ -1,0 +1,46 @@
+{
+  "problem_id": 3740,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1533",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BD是△ABC的角平分线,AE⊥BD,垂足为F,若∠ABC=35°,∠C=50°,则∠CDE的度数为()",
+  "problem_text_en": "As shown in the figure, BD is the angular bisector of △ABC, AE ⊥ BD, and the foot of perpendicular is F. If ∠ABC = N_0, ∠C = N_1, then the degree of ∠CDE is ()",
+  "problem_img": "3740.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FA)",
+    "Shape(FB,BE,EF)",
+    "Shape(AF,FD,DA)",
+    "Shape(FE,ED,DF)",
+    "Shape(DE,EC,CD)",
+    "Collinear(BFD)",
+    "Collinear(AFE)",
+    "Collinear(ADC)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABE),35)",
+    "Equal(MeasureOfAngle(ECD),50)",
+    "PerpendicularBetweenLine(BF,AF)",
+    "IsBisectorOfAngle(BF,ABE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDE))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "angle_addition(ABF,FBE)",
+    "angle_addition(DAF,FAB)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(ABF)",
+    "adjacent_complementary_angle(EFB,BFA)",
+    "adjacent_complementary_angle(BFA,AFD)",
+    "vertical_angle(BFA,DFE)",
+    "mirror_congruent_triangle_judgment_aas(ABF,EFB)",
+    "mirror_congruent_triangle_property_line_equal(BFA,BEF)",
+    "mirror_congruent_triangle_judgment_sas(FDA,FED)",
+    "mirror_congruent_triangle_property_angle_equal(AFD,EDF)",
+    "triangle_property_angle_sum(AFD)",
+    "triangle_property_angle_sum(DFE)",
+    "angle_addition(EDF,FDA)",
+    "adjacent_complementary_angle(CDE,EDA)"
+  ]
+}

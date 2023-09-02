@@ -1,0 +1,35 @@
+{
+  "problem_id": 3195,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-483",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CE,BF交CE于点D,DE=DF,∠B=40°,则∠E的度数为()",
+  "problem_text_en": "As shown in the figure, AB ∥ CE, BF intersect CE at point D, DE = DF, ∠B = N_0, then the degree of ∠E is ()",
+  "problem_img": "3195.png",
+  "construction_cdl": [
+    "Shape(DE,EF,FD)",
+    "Shape(AB,BD)",
+    "Shape(BD,DC)",
+    "Shape(CD,DF)",
+    "Shape(ED,DB)",
+    "Collinear(BDF)",
+    "Collinear(CDE)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BA,EC)",
+    "Equal(LengthOfLine(DE),LengthOfLine(DF))",
+    "Equal(MeasureOfAngle(ABD),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DEF))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CE,AB,D)",
+    "parallel_property_corresponding_angle(BA,DC,F)",
+    "flat_angle(CDE)",
+    "angle_addition(CDF,FDE)",
+    "isosceles_triangle_judgment_line_equal(DEF)",
+    "isosceles_triangle_property_angle_equal(DEF)",
+    "triangle_property_angle_sum(DEF)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 6776,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9880",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AT是⊙O的切线,AB是⊙O的弦,∠B=55°,则∠BAT等于()",
+  "problem_text_en": "As shown in the figure, AT is the tangent of ⊙O, AB is the chord of ⊙O, ∠B = N_0, then ∠BAT is equal to ()",
+  "problem_img": "6776.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(OA,AB,BO)",
+    "Shape(BA,OAB)",
+    "Shape(TA,OAB)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABO),55)",
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(TA,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAT))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "tangent_of_circle_property_perpendicular(TA,O,O)",
+    "angle_addition(OAB,BAT)"
+  ]
+}

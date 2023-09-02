@@ -1,0 +1,24 @@
+{
+  "problem_id": 3669,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1398",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,C、D是线段AB上两点,若AC=3cm,C为AD中点且AB=10cm,则DB=()",
+  "problem_text_en": "As shown in the figure, C and D are two points on the line segment AB, if AC = N_0, C is the midpoint of AD and AB = N_1, then DB = ()",
+  "problem_img": "3669.png",
+  "construction_cdl": [
+    "Collinear(ACDB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(LengthOfLine(AB),10)",
+    "IsMidpointOfLine(C,AD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DB))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(AC,CD)",
+    "line_addition(AD,DB)"
+  ]
+}

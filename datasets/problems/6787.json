@@ -1,0 +1,33 @@
+{
+  "problem_id": 6787,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9909",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PB为圆O的切线,B为切点,连接PO交圆O于点A,PA=2,PO=5,则PB的长为()",
+  "problem_text_en": "As shown in the figure, PB is the tangent of circle O, B is the tangent point, and PO intersects circle O at point A, PA = N_0, PO = N_1, then the length of PB is ()",
+  "problem_img": "6787.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(BP,PA,OBA)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(PAO)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PA),2)",
+    "Equal(LengthOfLine(PO),5)",
+    "IsTangentOfCircle(PB,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(PB))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(PA,AO)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "right_triangle_judgment_angle(OBP)",
+    "right_triangle_property_pythagorean(OBP)"
+  ]
+}

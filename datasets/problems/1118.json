@@ -1,0 +1,32 @@
+{
+  "problem_id": 1118,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-1155",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure at the right, n=110, m=130,what is the value of p?",
+  "problem_img": "1118.png",
+  "construction_cdl": [
+    "Shape(BO,OA,AB)",
+    "Shape(AO,OC)",
+    "Shape(DA,AO)",
+    "Collinear(COB)",
+    "Collinear(BAD)"
+  ],
+  "text_cdl": [
+    "Equal(m,120)",
+    "Equal(n,130)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ABO),p)",
+    "Equal(MeasureOfAngle(DAO),m)",
+    "Equal(MeasureOfAngle(AOC),n)"
+  ],
+  "goal_cdl": "Value(p)",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BOA,AOC)",
+    "adjacent_complementary_angle(DAO,OAB)",
+    "triangle_property_angle_sum(BOA)"
+  ]
+}

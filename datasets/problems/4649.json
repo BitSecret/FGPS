@@ -1,0 +1,44 @@
+{
+  "problem_id": 4649,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3878",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA,PB分别与⊙O相切于A,B两点,PO与AB相交于点C,PA=6,∠APB=60°,则OC的长等于()",
+  "problem_text_en": "As shown in the figure, PA and PB are tangent to ⊙O at two points A and B, and PO and AB intersect at point C, PA = N_0, ∠APB = N_1, then the length of OC is equal to ()",
+  "problem_img": "4649.png",
+  "construction_cdl": [
+    "Shape(OA,AC,CO)",
+    "Shape(OC,CB,BO)",
+    "Shape(OAD,DC,CA)",
+    "Shape(CD,ODB,BC)",
+    "Shape(OAD,AP,PD)",
+    "Shape(DP,PB,ODB)",
+    "Shape(OB,OBA,AO)",
+    "Collinear(PDCO)",
+    "Collinear(ACB)",
+    "Cocircular(O,ADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(PA),6)",
+    "Equal(MeasureOfAngle(APB),60)",
+    "Equal(MeasureOfAngle(PCA),90)",
+    "Equal(MeasureOfAngle(APO),MeasureOfAngle(OPB))",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "EquilateralTriangle(PBA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OC))",
+  "problem_answer": "sqrt(3)",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "angle_addition(APO,OPB)",
+    "triangle_property_angle_sum(OAC)",
+    "triangle_property_angle_sum(OAP)",
+    "sine_theorem(ACO)",
+    "sine_theorem(COA)",
+    "sine_theorem(APC)",
+    "sine_theorem(APO)"
+  ]
+}

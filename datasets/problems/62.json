@@ -1,0 +1,41 @@
+{
+  "problem_id": 62,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-62",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot F, A B \\cong B C, D F = 3 x - 7, and F E = x + 9. What is x?",
+  "problem_img": "62.png",
+  "construction_cdl": [
+    "Shape(DB,FBA,AD)",
+    "Shape(BD,DF,FB)",
+    "Shape(BF,FE,EB)",
+    "Shape(FD,DA,FAC,CE,EF)",
+    "Shape(BE,EC,FCB)",
+    "Collinear(BEC)",
+    "Collinear(BDA)",
+    "Cocircular(F,BAC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(BC))",
+    "Equal(LengthOfLine(DF),3*x-7)",
+    "Equal(LengthOfLine(FE),x+9)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(F,F)",
+    "PerpendicularBetweenLine(CE,FE)",
+    "PerpendicularBetweenLine(FD,AD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CEF,FEB)",
+    "adjacent_complementary_angle(BDF,FDA)",
+    "circle_property_chord_perpendicular_bisect_chord(F,FD,BA)",
+    "circle_property_chord_perpendicular_bisect_chord(F,FE,CB)",
+    "line_addition(BD,DA)",
+    "line_addition(BE,EC)",
+    "mirror_congruent_triangle_judgment_hl(BDF,BFE)",
+    "mirror_congruent_triangle_property_line_equal(BDF,BFE)"
+  ]
+}

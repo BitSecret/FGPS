@@ -1,0 +1,37 @@
+{
+  "problem_id": 1678,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1742",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\widehat B X.",
+  "problem_img": "1678.png",
+  "construction_cdl": [
+    "Shape(XP,PB,PBX)",
+    "Shape(YP,PB,PYB)",
+    "Shape(YP,PC,PCY)",
+    "Shape(CP,PA,PAC)",
+    "Shape(AP,PX,PXA)",
+    "Cocircular(P,XACYB)",
+    "Collinear(YPX)",
+    "Collinear(BPA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(P,P)",
+    "Equal(MeasureOfAngle(YPC),3*x-3)",
+    "Equal(MeasureOfAngle(BPY),3*x)",
+    "Equal(MeasureOfAngle(CPA),2*x+15)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(PBX))",
+  "problem_answer": "117",
+  "theorem_seqs": [
+    "vertical_angle(APX,BPY)",
+    "angle_addition(BPY,YPC)",
+    "angle_addition(BPC,CPA)",
+    "flat_angle(BPA)",
+    "angle_addition(BPA,APX)",
+    "round_angle(XPB,BPX)",
+    "arc_property_center_angle(PBX,P)"
+  ]
+}

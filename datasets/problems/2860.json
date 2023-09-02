@@ -1,0 +1,33 @@
+{
+  "problem_id": 2860,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-17",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC的周长为21,并且AB=AC,BC=5,AB的垂直平分线DE交AB于点D,交AC于点E,则△BEC的周长为()",
+  "problem_text_en": "As shown in the figure, the perimeter of △ABC is N_0, and AB = AC, BC = N_1, the perpendicular bisector of AB crosses AB at point D, and crosses AC at point E, then the perimeter of △BEC is ()",
+  "problem_img": "2860.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BE,ED)",
+    "Shape(EB,BC,CE)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(PerimeterOfTriangle(ABC),21)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(BC),5)",
+    "IsPerpendicularBisectorOfLine(ED,AB)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(ED,BD)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(BCE))",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(ED,AB)",
+    "line_addition(AE,EC)",
+    "triangle_perimeter_formula(ABC)",
+    "triangle_perimeter_formula(BCE)"
+  ]
+}

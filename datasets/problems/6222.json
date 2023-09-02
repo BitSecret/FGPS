@@ -1,0 +1,33 @@
+{
+  "problem_id": 6222,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8817",
+  "problem_level": 1,
+  "problem_text_cn": "如图,弦AB和CD相交于点P,∠B=30°,∠APC=80°,则∠BAD的度数为()",
+  "problem_text_en": "As shown in the figure, chords AB and CD intersect at point P, ∠B = N_0, ∠APC = N_1, then the degree of ∠BAD is ()",
+  "problem_img": "6222.png",
+  "construction_cdl": [
+    "Shape(OCB,BC)",
+    "Shape(OBD,DP,PB)",
+    "Shape(ODA,AD)",
+    "Shape(OAC,CP,PA)",
+    "Shape(CB,BP,PC)",
+    "Shape(PD,DA,AP)",
+    "Collinear(BPA)",
+    "Collinear(CPD)",
+    "Cocircular(O,BDAC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CBP),30)",
+    "Equal(MeasureOfAngle(CPA),80)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CPA,APD)",
+    "triangle_property_angle_sum(PDA)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_circumference_angle_external(OAC,D)"
+  ]
+}

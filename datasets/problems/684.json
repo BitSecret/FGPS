@@ -1,0 +1,38 @@
+{
+  "problem_id": 684,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-701",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram M N P R to find m \\angle N R P.",
+  "problem_img": "684.png",
+  "construction_cdl": [
+    "Shape(QN,NM,MQ)",
+    "Shape(QM,MR,RQ)",
+    "Shape(QR,RP,PQ)",
+    "Shape(QP,PN,NQ)",
+    "Collinear(MQP)",
+    "Collinear(RQN)"
+  ],
+  "text_cdl": [
+    "Parallelogram(MRPN)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(PQ),11.1)",
+    "Equal(MeasureOfAngle(NQP),83)",
+    "Equal(LengthOfLine(RP),20)",
+    "Equal(LengthOfLine(MN),3*x-4)",
+    "Equal(LengthOfLine(PN),2*y+5)",
+    "Equal(LengthOfLine(NQ),15.4)",
+    "Equal(MeasureOfAngle(QNM),33)",
+    "Equal(LengthOfLine(MN),3*x-4)",
+    "Equal(LengthOfLine(RQ),3*z-3)",
+    "Equal(MeasureOfAngle(MRQ),38)",
+    "Equal(LengthOfLine(RM),17.9)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(NRP))",
+  "problem_answer": "33",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(MN,RP)"
+  ]
+}

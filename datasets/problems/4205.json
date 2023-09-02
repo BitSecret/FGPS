@@ -1,0 +1,37 @@
+{
+  "problem_id": 4205,
+  "annotation": "Yangli_2023-05-07",
+  "source": "GeoQA-2907",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C是⊙O上的三点,若∠A+∠C=75°,则∠AOC的度数为()",
+  "problem_text_en": "As shown in the figure, A, B, and C are the three points on ⊙O, if ∠A + ∠C = N_0, then the degree of ∠AOC is ()",
+  "problem_img": "4205.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Shape(AO,OC,OCA)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(Add(MeasureOfAngle(OAB),MeasureOfAngle(BCO)),75)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AOC))",
+  "problem_answer": "150",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "angle_addition(ABO,OBC)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_center_angle(OCA,O)"
+  ]
+}

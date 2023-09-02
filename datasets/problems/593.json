@@ -1,0 +1,26 @@
+{
+  "problem_id": 593,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-608",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "593.png",
+  "construction_cdl": [
+    "Shape(BD,DC,CB)",
+    "Shape(BC,CE)",
+    "Collinear(DCE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(BCE),5*x+62)",
+    "Equal(MeasureOfAngle(CBD),37)",
+    "Equal(MeasureOfAngle(BDC),3*x+47)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "11",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DCB,BCE)",
+    "triangle_property_angle_sum(BDC)"
+  ]
+}

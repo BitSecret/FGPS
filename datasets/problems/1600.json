@@ -1,0 +1,32 @@
+{
+  "problem_id": 1600,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1660",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Suppose B D = 12 millimeters. Find the radius of the circle.",
+  "problem_img": "1600.png",
+  "construction_cdl": [
+    "Shape(AB,EBA)",
+    "Shape(AE,EB,BA)",
+    "Shape(DE,EA,EAD)",
+    "Shape(CE,ED,EDC)",
+    "Shape(BE,EC,ECB)",
+    "Collinear(AEC)",
+    "Collinear(DEB)",
+    "Cocircular(E,ADCB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BD),12)"
+  ],
+  "image_cdl": [
+    "IsDiameterOfCircle(DB,E)",
+    "IsCentreOfCircle(E,E)"
+  ],
+  "goal_cdl": "Value(RadiusOfCircle(E))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(DB,E)",
+    "circle_property_length_of_radius_and_diameter(E)"
+  ]
+}

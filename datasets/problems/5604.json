@@ -1,0 +1,32 @@
+{
+  "problem_id": 5604,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7155",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,点D、E分别是AB、AC上两点,且DE∥BC,若AD=2,BD=3,BC=10,则DE的长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, vertices D and E are two vertices on AB and AC respectively, and DE ∥ BC, if AD = N_0, BD = N_1, BC = N_2, then the length of DE is ()",
+  "problem_img": "5604.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(LengthOfLine(AD),2)",
+    "Equal(LengthOfLine(BD),3)",
+    "Equal(LengthOfLine(BC),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(AD,DB)",
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

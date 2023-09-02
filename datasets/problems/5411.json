@@ -1,0 +1,43 @@
+{
+  "problem_id": 5411,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5712",
+  "problem_level": 1,
+  "problem_text_cn": "如图．在▱ABCD中,点E是BC的中点．延长BA到点F,使BA=AF,连接EF,FC、AE．若AD=12,▱ABCD的周长为34．FE⊥AD,则AE的长为()",
+  "problem_text_en": "As shown in the figure. In ▱ABCD, point E is the midpoint of BC. Extend BA to point F, make BA = AF. Connect EF, FC, AE. If AD = N_0, the perimeter of ▱ABCD is N_1. FE ⊥ AD, then the length of AE is ()",
+  "problem_img": "5411.png",
+  "construction_cdl": [
+    "Shape(FA,AG,GF)",
+    "Shape(AE,EG,GA)",
+    "Shape(AB,BE,EA)",
+    "Shape(FG,GH,HF)",
+    "Shape(DH,HC,CD)",
+    "Shape(HG,GE,EC,CH)",
+    "Collinear(AGHD)",
+    "Collinear(BAF)",
+    "Collinear(BEC)",
+    "Collinear(FGE)",
+    "Collinear(FHC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BA),LengthOfLine(AF))",
+    "Equal(LengthOfLine(BE),LengthOfLine(EC))",
+    "Equal(LengthOfLine(AD),12)",
+    "PerpendicularBetweenLine(BE,FE)",
+    "Parallelogram(ABCD)",
+    "Equal(PerimeterOfQuadrilateral(ABCD),34)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(BA,AF)",
+    "quadrilateral_perimeter_formula(ABCD)",
+    "perpendicular_bisector_judgment_per_and_mid(FE,BC)",
+    "perpendicular_bisector_property_distance_equal(FE,BC)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "midsegment_of_triangle_judgment_midpoint(EA,BCF)",
+    "midsegment_of_triangle_property_length(EA,BCF)"
+  ]
+}

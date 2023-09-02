@@ -1,0 +1,40 @@
+{
+  "problem_id": 4044,
+  "annotation": "XiaokaiZhang_2023-05-07",
+  "source": "GeoQA-2343",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知BD是⊙O的直径,BD⊥AC于点E,∠COA=120°,则∠CDB的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that BD is the diameter of ⊙O, BD ⊥ AC at point E, ∠AOC = N_0, then the degree of ∠BDC is ()",
+  "problem_img": "4044.png",
+  "construction_cdl": [
+    "Shape(ODA,AO,OD)",
+    "Shape(OCD,DC)",
+    "Shape(OAB,BE,EA)",
+    "Shape(OBC,CE,EB)",
+    "Shape(DO,OC,CD)",
+    "Shape(OA,AE,EO)",
+    "Shape(OE,EC,CO)",
+    "Collinear(AEC)",
+    "Collinear(DOEB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(BD,O)",
+    "PerpendicularBetweenLine(AE,OE)",
+    "Equal(MeasureOfAngle(COA),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,AC)",
+    "perpendicular_bisector_property_distance_equal(OE,AC)",
+    "isosceles_triangle_judgment_line_equal(OAC)",
+    "isosceles_triangle_property_angle_equal(OAC)",
+    "triangle_property_angle_sum(OAC)",
+    "triangle_property_angle_sum(OEC)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

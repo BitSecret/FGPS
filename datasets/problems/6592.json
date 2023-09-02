@@ -1,0 +1,48 @@
+{
+  "problem_id": 6592,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9570",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,▱ABCD中,EF过对角线的交点O,如果AB=6cm,AD=5cm,OF=2cm,那么四边形BCEF的周长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, EF crosses the diagonal intersection O, if AB = N_0, AD = N_1, OF = N_2, then the perimeter of the quadrilateral BCEF is ()",
+  "problem_img": "6592.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OD)",
+    "Shape(DO,OE,ED)",
+    "Shape(EO,OC,CE)",
+    "Shape(CO,OB,BC)",
+    "Shape(OA,AF,FO)",
+    "Shape(OF,FB,BO)",
+    "Collinear(DOB)",
+    "Collinear(EOF)",
+    "Collinear(AOC)",
+    "Collinear(DEC)",
+    "Collinear(AFB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(AD),5)",
+    "Equal(LengthOfLine(OF),2)",
+    "Parallelogram(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(BCEF))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallel_property_collinear_extend(BA,CD,F)",
+    "parallel_property_collinear_extend(DC,AF,E)",
+    "parallel_property_alternate_interior_angle(BA,CD)",
+    "parallel_property_alternate_interior_angle(EC,AF)",
+    "similar_triangle_judgment_aa(OCE,OAF)",
+    "similar_triangle_property_line_ratio(OCE,OAF)",
+    "similar_triangle_property_line_ratio(CEO,AFO)",
+    "similar_triangle_property_line_ratio(EOC,FOA)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "line_addition(EO,OF)",
+    "line_addition(DE,EC)",
+    "line_addition(AF,FB)",
+    "quadrilateral_perimeter_formula(BCEF)"
+  ]
+}

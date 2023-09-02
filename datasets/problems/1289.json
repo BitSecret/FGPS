@@ -1,0 +1,33 @@
+{
+  "problem_id": 1289,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-1336",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use rhombus X Y Z W with m \\angle W Y Z = 53, V W = 3, X V = 2 a - 2, and Z V = \\frac { 5 a + 1 } { 4 }. Find X W.",
+  "problem_img": "1289.png",
+  "construction_cdl": [
+    "Shape(XW,WV,VX)",
+    "Shape(YX,XV,VY)",
+    "Shape(VW,WZ,ZV)",
+    "Shape(YV,VZ,ZY)",
+    "Collinear(XVZ)",
+    "Collinear(YVW)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rhombus(XWZY)",
+    "Equal(MeasureOfAngle(ZYW),53)",
+    "Equal(LengthOfLine(VW),3)",
+    "Equal(LengthOfLine(XV),2*a-2)",
+    "Equal(LengthOfLine(ZV),5/4*a+1)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(XW))",
+  "problem_answer": "6.7082",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(XWZY,V)",
+    "kite_property_diagonal_perpendicular_bisection(WZYX,V)",
+    "right_triangle_judgment_angle(WVX)",
+    "right_triangle_property_pythagorean(WVX)"
+  ]
+}

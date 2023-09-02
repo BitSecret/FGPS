@@ -1,0 +1,36 @@
+{
+  "problem_id": 6095,
+  "annotation": "RunanWang_2023-06-04",
+  "source": "GeoQA-8624",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知⊙O是△ABD的外接圆,AB是⊙O的直径,CD是⊙O的弦,∠ABD=48°,则∠BCD等于()",
+  "problem_text_en": "As shown in the figure, it is known that ⊙O is the circumscribe of △ABD, AB is the diameter of ⊙O, CD is the chord of ⊙O, ∠ABD = N_0, then ∠BCD is equal to ()",
+  "problem_img": "6095.png",
+  "construction_cdl": [
+    "Shape(OAC,CE,EO,OA)",
+    "Shape(OCB,BC)",
+    "Shape(EC,CB,BE)",
+    "Shape(OBD,DB)",
+    "Shape(EB,BD,DE)",
+    "Shape(AO,OE,ED,DA)",
+    "Shape(ODA,AD)",
+    "Collinear(AOEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ABD),48)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DCB))",
+  "problem_answer": "42",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "triangle_property_angle_sum(BDA)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(OBD,C)"
+  ]
+}

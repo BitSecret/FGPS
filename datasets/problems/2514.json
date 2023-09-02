@@ -1,0 +1,33 @@
+{
+  "problem_id": 2514,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-2638",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\triangle K L N and \\triangle L M N are isosceles and m \\angle J K N = 130. Find the measure of \\angle J.",
+  "problem_img": "2514.png",
+  "construction_cdl": [
+    "Shape(JL,LK,KJ)",
+    "Shape(KL,LN,NK)",
+    "Shape(NL,LM,MN)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsoscelesTriangle(LNK)",
+    "IsoscelesTriangle(MNL)",
+    "Equal(MeasureOfAngle(NKJ),130)",
+    "Equal(MeasureOfAngle(KLN),18)",
+    "Equal(MeasureOfAngle(JLK),25)",
+    "Equal(MeasureOfAngle(NLM),20)",
+    "Equal(LengthOfLine(KL),LengthOfLine(NL))",
+    "Equal(LengthOfLine(NM),LengthOfLine(ML))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(KJL))",
+  "problem_answer": "106",
+  "theorem_seqs": [
+    "isosceles_triangle_property_angle_equal(LNK)",
+    "triangle_property_angle_sum(JLK)",
+    "triangle_property_angle_sum(KLN)",
+    "angle_addition(NKL,LKJ)"
+  ]
+}

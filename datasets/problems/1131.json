@@ -1,0 +1,30 @@
+{
+  "problem_id": 1131,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1169",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1131.png",
+  "construction_cdl": [
+    "Shape(DA,AE,ED)",
+    "Shape(AB,BE,EA)",
+    "Shape(BC,CE,EB)",
+    "Shape(CD,DE,EC)",
+    "Collinear(AEC)",
+    "Collinear(DEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CD),33)",
+    "Equal(LengthOfLine(CE),25)",
+    "Equal(LengthOfLine(DE),x)",
+    "PerpendicularBetweenLine(DE,CE)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4*sqrt(29)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(DEC)",
+    "right_triangle_property_pythagorean(DEC)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 666,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-683",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the height of the parallelogram given its area with 100 square units.",
+  "problem_img": "666.png",
+  "construction_cdl": [
+    "Shape(CE,EB,BC)",
+    "Shape(ED,DA,AB,BE)",
+    "Collinear(CED)"
+  ],
+  "text_cdl": [
+    "Parallelogram(BCDA)"
+  ],
+  "image_cdl": [
+    "Equal(AreaOfQuadrilateral(BCDA),100)",
+    "Equal(LengthOfLine(AB),x+15)",
+    "Equal(LengthOfLine(BE),x)",
+    "PerpendicularBetweenLine(CE,BE)"
+  ],
+  "goal_cdl": "Value(HeightOfQuadrilateral(BCDA))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "altitude_of_quadrilateral_judgment_left_vertex(BE,BCDA)",
+    "parallelogram_property_opposite_line_equal(CDAB)",
+    "parallelogram_area_formula_common(BCDA)"
+  ]
+}

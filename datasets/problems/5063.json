@@ -1,0 +1,27 @@
+{
+  "problem_id": 5063,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4829",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知△ABC∽△DEB,BE=3,CE=2,则\\frac{ED}{AB}的值为()",
+  "problem_text_en": "As shown in the figure, it is known that △ABC ∽ △DEB, BE = N_0, CE = N_1, then the value of \\frac EDAB is ()",
+  "problem_img": "5063.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EC,CA)",
+    "Shape(BD,DE,EB)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(ABC,DEB)",
+    "Equal(LengthOfLine(BE),3)",
+    "Equal(LengthOfLine(CE),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(ED),LengthOfLine(AB)))",
+  "problem_answer": "3/5",
+  "theorem_seqs": [
+    "line_addition(BE,EC)",
+    "similar_triangle_property_line_ratio(ABC,DEB)",
+    "similar_triangle_property_line_ratio(CAB,BDE)"
+  ]
+}

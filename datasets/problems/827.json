@@ -1,0 +1,33 @@
+{
+  "problem_id": 827,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-856",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the value of x in the figure below?",
+  "problem_img": "827.png",
+  "construction_cdl": [
+    "Shape(CE,ED,DC)",
+    "Shape(DE,EB,BD)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CD),3*x-7)",
+    "Equal(LengthOfLine(BD),2*x)",
+    "Equal(LengthOfLine(ED),14)",
+    "PerpendicularBetweenLine(CE,BE)",
+    "PerpendicularBetweenLine(BD,ED)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "mirror_similar_triangle_judgment_aa(EBD,CEB)",
+    "line_addition(CD,DB)",
+    "right_triangle_judgment_angle(BDE)",
+    "right_triangle_property_pythagorean(BDE)",
+    "mirror_similar_triangle_property_line_ratio(EBD,CEB)",
+    "mirror_similar_triangle_property_line_ratio(BDE,BCE)",
+    "mirror_similar_triangle_property_line_ratio(DEB,EBC)"
+  ]
+}

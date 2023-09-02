@@ -1,0 +1,33 @@
+{
+  "problem_id": 6616,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9609",
+  "problem_level": 1,
+  "problem_text_cn": "如图,线段AB是⊙O的直径,弦CD⊥AB,∠CAB=40°,则∠ABD与∠AOD分别等于()",
+  "problem_text_en": "As shown in the figure, the line segment AB is the diameter of ⊙O, the chord CD ⊥ AB, ∠CAB = N_0, then ∠ABD and ∠AOD are respectively equal to ()",
+  "problem_img": "6616.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(DO,OA,OAD)",
+    "Shape(BD,ODB)",
+    "Shape(CE,EB,OBC)",
+    "Shape(AO,OE,EC,CA)",
+    "Shape(EO,OD,DE)",
+    "Shape(ED,DB,BE)",
+    "Collinear(CED)",
+    "Collinear(AOEB)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AEC),90)",
+    "Equal(MeasureOfAngle(CAB),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(AEC)",
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(OAD,C)"
+  ]
+}

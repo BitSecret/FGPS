@@ -1,0 +1,27 @@
+{
+  "problem_id": 622,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-639",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x if P S is a median of \\triangle P Q R.",
+  "problem_img": "622.png",
+  "construction_cdl": [
+    "Shape(PQ,QS,SP)",
+    "Shape(PS,SR,RP)",
+    "Collinear(QSR)"
+  ],
+  "text_cdl": [
+    "IsMedianOfTriangle(PS,PQR)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(PSR),15*x+42)",
+    "Equal(LengthOfLine(QR),5)",
+    "Equal(LengthOfLine(SQ),10*x-7)",
+    "Equal(LengthOfLine(RS),5*x+3)",
+    "Equal(LengthOfLine(QS),LengthOfLine(RS))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "2",
+  "theorem_seqs": []
+}

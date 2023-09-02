@@ -1,0 +1,40 @@
+{
+  "problem_id": 3408,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-947",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CD,∠1=58°,FG平分∠EFD,则∠FGB的度数等于()",
+  "problem_text_en": "As shown in the figure, AB ∥ CD, ∠1 = N_0, FG bisects ∠EFD, then the degree of ∠FGB is equal to ()",
+  "problem_img": "3408.png",
+  "construction_cdl": [
+    "Shape(AE,EI)",
+    "Shape(IE,EG)",
+    "Shape(FE,EA)",
+    "Shape(BG,GF)",
+    "Shape(CF,FE)",
+    "Shape(GF,FD)",
+    "Shape(EF,FG,GE)",
+    "Shape(JF,FC)",
+    "Shape(DF,FJ)",
+    "Collinear(AEGB)",
+    "Collinear(CFD)",
+    "Collinear(IEFJ)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "IsBisectorOfAngle(FG,EFD)",
+    "Equal(MeasureOfAngle(IEG),58)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BGF))",
+  "problem_answer": "151",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AB,CD,E)",
+    "parallel_property_collinear_extend(DC,BE,F)",
+    "parallel_property_corresponding_angle(EB,FD,I)",
+    "angle_addition(EFG,GFD)",
+    "adjacent_complementary_angle(IEG,GEF)",
+    "triangle_property_angle_sum(EFG)",
+    "adjacent_complementary_angle(BGF,FGE)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 5879,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7928",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE∥BC,且AD:AB=2:3,则DE:BC的值为()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE ∥ BC, and AD:AB = N_0:N_1, then the value of DE:BC is ()",
+  "problem_img": "5879.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),2/3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(DE),LengthOfLine(BC)))",
+  "problem_answer": "2/3",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 3239,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-540",
+  "problem_level": 1,
+  "problem_text_cn": "如图,等腰三角形ABC中,AB=AC,BD是AC边上的高,若∠A=36°,则∠DBC的大小是()",
+  "problem_text_en": "As shown in the figure, in the isosceles triangle ABC, AB = AC, BD is the height on AC, if ∠A = N_0, then the size of ∠DBC is ()",
+  "problem_img": "3239.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BC,CD)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "IsoscelesTriangle(ABC)",
+    "IsAltitudeOfTriangle(BD,BCA)",
+    "Equal(MeasureOfAngle(DAB),36)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBC))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(BCD)"
+  ]
+}

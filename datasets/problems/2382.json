@@ -1,0 +1,38 @@
+{
+  "problem_id": 2382,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2497",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In H, the diameter is 18, L M = 12, and m \\widehat L M = 84. Find H P. Round to the nearest hundredth.",
+  "problem_img": "2382.png",
+  "construction_cdl": [
+    "Shape(HLJ,JH,HP,PL)",
+    "Shape(HJM,MP,PH,HJ)",
+    "Shape(HMK,KP,PM)",
+    "Shape(HKL,LP,PK)",
+    "Collinear(JHPK)",
+    "Collinear(LPM)",
+    "Cocircular(H,JMKL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(H,H)",
+    "Equal(DiameterOfCircle(H),18)",
+    "Equal(LengthOfLine(LM),12)",
+    "Equal(MeasureOfArc(HML),84)",
+    "PerpendicularBetweenLine(MP,HP)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(HP))",
+  "problem_answer": "6.71",
+  "theorem_seqs": [
+    "line_addition(LP,PM)",
+    "line_addition(JH,HP)",
+    "line_addition(HP,PK)",
+    "circle_property_length_of_radius_and_diameter(H)",
+    "circle_property_circular_power_chord_and_chord(JPK,LPM,H)",
+    "radius_of_circle_property_length_equal(HJ,H)",
+    "radius_of_circle_property_length_equal(HK,H)",
+    "circle_property_chord_perpendicular_bisect_chord(H,HP,ML)"
+  ]
+}

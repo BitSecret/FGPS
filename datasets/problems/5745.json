@@ -1,0 +1,35 @@
+{
+  "problem_id": 5745,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7573",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,AE=EB,AF=2,则FC的值为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, AE = EB, AF = N_0, then the value of FC is ()",
+  "problem_img": "5745.png",
+  "construction_cdl": [
+    "Shape(DA,AF,FD)",
+    "Shape(DF,FC,CD)",
+    "Shape(FA,AE,EF)",
+    "Shape(CF,FE,EB,BC)",
+    "Collinear(DFE)",
+    "Collinear(AFC)",
+    "Collinear(AEB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(DABC)",
+    "Equal(LengthOfLine(AE),LengthOfLine(EB))",
+    "Equal(LengthOfLine(AF),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(FC))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(AE,EB)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallel_property_collinear_extend(BA,CD,E)",
+    "parallel_property_alternate_interior_angle(DC,AE)",
+    "similar_triangle_judgment_aa(FAE,FCD)",
+    "similar_triangle_property_line_ratio(FAE,FCD)",
+    "similar_triangle_property_line_ratio(EFA,DFC)"
+  ]
+}

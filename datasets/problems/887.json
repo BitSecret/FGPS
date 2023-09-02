@@ -1,0 +1,38 @@
+{
+  "problem_id": 887,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-916",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "887.png",
+  "construction_cdl": [
+    "Shape(CD,DA,AC)",
+    "Shape(AE,EB,BA)",
+    "Shape(CA,AB,BC)",
+    "Collinear(DAE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),y)",
+    "Equal(LengthOfLine(BE),x)",
+    "Equal(LengthOfLine(BA),5*sqrt(2))",
+    "PerpendicularBetweenLine(BC,DC)",
+    "PerpendicularBetweenLine(EB,CB)",
+    "PerpendicularBetweenLine(CA,BA)",
+    "PerpendicularBetweenLine(CD,AD)",
+    "PerpendicularBetweenLine(AE,BE)",
+    "Equal(LengthOfLine(AC),LengthOfLine(AB))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(AEB)",
+    "triangle_property_angle_sum(CAB)",
+    "angle_addition(EBA,ABC)",
+    "sine_theorem(AEB)",
+    "sine_theorem(EBA)"
+  ]
+}

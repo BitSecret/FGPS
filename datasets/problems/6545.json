@@ -1,0 +1,37 @@
+{
+  "problem_id": 6545,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9469",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点E是▱ABCD的边CD的中点,AD,BE的延长线相交于点F,DF=3,DE=2,则▱ABCD的周长为()",
+  "problem_text_en": "As shown in the figure, point E is the midpoint of edge CD of ▱ABCD, and the extended line lines of AD and BE intersect at point F, DF = N_0, DE = N_1, then the perimeter of ▱ABCD is ()",
+  "problem_img": "6545.png",
+  "construction_cdl": [
+    "Shape(FD,DE,EF)",
+    "Shape(DA,AB,BE,ED)",
+    "Shape(EB,BC,CE)",
+    "Collinear(FDA)",
+    "Collinear(DEC)",
+    "Collinear(FEB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(DABC)",
+    "IsMidpointOfLine(E,DC)",
+    "Equal(LengthOfLine(DF),3)",
+    "Equal(LengthOfLine(DE),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(DABC))",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "line_addition(DE,EC)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallel_property_corresponding_angle(DC,AB,F)",
+    "similar_triangle_judgment_aa(EFD,BFA)",
+    "similar_triangle_property_line_ratio(EFD,BFA)",
+    "similar_triangle_property_line_ratio(FDE,FAB)",
+    "line_addition(FD,DA)",
+    "parallelogram_property_opposite_line_equal(DABC)",
+    "quadrilateral_perimeter_formula(ABCD)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 380,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-387",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "380.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(AC,CB,BA)",
+    "Collinear(DCB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),10)",
+    "Equal(LengthOfLine(DC),8)",
+    "Equal(LengthOfLine(CB),16)",
+    "Equal(LengthOfLine(AB),26)",
+    "IsAltitudeOfTriangle(AD,ACB)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(ACB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "triangle_area_formula_common(ACB)"
+  ]
+}

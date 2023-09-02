@@ -1,0 +1,24 @@
+{
+  "problem_id": 239,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-242",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of angle TRS.",
+  "problem_img": "239.png",
+  "construction_cdl": [
+    "Shape(RS,ST,TR)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(STR),50)",
+    "Equal(LengthOfLine(TR),LengthOfLine(ST))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(TRS))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(RST)",
+    "isosceles_triangle_judgment_line_equal(TRS)",
+    "isosceles_triangle_property_angle_equal(TRS)"
+  ]
+}

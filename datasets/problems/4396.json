@@ -1,0 +1,34 @@
+{
+  "problem_id": 4396,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3332",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C,D是⊙O上顺次4点,OA⊥OB,AE⊥OD于E,当∠C=70°时,∠A的度数是()",
+  "problem_text_en": "As shown in the figure, vertices A, B, C, and D are the sequential N_0 vertices on ⊙O, OA ⊥ OB, AE ⊥ OD in E, when ∠C = N_1, the degree of ∠A is ()",
+  "problem_img": "4396.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(AO,OE,EA)",
+    "Shape(AE,ED,ODA)",
+    "Shape(BC,CD,DE,EO,OB)",
+    "Shape(CB,OBC)",
+    "Shape(DC,OCD)",
+    "Collinear(OED)",
+    "Cocircular(O,BCDA)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(BO,AO)",
+    "PerpendicularBetweenLine(OE,AE)",
+    "Equal(MeasureOfAngle(BCD),70)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EAO))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODB,C)",
+    "arc_property_center_angle(ODB,O)",
+    "angle_addition(BOA,AOE)",
+    "triangle_property_angle_sum(AOE)"
+  ]
+}

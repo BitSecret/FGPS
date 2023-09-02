@@ -1,0 +1,27 @@
+{
+  "problem_id": 5278,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5436",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知BD是△ABC的中线,AB=5,BC=3,且△ABD的周长为11,则△BCD的周长是()",
+  "problem_text_en": "As shown in the figure, it is known that BD is the midline of △ABC, AB = N_0, BC = N_1, and the perimeter of △ABD is N_2, then the perimeter of △BCD is ()",
+  "problem_img": "5278.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BC,CD)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "IsMedianOfTriangle(BD,BCA)",
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(PerimeterOfTriangle(ABD),11)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(BCD))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "triangle_perimeter_formula(ABD)",
+    "triangle_perimeter_formula(DBC)"
+  ]
+}

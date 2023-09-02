@@ -1,0 +1,33 @@
+{
+  "problem_id": 6395,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9252",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD的周长为16,∠BAD的平分线AE交CD于点E,若BE=2,则CE等于()",
+  "problem_text_en": "As shown in the figure, the perimeter of ▱ABCD is N_0, and the bisector of ∠BAD crosses CD at point E. If BE = N_1, then CE is equal to ()",
+  "problem_img": "6395.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EC,CD,DA)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(PerimeterOfQuadrilateral(ABCD),16)",
+    "IsBisectorOfAngle(AE,DAB)",
+    "Equal(LengthOfLine(BE),2)",
+    "IsBisectorOfAngle(AE,DAB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "quadrilateral_perimeter_formula(ABCD)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallel_property_alternate_interior_angle(EB,DA)",
+    "isosceles_triangle_judgment_angle_equal(BEA)",
+    "line_addition(BE,EC)"
+  ]
+}

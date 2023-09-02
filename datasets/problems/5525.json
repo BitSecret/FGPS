@@ -1,0 +1,41 @@
+{
+  "problem_id": 5525,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-6527",
+  "problem_level": 1,
+  "problem_text_cn": "如图,P是半径为6的⊙O外一点,且PO=12,过P点作⊙O的两条切线PA、PB,切点分别为点A、B,图中阴影部分的面积是()",
+  "problem_text_en": "As shown in the figure, P is a point outside ⊙O with a radius of N_0, and PO = N_1, two tangent lines PA and PB of ⊙O are made through point P. The tangent points are points A and B respectively. The area of ​​the shaded part in the figure is ( )",
+  "problem_img": "5525.png",
+  "construction_cdl": [
+    "Shape(CO,OB,OBC)",
+    "Shape(AO,OC,OCA)",
+    "Shape(BP,PC,OBC)",
+    "Shape(CP,PA,OCA)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(OCP)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(PO),12)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(RadiusOfCircle(O),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfSector(OBA))",
+  "problem_answer": "12*pi",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "sine_theorem(OPA)",
+    "triangle_property_angle_sum(OBP)",
+    "triangle_property_angle_sum(AOP)",
+    "sine_theorem(OBP)",
+    "angle_addition(AOC,COB)",
+    "arc_property_center_angle(OBA,O)",
+    "sector_area_formula(OBA)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "problem_id": 6686,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9714",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O中,AD、BC是圆O的弦,OA⊥BC,∠AOB=50°,CE⊥AD,则∠DCE的度数是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, AD and BC are the chords of circle O, OA ⊥ BC, ∠AOB = N_0, CE ⊥ AD, then the degree of ∠DCE is ()",
+  "problem_img": "6686.png",
+  "construction_cdl": [
+    "Shape(OAC,CM,MA)",
+    "Shape(AM,MN,NA)",
+    "Shape(OBA,AN,NB)",
+    "Shape(MC,CE,EM)",
+    "Shape(CP,PE,EC)",
+    "Shape(NM,ME,EP,PO,ON)",
+    "Shape(PC,CD,DP)",
+    "Shape(NO,OB,BN)",
+    "Shape(BO,OP,PD,ODB)",
+    "Shape(OCD,DC)",
+    "Collinear(AMEPD)",
+    "Collinear(ANO)",
+    "Collinear(CMNB)",
+    "Collinear(CPO)",
+    "Cocircular(O,ACDB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(DE,CE)",
+    "PerpendicularBetweenLine(BN,ON)",
+    "Equal(MeasureOfAngle(AOB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ECD))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "altitude_of_triangle_judgment(ON,OBC)",
+    "isosceles_triangle_property_line_coincidence(OBC,N)",
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "triangle_property_angle_sum(ECD)"
+  ]
+}

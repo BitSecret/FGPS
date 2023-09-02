@@ -1,0 +1,49 @@
+{
+  "problem_id": 47,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-47",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of trapezoid P Q R S.",
+  "problem_img": "47.png",
+  "construction_cdl": [
+    "Shape(SP,PA,AS)",
+    "Shape(SA,AZ,ZR,RS)",
+    "Shape(RZ,ZQ,QR)",
+    "Collinear(PAZQ)"
+  ],
+  "text_cdl": [
+    "Trapezoid(SPQR)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(RS),10)",
+    "Equal(LengthOfLine(RQ),12)",
+    "Equal(LengthOfLine(RZ),x)",
+    "Equal(LengthOfLine(AZ),y)",
+    "Equal(LengthOfLine(QZ),z)",
+    "Equal(MeasureOfAngle(SPA),45)",
+    "Equal(MeasureOfAngle(ZQR),30)",
+    "ParallelBetweenLine(SR,AZ)",
+    "PerpendicularBetweenLine(PA,SA)",
+    "PerpendicularBetweenLine(RZ,QZ)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(SPQR))",
+  "problem_answer": "38+6*sqrt(2)+6*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(RZQ)",
+    "sine_theorem(RZQ)",
+    "sine_theorem(QRZ)",
+    "altitude_of_quadrilateral_judgment_left_vertex(SA,SPQR)",
+    "adjacent_complementary_angle(PZR,RZQ)",
+    "altitude_of_quadrilateral_judgment_right_vertex(RZ,SPQR)",
+    "parallel_judgment_corresponding_angle(AS,ZR,P)",
+    "parallelogram_judgment_parallel_and_parallel(SAZR)",
+    "parallelogram_property_opposite_line_equal(AZRS)",
+    "triangle_property_angle_sum(SPA)",
+    "isosceles_triangle_judgment_angle_equal(ASP)",
+    "sine_theorem(SPA)",
+    "line_addition(PA,AZ)",
+    "line_addition(PZ,ZQ)",
+    "quadrilateral_perimeter_formula(SPQR)"
+  ]
+}

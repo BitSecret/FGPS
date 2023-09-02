@@ -1,0 +1,31 @@
+{
+  "problem_id": 1139,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1178",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\triangle R S T \\cong \\triangle V U T. What is the area of \\triangle R S T?",
+  "problem_img": "1139.png",
+  "construction_cdl": [
+    "Shape(RS,ST,TR)",
+    "Shape(TU,UV,VT)",
+    "Collinear(STU)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(RST,VTU)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(UV),15*x)",
+    "Equal(LengthOfLine(ST),11*x-2)",
+    "Equal(LengthOfLine(TU),8*x+4)",
+    "PerpendicularBetweenLine(RS,TS)",
+    "PerpendicularBetweenLine(TU,VU)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(RST))",
+  "problem_answer": "300",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_line_equal(RST,VTU)",
+    "mirror_congruent_triangle_property_line_equal(TRS,TUV)",
+    "triangle_area_formula_sine(STR)"
+  ]
+}

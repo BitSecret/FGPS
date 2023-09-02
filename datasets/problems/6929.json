@@ -1,0 +1,27 @@
+{
+  "problem_id": 6929,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10181",
+  "problem_level": 1,
+  "problem_text_cn": "如图，在△ABC中，∠A＝50°，O为△ABC的内心，则∠BOC的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6929.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OC,CA)",
+    "Shape(OB,BC,CO)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),50)",
+    "IsIncenterOfTriangle(O,ABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "115",
+  "theorem_seqs": [
+    "angle_addition(ABO,OBC)",
+    "angle_addition(BCO,OCA)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

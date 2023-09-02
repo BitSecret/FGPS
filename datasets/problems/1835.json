@@ -1,0 +1,36 @@
+{
+  "problem_id": 1835,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1903",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, the vertices of quadrilateral A B C D intersect square E F G H and divide its sides into segments with measure that have a ratio of 1:2. Find the area of A B C D.",
+  "problem_img": "1835.png",
+  "construction_cdl": [
+    "Shape(EB,BC,CE)",
+    "Shape(BH,HA,AB)",
+    "Shape(AG,GD,DA)",
+    "Shape(CD,DF,FC)",
+    "Shape(AD,DC,CB,BA)",
+    "Collinear(EBH)",
+    "Collinear(ECF)",
+    "Collinear(FDG)",
+    "Collinear(HAG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Square(EHGF)",
+    "Square(CBAD)",
+    "Equal(LengthOfLine(HE),9)",
+    "Equal(LengthOfLine(EB),LengthOfLine(HA))",
+    "Equal(LengthOfLine(BH),Mul(LengthOfLine(EB),2))"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ADCB))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "line_addition(EB,BH)",
+    "right_triangle_judgment_angle(BHA)",
+    "right_triangle_property_pythagorean(BHA)",
+    "parallelogram_area_formula_sine(ADCB)"
+  ]
+}

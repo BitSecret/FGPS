@@ -1,0 +1,27 @@
+{
+  "problem_id": 6363,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9213",
+  "problem_level": 1,
+  "problem_text_cn": "如图,菱形ABCD的边长为6,∠ABC=60°,则对角线AC的长为()",
+  "problem_text_en": "As shown in the figure, the side length of the diamond ABCD is N_0, ∠ABC = N_1, then the length of the diagonal AC is ()",
+  "problem_img": "6363.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(MeasureOfAngle(ABC),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(BCA)",
+    "isosceles_triangle_property_angle_equal(BCA)",
+    "triangle_property_angle_sum(BCA)",
+    "isosceles_triangle_judgment_angle_equal(ABC)"
+  ]
+}

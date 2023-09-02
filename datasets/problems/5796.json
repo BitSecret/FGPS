@@ -1,0 +1,30 @@
+{
+  "problem_id": 5796,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7731",
+  "problem_level": 1,
+  "problem_text_cn": "在△ABC中,D、E为边AB、AC的中点,已知△ADE的面积为4,那么△ABC的面积是()",
+  "problem_text_en": "In △ABC, D and E are the midpoints of sides AB and AC, and the area of ​​△ADE is known to be N_0, then the area of ​​△ABC is ()",
+  "problem_img": "5796.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),1/2)",
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(AreaOfTriangle(ADE),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(ABC))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ABC,ADE)",
+    "similar_triangle_property_line_ratio(CAB,EAD)",
+    "similar_triangle_property_area_square_ratio(ABC,ADE)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 3564,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1196",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB为⊙O的直径,PC切⊙O于C交AB的延长线于点P,∠CAP=35°,那么∠CPO的度数等于()",
+  "problem_text_en": "As shown in the figure, it is known that AB is the diameter of ⊙O, PC tangents ⊙O to C and crosses the extended line line of AB at point P, ∠CAP = N_0, then the degree of ∠CPO is equal to ()",
+  "problem_img": "3564.png",
+  "construction_cdl": [
+    "Shape(AO,OC,CA)",
+    "Shape(AC,OCA)",
+    "Shape(CO,OB,OBC)",
+    "Shape(BA,OAB)",
+    "Shape(BP,PC,OBC)",
+    "Collinear(AOBP)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(PC,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAP),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OPC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "tangent_of_circle_property_perpendicular(PC,O,O)",
+    "triangle_property_angle_sum(COP)"
+  ]
+}

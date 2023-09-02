@@ -1,0 +1,38 @@
+{
+  "problem_id": 6379,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9235",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将▱ABCD沿对角线AC折叠,使点B落在B′处,若∠1=∠2=44°,则∠B为()",
+  "problem_text_en": "As shown in the figure, fold ▱ABCD along the diagonal AC so that point B falls at B′. If ∠1 = ∠2 = N_0, then ∠B is ()",
+  "problem_img": "6379.png",
+  "construction_cdl": [
+    "Shape(AF,FD,DA)",
+    "Shape(EF,FC,CE)",
+    "Shape(FA,AC,CF)",
+    "Shape(CA,AB,BC)",
+    "Collinear(DFC)",
+    "Collinear(EFA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(MeasureOfAngle(AFD),44)",
+    "Equal(MeasureOfAngle(BCA),44)",
+    "MirrorCongruentBetweenTriangle(BCA,EAC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "114",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_angle_equal(BCA,EAC)",
+    "mirror_congruent_triangle_property_angle_equal(CAB,CEA)",
+    "mirror_congruent_triangle_property_angle_equal(ABC,ACE)",
+    "angle_addition(ACD,DCE)",
+    "angle_addition(BCA,ACD)",
+    "adjacent_complementary_angle(CFA,AFD)",
+    "adjacent_complementary_angle(EFC,CFA)",
+    "parallel_property_alternate_interior_angle(BA,CD)",
+    "triangle_property_angle_sum(EFC)",
+    "triangle_property_angle_sum(FAC)"
+  ]
+}

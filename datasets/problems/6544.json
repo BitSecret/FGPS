@@ -1,0 +1,40 @@
+{
+  "problem_id": 6544,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9468",
+  "problem_level": 1,
+  "problem_text_cn": "在▱ABCD中,AB=5,AD=8,∠BAD、∠ADC的平分线分别交BC于E、F,则EF的长为()",
+  "problem_text_en": "In ▱ABCD, AB = N_0, AD = N_1, the bisectors of ∠BAD and ∠ADC intersect BC at E and F respectively, then the length of EF is ()",
+  "problem_img": "6544.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EM,MA)",
+    "Shape(AM,MD,DA)",
+    "Shape(ME,EF,FM)",
+    "Shape(DM,MF,FC,CD)",
+    "Collinear(BEFC)",
+    "Collinear(AMF)",
+    "Collinear(EMD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(AD),8)",
+    "IsBisectorOfAngle(AF,DAB)",
+    "IsBisectorOfAngle(DE,CDA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallel_property_collinear_extend(CB,DA,F)",
+    "parallel_property_alternate_interior_angle(AD,EC)",
+    "parallel_property_alternate_interior_angle(AD,BF)",
+    "isosceles_triangle_judgment_angle_equal(BFA)",
+    "isosceles_triangle_judgment_angle_equal(CDE)",
+    "line_addition(EF,FC)",
+    "line_addition(BF,FC)"
+  ]
+}

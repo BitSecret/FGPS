@@ -1,0 +1,39 @@
+{
+  "problem_id": 6066,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8579",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C在⊙O上,连接AB,AC,若∠BOC=100°,则∠B+∠C的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are on ⊙O and connect AB and AC. If ∠BOC = N_0, then the degree of ∠B + ∠C is ()",
+  "problem_img": "6066.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OCA,AC)",
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OC,CA)",
+    "Shape(OBD,DO,OB)",
+    "Shape(ODC,CO,OD)",
+    "Collinear(AOD)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AD,O)",
+    "Equal(MeasureOfAngle(COB),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(ABO),MeasureOfAngle(OCA)))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "angle_addition(CAD,DAB)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OCA)"
+  ]
+}

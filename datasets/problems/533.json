@@ -1,0 +1,34 @@
+{
+  "problem_id": 533,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-546",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, \\triangle A B C is isosceles, \\triangle D C E is equilateral, and \\triangle F C G is isosceles. Find the measure of the \\angle 5 at vertex C.",
+  "problem_img": "533.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DF,FC)",
+    "Shape(CF,FG,GC)",
+    "Shape(CG,GE,EC)",
+    "Shape(CE,EB,BC)",
+    "Collinear(ADFGEB)"
+  ],
+  "text_cdl": [
+    "IsoscelesTriangle(CAB)",
+    "EquilateralTriangle(CDE)",
+    "IsoscelesTriangle(CFG)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CAB),42)",
+    "Equal(MeasureOfAngle(CFG),77)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCE))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(ECD)",
+    "isosceles_triangle_property_angle_equal(CAB)",
+    "adjacent_complementary_angle(GEC,CEB)",
+    "triangle_property_angle_sum(CEB)"
+  ]
+}

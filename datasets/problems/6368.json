@@ -1,0 +1,34 @@
+{
+  "problem_id": 6368,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9220",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,已知AB=10,AC=16,那么菱形ABCD的面积为()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, it is known that AB = N_0 and AC = N_1, then the area of ​​the diamond ABCD is ()",
+  "problem_img": "6368.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OD)",
+    "Shape(DO,OC,CD)",
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Collinear(AOC)",
+    "Collinear(DOB)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(AC),16)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "96",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "line_addition(AO,OC)",
+    "right_triangle_judgment_angle(BOA)",
+    "right_triangle_property_pythagorean(BOA)",
+    "kite_property_diagonal_perpendicular_bisection(DABC,O)",
+    "line_addition(DO,OB)",
+    "kite_area_formula_diagonal(ABCD)"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": 5282,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5456",
+  "problem_level": 1,
+  "problem_text_cn": "一艘轮船行驶在B处同时测得小岛A,C的方向分别为北偏西30°和西南方向,则∠ABC的度数是()",
+  "problem_text_en": "A ship is traveling at B while measuring the direction of island A and C are respectively north by west N_0 and south by west, then the degree of ∠ABC is ()",
+  "problem_img": "5282.png",
+  "construction_cdl": [
+    "Shape(AE,EB,BA)",
+    "Shape(EC,CB,BE)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EBA),60)",
+    "Equal(MeasureOfAngle(CBE),45)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBA))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "angle_addition(CBE,EBA)"
+  ]
+}

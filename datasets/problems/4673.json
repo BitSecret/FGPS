@@ -1,0 +1,28 @@
+{
+  "problem_id": 4673,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3947",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在以点O为圆心的两个同心圆中,大圆的弦AB与小圆相切,切点为C,若大圆的半径是13,AB=24,则小圆的半径是()",
+  "problem_text_en": "As shown in the figure, in the two concentric circles with point O as the center, the chord AB of the great circle is tangent to the small circle, and the tangent point is C. If the radius of the great circle is N_0, AB = N_1, then the radius of the small circle is ()",
+  "problem_img": "4673.png",
+  "construction_cdl": [
+    "Shape(OD,ODC,CO)",
+    "Shape(DA,AC,ODC)",
+    "Collinear(ADO)",
+    "Cocircular(O,DC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AC),12)",
+    "Equal(LengthOfLine(AO),13)",
+    "Equal(MeasureOfAngle(ACO),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OC))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ACO)",
+    "right_triangle_property_pythagorean(ACO)"
+  ]
+}

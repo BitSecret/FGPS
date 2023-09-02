@@ -1,0 +1,33 @@
+{
+  "problem_id": 6240,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8839",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在半径为5的⊙O中,如果弦AB的长为8,那么它的弦心距OC等于()",
+  "problem_text_en": "As shown in the figure, in the ⊙O with a radius of N_0, if the length of the chord AB is N_1, then its distance from the chord OC to the centre is equal to ()",
+  "problem_img": "6240.png",
+  "construction_cdl": [
+    "Shape(AO,OC,CA)",
+    "Shape(OAB,BC,CO,OA)",
+    "Shape(OBA,AC,CB)",
+    "Collinear(ACB)",
+    "Cocircular(O,BA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(RadiusOfCircle(O),5)",
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(BC,OC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OC))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BCO,OCA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,BA)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(OCA)",
+    "right_triangle_property_pythagorean(OCA)"
+  ]
+}

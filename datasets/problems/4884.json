@@ -1,0 +1,51 @@
+{
+  "problem_id": 4884,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4415",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形OBCD中,∠BCD=90°,E为CD的中点,以OB为半径的⊙O切CD于E,交BC于M,若BM=CM=2,则OC的长为()",
+  "problem_text_en": "As shown in the figure, in the quadrilateral OBCD, ∠BCD = N_0, E is the midpoint of CD, ⊙O with OB as the radius is tangent to CD at E, and intersects BC at M. If BM = CM = N_1, then the length of OC is ()",
+  "problem_img": "4884.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(AO,OE,OEA)",
+    "Shape(ED,DA,OEA)",
+    "Shape(EO,OF,OFE)",
+    "Shape(FO,OM,OMF)",
+    "Shape(OB,BG,GO)",
+    "Shape(OG,GM,MO)",
+    "Shape(MG,GB,OBM)",
+    "Shape(FC,CE,OFE)",
+    "Shape(MC,CF,OMF)",
+    "Collinear(DAOB)",
+    "Collinear(DEC)",
+    "Collinear(BGMC)",
+    "Collinear(OFC)",
+    "Cocircular(O,BMFEA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CE,O)",
+    "IsTangentOfCircle(DE,O)",
+    "IsPerpendicularBisectorOfLine(OG,BM)",
+    "Equal(LengthOfLine(BM),2)",
+    "Equal(LengthOfLine(MC),2)",
+    "Equal(LengthOfLine(OE),3)",
+    "Equal(MeasureOfAngle(BCD),90)",
+    "Rectangle(OGCE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OC))",
+  "problem_answer": "sqrt(17)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "line_addition(BG,GM)",
+    "line_addition(BG,GC)",
+    "line_addition(BM,MC)",
+    "right_triangle_judgment_angle(BGO)",
+    "right_triangle_judgment_angle(OGC)",
+    "right_triangle_property_pythagorean(BGO)",
+    "right_triangle_property_pythagorean(OGC)"
+  ]
+}

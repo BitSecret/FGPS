@@ -1,0 +1,35 @@
+{
+  "problem_id": 5787,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7703",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,AE:EB=1:2,如果S~△AEF~=4cm²,那么S~△DCF~=()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, AE:EB=N_0:N_1,如果S~△AEF~=N_2cm²,then S~△DCF~ = ()",
+  "problem_img": "5787.png",
+  "construction_cdl": [
+    "Shape(DA,AF,FD)",
+    "Shape(DF,FC,CD)",
+    "Shape(AE,EF,FA)",
+    "Shape(FE,EB,BC,CF)",
+    "Collinear(DFE)",
+    "Collinear(AFC)",
+    "Collinear(AEB)"
+  ],
+  "text_cdl": [
+    "Equal(Div(LengthOfLine(AE),LengthOfLine(EB)),1/2)",
+    "Equal(AreaOfTriangle(AEF),4)",
+    "Parallelogram(DABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(CDF))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "line_addition(AE,EB)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallel_property_alternate_interior_angle(DC,AB)",
+    "vertical_angle(DFC,EFA)",
+    "similar_triangle_judgment_aa(DFC,EFA)",
+    "similar_triangle_property_line_ratio(FCD,FAE)",
+    "similar_triangle_property_area_square_ratio(DFC,EFA)"
+  ]
+}

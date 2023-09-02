@@ -1,0 +1,31 @@
+{
+  "problem_id": 191,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-193",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the length of line WX.",
+  "problem_img": "191.png",
+  "construction_cdl": [
+    "Shape(VZ,ZW,WV)",
+    "Shape(WX,XY,YW)",
+    "Collinear(ZWY)",
+    "Collinear(VWX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(VW),3*x-6)",
+    "Equal(LengthOfLine(YW),5)",
+    "Equal(LengthOfLine(ZW),6)",
+    "Equal(LengthOfLine(WX),x+4)",
+    "ParallelBetweenLine(YX,VZ)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(WX))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(YX,VZ)",
+    "similar_triangle_judgment_aa(WVZ,WXY)",
+    "similar_triangle_property_line_ratio(VZW,XYW)",
+    "similar_triangle_property_line_ratio(ZWV,YWX)"
+  ]
+}

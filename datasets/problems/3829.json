@@ -1,0 +1,37 @@
+{
+  "problem_id": 3829,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1697",
+  "problem_level": 1,
+  "problem_text_cn": "如图,弦AE∥直径CD,连AO,∠AOC=40°,则⁀{DE}所对的圆心角的度数为()",
+  "problem_text_en": "As shown in the figure, chord AE ∥ diameter CD, even AO, ∠AOC = N_0, then the degree of the central angle of ⁀DE is ()",
+  "problem_img": "3829.png",
+  "construction_cdl": [
+    "Shape(CO,OA,OAC)",
+    "Shape(AE,OEA)",
+    "Shape(EA,AO,OE)",
+    "Shape(EO,OD,ODE)",
+    "Shape(DO,OC,OCD)",
+    "Collinear(COD)",
+    "Cocircular(O,ACDE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "ParallelBetweenLine(AE,OD)",
+    "Equal(MeasureOfAngle(COA),40)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(ODE))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(DO,EA,C)",
+    "parallel_property_alternate_interior_angle(OC,EA)",
+    "parallel_property_alternate_interior_angle(AE,OD)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "isosceles_triangle_judgment_line_equal(OEA)",
+    "isosceles_triangle_property_angle_equal(OEA)",
+    "arc_property_center_angle(ODE,O)"
+  ]
+}

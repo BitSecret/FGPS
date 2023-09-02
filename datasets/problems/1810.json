@@ -1,0 +1,46 @@
+{
+  "problem_id": 1810,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1877",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the measure of \\angle G H I?",
+  "problem_img": "1810.png",
+  "construction_cdl": [
+    "Shape(AE,ED)",
+    "Shape(XH,HE)",
+    "Shape(CF,FH)",
+    "Shape(DE,EB)",
+    "Shape(EH,HY)",
+    "Shape(HF,FD)",
+    "Shape(HE,EA)",
+    "Shape(FH,HX)",
+    "Shape(IF,FC)",
+    "Shape(BE,EH)",
+    "Shape(YH,HF)",
+    "Shape(DF,FI)",
+    "Collinear(AEB)",
+    "Collinear(XHY)",
+    "Collinear(CFD)",
+    "Collinear(HED)",
+    "Collinear(HFI)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(HEA),40)",
+    "Equal(MeasureOfAngle(CFH),70)",
+    "ParallelBetweenLine(AB,XY)",
+    "ParallelBetweenLine(XY,CD)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(EHF))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(YX,BA,H)",
+    "parallel_property_collinear_extend(DC,YX,F)",
+    "parallel_property_collinear_extend(AB,HY,E)",
+    "parallel_property_collinear_extend(XY,CF,H)",
+    "parallel_property_alternate_interior_angle(HY,CF)",
+    "parallel_property_alternate_interior_angle(AE,HY)",
+    "angle_addition(EHY,YHF)"
+  ]
+}

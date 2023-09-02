@@ -1,0 +1,32 @@
+{
+  "problem_id": 3302,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-632",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AC=BC,∠C=90°,AD平分∠CAB交BC于D,DE⊥AB于点E,且AC=7cm,则DE+BD等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, AC = BC, ∠C = N_0, AD equally bisects ∠CAB crosses BC at D, DE ⊥ AB at vertex E, and AC = N_1, then DE + BD is equal to ()",
+  "problem_img": "3302.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(DA,AE,ED)",
+    "Shape(DE,EB,BD)",
+    "Collinear(CDB)",
+    "Collinear(AEB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),LengthOfLine(BC))",
+    "Equal(MeasureOfAngle(DCA),90)",
+    "IsBisectorOfAngle(AD,CAB)",
+    "Equal(LengthOfLine(AC),7)",
+    "PerpendicularBetweenLine(DE,BE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(DE),LengthOfLine(BD)))",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AED,DEB)",
+    "mirror_congruent_triangle_judgment_aas(DAE,DCA)",
+    "mirror_congruent_triangle_property_line_equal(AED,ADC)",
+    "line_addition(CD,DB)"
+  ]
+}

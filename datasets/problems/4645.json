@@ -1,0 +1,36 @@
+{
+  "problem_id": 4645,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3873",
+  "problem_level": 1,
+  "problem_text_cn": "如图,射线BM与⊙O相切于点B,若∠MBA=140°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, the ray BM and ⊙O are tangent to vertex B, if ∠MBA = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4645.png",
+  "construction_cdl": [
+    "Shape(CB,BM)",
+    "Shape(OBC,CB)",
+    "Shape(AO,OB,BC,CA)",
+    "Shape(AB,BO,OA)",
+    "Shape(OAB,BA)",
+    "Shape(AC,OCA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(MB,O)",
+    "Equal(MeasureOfAngle(ABM),140)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(MB,O,O)",
+    "angle_addition(ABO,OBM)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "sine_theorem(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

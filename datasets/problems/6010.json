@@ -1,0 +1,28 @@
+{
+  "problem_id": 6010,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8484",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,若∠AOB=100°,则∠ACB的度数是()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumcircle of △ABC, if ∠AOB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "6010.png",
+  "construction_cdl": [
+    "Shape(CA,AO,OB,BC)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Shape(BO,OA,AB)",
+    "Shape(BA,OAB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BOA),100)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "problem_id": 3596,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1247",
+  "problem_level": 1,
+  "problem_text_cn": "如图,把一块直角三角板的直角顶点放在直尺的一边上,若∠1=30°,则∠2是()",
+  "problem_text_en": "As shown in the figure, put the right-angled vertex of a right triangle board on one side of the ruler, if ∠1 = N_0, then ∠2 is ()",
+  "problem_img": "3596.png",
+  "construction_cdl": [
+    "Shape(AM,MN,NA)",
+    "Shape(MP,PC,CN,NM)",
+    "Shape(NC,CD,DG,GN)",
+    "Shape(EF,FP,PM,ME)",
+    "Shape(PB,BC,CP)",
+    "Collinear(AMPB)",
+    "Collinear(ANC)",
+    "Collinear(EMNG)",
+    "Collinear(FPCD)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(BC,AC)",
+    "Equal(MeasureOfAngle(BCP),30)",
+    "Rectangle(EFDG)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(MNA))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "angle_addition(BCP,PCN)",
+    "parallel_property_collinear_extend(EG,FD,N)",
+    "parallel_property_collinear_extend(DF,NE,C)",
+    "parallel_property_corresponding_angle(CF,NE,A)"
+  ]
+}

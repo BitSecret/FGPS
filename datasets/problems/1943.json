@@ -1,0 +1,32 @@
+{
+  "problem_id": 1943,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2022",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1943.png",
+  "construction_cdl": [
+    "Shape(CA,AE,EC)",
+    "Shape(EA,AF,FE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(EA),13)",
+    "Equal(LengthOfLine(EC),x)",
+    "Equal(MeasureOfAngle(EAF),y)",
+    "PerpendicularBetweenLine(EC,AC)",
+    "Equal(LengthOfLine(EC),LengthOfLine(CA))",
+    "Equal(LengthOfLine(EC),LengthOfLine(FE))",
+    "Equal(LengthOfLine(FE),LengthOfLine(AF))",
+    "Equal(LengthOfLine(AF),LengthOfLine(CA))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "13*sqrt(2)/2",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(CAE)",
+    "isosceles_triangle_property_angle_equal(CAE)",
+    "triangle_property_angle_sum(CAE)",
+    "sine_theorem(ECA)"
+  ]
+}

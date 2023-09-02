@@ -1,0 +1,25 @@
+{
+  "problem_id": 2147,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-2241",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use a Pythagorean Triple to find x.",
+  "problem_img": "2147.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),35)",
+    "Equal(LengthOfLine(BC),21)",
+    "Equal(LengthOfLine(AC),x)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

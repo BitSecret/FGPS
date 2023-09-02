@@ -1,0 +1,35 @@
+{
+  "problem_id": 1681,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1745",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "J H is tangent to \\odot G at J. Find the value of x.",
+  "problem_img": "1681.png",
+  "construction_cdl": [
+    "Shape(JG,GK,GKJ)",
+    "Shape(KG,GJ,GJK)",
+    "Shape(JH,HK,GKJ)",
+    "Collinear(GKH)",
+    "Cocircular(G,JK)",
+    "Shape(GJ,JH,HK,KG)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(HJ,G)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(G,G)",
+    "Equal(LengthOfLine(KG),x)",
+    "Equal(LengthOfLine(JG),x)",
+    "Equal(LengthOfLine(HK),8)",
+    "Equal(LengthOfLine(HJ),12)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(GK,KH)",
+    "tangent_of_circle_property_perpendicular(HJ,G,G)",
+    "right_triangle_judgment_angle(GJH)",
+    "right_triangle_property_pythagorean(GJH)"
+  ]
+}

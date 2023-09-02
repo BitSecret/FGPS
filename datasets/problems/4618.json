@@ -1,0 +1,32 @@
+{
+  "problem_id": 4618,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3794",
+  "problem_level": 1,
+  "problem_text_cn": "已知:如图,⊙O是△ABC的外接圆,D为CB延长线上一点,∠AOC=130°,则∠ABD的度数为()",
+  "problem_text_en": "Known: As shown in the figure, ⊙O is the circumscribed circle of △ABC, D is a point on the extended line of CB, ∠AOC = N_0, then the degree of ∠ABD is ()",
+  "problem_img": "4618.png",
+  "construction_cdl": [
+    "Shape(OCA,AO,OC)",
+    "Shape(OA,AC,CO)",
+    "Shape(AB,BC,CA)",
+    "Shape(OAB,BA)",
+    "Shape(CB,OBC)",
+    "Shape(DB,BA)",
+    "Collinear(DBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COA),130)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAC,O)",
+    "round_arc(OAC,OCA)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "adjacent_complementary_angle(DBA,ABC)"
+  ]
+}

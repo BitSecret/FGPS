@@ -1,0 +1,30 @@
+{
+  "problem_id": 2627,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2760",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Circle A has diameters D F and P G. If D F = 10, find D A.",
+  "problem_img": "2627.png",
+  "construction_cdl": [
+    "Shape(AP,APD,DA)",
+    "Shape(AD,ADL,LA)",
+    "Shape(AL,ALG,GA)",
+    "Shape(AG,AGF,FA)",
+    "Shape(AF,AFP,PA)",
+    "Collinear(DAF)",
+    "Collinear(GAP)",
+    "Cocircular(A,PDLGF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(DiameterOfCircle(A),10)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(DA))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "circle_property_length_of_radius_and_diameter(A)",
+    "radius_of_circle_property_length_equal(AD,A)"
+  ]
+}

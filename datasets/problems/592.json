@@ -1,0 +1,50 @@
+{
+  "problem_id": 592,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-607",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "592.png",
+  "construction_cdl": [
+    "Shape(EB,BM,MF,FC,CE)",
+    "Shape(CF,FH,HC)",
+    "Shape(GH,HF,FG)",
+    "Shape(GF,FM,MD,DA,AG)",
+    "Collinear(ECHGA)",
+    "Collinear(BMD)",
+    "Collinear(HFM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CE),5)",
+    "Equal(LengthOfLine(CG),2)",
+    "Equal(LengthOfLine(AG),5)",
+    "Equal(LengthOfLine(CF),6)",
+    "Equal(LengthOfLine(GF),6)",
+    "Equal(LengthOfLine(FM),1)",
+    "Equal(LengthOfLine(DB),8)",
+    "PerpendicularBetweenLine(FH,EH)",
+    "ParallelBetweenLine(EA,BD)",
+    "Equal(LengthOfLine(EB),LengthOfLine(AD))"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfQuadrilateral(EBDA),AreaOfTriangle(CFG)))",
+  "problem_answer": "63.244",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(GHF,FHE)",
+    "trapezoid_judgment_parallel(EBDA)",
+    "altitude_of_triangle_judgment(FH,FGC)",
+    "triangle_area_formula_common(FGC)",
+    "line_addition(EC,CH)",
+    "line_addition(HG,GA)",
+    "line_addition(EH,HA)",
+    "altitude_of_quadrilateral_judgment(MH,DAEB)",
+    "trapezoid_area_formula(DAEB)",
+    "isosceles_triangle_judgment_line_equal(FGC)",
+    "isosceles_triangle_property_line_coincidence(FGC,H)",
+    "right_triangle_judgment_angle(FHC)",
+    "line_addition(CH,HG)",
+    "line_addition(HF,FM)",
+    "right_triangle_property_pythagorean(FHC)"
+  ]
+}

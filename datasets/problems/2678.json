@@ -1,0 +1,26 @@
+{
+  "problem_id": 2678,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-2818",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2678.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CBA),30)",
+    "Equal(LengthOfLine(BC),10*3^0.5)",
+    "Equal(LengthOfLine(AC),x)",
+    "Equal(LengthOfLine(AB),y)",
+    "PerpendicularBetweenLine(AC,BC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BAC)",
+    "sine_theorem(CBA)"
+  ]
+}

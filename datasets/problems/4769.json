@@ -1,0 +1,46 @@
+{
+  "problem_id": 4769,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4142",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、BC、CD、DA都是⊙O的切线,已知AD=3,BC=6,则AB+CD的值是()",
+  "problem_text_en": "As shown in the figure, AB, BC, CD, and DA are all tangents of ⊙O. Given that AD = N_0 and BC = N_1, then the value of AB + CD is ()",
+  "problem_img": "4769.png",
+  "construction_cdl": [
+    "Shape(HA,AE,OHE)",
+    "Shape(EB,BF,OEF)",
+    "Shape(FC,CG,OFG)",
+    "Shape(GD,DH,OGH)",
+    "Collinear(AEB)",
+    "Collinear(BFC)",
+    "Collinear(CGD)",
+    "Collinear(AHD)",
+    "Cocircular(O,EFGH)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),6)",
+    "Equal(LengthOfLine(AD),3)",
+    "IsTangentOfCircle(AE,O)",
+    "IsTangentOfCircle(AH,O)",
+    "IsTangentOfCircle(BF,O)",
+    "IsTangentOfCircle(BE,O)",
+    "IsTangentOfCircle(CG,O)",
+    "IsTangentOfCircle(CF,O)",
+    "IsTangentOfCircle(DH,O)",
+    "IsTangentOfCircle(DG,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(AB),LengthOfLine(CD)))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "tangent_of_circle_property_length_equal(AE,AH,O)",
+    "tangent_of_circle_property_length_equal(BF,BE,O)",
+    "tangent_of_circle_property_length_equal(CG,CF,O)",
+    "tangent_of_circle_property_length_equal(DH,DG,O)",
+    "line_addition(AE,EB)",
+    "line_addition(BF,FC)",
+    "line_addition(CG,GD)",
+    "line_addition(AH,HD)"
+  ]
+}
