@@ -1,5 +1,6 @@
 import copy
 from solver.aux_tools.parser import CDLParser
+from sympy.parsing import parse_expr
 
 
 class Condition:
@@ -153,8 +154,8 @@ class Goal:
         """Initial goal by formal language."""
         if goal_CDL["type"] == "value":
             self.type = "algebra"
-            self.item = CDLParser.get_expr_from_tree(problem, goal_CDL["item"][1][0])
-            self.answer = CDLParser.get_expr_from_tree(problem, goal_CDL["answer"])
+            self.item = CDLParser.get_expr_from_tree(problem, goal_CDL["item"][1])
+            self.answer = parse_expr(goal_CDL["answer"])
         elif goal_CDL["type"] == "equal":
             self.type = "algebra"
             self.item = CDLParser.get_equation_from_tree(problem, goal_CDL["item"][1])

@@ -513,7 +513,8 @@ class CDLParser(Parser):
             parsed_CDL["parsed_cdl"]["goal"]["type"] = "value"
             parsed_goal = problem_CDL["goal_cdl"][6:len(problem_CDL["goal_cdl"]) - 1]
             if parsed_goal[0].isupper():
-                parsed_CDL["parsed_cdl"]["goal"]["item"] = ("Value", CDLParser.parse_to_tree(parsed_goal))
+                parsed_goal, _ = CDLParser.parse_to_tree(parsed_goal)
+                parsed_CDL["parsed_cdl"]["goal"]["item"] = ("Value", parsed_goal)
             else:
                 parsed_CDL["parsed_cdl"]["goal"]["item"] = ("Value", parsed_goal)
             parsed_CDL["parsed_cdl"]["goal"]["answer"] = problem_CDL["problem_answer"]
@@ -582,7 +583,7 @@ class CDLParser(Parser):
             return CDLParser.parse_expr(problem, tree)
         if tree[0] in problem.predicate_GDL["Attribution"]:  # attr
             if not replaced:
-                return problem.get_sym_of_attr(tree[0], tuple(tree[1]))
+                return problem.get_sym_of_attr(tree[0], tree[1])
             else:
                 replaced_item = [letters[i] for i in tree[1]]
                 return problem.get_sym_of_attr(tree[0], tuple(replaced_item))

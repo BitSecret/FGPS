@@ -307,21 +307,34 @@ class EquationKiller:
 
             if isinstance(solved, list):
                 update = True
-                while update and len(solved) > 1:  # choose min when has multi result
+                while update and len(solved) > 1:  # choose min but > 0, when has multi result
                     update = False
-                    for i in range(1, len(solved)):
-                        for sym in solved[0]:
-                            if len(solved[0][sym].free_symbols) != 0:
-                                continue
+                    for sym in solved[0]:
+                        if len(solved[0][sym].free_symbols) != 0 or solved[0][sym] == solved[1][sym]:
+                            continue
+                        if solved[0][sym] < 0 < solved[1][sym]:
+                            solved.pop(0)
+                            update = True
+                            break
+                        if solved[1][sym] < 0 < solved[0][sym]:
+                            solved.pop(1)
+                            update = True
+                            break
 
-                            if solved[0][sym] > solved[i][sym]:
-                                solved.pop(0)
-                                update = True
-                                break
-                            elif solved[0][sym] < solved[i][sym]:
-                                solved.pop(i)
-                                update = True
-                                break
+                    if update:
+                        continue
+
+                    for sym in solved[0]:
+                        if len(solved[0][sym].free_symbols) != 0 or solved[0][sym] == solved[1][sym]:
+                            continue
+                        if abs(solved[0][sym]) > abs(solved[1][sym]):
+                            solved.pop(0)
+                            update = True
+                        else:
+                            solved.pop(1)
+                            update = True
+                        break
+
                 solved = solved[0]
 
             real_results = {}  # real_number
