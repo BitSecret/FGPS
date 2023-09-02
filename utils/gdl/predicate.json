@@ -1,0 +1,1342 @@
+{
+  "Predicates": {
+    "BasicEntity": {
+      "Point(A)": {
+        "body": {
+          "multi": [],
+          "extend": []
+        }
+      },
+      "Line(AB)": {
+        "body": {
+          "multi": [
+            "BA"
+          ],
+          "extend": [
+            "Point(A)",
+            "Point(B)"
+          ]
+        }
+      },
+      "Arc(OAB)": {
+        "body": {
+          "multi": [],
+          "extend": [
+            "Point(A)",
+            "Point(B)"
+          ]
+        }
+      },
+      "Angle(ABC)": {
+        "body": {
+          "multi": [],
+          "extend": [
+            "Line(AB)",
+            "Line(BC)"
+          ]
+        }
+      },
+      "Polygon(*)": {
+        "body": {
+          "multi": [
+            "*"
+          ],
+          "extend": []
+        }
+      },
+      "Circle(O)": {
+        "body": {
+          "multi": [],
+          "extend": []
+        }
+      }
+    },
+    "Entity": {
+      "RightTriangle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)"
+          ],
+          "multi": [],
+          "extend": [
+            "PerpendicularBetweenLine(AB,CB)"
+          ]
+        },
+        "notes": [
+          "1.有一个角是直角的三角形称为直角三角形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.∠ABC为直角"
+        ],
+        "pic_width": "15",
+        "pic_name": "P010"
+      },
+      "IsoscelesTriangle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)"
+          ],
+          "multi": [],
+          "extend": [
+            "Equal(LengthOfLine(AB),LengthOfLine(AC))"
+          ]
+        },
+        "notes": [
+          "1.两腰相等的三角形称为等腰三角形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.第一个点作为顶点，与其他两点的连线作为腰，如IsoscelesTriangle(ABC)的两腰为AB和AC"
+        ],
+        "pic_width": "15",
+        "pic_name": "P015"
+      },
+      "IsoscelesRightTriangle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)"
+          ],
+          "multi": [],
+          "extend": [
+            "RightTriangle(CAB)",
+            "IsoscelesTriangle(ABC)"
+          ]
+        },
+        "notes": [
+          "1.参照等腰三角形标注方法"
+        ],
+        "pic_width": "15",
+        "pic_name": "P016"
+      },
+      "EquilateralTriangle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)"
+          ],
+          "multi": [
+            "BCA",
+            "CAB"
+          ],
+          "extend": [
+            "IsoscelesTriangle(ABC)",
+            "IsoscelesTriangle(BCA)",
+            "IsoscelesTriangle(CAB)"
+          ]
+        },
+        "notes": [
+          "1.三条边相等的三角形称为等边三角形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.根据旋转不变性原则，有3种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P017"
+      },
+      "Kite(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [
+            "CDAB"
+          ],
+          "extend": [
+            "Equal(LengthOfLine(AB),LengthOfLine(AD))",
+            "Equal(LengthOfLine(CB),LengthOfLine(CD))"
+          ]
+        },
+        "notes": [
+          "1.两组临边相等的四边形称为风筝形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.第一个点和第三个点分别作为两组临边的交点，如Quadrilateral(ABCD)是AB=AD，CB=CD",
+          "4.根据旋转不变性原则，1个风筝形有2种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P018"
+      },
+      "Parallelogram(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [
+            "BCDA",
+            "CDAB",
+            "DABC"
+          ],
+          "extend": [
+            "ParallelBetweenLine(AD,BC)",
+            "ParallelBetweenLine(BA,CD)"
+          ]
+        },
+        "notes": [
+          "1.两组对边分别平行的四边形称为平行四边形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.根据旋转不变性原则，1个平行四边形有4种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P019"
+      },
+      "Rhombus(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [
+            "BCDA",
+            "CDAB",
+            "DABC"
+          ],
+          "extend": [
+            "Parallelogram(ABCD)",
+            "Kite(ABCD)",
+            "Kite(BCDA)"
+          ]
+        },
+        "notes": [
+          "1.四条边相等的四边形称为菱形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.根据旋转不变性原则，1个菱形有4种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P020"
+      },
+      "Rectangle(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [
+            "BCDA",
+            "CDAB",
+            "DABC"
+          ],
+          "extend": [
+            "Parallelogram(ABCD)",
+            "PerpendicularBetweenLine(AB,CB)",
+            "PerpendicularBetweenLine(BC,DC)",
+            "PerpendicularBetweenLine(CD,AD)",
+            "PerpendicularBetweenLine(DA,BA)"
+          ]
+        },
+        "notes": [
+          "1.四个角都是直角的四边形称为矩形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.根据旋转不变性原则，1个矩形有4种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P021"
+      },
+      "Square(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [
+            "BCDA",
+            "CDAB",
+            "DABC"
+          ],
+          "extend": [
+            "Rhombus(ABCD)",
+            "Rectangle(ABCD)"
+          ]
+        },
+        "notes": [
+          "1.四个角都是直角且四条边相等的四边形称为正方形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.根据旋转不变性原则，1个正方形有4种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P022"
+      },
+      "Trapezoid(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [
+            "CDAB"
+          ],
+          "extend": [
+            "ParallelBetweenLine(AD,BC)"
+          ]
+        },
+        "notes": [
+          "1.一组对边平行且另一组对边延长后相交的四边形称为梯形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.前两个点和后两个点构成腰，如Trapezoid(ABCD)的两腰为AB和CD",
+          "4.根据旋转不变性原则，1个梯形有2种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P023"
+      },
+      "IsoscelesTrapezoid(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [
+            "CDAB"
+          ],
+          "extend": [
+            "Trapezoid(ABCD)",
+            "Equal(LengthOfLine(AB),LengthOfLine(CD))"
+          ]
+        },
+        "notes": [
+          "1.腰相等的梯形称为等腰梯形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.根据旋转不变性原则，1个等腰梯形有2种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P024"
+      },
+      "RightTrapezoid(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "multi": [],
+          "extend": [
+            "Trapezoid(ABCD)",
+            "PerpendicularBetweenLine(DA,BA)",
+            "PerpendicularBetweenLine(AB,CB)"
+          ]
+        },
+        "notes": [
+          "1.一侧角是直角的梯形称为直角梯形",
+          "2.按照逆时针原则标注点的顺序",
+          "3.左侧的两个角为直角，如RightTrapezoid(ABCD)表示角A和角B为直角"
+        ],
+        "pic_width": "15",
+        "pic_name": "P025"
+      }
+    },
+    "Relation": {
+      "IsMidpointOfLine(M,AB)": {
+        "body": {
+          "ee_check": [
+            "Point(M)",
+            "Line(AB)",
+            "Collinear(AMB)"
+          ],
+          "fv_check": [
+            "M,AB"
+          ],
+          "multi": [
+            "M,BA"
+          ],
+          "extend": [
+            "Equal(LengthOfLine(AM),LengthOfLine(MB))"
+          ]
+        },
+        "notes": [
+          "1.点M是线AB的中点",
+          "2.根据旋转不变性原则，有2种表示，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P030"
+      },
+      "IsMidpointOfArc(M,OAB)": {
+        "body": {
+          "ee_check": [
+            "Point(M)",
+            "Arc(OAB)",
+            "Cocircular(O,AMB)"
+          ],
+          "fv_check": [
+            "M,OAB"
+          ],
+          "multi": [],
+          "extend": [
+            "Equal(LengthOfArc(OAM),LengthOfArc(OMB))"
+          ]
+        },
+        "notes": [
+          "1.点M是弧OAB的中点"
+        ],
+        "pic_width": "15",
+        "pic_name": "P011"
+      },
+      "ParallelBetweenLine(AB,CD)": {
+        "body": {
+          "ee_check": [
+            "Line(AB)",
+            "Line(CD)"
+          ],
+          "fv_check": [
+            "AB,CD"
+          ],
+          "multi": [
+            "DC,BA"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.线AB和线CD相互平行",
+          "2.从左到右，从上到下原则，AB是上面的直线，CD是下面的直线",
+          "3.根据旋转不变性原则，有2种表示，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P031"
+      },
+      "PerpendicularBetweenLine(AO,CO)": {
+        "body": {
+          "ee_check": [
+            "Line(AO)",
+            "Line(CO)"
+          ],
+          "fv_check": [
+            "AO,CO"
+          ],
+          "multi": [],
+          "extend": [
+            "Equal(MeasureOfAngle(AOC),90)"
+          ]
+        },
+        "notes": [
+          "1.线AO和线CO相互垂直",
+          "2.按照逆时针原则，AO是直角的第一条边，CO是直角的第二条边",
+          "3.遇到角的朝向与示例不同，可以想象着把直角转到朝向第二象限"
+        ],
+        "pic_width": "15",
+        "pic_name": "P032"
+      },
+      "IsPerpendicularBisectorOfLine(CO,AB)": {
+        "body": {
+          "ee_check": [
+            "Line(CO)",
+            "Line(AB)",
+            "Collinear(AOB)"
+          ],
+          "fv_check": [
+            "CO,AB"
+          ],
+          "multi": [],
+          "extend": [
+            "PerpendicularBetweenLine(AO,CO)",
+            "PerpendicularBetweenLine(CO,BO)",
+            "IsMidpointOfLine(O,AB)"
+          ]
+        },
+        "notes": [
+          "1.线CO是线AB的垂直平分线，与AB交与点O",
+          "2.从左到右，从上到下原则"
+        ],
+        "pic_width": "15",
+        "pic_name": "P033"
+      },
+      "IsBisectorOfAngle(BD,ABC)": {
+        "body": {
+          "ee_check": [
+            "Line(BD)",
+            "Angle(ABC)"
+          ],
+          "fv_check": [
+            "BD,ABC"
+          ],
+          "multi": [],
+          "extend": [
+            "Equal(MeasureOfAngle(ABD),MeasureOfAngle(DBC))"
+          ]
+        },
+        "notes": [
+          "1.线BD是角ABC的平分线，与角ABC交与点B",
+          "2.角要按照逆时针原则标注，角平分线的第一个点应是角的顶点"
+        ],
+        "pic_width": "15",
+        "pic_name": "P034"
+      },
+      "IsMedianOfTriangle(AD,ABC)": {
+        "body": {
+          "ee_check": [
+            "Line(AD)",
+            "Polygon(ABC)",
+            "Collinear(BDC)"
+          ],
+          "fv_check": [
+            "AD,ABC"
+          ],
+          "multi": [],
+          "extend": [
+            "IsMidpointOfLine(D,BC)"
+          ]
+        },
+        "notes": [
+          "1.线AD是三角形ABC的中线，即顶点A与底边BC重点D的连线",
+          "2.线的第一个点应是三角形的顶点"
+        ],
+        "pic_width": "15",
+        "pic_name": "P035"
+      },
+      "IsAltitudeOfTriangle(AD,ABC)": {
+        "body": {
+          "ee_check": [
+            "Line(AD)",
+            "Polygon(ABC)"
+          ],
+          "fv_check": [
+            "AD,ABC"
+          ],
+          "multi": [],
+          "extend": [
+            "Equal(LengthOfLine(AD),HeightOfTriangle(ABC))",
+            "PerpendicularBetweenLine(BD,AD)",
+            "PerpendicularBetweenLine(AD,CD)"
+          ]
+        },
+        "notes": [
+          "1.线AD是三角形ABC的高",
+          "2.线的第一个点应是三角形的顶点",
+          "3.要跟属性HeightOfTriangle区分开来，这里是声明线和三角形的关系，属性那里是表示高的长度"
+        ],
+        "pic_width": "15",
+        "pic_name": "P036"
+      },
+      "IsMidsegmentOfTriangle(DE,ABC)": {
+        "body": {
+          "ee_check": [
+            "Line(DE)",
+            "Polygon(ABC)",
+            "Collinear(ADB)",
+            "Collinear(AEC)"
+          ],
+          "fv_check": [
+            "DE,ABC"
+          ],
+          "multi": [],
+          "extend": [
+            "IsMidpointOfLine(D,AB)",
+            "IsMidpointOfLine(E,AC)"
+          ]
+        },
+        "notes": [
+          "1.线DE是三角形ABC的中位线，即三角形两腰中点的连线",
+          "2.线DE点的顺序应和三角形ABC底边BC点的顺序一致"
+        ],
+        "pic_width": "15",
+        "pic_name": "P037"
+      },
+      "IsCircumcenterOfTriangle(O,ABC)": {
+        "body": {
+          "ee_check": [
+            "Point(O)",
+            "Polygon(ABC)"
+          ],
+          "fv_check": [
+            "O,ABC"
+          ],
+          "multi": [
+            "O,BCA",
+            "O,CAB"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.点O是三角形ABC的外心",
+          "2.外心是三角形外接圆的圆心，是三角形三边垂直平分线的交点"
+        ],
+        "pic_width": "15",
+        "pic_name": "P038"
+      },
+      "IsIncenterOfTriangle(O,ABC)": {
+        "body": {
+          "ee_check": [
+            "Point(O)",
+            "Polygon(ABC)"
+          ],
+          "fv_check": [
+            "O,ABC"
+          ],
+          "multi": [
+            "O,BCA",
+            "O,CAB"
+          ],
+          "extend": [
+            "IsBisectorOfAngle(AO,CAB)",
+            "IsBisectorOfAngle(BO,ABC)",
+            "IsBisectorOfAngle(CO,BCA)"
+          ]
+        },
+        "notes": [
+          "1.点O是三角形ABC的内心",
+          "2.内心是三角形内切圆的圆心，是三角形三角的角平分线的交点"
+        ],
+        "pic_width": "15",
+        "pic_name": "P039"
+      },
+      "IsCentroidOfTriangle(O,ABC)": {
+        "body": {
+          "ee_check": [
+            "Point(O)",
+            "Polygon(ABC)"
+          ],
+          "fv_check": [
+            "O,ABC"
+          ],
+          "multi": [
+            "O,BCA",
+            "O,CAB"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.点O是三角形ABC的重心",
+          "2.内心是三角形三边的中线的交点"
+        ],
+        "pic_width": "15",
+        "pic_name": "P040"
+      },
+      "IsOrthocenterOfTriangle(O,ABC)": {
+        "body": {
+          "ee_check": [
+            "Point(O)",
+            "Polygon(ABC)"
+          ],
+          "fv_check": [
+            "O,ABC",
+            "A,ABC",
+            "B,ABC",
+            "C,ABC"
+          ],
+          "multi": [
+            "O,BCA",
+            "O,CAB"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.点O是三角形ABC的垂心",
+          "2.垂心是三角形三个底边上的高的交点"
+        ],
+        "pic_width": "15",
+        "pic_name": "P041"
+      },
+      "CongruentBetweenTriangle(ABC,DEF)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)",
+            "Polygon(DEF)"
+          ],
+          "multi": [
+            "BCA,EFD",
+            "CAB,FDE"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.三角形ABC与三角形DEF全等",
+          "2.两个三角形的点应一一对应",
+          "3.根据旋转不变性原则，有6种表示方法，选其一即可",
+          "4.在这6中表示中，(ABC,DEF)和(DEF,ABC)是等价的，为了方便计算，我们一般只在3种表示方法种选其1"
+        ],
+        "pic_width": "30",
+        "pic_name": "P042"
+      },
+      "MirrorCongruentBetweenTriangle(ABC,DEF)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)",
+            "Polygon(DEF)"
+          ],
+          "multi": [
+            "BCA,FDE",
+            "CAB,EFD"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.三角形ABC与三角形DEF镜像全等",
+          "2.标注方法：①点一一对应得(ABC,DFE)②没有三角形DFE，第一个点D不动，将其他点逆序，得DEF③标注(ABC,DEF)",
+          "3.根据旋转不变性原则，有6种表示方法",
+          "4.在这6中表示中，(ABC,DEF)和(DEF,ABC)是等价的，为了方便计算，我们一般只在3种表示方法种选其1"
+        ],
+        "pic_width": "30",
+        "pic_name": "P043"
+      },
+      "SimilarBetweenTriangle(ABC,DEF)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)",
+            "Polygon(DEF)"
+          ],
+          "multi": [
+            "BCA,EFD",
+            "CAB,FDE"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.三角形ABC与三角形DEF相似",
+          "2.两个三角形的点应一一对应",
+          "3.根据旋转不变性原则，有6种表示方法，选其一即可",
+          "4.在这6中表示中，(ABC,DEF)和(DEF,ABC)相似比互为倒数，所以为了方便计算，我们一般只在3种表示方法种选其一"
+        ],
+        "pic_width": "30",
+        "pic_name": "P044"
+      },
+      "MirrorSimilarBetweenTriangle(ABC,DEF)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)",
+            "Polygon(DEF)"
+          ],
+          "multi": [
+            "BCA,FDE",
+            "CAB,EFD"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.三角形ABC与三角形DEF镜像相似",
+          "2.标注方法：①点一一对应得(ABC,DFE)②没有三角形DFE，第一个点D不动，将其他点逆序，得DEF③标注(ABC,DEF)",
+          "3.根据旋转不变性原则，有6种表示方法",
+          "4.在这6中表示中，(ABC,DEF)和(DEF,ABC)是等价的，为了方便计算，我们一般只在3种表示方法种选其1"
+        ],
+        "pic_width": "30",
+        "pic_name": "P045"
+      },
+      "IsAltitudeOfQuadrilateral(EF,ABCD)": {
+        "body": {
+          "ee_check": [
+            "Line(EF)",
+            "Polygon(ABCD)"
+          ],
+          "fv_check": [
+            "EF,ABCD",
+            "AF,ABCD",
+            "DF,ABCD",
+            "AC,ABCD",
+            "DB,ABCD"
+          ],
+          "multi": [],
+          "extend": [
+            "Equal(LengthOfLine(EF),HeightOfQuadrilateral(ABCD))",
+            "PerpendicularBetweenLine(BF,EF)",
+            "PerpendicularBetweenLine(EF,CF)",
+            "PerpendicularBetweenLine(DE,FE)",
+            "PerpendicularBetweenLine(FE,AE)"
+          ]
+        },
+        "notes": [
+          "1.线EF是四边形ABCD的高",
+          "2.线的第一个点应是四边形的第一个点",
+          "3.要跟属性HeightOfQuadrilateral区分开来",
+          "4.注意，平行四边形每个边都有高，梯形只有平行边有高，筝形没有高"
+        ],
+        "pic_width": "15",
+        "pic_name": "P046"
+      },
+      "IsMidsegmentOfQuadrilateral(EF,ABCD)": {
+        "body": {
+          "ee_check": [
+            "Line(EF)",
+            "Polygon(ABCD)",
+            "Collinear(AEB)",
+            "Collinear(DFC)"
+          ],
+          "fv_check": [
+            "FE,CDAB"
+          ],
+          "multi": [
+            "FE,CDAB"
+          ],
+          "extend": [
+            "IsMidpointOfLine(E,AB)",
+            "IsMidpointOfLine(F,CD)"
+          ]
+        },
+        "notes": [
+          "1.线EF是四边形ABCD的中位线，即AB中点和CD中点的连线",
+          "2.线DE点的顺序应和四边形ABCD底边BC点的顺序一致",
+          "3.根据旋转不变性原则，有2种表示方法，选其一即可"
+        ],
+        "pic_width": "15",
+        "pic_name": "P047"
+      },
+      "IsCircumcenterOfQuadrilateral(O,ABCD)": {
+        "body": {
+          "ee_check": [
+            "Point(O)",
+            "Polygon(ABCD)"
+          ],
+          "fv_check": [
+            "O,ABCD"
+          ],
+          "multi": [
+            "O,BCDA",
+            "O,CDAB",
+            "O,DABC"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.点O是四边形ABCD的外心",
+          "2.外心是四边形外接圆的圆心，但不一定有"
+        ],
+        "pic_width": "15",
+        "pic_name": "P048"
+      },
+      "IsIncenterOfQuadrilateral(O,ABCD)": {
+        "body": {
+          "ee_check": [
+            "Point(O)",
+            "Polygon(ABCD)"
+          ],
+          "fv_check": [
+            "O,ABCD"
+          ],
+          "multi": [
+            "O,BCDA",
+            "O,CDAB",
+            "O,DABC"
+          ],
+          "extend": [
+            "IsBisectorOfAngle(AO,DAB)",
+            "IsBisectorOfAngle(BO,ABC)",
+            "IsBisectorOfAngle(CO,BCD)",
+            "IsBisectorOfAngle(DO,CDA)"
+          ]
+        },
+        "notes": [
+          "1.点O是四边形ABCD的内心",
+          "2.内心是四边形内切圆的圆心，但不一定有"
+        ],
+        "pic_width": "15",
+        "pic_name": "P049"
+      },
+      "CongruentBetweenQuadrilateral(ABCD,EFGH)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)",
+            "Polygon(EFGH)"
+          ],
+          "multi": [
+            "BCDA,FGHE",
+            "CDAB,GHEF",
+            "DABC,HEFG"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.四边形ABCD与四边形EFGH全等",
+          "2.根据旋转不变性，有8种表示方法，有4种是等价的，为了方便计算，只在4种选其1"
+        ],
+        "pic_width": "30",
+        "pic_name": "P072"
+      },
+      "MirrorCongruentBetweenQuadrilateral(ABCD,EFGH)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)",
+            "Polygon(EFGH)"
+          ],
+          "multi": [
+            "BCDA,HEFG",
+            "CDAB,GHEF",
+            "DABC,FGHE"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.四边形ABCD与四边形EFGH镜像全等",
+          "2.根据旋转不变性，有8种表示方法，有4种是等价的，为了方便计算，只在4种选其1"
+        ],
+        "pic_width": "30",
+        "pic_name": "P073"
+      },
+      "SimilarBetweenQuadrilateral(ABCD,EFGH)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)",
+            "Polygon(EFGH)"
+          ],
+          "multi": [
+            "BCDA,FGHE",
+            "CDAB,GHEF",
+            "DABC,HEFG"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.四边形ABCD与四边形EFGH相似",
+          "2.根据旋转不变性，有8种表示方法，有4种是等价的，为了方便计算，只在4种选其1"
+        ],
+        "pic_width": "30",
+        "pic_name": "P074"
+      },
+      "MirrorSimilarBetweenQuadrilateral(ABCD,EFGH)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)",
+            "Polygon(EFGH)"
+          ],
+          "multi": [
+            "BCDA,HEFG",
+            "CDAB,GHEF",
+            "DABC,FGHE"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.四边形ABCD与四边形EFGH镜像相似",
+          "2.根据旋转不变性，有8种表示方法，有4种是等价的，为了方便计算，只在4种选其1"
+        ],
+        "pic_width": "30",
+        "pic_name": "P075"
+      },
+      "CongruentBetweenArc(OAB,OCD)": {
+        "body": {
+          "ee_check": [
+            "Arc(OAB)",
+            "Arc(OCD)"
+          ],
+          "multi": [],
+          "extend": []
+        },
+        "notes": [
+          "1.两个弧全等",
+          "2.两个弧在同一个圆上才有意义"
+        ],
+        "pic_width": "15",
+        "pic_name": "P050"
+      },
+      "SimilarBetweenArc(OAB,OCD)": {
+        "body": {
+          "ee_check": [
+            "Arc(OAB)",
+            "Arc(OCD)"
+          ],
+          "multi": [],
+          "extend": []
+        },
+        "notes": [
+          "1.两个弧相似",
+          "2.两个弧在同一个圆上才有意义"
+        ],
+        "pic_width": "15",
+        "pic_name": "P051"
+      },
+      "IsDiameterOfCircle(AB,O)": {
+        "body": {
+          "ee_check": [
+            "Line(AB)",
+            "Cocircular(O,AB)"
+          ],
+          "fv_check": [
+            "AB,O"
+          ],
+          "multi": [
+            "BA,O"
+          ],
+          "extend": []
+        },
+        "notes": [
+          "1.圆的直径"
+        ],
+        "pic_width": "15",
+        "pic_name": "P012"
+      },
+      "IsTangentOfCircle(PA,O)": {
+        "body": {
+          "ee_check": [
+            "Line(PA)",
+            "Cocircular(O,A)"
+          ],
+          "fv_check": [
+            "PA,O"
+          ],
+          "multi": [],
+          "extend": []
+        },
+        "notes": [
+          "1.过P做圆的切线交圆于点A"
+        ],
+        "pic_width": "15",
+        "pic_name": "P052"
+      },
+      "IsCentreOfCircle(P,O)": {
+        "body": {
+          "ee_check": [
+            "Point(P)",
+            "Circle(O)"
+          ],
+          "fv_check": [
+            "P,O",
+            "O,O"
+          ],
+          "multi": [],
+          "extend": []
+        },
+        "notes": [
+          "1.点P是圆O的圆心"
+        ],
+        "pic_width": "15",
+        "pic_name": "P076"
+      }
+    },
+    "Attribution": {
+      "LengthOfLine(AB)": {
+        "body": {
+          "ee_check": [
+            "Line(AB)"
+          ],
+          "sym": "ll",
+          "multi": [
+            "BA"
+          ]
+        },
+        "notes": [
+          "1.直线AB的长度",
+          "2.根据旋转不变性原则，有2种表示方法，选其一即可",
+          "3.例 Equal(LengthOfLine(AB),3)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P053"
+      },
+      "MeasureOfAngle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Angle(ABC)"
+          ],
+          "sym": "ma",
+          "multi": []
+        },
+        "notes": [
+          "1.角ABC的大小",
+          "2.例 Equal(MeasureOfAngle(ABC),4)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P054"
+      },
+      "PerimeterOfTriangle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)"
+          ],
+          "sym": "pt",
+          "multi": [
+            "BCA",
+            "CAB"
+          ]
+        },
+        "notes": [
+          "1.三角形ABC的周长",
+          "2.根据旋转不变性原则，有3种表示方法，选其一即可",
+          "3.例 Equal(PerimeterOfTriangle(ABC),1)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P055"
+      },
+      "AreaOfTriangle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)"
+          ],
+          "sym": "at",
+          "multi": [
+            "BCA",
+            "CAB"
+          ]
+        },
+        "notes": [
+          "1.三角形ABC的面积",
+          "2.根据旋转不变性原则，有3种表示方法，选其一即可",
+          "3.例 Equal(AreaOfTriangle(ABC),5)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P056"
+      },
+      "HeightOfTriangle(ABC)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)"
+          ],
+          "sym": "ht",
+          "multi": []
+        },
+        "notes": [
+          "1.三角形ABC底边BC上的高的长度",
+          "2.例 Equal(HeightOfTriangle(ABC),9)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P057"
+      },
+      "RatioOfSimilarTriangle(ABC,DEF)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)",
+            "Polygon(DEF)"
+          ],
+          "sym": "rst",
+          "multi": [
+            "BCA,EFD",
+            "CAB,FDE"
+          ]
+        },
+        "notes": [
+          "1.相似三角形的相似比",
+          "2.例 Equal(RatioOfSimilarTriangle(ABC,DEF),3)"
+        ],
+        "pic_width": "30",
+        "pic_name": "P058"
+      },
+      "RatioOfMirrorSimilarTriangle(ABC,DEF)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABC)",
+            "Polygon(DEF)"
+          ],
+          "sym": "rmt",
+          "multi": [
+            "BCA,FDE",
+            "CAB,EFD"
+          ]
+        },
+        "notes": [
+          "1.镜像相似三角形的相似比",
+          "2.例 Equal(RatioOfMirrorSimilarTriangle(ABC,DEF),2)"
+        ],
+        "pic_width": "30",
+        "pic_name": "P059"
+      },
+      "PerimeterOfQuadrilateral(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "sym": "pq",
+          "multi": [
+            "BCDA",
+            "CDAB",
+            "DABC"
+          ]
+        },
+        "notes": [
+          "1.四边形ABCD的周长",
+          "2.根据旋转不变性原则，有4种表示方法，选其一即可",
+          "3.例 Equal(PerimeterOfQuadrilateral(ABCD),2)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P060"
+      },
+      "AreaOfQuadrilateral(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "sym": "aq",
+          "multi": [
+            "BCDA",
+            "CDAB",
+            "DABC"
+          ]
+        },
+        "notes": [
+          "1.四边形ABCD的面积",
+          "2.根据旋转不变性原则，有4种表示方法，选其一即可",
+          "3.例 Equal(AreaOfQuadrilateral(ABCD),6)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P061"
+      },
+      "HeightOfQuadrilateral(ABCD)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)"
+          ],
+          "sym": "hq",
+          "multi": []
+        },
+        "notes": [
+          "1.四边形ABCD底边BC上的高的长度",
+          "2.例 Equal(HeightOfQuadrilateral(ABCD),5)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P062"
+      },
+      "RatioOfSimilarQuadrilateral(ABCD,EFGH)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)",
+            "Polygon(EFGH)"
+          ],
+          "sym": "rsq",
+          "multi": [
+            "BCDA,FGHE",
+            "CDAB,GHEF",
+            "DABC,HEFG"
+          ]
+        },
+        "notes": [
+          "1.相似四边形的相似比"
+        ],
+        "pic_width": "30",
+        "pic_name": "P074"
+      },
+      "RatioOfMirrorSimilarQuadrilateral(ABCD,EFGH)": {
+        "body": {
+          "ee_check": [
+            "Polygon(ABCD)",
+            "Polygon(EFGH)"
+          ],
+          "sym": "rmq",
+          "multi": [
+            "BCDA,HEFG",
+            "CDAB,GHEF",
+            "DABC,FGHE"
+          ]
+        },
+        "notes": [
+          "1.镜像相似四边形的相似比"
+        ],
+        "pic_width": "30",
+        "pic_name": "P075"
+      },
+      "LengthOfArc(OAB)": {
+        "body": {
+          "ee_check": [
+            "Arc(OAB)"
+          ],
+          "sym": "la",
+          "multi": []
+        },
+        "notes": [
+          "1.圆O上弧AB的长度",
+          "2.例 Equal(LengthOfArc(OAB),1)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P063"
+      },
+      "MeasureOfArc(OAB)": {
+        "body": {
+          "ee_check": [
+            "Arc(OAB)"
+          ],
+          "sym": "mar",
+          "multi": []
+        },
+        "notes": [
+          "1.圆O上弧AB所对圆心角的大小",
+          "2.例 Equal(MeasureOfArc(OAB),15)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P064"
+      },
+      "RatioOfSimilarArc(OAB,OCD)": {
+        "body": {
+          "ee_check": [
+            "Arc(OAB)",
+            "Arc(OCD)"
+          ],
+          "sym": "rsa",
+          "multi": []
+        },
+        "notes": [
+          "1.相似弧的相似比",
+          "2.例 Equal(RatioOfSimilarArc(OAB,OCD),2)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P065"
+      },
+      "RadiusOfCircle(O)": {
+        "body": {
+          "ee_check": [
+            "Circle(O)"
+          ],
+          "sym": "rc",
+          "multi": []
+        },
+        "notes": [
+          "1.圆O半径的长度",
+          "2.例 Equal(RadiusOfCircle(O),8)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P066"
+      },
+      "DiameterOfCircle(O)": {
+        "body": {
+          "ee_check": [
+            "Circle(O)"
+          ],
+          "sym": "dc",
+          "multi": []
+        },
+        "notes": [
+          "1.圆O直径的长度",
+          "2.例 Equal(DiameterOfCircle(O),9)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P067"
+      },
+      "PerimeterOfCircle(O)": {
+        "body": {
+          "ee_check": [
+            "Circle(O)"
+          ],
+          "sym": "pc",
+          "multi": []
+        },
+        "notes": [
+          "1.圆O的周长",
+          "2.例 Equal(PerimeterOfCircle(O),3)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P068"
+      },
+      "AreaOfCircle(O)": {
+        "body": {
+          "ee_check": [
+            "Circle(O)"
+          ],
+          "sym": "ac",
+          "multi": []
+        },
+        "notes": [
+          "1.圆O的面积",
+          "2.例 Equal(AreaOfCircle(O),5)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P069"
+      },
+      "PerimeterOfSector(OAB)": {
+        "body": {
+          "ee_check": [
+            "Arc(OAB)"
+          ],
+          "sym": "ps",
+          "multi": []
+        },
+        "notes": [
+          "1.扇形OAB的周长",
+          "2.例 Equal(PerimeterOfSector(OAB),7)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P070"
+      },
+      "AreaOfSector(OAB)": {
+        "body": {
+          "ee_check": [
+            "Arc(OAB)"
+          ],
+          "sym": "as",
+          "multi": []
+        },
+        "notes": [
+          "1.扇形OAB的面积",
+          "2.例 Equal(AreaOfSector(OAB),9)"
+        ],
+        "pic_width": "15",
+        "pic_name": "P071"
+      }
+    }
+  },
+  "Notes": {
+    "pre-set": [
+      "3 Construction definitions: Polygon, Collinear and Cocircular.",
+      "1 BasicAttribution definitions: Free.",
+      "1 Algebra definitions: Equal."
+    ],
+    "ee_check": "Entity Existence check (EE check). It only contains BasicEntity.",
+    "fv_check": "Format Validity check (FV check). More stringent than the default FV check.",
+    "multi": "Multi representation.",
+    "extend": "For automatic extension of conditions. It only contains Entity or Relation. It usually used for the definition of predicate."
+  }
+}
