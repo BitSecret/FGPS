@@ -1752,7 +1752,7 @@
 </div>
 
     premise: Arc(OAB)
-    conclusion: Equal(LengthOfArc(OAB),Mul(MeasureOfArc(OAB),1/180*π,RadiusOfCircle(O)))
+    conclusion: Equal(LengthOfArc(OAB),Mul(MeasureOfArc(OAB),1/180*pi,RadiusOfCircle(O)))
 **Notes**:  
 1.弧长公式：L=n/180*pi*r  
 
@@ -1982,7 +1982,7 @@
 </div>
 
     premise: Circle(O)
-    conclusion: Equal(PerimeterOfCircle(O),Mul(2*π,RadiusOfCircle(O)))
+    conclusion: Equal(PerimeterOfCircle(O),Mul(2*pi,RadiusOfCircle(O)))
 **Notes**:  
 1.圆的周长公式：P=2*pi*r  
 
@@ -1992,7 +1992,7 @@
 </div>
 
     premise: Circle(O)
-    conclusion: Equal(AreaOfCircle(O),Mul(π,RadiusOfCircle(O),RadiusOfCircle(O)))
+    conclusion: Equal(AreaOfCircle(O),Mul(pi,RadiusOfCircle(O),RadiusOfCircle(O)))
 **Notes**:  
 1.圆的面积公式：S=pi*r*r  
 
@@ -2110,7 +2110,7 @@
 </div>
 
     premise: Arc(OAB)
-    conclusion: Equal(AreaOfSector(OAB),Mul(MeasureOfArc(OAB),1/360*π,RadiusOfCircle(O),RadiusOfCircle(O)))
+    conclusion: Equal(AreaOfSector(OAB),Mul(MeasureOfArc(OAB),1/360*pi,RadiusOfCircle(O),RadiusOfCircle(O)))
 **Notes**:  
 1.扇形面积公式：S=n/360*pi*r*r  
 
