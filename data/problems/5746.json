@@ -1,0 +1,37 @@
+{
+  "problem_id": 5746,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7577",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△MBN中,BM=6,点A、C、D分别在MB、NB、MN上,四边形ABCD为平行四边形,且∠NDC=∠MDA,则▱ABCD的周长是()",
+  "problem_text_en": "As shown in the figure, in △MBN, BM = N_0, points A, C, and D are respectively on MB, NB, and MN, quadrilateral ABCD is a parallelogram, and ∠NDC = ∠MDA, then the perimeter of ▱ABCD is ()",
+  "problem_img": "5746.png",
+  "construction_cdl": [
+    "Shape(ND,DC,CN)",
+    "Shape(DM,MA,AD)",
+    "Shape(DA,AB,BC,CD)",
+    "Collinear(NDM)",
+    "Collinear(MAB)",
+    "Collinear(BCN)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BM),6)",
+    "Parallelogram(DABC)",
+    "Equal(MeasureOfAngle(NDC),MeasureOfAngle(ADM))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(DABC))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CB,DA,N)",
+    "parallel_property_collinear_extend(BA,CD,M)",
+    "parallel_property_corresponding_angle(DC,MB,N)",
+    "parallel_property_corresponding_angle(NB,DA,M)",
+    "isosceles_triangle_judgment_angle_equal(CND)",
+    "isosceles_triangle_judgment_angle_equal(ADM)",
+    "isosceles_triangle_judgment_angle_equal(BNM)",
+    "line_addition(MA,AB)",
+    "line_addition(BC,CN)",
+    "quadrilateral_perimeter_formula(DABC)"
+  ]
+}

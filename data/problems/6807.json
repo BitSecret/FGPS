@@ -1,0 +1,29 @@
+{
+  "problem_id": 6807,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-angle-10014",
+  "problem_level": 1,
+  "problem_text_cn": "如图，已知AB∥CD，AC＝BC，若∠1＝70°，则∠2的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6807.png",
+  "construction_cdl": [
+    "Shape(EC,CD)",
+    "Shape(DC,CB)",
+    "Shape(CA,AB,BC)",
+    "Collinear(ECA)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(CD,AB)",
+    "Equal(LengthOfLine(AC),LengthOfLine(BC))",
+    "Equal(MeasureOfAngle(ECD),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(CAB)",
+    "isosceles_triangle_property_angle_equal(CAB)",
+    "triangle_property_angle_sum(CAB)",
+    "parallel_property_corresponding_angle(CD,AB,E)"
+  ]
+}

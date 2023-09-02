@@ -1,0 +1,36 @@
+{
+  "problem_id": 3171,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-444",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB∥CD,直线MN分别交AB、CD于点M、N,NG平分∠MND,若∠1=70°,则∠2的度数为().",
+  "problem_text_en": "As shown in the figure, it is known that AB ∥ CD, the line MN intersects AB and CD at points M, N, and NG bisects ∠MND. If ∠1 = N_0, then the degree of ∠2 is ().",
+  "problem_img": "3171.png",
+  "construction_cdl": [
+    "Shape(AE,EM)",
+    "Shape(ME,EB)",
+    "Shape(NE,EA)",
+    "Shape(GN,ND)",
+    "Shape(EN,NG,GE)",
+    "Shape(CN,NE)",
+    "Collinear(AEGB)",
+    "Collinear(MEN)",
+    "Collinear(CND)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "IsBisectorOfAngle(NG,END)",
+    "Equal(MeasureOfAngle(MEG),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(NGE))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AB,CD,E)",
+    "parallel_property_collinear_extend(DC,BE,N)",
+    "parallel_property_corresponding_angle(EB,ND,M)",
+    "angle_addition(ENG,GND)",
+    "adjacent_complementary_angle(MEG,GEN)",
+    "triangle_property_angle_sum(ENG)"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "problem_id": 4797,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4202",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD是⊙O的切线,A为切点．点C在⊙O上,连接BC并延长交AD于点D,若∠AOC=70°,则∠ADB=()",
+  "problem_text_en": "As shown in the figure, AD is the tangent of O, and A is the tangent point. Point C is on ⊙O, connect BC and extend AD to point D, if ∠AOC = N_0, then ∠ADB = ()",
+  "problem_img": "4797.png",
+  "construction_cdl": [
+    "Shape(OAC,CO,OA)",
+    "Shape(OCB,BC)",
+    "Shape(BO,OC,CB)",
+    "Shape(OBA,AO,OB)",
+    "Shape(AD,DC,OAC)",
+    "Collinear(BCD)",
+    "Collinear(BOA)",
+    "Cocircular(O,BAC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(DA,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(COA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADB))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(DA,O,O)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_center_angle(OAC,O)",
+    "triangle_property_angle_sum(BAD)"
+  ]
+}

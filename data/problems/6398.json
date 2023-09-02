@@ -1,0 +1,34 @@
+{
+  "problem_id": 6398,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9258",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,∠ODA=90°,AC=20cm,BD=12cm,则AD的长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, ∠ODA = N_0, AC = N_1, BD = N_2, then the length of AD is ()",
+  "problem_img": "6398.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Collinear(DOB)",
+    "Collinear(AOC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(MeasureOfAngle(ODA),90)",
+    "Equal(LengthOfLine(AC),20)",
+    "Equal(LengthOfLine(BD),12)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "line_addition(DO,OB)",
+    "line_addition(AO,OC)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "right_triangle_judgment_angle(ODA)",
+    "right_triangle_property_pythagorean(ODA)"
+  ]
+}

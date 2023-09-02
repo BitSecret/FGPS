@@ -1,0 +1,33 @@
+{
+  "problem_id": 3730,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1514",
+  "problem_level": 1,
+  "problem_text_cn": "将一副三角板如图放置,其中∠BAC=∠ADE=90°,∠E=45°,∠C=30°,其中点D落在线段BC上,且AE∥BC,则∠DAC的度数为()",
+  "problem_text_en": "Place a set of triangle plates as shown in the figure, where ∠BAC = ∠ADE = N_0, ∠E = N_1, ∠C = N_2, the midpoint D falls on the line segment BC, and AE ∥ BC, then the degree of ∠DAC is ()",
+  "problem_img": "3730.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DF,FA)",
+    "Shape(FD,DC,CF)",
+    "Shape(AF,FE,EA)",
+    "Collinear(AFC)",
+    "Collinear(EFD)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AD,FD)",
+    "PerpendicularBetweenLine(FA,BA)",
+    "ParallelBetweenLine(AE,DC)",
+    "Equal(MeasureOfAngle(FEA),45)",
+    "Equal(MeasureOfAngle(DCF),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FAD))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AE,DC)",
+    "triangle_property_angle_sum(DEA)",
+    "angle_addition(EAF,FAD)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 5027,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4761",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,△ABC中,AB=10cm,AC=8cm,∠ABC和∠ACB的角平分线交于点O,过点O作BC的平行线MN交AB于点M,交AC于点N,则△AMN的周长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = N_0, AC = N_1, the angular bisector of ∠ABC and ∠ACB intersects at point O, and pass through point O to draw BC which is parallel to MN and it intersects AB at point M, and intersects AC at point N, then the perimeter of △AMN is ()",
+  "problem_img": "5027.png",
+  "construction_cdl": [
+    "Shape(AM,MO,ON,NA)",
+    "Shape(OM,MB,BO)",
+    "Shape(OB,BC,CO)",
+    "Shape(NO,OC,CN)",
+    "Collinear(MON)",
+    "Collinear(AMB)",
+    "Collinear(ANC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(AC),8)",
+    "IsBisectorOfAngle(BO,ABC)",
+    "IsBisectorOfAngle(CO,BCA)",
+    "ParallelBetweenLine(MN,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(AM),LengthOfLine(MN),LengthOfLine(NA)))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(MN,BC,O)",
+    "parallel_property_alternate_interior_angle(ON,BC)",
+    "parallel_property_alternate_interior_angle(MO,BC)",
+    "isosceles_triangle_judgment_angle_equal(MBO)",
+    "isosceles_triangle_judgment_angle_equal(NOC)",
+    "line_addition(MO,ON)",
+    "line_addition(AM,MB)",
+    "line_addition(AN,NC)"
+  ]
+}

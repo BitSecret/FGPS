@@ -1,0 +1,35 @@
+{
+  "problem_id": 1677,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1741",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If m \\angle 2 = 4 x + 7 and m \\angle 7 = 5 x - 13, find x.",
+  "problem_img": "1677.png",
+  "construction_cdl": [
+    "Shape(EH,HG)",
+    "Shape(GH,HM)",
+    "Shape(FH,HE)",
+    "Shape(MH,HF)",
+    "Shape(HM,MK)",
+    "Shape(DM,MH)",
+    "Shape(KM,MP)",
+    "Shape(PM,MD)",
+    "Collinear(GHF)",
+    "Collinear(EHMP)",
+    "Collinear(KMD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(FHE),4*x+7)",
+    "Equal(MeasureOfAngle(KMP),5*x-13)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(HG,MK)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "vertical_angle(FHE,GHM)",
+    "parallel_property_corresponding_angle(HG,MK,P)"
+  ]
+}

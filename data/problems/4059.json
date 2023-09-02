@@ -1,0 +1,30 @@
+{
+  "problem_id": 4059,
+  "annotation": "XiaokaiZhang_2023-05-07",
+  "source": "GeoQA-2366",
+  "problem_level": 1,
+  "problem_text_cn": "如图,身高1.6m的某学生想测量一棵大树的高度,她沿着树影BA由B向A走去,当走到C点时,她的影子顶端正好与树的影子顶端重合,测得BA=4m,CA=0.8m,则树的高度为()",
+  "problem_text_en": "As shown in the figure, a student with a height of N_0 wants to measure the height of a big tree. She walks along the tree shadow BA from B to A. When reaching point C, the top of her shadow coincides with the top of the tree's shadow. Get BA = N_1, CA = N_2, then the height of the tree is ()",
+  "problem_img": "4059.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(DC,CB,BE,ED)",
+    "Collinear(ADE)",
+    "Collinear(ACB)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AC,DC)",
+    "PerpendicularBetweenLine(AB,EB)",
+    "Equal(LengthOfLine(DC),1.6)",
+    "Equal(LengthOfLine(BA),4)",
+    "Equal(LengthOfLine(CA),0.8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "similar_triangle_judgment_aa(DAC,EAB)",
+    "similar_triangle_property_line_ratio(DAC,EAB)",
+    "similar_triangle_property_line_ratio(ACD,ABE)"
+  ]
+}

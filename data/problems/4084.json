@@ -1,0 +1,27 @@
+{
+  "problem_id": 4084,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2441",
+  "problem_level": 1,
+  "problem_text_cn": "如图是小明设计利用光线来测量某古城墙CD高度的示意图,如果镜子P与古城墙的距离PD=12米,镜子P与小明的距离BP=1.5米,小明刚好从镜子中看到古城墙顶端点C,小明眼睛距地面的高度AB=1.2米,那么该古城墙的高度是()",
+  "problem_text_en": "The picture is a schematic diagram of Xiaoming's design using light to measure the CD height of an ancient city wall. If the distance between the mirror P and the ancient city wall PD = N_0, and the distance between the mirror P and Xiaoming BP = N_1, Xiaoming just sees the top point of the ancient city wall from the mirror C, the height of Xiaoming's eyes from the ground AB = N_2, then the height of the ancient city wall is ()",
+  "problem_img": "4084.png",
+  "construction_cdl": [
+    "Shape(AB,BP,PA)",
+    "Shape(PD,DC,CP)",
+    "Collinear(BPD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PD),12)",
+    "Equal(LengthOfLine(BP),1.5)",
+    "Equal(LengthOfLine(AB),1.2)",
+    "MirrorSimilarBetweenTriangle(PAB,PDC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "9.6",
+  "theorem_seqs": [
+    "mirror_similar_triangle_property_line_ratio(PAB,PDC)",
+    "mirror_similar_triangle_property_line_ratio(ABP,CPD)"
+  ]
+}

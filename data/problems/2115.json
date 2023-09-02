@@ -1,0 +1,30 @@
+{
+  "problem_id": 2115,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2205",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle A.",
+  "problem_img": "2115.png",
+  "construction_cdl": [
+    "Shape(HCB,BH,HC)",
+    "Shape(HB,HBC,CH)",
+    "Shape(HBC,BA,AC)",
+    "Cocircular(H,BC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(H,H)",
+    "IsTangentOfCircle(AB,H)",
+    "IsTangentOfCircle(AC,H)",
+    "Equal(MeasureOfArc(HBC),99)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BAC))",
+  "problem_answer": "81",
+  "theorem_seqs": [
+    "arc_property_center_angle(HBC,H)",
+    "tangent_of_circle_property_perpendicular(AB,H,H)",
+    "tangent_of_circle_property_perpendicular(AC,H,H)",
+    "quadrilateral_property_angle_sum(CHBA)"
+  ]
+}

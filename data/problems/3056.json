@@ -1,0 +1,37 @@
+{
+  "problem_id": 3056,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-277",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆O的内接四边形ABCD中,BC=DC,∠BOC=130°,则∠BAD的度数是()．",
+  "problem_text_en": "As shown in the figure, in the inscribed quadrilateral ABCD of circle O, BC = DC, ∠BOC = N_0, then the degree of ∠BAD is ().",
+  "problem_img": "3056.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(DA,AB,BD)",
+    "Shape(DB,BO,OC,CD)",
+    "Shape(OB,BC,CO)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),LengthOfLine(DC))",
+    "Equal(MeasureOfAngle(COB),130)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,D)",
+    "isosceles_triangle_judgment_line_equal(CDB)",
+    "isosceles_triangle_property_angle_equal(CDB)",
+    "triangle_property_angle_sum(CDB)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "arc_property_circumference_angle_internal(ODB,A)"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": 6853,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10075",
+  "problem_level": 1,
+  "problem_text_cn": "如图，B、C、D三点共线，∠B＝56°，∠ACD＝120°，则∠A的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6853.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABC),56)",
+    "Equal(MeasureOfAngle(ACD),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "64",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BCA,ACD)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

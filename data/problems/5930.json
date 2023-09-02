@@ -1,0 +1,27 @@
+{
+  "problem_id": 5930,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8220",
+  "problem_level": 1,
+  "problem_text_cn": "如图,为了测量楼的高度,自楼的顶部A看地面上的一点B,俯角为30°,已知地面上的这点与楼的水平距离BC为30m,那么楼的高度AC为()",
+  "problem_text_en": "As shown in the figure, in order to measure the height of the building, look at a point B on the ground from the top of the building A, the depression angle is N_0, and the horizontal distance BC between this point on the ground and the building is N_1, then the height of the building AC is ()",
+  "problem_img": "5930.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)",
+    "Shape(DA,AB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),30)",
+    "Equal(MeasureOfAngle(DAB),30)",
+    "Equal(MeasureOfAngle(ACB),90)",
+    "Equal(MeasureOfAngle(DAC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "10*sqrt(3)",
+  "theorem_seqs": [
+    "angle_addition(DAB,BAC)",
+    "sine_theorem(BAC)",
+    "cosine_theorem(ACB)"
+  ]
+}

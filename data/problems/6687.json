@@ -1,0 +1,39 @@
+{
+  "problem_id": 6687,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9715",
+  "problem_level": 1,
+  "problem_text_cn": "如图,线段AB是圆O的直径,弦CD⊥AB,如果∠BOC=70°,那么∠BAD等于()",
+  "problem_text_en": "As shown in the figure, line segment AB is the diameter of circle O, chord CD ⊥ AB, if ∠BOC = N_0, then ∠BAD is equal to ()",
+  "problem_img": "6687.png",
+  "construction_cdl": [
+    "Shape(OBC,CM,MB)",
+    "Shape(BM,MD,ODB)",
+    "Shape(MC,CO,OM)",
+    "Shape(MO,OD,DM)",
+    "Shape(DO,OA,AD)",
+    "Shape(DA,OAD)",
+    "Shape(OC,OCA,AO)",
+    "Collinear(AOMB)",
+    "Collinear(CMD)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "PerpendicularBetweenLine(DM,OM)",
+    "Equal(MeasureOfAngle(COB),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(ODC)",
+    "altitude_of_triangle_judgment(OM,ODC)",
+    "isosceles_triangle_property_line_coincidence(ODC,M)",
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_circumference_angle_external(ODB,A)"
+  ]
+}

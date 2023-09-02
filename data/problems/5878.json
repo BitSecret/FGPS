@@ -1,0 +1,40 @@
+{
+  "problem_id": 5878,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7927",
+  "problem_level": 1,
+  "problem_text_cn": "已知D、E、F分别为等腰△ABC边BC、CA、AB上的点,如果AB=AC,BD=2,CD=3,CE=4,AE=\\frac{3}{2},∠FDE=∠B,那么AF的长为()",
+  "problem_text_en": "It is known that D, E, and F are points on the isosceles triangle △ABC side BC, CA, AB, if AB = AC, BD = N_0, CD = N_1, CE = N_2, AE = \\frac{N_3}{N_4}, ∠FDE = ∠B, then the length of AF is ()",
+  "problem_img": "5878.png",
+  "construction_cdl": [
+    "Shape(AF,FD,DE,EA)",
+    "Shape(FB,BD,DF)",
+    "Shape(ED,DC,CE)",
+    "Collinear(AFB)",
+    "Collinear(AEC)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BD),2)",
+    "Equal(LengthOfLine(CD),3)",
+    "Equal(LengthOfLine(CE),4)",
+    "Equal(LengthOfLine(AE),3/2)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(ABC),MeasureOfAngle(FDE))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AF))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "line_addition(AF,FB)",
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(BDF)",
+    "angle_addition(BDF,FDE)",
+    "adjacent_complementary_angle(BDE,EDC)",
+    "similar_triangle_judgment_aa(DFB,EDC)",
+    "similar_triangle_property_line_ratio(DFB,EDC)",
+    "similar_triangle_property_line_ratio(FBD,DCE)"
+  ]
+}

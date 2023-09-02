@@ -1,0 +1,31 @@
+{
+  "problem_id": 2537,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2662",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "H K and I G are diameters of \\odot L. Find m \\widehat I H J.",
+  "problem_img": "2537.png",
+  "construction_cdl": [
+    "Shape(LIH,HL,LI)",
+    "Shape(LHG,GL,LH)",
+    "Shape(LGK,KL,LG)",
+    "Shape(LKJ,JL,LK)",
+    "Shape(LJI,IL,LJ)",
+    "Collinear(ILG)",
+    "Collinear(HLK)",
+    "Cocircular(L,IHGKJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(L,L)",
+    "Equal(MeasureOfAngle(HLI),59)",
+    "PerpendicularBetweenLine(IL,JL)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(LIJ))",
+  "problem_answer": "270",
+  "theorem_seqs": [
+    "round_angle(ILJ,JLI)",
+    "arc_property_center_angle(LIJ,L)"
+  ]
+}

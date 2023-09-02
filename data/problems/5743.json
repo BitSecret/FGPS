@@ -1,0 +1,30 @@
+{
+  "problem_id": 5743,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7559",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,E,F分别在边AB,AC上,EF∥BC,\\frac{AE}{AB}=\\frac{2}{3},EF=4,则BC=()",
+  "problem_text_en": "As shown in the figure, in △ABC, E and F are on edges AB and AC respectively, EF∥BC,\\frac{AE}{AB}=\\frac{N_0}{N_1},EF=N_2, then BC = ()",
+  "problem_img": "5743.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BC,CF,FE)",
+    "Collinear(AEB)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(EF,BC)",
+    "Equal(LengthOfLine(AE),4)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(EF),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(EF,BC,A)",
+    "similar_triangle_judgment_aa(FAE,CAB)",
+    "similar_triangle_property_line_ratio(FAE,CAB)",
+    "similar_triangle_property_line_ratio(AEF,ABC)"
+  ]
+}

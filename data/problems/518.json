@@ -1,0 +1,44 @@
+{
+  "problem_id": 518,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-530",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. Round to the nearest tenth.",
+  "problem_img": "518.png",
+  "construction_cdl": [
+    "Shape(BF,FA,FAB)",
+    "Shape(AF,FB,FBA)",
+    "Shape(AE,EH,EHA)",
+    "Shape(HE,EA,EAH)",
+    "Shape(EHA,AHB,FAB)",
+    "Shape(ABH,EAH,FBA)",
+    "Collinear(BFAEH)",
+    "Cocircular(F,AB)",
+    "Cocircular(E,AH)",
+    "Cocircular(A,BH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(F,F)",
+    "IsCentreOfCircle(E,E)",
+    "IsCentreOfCircle(A,A)",
+    "Equal(LengthOfLine(HB),14)",
+    "Equal(LengthOfLine(FA),LengthOfLine(AE))"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfCircle(A),Add(AreaOfCircle(F),AreaOfCircle(E))))",
+  "problem_answer": "49*pi/2",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(FB,F)",
+    "radius_of_circle_property_length_equal(FA,F)",
+    "radius_of_circle_property_length_equal(EA,E)",
+    "radius_of_circle_property_length_equal(EH,E)",
+    "radius_of_circle_property_length_equal(AB,A)",
+    "line_addition(BF,FA)",
+    "line_addition(BA,AE)",
+    "line_addition(BE,EH)",
+    "circle_area_formula(A)",
+    "circle_area_formula(F)",
+    "circle_area_formula(E)"
+  ]
+}

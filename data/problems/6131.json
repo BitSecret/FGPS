@@ -1,0 +1,30 @@
+{
+  "problem_id": 6131,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8687",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,在圆O中弦AB∥CD,若∠ABC=50°,则∠BOD等于()",
+  "problem_text_en": "As shown in the figure, in the circle O, the chord AB ∥ CD, if ∠ABC = N_0, then ∠BOD is equal to ()",
+  "problem_img": "6131.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(CB,BA,OAC)",
+    "Shape(BC,CD,DO,OB)",
+    "Shape(BO,OD,ODB)",
+    "Shape(DC,OCD)",
+    "Cocircular(O,ACDB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(AB,CD)",
+    "Equal(MeasureOfAngle(CBA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOD))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,CD)",
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_circumference_angle_external(ODB,C)"
+  ]
+}

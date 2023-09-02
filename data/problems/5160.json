@@ -1,0 +1,38 @@
+{
+  "problem_id": 5160,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5102",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的半径是4,点P是弦AB延长线上的一点,连接OP,若OP=6,∠APO=30°,则弦AB的长为()",
+  "problem_text_en": "As shown in the figure, the radius of ⊙O is N_0, point P is a point on the extended line of chord AB, connect OP, if OP = N_1, ∠APO = N_2, then the length of chord AB is ()",
+  "problem_img": "5160.png",
+  "construction_cdl": [
+    "Shape(AO,OC,CA)",
+    "Shape(BC,CO,OD,ODB)",
+    "Shape(AC,CB,OBA)",
+    "Shape(DO,OA,OAD)",
+    "Shape(DP,PB,ODB)",
+    "Collinear(ACBP)",
+    "Collinear(ODP)",
+    "Cocircular(O,ADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),4)",
+    "Equal(LengthOfLine(OP),6)",
+    "Equal(MeasureOfAngle(OPA),30)",
+    "Equal(MeasureOfAngle(PCO),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "2*sqrt(7)",
+  "theorem_seqs": [
+    "sine_theorem(OPC)",
+    "adjacent_complementary_angle(PCO,OCA)",
+    "right_triangle_judgment_angle(OCA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "right_triangle_property_pythagorean(OCA)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,BA)",
+    "line_addition(AC,CB)"
+  ]
+}

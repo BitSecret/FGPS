@@ -1,0 +1,34 @@
+{
+  "problem_id": 5639,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7270",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D,E分别在AB,AC上,若\\frac{AD}{BD}=\\frac{AE}{EC}=\\frac{1}{2},DE=3,则BC的值为()",
+  "problem_text_en": "As shown in the figure, in △ABC, vertices D and E are on AB and AC respectively. If \\frac{AD}{BD}=\\frac{AE}{EC}=\\frac{N_0}{N_1},DE=N_2, then the value of BC is ()",
+  "problem_img": "5639.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(BD)),1/2)",
+    "Equal(Div(LengthOfLine(AE),LengthOfLine(EC)),1/2)",
+    "Equal(LengthOfLine(DE),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "line_addition(AD,DB)",
+    "line_addition(AE,EC)",
+    "similar_triangle_judgment_sas(ADE,ABC)",
+    "similar_triangle_judgment_sas(ABC,ADE)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ABC,ADE)",
+    "similar_triangle_property_line_ratio(BCA,DEA)"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "problem_id": 1861,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-1931",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "U J = 9, V J = 3, and Z T = 18. Find Y J.",
+  "problem_img": "1861.png",
+  "construction_cdl": [
+    "Shape(SY,YJ,JS)",
+    "Shape(YZ,ZJ,JY)",
+    "Shape(JZ,ZV,VJ)",
+    "Shape(JV,VU,UJ)",
+    "Shape(JU,UT,TJ)",
+    "Shape(JT,TS,SJ)",
+    "Collinear(SYZ)",
+    "Collinear(SJV)",
+    "Collinear(STU)",
+    "Collinear(ZJT)",
+    "Collinear(ZVU)",
+    "Collinear(UJY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(UJ),9)",
+    "Equal(LengthOfLine(VJ),3)",
+    "Equal(LengthOfLine(ZT),18)",
+    "Equal(LengthOfLine(UJ),9)",
+    "Equal(LengthOfLine(JV),3)",
+    "Equal(LengthOfLine(ST),LengthOfLine(UT))",
+    "Equal(LengthOfLine(ZV),LengthOfLine(UV))",
+    "Equal(LengthOfLine(SY),LengthOfLine(YZ))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(YJ))",
+  "problem_answer": "4.5",
+  "theorem_seqs": [
+    "median_of_triangle_judgment(SV,SZU)",
+    "median_of_triangle_judgment(ZT,ZUS)",
+    "centroid_of_triangle_judgment_intersection(J,USZ,T,V)",
+    "centroid_of_triangle_property_line_ratio(J,USZ,Y)"
+  ]
+}

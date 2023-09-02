@@ -1,0 +1,27 @@
+{
+  "problem_id": 4089,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2452",
+  "problem_level": 1,
+  "problem_text_cn": "现有一个测试距离为5m的视力表(如图),根据这个视力表,小华想制作一个测试距离为3m的视力表,则图中的的值为()",
+  "problem_text_en": "There is an eye chart with a test distance of N_0 (as shown in the figure). According to this eye chart, Xiaohua wants to make an eye chart with a test distance of N_1, so the value in the picture is ()",
+  "problem_img": "4089.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CE,EA)",
+    "Shape(EC,CD,DE)",
+    "Collinear(AED)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BD),5)",
+    "Equal(LengthOfLine(CD),3)",
+    "SimilarBetweenTriangle(ABD,ECD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(AB),LengthOfLine(EC)))",
+  "problem_answer": "5/3",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(ABD,ECD)",
+    "similar_triangle_property_line_ratio(DAB,DEC)"
+  ]
+}

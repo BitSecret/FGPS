@@ -1,0 +1,26 @@
+{
+  "problem_id": 2415,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2531",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the triangle. Round to the nearest hundredth.",
+  "problem_img": "2415.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),3.5)",
+    "Equal(MeasureOfAngle(BCA),48)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
+  "problem_answer": "8.73",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "cosine_theorem(BCA)",
+    "triangle_perimeter_formula(ABC)"
+  ]
+}

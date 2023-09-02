@@ -1,0 +1,35 @@
+{
+  "problem_id": 4986,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4676",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D,E分别在边AB,AC上,DE∥BC,已知EC=6,\\frac{AD}{DB}=\\frac{2}{3},则AE的长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, the points D and E are on the edges AB and AC respectively, DE ∥ BC, given that EC = N_0, \\frac{AD}{DB}=\\frac{N_1}{N_2}, then the length of AE is ()",
+  "problem_img": "4986.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(EC),6)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(DB)),2/3)",
+    "ParallelBetweenLine(DE,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_judgment_aa(ABC,ADE)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(BCA,DEA)",
+    "similar_triangle_property_line_ratio(CAB,EAD)",
+    "line_addition(AD,DB)",
+    "line_addition(AE,EC)"
+  ]
+}

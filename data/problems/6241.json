@@ -1,0 +1,32 @@
+{
+  "problem_id": 6241,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8841",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点O是⊙O的圆心,点A、B、C在⊙O上,AO∥BC,∠AOB=40°,则∠OAC的度数等于()",
+  "problem_text_en": "As shown in the figure, point O is the center of ⊙O, points A, B, and C are on ⊙O, AO ∥ BC, ∠AOB = N_0, then the degree of ∠OAC is equal to ()",
+  "problem_img": "6241.png",
+  "construction_cdl": [
+    "Shape(OAB,BM,MA)",
+    "Shape(OBC,CB)",
+    "Shape(MB,BC,CM)",
+    "Shape(OA,AM,MO)",
+    "Shape(OCA,AO,OM,MC)",
+    "Collinear(AMC)",
+    "Collinear(OMB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),40)",
+    "ParallelBetweenLine(CB,OA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAC))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(CB,OA)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

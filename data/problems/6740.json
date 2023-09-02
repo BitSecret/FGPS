@@ -1,0 +1,36 @@
+{
+  "problem_id": 6740,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9798",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,CD是⊙O的一条弦,且CD⊥AB于E,分别连接AD、BC,已知∠D=65°,则∠OCD=()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, CD is a chord of ⊙O, and CD ⊥ AB at E, respectively connect AD and BC, it is known that ∠D = N_0, then ∠OCD = ()",
+  "problem_img": "6740.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DA,AO,OE,ED)",
+    "Shape(OC,CE,EO)",
+    "Shape(BE,EC,CB)",
+    "Shape(DE,EB,OBD)",
+    "Shape(BC,COB)",
+    "Shape(CO,OA,OAC)",
+    "Collinear(DEC)",
+    "Collinear(AOEB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(CE,AE)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CDA),65)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OCD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "adjacent_complementary_angle(BOC,COA)",
+    "triangle_property_angle_sum(OCE)"
+  ]
+}

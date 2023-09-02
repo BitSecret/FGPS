@@ -1,0 +1,38 @@
+{
+  "problem_id": 4262,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3051",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB是⊙O的弦,半径OC垂直AB,点D是⊙O上一点,且点D与点C位于弦AB两侧,连接AD、CD、OB,若∠BOC=70°,则∠ADC=()",
+  "problem_text_en": "As shown in the figure, it is known that AB is the chord of ⊙O, the radius OC is perpendicular to AB, vertex D is a vertex on ⊙O, and vertex D and vertex C are located on both edges of chord AB, connecting AD, CD, OB, if ∠BOC = N_0, Then ∠ADC = ()",
+  "problem_img": "4262.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DA,AE,ED)",
+    "Shape(DE,EF,FO,OD)",
+    "Shape(DO,OB,OBD)",
+    "Shape(OF,FB,BO)",
+    "Shape(CE,EA,OAC)",
+    "Shape(FE,EC,CF)",
+    "Shape(BF,FC,OCB)",
+    "Collinear(AEFB)",
+    "Collinear(OFC)",
+    "Collinear(DEC)",
+    "Cocircular(O,DACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AFO),90)",
+    "Equal(MeasureOfAngle(BOC),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCB,O)",
+    "circle_property_chord_perpendicular_bisect_arc(OAB,OFC)",
+    "congruent_arc_judgment_length_equal(OAC,OCB)",
+    "congruent_arc_property_measure_equal(OAC,OCB)",
+    "arc_property_circumference_angle_external(OAC,D)"
+  ]
+}

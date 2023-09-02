@@ -1,0 +1,27 @@
+{
+  "problem_id": 5242,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5323",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠AOB=20°,∠AOC=90°,点B、O、D在同一直线上,则∠COD的度数为()",
+  "problem_text_en": "As shown in the figure, ∠AOB = N_0, ∠AOC = N_1, points B, O, and D are on the same straight line, then the degree of ∠COD is ()",
+  "problem_img": "5242.png",
+  "construction_cdl": [
+    "Shape(DO,OC)",
+    "Shape(CO,OB)",
+    "Shape(BO,OA)",
+    "Shape(AO,OD)",
+    "Collinear(DOB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BOA),20)",
+    "Equal(MeasureOfAngle(COA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DOC))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "angle_addition(COB,BOA)",
+    "adjacent_complementary_angle(DOC,COB)"
+  ]
+}

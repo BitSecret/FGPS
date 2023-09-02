@@ -1,0 +1,50 @@
+{
+  "problem_id": 353,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-360",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The square is circumscribed to the circle. Find the exact circumference of the circle.",
+  "problem_img": "353.png",
+  "construction_cdl": [
+    "Shape(KG,GE,OKE)",
+    "Shape(EF,FN,OEN)",
+    "Shape(ND,DH,ONH)",
+    "Shape(HA,AK,OHK)",
+    "Shape(EO,OH,OHK,OKE)",
+    "Shape(HO,OE,OEN,ONH)",
+    "Shape(OHK,OKE,OEN,ONH)",
+    "Collinear(GKA)",
+    "Collinear(GEF)",
+    "Collinear(FND)",
+    "Collinear(AHD)",
+    "Collinear(EOH)",
+    "Cocircular(O,KENH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(EH,O)",
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(KG,EG)",
+    "PerpendicularBetweenLine(HA,KA)",
+    "PerpendicularBetweenLine(EF,NF)",
+    "PerpendicularBetweenLine(ND,HD)",
+    "Equal(LengthOfLine(FD),25)",
+    "IsTangentOfCircle(FE,O)",
+    "IsTangentOfCircle(DH,O)"
+  ],
+  "goal_cdl": "Value(PerimeterOfCircle(O))",
+  "problem_answer": "25*pi",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(FE,O,O)",
+    "tangent_of_circle_property_perpendicular(DH,O,O)",
+    "parallel_judgment_ipsilateral_internal_angle(EO,FD)",
+    "parallel_property_collinear_extend(EO,FD,H)",
+    "parallel_judgment_ipsilateral_internal_angle(HD,EF)",
+    "parallelogram_judgment_parallel_and_parallel(EFDH)",
+    "parallelogram_property_opposite_line_equal(FDHE)",
+    "diameter_of_circle_property_length_equal(EH,O)",
+    "circle_property_length_of_radius_and_diameter(O)",
+    "circle_perimeter_formula(O)"
+  ]
+}

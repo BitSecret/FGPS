@@ -1,0 +1,30 @@
+{
+  "problem_id": 1842,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1910",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral A B C D is a rectangle. Find y.",
+  "problem_img": "1842.png",
+  "construction_cdl": [
+    "Shape(EB,BN,NE)",
+    "Shape(DE,EN,ND)",
+    "Shape(ED,DC,CE)",
+    "Shape(EC,CB,BE)",
+    "Collinear(NEC)",
+    "Collinear(DEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(NDCB)",
+    "Equal(MeasureOfAngle(BNC),2*x+1)",
+    "Equal(MeasureOfAngle(END),5*x+5)",
+    "Equal(MeasureOfAngle(DBN),5*y)",
+    "Equal(MeasureOfAngle(BDC),3*y+10)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(NB,DC)"
+  ]
+}

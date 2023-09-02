@@ -1,0 +1,36 @@
+{
+  "problem_id": 6026,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8509",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆周角∠A=30°,弦BC=3,则圆O的直径是()",
+  "problem_text_en": "As shown in the figure, the angel of circumference ∠A = N_0, chord BC = N_1, then the diameter of circle O is ()",
+  "problem_img": "6026.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OB,BC,CO)",
+    "Shape(CA,AB,BC)",
+    "Shape(OCA,AC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)",
+    "isosceles_triangle_judgment_angle_equal(COB)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

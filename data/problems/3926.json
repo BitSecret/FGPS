@@ -1,0 +1,33 @@
+{
+  "problem_id": 3926,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1842",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点D为⊙O上一点,且∠ABD=30°,BO=4,则AD的长为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, point D is a point on ⊙O, and ∠ABD = N_0, BO = N_1, then the length of AD is ()",
+  "problem_img": "3926.png",
+  "construction_cdl": [
+    "Shape(OBD,DB)",
+    "Shape(ODA,AD)",
+    "Shape(OAB,BO,OA)",
+    "Shape(BD,DA,AO,OB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(BO),4)",
+    "Equal(MeasureOfAngle(ABD),30)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(BOA,O)",
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "line_addition(BO,OA)",
+    "sine_theorem(ABD)"
+  ]
+}

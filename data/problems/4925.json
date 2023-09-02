@@ -1,0 +1,32 @@
+{
+  "problem_id": 4925,
+  "annotation": "DengfengYue_2023-05-14",
+  "source": "GeoQA-4526",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE∥BC,分别交AB,AC于点D,E．若AE=3,EC=6,则\\frac{AD}{AB}的值为()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE ∥ BC, and it intersects AB and AC at points D and E respectively. If AE = N_0, EC = N_1, then the value of \\frac ADAB is ()",
+  "problem_img": "4925.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DB,BC,CE)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),X)",
+    "Equal(LengthOfLine(AE),3)",
+    "Equal(LengthOfLine(EC),6)",
+    "ParallelBetweenLine(DE,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(X)",
+  "problem_answer": "1/3",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

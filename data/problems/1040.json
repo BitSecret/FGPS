@@ -1,0 +1,37 @@
+{
+  "problem_id": 1040,
+  "annotation": "NaZhu_2023-03-19",
+  "source": "Geometry3k-1073",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Each triangle in the figure is a 45 - 45 - 90 triangle. Find x.",
+  "problem_img": "1040.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DB,BE)",
+    "Shape(BD,DF,FB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ACD),45)",
+    "Equal(MeasureOfAngle(EAD),45)",
+    "Equal(MeasureOfAngle(BED),45)",
+    "Equal(MeasureOfAngle(FBD),45)",
+    "PerpendicularBetweenLine(DA,CA)",
+    "PerpendicularBetweenLine(CD,ED)",
+    "PerpendicularBetweenLine(DE,AE)",
+    "PerpendicularBetweenLine(DB,EB)",
+    "PerpendicularBetweenLine(DF,BF)",
+    "Equal(LengthOfLine(CD),6)",
+    "Equal(LengthOfLine(DF),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "1.5",
+  "theorem_seqs": [
+    "sine_theorem(DAC)",
+    "sine_theorem(DEA)",
+    "sine_theorem(DBE)",
+    "sine_theorem(DFB)"
+  ]
+}

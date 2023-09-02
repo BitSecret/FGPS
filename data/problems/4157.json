@@ -1,0 +1,30 @@
+{
+  "problem_id": 4157,
+  "annotation": "XiaoxiaoJin_2023-05-07",
+  "source": "GeoQA-2767",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C是⊙O上的点,∠AOB=80°,则∠ACB的度数是()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are points on O, ∠AOB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4157.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(BD,DA,OAB)",
+    "Shape(CD,DO,OB,OBC)",
+    "Shape(OD,DB,BO)",
+    "Shape(CA,AD,DC)",
+    "Collinear(CDB)",
+    "Collinear(ADO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),80)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

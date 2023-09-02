@@ -1,0 +1,39 @@
+{
+  "problem_id": 702,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-721",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If L K = 4, M P = 3, P Q = 6, K J = 2, R S = 6, and L P = 2, find Q K.",
+  "problem_img": "702.png",
+  "construction_cdl": [
+    "Shape(HS,SR,RJ,JH)",
+    "Shape(JR,RQ,QK,KJ)",
+    "Shape(KQ,QP,PL,LK)",
+    "Shape(LP,PM,ML)",
+    "Collinear(HJKLM)",
+    "Collinear(SRQPM)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(LK),4)",
+    "Equal(LengthOfLine(MP),3)",
+    "Equal(LengthOfLine(PQ),6)",
+    "Equal(LengthOfLine(KJ),2)",
+    "Equal(LengthOfLine(RS),6)",
+    "Equal(LengthOfLine(LP),2)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(SH,RJ)",
+    "ParallelBetweenLine(RJ,QK)",
+    "ParallelBetweenLine(QK,PL)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(QK))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(LP,KQ,M)",
+    "similar_triangle_judgment_aa(QMK,PML)",
+    "line_addition(QP,PM)",
+    "similar_triangle_property_line_ratio(KQM,LPM)",
+    "similar_triangle_property_line_ratio(MKQ,MLP)"
+  ]
+}

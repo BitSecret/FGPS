@@ -1,0 +1,27 @@
+{
+  "problem_id": 5289,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5466",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点C是线段AB上的点,点D是线段BC的中点,AB=10,AC=6,则线段AD的长是()",
+  "problem_text_en": "As shown in the figure, point C is the point on line segment AB, point D is the midpoint of line segment BC, AB = N_0, AC = N_1, then the length of line segment AD is ()",
+  "problem_img": "5289.png",
+  "construction_cdl": [
+    "Shape(AC)",
+    "Shape(CD)",
+    "Shape(DB)",
+    "Collinear(ACDB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(AC),6)",
+    "Equal(LengthOfLine(CD),LengthOfLine(DB))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "line_addition(AC,CD)",
+    "line_addition(AD,DB)"
+  ]
+}

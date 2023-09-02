@@ -1,0 +1,24 @@
+{
+  "problem_id": 5150,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5071",
+  "problem_level": 1,
+  "problem_text_cn": "如图,D为线段CB的中点,CD=3,AB=11,则AC的长为()",
+  "problem_text_en": "As shown in the figure, D is the midpoint of the line segment CB, CD = N_0, AB = N_1, then the length of AC is ()",
+  "problem_img": "5150.png",
+  "construction_cdl": [
+    "Collinear(ACDB)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,CB)",
+    "Equal(LengthOfLine(CD),3)",
+    "Equal(LengthOfLine(AB),11)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(CD,DB)",
+    "line_addition(AC,CB)"
+  ]
+}

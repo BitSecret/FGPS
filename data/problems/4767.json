@@ -1,0 +1,32 @@
+{
+  "problem_id": 4767,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4140",
+  "problem_level": 1,
+  "problem_text_cn": "一个定点与圆上各点之间距离的最小值称为这个点与这个圆之间的距离,如图,矩形ABCD中,AB=28cm,BC=24cm,⊙K与矩形的边AB、BC、CD分别相切于点E、F、G,则点A与⊙K的距离为()",
+  "problem_text_en": "The minimum value of the distance between a fixed point and each point on the circle is called the distance between this point and the circle. CD is tangent to points E, F, and G respectively, then the distance between point A and ⊙K is ()",
+  "problem_img": "4767.png",
+  "construction_cdl": [
+    "Shape(BA,AC,OBC)",
+    "Shape(CO,OB,OBC)",
+    "Shape(BO,OC,OCB)",
+    "Collinear(ABO)",
+    "Cocircular(O,BC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OC),12)",
+    "Equal(LengthOfLine(OB),12)",
+    "Equal(LengthOfLine(AC),16)",
+    "IsTangentOfCircle(AC,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AC,O,O)",
+    "right_triangle_judgment_angle(ACO)",
+    "right_triangle_property_pythagorean(ACO)",
+    "line_addition(AB,BO)"
+  ]
+}

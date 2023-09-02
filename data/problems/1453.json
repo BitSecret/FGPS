@@ -1,0 +1,32 @@
+{
+  "problem_id": 1453,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1506",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "E D is tangent to \\odot F at point E. Find x.",
+  "problem_img": "1453.png",
+  "construction_cdl": [
+    "Shape(FEC,ED,DC)",
+    "Shape(CF,FE,FEC)",
+    "Shape(FC,FCE,EF)",
+    "Collinear(DCF)",
+    "Cocircular(F,CE)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(DE,F)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(DE),4)",
+    "Equal(LengthOfLine(EF),3)",
+    "Equal(LengthOfLine(DF),x)",
+    "IsCentreOfCircle(F,F)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(DE,F,F)",
+    "right_triangle_judgment_angle(FED)",
+    "right_triangle_property_pythagorean(FED)"
+  ]
+}

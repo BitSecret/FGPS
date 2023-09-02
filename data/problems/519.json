@@ -1,0 +1,36 @@
+{
+  "problem_id": 519,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-531",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "519.png",
+  "construction_cdl": [
+    "Shape(CB,BD,DC)",
+    "Shape(DB,BA,AD)",
+    "Collinear(CDA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CD),8)",
+    "Equal(LengthOfLine(DA),x)",
+    "Equal(LengthOfLine(BD),16)",
+    "Equal(LengthOfLine(CB),z)",
+    "Equal(LengthOfLine(BA),y)",
+    "PerpendicularBetweenLine(AD,BD)",
+    "PerpendicularBetweenLine(CB,AB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "32",
+  "theorem_seqs": [
+    "angle_addition(CBD,DBA)",
+    "angle_addition(ADB,BDC)",
+    "triangle_property_angle_sum(CBD)",
+    "triangle_property_angle_sum(DBA)",
+    "triangle_property_angle_sum(CBA)",
+    "similar_triangle_judgment_aa(CBD,BAD)",
+    "similar_triangle_property_line_ratio(BDC,ADB)",
+    "similar_triangle_property_line_ratio(CBD,BAD)"
+  ]
+}

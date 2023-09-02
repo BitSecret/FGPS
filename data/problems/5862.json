@@ -1,0 +1,40 @@
+{
+  "problem_id": 5862,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7896",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知△ABC和△ADE均为等边三角形,D在BC上,DE与AC相交于点F,AB=9,BD=3,则CF等于()",
+  "problem_text_en": "As shown in the figure, it is known that △ABC and △ADE are equilateral triangles, D is on BC, DE and AC intersect at point F, AB = N_0, BD = N_1, then CF is equal to ()",
+  "problem_img": "5862.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DF,FA)",
+    "Shape(FD,DC,CF)",
+    "Shape(AF,FE,EA)",
+    "Collinear(BDC)",
+    "Collinear(DFE)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(ABC)",
+    "EquilateralTriangle(ADE)",
+    "Equal(LengthOfLine(AB),9)",
+    "Equal(LengthOfLine(BD),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CF))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(ABC)",
+    "equilateral_triangle_property_angle(BCA)",
+    "equilateral_triangle_property_angle(ADE)",
+    "equilateral_triangle_property_angle(EAD)",
+    "cosine_theorem(BDA)",
+    "angle_addition(CAD,DAB)",
+    "angle_addition(EAF,FAD)",
+    "mirror_similar_triangle_judgment_aa(DAB,FEA)",
+    "mirror_similar_triangle_property_line_ratio(DAB,FEA)",
+    "mirror_similar_triangle_property_line_ratio(BDA,EAF)",
+    "line_addition(AF,FC)"
+  ]
+}

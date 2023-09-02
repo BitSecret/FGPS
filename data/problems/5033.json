@@ -1,0 +1,30 @@
+{
+  "problem_id": 5033,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4770",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D、E分别在边AB、AC上,DE∥BC,且AE=1,AC=5,AB=6,则AD的长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, points D and E are on edges AB and AC respectively, DE ∥ BC, and AE = N_0, AC = N_1, AB = N_2, then the length of AD is ()",
+  "problem_img": "5033.png",
+  "construction_cdl": [
+    "Shape(EA,AD,DE)",
+    "Shape(CE,ED,DB,BC)",
+    "Collinear(AEC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(LengthOfLine(AE),1)",
+    "Equal(LengthOfLine(AC),5)",
+    "Equal(LengthOfLine(AB),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "1.2",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "similar_triangle_judgment_aa(EAD,CAB)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(DEA,BCA)"
+  ]
+}

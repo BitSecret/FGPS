@@ -1,0 +1,35 @@
+{
+  "problem_id": 22,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-21",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 4 = 101. Find the measure of \\angle 5.",
+  "problem_img": "22.png",
+  "construction_cdl": [
+    "Shape(KJ,JE)",
+    "Shape(EJ,JA)",
+    "Shape(AJ,JN)",
+    "Shape(NJ,JK)",
+    "Shape(HN,NJ)",
+    "Shape(JN,NF)",
+    "Shape(FN,NI)",
+    "Shape(IN,NH)",
+    "Collinear(KJA)",
+    "Collinear(HNF)",
+    "Collinear(EJNI)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(NJK),101)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(JA,NF)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(HNJ))",
+  "problem_answer": "79",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(JA,NF,K)",
+    "parallel_property_collinear_extend(FN,JK,H)",
+    "parallel_property_ipsilateral_internal_angle(NH,JK)"
+  ]
+}

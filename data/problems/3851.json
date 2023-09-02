@@ -1,0 +1,38 @@
+{
+  "problem_id": 3851,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1729",
+  "problem_level": 1,
+  "problem_text_cn": "如图AB是⊙O的直径,∠BAC=42°,点D是弦AC的中点,则∠DOC的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, ∠BAC = N_0, point D is the midpoint of chord AC, then the degree of ∠DOC is ()",
+  "problem_img": "3851.png",
+  "construction_cdl": [
+    "Shape(AD,DC,OCA)",
+    "Shape(DA,AO,OD)",
+    "Shape(CD,DO,OC)",
+    "Shape(CO,OB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(ADC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CAB),42)",
+    "IsMidpointOfLine(D,CA)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DOC))",
+  "problem_answer": "48",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "median_of_triangle_judgment(OD,OCA)",
+    "isosceles_triangle_property_line_coincidence(OCA,D)",
+    "triangle_property_angle_sum(CDO)"
+  ]
+}

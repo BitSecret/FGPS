@@ -1,0 +1,26 @@
+{
+  "problem_id": 687,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-704",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of f in the parallelogram.",
+  "problem_img": "687.png",
+  "construction_cdl": [
+    "Shape(JM,ML,LK,KJ)"
+  ],
+  "text_cdl": [
+    "Parallelogram(JMLK)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(KJ),3*f-6)",
+    "Equal(MeasureOfAngle(KJM),56)",
+    "Equal(MeasureOfAngle(JML),3*d-2)",
+    "Equal(LengthOfLine(LM),2*f+8)"
+  ],
+  "goal_cdl": "Value(f)",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(KJML)"
+  ]
+}

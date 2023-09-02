@@ -1,0 +1,33 @@
+{
+  "problem_id": 5108,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4943",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△CEF中,∠E=80°,∠F=50°,AB∥CF,AD∥CE,连接BC,CD,则∠A的度数是()",
+  "problem_text_en": "As shown in the figure, in △CEF, ∠E = N_0, ∠F = N_1, AB ∥ CF, AD ∥ CE, connect BC, CD, then the degree of ∠A is ()",
+  "problem_img": "5108.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)",
+    "Shape(AD,DC,CA)",
+    "Shape(CE,EM,MC)",
+    "Shape(CM,MF,FC)",
+    "Collinear(ACM)",
+    "Collinear(EMF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CF)",
+    "ParallelBetweenLine(CE,AD)",
+    "Equal(MeasureOfAngle(CEM),80)",
+    "Equal(MeasureOfAngle(MFC),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(FCE)",
+    "parallel_property_corresponding_angle(CE,AD,M)",
+    "parallel_property_corresponding_angle(AB,CF,M)",
+    "angle_addition(BAC,CAD)",
+    "angle_addition(FCM,MCE)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 6653,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9673",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC是⊙O的内接三角形,若∠C=60°,则∠AOB的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is the inscribed triangle of ⊙O, if ∠C = N_0, then the degree of ∠AOB is ()",
+  "problem_img": "6653.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(CA,AO,OB,BC)",
+    "Shape(OA,AB,BO)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCA),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

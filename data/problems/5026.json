@@ -1,0 +1,49 @@
+{
+  "problem_id": 5026,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4756",
+  "problem_level": 1,
+  "problem_text_cn": "如图BD=CD,AE:DE=1:2,延长BE交AC于F,且AF=5cm,则AC的长为()",
+  "problem_text_en": "As shown in the figure BD = CD, AE:DE=N_0:N_1, extend BE to AC to F, and AF = N_2, then the length of AC is ()",
+  "problem_img": "5026.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BD,DE)",
+    "Shape(FE,ED,DG,GF)",
+    "Shape(GD,DC,CG)",
+    "Collinear(AED)",
+    "Collinear(AFGC)",
+    "Collinear(BEF)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(EF,DG)",
+    "ParallelBetweenLine(FE,GD)",
+    "Equal(Div(LengthOfLine(AE),LengthOfLine(DE)),1/2)",
+    "Equal(LengthOfLine(AF),5)",
+    "Equal(LengthOfLine(BD),LengthOfLine(DC))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "line_addition(AE,ED)",
+    "line_addition(AF,FG)",
+    "line_addition(AF,FC)",
+    "line_addition(AG,GC)",
+    "line_addition(FG,GC)",
+    "line_addition(BD,DC)",
+    "parallel_property_corresponding_angle(EF,DG,A)",
+    "parallel_property_corresponding_angle(GD,FE,C)",
+    "parallel_property_corresponding_angle(GD,FE,A)",
+    "similar_triangle_judgment_aa(AEF,ADG)",
+    "similar_triangle_judgment_aa(DCG,BCF)",
+    "similar_triangle_judgment_aa(ADG,AEF)",
+    "similar_triangle_property_line_ratio(EFA,DGA)",
+    "similar_triangle_property_line_ratio(FAE,GAD)",
+    "similar_triangle_property_line_ratio(DCG,BCF)",
+    "similar_triangle_property_line_ratio(GDC,FBC)",
+    "similar_triangle_property_line_ratio(DGA,EFA)",
+    "similar_triangle_property_line_ratio(GAD,FAE)"
+  ]
+}

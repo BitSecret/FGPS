@@ -1,0 +1,30 @@
+{
+  "problem_id": 5228,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5283",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC≌△ADE,如果AB=5cm,BC=7cm,AC=6cm,那么DE的长是()",
+  "problem_text_en": "As shown in the figure, △ABC ≌ △ADE, if AB = N_0, BC = N_1, AC = N_2, then the length of DE is ()",
+  "problem_img": "5228.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(AF,FD,DA)",
+    "Shape(FC,CD,DF)",
+    "Shape(AD,DB,BA)",
+    "Collinear(EFD)",
+    "Collinear(CDB)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(AED,ACB)",
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(BC),7)",
+    "Equal(LengthOfLine(AC),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "congruent_triangle_property_line_equal(AED,ACB)"
+  ]
+}

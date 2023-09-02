@@ -1,0 +1,30 @@
+{
+  "problem_id": 3582,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1226",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D在BC上,AB=AD=DC,∠B=72°,那么∠DAC的大小是()",
+  "problem_text_en": "As shown in the figure, in △ABC, point D is on BC, AB = AD = DC, ∠B = N_0, then the size of ∠DAC is ()",
+  "problem_img": "3582.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DC,CA)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AD))",
+    "Equal(LengthOfLine(AD),LengthOfLine(DC))",
+    "Equal(MeasureOfAngle(ABD),72)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAD))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABD)",
+    "isosceles_triangle_judgment_line_equal(DCA)",
+    "isosceles_triangle_property_angle_equal(ABD)",
+    "isosceles_triangle_property_angle_equal(DCA)",
+    "adjacent_complementary_angle(BDA,ADC)",
+    "triangle_property_angle_sum(ADC)"
+  ]
+}

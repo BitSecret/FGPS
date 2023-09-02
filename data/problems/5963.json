@@ -1,0 +1,33 @@
+{
+  "problem_id": 5963,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8402",
+  "problem_level": 1,
+  "problem_text_cn": "如图,以点O为圆心的两个同心圆中,大圆的弦AB是小圆的切线,C为切点,若两圆的半径分别是10cm、6cm,则弦AB的长为()",
+  "problem_text_en": "As shown in the figure, among the two concentric circles with point O as the center, the chord AB of the great circle is the tangent of the small circle, and C is the tangent point. If the radii of the two circles are N_0 and N_1 respectively, the length of the chord AB is ()",
+  "problem_img": "5963.png",
+  "construction_cdl": [
+    "Shape(BC,CA,OAB)",
+    "Shape(CO,OD,ODC)",
+    "Shape(DA,AC,ODC)",
+    "Collinear(ODA)",
+    "Collinear(ACB)",
+    "Cocircular(O,AB)",
+    "Cocircular(N,DC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OA),10)",
+    "Equal(LengthOfLine(OC),6)",
+    "IsCentreOfCircle(O,N)",
+    "IsTangentOfCircle(AC,O)",
+    "IsPerpendicularBisectorOfLine(OC,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ACO)",
+    "right_triangle_property_pythagorean(ACO)",
+    "line_addition(AC,CB)"
+  ]
+}

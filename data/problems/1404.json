@@ -1,0 +1,32 @@
+{
+  "problem_id": 1404,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1454",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x to the nearest tenth.",
+  "problem_img": "1404.png",
+  "construction_cdl": [
+    "Shape(BA,AD,OBD)",
+    "Shape(ED,ODE)",
+    "Shape(CB,OBD,DE,OEC)",
+    "Shape(BC,OCB)",
+    "Collinear(ABC)",
+    "Collinear(ADE)",
+    "Cocircular(O,DECB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CB),8)",
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(LengthOfLine(AD),3)",
+    "Equal(LengthOfLine(ED),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "line_addition(AB,BC)",
+    "line_addition(AD,DE)",
+    "circle_property_circular_power_segment_and_segment_line(ABC,ADE,O)"
+  ]
+}

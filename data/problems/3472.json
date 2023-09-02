@@ -1,0 +1,26 @@
+{
+  "problem_id": 3472,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1061",
+  "problem_level": 1,
+  "problem_text_cn": "如图,若∠3=30°,为了使白球反弹后能将黑球直接撞入袋中,那么击打白球时,必须保证∠1的度数为()",
+  "problem_text_en": "As shown in the figure, if ∠3 = N_0, in order to make the white ball bounce and hit the black ball directly into the bag, when hitting the white ball, the degree of ∠1 must be ()",
+  "problem_img": "3472.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BC,CE)",
+    "Shape(EC,CD,DE)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [
+    "RightTriangle(CDE)",
+    "Equal(MeasureOfAngle(ECD),30)",
+    "Equal(MeasureOfAngle(DEC),MeasureOfAngle(BEA))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BEA))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CDE)"
+  ]
+}

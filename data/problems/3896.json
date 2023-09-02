@@ -1,0 +1,43 @@
+{
+  "problem_id": 3896,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1798",
+  "problem_level": 1,
+  "problem_text_cn": "如图,线段AB是⊙O的直径,弦CD⊥AB,∠CAB=30°,OD=2,那么DC的长等于()",
+  "problem_text_en": "As shown in the figure, the line segment AB is the diameter of ⊙O, the chord CD ⊥ AB, ∠CAB = N_0, OD = N_1, then the length of DC is equal to ()",
+  "problem_img": "3896.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CE,EB,OBC)",
+    "Shape(BE,ED,ODB)",
+    "Shape(AO,OC,CA)",
+    "Shape(CO,OE,EC)",
+    "Shape(OD,DE,EO)",
+    "Shape(DO,OA,OAD)",
+    "Collinear(CED)",
+    "Collinear(AOEB)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OE,CE)",
+    "Equal(LengthOfLine(OD),2)",
+    "Equal(MeasureOfAngle(CAO),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DC))",
+  "problem_answer": "2*sqrt(3)",
+  "theorem_seqs": [
+    "angle_addition(ECO,OCA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_judgment_line_equal(ODC)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(ODC)",
+    "triangle_property_angle_sum(CAE)",
+    "triangle_property_angle_sum(COD)",
+    "sine_theorem(COD)"
+  ]
+}

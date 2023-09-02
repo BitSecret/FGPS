@@ -1,0 +1,33 @@
+{
+  "problem_id": 6935,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10187",
+  "problem_level": 1,
+  "problem_text_cn": "如图，BC是⊙O的直径，AB是⊙O的弦，若∠AOC＝60°，则∠OAB的度数是（）",
+  "problem_text_en": "",
+  "problem_img": "6935.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(BO,OA,AB)",
+    "Shape(OBC,CO,OB)",
+    "Shape(OC,OCA,AO)",
+    "Collinear(BOC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(BC,O)",
+    "Equal(MeasureOfAngle(AOC),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCA,O)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)"
+  ]
+}

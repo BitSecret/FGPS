@@ -1,0 +1,29 @@
+{
+  "problem_id": 2116,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2206",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2116.png",
+  "construction_cdl": [
+    "Shape(O)",
+    "Shape(AB,OBA)",
+    "Shape(BC,OCB)",
+    "Shape(CB,BA,OAC)",
+    "Cocircular(O,CBA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(OBA),85)",
+    "Equal(LengthOfLine(BC),4*x+3)",
+    "Equal(MeasureOfArc(OCB),85)",
+    "Equal(LengthOfLine(BA),5*x-1)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "congruent_arc_judgment_measure_equal(OCB,OBA)",
+    "congruent_arc_property_chord_equal(OCB,OBA)"
+  ]
+}

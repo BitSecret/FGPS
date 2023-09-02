@@ -1,0 +1,35 @@
+{
+  "problem_id": 972,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-1001",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of quadrilateral X Y Z W if X Z = 39, H W = 20, and Y G = 21.",
+  "problem_img": "972.png",
+  "construction_cdl": [
+    "Shape(YX,XH,HG,GY)",
+    "Shape(YG,GZ,ZY)",
+    "Shape(XW,WH,HX)",
+    "Shape(HW,WZ,ZG,GH)",
+    "Collinear(XHGZ)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(XZ),39)",
+    "Equal(LengthOfLine(HW),20)",
+    "Equal(LengthOfLine(YG),21)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(YG,ZG)",
+    "PerpendicularBetweenLine(WH,XH)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfTriangle(YXZ),AreaOfTriangle(WZX)))",
+  "problem_answer": "799.5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(GHW,WHX)",
+    "adjacent_complementary_angle(XGY,YGZ)",
+    "altitude_of_triangle_judgment(YG,YXZ)",
+    "altitude_of_triangle_judgment(WH,WZX)",
+    "triangle_area_formula_common(YXZ)",
+    "triangle_area_formula_common(WZX)"
+  ]
+}

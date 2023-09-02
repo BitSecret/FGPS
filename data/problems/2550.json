@@ -1,0 +1,36 @@
+{
+  "problem_id": 2550,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2675",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of m \\angle 1. Assume that segments that appear tangent are tangent.",
+  "problem_img": "2550.png",
+  "construction_cdl": [
+    "Shape(BD,DE)",
+    "Shape(EF,FC)",
+    "Shape(ED,DF,FE)",
+    "Shape(EDF,FD)",
+    "Shape(EFD,DE,EF)",
+    "Collinear(BDF)",
+    "Cocircular(E,DF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(E,E)",
+    "IsTangentOfCircle(CF,E)",
+    "Equal(MeasureOfArc(EDF),102)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DFC))",
+  "problem_answer": "129",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(CF,E,E)",
+    "radius_of_circle_property_length_equal(ED,E)",
+    "radius_of_circle_property_length_equal(EF,E)",
+    "arc_property_center_angle(EDF,E)",
+    "angle_addition(DFE,EFC)",
+    "triangle_property_angle_sum(EDF)",
+    "isosceles_triangle_judgment_line_equal(EDF)",
+    "isosceles_triangle_property_angle_equal(EDF)"
+  ]
+}

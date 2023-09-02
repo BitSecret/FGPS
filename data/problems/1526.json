@@ -1,0 +1,43 @@
+{
+  "problem_id": 1526,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1584",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y in the figure.",
+  "problem_img": "1526.png",
+  "construction_cdl": [
+    "Shape(HN,ND)",
+    "Shape(DN,NM)",
+    "Shape(NM,ME)",
+    "Shape(EM,ML)",
+    "Shape(ML,LF)",
+    "Shape(FL,LG)",
+    "Shape(AN,NH)",
+    "Shape(MN,NA)",
+    "Shape(BM,MN)",
+    "Shape(LM,MB)",
+    "Shape(CL,LM)",
+    "Shape(GL,LC)",
+    "Collinear(HNMLG)",
+    "Collinear(AND)",
+    "Collinear(BME)",
+    "Collinear(CLF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(HND),4*x)",
+    "Equal(MeasureOfAngle(BMN),56)",
+    "Equal(MeasureOfAngle(GLC),3*y-11)",
+    "ParallelBetweenLine(AD,BE)",
+    "ParallelBetweenLine(BE,CF)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(FC,EB,L)",
+    "parallel_property_collinear_extend(BE,CL,M)",
+    "parallel_property_corresponding_angle(LC,MB,N)",
+    "adjacent_complementary_angle(GLC,CLM)"
+  ]
+}

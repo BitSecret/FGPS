@@ -1,0 +1,38 @@
+{
+  "problem_id": 534,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-547",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use rectangle L M N P, parallelogram L K M J to solve the problem. If m \\angle L M P = m \\angle P M N, find m \\angle P J L.",
+  "problem_img": "534.png",
+  "construction_cdl": [
+    "Shape(PN,NJ,JP)",
+    "Shape(JN,NM,MJ)",
+    "Shape(JM,ML,LJ)",
+    "Shape(JL,LP,PJ)",
+    "Shape(MK,KL,LM)",
+    "Collinear(PJM)",
+    "Collinear(NJL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(LPNM)",
+    "Parallelogram(LJMK)",
+    "Equal(MeasureOfAngle(PML),MeasureOfAngle(NMP))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(PJL))",
+  "problem_answer": "90",
+  "theorem_seqs": [
+    "angle_addition(NMJ,JML)",
+    "rectangle_property_diagonal_equal(LPNM)",
+    "parallelogram_property_diagonal_bisection(LPNM,J)",
+    "parallelogram_property_diagonal_bisection(PNML,J)",
+    "line_addition(PJ,JM)",
+    "line_addition(LJ,JN)",
+    "isosceles_triangle_judgment_line_equal(JML)",
+    "isosceles_triangle_property_angle_equal(JML)",
+    "triangle_property_angle_sum(JML)",
+    "adjacent_complementary_angle(PJL,LJM)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "problem_id": 4970,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4652",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b∥c,直线m、n与a、b、c分别交于点A、C、E和B、D、F,若AC=4,AE=10,BF=\\frac{15}{2},则DF的长为()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b ∥ c, the straight line, n and a, b, c intersect at the points A, C, E and B, D, F respectively, if AC = N_0, AE = N_1, BF =\\frac{N_2}{N_3}, then the length of DF is ()",
+  "problem_img": "4970.png",
+  "construction_cdl": [
+    "Shape(MA,AB,BM)",
+    "Shape(AC,CD,DB,BA)",
+    "Shape(CE,EF,FD,DC)",
+    "Collinear(MACE)",
+    "Collinear(MBDF)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(AE),10)",
+    "Equal(LengthOfLine(MA),6)",
+    "Equal(LengthOfLine(BF),15/2)",
+    "ParallelBetweenLine(AB,CD)",
+    "ParallelBetweenLine(AB,EF)",
+    "ParallelBetweenLine(CD,EF)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DF))",
+  "problem_answer": "9/2",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(AB,CD,M)",
+    "parallel_property_corresponding_angle(CD,EF,M)",
+    "parallel_property_corresponding_angle(DC,BA,M)",
+    "parallel_property_corresponding_angle(FE,DC,M)",
+    "line_addition(MA,AC)",
+    "line_addition(MA,AE)",
+    "line_addition(MB,BD)",
+    "line_addition(MB,BF)",
+    "line_addition(MD,DF)",
+    "line_addition(BD,DF)",
+    "similar_triangle_judgment_aa(MAB,MCD)",
+    "similar_triangle_judgment_aa(MCD,MEF)",
+    "similar_triangle_property_line_ratio(ABM,CDM)",
+    "similar_triangle_property_line_ratio(BMA,DMC)",
+    "similar_triangle_property_line_ratio(CDM,EFM)",
+    "similar_triangle_property_line_ratio(DMC,FME)"
+  ]
+}

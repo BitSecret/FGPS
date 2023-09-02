@@ -1,0 +1,43 @@
+{
+  "problem_id": 6415,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9282",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,BC=2AB,CE⊥AB于E,F为AD的中点,若∠AEF=54°,则∠B=()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, BC = 2AB, CE ⊥ AB at E, F is the midpoint of AD, if ∠AEF = N_0, then ∠B = ()",
+  "problem_img": "6415.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(FE,EG,GD,DF)",
+    "Shape(EB,BH,HE)",
+    "Shape(EH,HC,CE)",
+    "Shape(EC,CG,GE)",
+    "Collinear(AEB)",
+    "Collinear(DGC)",
+    "Collinear(BHC)",
+    "Collinear(AFD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "ParallelBetweenLine(AD,EG)",
+    "ParallelBetweenLine(EG,BC)",
+    "Equal(Div(LengthOfLine(BC),LengthOfLine(AB)),2)",
+    "PerpendicularBetweenLine(CE,BE)",
+    "Equal(MeasureOfAngle(AEF),54)",
+    "IsMidpointOfLine(F,AD)",
+    "IsMidpointOfLine(H,BC)",
+    "Equal(MeasureOfAngle(CEH),18)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EBC))",
+  "problem_answer": "72",
+  "theorem_seqs": [
+    "line_addition(BH,HC)",
+    "median_of_triangle_judgment(EH,EBC)",
+    "right_triangle_judgment_angle(CEB)",
+    "right_triangle_property_length_of_median(CEB,H)",
+    "isosceles_triangle_judgment_line_equal(HCE)",
+    "isosceles_triangle_property_angle_equal(HCE)",
+    "triangle_property_angle_sum(EBC)"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "problem_id": 139,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-141",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "139.png",
+  "construction_cdl": [
+    "Shape(JK,KL,LJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(JK),33)",
+    "Equal(LengthOfLine(LK),x)",
+    "Equal(MeasureOfAngle(KLJ),49)",
+    "PerpendicularBetweenLine(JK,LK)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "28.686",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(JKL)",
+    "sine_theorem(KLJ)"
+  ]
+}

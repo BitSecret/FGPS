@@ -1,0 +1,49 @@
+{
+  "problem_id": 5491,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5948",
+  "problem_level": 1,
+  "problem_text_cn": "如图,D是△ABC内一点,BD⊥CD,AD=7,BD=4,CD=3,E、F、G、H分别是AB、BD、CD、AC的中点,则四边形EFGH的周长为()",
+  "problem_text_en": "As shown in the figure, D is a point in △ABC, BD ⊥ CD, AD = N_0, BD = N_1, CD = N_2, E, F, G, and H are the midpoints of AB, BD, CD, and AC respectively, then the perimeter of quadrilateral EFGH is ()",
+  "problem_img": "5491.png",
+  "construction_cdl": [
+    "Shape(AE,EB,BF,FD,DA)",
+    "Shape(AD,DG,GC,CH,HA)",
+    "Shape(DF,FB,BC,CG,GD)",
+    "Shape(EF,FG,GH,HE)",
+    "Shape(AE,EH,HA)",
+    "Shape(EB,BF,FE)",
+    "Shape(FB,BC,CG,GF)",
+    "Shape(HG,GC,CH)",
+    "Collinear(AEB)",
+    "Collinear(AHC)",
+    "Collinear(BFD)",
+    "Collinear(CGD)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(E,AB)",
+    "IsMidpointOfLine(H,AC)",
+    "IsMidpointOfLine(F,BD)",
+    "IsMidpointOfLine(G,CD)",
+    "PerpendicularBetweenLine(CD,BD)",
+    "Equal(LengthOfLine(AD),7)",
+    "Equal(LengthOfLine(BD),4)",
+    "Equal(LengthOfLine(CD),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGH))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CDB)",
+    "right_triangle_property_pythagorean(CDB)",
+    "midsegment_of_triangle_judgment_midpoint(FE,BDA)",
+    "midsegment_of_triangle_judgment_midpoint(HG,CAD)",
+    "midsegment_of_triangle_judgment_midpoint(FG,DBC)",
+    "midsegment_of_triangle_judgment_midpoint(EH,ABC)",
+    "midsegment_of_triangle_property_length(FE,BDA)",
+    "midsegment_of_triangle_property_length(HG,CAD)",
+    "midsegment_of_triangle_property_length(FG,DBC)",
+    "midsegment_of_triangle_property_length(EH,ABC)",
+    "quadrilateral_perimeter_formula(EFGH)"
+  ]
+}

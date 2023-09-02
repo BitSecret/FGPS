@@ -1,0 +1,32 @@
+{
+  "problem_id": 3238,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-539",
+  "problem_level": 1,
+  "problem_text_cn": "如图,等腰△ABC中,AB=AC,∠A=40°．线段AB的垂直平分线交AB于D,交AC于E,连接BE,则∠CBE等于().",
+  "problem_text_en": "As shown in the figure, in isosceles triangle △ABC, AB = AC, ∠A = N_0. The perpendicular bisector of line AB intersects AB at D, intersects AC at E, and connect BE, then ∠CBE is equal to ().",
+  "problem_img": "3238.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DB,BE)",
+    "Shape(CE,EB,BC)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(EAD),40)",
+    "IsPerpendicularBisectorOfLine(ED,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EBC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "mirror_congruent_triangle_judgment_sas(DEA,DBE)",
+    "mirror_congruent_triangle_property_angle_equal(ADE,BED)",
+    "angle_addition(DBE,EBC)"
+  ]
+}

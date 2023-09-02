@@ -1,0 +1,28 @@
+{
+  "problem_id": 4990,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4680",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD、BC相交于点O,AB∥CD,若\\frac{AO}{OD}=\\frac{2}{3},则\\frac{AB}{CD}的值是()",
+  "problem_text_en": "As shown in the figure, AD and BC intersect at the vertex O, AB ∥ CD, if \\frac {AO}{OD} = \\frac{N_0}{N_1}, then the value of \\frac {AB}{CD} is ()",
+  "problem_img": "4990.png",
+  "construction_cdl": [
+    "Shape(AO,OB,BA)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AOD)",
+    "Collinear(BOC)"
+  ],
+  "text_cdl": [
+    "Equal(Div(LengthOfLine(AO),LengthOfLine(OD)),2/3)",
+    "ParallelBetweenLine(AB,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(AB),LengthOfLine(CD)))",
+  "problem_answer": "2/3",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,CD)",
+    "similar_triangle_judgment_aa(OCD,OBA)",
+    "similar_triangle_property_line_ratio(OCD,OBA)",
+    "similar_triangle_property_line_ratio(CDO,BAO)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 1078,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1114",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If F K = 3 x - 1, K G = 4 y + 3, J K = 6 y - 2, and K H = 2 x + 3, find y so that the quadrilateral is a parallelogram.",
+  "problem_img": "1078.png",
+  "construction_cdl": [
+    "Shape(FJ,JK,KF)",
+    "Shape(KJ,JH,HK)",
+    "Shape(KH,HG,GK)",
+    "Shape(FK,KG,GF)",
+    "Collinear(FKH)",
+    "Collinear(JKG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(FK),3*x-1)",
+    "Equal(LengthOfLine(KG),4*y+3)",
+    "Equal(LengthOfLine(JK),6*y-2)",
+    "Equal(LengthOfLine(KH),2*x+3)",
+    "Parallelogram(FJHG)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "2.5",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(JHGF,K)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 2157,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2251",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral A B C D is a rhombus. If D B = 2 x - 4 and P B = 2 x - 9, find P D.",
+  "problem_img": "2157.png",
+  "construction_cdl": [
+    "Shape(AD,DP,PA)",
+    "Shape(AP,PB,BA)",
+    "Shape(PD,DC,CP)",
+    "Shape(PC,CB,BP)",
+    "Collinear(APC)",
+    "Collinear(DPB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rhombus(ADCB)",
+    "Equal(LengthOfLine(DB),2*x-4)",
+    "Equal(LengthOfLine(PB),2*x-9)",
+    "PerpendicularBetweenLine(DP,AP)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(PD))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(DP,PB)"
+  ]
+}

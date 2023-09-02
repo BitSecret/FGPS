@@ -1,0 +1,40 @@
+{
+  "problem_id": 5506,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-5970",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点M为BC的中点,AD为△ABC的外角平分线,且AD⊥BD,若AB=6,AC=9,则MD的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, point M is the midpoint of BC, AD is the bisector of exterior angle of △ABC, and AD ⊥ BD, if AB = N_0, AC = N_1, the length of MD is ()",
+  "problem_img": "5506.png",
+  "construction_cdl": [
+    "Shape(ED,DA,AE)",
+    "Shape(AD,DF,FA)",
+    "Shape(FD,DB,BF)",
+    "Shape(CA,AF,FM,MC)",
+    "Shape(MF,FB,BM)",
+    "Collinear(EAC)",
+    "Collinear(EDB)",
+    "Collinear(BFA)",
+    "Collinear(DFM)",
+    "Collinear(BMC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(M,BC)",
+    "IsBisectorOfAngle(AD,BAE)",
+    "PerpendicularBetweenLine(AD,BD)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(AC),9)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(MD))",
+  "problem_answer": "15/2",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EDA,ADB)",
+    "mirror_congruent_triangle_judgment_aas(EDA,BAD)",
+    "mirror_congruent_triangle_property_line_equal(DAE,DBA)",
+    "mirror_congruent_triangle_property_line_equal(AED,ADB)",
+    "line_addition(EA,AC)",
+    "midsegment_of_triangle_judgment_midpoint(MD,BCE)",
+    "midsegment_of_triangle_property_length(MD,BCE)"
+  ]
+}

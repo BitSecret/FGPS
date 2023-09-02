@@ -1,0 +1,34 @@
+{
+  "problem_id": 1447,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1500",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Circle O has a radius of 10, A B = 10 and m \\overrightarrow A B = 60. Find m \\widehat A Y.",
+  "problem_img": "1447.png",
+  "construction_cdl": [
+    "Shape(AX,XY,OYA)",
+    "Shape(YX,XB,OBY)",
+    "Shape(BA,OAB)",
+    "Collinear(AXB)",
+    "Collinear(YXO)",
+    "Cocircular(O,BYA)"
+  ],
+  "text_cdl": [
+    "Equal(RadiusOfCircle(O),10)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(MeasureOfArc(OBA),60)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(BX,OX)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(OYA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_arc(OBA,OXY)",
+    "congruent_arc_judgment_length_equal(OBY,OYA)",
+    "congruent_arc_property_measure_equal(OBY,OYA)",
+    "arc_addition_measure(OBY,OYA)"
+  ]
+}

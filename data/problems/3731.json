@@ -1,0 +1,40 @@
+{
+  "problem_id": 3731,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1516",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠A=70°,点O是AB、AC垂直平分线的交点,则∠BCO的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠A = N_0, point O is the intersection of the perpendicular bisectors of AB and AC, then the degree of ∠BCO is ()",
+  "problem_img": "3731.png",
+  "construction_cdl": [
+    "Shape(AD,DO,OA)",
+    "Shape(AO,OE,EA)",
+    "Shape(EO,OC,CE)",
+    "Shape(DB,BO,OD)",
+    "Shape(OB,BC,CO)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EAD),70)",
+    "IsPerpendicularBisectorOfLine(OE,AC)",
+    "IsPerpendicularBisectorOfLine(OD,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCO))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(OE,AC)",
+    "perpendicular_bisector_property_distance_equal(OD,AB)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "angle_addition(CAO,OAD)",
+    "quadrilateral_property_angle_sum(ABOC)",
+    "round_angle(COB,BOC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 5277,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5434",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,已知△ABC中,∠A=80°,若沿图中虚线剪去∠A,则∠1+∠2等于()",
+  "problem_text_en": "As shown in the figure, it is known that in △ABC, ∠A = N_0, if ∠A is cut along the dotted line in the figure, then ∠1 + ∠2 is equal to ()",
+  "problem_img": "5277.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),80)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(EDB),MeasureOfAngle(CED)))",
+  "problem_answer": "260",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ADE,EDB)",
+    "adjacent_complementary_angle(CED,DEA)",
+    "triangle_property_angle_sum(ADE)"
+  ]
+}

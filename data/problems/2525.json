@@ -1,0 +1,26 @@
+{
+  "problem_id": 2525,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-2649",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2525.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ABC),30)",
+    "Equal(LengthOfLine(CA),24)",
+    "Equal(LengthOfLine(BC),x)",
+    "Equal(LengthOfLine(AB),y)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "24*sqrt(3)",
+  "theorem_seqs": [
+    "sine_theorem(ABC)",
+    "cosine_theorem(CAB)"
+  ]
+}

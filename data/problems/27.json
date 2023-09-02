@@ -1,0 +1,35 @@
+{
+  "problem_id": 27,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-27",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In H, the diameter is 18, L M = 12, and m \\widehat L M = 84. Find m \\widehat L K.",
+  "problem_img": "27.png",
+  "construction_cdl": [
+    "Shape(HLJ,JH,HP,PL)",
+    "Shape(HJM,MP,PH,HJ)",
+    "Shape(HMK,KP,PM)",
+    "Shape(HKL,LP,PK)",
+    "Collinear(JHPK)",
+    "Collinear(LPM)",
+    "Cocircular(H,JMKL)"
+  ],
+  "text_cdl": [
+    "Equal(DiameterOfCircle(H),18)",
+    "Equal(LengthOfLine(LM),12)",
+    "Equal(MeasureOfArc(HML),84)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(H,H)",
+    "PerpendicularBetweenLine(MP,HP)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(HKL))",
+  "problem_answer": "42",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_arc(HML,HPK)",
+    "congruent_arc_judgment_length_equal(HMK,HKL)",
+    "congruent_arc_property_measure_equal(HMK,HKL)",
+    "arc_addition_measure(HMK,HKL)"
+  ]
+}

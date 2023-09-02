@@ -1,0 +1,26 @@
+{
+  "problem_id": 5471,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5887",
+  "problem_level": 1,
+  "problem_text_cn": "如图,想测量旗杆AB的高,在C点测得∠ACB=30°,然后在地面上沿CD方向从C点到D点,使∠ACD=∠ACB,DA⊥AC于点A,此时测得CD=36m,则旗杆高()",
+  "problem_text_en": "As shown in the figure, I want to measure the height of the flagpole AB, measured at point C ∠ACB = N_0, and then on the ground along the CD direction from point C to point D, so that ∠ACD = ∠ACB, DA ⊥ AC at point A, at this time CD = N_1, then the height of the flagpole is ()",
+  "problem_img": "5471.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)",
+    "Shape(AD,DC,CA)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(BA,CA)",
+    "MirrorCongruentBetweenTriangle(BAC,DCA)",
+    "Equal(LengthOfLine(CD),36)",
+    "Equal(MeasureOfAngle(ACB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BA))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "sine_theorem(BAC)",
+    "mirror_congruent_triangle_property_line_equal(ACB,ADC)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": 3983,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1927",
+  "problem_level": 1,
+  "problem_text_cn": "如图表示一圆柱形输水管的横截面,阴影部分为有水部分,如果输水管的半径为5cm,水面宽AB为8cm,则水的最大深度CD为()",
+  "problem_text_en": "The figure shows the cross section of a cylindrical water pipe, the shaded part is the water part. If the radius of the water pipe is N_0 and the width of the water surface AB is N_1, the maximum depth of water CD is ()",
+  "problem_img": "3983.png",
+  "construction_cdl": [
+    "Shape(OA,AC,CO)",
+    "Shape(CA,OAD,DC)",
+    "Shape(BC,CD,ODB)",
+    "Shape(OC,CB,OBA,AO)",
+    "Collinear(ACB)",
+    "Collinear(OCD)",
+    "Cocircular(O,ADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "PerpendicularBetweenLine(OC,BC)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(OA),5)",
+    "Equal(LengthOfLine(AB),8)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ACO,OCB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "line_addition(AC,CB)",
+    "line_addition(OC,CD)",
+    "right_triangle_judgment_angle(ACO)",
+    "right_triangle_property_pythagorean(ACO)"
+  ]
+}

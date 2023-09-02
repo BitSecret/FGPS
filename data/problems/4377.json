@@ -1,0 +1,33 @@
+{
+  "problem_id": 4377,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3301",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点O是△ABC内部一点,⊙O经过△ABC的顶点A、B、C,若∠BCO=45°,则∠BAC的大小为()",
+  "problem_text_en": "As shown in the figure, point O is a point inside △ABC, and ⊙O passes through the vertices A, B, and C of △ABC. If ∠BCO = N_0, then the size of ∠BAC is ()",
+  "problem_img": "4377.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(BO,OC,CA,AB)",
+    "Shape(BC,CO,OB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BCO),45)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(BCO)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

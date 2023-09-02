@@ -1,0 +1,29 @@
+{
+  "problem_id": 3657,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1362",
+  "problem_level": 1,
+  "problem_text_cn": "把一块直尺与一块含30°的直角三角板如图放置,若∠1=34°,则∠2的度数为()",
+  "problem_text_en": "Put a ruler and a right-angle triangle plate containing N_0 as shown in the figure, if ∠1 = N_1, then the degree of ∠2 is ()",
+  "problem_img": "3657.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(CB,BD,DE,EC)",
+    "Shape(FE,ED)",
+    "Collinear(ABD)",
+    "Collinear(ACEF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BC,DE)",
+    "Equal(MeasureOfAngle(ABC),34)",
+    "PerpendicularBetweenLine(CA,BA)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FED))",
+  "problem_answer": "124",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "parallel_property_corresponding_angle(ED,CB,A)",
+    "adjacent_complementary_angle(FED,DEA)"
+  ]
+}

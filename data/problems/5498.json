@@ -1,0 +1,41 @@
+{
+  "problem_id": 5498,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5955",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD中,AC⊥BC,AD∥BC,BC=3,AC=4,AD=6．M是BD的中点,则CM的长为()",
+  "problem_text_en": "As shown in the figure, in the quadrilateral ABCD, AC ⊥ BC, AD ∥ BC, BC = N_0, AC = N_1, AD = N_2. M is the midpoint of BD, then the length of CM is ()",
+  "problem_img": "5498.png",
+  "construction_cdl": [
+    "Shape(AB,BN,NA)",
+    "Shape(NB,BC,CN)",
+    "Shape(AN,NM,MD,DA)",
+    "Shape(MN,NC,CM)",
+    "Shape(MC,CD,DM)",
+    "Shape(CE,ED,DC)",
+    "Collinear(BNMD)",
+    "Collinear(ANC)",
+    "Collinear(BCE)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABED)",
+    "PerpendicularBetweenLine(BC,AC)",
+    "IsMidpointOfLine(M,BD)",
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(AD),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CM))",
+  "problem_answer": "2.5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)",
+    "parallelogram_property_opposite_line_equal(ABED)",
+    "parallelogram_property_opposite_line_equal(BEDA)",
+    "line_addition(BC,CE)",
+    "midpoint_of_line_judgment(C,BE)",
+    "midsegment_of_triangle_judgment_midpoint(CM,BED)",
+    "midsegment_of_triangle_property_length(CM,BED)"
+  ]
+}

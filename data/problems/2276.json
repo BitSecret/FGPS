@@ -1,0 +1,30 @@
+{
+  "problem_id": 2276,
+  "annotation": "DengfengYue_2023-04-16",
+  "source": "Geometry3k-2380",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of the variable x in the figure.",
+  "problem_img": "2276.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CI,IA)",
+    "Shape(IC,CE,EI)",
+    "Collinear(EIA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CIA),3*y+40)",
+    "Equal(MeasureOfAngle(ADC),120)",
+    "Equal(MeasureOfAngle(DCI),x)",
+    "Equal(MeasureOfAngle(EIC),3*x-70)",
+    "ParallelBetweenLine(IC,AD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(IC,AD,E)",
+    "flat_angle(EIA)",
+    "angle_addition(EIC,CIA)",
+    "quadrilateral_property_angle_sum(ADCI)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 3033,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-244",
+  "problem_level": 1,
+  "problem_text_cn": "(3分)如图,EF∥BC,AC平分∠BAF,∠B=50°,则∠C的度数是()",
+  "problem_text_en": "As shown in the figure, EF ∥ BC, AC bisects ∠BAF, ∠B = N_0, then the degree of ∠C is ()",
+  "problem_img": "3033.png",
+  "construction_cdl": [
+    "Shape(BA,AE)",
+    "Shape(FA,AC)",
+    "Shape(AB,BC,CA)",
+    "Collinear(EAF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(EF,BC)",
+    "IsBisectorOfAngle(AC,FAB)",
+    "Equal(MeasureOfAngle(ABC),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "angle_addition(FAC,CAB)",
+    "parallel_property_collinear_extend(EF,BC,A)",
+    "parallel_property_ipsilateral_internal_angle(AF,BC)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "problem_id": 218,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-220",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of \\angle 3.",
+  "problem_img": "218.png",
+  "construction_cdl": [
+    "Shape(AC,CE,EA)",
+    "Shape(DE,EB,BD)",
+    "Shape(EC,CB,BE)",
+    "Collinear(AEB)",
+    "Collinear(CED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(EAC),95)",
+    "Equal(MeasureOfAngle(BDE),109)",
+    "Equal(MeasureOfAngle(ECB),33)",
+    "Equal(MeasureOfAngle(CBE),24)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(EBD))",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ECB)",
+    "flat_angle(DEC)",
+    "angle_addition(DEB,BEC)",
+    "triangle_property_angle_sum(EBD)"
+  ]
+}

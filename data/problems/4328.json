@@ -1,0 +1,48 @@
+{
+  "problem_id": 4328,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3182",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=AC=12,以AB为直径的⊙O与BC交于点D,与AC交于点E,连接OD交BE于点M,且MD=2,则BE长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC = N_0, ⊙O with AB as the diameter intersects BC at point D, and intersects AC at point E. Connect OD and it intersects BE at point M, and MD = N_1, then BE Long as()",
+  "problem_img": "4328.png",
+  "construction_cdl": [
+    "Shape(OA,OAB,BO)",
+    "Shape(OB,BM,MO)",
+    "Shape(MB,BD,DM)",
+    "Shape(OBD,DB)",
+    "Shape(EM,MD,ODE)",
+    "Shape(ODE,DC,CE)",
+    "Shape(OM,ME,EA,AO)",
+    "Shape(AE,OEA)",
+    "Collinear(BME)",
+    "Collinear(BDC)",
+    "Collinear(OMD)",
+    "Collinear(AEC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(LengthOfLine(AB),12)",
+    "Equal(LengthOfLine(AC),12)",
+    "Equal(LengthOfLine(BM),LengthOfLine(ME))",
+    "Equal(LengthOfLine(MD),2)",
+    "PerpendicularBetweenLine(OM,EM)",
+    "PerpendicularBetweenLine(BM,OM)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BE))",
+  "problem_answer": "4*sqrt(5)",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(AB,O)",
+    "circle_property_length_of_radius_and_diameter(O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "line_addition(OM,MD)",
+    "right_triangle_judgment_angle(BMO)",
+    "right_triangle_property_pythagorean(BMO)",
+    "line_addition(BM,ME)"
+  ]
+}

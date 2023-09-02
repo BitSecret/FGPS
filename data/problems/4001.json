@@ -1,0 +1,42 @@
+{
+  "problem_id": 4001,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1958",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的弦,AB=10,点C是⊙O上的一个动点,且∠C=45°．若点M、N分别是弦AB、AC的中点,则MN的最大值是()",
+  "problem_text_en": "As shown in the figure, AB is the chord of ⊙O, AB = N_0, point C is a moving point on ⊙O, and ∠C = N_1. If the points M and N are the midpoints of the chords AB and AC respectively, the maximum value of MN is ()",
+  "problem_img": "4001.png",
+  "construction_cdl": [
+    "Shape(NA,AM,MN)",
+    "Shape(CN,NM,MB,BC)",
+    "Shape(OCA,AC)",
+    "Shape(OAB,BA)",
+    "Shape(CO,OB,OBC)",
+    "Collinear(COB)",
+    "Collinear(AMB)",
+    "Collinear(ANC)",
+    "Cocircular(O,CAB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CB,O)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(MeasureOfAngle(BCA),45)",
+    "IsMidpointOfLine(M,AB)",
+    "IsMidpointOfLine(N,AC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(MN))",
+  "problem_answer": "5*sqrt(2)",
+  "theorem_seqs": [
+    "line_addition(AM,MB)",
+    "line_addition(AN,NC)",
+    "diameter_of_circle_property_right_angle(CAB,O)",
+    "triangle_property_angle_sum(ABC)",
+    "sine_theorem(BCA)",
+    "sine_theorem(ABC)",
+    "similar_triangle_judgment_sas(AMN,ABC)",
+    "similar_triangle_property_line_ratio(AMN,ABC)",
+    "similar_triangle_property_line_ratio(NAM,CAB)"
+  ]
+}

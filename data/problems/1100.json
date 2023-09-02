@@ -1,0 +1,34 @@
+{
+  "problem_id": 1100,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-1137",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram A B C D to find y.",
+  "problem_img": "1100.png",
+  "construction_cdl": [
+    "Shape(AD,DF,FA)",
+    "Shape(FD,DC,CF)",
+    "Shape(FC,CB,BF)",
+    "Shape(BA,AF,FB)",
+    "Collinear(AFC)",
+    "Collinear(DFB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ADCB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(BA),3*y-8)",
+    "Equal(MeasureOfAngle(FBA),20)",
+    "Equal(LengthOfLine(DA),13)",
+    "Equal(LengthOfLine(BC),2*x+7)",
+    "Equal(MeasureOfAngle(BFC),49)",
+    "Equal(MeasureOfAngle(ADF),59)",
+    "Equal(LengthOfLine(DC),10)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(BADC)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 5307,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5501",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA,PB切⊙O于点A,B,点C是⊙O上一点,且∠P=36°,则∠ACB=()",
+  "problem_text_en": "As shown in the figure, PA, PB are tangent to ⊙O at points A, B, point C is a point on ⊙O, and ∠P = N_0, then ∠ACB = ()",
+  "problem_img": "5307.png",
+  "construction_cdl": [
+    "Shape(AP,PB,OAB)",
+    "Shape(BO,OA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Shape(AO,OB,BC,CA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(MeasureOfAngle(APB),36)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "72",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "quadrilateral_property_angle_sum(APBO)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

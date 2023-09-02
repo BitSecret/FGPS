@@ -1,0 +1,43 @@
+{
+  "problem_id": 6258,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8879",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BC是⊙O的直径,A、D是⊙O上两点,若∠D=35°,则∠OAC的度数是()",
+  "problem_text_en": "As shown in the figure, BC is the diameter of ⊙O, A and D are two vertices on ⊙O, if ∠D = N_0, then the degree of ∠OAC is ()",
+  "problem_img": "6258.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBD,DM,MO,OB)",
+    "Shape(ODC,CD)",
+    "Shape(OCA,AC)",
+    "Shape(OA,AB,BO)",
+    "Shape(AO,OM,MA)",
+    "Shape(AM,MC,CA)",
+    "Shape(MD,DC,CM)",
+    "Collinear(BOMC)",
+    "Collinear(AMD)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ADC),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAO))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OCA,D)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

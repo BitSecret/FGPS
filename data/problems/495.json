@@ -1,0 +1,33 @@
+{
+  "problem_id": 495,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-506",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If A D = 24, find C N.",
+  "problem_img": "495.png",
+  "construction_cdl": [
+    "Shape(AN,NB,NBA)",
+    "Shape(NC,CB,BN)",
+    "Shape(NCB,BC)",
+    "Shape(ND,NDC,CN)",
+    "Shape(NA,NAE,ED,DN)",
+    "Shape(NED,DE)",
+    "Collinear(AND)",
+    "Cocircular(N,AEDCB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),24)"
+  ],
+  "image_cdl": [
+    "IsDiameterOfCircle(AD,N)",
+    "IsCentreOfCircle(N,N)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(CN))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(AD,N)",
+    "circle_property_length_of_radius_and_diameter(N)",
+    "radius_of_circle_property_length_equal(NC,N)"
+  ]
+}

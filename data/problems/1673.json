@@ -1,0 +1,41 @@
+{
+  "problem_id": 1673,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1737",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the value of x if m \\widehat N R = 62 and m \\widehat N P = 108?",
+  "problem_img": "1673.png",
+  "construction_cdl": [
+    "Shape(NP,CPN)",
+    "Shape(NC,CP,PN)",
+    "Shape(PC,CR,CRP)",
+    "Shape(RC,CN,CNR)",
+    "Shape(NM,MR,CRN)",
+    "Shape(NM,MR,RC,CN)",
+    "Collinear(MNP)",
+    "Cocircular(C,NRP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(C,C)",
+    "Equal(MeasureOfArc(CNR),62)",
+    "Equal(MeasureOfArc(CPN),108)",
+    "Equal(MeasureOfAngle(NMR),x)",
+    "IsTangentOfCircle(MR,C)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "64",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(MR,C,C)",
+    "radius_of_circle_property_length_equal(CN,C)",
+    "radius_of_circle_property_length_equal(CP,C)",
+    "arc_property_center_angle(CPN,C)",
+    "isosceles_triangle_judgment_line_equal(CPN)",
+    "isosceles_triangle_property_angle_equal(CPN)",
+    "triangle_property_angle_sum(CPN)",
+    "adjacent_complementary_angle(PNC,CNM)",
+    "arc_property_center_angle(CNR,C)",
+    "quadrilateral_property_angle_sum(NMRC)"
+  ]
+}

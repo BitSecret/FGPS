@@ -1,0 +1,29 @@
+{
+  "problem_id": 264,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-267",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral A B C D is a rhombus. If m \\angle D P C = 3 x - 15, find x.",
+  "problem_img": "264.png",
+  "construction_cdl": [
+    "Shape(AD,DP,PA)",
+    "Shape(AP,PB,BA)",
+    "Shape(PD,DC,CP)",
+    "Shape(PC,CB,BP)",
+    "Collinear(APC)",
+    "Collinear(DPB)"
+  ],
+  "text_cdl": [
+    "Rhombus(ADCB)",
+    "Equal(MeasureOfAngle(CPD),3*x-15)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(DP,AP)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(CBAD,P)"
+  ]
+}

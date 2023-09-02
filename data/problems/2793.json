@@ -1,0 +1,26 @@
+{
+  "problem_id": 2793,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-2942",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find B C.",
+  "problem_img": "2793.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),9)",
+    "Equal(LengthOfLine(BA),9)",
+    "Equal(MeasureOfAngle(BAC),60)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ACB)",
+    "isosceles_triangle_property_angle_equal(ACB)",
+    "triangle_property_angle_sum(ACB)",
+    "sine_theorem(BAC)"
+  ]
+}

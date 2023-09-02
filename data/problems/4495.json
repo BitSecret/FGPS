@@ -1,0 +1,28 @@
+{
+  "problem_id": 4495,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3505",
+  "problem_level": 1,
+  "problem_text_cn": "圆内接四边形ABCD中,已知∠B=60°,则∠D=()",
+  "problem_text_en": "In the circle inscribed in the quadrilateral ABCD, it is known that ∠B = N_0, then ∠D = ()",
+  "problem_img": "4495.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AD)",
+    "Shape(AB,BC,CD,DA)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABC),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_internal(OCA,D)"
+  ]
+}

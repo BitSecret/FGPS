@@ -1,0 +1,37 @@
+{
+  "problem_id": 1087,
+  "annotation": "NaZhu_2023-03-19",
+  "source": "Geometry3k-1124",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1087.png",
+  "construction_cdl": [
+    "Shape(CB,BE,EC)",
+    "Shape(DE,EA,AD)",
+    "Shape(CE,ED)",
+    "Shape(BE,ED)",
+    "Collinear(BEA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),LengthOfLine(CE))",
+    "Equal(LengthOfLine(AD),LengthOfLine(DE))",
+    "Equal(MeasureOfAngle(ECB),116)",
+    "Equal(MeasureOfAngle(ADE),X)",
+    "Equal(MeasureOfAngle(CED),72)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(CBE)",
+    "isosceles_triangle_property_angle_equal(CBE)",
+    "triangle_property_angle_sum(CBE)",
+    "flat_angle(BEA)",
+    "angle_addition(BEC,CED)",
+    "angle_addition(BED,DEA)",
+    "isosceles_triangle_judgment_line_equal(DEA)",
+    "isosceles_triangle_property_angle_equal(DEA)",
+    "triangle_property_angle_sum(DEA)"
+  ]
+}

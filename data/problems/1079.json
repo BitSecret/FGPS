@@ -1,0 +1,33 @@
+{
+  "problem_id": 1079,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-1115",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the quadrilateral.",
+  "problem_img": "1079.png",
+  "construction_cdl": [
+    "Shape(CD,DI,IC)",
+    "Shape(ID,DA,AI)",
+    "Shape(IA,AB,BI)",
+    "Shape(CI,IB,BC)",
+    "Collinear(CIA)",
+    "Collinear(DIB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Kite(CDAB)",
+    "Equal(LengthOfLine(CI),10)",
+    "Equal(LengthOfLine(AI),10)",
+    "Equal(LengthOfLine(DI),13)",
+    "Equal(LengthOfLine(BI),13)",
+    "PerpendicularBetweenLine(DI,CI)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CDAB))",
+  "problem_answer": "260",
+  "theorem_seqs": [
+    "line_addition(CI,IA)",
+    "line_addition(DI,IB)",
+    "kite_area_formula_diagonal(CDAB)"
+  ]
+}

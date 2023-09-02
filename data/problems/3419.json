@@ -1,0 +1,61 @@
+{
+  "problem_id": 3419,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-968",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆外切等腰梯形ABCD的中位线EF=15cm,那么等腰梯形ABCD的周长等于()",
+  "problem_text_en": "As shown in the figure, the perpendicular bisector of the isosceles trapezoid ABCD circumscribed by the circle EF = N_0, then the perimeter of the isosceles trapezoid ABCD is equal to ()",
+  "problem_img": "3419.png",
+  "construction_cdl": [
+    "Shape(OQH,OHM,OMG,OGP,PO,OQ)",
+    "Shape(OPN,ONQ,QO,OP)",
+    "Shape(OQH,QF,FH)",
+    "Shape(OHM,HD,DM)",
+    "Shape(OMG,MA,AG)",
+    "Shape(OGP,GE,EP)",
+    "Shape(OPN,PE,EB,BN)",
+    "Shape(ONQ,NC,CF,FQ)",
+    "Collinear(AMD)",
+    "Collinear(BNC)",
+    "Collinear(AGEB)",
+    "Collinear(DHFC)",
+    "Collinear(EPOQF)",
+    "Cocircular(O,MGPNQH)"
+  ],
+  "text_cdl": [
+    "IsoscelesTrapezoid(ABCD)",
+    "IsCentreOfCircle(O,O)",
+    "IsMidsegmentOfQuadrilateral(EF,ABCD)",
+    "Equal(LengthOfLine(EF),15)"
+  ],
+  "image_cdl": [
+    "IsTangentOfCircle(AM,O)",
+    "IsTangentOfCircle(DM,O)",
+    "IsTangentOfCircle(AG,O)",
+    "IsTangentOfCircle(DH,O)",
+    "IsTangentOfCircle(BG,O)",
+    "IsTangentOfCircle(BN,O)",
+    "IsTangentOfCircle(CH,O)",
+    "IsTangentOfCircle(CN,O)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "midsegment_of_quadrilateral_property_length(EF,ABCD)",
+    "tangent_of_circle_property_length_equal(AM,AG,O)",
+    "tangent_of_circle_property_length_equal(DM,DH,O)",
+    "tangent_of_circle_property_length_equal(BG,BN,O)",
+    "tangent_of_circle_property_length_equal(CH,CN,O)",
+    "line_addition(AM,MD)",
+    "line_addition(BN,NC)",
+    "line_addition(AG,GE)",
+    "line_addition(AG,GB)",
+    "line_addition(AE,EB)",
+    "line_addition(GE,EB)",
+    "line_addition(DH,HF)",
+    "line_addition(DH,HC)",
+    "line_addition(DF,FC)",
+    "line_addition(HF,FC)",
+    "quadrilateral_perimeter_formula(ABCD)"
+  ]
+}

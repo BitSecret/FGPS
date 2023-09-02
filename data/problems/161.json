@@ -1,0 +1,37 @@
+{
+  "problem_id": 161,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-163",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure.",
+  "problem_img": "161.png",
+  "construction_cdl": [
+    "Shape(DF,FH,HD)",
+    "Shape(DH,HB,BD)",
+    "Shape(FE,EA,AB,BH,HF)",
+    "Collinear(FHB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(DH),6)",
+    "PerpendicularBetweenLine(DH,BH)",
+    "Equal(LengthOfLine(EF),6)",
+    "Equal(LengthOfLine(AE),6)",
+    "PerpendicularBetweenLine(FE,AE)",
+    "PerpendicularBetweenLine(EA,BA)",
+    "PerpendicularBetweenLine(AB,FB)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfTriangle(DFB),AreaOfQuadrilateral(FEAB)))",
+  "problem_answer": "54",
+  "theorem_seqs": [
+    "parallel_judgment_ipsilateral_internal_angle(EF,AB)",
+    "parallel_judgment_ipsilateral_internal_angle(AE,BF)",
+    "parallelogram_judgment_parallel_and_parallel(FEAB)",
+    "parallelogram_property_opposite_line_equal(EABF)",
+    "parallelogram_area_formula_sine(FEAB)",
+    "adjacent_complementary_angle(FHD,DHB)",
+    "altitude_of_triangle_judgment(DH,DFB)",
+    "triangle_area_formula_common(DFB)"
+  ]
+}

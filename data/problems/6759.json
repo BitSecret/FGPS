@@ -1,0 +1,33 @@
+{
+  "problem_id": 6759,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9835",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆O是△ABC的外接圆,∠A=68°,则∠OBC的大小是()",
+  "problem_text_en": "As shown in the figure, circle O is the circumscribe of △ABC, ∠A = N_0, then the size of ∠OBC is ()",
+  "problem_img": "6759.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(AC,OCA)",
+    "Shape(OB,BC,CO)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),68)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OBC))",
+  "problem_answer": "22",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

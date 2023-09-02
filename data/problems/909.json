@@ -1,0 +1,29 @@
+{
+  "problem_id": 909,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-938",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find \\angle 6.",
+  "problem_img": "909.png",
+  "construction_cdl": [
+    "Shape(VW,WX,XV)",
+    "Shape(XW,WZ,ZX)",
+    "Shape(XZ,ZY,YX)",
+    "Collinear(VXZ)",
+    "Collinear(WXY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ZYW),58)",
+    "Equal(MeasureOfAngle(XZY),65)",
+    "Equal(MeasureOfAngle(VWY),67)",
+    "Equal(MeasureOfAngle(XWZ),MeasureOfAngle(WZX))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ZXW))",
+  "problem_answer": "123",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(YXZ)",
+    "adjacent_complementary_angle(YXZ,ZXW)"
+  ]
+}

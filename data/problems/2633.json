@@ -1,0 +1,28 @@
+{
+  "problem_id": 2633,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-2766",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2633.png",
+  "construction_cdl": [
+    "Shape(DB,BA,AD)",
+    "Shape(BC,CA,AB)",
+    "Collinear(DBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),15)",
+    "Equal(LengthOfLine(AC),x)",
+    "Equal(LengthOfLine(CD),16)",
+    "Equal(LengthOfLine(BC),8)",
+    "PerpendicularBetweenLine(AB,CB)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "17",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ABC)",
+    "right_triangle_property_pythagorean(ABC)"
+  ]
+}

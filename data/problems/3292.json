@@ -1,0 +1,25 @@
+{
+  "problem_id": 3292,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-613",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC中,∠BAC=90°.将Rt△ABC绕点C按逆时针方向旋转48°得到Rt△A′B′C,点A在边B′C上,则∠B′的大小为()",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠BAC = N_0. Rotate Rt△ABC around point C by N_1 anticlockwise to get Rt△A′B′C. Point A is on B′C, then ∠B′ Size is ()",
+  "problem_img": "3292.png",
+  "construction_cdl": [
+    "Shape(DC,CA,AE,ED)",
+    "Shape(AC,CB,BA)",
+    "Shape(EA,AB)",
+    "Collinear(CAE)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(BA,CA)",
+    "Equal(MeasureOfAngle(ACB),48)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CBA))",
+  "problem_answer": "42",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BAC)"
+  ]
+}

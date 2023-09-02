@@ -1,0 +1,31 @@
+{
+  "problem_id": 3833,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1706",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示的扇形的圆心角度数分别为30°,40°,50°,则剩下扇形是圆的()",
+  "problem_text_en": "The central angles of the sectors as shown in the figure are N_0, N_1, N_2, and the remaining sector is () of the circle",
+  "problem_img": "3833.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(AO,OD,ODA)",
+    "Shape(DO,OC,OCD)",
+    "Shape(CO,OB,OBC)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AOD),30)",
+    "Equal(MeasureOfAngle(DOC),40)",
+    "Equal(MeasureOfAngle(COB),50)"
+  ],
+  "goal_cdl": "Value(Div(MeasureOfArc(OAB),360))",
+  "problem_answer": "2/3",
+  "theorem_seqs": [
+    "angle_addition(AOD,DOC)",
+    "angle_addition(AOC,COB)",
+    "arc_property_center_angle(OBA,O)",
+    "round_arc(OAB,OBA)"
+  ]
+}

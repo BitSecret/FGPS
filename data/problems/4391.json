@@ -1,0 +1,36 @@
+{
+  "problem_id": 4391,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3321",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=AC,以BC为直径画半圆交AB于E,交AC于D,⁀{CD}的度数为40°,则∠A的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, draw a semicircle with BC as the diameter to intersect AB at E, and it intersects AC at D, the degree of ⁀CD is N_0, then the degree of ∠A is ()",
+  "problem_img": "4391.png",
+  "construction_cdl": [
+    "Shape(DA,AE,ODE)",
+    "Shape(ODE,EB,BD)",
+    "Shape(BE,OEB)",
+    "Shape(BO,OC,CD,DB)",
+    "Shape(DC,OCD)",
+    "Collinear(AEB)",
+    "Collinear(ADC)",
+    "Collinear(BOC)",
+    "Cocircular(O,CDEB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(DBC),20)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAE))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(COB,O)",
+    "diameter_of_circle_property_right_angle(CDB,O)",
+    "triangle_property_angle_sum(BCD)",
+    "triangle_property_angle_sum(ABC)",
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)"
+  ]
+}

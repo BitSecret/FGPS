@@ -1,0 +1,35 @@
+{
+  "problem_id": 975,
+  "annotation": "NaZhu_2023-03-19",
+  "source": "Geometry3k-1004",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "975.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BA)",
+    "Shape(DC,CB,BD)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),8)",
+    "Equal(LengthOfLine(AB),x)",
+    "Equal(LengthOfLine(CB),y)",
+    "Equal(LengthOfLine(BD),z)",
+    "Equal(LengthOfLine(CD),3)",
+    "PerpendicularBetweenLine(CB,AB)",
+    "PerpendicularBetweenLine(AD,BD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "2*sqrt(22)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ADB,BDC)",
+    "mirror_similar_triangle_judgment_aa(BDC,ACB)",
+    "line_addition(CD,DA)",
+    "right_triangle_judgment_angle(CBA)",
+    "right_triangle_property_pythagorean(CBA)",
+    "mirror_similar_triangle_property_line_ratio(BDC,ACB)",
+    "mirror_similar_triangle_property_line_ratio(DCB,BAC)"
+  ]
+}

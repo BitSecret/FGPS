@@ -1,0 +1,31 @@
+{
+  "problem_id": 4053,
+  "annotation": "XiaokaiZhang_2023-05-07",
+  "source": "GeoQA-2358",
+  "problem_level": 1,
+  "problem_text_cn": "如图,小强自制了一个小孔成像装置,其中纸筒的长度为15cm,他准备了一支长为20cm的蜡烛,想要得到高度为4cm的像,蜡烛与纸筒的距离应该为()",
+  "problem_text_en": "As shown in the figure, Xiaoqiang made a small hole imaging device in which the length of the paper tube is N_0. He prepared a candle with a length of N_1. To get an image with a height of N_2, the distance between the candle and the paper tube should be ()",
+  "problem_img": "4053.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(EC,CD,DE)",
+    "Collinear(ACD)",
+    "Collinear(BCE)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AB,CB)",
+    "PerpendicularBetweenLine(DE,CE)",
+    "Equal(LengthOfLine(AB),20)",
+    "Equal(LengthOfLine(ED),4)",
+    "Equal(LengthOfLine(CE),15)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "vertical_angle(BCA,ECD)",
+    "similar_triangle_judgment_aa(ABC,DEC)",
+    "similar_triangle_property_line_ratio(ABC,DEC)",
+    "similar_triangle_property_line_ratio(CAB,CDE)"
+  ]
+}

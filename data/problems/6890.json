@@ -1,0 +1,43 @@
+{
+  "problem_id": 6890,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10121",
+  "problem_level": 1,
+  "problem_text_cn": "如图，△ABC内接于⊙O，∠A＝50°，E是边BC的中点，连接OE并延长，交⊙O于点D，连接BD，则∠D的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6890.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,BE,EO)",
+    "Shape(OE,EC,CO)",
+    "Shape(EB,BD,DE)",
+    "Shape(OBD,DB)",
+    "Shape(CE,ED,ODC)",
+    "Collinear(BEC)",
+    "Collinear(OED)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsMidpointOfLine(E,BC)",
+    "Equal(MeasureOfAngle(CAB),50)",
+    "Equal(MeasureOfAngle(COE),MeasureOfAngle(EOB))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BDO))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_center_angle(ODC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(ODC,B)",
+    "angle_addition(COD,DOB)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OBD)",
+    "isosceles_triangle_property_angle_equal(OBD)",
+    "triangle_property_angle_sum(EBD)",
+    "triangle_property_angle_sum(OBD)"
+  ]
+}

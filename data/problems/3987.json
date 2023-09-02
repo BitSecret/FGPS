@@ -1,0 +1,32 @@
+{
+  "problem_id": 3987,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1934",
+  "problem_level": 1,
+  "problem_text_cn": "一条排水管的截面如图所示,已知排水管的截面半径OB=5,截面圆圆心为O,当水面宽AB=8时,水位高是多少()",
+  "problem_text_en": "The section of a drainage pipe is shown in the figure. It is known that the radius of the section of the drainage pipe OB = N_0 and the center of the circular section is O. When the width of the water surface AB = N_1, what is the height of water level ()",
+  "problem_img": "3987.png",
+  "construction_cdl": [
+    "Shape(OC,CB,BO)",
+    "Shape(CA,OAB,BC)",
+    "Shape(OB,OBA,AC,CO)",
+    "Collinear(ACB)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(OB),5)",
+    "PerpendicularBetweenLine(OC,BC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(OC))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ACO,OCB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(OCB)",
+    "right_triangle_property_pythagorean(OCB)"
+  ]
+}

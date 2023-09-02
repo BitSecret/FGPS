@@ -1,0 +1,33 @@
+{
+  "problem_id": 339,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-345",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "339.png",
+  "construction_cdl": [
+    "Shape(LG,GH,AHL)",
+    "Shape(HG,GJ,AJH)",
+    "Shape(KG,GL,ALK)",
+    "Shape(JG,GK,KJ)",
+    "Shape(JK,AKJ)",
+    "Collinear(LGJ)",
+    "Collinear(HGK)",
+    "Cocircular(A,HLKJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(AJH),47)",
+    "Equal(MeasureOfAngle(KGL),x)",
+    "Equal(MeasureOfArc(ALK),116)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "81.5",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ALK,J)",
+    "arc_property_circumference_angle_external(AJH,K)",
+    "triangle_property_angle_sum(JGK)",
+    "adjacent_complementary_angle(JGK,KGL)"
+  ]
+}

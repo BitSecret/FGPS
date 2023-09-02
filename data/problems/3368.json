@@ -1,0 +1,37 @@
+{
+  "problem_id": 3368,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-856",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BM是△ABC的角平分线S,D是BC边上的一点,连接AD,使AD=DC,且∠BAD=120°,则∠AMB=()",
+  "problem_text_en": "As shown in the figure, BM is the angular bisector of △ABC, D is a point on the side of BC, connect AD and let AD = DC, and ∠BAD = N_0, then ∠AMB = ()",
+  "problem_img": "3368.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OM,MA)",
+    "Shape(OB,BD,DO)",
+    "Shape(OD,DC,CM,MO)",
+    "Collinear(AOD)",
+    "Collinear(AMC)",
+    "Collinear(BDC)",
+    "Collinear(BOM)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(BM,ABC)",
+    "Equal(LengthOfLine(AD),LengthOfLine(DC))",
+    "Equal(MeasureOfAngle(DAB),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BMA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(DCA)",
+    "isosceles_triangle_property_angle_equal(DCA)",
+    "triangle_property_angle_sum(DCA)",
+    "adjacent_complementary_angle(BDA,ADC)",
+    "angle_addition(ABO,OBD)",
+    "triangle_property_angle_sum(ABD)",
+    "triangle_property_angle_sum(MBC)",
+    "adjacent_complementary_angle(CMB,BMA)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 567,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-580",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "A C D F \\sim V W Y Z. Find x.",
+  "problem_img": "567.png",
+  "construction_cdl": [
+    "Shape(AF,FD,DC,CA)",
+    "Shape(YW,WV,VZ,ZY)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenQuadrilateral(AFDC,VZYW)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(FA),12)",
+    "Equal(LengthOfLine(DC),9)",
+    "Equal(LengthOfLine(FD),x)",
+    "Equal(LengthOfLine(YZ),10)",
+    "Equal(LengthOfLine(YW),6)",
+    "Equal(LengthOfLine(VZ),3*y-1)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_line_ratio(FDCA,ZYWV)",
+    "similar_quadrilateral_property_line_ratio(DCAF,YWVZ)"
+  ]
+}

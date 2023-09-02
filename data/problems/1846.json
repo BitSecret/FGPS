@@ -1,0 +1,27 @@
+{
+  "problem_id": 1846,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1914",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the sector. Round to the nearest tenth.",
+  "problem_img": "1846.png",
+  "construction_cdl": [
+    "Shape(CB,BE,BEC)",
+    "Shape(EB,BC,BCE)",
+    "Cocircular(B,EC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(EB),3)",
+    "Equal(MeasureOfAngle(CBE),32)",
+    "IsCentreOfCircle(B,B)"
+  ],
+  "goal_cdl": "Value(AreaOfSector(BEC))",
+  "problem_answer": "2.513",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(BE,B)",
+    "arc_property_center_angle(BEC,B)",
+    "sector_area_formula(BEC)"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "problem_id": 272,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-275",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot Z, \\angle W Z X \\cong \\angle X Z Y, m \\angle V Z U = 4 x, m \\angle U Z Y = 2 x + 24, and V Y and W U are diameters. Find m \\widehat U Y.",
+  "problem_img": "272.png",
+  "construction_cdl": [
+    "Shape(ZVW,WZ,ZV)",
+    "Shape(ZWX,XZ,ZW)",
+    "Shape(ZXY,YZ,ZX)",
+    "Shape(ZYU,UZ,ZY)",
+    "Shape(ZUV,VZ,ZU)",
+    "Collinear(VZY)",
+    "Collinear(WZU)",
+    "Cocircular(Z,VWXYU)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(XZW),MeasureOfAngle(YZX))",
+    "Equal(MeasureOfAngle(VZU),4*x)",
+    "Equal(MeasureOfAngle(UZY),2*x+24)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(Z,Z)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(ZYU))",
+  "problem_answer": "76",
+  "theorem_seqs": [
+    "flat_angle(VZY)",
+    "angle_addition(VZU,UZY)",
+    "arc_property_center_angle(ZYU,Z)"
+  ]
+}

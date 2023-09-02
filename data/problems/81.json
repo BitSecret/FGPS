@@ -1,0 +1,26 @@
+{
+  "problem_id": 81,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-82",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is m \\angle E F G?",
+  "problem_img": "81.png",
+  "construction_cdl": [
+    "Shape(GF,FE)",
+    "Shape(FD,DE,EF)",
+    "Collinear(GFD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(GFE),9*x+7)",
+    "Equal(MeasureOfAngle(FDE),5*x)",
+    "Equal(MeasureOfAngle(DEF),5*x)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(GFE))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(GFE,EFD)",
+    "triangle_property_angle_sum(FDE)"
+  ]
+}

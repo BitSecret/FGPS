@@ -1,0 +1,23 @@
+{
+  "problem_id": 5553,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6800",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一辆小车沿倾斜角为α的斜坡向上行驶13米,已知cosα$=\\frac{12}{13}$,则小车上升的高度是()",
+  "problem_text_en": "As shown in the figure, a trolley drives up N_0 along a slope with an inclination angle of α, and it is known that cosα$=\\frac{N_1}{N_2}$, then the ascent height of the trolley is ()",
+  "problem_img": "5553.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [
+    "RightTriangle(BCA)",
+    "Equal(LengthOfLine(AB),13)",
+    "Equal(Div(LengthOfLine(AB),LengthOfLine(BC)),13/12)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CA))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

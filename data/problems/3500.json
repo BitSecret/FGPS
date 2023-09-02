@@ -1,0 +1,34 @@
+{
+  "problem_id": 3500,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1105",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C均在⊙O上,若∠A=66°,则∠OCB的度数是()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are all on ⊙O, if ∠A = N_0, then the degree of ∠OCB is ()",
+  "problem_img": "3500.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(OC,CA,AB,BO)",
+    "Shape(CO,OB,BC)",
+    "Shape(OBC,CB)",
+    "Shape(OAB,BA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),66)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCO))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

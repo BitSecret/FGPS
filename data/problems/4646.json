@@ -1,0 +1,44 @@
+{
+  "problem_id": 4646,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3874",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA,PB分别切⊙O于点A,B,PA=12,CD切⊙O于点E,交PA,PB于点C,D两点,则△PCD的周长是()",
+  "problem_text_en": "As shown in the figure, PA and PB respectively tangent ⊙O at points A, B, PA = N_0, CD tangents to ⊙O at point E, and intersects PA and PB at points C, D, then the perimeter of △PCD is ()",
+  "problem_img": "4646.png",
+  "construction_cdl": [
+    "Shape(PC,CE,ED,DP)",
+    "Shape(EC,CA,OEA)",
+    "Shape(BD,DE,OBE)",
+    "Shape(OAB,BO,OA)",
+    "Shape(OB,OBE,OEA,AO)",
+    "Collinear(PCA)",
+    "Collinear(PDB)",
+    "Collinear(CED)",
+    "Cocircular(O,BEA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "IsTangentOfCircle(CE,O)",
+    "IsTangentOfCircle(DE,O)",
+    "Equal(LengthOfLine(PA),12)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(PCD))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "tangent_of_circle_judgment_perpendicular(DB,O,O)",
+    "tangent_of_circle_judgment_perpendicular(CA,O,O)",
+    "tangent_of_circle_property_length_equal(PA,PB,O)",
+    "tangent_of_circle_property_length_equal(CA,CE,O)",
+    "tangent_of_circle_property_length_equal(DE,DB,O)",
+    "line_addition(PC,CA)",
+    "line_addition(PD,DB)",
+    "line_addition(CE,ED)",
+    "triangle_perimeter_formula(PCD)"
+  ]
+}

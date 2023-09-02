@@ -1,0 +1,36 @@
+{
+  "problem_id": 2311,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2419",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The rectangle is inscribed into the circle. Find the exact circumference of the circle.",
+  "problem_img": "2311.png",
+  "construction_cdl": [
+    "Shape(ECF,FC)",
+    "Shape(EFG,GF)",
+    "Shape(EGA,AG)",
+    "Shape(EAC,CA)",
+    "Shape(FG,GA,AC,CF)",
+    "Shape(FE,EA,AC,CF)",
+    "Collinear(FEA)",
+    "Cocircular(E,FGCA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(FA,E)",
+    "IsCentreOfCircle(E,E)",
+    "Rectangle(FGAC)",
+    "Equal(LengthOfLine(CF),8)",
+    "Equal(LengthOfLine(AC),6)"
+  ],
+  "goal_cdl": "Value(PerimeterOfCircle(E))",
+  "problem_answer": "10*pi",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ACF)",
+    "right_triangle_property_pythagorean(ACF)",
+    "diameter_of_circle_property_length_equal(FA,E)",
+    "circle_property_length_of_radius_and_diameter(E)",
+    "circle_perimeter_formula(E)"
+  ]
+}

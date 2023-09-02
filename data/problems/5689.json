@@ -1,0 +1,31 @@
+{
+  "problem_id": 5689,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7415",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,D、E分别是边AB、AC上的点,且DE∥BC,若△ADE与△ABC的周长之比为2:3,AD=4,则DB的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, D and E are points on the edges AB and AC respectively, and DE ∥ BC, if the ratio of the perimeter of △ADE to △ABC is N_0:N_1,AD=N_2,then the length of DB is ()",
+  "problem_img": "5689.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(PerimeterOfTriangle(ADE),PerimeterOfTriangle(ABC)),2/3)",
+    "Equal(LengthOfLine(AD),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DB))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_perimeter_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "line_addition(AD,DB)"
+  ]
+}

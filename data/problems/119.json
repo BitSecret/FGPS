@@ -1,0 +1,23 @@
+{
+  "problem_id": 119,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-121",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the length of line XY.",
+  "problem_img": "119.png",
+  "construction_cdl": [
+    "Shape(XW,WY,YX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(YX),4*x+5)",
+    "Equal(LengthOfLine(WY),6*x+3)",
+    "Equal(LengthOfLine(WX),9*x)",
+    "Equal(LengthOfLine(XW),LengthOfLine(WY))",
+    "Equal(LengthOfLine(WY),LengthOfLine(YX))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(XY))",
+  "problem_answer": "9",
+  "theorem_seqs": []
+}

@@ -1,0 +1,42 @@
+{
+  "problem_id": 2371,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2486",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Circle O has a radius of 13 inches. Radius O B is perpendicular to chord C D which is 24 inches long. If m \\widehat C D = 134, find m \\widehat C B.",
+  "problem_img": "2371.png",
+  "construction_cdl": [
+    "Shape(OBC,CX,XB)",
+    "Shape(CO,OX,XC)",
+    "Shape(OCD,DO,OC)",
+    "Shape(DX,XO,OD)",
+    "Shape(ODB,BX,XD)",
+    "Collinear(CXD)",
+    "Collinear(OXB)",
+    "Cocircular(O,CDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),13)",
+    "PerpendicularBetweenLine(BX,DX)",
+    "Equal(LengthOfLine(CD),2)",
+    "Equal(MeasureOfArc(ODC),134)",
+    "PerpendicularBetweenLine(BX,DX)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(OBC))",
+  "problem_answer": "67",
+  "theorem_seqs": [
+    "arc_property_center_angle(ODC,O)",
+    "arc_property_center_angle(OBC,O)",
+    "adjacent_complementary_angle(CXB,BXD)",
+    "adjacent_complementary_angle(OXC,CXB)",
+    "adjacent_complementary_angle(BXD,DXO)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "mirror_congruent_triangle_judgment_hl(OXC,ODX)",
+    "mirror_congruent_triangle_property_angle_equal(OXC,ODX)",
+    "angle_addition(COX,XOD)"
+  ]
+}

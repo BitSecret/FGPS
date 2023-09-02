@@ -1,0 +1,37 @@
+{
+  "problem_id": 5671,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7374",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D、E、Q分别在边AB、AC、BC上,且DE∥BC,AQ交DE于点P,已知\\frac{DP}{BQ}=\\frac{3}{5},则\\frac{PE}{QC}=()",
+  "problem_text_en": "As shown in the figure, in △ABC, vertices D, E, and Q are on the edges AB, AC, and BC respectively, and DE ∥ BC, AQ intersects DE at point P, given \\frac{DP}{BQ}=\\frac{N_0}{N_1}, then \\frac {PE}{QC} = ( )",
+  "problem_img": "5671.png",
+  "construction_cdl": [
+    "Shape(AD,DP,PA)",
+    "Shape(AP,PE,EA)",
+    "Shape(PD,DB,BQ,QP)",
+    "Shape(EP,PQ,QC,CE)",
+    "Collinear(DPE)",
+    "Collinear(BQC)",
+    "Collinear(ADB)",
+    "Collinear(AEC)",
+    "Collinear(APQ)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(LengthOfLine(DP),LengthOfLine(BQ)),3/5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(PE),LengthOfLine(QC)))",
+  "problem_answer": "3/5",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(PAD,QAB)",
+    "similar_triangle_judgment_aa(PEA,QCA)",
+    "similar_triangle_property_line_ratio(ADP,ABQ)",
+    "similar_triangle_property_line_ratio(DPA,BQA)",
+    "similar_triangle_property_line_ratio(APE,AQC)",
+    "similar_triangle_property_line_ratio(EAP,CAQ)"
+  ]
+}

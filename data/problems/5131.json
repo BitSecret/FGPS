@@ -1,0 +1,28 @@
+{
+  "problem_id": 5131,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-4994",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB⊥BC,CD⊥BC,AD∥BC,若AB=3cm,AD=4cm,则BC的长为()",
+  "problem_text_en": "As shown in the figure, AB ⊥ BC, CD ⊥ BC, AD ∥ BC, if AB = N_0, AD = N_1, then the length of BC is ()",
+  "problem_img": "5131.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AD,BC)",
+    "PerpendicularBetweenLine(AB,CB)",
+    "PerpendicularBetweenLine(CD,AD)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(AD),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(AD,BC)",
+    "parallel_property_ipsilateral_internal_angle(CB,DA)",
+    "parallelogram_judgment_angle_and_angle(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)"
+  ]
+}

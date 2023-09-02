@@ -1,0 +1,30 @@
+{
+  "problem_id": 1370,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-1418",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the quadrilateral.",
+  "problem_img": "1370.png",
+  "construction_cdl": [
+    "Shape(IF,FB,BH,HI)",
+    "Shape(IH,HC,CI)",
+    "Collinear(BHC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(IF),16)",
+    "Equal(LengthOfLine(FB),14)",
+    "Equal(LengthOfLine(IH),12)",
+    "Equal(LengthOfLine(BC),24)",
+    "PerpendicularBetweenLine(BH,IH)",
+    "ParallelBetweenLine(FI,BC)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(IFBC))",
+  "problem_answer": "240",
+  "theorem_seqs": [
+    "trapezoid_judgment_parallel(CIFB)",
+    "altitude_of_quadrilateral_judgment_right_vertex(IH,FBCI)",
+    "trapezoid_area_formula(FBCI)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 5718,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7494",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE为△ABC的中位线,△ADE的面积是3,则四边形BCED的面积为()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE is the median line of △ABC, and the area of △ADE is N_0, then the area of quadrilateral BCED is ()",
+  "problem_img": "5718.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "IsMidsegmentOfTriangle(DE,ABC)",
+    "Equal(AreaOfTriangle(ADE),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(AreaOfTriangle(ABC),AreaOfTriangle(ADE)))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "midsegment_of_triangle_property_parallel(DE,ABC)",
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_judgment_aa(ABC,ADE)",
+    "line_addition(AD,DB)",
+    "line_addition(AE,EC)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ABC,ADE)",
+    "similar_triangle_property_line_ratio(BCA,DEA)",
+    "similar_triangle_property_line_ratio(CAB,EAD)",
+    "similar_triangle_property_area_square_ratio(ADE,ABC)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 696,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-715",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "696.png",
+  "construction_cdl": [
+    "Shape(EFB,BF)",
+    "Shape(BD,DC,EBC)",
+    "Shape(GA,AF,EGF)",
+    "Shape(EBC,CG,EGF,FB)",
+    "Shape(ECG,GC)",
+    "Collinear(DBFA)",
+    "Collinear(AGC)",
+    "Cocircular(E,BCGF)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(DC,E)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(E,E)",
+    "Equal(LengthOfLine(CG),12.25)",
+    "Equal(LengthOfLine(AG),y)",
+    "Equal(LengthOfLine(AF),2*x)",
+    "Equal(LengthOfLine(BF),24)",
+    "Equal(LengthOfLine(DC),9)",
+    "Equal(LengthOfLine(BD),x)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "8.623",
+  "theorem_seqs": [
+    "line_addition(DB,BF)",
+    "circle_property_circular_power_tangent_and_segment_line(DC,DBF,E)",
+    "line_addition(AF,FB)",
+    "line_addition(AG,GC)",
+    "circle_property_circular_power_segment_and_segment_line(AFB,AGC,E)"
+  ]
+}

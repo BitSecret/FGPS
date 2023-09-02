@@ -1,0 +1,27 @@
+{
+  "problem_id": 3954,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1880",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C都在⊙O上,若∠BAC=36°,则∠BOC的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are all on ⊙O, if ∠BAC = N_0, then the degree of ∠BOC is ()",
+  "problem_img": "3954.png",
+  "construction_cdl": [
+    "Shape(OBC,CO,OB)",
+    "Shape(OC,CA,AB,BO)",
+    "Shape(OCA,AC)",
+    "Shape(OAB,BA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),36)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "72",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)"
+  ]
+}

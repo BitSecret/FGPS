@@ -1,0 +1,25 @@
+{
+  "problem_id": 1901,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1976",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x so that the quadrilateral is a parallelogram.",
+  "problem_img": "1901.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AD,DB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(BCAD)",
+    "Equal(LengthOfLine(DB),2*x+9)",
+    "Equal(MeasureOfAngle(DBC),106)",
+    "Equal(MeasureOfAngle(CAD),3*y+19)",
+    "Equal(LengthOfLine(AC),x+11)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(CADB)"
+  ]
+}

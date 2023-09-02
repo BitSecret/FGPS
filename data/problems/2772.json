@@ -1,0 +1,29 @@
+{
+  "problem_id": 2772,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2919",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "One diagonal of a rhombus is twice as long as the other diagonal. If the area of the rhombus is 169 square millimeters, what are the lengths of the diagonals?",
+  "problem_img": "2772.png",
+  "construction_cdl": [
+    "Shape(AO,OC,CA)",
+    "Shape(CO,OX,XC)",
+    "Shape(XO,OB,BX)",
+    "Shape(OA,AB,BO)",
+    "Collinear(COB)",
+    "Collinear(AOX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rhombus(ABXC)",
+    "Equal(AreaOfQuadrilateral(ABXC),169)",
+    "Equal(LengthOfLine(BC),x)",
+    "Equal(LengthOfLine(AX),2*x)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AX))",
+  "problem_answer": "26",
+  "theorem_seqs": [
+    "kite_area_formula_diagonal(ABXC)"
+  ]
+}

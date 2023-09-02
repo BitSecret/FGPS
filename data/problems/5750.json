@@ -1,0 +1,37 @@
+{
+  "problem_id": 5750,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7587",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠ABC=90°,DE垂直平分AC,垂足为O,AD∥BC,且AB=3,BC=4,则AD的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠ABC = N_0, DE bisects AC perpendicularly, the vertical foot is O, AD ∥ BC, and AB = N_1, BC = N_2, then the length of AD is ()",
+  "problem_img": "5750.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(OE,EC,CO)",
+    "Shape(DO,OC,CD)",
+    "Collinear(AOC)",
+    "Collinear(EOD)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABC),90)",
+    "IsPerpendicularBisectorOfLine(DO,AC)",
+    "ParallelBetweenLine(AD,BC)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "25/8",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ABC)",
+    "right_triangle_property_pythagorean(ABC)",
+    "line_addition(AO,OC)",
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "mirror_similar_triangle_judgment_aa(ABC,DAO)",
+    "mirror_similar_triangle_property_line_ratio(ABC,DAO)",
+    "mirror_similar_triangle_property_line_ratio(BCA,ODA)"
+  ]
+}

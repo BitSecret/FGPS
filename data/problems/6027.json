@@ -1,0 +1,33 @@
+{
+  "problem_id": 6027,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8510",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知⊙O的弦AB、CD相交于点E,⁀{AC}的度数为60°,⁀{BD}的度数为100°,则∠AEC等于()",
+  "problem_text_en": "As shown in the figure, it is known that the chords AB and CD of ⊙O intersect at point E, the degree of ⁀AC is N_0, and the degree of ⁀BD is N_1, then ∠AEC is equal to ()",
+  "problem_img": "6027.png",
+  "construction_cdl": [
+    "Shape(OBC,CE,EB)",
+    "Shape(OCA,AE,EC)",
+    "Shape(AD,DE,EA)",
+    "Shape(ODB,BE,ED)",
+    "Shape(OAD,DA)",
+    "Collinear(DEC)",
+    "Collinear(AEB)",
+    "Cocircular(O,DBCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfArc(OCA),60)",
+    "Equal(MeasureOfArc(ODB),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AEC))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODB,A)",
+    "arc_property_circumference_angle_external(OCA,D)",
+    "triangle_property_angle_sum(ADE)",
+    "adjacent_complementary_angle(DEA,AEC)"
+  ]
+}

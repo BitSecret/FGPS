@@ -1,0 +1,38 @@
+{
+  "problem_id": 2023,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2109",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y. Round to the nearest tenth, if necessary.",
+  "problem_img": "2023.png",
+  "construction_cdl": [
+    "Shape(BCD,DF,FC)",
+    "Shape(FD,BDA,AF)",
+    "Shape(CF,FB,BC)",
+    "Shape(BE,BEC,CB)",
+    "Shape(BF,FA,BAE,EB)",
+    "Collinear(DFBE)",
+    "Collinear(CFA)",
+    "Cocircular(B,CDAE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(B,B)",
+    "Equal(LengthOfLine(CF),y)",
+    "Equal(LengthOfLine(FD),2)",
+    "Equal(LengthOfLine(BE),5)",
+    "PerpendicularBetweenLine(BF,AF)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CFB,BFA)",
+    "radius_of_circle_property_length_equal(BC,B)",
+    "radius_of_circle_property_length_equal(BD,B)",
+    "radius_of_circle_property_length_equal(BE,B)",
+    "right_triangle_judgment_angle(CFB)",
+    "line_addition(DF,FB)",
+    "right_triangle_property_pythagorean(CFB)"
+  ]
+}

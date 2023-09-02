@@ -1,0 +1,52 @@
+{
+  "problem_id": 4874,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4389",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠A=50°,以BC为直径作⊙O,分别交AB、AC于D、E两点,分别过D、E两点作⊙O的切线,两条切线交于P点,则∠P=()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠A = N_0, taking BC as the diameter to draw ⊙O, and it intersects AB and AC at two points D and E respectively, crossing D and E to draw the tangent of ⊙O, and the two tangents intersect at P point, then ∠P = ()",
+  "problem_img": "4874.png",
+  "construction_cdl": [
+    "Shape(AD,DP,PE,EA)",
+    "Shape(EP,PD,OED)",
+    "Shape(BD,ODB)",
+    "Shape(DB,BO,OD)",
+    "Shape(DO,OE,OED)",
+    "Shape(EO,OC,CE)",
+    "Shape(EC,OCE)",
+    "Shape(CO,OB,OBC)",
+    "Collinear(ADB)",
+    "Collinear(CEA)",
+    "Collinear(BOC)",
+    "Cocircular(O,BCED)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PD,O)",
+    "IsTangentOfCircle(PE,O)",
+    "Equal(MeasureOfAngle(EAD),50)",
+    "IsoscelesTriangle(ABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EPD))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PD,O,O)",
+    "tangent_of_circle_property_perpendicular(PE,O,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(ODB)",
+    "isosceles_triangle_judgment_line_equal(OCE)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ODB)",
+    "isosceles_triangle_property_angle_equal(OCE)",
+    "triangle_property_angle_sum(DBO)",
+    "triangle_property_angle_sum(EOC)",
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(DOE,EOC)",
+    "adjacent_complementary_angle(BOD,DOC)",
+    "quadrilateral_property_angle_sum(PDOE)"
+  ]
+}

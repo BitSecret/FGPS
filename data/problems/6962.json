@@ -1,0 +1,35 @@
+{
+  "problem_id": 6962,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10216",
+  "problem_level": 1,
+  "problem_text_cn": "如图，A，B，C是⊙O上的三个点，∠AOB＝60°，∠B＝55°，则∠A的度数是（）",
+  "problem_text_en": "",
+  "problem_img": "6962.png",
+  "construction_cdl": [
+    "Shape(OCA,AO,OC)",
+    "Shape(OA,AD,DO)",
+    "Shape(OD,DC,CO)",
+    "Shape(DB,BC,CD)",
+    "Shape(OBC,CB)",
+    "Shape(OAB,BD,DA)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),60)",
+    "Equal(MeasureOfAngle(OBC),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAC))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "triangle_property_angle_sum(DBC)",
+    "vertical_angle(ADO,CDB)",
+    "triangle_property_angle_sum(OAD)"
+  ]
+}

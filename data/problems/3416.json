@@ -1,0 +1,44 @@
+{
+  "problem_id": 3416,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-963",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AE、AD和BC分别切⊙O于点E、D、F,如果AD=20,则△ABC的周长为()",
+  "problem_text_en": "As shown in the figure, AE, AD, and BC tangent ⊙O to vertices E, D, and F respectively. If AD = N_0, then the perimeter of △ABC is ()",
+  "problem_img": "3416.png",
+  "construction_cdl": [
+    "Shape(OED,DO,OE)",
+    "Shape(ODF,OFE,EO,OD)",
+    "Shape(ODF,DC,CF)",
+    "Shape(OFE,FB,BE)",
+    "Shape(AB,BF,FC,CA)",
+    "Collinear(ACD)",
+    "Collinear(ABE)",
+    "Collinear(BFC)",
+    "Cocircular(O,DFE)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(AD,O)",
+    "IsTangentOfCircle(AE,O)",
+    "IsTangentOfCircle(CF,O)",
+    "IsTangentOfCircle(BF,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AD),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AD,O,O)",
+    "tangent_of_circle_property_perpendicular(AE,O,O)",
+    "tangent_of_circle_judgment_perpendicular(CD,O,O)",
+    "tangent_of_circle_judgment_perpendicular(BE,O,O)",
+    "tangent_of_circle_property_length_equal(AD,AE,O)",
+    "tangent_of_circle_property_length_equal(CF,CD,O)",
+    "tangent_of_circle_property_length_equal(BF,BE,O)",
+    "line_addition(AC,CD)",
+    "line_addition(AB,BE)",
+    "line_addition(BF,FC)",
+    "triangle_perimeter_formula(ABC)"
+  ]
+}

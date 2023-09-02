@@ -1,0 +1,28 @@
+{
+  "problem_id": 1348,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-1396",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If E N = 13, what is the diameter of the circle?",
+  "problem_img": "1348.png",
+  "construction_cdl": [
+    "Shape(NED,DN,NE)",
+    "Shape(NDC,CN,ND)",
+    "Shape(NCF,FN,NC)",
+    "Shape(NFE,EF)",
+    "Shape(NF,FE,EN)",
+    "Cocircular(N,DCFE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(N,N)",
+    "Equal(LengthOfLine(EN),13)"
+  ],
+  "goal_cdl": "Value(DiameterOfCircle(N))",
+  "problem_answer": "26",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(NE,N)",
+    "circle_property_length_of_radius_and_diameter(N)"
+  ]
+}

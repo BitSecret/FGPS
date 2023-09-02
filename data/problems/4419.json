@@ -1,0 +1,30 @@
+{
+  "problem_id": 4419,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3369",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C都在⊙O上,若∠AOB=76°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are all on ⊙O, if ∠AOB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4419.png",
+  "construction_cdl": [
+    "Shape(OA,AE,EO)",
+    "Shape(CE,EB,BC)",
+    "Shape(AO,OE,EC,OCA)",
+    "Shape(BE,EA,OAB)",
+    "Shape(CB,OBC)",
+    "Collinear(OEB)",
+    "Collinear(AEC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),76)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "38",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

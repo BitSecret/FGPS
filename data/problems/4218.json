@@ -1,0 +1,27 @@
+{
+  "problem_id": 4218,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-2970",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB、AD是⊙O的弦,∠BOD=50°,则∠BAD的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that AB and AD are the chords of ⊙O, ∠BOD = N_0, then the degree of ∠BAD is ()",
+  "problem_img": "4218.png",
+  "construction_cdl": [
+    "Shape(OBD,DO,OB)",
+    "Shape(ODA,AD)",
+    "Shape(OAB,BO)",
+    "Shape(DA,AB,BO,OD)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DOB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_external(OBD,A)"
+  ]
+}

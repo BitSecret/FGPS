@@ -1,0 +1,27 @@
+{
+  "problem_id": 5237,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5305",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD中,∠ABC=3∠CBD,∠ADC=3∠CDB,∠C=130°,则∠A的度数是()",
+  "problem_text_en": "As shown in the figure, in the quadrilateral ABCD, ∠ABC = N_0 ∠CBD, ∠ADC = N_1 ∠CDB, ∠C = N_2, then the degree of ∠A is ()",
+  "problem_img": "5237.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(CD,DB,BC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABC),Mul(3,MeasureOfAngle(DBC)))",
+    "Equal(MeasureOfAngle(CDA),Mul(3,MeasureOfAngle(CDB)))",
+    "Equal(MeasureOfAngle(BCD),130)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABD)",
+    "triangle_property_angle_sum(CDB)",
+    "angle_addition(ABD,DBC)",
+    "angle_addition(CDB,BDA)"
+  ]
+}

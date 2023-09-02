@@ -1,0 +1,29 @@
+{
+  "problem_id": 4679,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3958",
+  "problem_level": 1,
+  "problem_text_cn": "如图,等边△ABC的边长为2,⊙A的半径为1,D是BC上的动点,DE与⊙A相切于E,DE的最小值是()",
+  "problem_text_en": "As shown in the figure, the edge length of equilateral △ABC is N_0, the radius of ⊙A is N_1, D is the moving point on BC, DE is tangent to  ⊙A at E, and the minimum value of DE is ()",
+  "problem_img": "4679.png",
+  "construction_cdl": [
+    "Shape(AE,AED,DA)",
+    "Shape(AED,EH,HD)",
+    "Collinear(ADH)",
+    "Cocircular(A,ED)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "IsTangentOfCircle(HE,A)",
+    "Equal(LengthOfLine(AE),1)",
+    "Equal(LengthOfLine(AH),sqrt(3))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EH))",
+  "problem_answer": "sqrt(2)",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(HE,A,A)",
+    "right_triangle_judgment_angle(AEH)",
+    "right_triangle_property_pythagorean(AEH)"
+  ]
+}

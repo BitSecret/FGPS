@@ -1,0 +1,35 @@
+{
+  "problem_id": 6064,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8576",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,OD⊥AC于点D,BC=6cm,则OD等于()cm．",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, OD ⊥ AC at point D, BC = N_0, then OD is equal to ().",
+  "problem_img": "6064.png",
+  "construction_cdl": [
+    "Shape(OCA,AD,DC)",
+    "Shape(DA,AO,OD)",
+    "Shape(CD,DO,OB,BC)",
+    "Shape(OBC,CB)",
+    "Shape(OAB,BO,OA)",
+    "Collinear(AOB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "PerpendicularBetweenLine(CD,OD)",
+    "Equal(LengthOfLine(BC),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OD))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OD,CA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "midsegment_of_triangle_judgment_midpoint(OD,ABC)",
+    "midsegment_of_triangle_property_length(OD,ABC)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 426,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-434",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x in the figure.",
+  "problem_img": "426.png",
+  "construction_cdl": [
+    "Shape(FA,AE,EB,BF)",
+    "Shape(BE,EC,CB)",
+    "Collinear(FBC)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(BFA),3*x-15)",
+    "Equal(MeasureOfAngle(ECB),y^2)",
+    "Equal(MeasureOfAngle(FAE),68)",
+    "Equal(MeasureOfAngle(BEC),2*x)",
+    "ParallelBetweenLine(AF,EB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "34",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(AF,EB,C)"
+  ]
+}

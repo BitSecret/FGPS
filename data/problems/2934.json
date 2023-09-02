@@ -1,0 +1,36 @@
+{
+  "problem_id": 2934,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-113",
+  "problem_level": 1,
+  "problem_text_cn": "图1为某四边形ABCD纸片,其中∠B=70°,∠C=80°．若将CD迭合在AB上,出现折线MN,再将纸片展开后,M、N两点分别在AD、BC上,如图2所示,则∠MNB的度数为()度.",
+  "problem_text_en": "Figure 1 shows a quadrilateral ABCD paper sheet, where ∠B = N_0, ∠C = N_1. If CD is superimposed on AB, a fold line MN appears, and then after the paper is unfolded, the two points M and N are on AD and BC respectively, as shown in Figure 2, then the degree of ∠MNB is () degree",
+  "problem_img": "2934.png",
+  "construction_cdl": [
+    "Shape(AE,EM,MA)",
+    "Shape(EF,FN,NM,ME)",
+    "Shape(MN,NC,CD,DM)",
+    "Shape(FB,BN,NF)",
+    "Collinear(AEFB)",
+    "Collinear(AMD)",
+    "Collinear(BNC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(FBN),70)",
+    "Equal(MeasureOfAngle(NCD),80)",
+    "Equal(MeasureOfAngle(EFN),MeasureOfAngle(NCD))",
+    "Equal(MeasureOfAngle(MEF),MeasureOfAngle(CDM))",
+    "IsBisectorOfAngle(NM,FNC)",
+    "IsBisectorOfAngle(MN,DME)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BNM))",
+  "problem_answer": "95",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EFN,NFB)",
+    "triangle_property_angle_sum(NFB)",
+    "adjacent_complementary_angle(BNF,FNC)",
+    "angle_addition(FNM,MNC)",
+    "angle_addition(BNF,FNM)"
+  ]
+}

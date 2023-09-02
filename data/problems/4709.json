@@ -1,0 +1,36 @@
+{
+  "problem_id": 4709,
+  "annotation": "XiaoxiaoJin_2023-05-14",
+  "source": "GeoQA-4021",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA、PB切⊙O于A、B两点,AC是⊙O的直径,∠P=40°,则∠ACB度数是()",
+  "problem_text_en": "As shown in the figure, PA and PB tangent ⊙O at two vertices A and B, AC is the diameter of ⊙O, ∠P = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4709.png",
+  "construction_cdl": [
+    "Shape(CO,OA,OAC)",
+    "Shape(OC,CB,BO)",
+    "Shape(AO,OB,BA)",
+    "Shape(BC,OCB)",
+    "Shape(AB,OBA)",
+    "Shape(BP,PA,OBA)",
+    "Collinear(AOC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BPA),40)",
+    "IsDiameterOfCircle(AC,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "quadrilateral_property_angle_sum(AOBP)",
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)"
+  ]
+}

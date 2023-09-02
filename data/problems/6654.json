@@ -1,0 +1,27 @@
+{
+  "problem_id": 6654,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9675",
+  "problem_level": 1,
+  "problem_text_cn": "OA,OB是⊙O的两条半径,且∠C=40°,点C在⊙O上,则∠AOB的度数为()",
+  "problem_text_en": "OA and OB are the two radii of ⊙O, and ∠C = N_0, point C is on ⊙O, then the degree of ∠AOB is ()",
+  "problem_img": "6654.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(CA,AO,OB,BC)",
+    "Shape(OA,OAB,BO)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCA),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

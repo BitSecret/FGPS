@@ -1,0 +1,34 @@
+{
+  "problem_id": 5203,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5204",
+  "problem_level": 1,
+  "problem_text_cn": "如图,矩形ABCD是⊙O的内接四边形,AB=8,BC=6,则⊙O的直径为()",
+  "problem_text_en": "As shown in the figure, the rectangle ABCD is the inscribed quadrilateral of ⊙O, AB = N_0, BC = N_1, then the diameter of ⊙O is ()",
+  "problem_img": "5203.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AD)",
+    "Shape(AB,BC,CO,OA)",
+    "Shape(CD,DA,AO,OC)",
+    "Collinear(AOC)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Rectangle(ABCD)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(BC),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ABC)",
+    "right_triangle_property_pythagorean(ABC)",
+    "diameter_of_circle_judgment_pass_centre(AOC,O)",
+    "diameter_of_circle_property_length_equal(AC,O)"
+  ]
+}

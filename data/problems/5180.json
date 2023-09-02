@@ -1,0 +1,37 @@
+{
+  "problem_id": 5180,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5161",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,AB为弦,OC⊥AB于点E,若⊙O的半径为5,CE=2,则AB的长是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, AB is the chord, OC ⊥ AB is at point E, if the radius of ⊙O is N_0, CE = N_1, then the length of AB is ()",
+  "problem_img": "5180.png",
+  "construction_cdl": [
+    "Shape(OAB,BE,EO,OA)",
+    "Shape(OBC,CE,EB)",
+    "Shape(OCA,AE,EC)",
+    "Shape(OE,EA,AO)",
+    "Collinear(AEB)",
+    "Collinear(CEO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OE,AE)",
+    "Equal(RadiusOfCircle(O),5)",
+    "Equal(LengthOfLine(CE),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BEO,OEA)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,BA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "line_addition(CE,EO)",
+    "right_triangle_judgment_angle(OEA)",
+    "right_triangle_property_pythagorean(OEA)",
+    "line_addition(AE,EB)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 744,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-769",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Q S is a diameter of \\odot V. Find m \\widehat P Q R.",
+  "problem_img": "744.png",
+  "construction_cdl": [
+    "Shape(VQ,VQP,PV)",
+    "Shape(VP,VPT,TV)",
+    "Shape(VT,VTS,SV)",
+    "Shape(VS,VSR,RV)",
+    "Shape(VR,VRQ,QV)",
+    "Collinear(QVS)",
+    "Cocircular(V,RQPTS)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(V,V)",
+    "Equal(DiameterOfCircle(O),LengthOfLine(QS))",
+    "Equal(MeasureOfAngle(SVT),75)",
+    "Equal(MeasureOfAngle(TVP),72)",
+    "PerpendicularBetweenLine(RV,SV)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(VRP))",
+  "problem_answer": "123",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(QVR,RVS)",
+    "adjacent_complementary_angle(SVP,PVQ)",
+    "angle_addition(SVT,TVP)",
+    "angle_addition(PVQ,QVR)",
+    "arc_property_center_angle(VRP,V)"
+  ]
+}

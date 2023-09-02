@@ -1,0 +1,23 @@
+{
+  "problem_id": 4172,
+  "annotation": "Yangli_2023-05-07",
+  "source": "GeoQA-2820",
+  "problem_level": 1,
+  "problem_text_cn": "如图,Rt△ABC的斜边AB=10cm,\\cosA=\\frac{3}{5},则BC的长为()",
+  "problem_text_en": "As shown in the figure, the hypotenuse of Rt△ABC AB = N_0, cosA = \\frac{N_1}{N_2}, then the length of BC is ()",
+  "problem_img": "4172.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(MeasureOfAngle(BCA),90)",
+    "Equal(Cos(MeasureOfAngle(CAB)),0.6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "sine_theorem(BCA)"
+  ]
+}

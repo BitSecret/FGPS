@@ -1,0 +1,32 @@
+{
+  "problem_id": 4753,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4112",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知直线AD是⊙O的切线,点A为切点,OD交⊙O于点B,点C在⊙O上,且∠ODA=36°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, it is known that the straight line AD is the tangent of ⊙O, point A is the tangent point, OD intersects ⊙O at point B, and point C is on ⊙O, and ∠ODA = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4753.png",
+  "construction_cdl": [
+    "Shape(BC,OCB)",
+    "Shape(BO,OA,AC,CB)",
+    "Shape(AO,OB,OBA)",
+    "Shape(CA,OAC)",
+    "Shape(BD,DA,OBA)",
+    "Collinear(DBO)",
+    "Cocircular(O,BAC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BDA),36)",
+    "IsTangentOfCircle(DA,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "27",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(DA,O,O)",
+    "triangle_property_angle_sum(ODA)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)"
+  ]
+}

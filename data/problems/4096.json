@@ -1,0 +1,34 @@
+{
+  "problem_id": 4096,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2483",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一电线杆AB的影子分别落在了地上和墙上,某一时刻,小明竖起1米高的直杆,量得其影长为0.5米,此时,他又量得电线杆AB落在地上的影子BD长3米,落在墙上的影子CD的高为2米．小明用这些数据很快算出了电线杆AB的高．请你计算,电线杆AB的高为()",
+  "problem_text_en": "As shown in the figure, the shadow of a telephone pole AB fell on the ground and on the wall. At a certain moment, Xiao Ming erected a straight pole with a height of N_0 and measured its shadow length as N_1. At this time, he measured the pole AB again. The length of the shadow BD on the ground is N_2, and the height of the shadow CD on the wall is N_3. Xiao Ming used these data to quickly calculate the height of the telephone pole AB. Please calculate, the height of the telephone pole AB is ()",
+  "problem_img": "4096.png",
+  "construction_cdl": [
+    "Shape(HM,MN,NH)",
+    "Shape(AB,BD,DC,CA)",
+    "Shape(CD,DE,EC)",
+    "Collinear(BDE)",
+    "Collinear(ACE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(HM),1)",
+    "Equal(LengthOfLine(MN),0.5)",
+    "Equal(LengthOfLine(BD),3)",
+    "Equal(LengthOfLine(CD),2)",
+    "SimilarBetweenTriangle(HMN,CDE)",
+    "SimilarBetweenTriangle(HMN,ABE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(HMN,CDE)",
+    "similar_triangle_property_line_ratio(NHM,ECD)",
+    "similar_triangle_property_line_ratio(HMN,ABE)",
+    "similar_triangle_property_line_ratio(NHM,EAB)",
+    "line_addition(BD,DE)"
+  ]
+}

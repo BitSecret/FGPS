@@ -1,0 +1,37 @@
+{
+  "problem_id": 1109,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-1146",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure.",
+  "problem_img": "1109.png",
+  "construction_cdl": [
+    "Shape(HB,KBH)",
+    "Shape(HA,AD,DB,BK,KH)",
+    "Collinear(HKB)",
+    "Cocircular(K,BH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(K,K)",
+    "Equal(LengthOfLine(HB),30)",
+    "Equal(LengthOfLine(AH),15)",
+    "Equal(LengthOfLine(AD),48)",
+    "PerpendicularBetweenLine(HA,DA)",
+    "PerpendicularBetweenLine(KH,AH)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfQuadrilateral(HADB),Mul(0.5,AreaOfCircle(K))))",
+  "problem_answer": "938.42",
+  "theorem_seqs": [
+    "line_addition(HK,KB)",
+    "perpendicular_judgment_angle(BH,AH)",
+    "parallel_judgment_per_per(HB,AD)",
+    "trapezoid_judgment_parallel(HADB)",
+    "right_trapezoid_judgment_right_angle(HADB)",
+    "right_trapezoid_area_formular(HADB)",
+    "radius_of_circle_property_length_equal(KH,K)",
+    "radius_of_circle_property_length_equal(KB,K)",
+    "circle_area_formula(K)"
+  ]
+}

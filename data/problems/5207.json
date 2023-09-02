@@ -1,0 +1,36 @@
+{
+  "problem_id": 5207,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5211",
+  "problem_level": 1,
+  "problem_text_cn": "如图,半径为10的圆中,弦AB垂直平分半径OC,则弦AB的长为()",
+  "problem_text_en": "As shown in the figure, in the circle with radius N_0, chord AB bisects radius OC perpendicularly, then the length of chord AB is ()",
+  "problem_img": "5207.png",
+  "construction_cdl": [
+    "Shape(OAB,BD,DO,OA)",
+    "Shape(OBC,CD,DB)",
+    "Shape(OCA,AD,DC)",
+    "Shape(OD,DA,AO)",
+    "Collinear(ODC)",
+    "Collinear(ADB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsPerpendicularBisectorOfLine(AD,OC)",
+    "Equal(RadiusOfCircle(O),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "10*sqrt(3)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BDO,ODA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "line_addition(OD,DC)",
+    "right_triangle_judgment_angle(ODA)",
+    "right_triangle_property_pythagorean(ODA)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OD,BA)",
+    "line_addition(AD,DB)"
+  ]
+}

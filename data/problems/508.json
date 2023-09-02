@@ -1,0 +1,30 @@
+{
+  "problem_id": 508,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-519",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find z.",
+  "problem_img": "508.png",
+  "construction_cdl": [
+    "Shape(DA,AB,BD)",
+    "Shape(BA,AC,CB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),z)",
+    "Equal(LengthOfLine(BD),8)",
+    "Equal(LengthOfLine(AB),y)",
+    "Equal(MeasureOfAngle(BAC),45)",
+    "Equal(MeasureOfAngle(BDA),60)",
+    "Equal(LengthOfLine(AD),x)",
+    "PerpendicularBetweenLine(AC,BC)",
+    "PerpendicularBetweenLine(DA,BA)"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "2*sqrt(6)",
+  "theorem_seqs": [
+    "sine_theorem(BDA)",
+    "sine_theorem(BAC)"
+  ]
+}

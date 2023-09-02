@@ -1,0 +1,30 @@
+{
+  "problem_id": 1398,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1448",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find R S.",
+  "problem_img": "1398.png",
+  "construction_cdl": [
+    "Shape(SW,WR,RS)",
+    "Shape(RW,WT,TR)",
+    "Collinear(SWT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(RS),6*x+2)",
+    "Equal(LengthOfLine(RT),4*x+3)",
+    "Equal(LengthOfLine(RW),12)",
+    "Equal(LengthOfLine(SW),16)",
+    "Equal(LengthOfLine(TW),9)",
+    "PerpendicularBetweenLine(RW,TW)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(RS))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(SWR,RWT)",
+    "right_triangle_judgment_angle(SWR)",
+    "right_triangle_property_pythagorean(SWR)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 3324,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-721",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,AB∥CD,P为AB,CD之间的一点,已知∠1=32°,∠2=25°,∠BPC的度数为()",
+  "problem_text_en": "As shown in the figure, AB ∥ CD, P is a point between AB and CD, it is known that ∠1 = N_0, ∠2 = N_1, the degree of ∠BPC is ()",
+  "problem_img": "3324.png",
+  "construction_cdl": [
+    "Shape(PB,BA)",
+    "Shape(BP,PE)",
+    "Shape(EP,PC)",
+    "Shape(DC,CP)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,DC)",
+    "ParallelBetweenLine(AB,PE)",
+    "ParallelBetweenLine(PE,DC)",
+    "Equal(MeasureOfAngle(PBA),32)",
+    "Equal(MeasureOfAngle(DCP),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BPC))",
+  "problem_answer": "57",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(PE,DC)",
+    "parallel_property_alternate_interior_angle(AB,PE)",
+    "angle_addition(BPE,EPC)"
+  ]
+}

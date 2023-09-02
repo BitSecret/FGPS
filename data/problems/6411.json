@@ -1,0 +1,41 @@
+{
+  "problem_id": 6411,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9276",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,对角线AC、BD相交于点O,AC=10,BD=6,AD=4,则▱ABCD的面积是()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, the diagonal AC and BD intersect at point O, AC = N_0, BD = N_1, AD = N_2, then the area of ​​▱ABCD is ()",
+  "problem_img": "6411.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Collinear(DOB)",
+    "Collinear(AOC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AC),10)",
+    "Equal(LengthOfLine(BD),6)",
+    "Equal(LengthOfLine(AD),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(AreaOfTriangle(DAC),AreaOfTriangle(ABC)))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "line_addition(DO,OB)",
+    "line_addition(AO,OC)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "right_triangle_judgment_pythagorean_inverse(ODA)",
+    "right_triangle_judgment_pythagorean_inverse(OBC)",
+    "triangle_area_formula_sine(AOD)",
+    "triangle_area_formula_sine(DAO)",
+    "triangle_area_formula_sine(BCO)",
+    "triangle_area_formula_sine(COB)",
+    "triangle_area_formula_sine(ACD)",
+    "triangle_area_formula_sine(CAB)"
+  ]
+}

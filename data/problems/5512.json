@@ -1,0 +1,30 @@
+{
+  "problem_id": 5512,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-5983",
+  "problem_level": 1,
+  "problem_text_cn": "如图,m∥n,点A在直线n上,以A为圆心的圆弧与直线n,m相交于B,C,若∠CAB=30°,则∠ABC的度数为()",
+  "problem_text_en": "As shown in the figure, ∥ n, point A is on the straight line n, and the arc with A as the center and the straight line n intersect at B and C. If ∠CAB = N_0, then the degree of ∠ABC is ()",
+  "problem_img": "5512.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)",
+    "Shape(CB,ABC)",
+    "Shape(AC,ACB,BA)",
+    "Cocircular(A,BC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(LengthOfLine(AC),LengthOfLine)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(AB,A)",
+    "radius_of_circle_property_length_equal(AC,A)",
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 5986,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8444",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C、D在⊙O上,∠BOC=116°,AD∥OC,∠AOD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, points C and D are on ⊙O, ∠BOC = N_0, AD ∥ OC, the degree of ∠AOD is ()",
+  "problem_img": "5986.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DA,AO,OD)",
+    "Shape(DO,OB,OBD)",
+    "Shape(CO,OA,OAC)",
+    "Shape(BO,OC,OCB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BOC),116)",
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(AD,CO)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AOD))",
+  "problem_answer": "52",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "flat_angle(BOA)",
+    "angle_addition(BOC,COA)",
+    "parallel_property_alternate_interior_angle(AD,CO)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(ODA)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 4039,
+  "annotation": "NaZhu_2023-05-07",
+  "source": "GeoQA-2304",
+  "problem_level": 1,
+  "problem_text_cn": "为了估计河的宽度,我们可以在河对岸的岸边选定一个目标记为点A,再在河的这一边选点B和点C,使得AB⊥BC,设BC与AE交于点D,如图所示测得BD=120m,DC=40m,EC=30m,那么这条河的大致宽度是()",
+  "problem_text_en": "In order to estimate the width of the river, we can select a target on the opposite bank of the river and mark it as point A, and then select points B and C on this side of the river, so that AB ⊥ BC, let BC and AE intersect at point D, As shown in the figure, BD = N_0, DC = N_1, EC = N_2, then the approximate width of the river is ()",
+  "problem_img": "4039.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(CD,DE,EC)",
+    "Collinear(BDC)",
+    "Collinear(ADE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BD),120)",
+    "Equal(LengthOfLine(DC),40)",
+    "Equal(LengthOfLine(CE),30)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(AB,DB)",
+    "PerpendicularBetweenLine(EC,DC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "90",
+  "theorem_seqs": [
+    "vertical_angle(BDA,CDE)",
+    "similar_triangle_judgment_aa(ABD,ECD)",
+    "similar_triangle_property_line_ratio(ABD,ECD)",
+    "similar_triangle_property_line_ratio(DAB,DEC)"
+  ]
+}

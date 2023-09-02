@@ -1,0 +1,24 @@
+{
+  "problem_id": 5573,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6852",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知一渔船上的渔民在A处看见灯塔M在北偏东60°方向,这艘渔船以28海里/时的速度向正东方向航行,半小时后到达B处,在B处看见灯塔M在北偏东15°方向,此时灯塔M与渔船的距离是()",
+  "problem_text_en": "As shown in the figure, it is known that a fisherman on a fishing boat sees lighthouse M in the direction N_0 east by north at point A. This fishing boat sails eastward at a speed of N_1 nautical miles/hour, and arrives at point B in half an hour, and sees it at point B The lighthouse M is in the N_2 direction to the east by north. At this time, the distance between the lighthouse M and the fishing boat is ()",
+  "problem_img": "5573.png",
+  "construction_cdl": [
+    "Shape(MA,AB,BM)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),14)",
+    "Equal(MeasureOfAngle(MAB),30)",
+    "Equal(MeasureOfAngle(ABM),105)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BM))",
+  "problem_answer": "7*sqrt(2)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(MAB)",
+    "sine_theorem(BMA)"
+  ]
+}

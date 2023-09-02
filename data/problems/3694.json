@@ -1,0 +1,33 @@
+{
+  "problem_id": 3694,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1447",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=AC,AB的垂直平分线DE交AC于E,若∠A=40°,则∠EBC的度数是()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, the perpendicular bisector of AB crosses AC at E, if ∠A = N_0, then the degree of ∠EBC is ()",
+  "problem_img": "3694.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BE,ED)",
+    "Shape(EB,BC,CE)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(EAD),40)",
+    "IsPerpendicularBisectorOfLine(ED,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EBC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(ED,AB)",
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "isosceles_triangle_judgment_line_equal(EAB)",
+    "isosceles_triangle_property_angle_equal(EAB)",
+    "angle_addition(DBE,EBC)"
+  ]
+}

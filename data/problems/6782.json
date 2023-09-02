@@ -1,0 +1,33 @@
+{
+  "problem_id": 6782,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9901",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C在AB的延长线上,CD与⊙O相切,切点为D．如果∠A=35°,那么∠C等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, point C is on the extended line of AB, CD is tangent to ⊙O, and the tangent point is D. If ∠A = N_0, then ∠C is equal to ()",
+  "problem_img": "6782.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DA,AO,OD)",
+    "Shape(DO,OB,OBD)",
+    "Shape(BO,OA,OAB)",
+    "Shape(BC,CD,OBD)",
+    "Collinear(AOBC)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DAO),35)",
+    "IsDiameterOfCircle(AB,O)",
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CD,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "tangent_of_circle_property_perpendicular(CD,O,O)",
+    "triangle_property_angle_sum(DOC)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 4671,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3943",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB与⊙O相切于点A,AC、CD是⊙O的两条弦,且CD∥AB,若⊙O的半径为5,CD=8,则弦AC的长为()",
+  "problem_text_en": "As shown in the figure, the straight line AB and ⊙O are tangent to point A, AC and CD are the two chords of ⊙O, and CD ∥ AB, if the radius of ⊙O is N_0, CD = N_1, then the length of chord AC is ()",
+  "problem_img": "4671.png",
+  "construction_cdl": [
+    "Shape(EC,CO,OE)",
+    "Shape(OC,CA,AO)",
+    "Shape(ODC,CE,ED)",
+    "Shape(OCA,AC)",
+    "Shape(DE,EO,OA,OAD)",
+    "Collinear(CED)",
+    "Collinear(AOE)",
+    "Cocircular(O,CAD)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(DE,OE)",
+    "PerpendicularBetweenLine(OE,CE)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(CD),8)",
+    "Equal(LengthOfLine(CO),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "4*sqrt(5)",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,DC)",
+    "line_addition(CE,ED)",
+    "line_addition(AO,OE)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "right_triangle_judgment_angle(OEC)",
+    "right_triangle_judgment_angle(AEC)",
+    "right_triangle_property_pythagorean(OEC)",
+    "right_triangle_property_pythagorean(AEC)"
+  ]
+}

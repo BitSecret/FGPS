@@ -1,0 +1,32 @@
+{
+  "problem_id": 3997,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1952",
+  "problem_level": 1,
+  "problem_text_cn": "一条排水管的截面如图所示．已知排水管的截面圆半径OB=10,水面宽AB=16,则水管中水的最大深度是()",
+  "problem_text_en": "The section of a drain pipe is shown in the figure. Knowing that the of the radius of the central cross sectional of the drainage pipe OB = N_0, and the width of water surface AB = N_1, the maximum depth of water in the water pipe is ()",
+  "problem_img": "3997.png",
+  "construction_cdl": [
+    "Shape(OC,CB,BO)",
+    "Shape(CA,OAB,BC)",
+    "Shape(OB,OBA,AC,CO)",
+    "Collinear(ACB)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),16)",
+    "Equal(LengthOfLine(OB),10)",
+    "PerpendicularBetweenLine(OC,BC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(OC))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ACO,OCB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(OCB)",
+    "right_triangle_property_pythagorean(OCB)"
+  ]
+}

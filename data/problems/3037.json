@@ -1,0 +1,31 @@
+{
+  "problem_id": 3037,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-249",
+  "problem_level": 1,
+  "problem_text_cn": "如图,为测量学校旗杆的高度,小东用长为3.2米的竹竿作测量工具,移动竹竿,使竹竿顶端与旗杆顶端的影子恰好落在地面的同一点,此时,竹竿与这一点相距8米,与旗杆相距22米,则旗杆的高度为()米.",
+  "problem_text_en": "As shown in the figure, in order to measure the height of the school flagpole, Xiaodong uses a bamboo pole with a length of N_0 as a measuring tool, and moves the bamboo pole so that the top of the bamboo pole and the shadow of the top of the flag pole fall on the same point on the ground. At this time, the distance between the bamboo pole and this point is N_1 , N_2 from the flagpole, the height of the flagpole is ().",
+  "problem_img": "3037.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),8)",
+    "Equal(LengthOfLine(ED),3.2)",
+    "Equal(LengthOfLine(DB),22)",
+    "ParallelBetweenLine(DE,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "similar_triangle_judgment_aa(EAD,CAB)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "line_addition(AD,DB)"
+  ]
+}

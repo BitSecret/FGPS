@@ -1,0 +1,43 @@
+{
+  "problem_id": 6357,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9188",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,∠BAD=80°,AB的垂直平分线交对角线AC于点F,E为垂足,连接DF,则∠CDF等于()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, ∠BAD = N_0, the perpendicular bisector of AB intersects the diagonal AC at point F, E is the foot of perpendicular. Connect DF, then ∠CDF is equal to ()",
+  "problem_img": "6357.png",
+  "construction_cdl": [
+    "Shape(DA,AF,FD)",
+    "Shape(DF,FG,GD)",
+    "Shape(DG,GC,CD)",
+    "Shape(FA,AE,EF)",
+    "Shape(FE,EB,BF)",
+    "Shape(FB,BG,GF)",
+    "Shape(GB,BC,CG)",
+    "Collinear(AFGC)",
+    "Collinear(AEB)",
+    "Collinear(DGB)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(DAB),80)",
+    "IsPerpendicularBisectorOfLine(FE,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDF))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(DC,AB)",
+    "isosceles_triangle_judgment_line_equal(DAC)",
+    "isosceles_triangle_property_angle_equal(DAC)",
+    "angle_addition(DAF,FAE)",
+    "perpendicular_bisector_property_distance_equal(FE,AB)",
+    "kite_property_diagonal_perpendicular_bisection(ABCD,G)",
+    "perpendicular_bisector_judgment_per_and_mid(FG,BD)",
+    "perpendicular_bisector_property_distance_equal(FG,BD)",
+    "isosceles_triangle_judgment_line_equal(FDA)",
+    "isosceles_triangle_property_angle_equal(FDA)",
+    "parallel_property_ipsilateral_internal_angle(DC,AB)",
+    "angle_addition(CDF,FDA)"
+  ]
+}

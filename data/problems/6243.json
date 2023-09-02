@@ -1,0 +1,41 @@
+{
+  "problem_id": 6243,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8847",
+  "problem_level": 1,
+  "problem_text_cn": "已知:如图,⊙O中直径AB垂直于弦CD,垂足为E,若AB=10,CD=6,则BE的长是()",
+  "problem_text_en": "It is known that: as shown in the figure, the diameter AB of ⊙O is perpendicular to the chord CD, and the foot of perpendicular is E. If AB = N_0, CD = N_1, then the length of BE is ()",
+  "problem_img": "6243.png",
+  "construction_cdl": [
+    "Shape(OAC,CE,EO,OA)",
+    "Shape(OCB,BE,EC)",
+    "Shape(OBD,DE,EB)",
+    "Shape(ODA,AO,OE,ED)",
+    "Shape(OC,CE,EO)",
+    "Collinear(AOEB)",
+    "Collinear(CED)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(CD),6)",
+    "PerpendicularBetweenLine(CE,OE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BE))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "line_addition(AO,OE)",
+    "line_addition(AO,OB)",
+    "line_addition(AE,EB)",
+    "line_addition(OE,EB)",
+    "line_addition(CE,ED)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,CD)",
+    "right_triangle_judgment_angle(CEO)",
+    "right_triangle_property_pythagorean(CEO)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 5430,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5759",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,AB=3,BC=5,AC的垂直平分线交AD于E,则△CDE的周长是()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, AB = N_0, BC = N_1, and the perpendicular bisector of AC intersects AD at E, then the perimeter of △CDE is ()",
+  "problem_img": "5430.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CF,FA)",
+    "Shape(AF,FE,EA)",
+    "Shape(EF,FC,CE)",
+    "Shape(DE,EC,CD)",
+    "Collinear(AFC)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),5)",
+    "Parallelogram(ABCD)",
+    "IsPerpendicularBisectorOfLine(EF,AC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(CDE))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "perpendicular_bisector_property_distance_equal(EF,AC)",
+    "line_addition(AE,ED)",
+    "triangle_perimeter_formula(CDE)"
+  ]
+}

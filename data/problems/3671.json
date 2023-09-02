@@ -1,0 +1,33 @@
+{
+  "problem_id": 3671,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1400",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将一对三角板如图放置,∠BAC=∠ADE=90°,∠E=45°,∠C=30°,若AE∥BC,则∠AFD=()",
+  "problem_text_en": "As shown in the figure, place a pair of triangular plates as shown, ∠BAC = ∠ADE = N_0, ∠E = N_1, ∠C = N_2, if AE ∥ BC, then ∠AFD = ()",
+  "problem_img": "3671.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DF,FA)",
+    "Shape(FD,DC,CF)",
+    "Shape(AF,FE,EA)",
+    "Collinear(BDC)",
+    "Collinear(DFE)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AE,BC)",
+    "Equal(MeasureOfAngle(CAB),90)",
+    "Equal(MeasureOfAngle(ADE),90)",
+    "Equal(MeasureOfAngle(FEA),45)",
+    "Equal(MeasureOfAngle(DCF),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DFA))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AE,BC)",
+    "triangle_property_angle_sum(AFE)",
+    "adjacent_complementary_angle(DFA,AFE)"
+  ]
+}

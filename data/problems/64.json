@@ -1,0 +1,34 @@
+{
+  "problem_id": 64,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-64",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "m \\angle 2 = 2 x, m \\angle 3 = x. Find m \\angle 1.",
+  "problem_img": "64.png",
+  "construction_cdl": [
+    "Shape(AGF,FB,BG)",
+    "Shape(AB,BF,AFJ,JA)",
+    "Shape(BA,AJ,JH,HB)",
+    "Shape(AJH,HJ)",
+    "Shape(BH,HG,GB)",
+    "Shape(AHG,GH)",
+    "Collinear(FBH)",
+    "Collinear(GBAJ)",
+    "Cocircular(AGFJH)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(HGB),2*x)",
+    "Equal(MeasureOfAngle(AJH),x)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(GB,HB)",
+    "PerpendicularBetweenLine(JH,GH)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BHG))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(GJH)",
+    "triangle_property_angle_sum(GBH)"
+  ]
+}

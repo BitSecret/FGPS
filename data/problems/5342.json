@@ -1,0 +1,33 @@
+{
+  "problem_id": 5342,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5581",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC与△DEF是位似图形,相似比为2:3,已知AB=3,则DE的长为()",
+  "problem_text_en": "As shown in the figure, △ABC and △DEF are similar figures, the scale factor of similarity is N_0:N_1, and it is known that AB = N_2, then the length of DE is ()",
+  "problem_img": "5342.png",
+  "construction_cdl": [
+    "Shape(AO,OC,CA)",
+    "Shape(AC,CM,MA)",
+    "Shape(DA,AM,MF,FD)",
+    "Shape(DF,FE,ED)",
+    "Shape(CO,OB,BC)",
+    "Shape(CB,BM,MC)",
+    "Shape(FM,MB,BE,EF)",
+    "Collinear(OAD)",
+    "Collinear(OCMF)",
+    "Collinear(OBE)",
+    "Collinear(AMB)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(ACB,DFE)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(RatioOfSimilarTriangle(ACB,DFE),2/3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "9/2",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(CBA,FED)"
+  ]
+}

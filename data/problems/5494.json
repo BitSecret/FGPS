@@ -1,0 +1,39 @@
+{
+  "problem_id": 5494,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5951",
+  "problem_level": 1,
+  "problem_text_cn": "已知,如图,在△ABC中,D是BC的中点,AE平分∠BAC,BE⊥AE于点E,且AC=14,ED=3,则AB的长是()",
+  "problem_text_en": "As shown in the figure, in △ABC, D is the midpoint of BC, AE bisects ∠BAC, BE ⊥ AE at point E, and AC = N_0, ED = N_1, then the length of AB is ()",
+  "problem_img": "5494.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BD,DE)",
+    "Shape(ED,DC,CF,FE)",
+    "Collinear(AFC)",
+    "Collinear(BEF)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,BC)",
+    "IsBisectorOfAngle(AE,CAB)",
+    "PerpendicularBetweenLine(BE,AE))",
+    "Equal(LengthOfLine(AC),14)",
+    "Equal(LengthOfLine(ED),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BEA,AEF)",
+    "triangle_property_angle_sum(ABE)",
+    "triangle_property_angle_sum(AEF)",
+    "mirror_congruent_triangle_judgment_aas(AEF,ABE)",
+    "mirror_congruent_triangle_property_line_equal(AEF,ABE)",
+    "mirror_congruent_triangle_property_line_equal(EFA,EAB)",
+    "midsegment_of_triangle_judgment_midpoint(DE,BCF)",
+    "midsegment_of_triangle_property_length(DE,BCF)",
+    "line_addition(AF,FC)"
+  ]
+}

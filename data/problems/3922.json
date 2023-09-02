@@ -1,0 +1,30 @@
+{
+  "problem_id": 3922,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1835",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C是⊙O上一点(A、E除外),∠AOD=132°,则∠C的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C is the point on ⊙O (except A and E), ∠AOD = N_0, then the degree of ∠C is ()",
+  "problem_img": "3922.png",
+  "construction_cdl": [
+    "Shape(ODB,BO,OD)",
+    "Shape(ODB,BC,CD)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AO,OB,BC)",
+    "Shape(OAD,DO,OA)",
+    "Collinear(AOB)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DOA),132)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BOD,DOA)",
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_circumference_angle_external(ODB,C)"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "problem_id": 1473,
+  "annotation": "YanjunGuo_2023-04-09",
+  "source": "Geometry3k-1527",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1473.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BA)",
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),z)",
+    "Equal(LengthOfLine(AD),8)",
+    "Equal(LengthOfLine(AB),y)",
+    "Equal(MeasureOfAngle(ABC),45)",
+    "Equal(MeasureOfAngle(ADB),60)",
+    "Equal(LengthOfLine(BD),x)",
+    "PerpendicularBetweenLine(BC,AC)",
+    "PerpendicularBetweenLine(DB,AB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(DBA)",
+    "cosine_theorem(DBA)",
+    "right_triangle_property_pythagorean(DBA)"
+  ]
+}

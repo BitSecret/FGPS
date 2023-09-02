@@ -1,0 +1,25 @@
+{
+  "problem_id": 3248,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-551",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中∠A=80°．点D是BC延长线上一点,∠ACD=150°,则∠B=()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠A = N_0. Point D is a point on the extended line of BC, ∠ACD = N_1, then ∠B = ()",
+  "problem_img": "3248.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),80)",
+    "Equal(MeasureOfAngle(ACD),150)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BCA,ACD)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

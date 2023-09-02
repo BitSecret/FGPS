@@ -1,0 +1,51 @@
+{
+  "problem_id": 780,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-805",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "780.png",
+  "construction_cdl": [
+    "Shape(RJ,JK,KE,ER)",
+    "Shape(JQ,QM,MK,KJ)",
+    "Shape(GR,RB)",
+    "Shape(BR,RE)",
+    "Shape(JR,RG)",
+    "Shape(RE,EA)",
+    "Shape(AE,EO)",
+    "Shape(OE,EK)",
+    "Shape(XQ,QJ)",
+    "Shape(IQ,QX)",
+    "Shape(MQ,QI)",
+    "Shape(KM,MH)",
+    "Shape(HM,MY)",
+    "Shape(YM,MQ)",
+    "Shape(PJ,JR)",
+    "Shape(QJ,JP)",
+    "Shape(EK,KP)",
+    "Shape(PK,KM)",
+    "Collinear(BRJQI)",
+    "Collinear(AEKMY)",
+    "Collinear(GREO)",
+    "Collinear(PJKP)",
+    "Collinear(XQMH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(RJ),LengthOfLine(JQ))",
+    "Equal(LengthOfLine(RJ),20-5*x)",
+    "Equal(LengthOfLine(JQ),2*x+6)",
+    "Equal(LengthOfLine(EK),y)",
+    "Equal(LengthOfLine(KM),3/5*y+2)",
+    "ParallelBetweenLine(RE,JK)",
+    "ParallelBetweenLine(RE,QM)",
+    "ParallelBetweenLine(JK,QM)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "trapezoid_judgment_parallel(RQME)",
+    "midsegment_of_quadrilateral_judgment_parallel(JK,RQME)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 3509,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1118",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O直径,点C在AB的延长线上,CD与⊙O相切于点D,若∠A=25°,则∠C的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, point C is on the extended line of AB, CD and ⊙O are tangent to point D, if ∠A = N_0, then the degree of ∠C is ()",
+  "problem_img": "3509.png",
+  "construction_cdl": [
+    "Shape(OBA,AO,OB)",
+    "Shape(OA,AD,DO)",
+    "Shape(OD,ODB,BO)",
+    "Shape(OAD,DA)",
+    "Shape(DC,CB,ODB)",
+    "Collinear(AOBC)",
+    "Cocircular(O,ADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "IsTangentOfCircle(CD,O)",
+    "Equal(MeasureOfAngle(BAD),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODB,A)",
+    "arc_property_center_angle(ODB,O)",
+    "tangent_of_circle_property_perpendicular(CD,O,O)",
+    "triangle_property_angle_sum(ODC)"
+  ]
+}

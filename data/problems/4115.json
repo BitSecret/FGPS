@@ -1,0 +1,24 @@
+{
+  "problem_id": 4115,
+  "annotation": "QikeHuang_2023-05-07",
+  "source": "GeoQA-2572",
+  "problem_level": 1,
+  "problem_text_cn": "如图,位似图形由三角尺与其灯光照射下的中心投影组成,若灯泡到三角尺一顶点的距离与灯泡到三角尺投影的对应顶点距离比为2:5,且三角尺的一边长为8cm,则投影三角形的对应边长为()",
+  "problem_text_en": "As shown in the figure, the homothetic figures are composed of a triangle ruler and its center projection under the light. If the ratio of the distance from the bulb to the vertex of the triangle ruler to the distance from the bulb to the corresponding vertex of the triangular ruler projection is N_0:N_1, and the length of one edge of the triangle ruler is N_2, Then the corresponding edge length of the projection triangle is ()",
+  "problem_img": "4115.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(DE,EF,FD)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(ABC,DEF)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(RatioOfSimilarTriangle(ABC,DEF),2/5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(CAB,FDE)"
+  ]
+}

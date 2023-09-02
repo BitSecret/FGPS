@@ -1,0 +1,28 @@
+{
+  "problem_id": 228,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-230",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the length of line AC.",
+  "problem_img": "228.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(BC,CD,DB)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(DA),5*x-6)",
+    "Equal(LengthOfLine(DC),3*x+4)",
+    "PerpendicularBetweenLine(BD,AD)",
+    "Equal(LengthOfLine(AB),LengthOfLine(CB))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "38",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDB,BDA)",
+    "perpendicular_bisector_judgment_distance_equal(BD,CA)",
+    "line_addition(AD,DC)"
+  ]
+}

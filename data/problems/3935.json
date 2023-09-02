@@ -1,0 +1,37 @@
+{
+  "problem_id": 3935,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1854",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,OC⊥AB,∠ADC=32°,则∠BOC的度数是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, OC ⊥ AB, ∠ADC = N_0, then the degree of ∠BOC is ()",
+  "problem_img": "3935.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OCB,BE,EC)",
+    "Shape(OAC,CE,EA)",
+    "Shape(OAC,CD,DA)",
+    "Shape(OE,EB,BO)",
+    "Shape(OBA,AO,OB)",
+    "Shape(OA,AE,EO)",
+    "Collinear(AEB)",
+    "Collinear(OEC)",
+    "Cocircular(O,DACB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CDA),32)",
+    "PerpendicularBetweenLine(OE,BE)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BOC))",
+  "problem_answer": "64",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,D)",
+    "adjacent_complementary_angle(AEO,OEB)",
+    "circle_property_chord_perpendicular_bisect_arc(OAB,OEC)",
+    "congruent_arc_judgment_length_equal(OAC,OCB)",
+    "congruent_arc_property_measure_equal(OAC,OCB)",
+    "arc_property_center_angle(OCB,O)"
+  ]
+}

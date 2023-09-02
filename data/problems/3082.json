@@ -1,0 +1,43 @@
+{
+  "problem_id": 3082,
+  "annotation": "YimingHe_2023-04-23",
+  "source": "GeoQA-314",
+  "problem_level": 1,
+  "problem_text_cn": "圆I是三角形ABC的内切圆,D,E,F为3个切点,若∠DEF=52°,则∠A的度数为()",
+  "problem_text_en": "Circle I is the inscribed circle of triangle ABC, D, E, F are N_0 tangent points, if ∠DEF = N_1, then the degree of ∠A is ()",
+  "problem_img": "3082.png",
+  "construction_cdl": [
+    "Shape(FA,AD,IFD)",
+    "Shape(DB,BE,IDE)",
+    "Shape(ED,ODE)",
+    "Shape(DE,EF,FI,ID)",
+    "Shape(DI,IF,IFD)",
+    "Shape(FE,IEF)",
+    "Shape(EC,CF,IEF)",
+    "Collinear(ADB)",
+    "Collinear(BEC)",
+    "Collinear(AFC)",
+    "Cocircular(I,DEF)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(AD,I)",
+    "IsTangentOfCircle(AF,I)",
+    "IsTangentOfCircle(BD,I)",
+    "IsTangentOfCircle(BE,I)",
+    "IsTangentOfCircle(CF,I)",
+    "IsTangentOfCircle(CE,I)",
+    "Equal(MeasureOfAngle(DEF),52)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(I,I)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(FAD))",
+  "problem_answer": "76",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(IFD,E)",
+    "arc_property_center_angle(IFD,I)",
+    "tangent_of_circle_property_perpendicular(AF,I,I)",
+    "tangent_of_circle_property_perpendicular(AD,I,I)",
+    "quadrilateral_property_angle_sum(ADIF)"
+  ]
+}

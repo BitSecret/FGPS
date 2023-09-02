@@ -1,0 +1,41 @@
+{
+  "problem_id": 4714,
+  "annotation": "XiaoxiaoJin_2023-05-14",
+  "source": "GeoQA-4039",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,BP是⊙O的切线,AP与⊙O交于点G,点D为⁀{BC}上一点,若∠P=40°,则∠ADC等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, BP is the tangent of ⊙O, AP and ⊙O intersect at point G, point D is the point on ⁀BC, if ∠P = N_0, then ∠ADC is equal to ()",
+  "problem_img": "4714.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(AE,EC,CA)",
+    "Shape(CE,ED,DC)",
+    "Shape(EA,AO,OB,BE)",
+    "Shape(AC,OCA)",
+    "Shape(CD,ODC)",
+    "Shape(BP,PC,ODC,OBD)",
+    "Shape(DE,EB,OBD)",
+    "Collinear(BEC)",
+    "Collinear(AED)",
+    "Collinear(ACP)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BPA),40)",
+    "IsTangentOfCircle(PB,O)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "triangle_property_angle_sum(ABP)",
+    "triangle_property_angle_sum(ABC)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OCA,D)"
+  ]
+}

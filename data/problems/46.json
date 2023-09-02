@@ -1,0 +1,28 @@
+{
+  "problem_id": 46,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-46",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded sector.",
+  "problem_img": "46.png",
+  "construction_cdl": [
+    "Shape(KJ,KJL,LK)",
+    "Shape(JK,KL,KLJ)",
+    "Cocircular(K,JL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(K,K)",
+    "Equal(LengthOfLine(KJ),11)",
+    "Equal(MeasureOfAngle(JKL),65)"
+  ],
+  "goal_cdl": "Value(AreaOfSector(KJL))",
+  "problem_answer": "7139*pi/72",
+  "theorem_seqs": [
+    "round_angle(JKL,LKJ)",
+    "radius_of_circle_property_length_equal(KJ,K)",
+    "arc_property_center_angle(KJL,K)",
+    "sector_area_formula(KJL)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 3813,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1670",
+  "problem_level": 1,
+  "problem_text_cn": "如图,游乐园的大观览车半径为25米,已知观览车绕圆心O顺时针做匀速运动,旋转一周用12分钟,某人从观览车的最低处(地面A处)乘车,问经过4分钟后,此人距地面CD的高度是(观览处最低处距地面的高度忽略不计)()",
+  "problem_text_en": "As shown in the figure, the radius of the large observation car in the amusement park is N_0. It is known that the observation car is moving clockwise around the center O at a constant speed, and it takes N_1 minutes to make a revolution. Someone rides from the lowest point of the observation car (ground A). After N_2 minutes, what is the height of this person from the ground CD (the height from the lowest point of the viewing area to the ground is ignored) ()",
+  "problem_img": "3813.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(BO,OE,EB)",
+    "Shape(DE,EO,OA,OAD)",
+    "Shape(AC,CD,OAD)",
+    "Shape(BE,ED,ODB)",
+    "Collinear(BEDC)",
+    "Cocircular(O,ADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),25)",
+    "Equal(MeasureOfAngle(BOA),120)",
+    "PerpendicularBetweenLine(OA,CA)",
+    "PerpendicularBetweenLine(AC,BC)",
+    "PerpendicularBetweenLine(OE,BE)",
+    "Equal(LengthOfLine(OA),LengthOfLine(EC))",
+    "Rectangle(OACE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "37.5",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "angle_addition(BOE,EOA)",
+    "sine_theorem(BOE)",
+    "line_addition(BE,EC)"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "problem_id": 4341,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3228",
+  "problem_level": 1,
+  "problem_text_cn": "如图是一位同学从照片上剪切下来的画面,“图上”太阳与海平线交于A、B两点,他测得“图上”圆的半径为10厘米,AB=16厘米,若从目前太阳所处位置到太阳完全跳出海面的时间为10分钟,则“图上”太阳升起的速度为()",
+  "problem_text_en": "As shown in the figure, it is a picture cut from a photo by a classmate. The sun on the \"picture\" and the sea level intersect at two points A and B. He measured the radius of the circle \"on the picture\" to be N_0 centimeters, AB = N_1 centimeters, If the time from the current position of the sun to the time the sun completely jumps out of the sea is N_2 minutes, the rising speed of the sun on the \"picture\" is ()",
+  "problem_img": "4341.png",
+  "construction_cdl": [
+    "Shape(CA,AO,OC)",
+    "Shape(BC,CO,OB)",
+    "Shape(AC,CB,OBA)",
+    "Shape(OA,OAD,DO)",
+    "Shape(BO,OD,ODB)",
+    "Collinear(ACB)",
+    "Collinear(COD)",
+    "Cocircular(O,ADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AO),10)",
+    "Equal(LengthOfLine(OD),10)",
+    "Equal(LengthOfLine(AB),16)",
+    "PerpendicularBetweenLine(OC,AC)",
+    "PerpendicularBetweenLine(BC,OC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OC,BA)",
+    "line_addition(AC,CB)",
+    "line_addition(CO,OD)",
+    "right_triangle_judgment_angle(OCA)",
+    "right_triangle_property_pythagorean(OCA)"
+  ]
+}

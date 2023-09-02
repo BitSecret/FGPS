@@ -1,0 +1,43 @@
+{
+  "problem_id": 4004,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1965",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一块三角板与圆片重合,直角边AB=AC=2,使AB与圆片直径重合,则阴影部分的面积为()",
+  "problem_text_en": "As shown in the figure, a triangular plate coincides with the disc, the right-angle edgeAB = AC = N_0, so that AB coincides with the diameter of the disc, then the area of ​​the shaded part is ()",
+  "problem_img": "4004.png",
+  "construction_cdl": [
+    "Shape(DC,CA,ODA)",
+    "Shape(ODA,AD)",
+    "Shape(BD,DA,AO,OB)",
+    "Shape(OBD,DB)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(BOA)",
+    "Collinear(BDC)",
+    "Cocircular(O,BDA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),2)",
+    "Equal(LengthOfLine(AC),2)",
+    "Equal(MeasureOfAngle(BCA),45)",
+    "Equal(MeasureOfAngle(ABC),45)",
+    "Equal(MeasureOfAngle(CAB),90)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(DCA))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "flat_angle(BDC)",
+    "angle_addition(BDA,ADC)",
+    "triangle_property_angle_sum(BDA)",
+    "triangle_property_angle_sum(DCA)",
+    "isosceles_triangle_judgment_angle_equal(DAB)",
+    "isosceles_triangle_judgment_angle_equal(DCA)",
+    "right_triangle_judgment_angle(BDA)",
+    "right_triangle_property_pythagorean(BDA)",
+    "triangle_area_formula_sine(ADC)"
+  ]
+}

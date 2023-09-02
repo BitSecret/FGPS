@@ -1,0 +1,30 @@
+{
+  "problem_id": 5951,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8336",
+  "problem_level": 1,
+  "problem_text_cn": "如图,要测量底部不能到达的一座塔的高度AB,甲、乙两名同学分别在C,D两处进行了测量．已知点B,C,D在同一直线上,且AB⊥BD,CD=12米,∠ACB=60°,∠ADB=30°,则塔的高度AB为()",
+  "problem_text_en": "As shown in the figure, to measure the height AB of a tower that cannot be reached at the bottom, two students of A and B took measurements at C and D respectively. Given that the points B, C and D are on the same straight line, and AB ⊥ BD, CD = N_0, ∠ACB = N_1, ∠ADB = N_2, the height of the tower AB is ()",
+  "problem_img": "5951.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CD),12)",
+    "Equal(MeasureOfAngle(BCA),60)",
+    "Equal(MeasureOfAngle(BDA),30)",
+    "Equal(MeasureOfAngle(ABC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "6*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(ABD)",
+    "angle_addition(DAC,CAB)",
+    "isosceles_triangle_judgment_angle_equal(CDA)",
+    "sine_theorem(ABC)"
+  ]
+}

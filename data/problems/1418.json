@@ -1,0 +1,30 @@
+{
+  "problem_id": 1418,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1469",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x to the nearest tenth. Assume that segments that appear to be tangent are tangent.",
+  "problem_img": "1418.png",
+  "construction_cdl": [
+    "Shape(MR,RN,ANM)",
+    "Shape(RM,AMQ,QR)",
+    "Shape(RA,AQP,PR)",
+    "Shape(NR,RP,APN)",
+    "Collinear(NRQ)",
+    "Collinear(MRP)",
+    "Cocircular(A,MQPN)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(NR),3)",
+    "Equal(LengthOfLine(RM),6)",
+    "Equal(LengthOfLine(QR),10)",
+    "Equal(LengthOfLine(PR),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "circle_property_circular_power_chord_and_chord(PRM,NRQ,A)"
+  ]
+}

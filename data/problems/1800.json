@@ -1,0 +1,35 @@
+{
+  "problem_id": 1800,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1866",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. Round to the nearest tenth.",
+  "problem_img": "1800.png",
+  "construction_cdl": [
+    "Shape(BCD,DC)",
+    "Shape(BDE,ED)",
+    "Shape(BEA,AE)",
+    "Shape(BAC,CA)",
+    "Shape(DE,EA,AD)",
+    "Shape(CD,DA,AC)",
+    "Cocircular(B,DEAC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(DEAC)",
+    "Equal(LengthOfLine(ED),12)",
+    "Equal(LengthOfLine(AE),9)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfCircle(B),AreaOfQuadrilateral(DEAC)))",
+  "problem_answer": "68.71",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(DEA)",
+    "right_triangle_property_pythagorean(DEA)",
+    "diameter_of_circle_judgment_right_angle(DEA,B)",
+    "diameter_of_circle_property_length_equal(DA,B)",
+    "circle_property_length_of_radius_and_diameter(B)",
+    "parallelogram_area_formula_sine(DEAC)",
+    "circle_area_formula(B)"
+  ]
+}

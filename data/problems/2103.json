@@ -1,0 +1,39 @@
+{
+  "problem_id": 2103,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2192",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "2103.png",
+  "construction_cdl": [
+    "Shape(CM,MF,FC)",
+    "Shape(CF,FE,ED,DC)",
+    "Shape(DE,EA,AD)",
+    "Collinear(MFEA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Trapezoid(CMAD)",
+    "Equal(LengthOfLine(DC),32)",
+    "Equal(LengthOfLine(FC),22)",
+    "Equal(LengthOfLine(MF),3)",
+    "Equal(LengthOfLine(AE),7)",
+    "PerpendicularBetweenLine(FE,DE)",
+    "PerpendicularBetweenLine(CF,EF)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CMAD))",
+  "problem_answer": "814",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AM,DC,E)",
+    "parallel_property_collinear_extend(EM,DC,F)",
+    "parallel_judgment_per_per(FC,ED)",
+    "parallelogram_judgment_parallel_and_parallel(CFED)",
+    "parallelogram_property_opposite_line_equal(FEDC)",
+    "adjacent_complementary_angle(MFC,CFE)",
+    "altitude_of_quadrilateral_judgment_left_vertex(CF,CMAD)",
+    "line_addition(MF,FE)",
+    "line_addition(ME,EA)",
+    "trapezoid_area_formula(CMAD)"
+  ]
+}

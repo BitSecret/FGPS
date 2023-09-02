@@ -1,0 +1,30 @@
+{
+  "problem_id": 2622,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2754",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of the variable x in the figure.",
+  "problem_img": "2622.png",
+  "construction_cdl": [
+    "Shape(BC,CF,FD,DB)",
+    "Shape(DF,FE,ED)",
+    "Collinear(CFE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(DFE),108)",
+    "Equal(MeasureOfAngle(BCE),120)",
+    "Equal(MeasureOfAngle(DBC),5*y)",
+    "Equal(MeasureOfAngle(FDB),2*x)",
+    "ParallelBetweenLine(BD,CE)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "54",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(BD,CE)",
+    "flat_angle(CFE)",
+    "angle_addition(CFD,DFE)",
+    "quadrilateral_property_angle_sum(BCFD)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "problem_id": 5748,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7580",
+  "problem_level": 1,
+  "problem_text_cn": "如图,弦AB、CD交于点E,若∠C=90°,EC=8,BC=12,AE=4,则DE的长为()",
+  "problem_text_en": "As shown in the figure, chords AB and CD intersect at point E, ∠C = N_0, tanB=\\frac{N_1}{N_2}, if AE = N_3, then the length of DE is ()",
+  "problem_img": "5748.png",
+  "construction_cdl": [
+    "Shape(OCA,AE,EC)",
+    "Shape(OAD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(CE,EB,BC)",
+    "Shape(OBC,CB)",
+    "Shape(BE,ED,ODB)",
+    "Collinear(AEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BCD),90)",
+    "Equal(LengthOfLine(EC),8)",
+    "Equal(LengthOfLine(BC),12)",
+    "Equal(LengthOfLine(AE),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "2*sqrt(13)",
+  "theorem_seqs": [
+    "vertical_angle(DEA,CEB)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "arc_property_circumference_angle_external(ODB,A)",
+    "mirror_similar_triangle_judgment_aa(DEA,BCE)",
+    "mirror_similar_triangle_property_line_ratio(DEA,BCE)",
+    "mirror_similar_triangle_property_line_ratio(EAD,EBC)",
+    "right_triangle_judgment_angle(EAD)",
+    "right_triangle_property_pythagorean(EAD)"
+  ]
+}

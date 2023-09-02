@@ -1,0 +1,43 @@
+{
+  "problem_id": 6465,
+  "annotation": "JiaZou_2023-06-04",
+  "source": "GeoQA-9353",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,∠ABD=50°,AF⊥BC于F,AF交BD于E,点O是DE的中点,连接OA,若DE=2AB,则∠ADB的大小是()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, ∠ABD = N_0, AF ⊥ BC to F, AF crosses BD to E, point O is the midpoint of DE, connecting OA, if DE = 2 AB, then the size of ∠ADB is ( )",
+  "problem_img": "6465.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(BF,FE,EB)",
+    "Shape(EF,FC,CO,OE)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AEF)",
+    "Collinear(BEOD)",
+    "Collinear(BFC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "PerpendicularBetweenLine(BF,AF)",
+    "PerpendicularBetweenLine(DA,FA)",
+    "IsMidpointOfLine(O,ED)",
+    "Equal(LengthOfLine(DE),Mul(LengthOfLine(AB),2))",
+    "Equal(MeasureOfAngle(ABD),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BDA))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "median_of_triangle_judgment(AO,AED)",
+    "right_triangle_judgment_angle(DAE)",
+    "right_triangle_property_length_of_median(DAE,O)",
+    "isosceles_triangle_judgment_line_equal(ABO)",
+    "isosceles_triangle_property_angle_equal(ABO)",
+    "line_addition(EO,OD)",
+    "adjacent_complementary_angle(EOA,AOD)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(ODA)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 1227,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1267",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\triangle P Q R, Z Q = 3 a - 11, Z P = a + 5, P Y = 2 c - 1, Y R = 4 c - 11, m \\angle P R Z = 4 b - 17, m \\angle Z R Q = 3 b - 4, m \\angle Q Y R = 7 b + 6, and m \\angle P X R = 2 a + 10. P X is an altitude of \\triangle P Q R. Find a.",
+  "problem_img": "1227.png",
+  "construction_cdl": [
+    "Shape(QZ,ZM,MN,NQ)",
+    "Shape(ZP,PM,MZ)",
+    "Shape(MP,PY,YA,AM)",
+    "Shape(NM,MA,AN)",
+    "Shape(AY,YR,RA)",
+    "Shape(XN,NA,AR,RX)",
+    "Shape(QN,NX,XQ)",
+    "Collinear(PZQ)",
+    "Collinear(PMNX)",
+    "Collinear(PYR)",
+    "Collinear(ZMAR)",
+    "Collinear(QNAY)",
+    "Collinear(QXR)"
+  ],
+  "text_cdl": [
+    "IsAltitudeOfTriangle(PX,PRQ)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(ZQ),3*a-11)",
+    "Equal(LengthOfLine(ZP),a+5)",
+    "Equal(LengthOfLine(PY),2*c-1)",
+    "Equal(LengthOfLine(YR),4*c-11)",
+    "Equal(MeasureOfAngle(PRZ),4*b-17)",
+    "Equal(MeasureOfAngle(ZRQ),3*b-4)",
+    "Equal(MeasureOfAngle(QYR),7*b+6)",
+    "Equal(MeasureOfAngle(RXP),2*a+10)"
+  ],
+  "goal_cdl": "Value(a)",
+  "problem_answer": "40",
+  "theorem_seqs": []
+}

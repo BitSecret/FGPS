@@ -1,0 +1,40 @@
+{
+  "problem_id": 3633,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1316",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在四边形ABCD中,P是对角线BD的中点,E,F分别是AB,CD的中点,AD=BC,∠PEF=25°,则∠EPF的度数是()",
+  "problem_text_en": "As shown in the figure, in the quadrilateral ABCD, P is the midpoint of the diagonal BD, E and F are the midvertices of AB and CD respectively, AD = BC, ∠PEF = N_0, then the degree of ∠EPF is ()",
+  "problem_img": "3633.png",
+  "construction_cdl": [
+    "Shape(FD,DM,MF)",
+    "Shape(FM,MP,PF)",
+    "Shape(CF,FP,PB,BC)",
+    "Shape(MD,DA,AE,EM)",
+    "Shape(ME,EP,PM)",
+    "Shape(PE,EB,BP)",
+    "Collinear(DFC)",
+    "Collinear(DMPB)",
+    "Collinear(AEB)",
+    "Collinear(EMF)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(FEP),25)",
+    "IsMidpointOfLine(F,CD)",
+    "IsMidpointOfLine(P,BD)",
+    "IsMidpointOfLine(E,AB)",
+    "Equal(LengthOfLine(AD),LengthOfLine(BC))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EPF))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_midpoint(PF,DBC)",
+    "midsegment_of_triangle_judgment_midpoint(PE,BDA)",
+    "midsegment_of_triangle_property_length(PF,DBC)",
+    "midsegment_of_triangle_property_length(PE,BDA)",
+    "isosceles_triangle_judgment_line_equal(PFE)",
+    "isosceles_triangle_property_angle_equal(PFE)",
+    "triangle_property_angle_sum(PFE)"
+  ]
+}

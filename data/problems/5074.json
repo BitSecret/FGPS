@@ -1,0 +1,33 @@
+{
+  "problem_id": 5074,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4862",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,AB=10,AD=6,E是AD的中点,在AB上取一点F,使△CBF∽△CDE,则BF的长是()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, AB = N_0, AD = N_1, E is the midpoint of AD, take a point F on AB to make △CBF ∽ △CDE, then the length of BF is ()",
+  "problem_img": "5074.png",
+  "construction_cdl": [
+    "Shape(AF,FC,CE,EA)",
+    "Shape(FB,BC,CF)",
+    "Shape(EC,CD,DE)",
+    "Collinear(AED)",
+    "Collinear(AFB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(AD),6)",
+    "IsMidpointOfLine(E,AD)",
+    "MirrorSimilarBetweenTriangle(FBC,ECD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BF))",
+  "problem_answer": "1.8",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(DABC)",
+    "line_addition(AE,ED)",
+    "mirror_similar_triangle_property_line_ratio(FBC,ECD)",
+    "mirror_similar_triangle_property_line_ratio(CFB,CDE)"
+  ]
+}

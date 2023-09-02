@@ -1,0 +1,40 @@
+{
+  "problem_id": 527,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-540",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Point S is the incenter of \\triangle J P L. Find m \\angle M P Q.",
+  "problem_img": "527.png",
+  "construction_cdl": [
+    "Shape(JQ,QS,SJ)",
+    "Shape(QP,PS,SQ)",
+    "Shape(SP,PM,MS)",
+    "Shape(SM,ML,LS)",
+    "Shape(SL,LK,KS)",
+    "Shape(JS,SK,KJ)",
+    "Collinear(PQJ)",
+    "Collinear(PSK)",
+    "Collinear(PML)",
+    "Collinear(QSL)",
+    "Collinear(JSM)",
+    "Collinear(JKL)"
+  ],
+  "text_cdl": [
+    "IsIncenterOfTriangle(S,PLJ)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(JK),8)",
+    "Equal(LengthOfLine(JS),10)",
+    "Equal(MeasureOfAngle(SLK),24.5)",
+    "Equal(MeasureOfAngle(KPL),28)",
+    "PerpendicularBetweenLine(JK,SK)",
+    "PerpendicularBetweenLine(SQ,PQ)",
+    "PerpendicularBetweenLine(SM,MP)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(QPM))",
+  "problem_answer": "56",
+  "theorem_seqs": [
+    "angle_addition(QPS,SPM)"
+  ]
+}

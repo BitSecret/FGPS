@@ -1,0 +1,41 @@
+{
+  "problem_id": 4431,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3385",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,CD是直径,点A,点B在⊙O上,连接OA、OB、AC、AB,若∠AOB=40°,CD∥AB,则∠BAC的大小为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, CD is the diameter, point A, point B on ⊙O, connect OA, OB, AC, AB, if ∠AOB = N_0, CD ∥ AB, then the size of ∠BAC is ()",
+  "problem_img": "4431.png",
+  "construction_cdl": [
+    "Shape(OA,AE,EO)",
+    "Shape(EA,AB,BE)",
+    "Shape(AO,OD,ODA)",
+    "Shape(CE,EB,OBC)",
+    "Shape(OE,EC,CO)",
+    "Shape(DO,OC,OCD)",
+    "Collinear(DOC)",
+    "Collinear(AEC)",
+    "Collinear(OEB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DC,AB)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(DC,O)",
+    "Equal(MeasureOfAngle(BOA),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "parallel_property_collinear_extend(DC,AB,O)",
+    "parallel_property_alternate_interior_angle(OC,AB)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

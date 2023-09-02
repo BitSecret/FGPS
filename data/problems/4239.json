@@ -1,0 +1,37 @@
+{
+  "problem_id": 4239,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-3014",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的弦,OA、OC是⊙O的半径,⁀{AC}=⁀{BC},∠BAO=37°,则∠AOC的度数是()度．",
+  "problem_text_en": "As shown in the figure, AB is the chord of ⊙O, OA and OC are the radius of ⊙O, ⁀AC = ⁀BC, ∠BAO = N_0, then the degree of ∠AOC is () degree.",
+  "problem_img": "4239.png",
+  "construction_cdl": [
+    "Shape(OB,BA,AO)",
+    "Shape(OBA,AB)",
+    "Shape(OAC,CO,OA)",
+    "Shape(OCB,BO,OC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfArc(OAC),LengthOfArc(OCB))",
+    "Equal(MeasureOfAngle(BAO),37)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COA))",
+  "problem_answer": "127",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBA)",
+    "isosceles_triangle_property_angle_equal(OBA)",
+    "triangle_property_angle_sum(OBA)",
+    "angle_addition(BOC,COA)",
+    "round_angle(AOB,BOA)",
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_center_angle(OCB,O)",
+    "congruent_arc_judgment_length_equal(OAC,OCB)",
+    "congruent_arc_property_measure_equal(OAC,OCB)"
+  ]
+}

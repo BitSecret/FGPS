@@ -1,0 +1,26 @@
+{
+  "problem_id": 657,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-674",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the triangle. Round to the nearest hundredth.",
+  "problem_img": "657.png",
+  "construction_cdl": [
+    "Shape(AC,CE,EA)",
+    "Shape(AE,EB,BA)",
+    "Collinear(CEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),1.9)",
+    "Equal(MeasureOfAngle(EBA),25)",
+    "Equal(LengthOfLine(CB),2.3)",
+    "PerpendicularBetweenLine(AE,BE)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(ACB))",
+  "problem_answer": "0.923",
+  "theorem_seqs": [
+    "triangle_area_formula_sine(BAC)"
+  ]
+}

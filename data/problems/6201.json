@@ -1,0 +1,29 @@
+{
+  "problem_id": 6201,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8783",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O中,A、B、C是⊙O上三点,且∠AOC=110°,则∠ABC的度数是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, A, B, and C are the three vertices on ⊙O, and ∠AOC = N_0, then the degree of ∠ABC is ()",
+  "problem_img": "6201.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DC,OCD)",
+    "Shape(DA,AO,OC,CD)",
+    "Shape(OA,AB,BC,CO)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Cocircular(O,DABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COA),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "125",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAC,O)",
+    "arc_property_circumference_angle_internal(OAC,B)"
+  ]
+}

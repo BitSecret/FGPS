@@ -1,0 +1,30 @@
+{
+  "problem_id": 4319,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3157",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,在⊙O上,B是⁀{AC}的中点,D是圆上一点,∠AOB=50°,则∠BDC的度数是()",
+  "problem_text_en": "As shown in the figure, on ⊙O, B is the midpoint of ⁀AC, D is a point on the circle, ∠AOB = N_0, then the degree of ∠BDC is ()",
+  "problem_img": "4319.png",
+  "construction_cdl": [
+    "Shape(AO,OB,OBA)",
+    "Shape(OA,OAD,DB,BO)",
+    "Shape(BD,DC,OCB)",
+    "Shape(ODC,CD)",
+    "Cocircular(O,BADC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfArc(B,OCA)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AOB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BDC))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBA,O)",
+    "congruent_arc_judgment_length_equal(OBA,OCB)",
+    "congruent_arc_property_measure_equal(OBA,OCB)",
+    "arc_property_circumference_angle_external(OCB,D)"
+  ]
+}

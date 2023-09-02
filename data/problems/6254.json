@@ -1,0 +1,43 @@
+{
+  "problem_id": 6254,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8873",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AD⊥BC于点D,AD=4cm,AB=8cm,AC=6cm,则⊙O的直径是()",
+  "problem_text_en": "As shown in the figure, AD ⊥ BC is at point D, AD = N_0, AB = N_1, AC = N_2, then the diameter of ⊙O is ()",
+  "problem_img": "6254.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CD,DB)",
+    "Shape(OCA,AC)",
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DC,CA)",
+    "Shape(AB,BE,EO,OA)",
+    "Collinear(BDC)",
+    "Collinear(AOE)",
+    "Cocircular(O,CABE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),4)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(AC),6)",
+    "PerpendicularBetweenLine(AD,CD)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "line_addition(AO,OE)",
+    "diameter_of_circle_judgment_pass_centre(AOE,O)",
+    "diameter_of_circle_property_right_angle(ABE,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_circumference_angle_external(OAB,E)",
+    "similar_triangle_judgment_aa(ADC,ABE)",
+    "similar_triangle_property_line_ratio(DCA,BEA)",
+    "similar_triangle_property_line_ratio(CAD,EAB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

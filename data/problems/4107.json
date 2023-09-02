@@ -1,0 +1,24 @@
+{
+  "problem_id": 4107,
+  "annotation": "QikeHuang_2023-05-07",
+  "source": "GeoQA-2546",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC中,∠C=90°,AC=3,BC=4,则\\cosA的值为()",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠C = N_0, AC = N_1, BC = N_2, then the value of cosA is ()",
+  "problem_img": "4107.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(MeasureOfAngle(ACB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Cos(MeasureOfAngle(BAC)))",
+  "problem_answer": "3/5",
+  "theorem_seqs": [
+    "cosine_theorem(ACB)",
+    "cosine_theorem(CBA)"
+  ]
+}

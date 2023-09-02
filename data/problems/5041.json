@@ -1,0 +1,28 @@
+{
+  "problem_id": 5041,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4789",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知△ADE∽△ACB,若AB=10,AC=8,AD=4,则AE的长是()",
+  "problem_text_en": "As shown in the figure, it is known that △ADE ∽ △ACB, if AB = N_0, AC = N_1, AD = N_2, then the length of AE is ()",
+  "problem_img": "5041.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "MirrorSimilarBetweenTriangle(ABC,ADE)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(AC),8)",
+    "Equal(LengthOfLine(AD),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "mirror_similar_triangle_property_line_ratio(BCA,EAD)",
+    "mirror_similar_triangle_property_line_ratio(CAB,DEA)"
+  ]
+}

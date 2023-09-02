@@ -1,0 +1,33 @@
+{
+  "problem_id": 2444,
+  "annotation": "Yangli_2023-04-23",
+  "source": "Geometry3k-2563",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram J K L M to find m \\angle K J L.",
+  "problem_img": "2444.png",
+  "construction_cdl": [
+    "Shape(JM,MR,RJ)",
+    "Shape(RM,ML,LR)",
+    "Shape(RL,LK,KR)",
+    "Shape(JR,RK,KJ)",
+    "Collinear(JRL)",
+    "Collinear(MRK)"
+  ],
+  "text_cdl": [
+    "Parallelogram(JMLK)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(JK),2*b+3)",
+    "Equal(LengthOfLine(JM),3*a)",
+    "Equal(LengthOfLine(LK),21)",
+    "Equal(MeasureOfAngle(RLK),70)",
+    "Equal(MeasureOfAngle(MLR),30)",
+    "Equal(LengthOfLine(LM),45)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(KJR))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(JK,ML)"
+  ]
+}

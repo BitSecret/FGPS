@@ -1,0 +1,31 @@
+{
+  "problem_id": 2696,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2839",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The area A of the shaded region is given. Find x. A = 66 cm^2.",
+  "problem_img": "2696.png",
+  "construction_cdl": [
+    "Shape(KJL,LK,KJ)",
+    "Shape(KLJ,JK,KL)",
+    "Collinear(JKL)",
+    "Cocircular(K,JL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(K,K)",
+    "Equal(AreaOfSector(KLJ),66)",
+    "Equal(LengthOfLine(JL),x)",
+    "Equal(MeasureOfAngle(JKL),180)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "12.9640",
+  "theorem_seqs": [
+    "arc_property_center_angle(KLJ,K)",
+    "sector_area_formula(KLJ)",
+    "radius_of_circle_property_length_equal(KJ,K)",
+    "radius_of_circle_property_length_equal(KL,K)",
+    "line_addition(JK,KL)"
+  ]
+}

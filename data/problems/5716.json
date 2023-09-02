@@ -1,0 +1,49 @@
+{
+  "problem_id": 5716,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7490",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥DC,AC与BD交于点E,EF∥DC交BC于点F,CE=5,CF=4,AE=BC,则\\frac{DC}{AB}等于()",
+  "problem_text_en": "As shown in the figure, AB ∥ DC, AC and BD intersect at point E, EF ∥ DC intersect BC at point F, CE = N_0, CF = N_1, AE = BC, then \\\\frac {DC}{AB} is equal to ()",
+  "problem_img": "5716.png",
+  "construction_cdl": [
+    "Shape(DE,EC,CD)",
+    "Shape(CE,EF,FC)",
+    "Shape(EA,AB,BE)",
+    "Shape(EB,BF,FE)",
+    "Collinear(AEC)",
+    "Collinear(CFB)",
+    "Collinear(DEB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DC,AB)",
+    "ParallelBetweenLine(DC,EF)",
+    "Equal(LengthOfLine(CE),5)",
+    "Equal(LengthOfLine(CF),4)",
+    "Equal(LengthOfLine(AE),LengthOfLine(BC))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(DC),LengthOfLine(AB)))",
+  "problem_answer": "1/4",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(DC,AB)",
+    "parallel_property_alternate_interior_angle(DC,EF)",
+    "similar_triangle_judgment_aa(ECD,EAB)",
+    "similar_triangle_judgment_aa(FCE,BCA)",
+    "similar_triangle_judgment_aa(EAB,ECD)",
+    "similar_triangle_judgment_aa(BCA,FCE)",
+    "similar_triangle_property_line_ratio(ECD,EAB)",
+    "similar_triangle_property_line_ratio(CDE,ABE)",
+    "similar_triangle_property_line_ratio(DEC,BEA)",
+    "similar_triangle_property_line_ratio(FCE,BCA)",
+    "similar_triangle_property_line_ratio(CEF,CAB)",
+    "similar_triangle_property_line_ratio(EFC,ABC)",
+    "similar_triangle_property_line_ratio(EAB,ECD)",
+    "similar_triangle_property_line_ratio(ABE,CDE)",
+    "similar_triangle_property_line_ratio(BEA,DEC)",
+    "similar_triangle_property_line_ratio(BCA,FCE)",
+    "similar_triangle_property_line_ratio(CAB,CEF)",
+    "similar_triangle_property_line_ratio(ABC,EFC)",
+    "line_addition(AE,EC)"
+  ]
+}

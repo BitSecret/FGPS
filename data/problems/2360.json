@@ -1,0 +1,25 @@
+{
+  "problem_id": 2360,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2474",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "parallelogram M N P Q with m \\angle M = 10 x and m \\angle N = 20 x, find \\angle M.",
+  "problem_img": "2360.png",
+  "construction_cdl": [
+    "Shape(MQ,QP,PN,NM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(MQPN)",
+    "Equal(MeasureOfAngle(NMQ),10*x)",
+    "Equal(MeasureOfAngle(PNM),20*x)",
+    "Equal(MeasureOfAngle(PNM),MeasureOfAngle(MQP))",
+    "Equal(MeasureOfAngle(QPN),MeasureOfAngle(NMQ))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(NMQ))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "quadrilateral_property_angle_sum(MQPN)"
+  ]
+}

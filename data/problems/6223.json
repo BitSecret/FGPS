@@ -1,0 +1,35 @@
+{
+  "problem_id": 6223,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8818",
+  "problem_level": 1,
+  "problem_text_cn": "已知AB、CD是⊙O的两条直径,∠ABC=30°,那么∠BAD=()",
+  "problem_text_en": "Knowing that AB and CD are the two diameters of ⊙O, ∠ABC = N_0, then ∠BAD = ()",
+  "problem_img": "6223.png",
+  "construction_cdl": [
+    "Shape(OAD,DA)",
+    "Shape(ODB,BO,OD)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AO,OC)",
+    "Shape(OA,AD,DO)",
+    "Shape(OB,BC,CO)",
+    "Collinear(BOA)",
+    "Collinear(DOC)",
+    "Cocircular(O,DBCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABC),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "isosceles_triangle_judgment_line_equal(OAD)",
+    "isosceles_triangle_property_angle_equal(OAD)"
+  ]
+}

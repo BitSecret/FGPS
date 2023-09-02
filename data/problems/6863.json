@@ -1,0 +1,36 @@
+{
+  "problem_id": 6863,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10087",
+  "problem_level": 1,
+  "problem_text_cn": "如图，已知△ABC是⊙O的内接三角形，∠ABO＝40°，则∠ACB的大小为（）",
+  "problem_text_en": "",
+  "problem_img": "6863.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(AD,DB,BA)",
+    "Shape(AB,OBA)",
+    "Shape(BD,DC,CB)",
+    "Shape(BC,OCB)",
+    "Shape(CD,DO,OA,OAC)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OBA),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBA)",
+    "isosceles_triangle_property_angle_equal(OBA)",
+    "triangle_property_angle_sum(AOB)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)"
+  ]
+}

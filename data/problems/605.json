@@ -1,0 +1,38 @@
+{
+  "problem_id": 605,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-622",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, square W X Y Z is inscribed in \\odot R. Find the measure of a central angle.",
+  "problem_img": "605.png",
+  "construction_cdl": [
+    "Shape(WZ,ZY,YR,RW)",
+    "Shape(WR,RX,XW)",
+    "Shape(XR,RS,SX)",
+    "Shape(SR,RY,YS)",
+    "Shape(WX,RXW)",
+    "Shape(RWZ,ZW)",
+    "Shape(RZY,YZ)",
+    "Shape(RYX,XY)",
+    "Collinear(XSY)",
+    "Collinear(YRW)",
+    "Cocircular(R,WZYX)"
+  ],
+  "text_cdl": [
+    "Square(WZYX)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(R,R)",
+    "PerpendicularBetweenLine(RS,XS)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(XRY))",
+  "problem_answer": "90",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(XWY)",
+    "isosceles_triangle_property_angle_equal(XWY)",
+    "triangle_property_angle_sum(XWY)",
+    "arc_property_circumference_angle_external(RYX,W)",
+    "arc_property_center_angle(RYX,R)"
+  ]
+}

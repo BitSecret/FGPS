@@ -1,0 +1,30 @@
+{
+  "problem_id": 4368,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3279",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,⁀{AB}=⁀{BC},点D在⊙O上,∠CDB=25°,则∠AOB=()",
+  "problem_text_en": "As shown in the figure, in ⊙O, ⁀AB = ⁀BC, point D is on ⊙O, ∠CDB = N_0, then ∠AOB = ()",
+  "problem_img": "4368.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(CD,DB,OBC)",
+    "Shape(DC,OCD)",
+    "Shape(AO,OB,BD,ODA)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfArc(OAB),LengthOfArc(OBC))",
+    "Equal(MeasureOfAngle(CDB),25)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(OAB,OBC)",
+    "congruent_arc_property_measure_equal(OAB,OBC)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

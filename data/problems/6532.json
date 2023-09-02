@@ -1,0 +1,36 @@
+{
+  "problem_id": 6532,
+  "annotation": "NaZhu_2023-06-04",
+  "source": "GeoQA-9455",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,AB=3cm,AD=5cm,BD的垂直平分线分别交AD、BC于F、E,则△CDE的周长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, AB = N_0, AD = N_1, the vertical bisector of BD intersects AD, BC at F, and E respectively, then the perimeter of △CDE is ()",
+  "problem_img": "6532.png",
+  "construction_cdl": [
+    "Shape(BA,AF,FO,OB)",
+    "Shape(BO,OE,EB)",
+    "Shape(EO,OD,DE)",
+    "Shape(CE,ED,DC)",
+    "Shape(OF,FD,DO)",
+    "Collinear(BEC)",
+    "Collinear(AFD)",
+    "Collinear(BOD)",
+    "Collinear(EOF)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ADCB)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(AD),5)",
+    "IsPerpendicularBisectorOfLine(EO,BD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(CED))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(EO,BD)",
+    "line_addition(BE,EC)",
+    "parallelogram_property_opposite_line_equal(ADCB)",
+    "parallelogram_property_opposite_line_equal(DCBA)",
+    "triangle_perimeter_formula(CED)"
+  ]
+}

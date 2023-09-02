@@ -1,0 +1,32 @@
+{
+  "problem_id": 1128,
+  "annotation": "Yangli_2023-04-09",
+  "source": "Geometry3k-1165",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If m \\angle Z X W = x - 11 and m \\angle W Z X = x - 9, find m \\angle Z X Y.",
+  "problem_img": "1128.png",
+  "construction_cdl": [
+    "Shape(ZW,WP,PZ)",
+    "Shape(PW,WX,XP)",
+    "Shape(PX,XY,YP)",
+    "Shape(ZP,PY,YZ)",
+    "Collinear(WPY)",
+    "Collinear(ZPX)"
+  ],
+  "text_cdl": [
+    "Rectangle(ZWXY)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(WXP),x-11)",
+    "Equal(MeasureOfAngle(PZW),x-9)",
+    "PerpendicularBetweenLine(WX,WZ)",
+    "ParallelBetweenLine(ZW,YX)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ZXY))",
+  "problem_answer": "46",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ZWX)",
+    "parallel_property_alternate_interior_angle(WZ,XY)"
+  ]
+}

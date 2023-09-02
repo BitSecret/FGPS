@@ -1,0 +1,30 @@
+{
+  "problem_id": 5530,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6679",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA切⊙O于点A,⊙O的半径为3,PO=6,若图中阴影部分的面积为\\frac{9}{2}√{3}-\\frac{3}{2}π,则∠P=()",
+  "problem_text_en": "As shown in the figure, PA tangents ⊙O at point A, the radius of ⊙O is N_0, PO = N_1, if the area of the shaded part in the figure is \\frac{N_2}{N_3}√{N_4}-\\frac{N_5}{N_6}π, then ∠P = ()",
+  "problem_img": "5530.png",
+  "construction_cdl": [
+    "Shape(PA,OBA,BP)",
+    "Shape(AO,OB,OBA)",
+    "Shape(OA,OAB,BO)",
+    "Collinear(OBP)",
+    "Cocircular(O,BA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "Equal(LengthOfLine(OA),3)",
+    "Equal(LengthOfLine(PO),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OPA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "cosine_theorem(PAO)",
+    "cosine_theorem(AOP)"
+  ]
+}

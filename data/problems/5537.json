@@ -1,0 +1,41 @@
+{
+  "problem_id": 5537,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6712",
+  "problem_level": 1,
+  "problem_text_cn": "如图,三个半径都为2的圆两两外离,则图中阴影部分的面积为()",
+  "problem_text_en": "As shown in the figure, the three circles with radii of N_0 are separated by two, then the area of ​​the shaded part in the figure is ()",
+  "problem_img": "5537.png",
+  "construction_cdl": [
+    "Shape(CD,CDE,EC)",
+    "Shape(DF,AGF,GH,BIH,IE,CDE)",
+    "Shape(FA,AG,AGF)",
+    "Shape(BI,BIH,HB)",
+    "Collinear(AFDC)",
+    "Collinear(AGHB)",
+    "Collinear(CEIB)",
+    "Cocircular(C,DE)",
+    "Cocircular(A,GF)",
+    "Cocircular(B,IH)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(C,C)",
+    "IsCentreOfCircle(A,A)",
+    "IsCentreOfCircle(B,B)",
+    "Equal(RadiusOfCircle(A),2)",
+    "Equal(RadiusOfCircle(B),2)",
+    "Equal(RadiusOfCircle(C),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(AreaOfSector(CDE),AreaOfSector(AGF),AreaOfSector(BIH)))",
+  "problem_answer": "2*pi",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CAB)",
+    "arc_property_center_angle(CDE,C)",
+    "arc_property_center_angle(AGF,A)",
+    "arc_property_center_angle(BIH,B)",
+    "sector_area_formula(CDE)",
+    "sector_area_formula(AGF)",
+    "sector_area_formula(BIH)"
+  ]
+}

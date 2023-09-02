@@ -1,0 +1,55 @@
+{
+  "problem_id": 854,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-883",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "P Q is tangent to circles R and S. Find P Q.",
+  "problem_img": "854.png",
+  "construction_cdl": [
+    "Shape(RPC,CR,RA,AP)",
+    "Shape(RCM,MA,AR,RC)",
+    "Shape(RMP,PA,AM)",
+    "Shape(RCM,SNC,NM)",
+    "Shape(SNC,CS,SN)",
+    "Shape(SQN,NS,SQ)",
+    "Shape(SCQ,QS,SC)",
+    "Shape(RMP,MN,SQN,QP)",
+    "Collinear(RAP)",
+    "Collinear(RCS)",
+    "Collinear(AMNS)",
+    "Cocircular(R,CMP)",
+    "Cocircular(S,QNC)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(QP,R)",
+    "IsTangentOfCircle(PQ,S)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(R,R)",
+    "IsCentreOfCircle(S,S)",
+    "Equal(LengthOfLine(RP),6)",
+    "Equal(LengthOfLine(SQ),4)",
+    "PerpendicularBetweenLine(MA,RA)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(PQ))",
+  "problem_answer": "4*sqrt(6)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(RP,R)",
+    "radius_of_circle_property_length_equal(RC,R)",
+    "radius_of_circle_property_length_equal(SQ,S)",
+    "radius_of_circle_property_length_equal(SC,S)",
+    "line_addition(RC,CS)",
+    "tangent_of_circle_property_perpendicular(PQ,S,S)",
+    "tangent_of_circle_property_perpendicular(QP,R,R)",
+    "parallel_judgment_corresponding_angle(PQ,AS,R)",
+    "parallel_judgment_per_per(QS,PR)",
+    "parallel_property_collinear_extend(RP,SQ,A)",
+    "parallelogram_judgment_parallel_and_parallel(PASQ)",
+    "parallelogram_property_opposite_line_equal(PASQ)",
+    "parallelogram_property_opposite_line_equal(ASQP)",
+    "line_addition(PA,AR)",
+    "right_triangle_judgment_angle(SAR)",
+    "right_triangle_property_pythagorean(SAR)"
+  ]
+}

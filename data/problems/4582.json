@@ -1,0 +1,44 @@
+{
+  "problem_id": 4582,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3725",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC是⊙O的内接三角形,D是AB边的中点,OA=6,∠ACB=30°,则OD=()",
+  "problem_text_en": "As shown in the figure, △ABC is the inscribed triangle of ⊙O, D is the midpoint of the AB side, OA = N_0, ∠ACB = N_1, then OD = ()",
+  "problem_img": "4582.png",
+  "construction_cdl": [
+    "Shape(AO,OE,EC,OCA)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(OA,AF,FO)",
+    "Shape(OF,FE,EO)",
+    "Shape(FA,AD,DF)",
+    "Shape(EF,FD,DB,BE)",
+    "Shape(CE,EB,BC)",
+    "Collinear(OFD)",
+    "Collinear(AFEC)",
+    "Collinear(OEB)",
+    "Collinear(ADB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OA),6)",
+    "Equal(MeasureOfAngle(BCA),30)",
+    "IsCentreOfCircle(O,O)",
+    "IsMedianOfTriangle(OD,OAB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OD))",
+  "problem_answer": "3*sqrt(3)",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "isosceles_triangle_property_line_coincidence(OAB,D)",
+    "sine_theorem(OAD)"
+  ]
+}

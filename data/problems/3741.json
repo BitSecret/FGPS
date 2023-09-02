@@ -1,0 +1,29 @@
+{
+  "problem_id": 3741,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1534",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b,AC⊥AB,AC交直线b于点C,∠1=60°,则∠2的度数是()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, AC ⊥ AB, AC intersects the straight line b at point C, ∠1 = N_0, then the degree of ∠2 is ()",
+  "problem_img": "3741.png",
+  "construction_cdl": [
+    "Shape(EA,AD)",
+    "Shape(DA,AC)",
+    "Shape(AB,BC,CA)",
+    "Collinear(EAB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AD,BC)",
+    "PerpendicularBetweenLine(CA,BA)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(BCA),60)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(EAD))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "adjacent_complementary_angle(EAC,CAB)",
+    "angle_addition(EAD,DAC)"
+  ]
+}

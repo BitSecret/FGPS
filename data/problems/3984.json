@@ -1,0 +1,40 @@
+{
+  "problem_id": 3984,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1929",
+  "problem_level": 1,
+  "problem_text_cn": "绍兴是著名的桥乡．如图,圆拱桥的桥顶到水面的距离CD为8m,桥拱半径OC为5m,则水面宽AB为()",
+  "problem_text_en": "Shaoxing is a famous bridge township. As shown in the figure, the distance CD from the top of the round arch bridge to the water surface is N_0, and the arch radius OC is N_1, so the width of the water surface AB is ()",
+  "problem_img": "3984.png",
+  "construction_cdl": [
+    "Shape(OC,OCA,AO)",
+    "Shape(OA,AD,DO)",
+    "Shape(OD,DB,BO)",
+    "Shape(OB,OBC,CO)",
+    "Shape(DA,OAB,BD)",
+    "Collinear(ADB)",
+    "Collinear(COD)",
+    "Cocircular(O,CAB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(OD,BD)",
+    "PerpendicularBetweenLine(AD,OD)",
+    "Equal(LengthOfLine(CD),8)",
+    "Equal(LengthOfLine(OC),5)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "line_addition(AD,DB)",
+    "line_addition(CO,OD)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "right_triangle_judgment_angle(ADO)",
+    "right_triangle_judgment_angle(ODB)",
+    "right_triangle_property_pythagorean(ADO)",
+    "right_triangle_property_pythagorean(ODB)"
+  ]
+}

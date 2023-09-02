@@ -1,0 +1,30 @@
+{
+  "problem_id": 6524,
+  "annotation": "NaZhu_2023-06-04",
+  "source": "GeoQA-9444",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,AB=3,BC=4,BE平分∠ABC交AD于E,则ED为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, AB = N_0, BC = N_1, BE bisects ∠ABC crosses AD to E, then AE and ED are respectively ()",
+  "problem_img": "6524.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BC,CD,DE)",
+    "Collinear(AED)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),4)",
+    "IsBisectorOfAngle(BE,ABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(ED))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AD,BC,E)",
+    "parallel_property_alternate_interior_angle(AE,BC)",
+    "isosceles_triangle_judgment_angle_equal(ABE)",
+    "line_addition(AE,ED)",
+    "parallelogram_property_opposite_line_equal(BCDA)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 2451,
+  "annotation": "Yangli_2023-04-23",
+  "source": "Geometry3k-2571",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2451.png",
+  "construction_cdl": [
+    "Shape(C)",
+    "Shape(EH,HJ,JE)",
+    "Shape(FJ,JG,GF)",
+    "Shape(HE,CEH)",
+    "Shape(FG,CGF)",
+    "Shape(GJ,JH,CHG)",
+    "Shape(EJ,JF,CFE)",
+    "Collinear(EJG)",
+    "Collinear(FJH)",
+    "Cocircular(C,HGFE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(C,C)",
+    "Equal(MeasureOfAngle(JEH),8*x+6)",
+    "Equal(MeasureOfAngle(GFJ),10*x-4)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(CHG,E)",
+    "arc_property_circumference_angle_external(CHG,F)"
+  ]
+}

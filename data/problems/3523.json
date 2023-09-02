@@ -1,0 +1,36 @@
+{
+  "problem_id": 3523,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1138",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,在△ABC中,∠A=90°,AB=AC,BD平分∠ABC交AC于点D,DE⊥BC于点E,若△CDE的周长为8cm,则斜边BC的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠A = N_0, AB = AC, BD bisects ∠ABC intersects AC at point D, DE ⊥ BC at point E, if the perimeter of △CDE is N_1, the hypotenuse BC Long as()",
+  "problem_img": "3523.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BE,ED)",
+    "Shape(DE,EC,CD)",
+    "Collinear(BEC)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(CAB),90)",
+    "IsBisectorOfAngle(BD,ABC)",
+    "PerpendicularBetweenLine(DE,CE)",
+    "Equal(PerimeterOfTriangle(DEC),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BED,DEC)",
+    "bisector_of_angle_judgment_angle_equal(BD,ABE)",
+    "bisector_of_angle_property_distance_equal(BD,ABE)",
+    "line_addition(AD,DC)",
+    "line_addition(BE,EC)",
+    "mirror_congruent_triangle_judgment_hl(BED,BDA)",
+    "mirror_congruent_triangle_property_line_equal(DBE,DAB)",
+    "triangle_perimeter_formula(DEC)"
+  ]
+}

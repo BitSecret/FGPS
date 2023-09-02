@@ -1,0 +1,41 @@
+{
+  "problem_id": 2158,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-2252",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find E G if \\triangle A C B \\sim \\triangle E G F, A D is an altitude of \\triangle A C B, E H is an altitude of \\triangle E G F, A C = 17, A D = 15, and E H = 7.5.",
+  "problem_img": "2158.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Shape(EH,HG,GE)",
+    "Shape(EG,GF,FE)",
+    "Collinear(BCD)",
+    "Collinear(HGF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "MirrorSimilarBetweenTriangle(ABC,EGF)",
+    "IsAltitudeOfTriangle(AD,ABC)",
+    "IsAltitudeOfTriangle(EH,EGF)",
+    "Equal(LengthOfLine(AD),LengthOfLine(EH))",
+    "Equal(LengthOfLine(AC),17)",
+    "Equal(LengthOfLine(AD),15)",
+    "Equal(LengthOfLine(EH),7.5)",
+    "PerpendicularBetweenLine(CD,AD)",
+    "PerpendicularBetweenLine(EH,GH)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(EG))",
+  "problem_answer": "8.5",
+  "theorem_seqs": [
+    "mirror_similar_triangle_property_angle_equal(CAB,GFE)",
+    "flat_angle(BCD)",
+    "flat_angle(HGF)",
+    "angle_addition(BCA,ACD)",
+    "angle_addition(HGE,EGF)",
+    "mirror_similar_triangle_judgment_aa(ACD,EHG)",
+    "mirror_similar_triangle_property_line_ratio(CDA,GEH)",
+    "mirror_similar_triangle_property_line_ratio(DAC,HGE)"
+  ]
+}

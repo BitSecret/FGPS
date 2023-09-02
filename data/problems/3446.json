@@ -1,0 +1,44 @@
+{
+  "problem_id": 3446,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-1010",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,某宾馆大厅要铺圆环形的地毯,工人师傅只测量了与小圆相切的大圆的弦AB的长,就计算出了圆环的面积,若测量得AB的长为20米,则圆环的面积为()",
+  "problem_text_en": "As shown in the figure, a ring-shaped carpet is to be laid in the lobby of a hotel. The worker only measures the length of the chord AB of the great circle tangent to the small circle, and then calculates the area of ​​the ring. If the measured length of AB is N_0, the area of ​​the ring is ()",
+  "problem_img": "3446.png",
+  "construction_cdl": [
+    "Shape(OCD,DO,OC)",
+    "Shape(ODC,CO,OD)",
+    "Shape(PBA,AC,ODC,DB)",
+    "Shape(OCD,CB,BD)",
+    "Shape(PAB,BC,CA)",
+    "Shape(O)",
+    "Shape(P)",
+    "Collinear(ACB)",
+    "Collinear(ODB)",
+    "Cocircular(O,CD)",
+    "Cocircular(P,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsCentreOfCircle(O,P)",
+    "IsTangentOfCircle(AC,O)",
+    "IsTangentOfCircle(BC,O)",
+    "Equal(LengthOfLine(AB),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(AreaOfCircle(P),AreaOfCircle(O)))",
+  "problem_answer": "314.159",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,P)",
+    "tangent_of_circle_property_perpendicular(AC,O,O)",
+    "tangent_of_circle_property_perpendicular(BC,O,O)",
+    "circle_property_chord_perpendicular_bisect_chord(P,OC,AB)",
+    "line_addition(AC,CB)",
+    "right_triangle_judgment_angle(OCB)",
+    "right_triangle_property_pythagorean(OCB)",
+    "circle_area_formula(O)",
+    "circle_area_formula(P)"
+  ]
+}

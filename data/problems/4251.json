@@ -1,0 +1,27 @@
+{
+  "problem_id": 4251,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-3035",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,∠BAC=40°,则∠BOC的度数为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, ∠BAC = N_0, then the degree of ∠BOC is ()",
+  "problem_img": "4251.png",
+  "construction_cdl": [
+    "Shape(OBC,CO,OB)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OCA,AC)",
+    "Shape(OAB,BA)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

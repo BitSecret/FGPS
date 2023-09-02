@@ -1,0 +1,30 @@
+{
+  "problem_id": 700,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-719",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "W X Y Z is a kite. If m \\angle W X Y = 120, m \\angle W Z Y = 4 x, and m \\angle Z W X = 10 x, find m \\angle Z Y X.",
+  "problem_img": "700.png",
+  "construction_cdl": [
+    "Shape(WZ,ZU,UW)",
+    "Shape(ZY,YU,UZ)",
+    "Shape(UY,YX,XU)",
+    "Shape(WU,UX,XW)",
+    "Collinear(ZUX)",
+    "Collinear(WUY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Kite(XWZY)",
+    "Equal(MeasureOfAngle(YXW),120)",
+    "Equal(MeasureOfAngle(WZY),4*x)",
+    "Equal(MeasureOfAngle(XWZ),10*x)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ZYX))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "kite_property_opposite_angle_equal(XWZY)",
+    "quadrilateral_property_angle_sum(WZYX)"
+  ]
+}

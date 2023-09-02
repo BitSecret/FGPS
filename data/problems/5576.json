@@ -1,0 +1,39 @@
+{
+  "problem_id": 5576,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-6890",
+  "problem_level": 1,
+  "problem_text_cn": "如图,上午8时一条船从A出发(60海里/时)向正东航行,8时30分到B处,经测小岛M在A北偏东45°,在B北偏东30°方向,那么BM的距离为()",
+  "problem_text_en": "As shown in the figure, at N_0 in the morning, a boat departs from A (N_1 nautical miles/hour) and sails due east, and arrives at point B at N_2 at N_3. It is measured that the small island M is N_4 northeast of A, and it is in the direction of N_5 north east of B. Then the distance of BM is ()",
+  "problem_img": "5576.png",
+  "construction_cdl": [
+    "Shape(CA,AN,NM,MC)",
+    "Shape(AB,BN,NA)",
+    "Shape(NB,BM,MN)",
+    "Shape(MB,BD,DM)",
+    "Collinear(ABD)",
+    "Collinear(ANM)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BNA),90)",
+    "Equal(MeasureOfAngle(BDM),90)",
+    "Equal(MeasureOfAngle(CAB),90)",
+    "Equal(LengthOfLine(AB),30)",
+    "Equal(MeasureOfAngle(CAM),45)",
+    "Equal(MeasureOfAngle(MBD),60)",
+    "Equal(LengthOfLine(AB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BM))",
+  "problem_answer": "30 + 30*sqrt(3)",
+  "theorem_seqs": [
+    "angle_addition(CAN,NAB)",
+    "triangle_property_angle_sum(NAB)",
+    "triangle_property_angle_sum(NBM)",
+    "angle_addition(NBM,MBD)",
+    "adjacent_complementary_angle(ABN,NBD)",
+    "adjacent_complementary_angle(MNB,BNA)",
+    "sine_theorem(BNA)",
+    "sine_theorem(BMN)"
+  ]
+}

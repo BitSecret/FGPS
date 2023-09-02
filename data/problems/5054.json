@@ -1,0 +1,31 @@
+{
+  "problem_id": 5054,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4806",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,△ACB∽△A′CB′,∠BCB′=30°,则∠ACA′的度数为()",
+  "problem_text_en": "As shown in the figure, △ACB ∽ △A′CB′, ∠BCB′ = 30°, then the degree of ∠ACA′ is ()",
+  "problem_img": "5054.png",
+  "construction_cdl": [
+    "Shape(BE,EF,FB)",
+    "Shape(FE,EC,CF)",
+    "Shape(AF,FC,CA)",
+    "Shape(BD,DE,EB)",
+    "Shape(DC,CE,ED)",
+    "Collinear(BFA)",
+    "Collinear(BEC)",
+    "Collinear(DEF)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(BCA,DCF)",
+    "Equal(MeasureOfAngle(DCB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FCA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "similar_triangle_property_angle_equal(CAB,CFD)",
+    "angle_addition(DCE,ECF)",
+    "angle_addition(ECF,FCA)"
+  ]
+}

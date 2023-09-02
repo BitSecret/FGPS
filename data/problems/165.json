@@ -1,0 +1,42 @@
+{
+  "problem_id": 165,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-167",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 1 = 53. Find the measure of \\angle 3.",
+  "problem_img": "165.png",
+  "construction_cdl": [
+    "Shape(GW,WL)",
+    "Shape(LW,WX)",
+    "Shape(WX,XE)",
+    "Shape(EX,XN)",
+    "Shape(NX,XZ)",
+    "Shape(XZ,ZK)",
+    "Shape(KZ,ZH)",
+    "Shape(HZ,ZY)",
+    "Shape(ZY,YM)",
+    "Shape(MY,YI)",
+    "Shape(IY,YW)",
+    "Shape(YW,WG)",
+    "Shape(WY,YZ,ZX,XW)",
+    "Collinear(GWXN)",
+    "Collinear(IYZK)",
+    "Collinear(LWYM)",
+    "Collinear(EXZH)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(LWX),53)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(WL,XE)",
+    "ParallelBetweenLine(XN,ZK)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(XZK))",
+  "problem_answer": "53",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(WL,XE)",
+    "vertical_angle(WXE,NXZ)",
+    "parallel_property_ipsilateral_internal_angle(XN,ZK)"
+  ]
+}

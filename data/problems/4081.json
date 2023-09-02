@@ -1,0 +1,28 @@
+{
+  "problem_id": 4081,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2436",
+  "problem_level": 1,
+  "problem_text_cn": "某校数学兴趣小组为测量学校旗杆AC的高度,在点F处竖立一根长为1.5米的标杆DF,如图所示,量出DF的影子EF的长度为1米,再量出旗杆AC的影子BC的长度为6米,那么旗杆AC的高度为()",
+  "problem_text_en": "In order to measure the height of the school flagpole AC, a school math interest group erected a benchmark DF with a length of N_0 at point F. As shown in the figure, the length of the shadow EF of DF is measured as N_1, and then measure the length of the shadow BC of the flagpole AC to be N_2, then the height of the flagpole AC is ()",
+  "problem_img": "4081.png",
+  "construction_cdl": [
+    "Shape(DE,EB,BD)",
+    "Shape(AB,BC,CA)",
+    "Shape(DB,BA)",
+    "Collinear(EBC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(DB),1.5)",
+    "Equal(LengthOfLine(EB),1)",
+    "Equal(LengthOfLine(BC),6)",
+    "SimilarBetweenTriangle(DEB,ABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(DEB,ABC)",
+    "similar_triangle_property_line_ratio(EBD,BCA)"
+  ]
+}

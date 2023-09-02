@@ -1,0 +1,31 @@
+{
+  "problem_id": 5169,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5125",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是圆O的直径,AB⊥CD于点E,若CD=8,则DE等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of circle O, AB ⊥ CD is at point E, if CD = N_0, then DE is equal to ()",
+  "problem_img": "5169.png",
+  "construction_cdl": [
+    "Shape(CE,EA,OAC)",
+    "Shape(AE,ED,ODA)",
+    "Shape(BO,OE,EC,OCB)",
+    "Shape(DE,EO,OB,OBD)",
+    "Collinear(CED)",
+    "Collinear(AEOB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "PerpendicularBetweenLine(DE,OE)",
+    "Equal(LengthOfLine(CD),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,DC)",
+    "line_addition(CE,ED)"
+  ]
+}

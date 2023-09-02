@@ -1,0 +1,37 @@
+{
+  "problem_id": 1472,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1526",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If Q R = 2, X W = 12, Q W = 15, and S T = 5, find R S.",
+  "problem_img": "1472.png",
+  "construction_cdl": [
+    "Shape(QX,XR,RQ)",
+    "Shape(RX,XW,WS,SR)",
+    "Shape(SW,WV,VT,TS)",
+    "Collinear(QXWV)",
+    "Collinear(QRST)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(QR),2)",
+    "Equal(LengthOfLine(XW),12)",
+    "Equal(LengthOfLine(QW),15)",
+    "Equal(LengthOfLine(ST),5)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(XR,WS)",
+    "ParallelBetweenLine(WS,VT)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(RS))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(XR,WS,Q)",
+    "parallel_property_corresponding_angle(SW,RX,Q)",
+    "similar_triangle_judgment_aa(QXR,QWS)",
+    "line_addition(QX,XW)",
+    "line_addition(QR,RS)",
+    "similar_triangle_property_line_ratio(XRQ,WSQ)",
+    "similar_triangle_property_line_ratio(RQX,SQW)"
+  ]
+}

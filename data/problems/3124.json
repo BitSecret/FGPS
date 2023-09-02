@@ -1,0 +1,38 @@
+{
+  "problem_id": 3124,
+  "annotation": "YimingHe_2023-04-23",
+  "source": "GeoQA-375",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b,若∠1=40°,∠2=55°,则∠3等于()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, if ∠1 = N_0, ∠2 = N_1, then ∠3 is equal to ()",
+  "problem_img": "3124.png",
+  "construction_cdl": [
+    "Shape(BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Shape(AD,DE)",
+    "Shape(FG,GC)",
+    "Shape(GC,CB)",
+    "Shape(CG,GH,HD,DC)",
+    "Shape(ED,DH)",
+    "Shape(DH,HI)",
+    "Collinear(BCDE)",
+    "Collinear(FGHI)",
+    "Collinear(ACG)",
+    "Collinear(ADH)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BE,FI)",
+    "Equal(MeasureOfAngle(DAC),40)",
+    "Equal(MeasureOfAngle(CDA),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FGC))",
+  "problem_answer": "95",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ACD)",
+    "vertical_angle(ACD,GCB)",
+    "parallel_property_collinear_extend(BE,FI,C)",
+    "parallel_property_collinear_extend(IF,CB,G)",
+    "parallel_property_ipsilateral_internal_angle(GF,CB)"
+  ]
+}

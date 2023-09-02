@@ -1,0 +1,34 @@
+{
+  "problem_id": 1414,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1464",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. Assume that segments that appear to be tangent are tangent.",
+  "problem_img": "1414.png",
+  "construction_cdl": [
+    "Shape(CX,CXB,BC)",
+    "Shape(CB,CBX,XC)",
+    "Shape(AX,CBX,BA)",
+    "Collinear(CXA)",
+    "Cocircular(C,BX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(C,C)",
+    "IsTangentOfCircle(AB,C)",
+    "Equal(LengthOfLine(AB),24)",
+    "Equal(LengthOfLine(AX),x)",
+    "Equal(LengthOfLine(BC),7)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(CB,C)",
+    "radius_of_circle_property_length_equal(CX,C)",
+    "tangent_of_circle_property_perpendicular(AB,C,C)",
+    "line_addition(CX,XA)",
+    "right_triangle_judgment_angle(CBA)",
+    "right_triangle_property_pythagorean(CBA)"
+  ]
+}

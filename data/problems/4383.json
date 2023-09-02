@@ -1,0 +1,43 @@
+{
+  "problem_id": 4383,
+  "annotation": "YimingHe_2023-05-14",
+  "source": "GeoQA-3307",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C在⊙O上,连接AC、BC,过点O作OD∥AC交⊙O于点D,点C、D在AB的异侧,若∠B=24°,则∠BCD的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, point C is on ⊙O, connect AC and BC, pass point O to make OD ∥ AC cross ⊙O to point D, point C and D are on the opposite side of AB, if ∠B = N_0, then the degree of ∠BCD is ()",
+  "problem_img": "4383.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(AE,EC,CA)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(DE,EA,AD)",
+    "Shape(DA,OAD)",
+    "Shape(DO,OE,ED)",
+    "Shape(BO,OD,ODB)",
+    "Collinear(AEOB)",
+    "Collinear(CED)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "ParallelBetweenLine(AC,DO)",
+    "Equal(MeasureOfAngle(ABC),24)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "57",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(CAB)",
+    "parallel_property_alternate_interior_angle(AC,DO)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OAD)",
+    "isosceles_triangle_property_angle_equal(OAD)",
+    "triangle_property_angle_sum(OAD)",
+    "arc_property_circumference_angle_external(ODB,A)",
+    "arc_property_circumference_angle_external(ODB,C)"
+  ]
+}

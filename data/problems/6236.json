@@ -1,0 +1,36 @@
+{
+  "problem_id": 6236,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8834",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在半径为10的⊙O中,如果弦心距OC=6,那么弦AB的长等于()",
+  "problem_text_en": "As shown in the figure, in the ⊙O with a radius of N_0, if the chord center distance OC = N_1, then the length of the chord AB is equal to ()",
+  "problem_img": "6236.png",
+  "construction_cdl": [
+    "Shape(OBA,AB)",
+    "Shape(AO,OC,CA)",
+    "Shape(BC,CO,OB)",
+    "Shape(OAB,BO,OA)",
+    "Collinear(ACB)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OC),6)",
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(BC,OC)",
+    "Equal(RadiusOfCircle(O),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "adjacent_complementary_angle(BCO,OCA)",
+    "right_triangle_judgment_angle(OCA)",
+    "right_triangle_judgment_angle(BCO)",
+    "right_triangle_property_pythagorean(OCA)",
+    "right_triangle_property_pythagorean(BCO)",
+    "line_addition(AC,CB)"
+  ]
+}

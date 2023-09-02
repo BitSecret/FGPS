@@ -1,0 +1,43 @@
+{
+  "problem_id": 5116,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4969",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在梯形ABCD中,AD∥BC,E、F分别是对角线BD、AC的中点,若AD=6cm,BC=18cm,则EF的长为()",
+  "problem_text_en": "As shown in the figure, in the trapezoid ABCD, AD ∥ BC, E, F are the midpoints of the diagonals BD and AC, respectively. If AD = N_0, BC = N_1, then the length of EF is ()",
+  "problem_img": "5116.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(AB,BO,OA)",
+    "Shape(OE,EF,FO)",
+    "Shape(OF,FD,DO)",
+    "Shape(FC,CD,DF)",
+    "Shape(EB,BH,HF,FE)",
+    "Shape(FH,HC,CF)",
+    "Collinear(AOFC)",
+    "Collinear(BEOD)",
+    "Collinear(DFH)",
+    "Collinear(BHC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AD,BC)",
+    "IsMidpointOfLine(E,BD)",
+    "IsMidpointOfLine(F,AC)",
+    "Equal(LengthOfLine(AD),6)",
+    "Equal(LengthOfLine(BC),18)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CB,DA,H)",
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "parallel_property_alternate_interior_angle(CH,DA)",
+    "congruent_triangle_judgment_aas(FHC,FDA)",
+    "congruent_triangle_property_line_equal(FHC,FDA)",
+    "congruent_triangle_property_line_equal(CFH,AFD)",
+    "midsegment_of_triangle_judgment_midpoint(EF,DBH)",
+    "midsegment_of_triangle_property_length(EF,DBH)",
+    "line_addition(BH,HC)"
+  ]
+}

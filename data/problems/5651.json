@@ -1,0 +1,23 @@
+{
+  "problem_id": 5651,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7309",
+  "problem_level": 1,
+  "problem_text_cn": "如图,市政府准备修建一座高AB为6m的过街天桥,已知∠ACB为天桥的坡面AC与地面BC的夹角,且sin∠ACB=\\frac{3}{5},则坡面AC的长度为()",
+  "problem_text_en": "As shown in the figure, the city government is preparing to build an overpass with a height AB of N_0. It is known that ∠ACB is the angle between the slope AC of the overpass and the ground BC, and sin∠ACB = \\frac{N_1}{N_2}, then the length of the slope AC is ()",
+  "problem_img": "5651.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(MeasureOfAngle(ABC),90)",
+    "Equal(Sin(MeasureOfAngle(BCA)),3/5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "sine_theorem(ABC)"
+  ]
+}

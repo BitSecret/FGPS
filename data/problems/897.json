@@ -1,0 +1,45 @@
+{
+  "problem_id": 897,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-926",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If P R \\parallel W X, W X = 10, X Y = 6, W Y = 8, R Y = 5, and P S = 3, find S Y.",
+  "problem_img": "897.png",
+  "construction_cdl": [
+    "Shape(YR,RB,BY)",
+    "Shape(YB,BQ,QS,SY)",
+    "Shape(PY,YS,SP)",
+    "Shape(BX,XQ,QB)",
+    "Shape(SQ,QW,WS)",
+    "Collinear(RYP)",
+    "Collinear(YSW)",
+    "Collinear(RBQ)",
+    "Collinear(XQW)",
+    "Collinear(YBX)",
+    "Collinear(PSQ)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(RP,XW)",
+    "Equal(LengthOfLine(WX),10)",
+    "Equal(LengthOfLine(XY),6)",
+    "Equal(LengthOfLine(WY),8)",
+    "Equal(LengthOfLine(RY),5)",
+    "Equal(LengthOfLine(PS),3)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(SY,BY)",
+    "PerpendicularBetweenLine(BQ,SQ)",
+    "PerpendicularBetweenLine(YS,PS)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(SY))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "cosine_theorem(XWY)",
+    "parallel_property_collinear_extend(RP,XW,Y)",
+    "parallel_property_ipsilateral_internal_angle(YP,XW)",
+    "angle_addition(PYS,SYB)",
+    "triangle_property_angle_sum(PYS)",
+    "sine_theorem(SPY)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 4284,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3082",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O中,弦CD⊥弦AB于E,若∠B=60°,则∠A=()",
+  "problem_text_en": "As shown in the figure, in ⊙O, chord CD ⊥ chord AB to E, if ∠B = N_0, then ∠A = ()",
+  "problem_img": "4284.png",
+  "construction_cdl": [
+    "Shape(AE,EC,OCA)",
+    "Shape(DA,OAD)",
+    "Shape(CB,OBC)",
+    "Shape(AD,DE,EA)",
+    "Shape(CE,EB,BC)",
+    "Shape(BE,ED,ODB)",
+    "Collinear(AEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,CADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(EBC),60)",
+    "Equal(MeasureOfAngle(DEA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EAD))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "triangle_property_angle_sum(ADE)"
+  ]
+}

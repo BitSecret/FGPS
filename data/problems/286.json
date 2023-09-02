@@ -1,0 +1,28 @@
+{
+  "problem_id": 286,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-290",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure.",
+  "problem_img": "286.png",
+  "construction_cdl": [
+    "Shape(BD,DA,AC,CB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),8)",
+    "Equal(LengthOfLine(CB),10)",
+    "Equal(LengthOfLine(AD),4)",
+    "PerpendicularBetweenLine(AC,BC)",
+    "PerpendicularBetweenLine(DA,CA)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ACBD))",
+  "problem_answer": "56",
+  "theorem_seqs": [
+    "parallel_judgment_ipsilateral_internal_angle(AD,CB)",
+    "trapezoid_judgment_parallel(ACBD)",
+    "right_trapezoid_judgment_right_angle(ACBD)",
+    "right_trapezoid_area_formular(ACBD)"
+  ]
+}

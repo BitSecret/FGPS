@@ -1,0 +1,35 @@
+{
+  "problem_id": 2258,
+  "annotation": "DengfengYue_2023-04-16",
+  "source": "Geometry3k-2361",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If the circumference of the circle is 16 \\pi units, what is the total area of the shaded regions?",
+  "problem_img": "2258.png",
+  "construction_cdl": [
+    "Shape(ED,EDB,BE)",
+    "Shape(EB,EBC,CE)",
+    "Shape(EC,ECA,AE)",
+    "Shape(EA,EAD,DE)",
+    "Collinear(BEA)",
+    "Collinear(DEC)",
+    "Cocircular(E,DBCA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(E,E)",
+    "Equal(PerimeterOfCircle(E),16*pi)",
+    "PerpendicularBetweenLine(BE,DE)",
+    "PerpendicularBetweenLine(AE,CE)",
+    "Equal(Add(AreaOfSector(EDB),AreaOfSector(ECA)),X)"
+  ],
+  "goal_cdl": "Value(X)",
+  "problem_answer": "32*pi",
+  "theorem_seqs": [
+    "arc_property_center_angle(EDB,E)",
+    "arc_property_center_angle(ECA,E)",
+    "circle_perimeter_formula(E)",
+    "sector_area_formula(EDB)",
+    "sector_area_formula(ECA)"
+  ]
+}

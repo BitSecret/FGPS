@@ -1,0 +1,45 @@
+{
+  "problem_id": 1550,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1609",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region. Assume that all polygons that appear to be regular are regular. Round to the nearest tenth.",
+  "problem_img": "1550.png",
+  "construction_cdl": [
+    "Shape(DBA,AB)",
+    "Shape(BA,AD,DB)",
+    "Shape(AE,ED,DA)",
+    "Shape(DE,EC,CD)",
+    "Shape(BD,DC,CB)",
+    "Shape(DAC,CA)",
+    "Shape(BC,DCB)",
+    "Collinear(BDE)",
+    "Collinear(AEC)",
+    "Cocircular(D,CBA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(D,D)",
+    "IsMidpointOfLine(E,CA)",
+    "EquilateralTriangle(CBA)",
+    "Equal(LengthOfLine(BD),1.5)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfCircle(D),AreaOfTriangle(CBA)))",
+  "problem_answer": "4.14",
+  "theorem_seqs": [
+    "line_addition(BD,DE)",
+    "line_addition(AE,EC)",
+    "radius_of_circle_property_length_equal(DB,D)",
+    "radius_of_circle_property_length_equal(DA,D)",
+    "equilateral_triangle_property_angle(CBA)",
+    "median_of_triangle_judgment(BE,BAC)",
+    "isosceles_triangle_property_line_coincidence(BAC,E)",
+    "right_triangle_judgment_angle(AEB)",
+    "right_triangle_judgment_angle(AED)",
+    "right_triangle_property_pythagorean(AEB)",
+    "right_triangle_property_pythagorean(AED)",
+    "triangle_area_formula_sine(CBA)",
+    "circle_area_formula(D)"
+  ]
+}

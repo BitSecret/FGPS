@@ -1,0 +1,34 @@
+{
+  "problem_id": 5477,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5894",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠C=90°,∠A=30°,点D在线段AB的垂直平分线上,若AD=6,则CD的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠C = N_0, ∠A = N_1, point D on the perpendicular bisector of line AB, if AD = N_2, the length of CD is ()",
+  "problem_img": "5477.png",
+  "construction_cdl": [
+    "Shape(EA,AD,DE)",
+    "Shape(BE,ED,DB)",
+    "Shape(BD,DC,CB)",
+    "Collinear(AEB)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "IsPerpendicularBisectorOfLine(DE,BA)",
+    "Equal(MeasureOfAngle(DCB),90)",
+    "Equal(LengthOfLine(AD),6)",
+    "Equal(MeasureOfAngle(EAD),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(DE,BA)",
+    "isosceles_triangle_judgment_line_equal(DBA)",
+    "isosceles_triangle_property_angle_equal(DBA)",
+    "triangle_property_angle_sum(ADB)",
+    "adjacent_complementary_angle(ADB,BDC)",
+    "triangle_property_angle_sum(BDC)",
+    "sine_theorem(DCB)"
+  ]
+}

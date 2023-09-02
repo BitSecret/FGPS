@@ -1,0 +1,29 @@
+{
+  "problem_id": 6967,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10221",
+  "problem_level": 1,
+  "problem_text_cn": "如图，已知点O是△ABC的外心，∠A＝40°，连结BO，CO，则∠BOC的度数是（）",
+  "problem_text_en": "",
+  "problem_img": "6967.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OCA,AC)",
+    "Shape(OB,BC,CO)",
+    "Shape(OBC,CB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCircumcenterOfTriangle(O,ABC)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)"
+  ]
+}

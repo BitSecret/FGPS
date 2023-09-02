@@ -1,0 +1,27 @@
+{
+  "problem_id": 126,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-128",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the length of line AB.",
+  "problem_img": "126.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(AC,CB,BA)",
+    "Collinear(DCB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(DA),2.5)",
+    "PerpendicularBetweenLine(DC,AC)",
+    "Equal(LengthOfLine(DC),LengthOfLine(CB))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "2.5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DCA,ACB)",
+    "mirror_congruent_triangle_judgment_sas(CAD,CBA)",
+    "mirror_congruent_triangle_property_line_equal(CAD,CBA)"
+  ]
+}

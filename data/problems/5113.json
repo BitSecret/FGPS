@@ -1,0 +1,40 @@
+{
+  "problem_id": 5113,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4963",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠ABC=90°,∠A=30°,BC=4．若DE是△ABC的中位线,延长DE交∠ACM的平分线于点F,则DF的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠ABC = N_0, ∠A = N_1, BC = N_2. If DE is the median line of △ABC, extend the bisector of DE and ∠ACM at point F, then the length of DF is ()",
+  "problem_img": "5113.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Shape(EC,CF,FE)",
+    "Shape(FC,CM)",
+    "Collinear(ADB)",
+    "Collinear(AEC)",
+    "Collinear(DEF)",
+    "Collinear(BCM)"
+  ],
+  "text_cdl": [
+    "IsMidsegmentOfTriangle(DE,ABC)",
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(MeasureOfAngle(ABC),90)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "IsBisectorOfAngle(CF,ACM)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DF))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "sine_theorem(CAB)",
+    "line_addition(AE,EC)",
+    "midsegment_of_triangle_property_length(DE,ABC)",
+    "midsegment_of_triangle_property_parallel(DE,ABC)",
+    "parallel_property_collinear_extend(CB,ED,M)",
+    "parallel_property_collinear_extend(DE,CM,F)",
+    "parallel_property_alternate_interior_angle(DF,CM)",
+    "isosceles_triangle_judgment_angle_equal(ECF)",
+    "line_addition(DE,EF)"
+  ]
+}

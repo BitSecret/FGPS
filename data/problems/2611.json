@@ -1,0 +1,36 @@
+{
+  "problem_id": 2611,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2740",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot S, m \\widehat P Q R = 98. Find m \\widehat P Q.",
+  "problem_img": "2611.png",
+  "construction_cdl": [
+    "Shape(PT,TQ,SQP)",
+    "Shape(QT,TR,SRQ)",
+    "Shape(PS,ST,TP)",
+    "Shape(RT,TS,SR)",
+    "Shape(RS,SP,SPR)",
+    "Collinear(STQ)",
+    "Collinear(PTR)",
+    "Cocircular(S,RQP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(S,S)",
+    "Equal(MeasureOfArc(SRP),98)",
+    "Equal(LengthOfLine(RT),6)",
+    "PerpendicularBetweenLine(PT,QT)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(SQP))",
+  "problem_answer": "49",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(STP,PTQ)",
+    "adjacent_complementary_angle(RTS,STP)",
+    "circle_property_chord_perpendicular_bisect_arc(SRP,STQ)",
+    "congruent_arc_judgment_length_equal(SRQ,SQP)",
+    "congruent_arc_property_measure_equal(SRQ,SQP)",
+    "arc_addition_measure(SRQ,SQP)"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": 3224,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-523",
+  "problem_level": 1,
+  "problem_text_cn": "一木杆在离地面3m处折断,木杆顶端落在离木杆底端4m处,木杆折断之前有多高()",
+  "problem_text_en": "A wooden pole breaks at N_0 from the ground, and the top of the wooden pole falls at N_1 from the bottom end of the wooden pole. How high is the wooden pole before it breaks ()",
+  "problem_img": "3224.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),4)",
+    "PerpendicularBetweenLine(AB,CB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(AB),LengthOfLine(AC)))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ABC)",
+    "right_triangle_property_pythagorean(ABC)"
+  ]
+}

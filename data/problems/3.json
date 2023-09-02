@@ -1,0 +1,32 @@
+{
+  "problem_id": 3,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-2",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Let J K be the midsegment of A Q T B. Find J K.",
+  "problem_img": "3.png",
+  "construction_cdl": [
+    "Shape(RA,AB,BS,SR)",
+    "Shape(AJ,JK,KB,BA)",
+    "Shape(JQ,QT,TK,KJ)",
+    "Collinear(RAJQ)",
+    "Collinear(SBKT)"
+  ],
+  "text_cdl": [
+    "IsMidsegmentOfQuadrilateral(JK,AQTB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(RS),54)",
+    "Equal(LengthOfLine(QT),86)",
+    "Equal(LengthOfLine(QA),LengthOfLine(RA))",
+    "Equal(LengthOfLine(BT),LengthOfLine(SB))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(JK))",
+  "problem_answer": "78",
+  "theorem_seqs": [
+    "midsegment_of_quadrilateral_judgment_midpoint(AB,RQTS)",
+    "midsegment_of_quadrilateral_property_length(AB,RQTS)",
+    "midsegment_of_quadrilateral_property_length(JK,AQTB)"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "problem_id": 117,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-119",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find cos(CAD).",
+  "problem_img": "117.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DB,BC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),5*sqrt(26))",
+    "Equal(LengthOfLine(CD),5)",
+    "Equal(LengthOfLine(CB),sqrt(26))",
+    "Equal(LengthOfLine(AD),25)",
+    "Equal(LengthOfLine(DB),1)",
+    "Equal(MeasureOfAngle(DCA),x)",
+    "Equal(MeasureOfAngle(BCD),y)",
+    "PerpendicularBetweenLine(AD,CD)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(Cos(MeasureOfAngle(CAD)))",
+  "problem_answer": "5*sqrt(26)/26",
+  "theorem_seqs": [
+    "cosine_theorem(ADC)"
+  ]
+}

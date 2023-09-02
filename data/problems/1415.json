@@ -1,0 +1,38 @@
+{
+  "problem_id": 1415,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1466",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If A B = 60 and D E = 48, find C F.",
+  "problem_img": "1415.png",
+  "construction_cdl": [
+    "Shape(EF,FA,CAE)",
+    "Shape(AF,FD,CDA)",
+    "Shape(FC,CD,DF)",
+    "Shape(FE,CEB,BF)",
+    "Shape(CB,CBD,DC)",
+    "Collinear(AFCB)",
+    "Collinear(EFD)",
+    "Cocircular(C,AEBD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(AB,C)",
+    "IsCentreOfCircle(C,C)",
+    "Equal(LengthOfLine(AB),60)",
+    "Equal(LengthOfLine(DE),48)",
+    "PerpendicularBetweenLine(DF,CF)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(CF))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(AB,C)",
+    "circle_property_length_of_radius_and_diameter(C)",
+    "radius_of_circle_property_length_equal(CD,C)",
+    "circle_property_chord_perpendicular_bisect_chord(C,CF,DE)",
+    "line_addition(EF,FD)",
+    "right_triangle_judgment_angle(DFC)",
+    "right_triangle_property_pythagorean(DFC)"
+  ]
+}

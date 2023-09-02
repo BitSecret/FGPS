@@ -1,0 +1,36 @@
+{
+  "problem_id": 3015,
+  "annotation": "NaZhu_2023-04-16",
+  "source": "GeoQA-220",
+  "problem_level": 1,
+  "problem_text_cn": "(4分)如图,直线a∥b,∠1=108°,则∠2的度数是()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, ∠1 = N_0, then the degree of ∠2 is ()",
+  "problem_img": "3015.png",
+  "construction_cdl": [
+    "Shape(AP,PD)",
+    "Shape(DP,PB)",
+    "Shape(QP,PA)",
+    "Shape(BP,PQ)",
+    "Shape(CQ,QP)",
+    "Shape(PQ,QD)",
+    "Shape(EQ,QC)",
+    "Shape(DQ,QE)",
+    "Collinear(APB)",
+    "Collinear(CQD)",
+    "Collinear(DPQE)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "Equal(MeasureOfAngle(DPB),108)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CQP))",
+  "problem_answer": "72",
+  "theorem_seqs": [
+    "flat_angle(DPQ)",
+    "angle_addition(DPB,BPQ)",
+    "parallel_property_collinear_extend(DC,BA,Q)",
+    "parallel_property_collinear_extend(AB,CQ,P)",
+    "parallel_property_alternate_interior_angle(PB,CQ)"
+  ]
+}

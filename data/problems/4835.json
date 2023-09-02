@@ -1,0 +1,37 @@
+{
+  "problem_id": 4835,
+  "annotation": "RunanWang_2023-05-21",
+  "source": "GeoQA-4293",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C,D是⊙O上的点,∠CDB=30°,过点C作⊙O的切线交AB的延长线于E,则sinE的值为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C, D are points on ⊙O, ∠CDB = N_0, passing point C is the tangent of ⊙O and intersects the extended line of AB at E, then the value of sinE is ()",
+  "problem_img": "4835.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(CA,AO,OC)",
+    "Shape(CO,OM,MC)",
+    "Shape(CM,MB,OBC)",
+    "Shape(MO,OA,OAD,DM)",
+    "Shape(MD,DB,BM)",
+    "Shape(BD,ODB)",
+    "Shape(OBC,BE,EC)",
+    "Collinear(AOMBE)",
+    "Collinear(CMD)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [
+    "IsTangentOfCircle(EC,O)",
+    "Equal(MeasureOfAngle(CDB),30)"
+  ],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(OEC)))",
+  "problem_answer": "1/2",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,D)",
+    "tangent_of_circle_property_perpendicular(EC,O,O)",
+    "triangle_property_angle_sum(COE)"
+  ]
+}

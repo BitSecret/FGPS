@@ -1,0 +1,32 @@
+{
+  "problem_id": 4550,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3654",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,AB是⊙O的直径,C,D为圆上两点,若∠D=30°,则∠AOC等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C and D are two points on the circle, if ∠D = N_0, then ∠AOC is equal to ()",
+  "problem_img": "4550.png",
+  "construction_cdl": [
+    "Shape(BD,ODB)",
+    "Shape(DB,BE,ED)",
+    "Shape(EB,OBC,CE)",
+    "Shape(EC,CO,OE)",
+    "Shape(DE,EA,OAD)",
+    "Shape(AO,OC,OCA)",
+    "Collinear(DEC)",
+    "Collinear(BEOA)",
+    "Cocircular(O,DBCA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CDB),30)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AOC))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBC,D)",
+    "arc_property_center_angle(OBC,O)",
+    "adjacent_complementary_angle(AOC,COB)"
+  ]
+}

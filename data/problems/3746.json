@@ -1,0 +1,35 @@
+{
+  "problem_id": 3746,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1541",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知直线a∥b,∠1=110°,则∠2等于()",
+  "problem_text_en": "As shown in the figure, given the straight line a ∥ b, ∠1 = N_0, then ∠2 is equal to ()",
+  "problem_img": "3746.png",
+  "construction_cdl": [
+    "Shape(AE,EG)",
+    "Shape(GE,EB)",
+    "Shape(BE,EF)",
+    "Shape(FE,EA)",
+    "Shape(CF,FE)",
+    "Shape(EF,FD)",
+    "Shape(DF,DH)",
+    "Shape(HF,FC)",
+    "Collinear(AEB)",
+    "Collinear(CFD)",
+    "Collinear(GEFH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "Equal(MeasureOfAngle(AEG),110)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(EFD))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AB,CD,E)",
+    "parallel_property_collinear_extend(DC,EA,F)",
+    "parallel_property_corresponding_angle(FC,EA,G)",
+    "adjacent_complementary_angle(CFE,EFD)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 1512,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1569",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If L N = 12.4, what is J M?",
+  "problem_img": "1512.png",
+  "construction_cdl": [
+    "Shape(KP,JPK)",
+    "Shape(PK,JKL,LJ,JN,JNP)",
+    "Shape(JL,JLM,MJ)",
+    "Shape(JM,JMN,NJ)",
+    "Collinear(LJN)",
+    "Cocircular(J,KLMNP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(LN,J)",
+    "IsCentreOfCircle(J,J)",
+    "Equal(LengthOfLine(LN),12.4)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(JM))",
+  "problem_answer": "6.2",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(LN,J)",
+    "radius_of_circle_property_length_equal(JM,J)",
+    "circle_property_length_of_radius_and_diameter(J)"
+  ]
+}

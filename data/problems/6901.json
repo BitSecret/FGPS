@@ -1,0 +1,36 @@
+{
+  "problem_id": 6901,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10142",
+  "problem_level": 1,
+  "problem_text_cn": "如图，点A，B，C，D均在以点O为圆心的⊙O上，连接AD，BD及顺次连接O，A，B，C得到四边形OABC，若OA＝BC，OC＝AB，则∠D的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6901.png",
+  "construction_cdl": [
+    "Shape(BO,OE,EB)",
+    "Shape(BE,EA,AB)",
+    "Shape(OAB,BA)",
+    "Shape(ED,DA,AE)",
+    "Shape(ODA,AD)",
+    "Collinear(OEA)",
+    "Collinear(BED)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),LengthOfLine(OA))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BDA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(BOA)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(BOA)",
+    "equilateral_triangle_property_angle(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,D)"
+  ]
+}

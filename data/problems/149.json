@@ -1,0 +1,25 @@
+{
+  "problem_id": 149,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-151",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "149.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BA),3)",
+    "Equal(LengthOfLine(BC),4*y-5)",
+    "Equal(MeasureOfAngle(BAC),2*x)",
+    "Equal(MeasureOfAngle(CBA),2*x)",
+    "Equal(LengthOfLine(BA),LengthOfLine(AC))"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_angle_equal(CBA)"
+  ]
+}

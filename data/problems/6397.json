@@ -1,0 +1,30 @@
+{
+  "problem_id": 6397,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9255",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,EF∥AB,点F为BD的中点,EF=4,则CD的长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, EF ∥ AB, point F is the midpoint of BD, EF = N_0, then the length of CD is ()",
+  "problem_img": "6397.png",
+  "construction_cdl": [
+    "Shape(DE,EF,FD)",
+    "Shape(EA,AB,BF,FE)",
+    "Shape(DF,FB,BC,CD)",
+    "Collinear(DEA)",
+    "Collinear(DFB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsMidpointOfLine(F,BD)",
+    "ParallelBetweenLine(EF,AB)",
+    "Equal(LengthOfLine(EF),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_parallel(EF,DAB)",
+    "midsegment_of_triangle_property_length(EF,DAB)",
+    "parallelogram_property_opposite_line_equal(ABCD)"
+  ]
+}

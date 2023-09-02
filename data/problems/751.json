@@ -1,0 +1,33 @@
+{
+  "problem_id": 751,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-776",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x if A C = x - 3, B E = 20, A B = 16, and C D = x + 5.",
+  "problem_img": "751.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(CB,BE,ED,DC)",
+    "Collinear(ABE)",
+    "Collinear(ACD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),x-3)",
+    "Equal(LengthOfLine(BE),20)",
+    "Equal(LengthOfLine(AB),16)",
+    "Equal(LengthOfLine(CD),x+5)",
+    "ParallelBetweenLine(DE,CB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(BC,ED,A)",
+    "similar_triangle_judgment_aa(CAB,DAE)",
+    "line_addition(AB,BE)",
+    "line_addition(AC,CD)",
+    "similar_triangle_property_line_ratio(CAB,DAE)",
+    "similar_triangle_property_line_ratio(BCA,EDA)"
+  ]
+}

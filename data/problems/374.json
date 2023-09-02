@@ -1,0 +1,36 @@
+{
+  "problem_id": 374,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-381",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure.",
+  "problem_img": "374.png",
+  "construction_cdl": [
+    "Shape(NE,EB,BN)",
+    "Shape(NC,CE,EN)",
+    "Shape(BC,CA,AB)",
+    "Shape(BA,AD,DB)",
+    "Collinear(CEB)",
+    "Collinear(CAD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(NE),5)",
+    "Equal(LengthOfLine(CB),8)",
+    "Equal(LengthOfLine(BA),5)",
+    "Equal(LengthOfLine(CD),12)",
+    "PerpendicularBetweenLine(NE,BE)",
+    "PerpendicularBetweenLine(BA,DA)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfTriangle(NCB),AreaOfTriangle(BCD)))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CEN,NEB)",
+    "adjacent_complementary_angle(CAB,BAD)",
+    "altitude_of_triangle_judgment(NE,NCB)",
+    "altitude_of_triangle_judgment(BA,BCD)",
+    "triangle_area_formula_common(NCB)",
+    "triangle_area_formula_common(BCD)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 2932,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-111",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB是△ABC外接圆的直径,∠A=35°,则∠B的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that AB is the diameter of the circumscribed circle of △ABC, ∠A = N_0, then the degree of ∠B is ()",
+  "problem_img": "2932.png",
+  "construction_cdl": [
+    "Shape(AO,OB,BC,CA)",
+    "Shape(BO,OA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AC,OCA)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),35)"
+  ],
+  "image_cdl": [
+    "IsDiameterOfCircle(BA,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

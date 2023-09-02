@@ -1,0 +1,36 @@
+{
+  "problem_id": 6300,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-9039",
+  "problem_level": 1,
+  "problem_text_cn": "如图,边长12的正方形ABCD中,有一个小正方形EFGH,其中E、F、G分别在AB、BC、FD上．若BF=3,则小正方形的边长为多长？()",
+  "problem_text_en": "As shown in the figure, in the square ABCD with side length N_0, there is a small square EFGH, where E, F, and G are on AB, BC, and FD respectively. If BF = N_1, how long is the side of the small square? ()",
+  "problem_img": "6300.png",
+  "construction_cdl": [
+    "Shape(AE,EH,HG,GD,DA)",
+    "Shape(EF,FG,GH,HE)",
+    "Shape(FE,EB,BF)",
+    "Shape(DG,GF,FC,CD)",
+    "Collinear(BFC)",
+    "Collinear(AEB)",
+    "Collinear(DGF)"
+  ],
+  "text_cdl": [
+    "Square(ABCD)",
+    "Square(EFGH)",
+    "Equal(LengthOfLine(AB),12)",
+    "Equal(MeasureOfAngle(FEB),MeasureOfAngle(DFC))",
+    "Equal(LengthOfLine(BF),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "3.75",
+  "theorem_seqs": [
+    "line_addition(BF,FC)",
+    "similar_triangle_judgment_aa(FEB,DFC)",
+    "similar_triangle_property_line_ratio(FEB,DFC)",
+    "similar_triangle_property_line_ratio(EBF,FCD)",
+    "right_triangle_judgment_angle(EBF)",
+    "right_triangle_property_pythagorean(EBF)"
+  ]
+}

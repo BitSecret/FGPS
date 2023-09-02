@@ -1,0 +1,39 @@
+{
+  "problem_id": 5497,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5954",
+  "problem_level": 1,
+  "problem_text_cn": "在△ABC中,点M为BC的中点,AD平分∠BAC,且BD⊥AD于点D,延长BD交AC于点N若AB=4,DM=1,则AC的长为()",
+  "problem_text_en": "In △ABC, point M is the midpoint of BC, AD bisects ∠BAC, and BD ⊥ AD at point D, extend BD to AC at point N. If AB = N_0, DM = N_1, then the length of AC is ()",
+  "problem_img": "5497.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DN,NA)",
+    "Shape(DB,BM,MD)",
+    "Shape(DM,MC,CN,ND)",
+    "Collinear(ANC)",
+    "Collinear(BDN)",
+    "Collinear(BMC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(M,BC)",
+    "IsBisectorOfAngle(AD,CAB)",
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(LengthOfLine(DM),1)",
+    "PerpendicularBetweenLine(BD,AD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BDA,ADN)",
+    "triangle_property_angle_sum(ABD)",
+    "triangle_property_angle_sum(ADN)",
+    "mirror_congruent_triangle_judgment_aas(ADN,ABD)",
+    "mirror_congruent_triangle_property_line_equal(ADN,ABD)",
+    "mirror_congruent_triangle_property_line_equal(DNA,DAB)",
+    "line_addition(AN,NC)",
+    "midsegment_of_triangle_judgment_midpoint(MD,BCN)",
+    "midsegment_of_triangle_property_length(MD,BCN)"
+  ]
+}

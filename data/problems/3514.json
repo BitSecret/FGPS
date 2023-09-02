@@ -1,0 +1,27 @@
+{
+  "problem_id": 3514,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1127",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A,B,C是⊙O上的点,如果∠COB=120°,那么∠CAB的度数是()",
+  "problem_text_en": "As shown in the figure, A, B, C are vertices on ⊙O, if ∠BOC = N_0, then the degree of ∠BAC is ()",
+  "problem_img": "3514.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OCA,AC)",
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,OBC,CO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COB),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 2705,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2849",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "m \\angle 4 = 2 y + 32 and m \\angle 5 = 3 y - 3. Find y.",
+  "problem_img": "2705.png",
+  "construction_cdl": [
+    "Shape(BH,HA)",
+    "Shape(HB,BD)",
+    "Collinear(CHA)",
+    "Collinear(DBE)",
+    "Collinear(FHBG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(GHA),2*y+32)",
+    "Equal(MeasureOfAngle(HBD),3*y-3)",
+    "ParallelBetweenLine(AC,ED)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AC,ED,H)",
+    "parallel_property_collinear_extend(DE,HA,B)",
+    "parallel_property_alternate_interior_angle(DB,HA)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 5685,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7409",
+  "problem_level": 1,
+  "problem_text_cn": "如图,平行四边形ABCD中,AB=3,BC=5,BE平分∠ABC交AD于点E、交AC于点F,则\\frac{AF}{FC}的值为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, AB = N_0, BC = N_1, BE bisects ∠ABC intersects AD at point E, and intersects AC at point F, then the value of \\\\frac{ AF}{FC} is ()",
+  "problem_img": "5685.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FA)",
+    "Shape(FB,BC,CF)",
+    "Shape(AF,FE,EA)",
+    "Shape(DE,EF,FC,CD)",
+    "Collinear(AED)",
+    "Collinear(AFC)",
+    "Collinear(BFE)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),5)",
+    "IsBisectorOfAngle(BF,ABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(AF),LengthOfLine(FC)))",
+  "problem_answer": "3/5",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AD,BC,E)",
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "parallel_property_alternate_interior_angle(AE,BC)",
+    "isosceles_triangle_judgment_angle_equal(ABE)",
+    "similar_triangle_judgment_aa(FBC,FEA)",
+    "similar_triangle_property_line_ratio(FBC,FEA)",
+    "similar_triangle_property_line_ratio(BCF,EAF)"
+  ]
+}

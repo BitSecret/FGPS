@@ -1,0 +1,24 @@
+{
+  "problem_id": 5953,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8347",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AC是电杆的一根拉线,测得BC=4米,∠ACB=60°,则AB的长为()",
+  "problem_text_en": "As shown in the figure, AC is a cable of the pole, and it is measured that BC = N_0, ∠ACB = N_1, then the length of AB is ()",
+  "problem_img": "5953.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(MeasureOfAngle(BCA),60)",
+    "Equal(MeasureOfAngle(ABC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "4*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "sine_theorem(BCA)"
+  ]
+}

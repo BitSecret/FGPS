@@ -1,0 +1,32 @@
+{
+  "problem_id": 2011,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2096",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Polygon B C D E \\cong polygon R S T U. Find z.",
+  "problem_img": "2011.png",
+  "construction_cdl": [
+    "Shape(BE,ED,DC,CB)",
+    "Shape(UR,RS,ST,TU)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "CongruentBetweenQuadrilateral(EDCB,TURS)",
+    "Equal(LengthOfLine(CB),4*w-7)",
+    "Equal(LengthOfLine(UT),z+16)",
+    "Equal(MeasureOfAngle(CBE),2*x+9)",
+    "Equal(MeasureOfAngle(STU),y+11)",
+    "Equal(LengthOfLine(RU),12)",
+    "Equal(LengthOfLine(CD),11)",
+    "Equal(MeasureOfAngle(EDC),2*y-31)",
+    "Equal(MeasureOfAngle(URS),49)",
+    "Equal(LengthOfLine(RS),2*w+13)",
+    "Equal(LengthOfLine(ED),3*z+10)"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "congruent_quadrilateral_property_line_equal(EDCB,TURS)"
+  ]
+}

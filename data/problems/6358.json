@@ -1,0 +1,53 @@
+{
+  "problem_id": 6358,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9198",
+  "problem_level": 1,
+  "problem_text_cn": "如图,菱形ABCD中,∠B=60°,AB=2cm,E、F分别是BC、CD的中点,连接AE、EF、AF,则△AEF的周长为()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, ∠B = N_0, AB = N_1, E and F are the midpoints of BC and CD respectively, connect AE, EF, and AF, then the perimeter of △AEF is ()",
+  "problem_img": "6358.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EG,GA)",
+    "Shape(AG,GF,FA)",
+    "Shape(AF,FD,DA)",
+    "Shape(EC,CG,GE)",
+    "Shape(GC,CF,FG)",
+    "Collinear(AGC)",
+    "Collinear(EGF)",
+    "Collinear(BEC)",
+    "Collinear(CFD)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(ABE),60)",
+    "Equal(LengthOfLine(AB),2)",
+    "IsMidpointOfLine(E,BC)",
+    "IsMidpointOfLine(F,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(AEF))",
+  "problem_answer": "3*sqrt(3)",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "line_addition(BE,EC)",
+    "line_addition(CF,FD)",
+    "mirror_congruent_triangle_judgment_sas(BEA,DAF)",
+    "isosceles_triangle_judgment_line_equal(BCA)",
+    "isosceles_triangle_property_angle_equal(BCA)",
+    "triangle_property_angle_sum(BCA)",
+    "isosceles_triangle_judgment_angle_equal(ABC)",
+    "median_of_triangle_judgment(AE,ABC)",
+    "isosceles_triangle_property_line_coincidence(ABC,E)",
+    "right_triangle_judgment_angle(BEA)",
+    "right_triangle_property_pythagorean(BEA)",
+    "triangle_property_angle_sum(ABE)",
+    "parallel_property_ipsilateral_internal_angle(AD,BC)",
+    "mirror_congruent_triangle_property_angle_equal(ABE,AFD)",
+    "angle_addition(DAE,EAB)",
+    "angle_addition(DAF,FAE)",
+    "mirror_congruent_triangle_property_line_equal(BEA,DAF)",
+    "cosine_theorem(AEF)",
+    "triangle_perimeter_formula(AEF)"
+  ]
+}

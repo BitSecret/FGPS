@@ -1,0 +1,30 @@
+{
+  "problem_id": 6120,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8670",
+  "problem_level": 1,
+  "problem_text_cn": "如图,圆心角∠BOC=100°,则圆周角∠BAC的度数为()",
+  "problem_text_en": "As shown in the figure, the central angle ∠BOC = N_0, then the degree of the angel of circumference ∠BAC is ()",
+  "problem_img": "6120.png",
+  "construction_cdl": [
+    "Shape(BO,OD,DA,OAB)",
+    "Shape(OB,BD,DO)",
+    "Shape(CD,DB,OBC)",
+    "Shape(AD,DC,CA)",
+    "Shape(AC,OCA)",
+    "Collinear(BDA)",
+    "Collinear(ODC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(COB),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

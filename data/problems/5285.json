@@ -1,0 +1,28 @@
+{
+  "problem_id": 5285,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5459",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点D是线段AB的中点,C是线段AD的中点,若AB=16cm,则线段CD=cm．()",
+  "problem_text_en": "As shown in the figure, point D is the midpoint of line segment AB, and C is the midpoint of line segment AD. If AB = N_0, then line segment CD =. ()",
+  "problem_img": "5285.png",
+  "construction_cdl": [
+    "Shape(AC)",
+    "Shape(CD)",
+    "Shape(DB)",
+    "Collinear(ACDB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),LengthOfLine(CD))",
+    "Equal(LengthOfLine(AD),LengthOfLine(DB))",
+    "Equal(LengthOfLine(AB),16)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(AC,CD)",
+    "line_addition(AC,CB)",
+    "line_addition(AD,DB)"
+  ]
+}

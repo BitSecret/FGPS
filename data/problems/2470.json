@@ -1,0 +1,31 @@
+{
+  "problem_id": 2470,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-2590",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find G I if G H = 9, G K = 6, and K J = 4.",
+  "problem_img": "2470.png",
+  "construction_cdl": [
+    "Shape(GK,KH,HG)",
+    "Shape(KJ,JI,IH,HK)",
+    "Collinear(GKJ)",
+    "Collinear(IHG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(HG),9)",
+    "Equal(LengthOfLine(GK),6)",
+    "Equal(LengthOfLine(KJ),4)",
+    "ParallelBetweenLine(KH,JI)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(GI))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(KH,JI,G)",
+    "similar_triangle_judgment_aa(HGK,IGJ)",
+    "line_addition(GK,KJ)",
+    "similar_triangle_property_line_ratio(HGK,IGJ)",
+    "similar_triangle_property_line_ratio(KHG,JIG)"
+  ]
+}

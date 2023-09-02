@@ -1,0 +1,39 @@
+{
+  "problem_id": 6617,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9612",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是半圆O的直径,D是⁀{AC}的中点,若∠BAC=40°,则∠DAC的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of the semicircle O, D is the midpoint of ⁀AC, if ∠BAC = N_0, then the degree of ∠DAC is ()",
+  "problem_img": "6617.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DC,OCD)",
+    "Shape(CB,OBC)",
+    "Shape(AC,CD,DA)",
+    "Shape(CA,AB,BC)",
+    "Shape(BA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfArc(OCD),MeasureOfArc(ODA))",
+    "Equal(MeasureOfAngle(CAB),40)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAC))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(ABC)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OCD,A)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "arc_property_circumference_angle_internal(OAD,C)",
+    "arc_property_circumference_angle_internal(OCA,D)",
+    "arc_property_circumference_angle_internal(ODC,A)",
+    "triangle_property_angle_sum(DAC)"
+  ]
+}

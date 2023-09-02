@@ -1,0 +1,40 @@
+{
+  "problem_id": 6652,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9672",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD是⊙O的直径,CD⊥AB,已知∠1=30°,则∠2=()",
+  "problem_text_en": "As shown in the figure, CD is the diameter of O, CD ⊥ AB, it is known that ∠1 = N_0, then ∠2 = ()",
+  "problem_img": "6652.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(CA,AM,MC)",
+    "Shape(CM,MB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(MA,OAD,DO,OM)",
+    "Shape(MO,OB,BM)",
+    "Shape(BO,OD,ODB)",
+    "Collinear(AMB)",
+    "Collinear(CMOD)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "PerpendicularBetweenLine(AM,CM)",
+    "Equal(MeasureOfAngle(CAB),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_center_angle(ODB,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "triangle_property_angle_sum(BCO)",
+    "sine_theorem(OBC)"
+  ]
+}

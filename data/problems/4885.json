@@ -1,0 +1,35 @@
+{
+  "problem_id": 4885,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4418",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA、PB分别是⊙O的切线,A、B为切点,AC是⊙O的直径,∠BAC=35°,∠P的度数为()",
+  "problem_text_en": "As shown in the figure, PA and PB are the tangents of ⊙O, A and B are the tangent points, AC is the diameter of ⊙O, ∠BAC = N_0, and the degree of ∠P is ()",
+  "problem_img": "4885.png",
+  "construction_cdl": [
+    "Shape(AP,PB,OAB)",
+    "Shape(OA,AB,BO)",
+    "Shape(CO,OB,OBC)",
+    "Shape(AO,OC,OCA)",
+    "Shape(BA,OAB)",
+    "Collinear(AOC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(MeasureOfAngle(CAB),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(APB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "adjacent_complementary_angle(COB,BOA)",
+    "quadrilateral_property_angle_sum(APBO)"
+  ]
+}

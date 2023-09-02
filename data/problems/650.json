@@ -1,0 +1,35 @@
+{
+  "problem_id": 650,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-667",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the angle measure of \\angle 4.",
+  "problem_img": "650.png",
+  "construction_cdl": [
+    "Shape(BH,HI)",
+    "Shape(IH,HD)",
+    "Shape(HD,DC)",
+    "Shape(CD,DF)",
+    "Shape(FD,DG)",
+    "Shape(DG,GA)",
+    "Shape(AG,GE)",
+    "Shape(EG,GH)",
+    "Shape(GH,HB)",
+    "Shape(HG,GD,DH)",
+    "Collinear(IHGA)",
+    "Collinear(EGDC)",
+    "Collinear(BHDF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CDF),52)",
+    "Equal(MeasureOfAngle(DHG),38)",
+    "PerpendicularBetweenLine(HG,DG)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(GDH))",
+  "problem_answer": "52",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(HGD)"
+  ]
+}

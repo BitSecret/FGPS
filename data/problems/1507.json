@@ -1,0 +1,36 @@
+{
+  "problem_id": 1507,
+  "annotation": "YanjunGuo_2023-04-09",
+  "source": "Geometry3k-1564",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find z.",
+  "problem_img": "1507.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DC,CA)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),x)",
+    "Equal(LengthOfLine(AD),y)",
+    "Equal(LengthOfLine(AC),z)",
+    "Equal(LengthOfLine(BD),12)",
+    "Equal(LengthOfLine(CD),4)",
+    "PerpendicularBetweenLine(CA,BA)",
+    "PerpendicularBetweenLine(BD,AD)",
+    "PerpendicularBetweenLine(AD,CD)"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CAB)",
+    "right_triangle_judgment_angle(BDA)",
+    "right_triangle_judgment_angle(ADC)",
+    "line_addition(BD,DC)",
+    "right_triangle_property_pythagorean(CAB)",
+    "right_triangle_property_pythagorean(BDA)",
+    "right_triangle_property_pythagorean(ADC)"
+  ]
+}

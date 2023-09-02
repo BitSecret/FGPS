@@ -1,0 +1,39 @@
+{
+  "problem_id": 6297,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-9016",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C,F,G,H在同一水平线上,DE∥AB,现分别以AB,CD,EF,GH为边长作四个正方形,其中AB=2,CD=3,EF=5,则GH=()",
+  "problem_text_en": "As shown in the figure, the points A, B, C, F, G, and H are on the same horizontal line, DE ∥ AB, now take AB, CD, EF, GH as side lengths to make four squares, where AB = N_0, CD = N_1 , EF = N_2, then GH = ()",
+  "problem_img": "6297.png",
+  "construction_cdl": [
+    "Shape(MB,BC,CM)",
+    "Shape(DC,CP,PD)",
+    "Shape(EQ,QF,FE)",
+    "Shape(NF,FG,GN)",
+    "Collinear(BCPQFG)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(MBC),90)",
+    "Equal(MeasureOfAngle(CPD),90)",
+    "Equal(MeasureOfAngle(EQF),90)",
+    "Equal(MeasureOfAngle(FGN),90)",
+    "Equal(LengthOfLine(MB),2)",
+    "Equal(LengthOfLine(CP),2)",
+    "Equal(LengthOfLine(MC),LengthOfLine(CD))",
+    "Equal(LengthOfLine(EF),LengthOfLine(FN))",
+    "Equal(LengthOfLine(EQ),LengthOfLine(FG))",
+    "Equal(LengthOfLine(EQ),LengthOfLine(DP))",
+    "Equal(LengthOfLine(CD),3)",
+    "Equal(LengthOfLine(EF),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(GN))",
+  "problem_answer": "2*sqrt(5)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CPD)",
+    "right_triangle_judgment_angle(FGN)",
+    "right_triangle_property_pythagorean(CPD)",
+    "right_triangle_property_pythagorean(FGN)"
+  ]
+}

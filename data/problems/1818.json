@@ -1,0 +1,38 @@
+{
+  "problem_id": 1818,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1886",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle 7.",
+  "problem_img": "1818.png",
+  "construction_cdl": [
+    "Shape(DA,AG)",
+    "Shape(FA,AD)",
+    "Shape(GA,AC)",
+    "Shape(AF,FN,NA)",
+    "Shape(MN,NF)",
+    "Shape(JN,NM)",
+    "Shape(EN,NJ)",
+    "Shape(KE,EN)",
+    "Shape(CE,EK)",
+    "Shape(CA,AE,EC)",
+    "Shape(EA,AN,NE)",
+    "Collinear(FNJ)",
+    "Collinear(CEN)",
+    "Collinear(DAEK)",
+    "Collinear(GANM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CEK),110)",
+    "Equal(MeasureOfAngle(ANE),30)",
+    "Equal(MeasureOfAngle(ENJ),130)",
+    "Equal(MeasureOfAngle(AFN),MeasureOfAngle(ECA))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AEC))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AEC,CEK)"
+  ]
+}

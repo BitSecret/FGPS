@@ -1,0 +1,38 @@
+{
+  "problem_id": 3817,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1675",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB是⊙O的直径,⁀{BC}=⁀{CD}=⁀{DE}．∠BOC=40°,那么∠AOE=()",
+  "problem_text_en": "As shown in the figure, it is known that AB is the diameter of ⊙O, ⁀BC = ⁀CD = ⁀DE. ∠BOC = N_0, then ∠AOE = ()",
+  "problem_img": "3817.png",
+  "construction_cdl": [
+    "Shape(AO,OE,OEA)",
+    "Shape(EO,OD,ODE)",
+    "Shape(DO,OC,OCD)",
+    "Shape(CO,OB,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCDE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(DiameterOfCircle(O),LengthOfLine(AB))",
+    "CongruentBetweenArc(OBC,OCD)",
+    "CongruentBetweenArc(OCD,ODE)",
+    "Equal(MeasureOfAngle(DOC),40)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AOE))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "congruent_arc_property_measure_equal(OBC,OCD)",
+    "congruent_arc_property_measure_equal(OCD,ODE)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_center_angle(OCD,O)",
+    "arc_property_center_angle(ODE,O)",
+    "angle_addition(EOD,DOC)",
+    "angle_addition(EOC,COB)",
+    "adjacent_complementary_angle(AOE,EOB)"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "problem_id": 1437,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1490",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "1437.png",
+  "construction_cdl": [
+    "Shape(NJ,JR)",
+    "Shape(RJ,JT)",
+    "Shape(NT,TQ)",
+    "Shape(QT,TA)",
+    "Shape(LJ,JN)",
+    "Shape(JL,LM,MT,TJ)",
+    "Shape(AT,TM)",
+    "Shape(VL,LJ)",
+    "Shape(TM,MS)",
+    "Shape(CL,LV)",
+    "Shape(SM,MJ)",
+    "Shape(ZC,CL)",
+    "Shape(MI,IO)",
+    "Shape(LC,CI,IM,ML)",
+    "Shape(UC,CZ)",
+    "Shape(JC,CU)",
+    "Shape(PI,IC)",
+    "Shape(OI,IP)",
+    "Collinear(RJLCU)",
+    "Collinear(QTMIP)",
+    "Collinear(NJTA)",
+    "Collinear(VLMS)",
+    "Collinear(ZCIO)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenQuadrilateral(JLMT,JCIT)",
+    "Equal(LengthOfLine(TM),LengthOfLine(MI))",
+    "Equal(LengthOfLine(TM),10-2*x)",
+    "Equal(LengthOfLine(MI),12-3*x)",
+    "Equal(LengthOfLine(JL),y+4/5)",
+    "Equal(LengthOfLine(LC),2*y-11/5)",
+    "ParallelBetweenLine(JT,LM)",
+    "ParallelBetweenLine(LM,CI)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "line_addition(JL,LC)",
+    "line_addition(TM,MI)",
+    "similar_quadrilateral_property_line_ratio(JLMT,JCIT)",
+    "similar_quadrilateral_property_line_ratio(MTJL,ITJC)"
+  ]
+}

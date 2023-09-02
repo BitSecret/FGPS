@@ -1,0 +1,33 @@
+{
+  "problem_id": 6203,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8787",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C是⊙O上的点,若∠ABC=110°,∠BAC=35°,则∠AOB的度数是()",
+  "problem_text_en": "As shown in the figure, A, B, and C are vertices on ⊙O, if ∠ABC = N_0, ∠BAC = N_1, then the degree of ∠AOB is ()",
+  "problem_img": "6203.png",
+  "construction_cdl": [
+    "Shape(CD,DO,OA,OAC)",
+    "Shape(OD,DA,AO)",
+    "Shape(AD,DB,BA)",
+    "Shape(DC,CB,BD)",
+    "Shape(AB,OBA)",
+    "Shape(BC,OCB)",
+    "Collinear(CDA)",
+    "Collinear(ODB)",
+    "Cocircular(O,CBA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CBA),110)",
+    "Equal(MeasureOfAngle(BAC),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AOB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BAC)",
+    "arc_property_circumference_angle_external(OBA,C)",
+    "arc_property_center_angle(OBA,O)"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": 3511,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1120",
+  "problem_level": 1,
+  "problem_text_cn": "一只因损坏而倾斜的椅子,从背后看到的形状如图所示,其中两组对边的平行关系没有发生变化．若∠1=76°,则∠2的度数是()",
+  "problem_text_en": "The shape of a chair tilted due to damage as seen from the back is shown in the figure, in which the parallel relationship between the two opposite edges has not changed. If ∠1 = N_0, then the degree of ∠2 is ()",
+  "problem_img": "3511.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(MeasureOfAngle(CDA),76)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "104",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(DC,AB)"
+  ]
+}

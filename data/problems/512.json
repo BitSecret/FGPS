@@ -1,0 +1,53 @@
+{
+  "problem_id": 512,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-524",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot J, G H = 9 and K L = 4 x + 1. Find x.",
+  "problem_img": "512.png",
+  "construction_cdl": [
+    "Shape(JH,HR,RJ)",
+    "Shape(JR,RG,GJ)",
+    "Shape(JG,JGK,KJ)",
+    "Shape(JK,KS,SJ)",
+    "Shape(JS,SL,LJ)",
+    "Shape(JL,JLH,HJ)",
+    "Shape(JHG,GH)",
+    "Shape(JKL,LK)",
+    "Collinear(HRG)",
+    "Collinear(KSL)",
+    "Cocircular(J,HGKL)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(GH),9)",
+    "Equal(LengthOfLine(KL),4*x+1)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(J,J)",
+    "Equal(LengthOfLine(JR),5)",
+    "Equal(LengthOfLine(SJ),5)",
+    "PerpendicularBetweenLine(HR,JR)",
+    "PerpendicularBetweenLine(JS,LS)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(HRJ,JRG)",
+    "adjacent_complementary_angle(KSJ,JSL)",
+    "radius_of_circle_property_length_equal(JH,J)",
+    "radius_of_circle_property_length_equal(JG,J)",
+    "radius_of_circle_property_length_equal(JK,J)",
+    "radius_of_circle_property_length_equal(JL,J)",
+    "right_triangle_judgment_angle(HRJ)",
+    "right_triangle_judgment_angle(JRG)",
+    "right_triangle_judgment_angle(KSJ)",
+    "right_triangle_judgment_angle(JSL)",
+    "right_triangle_property_pythagorean(HRJ)",
+    "right_triangle_property_pythagorean(KSJ)",
+    "right_triangle_property_pythagorean(JRG)",
+    "right_triangle_property_pythagorean(JSL)",
+    "line_addition(HR,RG)",
+    "line_addition(KS,SL)"
+  ]
+}

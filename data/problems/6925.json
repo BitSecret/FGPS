@@ -1,0 +1,30 @@
+{
+  "problem_id": 6925,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10177",
+  "problem_level": 1,
+  "problem_text_cn": "如图，A，B，C是⊙O上的三点，若∠O＝70°，则∠C的度数是（）",
+  "problem_text_en": "",
+  "problem_img": "6925.png",
+  "construction_cdl": [
+    "Shape(OD,DC,OCA,AO)",
+    "Shape(OA,AD,DO)",
+    "Shape(DA,OAB,BD)",
+    "Shape(DB,BC,CD)",
+    "Shape(OBC,CB)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)"
+  ]
+}

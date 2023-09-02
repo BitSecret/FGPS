@@ -1,0 +1,32 @@
+{
+  "problem_id": 2936,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-120",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC≌△ADE,若∠B=70°,∠C=30°,∠DAC=35°,则∠EAC的度数为()",
+  "problem_text_en": "As shown in the figure, △ABC ≌ △ADE, if ∠B = N_0, ∠C = N_1, ∠DAC = N_2, then the degree of ∠EAC is ()",
+  "problem_img": "2936.png",
+  "construction_cdl": [
+    "Shape(BA,AD,DB)",
+    "Shape(DA,AF,FD)",
+    "Shape(DF,FC,CD)",
+    "Shape(FA,AE,EF)",
+    "Collinear(BDC)",
+    "Collinear(AFC)",
+    "Collinear(DFE)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(BAC,DAE)",
+    "Equal(MeasureOfAngle(CBA),70)",
+    "Equal(MeasureOfAngle(ACB),30)",
+    "Equal(MeasureOfAngle(DAC),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAE))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BAC)",
+    "congruent_triangle_property_angle_equal(ACB,AED)",
+    "angle_addition(DAF,FAE)"
+  ]
+}

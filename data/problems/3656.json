@@ -1,0 +1,28 @@
+{
+  "problem_id": 3656,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1360",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC≌△ADC,∠ABC=118°,∠DAC=40°,则∠BCD的度数为()",
+  "problem_text_en": "As shown in the figure, △ABC ≌ △ADC, ∠ABC = N_0, ∠DAC = N_1, then the degree of ∠BCD is ()",
+  "problem_img": "3656.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(ABC,ACD)",
+    "Equal(MeasureOfAngle(ABC),118)",
+    "Equal(MeasureOfAngle(DAC),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "44",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_angle_equal(ABC,ACD)",
+    "mirror_congruent_triangle_property_angle_equal(BCA,DAC)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(ACD)",
+    "angle_addition(BCA,ACD)"
+  ]
+}

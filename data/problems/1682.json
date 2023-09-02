@@ -1,0 +1,43 @@
+{
+  "problem_id": 1682,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1746",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Circles G, J, and K all intersect at L. If G H = 10, find J K.",
+  "problem_img": "1682.png",
+  "construction_cdl": [
+    "Shape(BG,GH,GHB)",
+    "Shape(FG,GB,GBF)",
+    "Shape(HG,JGK,GLH)",
+    "Shape(GF,GFL,JGL)",
+    "Shape(JG,JGL,KJL)",
+    "Shape(GJ,KLJ,JLG)",
+    "Shape(JK,KL,KLJ)",
+    "Shape(LK,KJ,KJL)",
+    "Collinear(HGF)",
+    "Collinear(BGJKL)",
+    "Cocircular(K,JL)",
+    "Cocircular(J,GL)",
+    "Cocircular(G,FLHB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(G,G)",
+    "IsCentreOfCircle(J,J)",
+    "IsCentreOfCircle(K,K)",
+    "Equal(LengthOfLine(GH),10)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(JK))",
+  "problem_answer": "2.5",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(GH,G)",
+    "radius_of_circle_property_length_equal(GL,G)",
+    "radius_of_circle_property_length_equal(JG,J)",
+    "radius_of_circle_property_length_equal(JL,J)",
+    "line_addition(GJ,JL)",
+    "radius_of_circle_property_length_equal(KJ,K)",
+    "radius_of_circle_property_length_equal(KL,K)",
+    "line_addition(JK,KL)"
+  ]
+}

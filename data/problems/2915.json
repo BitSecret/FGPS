@@ -1,0 +1,27 @@
+{
+  "problem_id": 2915,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-92",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB=AC,AD∥BC,∠BAC=100°,则∠CAD的度数是()",
+  "problem_text_en": "As shown in the figure, AB = AC, AD ∥ BC, ∠BAC = N_0, then the degree of ∠CAD is ()",
+  "problem_img": "2915.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(DA,AC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "ParallelBetweenLine(AD,BC)",
+    "Equal(MeasureOfAngle(CAB),100)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DAC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "parallel_property_alternate_interior_angle(AD,BC)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 1377,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1426",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If m \\angle A E D = 95 and m \\widehat A D = 120, what is m \\angle B A C?",
+  "problem_img": "1377.png",
+  "construction_cdl": [
+    "Shape(BE,EC,ECB)",
+    "Shape(EB,BA,AE)",
+    "Shape(AB,EBA)",
+    "Shape(EA,EAD,DE)",
+    "Shape(ED,EDC,CE)",
+    "Collinear(BED)",
+    "Collinear(CEA)",
+    "Collinear(AB)",
+    "Cocircular(F,ADCB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DEA),95)",
+    "Equal(MeasureOfArc(FAD),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAC))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(FAD,B)",
+    "adjacent_complementary_angle(DEA,AEB)",
+    "triangle_property_angle_sum(AEB)"
+  ]
+}

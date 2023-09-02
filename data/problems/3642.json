@@ -1,0 +1,32 @@
+{
+  "problem_id": 3642,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1334",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知正方形的B面积为144,正方形C的面积为169时,那么正方形A的面积为()",
+  "problem_text_en": "As shown in the figure, it is known that the area of square B is N_0 and the area of square C is N_1, then the area of square A is ()",
+  "problem_img": "3642.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)",
+    "Shape(EC,CF,FG,GE)",
+    "Shape(CB,BF,FC)",
+    "Shape(FB,BH,HI,IF)",
+    "Collinear(DCF)",
+    "Collinear(BCG)"
+  ],
+  "text_cdl": [
+    "RightTriangle(FCB)",
+    "Equal(Mul(LengthOfLine(BF),LengthOfLine(BF)),169)",
+    "Equal(Mul(LengthOfLine(CF),LengthOfLine(CF)),144)",
+    "Square(ABCD)",
+    "Square(ECFG)",
+    "Square(FBHI)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "right_triangle_property_pythagorean(FCB)",
+    "parallelogram_area_formula_sine(ABCD)"
+  ]
+}

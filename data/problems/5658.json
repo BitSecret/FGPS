@@ -1,0 +1,24 @@
+{
+  "problem_id": 5658,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7329",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知山坡AB的坡度为1:2,BC=1,则坡长AB=()",
+  "problem_text_en": "As shown in the figure, it is known that the slope of the hillside AB is N_0:N_1, BC = N_2, then the length of slope AB = ()",
+  "problem_img": "5658.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "Equal(Div(LengthOfLine(BC),LengthOfLine(AC)),1/2)",
+    "Equal(LengthOfLine(BC),1)",
+    "Equal(MeasureOfAngle(ACB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "sqrt(5)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_property_pythagorean(ACB)"
+  ]
+}

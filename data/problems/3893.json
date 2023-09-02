@@ -1,0 +1,37 @@
+{
+  "problem_id": 3893,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1792",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C在⊙O上,∠OAB=65°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are on ⊙O, ∠OAB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "3893.png",
+  "construction_cdl": [
+    "Shape(CB,OBC)",
+    "Shape(CD,DB,BC)",
+    "Shape(BD,DA,AB)",
+    "Shape(OA,AD,DO)",
+    "Shape(BA,OAB)",
+    "Shape(OD,DC,CO)",
+    "Shape(AO,OC,OCA)",
+    "Collinear(ODB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OAB),65)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

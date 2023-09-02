@@ -1,0 +1,28 @@
+{
+  "problem_id": 486,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-497",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. A = 153 in^2.",
+  "problem_img": "486.png",
+  "construction_cdl": [
+    "Shape(BD,DT,TB)",
+    "Shape(BT,TA,AC,CB)",
+    "Collinear(DTA)"
+  ],
+  "text_cdl": [
+    "Equal(AreaOfQuadrilateral(BTAC),153)"
+  ],
+  "image_cdl": [
+    "Parallelogram(BTAC)",
+    "Equal(LengthOfLine(AT),9)",
+    "PerpendicularBetweenLine(BD,TD)",
+    "IsAltitudeOfQuadrilateral(BD,BTAC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "17",
+  "theorem_seqs": [
+    "parallelogram_area_formula_common(BTAC)"
+  ]
+}

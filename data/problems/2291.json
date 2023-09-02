@@ -1,0 +1,28 @@
+{
+  "problem_id": 2291,
+  "annotation": "DengfengYue_2023-04-16",
+  "source": "Geometry3k-2397",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle Y X W.",
+  "problem_img": "2291.png",
+  "construction_cdl": [
+    "Shape(XV,XVZ,ZX)",
+    "Shape(XZ,XZY,YX)",
+    "Shape(XY,XYW,WX)",
+    "Shape(XW,XWV,VX)",
+    "Collinear(ZXW)",
+    "Collinear(YXV)",
+    "Cocircular(X,ZYWV)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ZXV),2*x+65)",
+    "Equal(MeasureOfAngle(WXY),4*x+15)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(WXY))",
+  "problem_answer": "115",
+  "theorem_seqs": [
+    "vertical_angle(ZXV,WXY)"
+  ]
+}

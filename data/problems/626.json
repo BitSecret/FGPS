@@ -1,0 +1,28 @@
+{
+  "problem_id": 626,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-643",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Rhombus M N P Q has an area of 375 square inches. If M P is 25 inches, find N Q.",
+  "problem_img": "626.png",
+  "construction_cdl": [
+    "Shape(MA,AN,NM)",
+    "Shape(NA,AP,PN)",
+    "Shape(MQ,QA,AM)",
+    "Shape(AQ,QP,PA)",
+    "Collinear(MAP)",
+    "Collinear(NAQ)"
+  ],
+  "text_cdl": [
+    "Rhombus(MQPN)",
+    "Equal(AreaOfQuadrilateral(NMQP),375)",
+    "Equal(LengthOfLine(MP),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(NQ))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "kite_area_formula_diagonal(NMQP)"
+  ]
+}

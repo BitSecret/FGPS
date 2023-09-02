@@ -1,0 +1,48 @@
+{
+  "problem_id": 1713,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1777",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth.",
+  "problem_img": "1713.png",
+  "construction_cdl": [
+    "Shape(EB,BG,GE)",
+    "Shape(CG,GA,AC)",
+    "Shape(BD,DH,HG,GB)",
+    "Shape(GH,HF,FA,AG)",
+    "Collinear(BGA)",
+    "Collinear(DHF)"
+  ],
+  "text_cdl": [
+    "Rectangle(BDFA)",
+    "PerpendicularBetweenLine(HF,AF)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),6)",
+    "Equal(LengthOfLine(AF),5)",
+    "Equal(LengthOfLine(FH),6)",
+    "Equal(LengthOfLine(FD),12)",
+    "Equal(LengthOfLine(BG),6)",
+    "Equal(LengthOfLine(GA),6)",
+    "PerpendicularBetweenLine(GH,FH)",
+    "Equal(LengthOfLine(BE),LengthOfLine(GE))",
+    "Equal(LengthOfLine(GE),LengthOfLine(GC))",
+    "Equal(LengthOfLine(GC),LengthOfLine(CA))"
+  ],
+  "goal_cdl": "Value(Add(AreaOfTriangle(EBG),AreaOfTriangle(CGA),AreaOfQuadrilateral(BDFA)))",
+  "problem_answer": "91.17691453623979",
+  "theorem_seqs": [
+    "parallelogram_area_formula_sine(DFAB)",
+    "isosceles_triangle_judgment_line_equal(EBG)",
+    "isosceles_triangle_judgment_line_equal(BGE)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(EBG)",
+    "equilateral_triangle_property_angle(EBG)",
+    "triangle_area_formula_sine(EBG)",
+    "isosceles_triangle_judgment_line_equal(CGA)",
+    "isosceles_triangle_judgment_line_equal(GAC)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(CGA)",
+    "equilateral_triangle_property_angle(CGA)",
+    "triangle_area_formula_sine(CGA)"
+  ]
+}

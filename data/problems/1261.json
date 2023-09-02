@@ -1,0 +1,33 @@
+{
+  "problem_id": 1261,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-1304",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The segment is tangent to the circle. Find x.",
+  "problem_img": "1261.png",
+  "construction_cdl": [
+    "Shape(BA,AE,ABE)",
+    "Shape(AEB,BA,AE)",
+    "Shape(EC,CB,AEB)",
+    "Collinear(AEC)",
+    "Cocircular(A,EB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "IsTangentOfCircle(CB,A)",
+    "Equal(LengthOfLine(CB),12)",
+    "Equal(LengthOfLine(EC),6)",
+    "Equal(LengthOfLine(BA),x)",
+    "Equal(LengthOfLine(AE),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(CB,A,A)",
+    "right_triangle_judgment_angle(CBA)",
+    "right_triangle_property_pythagorean(CBA)",
+    "line_addition(AE,EC)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 5902,
+  "annotation": "YiwenHuang_2023-06-04",
+  "source": "GeoQA-8017",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC中,∠C=90°,DF⊥AB,垂足为F,DG⊥AC,垂足为G,交AB于点E,BC=5,AC=12,DE=5.2,那么DF等于()",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠C = N_0, DF ⊥ AB, the perpendicular foot is F, DG ⊥ AC, the vertical foot is G, intersect AB at point E, BC = N_1, AC = N_2, DE = N_3, then DF is equal to ()",
+  "problem_img": "5902.png",
+  "construction_cdl": [
+    "Shape(FD,DE,EF)",
+    "Shape(EA,AG,GE)",
+    "Shape(BF,FE,EG,GC,CB)",
+    "Collinear(DEG)",
+    "Collinear(AEFB)",
+    "Collinear(AGC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),12)",
+    "Equal(LengthOfLine(BC),5)",
+    "Equal(LengthOfLine(DE),5.2)",
+    "Equal(MeasureOfAngle(ACB),90)",
+    "Equal(MeasureOfAngle(AGE),90)",
+    "Equal(MeasureOfAngle(AFD),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DF))",
+  "problem_answer": "4.8",
+  "theorem_seqs": [
+    "vertical_angle(DEF,GEA)",
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_property_pythagorean(ACB)",
+    "mirror_similar_triangle_judgment_aa(DEF,AGE)",
+    "mirror_similar_triangle_property_angle_equal(DEF,AGE)",
+    "mirror_similar_triangle_judgment_aa(BAC,EFD)",
+    "mirror_similar_triangle_property_line_ratio(BAC,EFD)",
+    "mirror_similar_triangle_property_line_ratio(CBA,FDE)"
+  ]
+}

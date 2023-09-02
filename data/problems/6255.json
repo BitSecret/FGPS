@@ -1,0 +1,27 @@
+{
+  "problem_id": 6255,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8874",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,若圆心角∠AOB=100°,则圆周角∠ACB为()",
+  "problem_text_en": "As shown in the figure, if the central angle ∠AOB = N_0, the angel of circumference ∠ACB is ()",
+  "problem_img": "6255.png",
+  "construction_cdl": [
+    "Shape(OAB,BO,OA)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AC)",
+    "Shape(OB,BC,CA,AO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

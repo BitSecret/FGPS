@@ -1,0 +1,37 @@
+{
+  "problem_id": 4683,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3968",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BM与⊙O相切于点B,若∠MBA=140°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, BM and ⊙O are tangent to point B, if ∠MBA = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "4683.png",
+  "construction_cdl": [
+    "Shape(OA,AB,BO)",
+    "Shape(OB,BC,CA,AO)",
+    "Shape(OAB,BA)",
+    "Shape(OCA,AC)",
+    "Shape(OBC,CB)",
+    "Shape(OB,BM)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(MB,O)",
+    "Equal(MeasureOfAngle(ABM),140)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(MB,O,O)",
+    "angle_addition(ABO,OBM)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

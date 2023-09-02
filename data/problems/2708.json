@@ -1,0 +1,28 @@
+{
+  "problem_id": 2708,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2852",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find A B.",
+  "problem_img": "2708.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)",
+    "Shape(AC,CD,DA)",
+    "Collinear(FCAE)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),4.1)",
+    "Equal(LengthOfLine(CD),LengthOfLine(CB))",
+    "PerpendicularBetweenLine(AC,DC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "4.1",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BCA,ACD)",
+    "mirror_congruent_triangle_judgment_sas(CAB,CDA)",
+    "mirror_congruent_triangle_property_line_equal(CAB,CDA)"
+  ]
+}

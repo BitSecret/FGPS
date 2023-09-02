@@ -1,0 +1,27 @@
+{
+  "problem_id": 2431,
+  "annotation": "Yangli_2023-04-23",
+  "source": "Geometry3k-2550",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In rhombus A B C D, A B = 2 x + 3 and B C = 5 x. Find A D.",
+  "problem_img": "2431.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(ED,DC,CE)",
+    "Shape(EC,CB,BE)",
+    "Shape(AE,EB,BA)",
+    "Collinear(AEC)",
+    "Collinear(BED)"
+  ],
+  "text_cdl": [
+    "Rhombus(ADCB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),2*x+3)",
+    "Equal(LengthOfLine(BC),5*x)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "5",
+  "theorem_seqs": []
+}

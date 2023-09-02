@@ -1,0 +1,27 @@
+{
+  "problem_id": 1797,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1863",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1797.png",
+  "construction_cdl": [
+    "Shape(XBC,CX,XB)",
+    "Shape(XCA,AX,XC)",
+    "Shape(XAB,BX,XA)",
+    "Cocircular(X,BCA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CXB),135)",
+    "Equal(MeasureOfAngle(AXC),118)",
+    "Equal(MeasureOfAngle(BXA),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "107",
+  "theorem_seqs": [
+    "angle_addition(AXC,CXB)",
+    "round_angle(BXA,AXB)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 4567,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3699",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,连接OA,OB,若∠C=35°,则∠OBA的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O. Connect OA, OB, if ∠C = N_0, then the degree of ∠OBA is ()",
+  "problem_img": "4567.png",
+  "construction_cdl": [
+    "Shape(AO,OE,EC,OCA)",
+    "Shape(OA,AE,EO)",
+    "Shape(EA,AB,BE)",
+    "Shape(CE,EB,BC)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Collinear(OEB)",
+    "Collinear(AEC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BCA),35)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABO))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

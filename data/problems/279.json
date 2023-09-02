@@ -1,0 +1,34 @@
+{
+  "problem_id": 279,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-283",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the quadrilateral.",
+  "problem_img": "279.png",
+  "construction_cdl": [
+    "Shape(GF,FA,AB,BG)",
+    "Shape(FI,IA,AF)",
+    "Shape(AI,IH,HB,BA)",
+    "Shape(GB,BH,HG)",
+    "Collinear(FABH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(FH),37)",
+    "Equal(LengthOfLine(AI),18)",
+    "Equal(LengthOfLine(GB),9)",
+    "PerpendicularBetweenLine(IA,FA)",
+    "PerpendicularBetweenLine(GB,HB)"
+  ],
+  "goal_cdl": "Value(Add(AreaOfTriangle(IHF),AreaOfTriangle(FHG)))",
+  "problem_answer": "499.5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BAI,IAF)",
+    "adjacent_complementary_angle(FBG,GBH)",
+    "altitude_of_triangle_judgment(GB,GFH)",
+    "altitude_of_triangle_judgment(IA,IHF)",
+    "triangle_area_formula_common(GFH)",
+    "triangle_area_formula_common(IHF)"
+  ]
+}

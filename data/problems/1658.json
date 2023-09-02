@@ -1,0 +1,43 @@
+{
+  "problem_id": 1658,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1720",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 1 = 123. Find the measure of \\angle 16.",
+  "problem_img": "1658.png",
+  "construction_cdl": [
+    "Shape(GK,KF)",
+    "Shape(UK,KG)",
+    "Shape(NU,UK)",
+    "Shape(HU,UN)",
+    "Shape(AK,KF)",
+    "Shape(AK,KU)",
+    "Shape(KU,UQ)",
+    "Shape(QU,UH)",
+    "Shape(KA,AJ)",
+    "Shape(JA,AM)",
+    "Shape(QA,AK)",
+    "Shape(AM,AQ)",
+    "Shape(UQ,QA)",
+    "Shape(EQ,QA)",
+    "Shape(IQ,QU)",
+    "Shape(EQ,QI)",
+    "Collinear(GKAM)",
+    "Collinear(NUQE)",
+    "Collinear(FKUH)",
+    "Collinear(JAQI)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(HUN),123)",
+    "ParallelBetweenLine(KA,UQ)",
+    "ParallelBetweenLine(UN,KG)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(GKF))",
+  "problem_answer": "57",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(UN,KG,H)",
+    "adjacent_complementary_angle(UKG,GKF)"
+  ]
+}

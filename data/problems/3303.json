@@ -1,0 +1,30 @@
+{
+  "problem_id": 3303,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-645",
+  "problem_level": 1,
+  "problem_text_cn": "如图,小明从A处出发沿北偏西30°方向行走至B处,又沿南偏西50°方向行走至C处,此时再沿与出发时一致的方向行走至D处,则∠BCD的度数为()",
+  "problem_text_en": "As shown in the figure, Xiaoming starts from point A and walks in the direction of west by north N_0 to point B, and then walks in the direction of west by south N_1 to point C. At this time, he walks in the same direction as when he started to point D, then the degree of ∠BCD is ()",
+  "problem_img": "3303.png",
+  "construction_cdl": [
+    "Shape(DC,CF)",
+    "Shape(FC,CB)",
+    "Shape(GB,BC)",
+    "Shape(AB,BG)",
+    "Shape(BA,AE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BAE),30)",
+    "Equal(MeasureOfAngle(GBC),50)",
+    "Equal(MeasureOfAngle(DCF),MeasureOfAngle(BAE))",
+    "ParallelBetweenLine(CF,GB)",
+    "ParallelBetweenLine(GB,AE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(CF,GB)",
+    "angle_addition(DCF,FCB)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 5363,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5640",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC∽△ACP,若∠A=75°,∠APC=65°,则∠B的大小为()",
+  "problem_text_en": "As shown in the figure, △ABC ∽ △ACP, if ∠A = N_0, ∠APC = N_1, then the size of ∠B is ()",
+  "problem_img": "5363.png",
+  "construction_cdl": [
+    "Shape(AP,PC,CA)",
+    "Shape(PB,BC,CP)",
+    "Collinear(APB)"
+  ],
+  "text_cdl": [
+    "MirrorSimilarBetweenTriangle(ABC,APC)",
+    "Equal(MeasureOfAngle(CAB),75)",
+    "Equal(MeasureOfAngle(APC),65)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(APC)",
+    "mirror_similar_triangle_property_angle_equal(BCA,CAP)"
+  ]
+}

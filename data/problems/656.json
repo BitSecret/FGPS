@@ -1,0 +1,30 @@
+{
+  "problem_id": 656,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-673",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Suppose C E = 5.2 inches. Find the diameter of the circle.",
+  "problem_img": "656.png",
+  "construction_cdl": [
+    "Shape(AE,EB,BA)",
+    "Shape(AB,EBA)",
+    "Shape(DE,EA,EAD)",
+    "Shape(CE,ED,EDC)",
+    "Shape(BE,EC,ECB)",
+    "Collinear(AEC)",
+    "Collinear(DEB)",
+    "Cocircular(E,ADCB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(E,E)",
+    "Equal(LengthOfLine(CE),5.2)"
+  ],
+  "goal_cdl": "Value(DiameterOfCircle(E))",
+  "problem_answer": "10.4",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(EC,E)",
+    "circle_property_length_of_radius_and_diameter(E)"
+  ]
+}

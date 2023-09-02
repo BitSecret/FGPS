@@ -1,0 +1,32 @@
+{
+  "problem_id": 6348,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9169",
+  "problem_level": 1,
+  "problem_text_cn": "如图,菱形ABCD的对角线AC,BD交于点O,若AO=3cm,BO=4cm,则菱形ABCD的面积是()cm²．",
+  "problem_text_en": "As shown in the figure, the diagonal AC and BD of the diamond ABCD intersect at the point O. If AO = N_0 and BO = N_1, then the area of ​​the diamond ABCD is ()^2.",
+  "problem_img": "6348.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(OB,BC,CO)",
+    "Shape(OC,CD,DO)",
+    "Collinear(AOC)",
+    "Collinear(BOD)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AO),3)",
+    "Equal(LengthOfLine(BO),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)",
+    "kite_area_formula_diagonal(ABCD)"
+  ]
+}

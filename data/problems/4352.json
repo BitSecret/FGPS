@@ -1,0 +1,48 @@
+{
+  "problem_id": 4352,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-3245",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,四边形ABCD内接于⊙O,若BC=CD=DA=4cm,则⊙O的周长为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, and the quadrilateral ABCD is inscribed with ⊙O. If BC = CD = DA = N_0, then the circumference of ⊙O is ()",
+  "problem_img": "4352.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OCD,DC)",
+    "Shape(OCB,BC)",
+    "Shape(OD,DA,AO)",
+    "Shape(OC,CD,DO)",
+    "Shape(OB,BC,CO)",
+    "Shape(OAB,BO,OA)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(LengthOfLine(BC),4)",
+    "Equal(LengthOfLine(CD),4)",
+    "Equal(LengthOfLine(DA),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfCircle(O))",
+  "problem_answer": "8*pi",
+  "theorem_seqs": [
+    "congruent_arc_judgment_chord_equal(OCD,OBC)",
+    "congruent_arc_judgment_chord_equal(ODA,OBC)",
+    "congruent_arc_property_measure_equal(OCD,OBC)",
+    "congruent_arc_property_measure_equal(ODA,OBC)",
+    "arc_property_center_angle(ODA,O)",
+    "arc_property_center_angle(OCD,O)",
+    "arc_property_center_angle(OBC,O)",
+    "angle_addition(AOD,DOC)",
+    "adjacent_complementary_angle(AOC,COB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(ODA)",
+    "isosceles_triangle_judgment_angle_equal(AOD)",
+    "circle_perimeter_formula(O)"
+  ]
+}

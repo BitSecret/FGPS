@@ -1,0 +1,32 @@
+{
+  "problem_id": 3071,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-298",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,D、E分别是AB、AC上的点,且DE∥BC,如果AD=2cm,DB=1cm,AE=1.8cm,则EC=()",
+  "problem_text_en": "As shown in the figure, in △ABC, D and E are points on AB and AC respectively, and DE ∥ BC, if AD = N_0, DB = N_1, AE = N_2, then EC = ()",
+  "problem_img": "3071.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(LengthOfLine(AD),2)",
+    "Equal(LengthOfLine(DB),1)",
+    "Equal(LengthOfLine(AE),1.8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "0.9",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "similar_triangle_judgment_aa(EAD,CAB)",
+    "line_addition(AD,DB)",
+    "line_addition(AE,EC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(DEA,BCA)"
+  ]
+}

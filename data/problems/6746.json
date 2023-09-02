@@ -1,0 +1,30 @@
+{
+  "problem_id": 6746,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9805",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A,B,C是⊙O上的三点,已知∠AOB=100°,那么∠ACB的度数是()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are three points on O. It is known that ∠AOB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "6746.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(BD,DC,CB)",
+    "Shape(BC,OCB)",
+    "Shape(AD,DB,OBA)",
+    "Shape(CD,DO,OA,OAC)",
+    "Collinear(BDO)",
+    "Collinear(ADC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AOB),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)"
+  ]
+}

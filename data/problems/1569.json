@@ -1,0 +1,26 @@
+{
+  "problem_id": 1569,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1628",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral A B C D is a rhombus. If m \\angle B C D = 120, find m \\angle D A C.",
+  "problem_img": "1569.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)",
+    "Shape(CA,AD,DC)"
+  ],
+  "text_cdl": [
+    "Rhombus(BADC)",
+    "Equal(MeasureOfAngle(DCB),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAD))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(DA,CB)",
+    "isosceles_triangle_judgment_line_equal(DCA)",
+    "isosceles_triangle_property_angle_equal(DCA)",
+    "triangle_property_angle_sum(DCA)"
+  ]
+}

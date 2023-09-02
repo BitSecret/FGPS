@@ -1,0 +1,47 @@
+{
+  "problem_id": 5121,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4980",
+  "problem_level": 1,
+  "problem_text_cn": "Rt△ABC中,∠BAC=90°,AB=6,BC=10,AD、AE分别是其角平分线和中线,过点B作BG⊥AD于G,交AC于F,连接EG,则线段EG的长为()",
+  "problem_text_en": "In Rt△ABC, ∠BAC = N_0, AB = N_1, BC = N_2, AD and AE are its angle bisectors and midlines, respectively, passing point B to draw BG ⊥ AD at G, crossing AC at F, connect EG, then the length of line segment EG is ()",
+  "problem_img": "5121.png",
+  "construction_cdl": [
+    "Shape(BG,GA,AB)",
+    "Shape(AG,GO,OA)",
+    "Shape(AO,OF,FA)",
+    "Shape(GB,BD,DG)",
+    "Shape(GD,DE,EG)",
+    "Shape(GE,EO,OG)",
+    "Shape(OE,EC,CF,FO)",
+    "Collinear(AFC)",
+    "Collinear(AOE)",
+    "Collinear(AGD)",
+    "Collinear(BGOF)",
+    "Collinear(BDEC)"
+  ],
+  "text_cdl": [
+    "RightTriangle(CAB)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(BC),10)",
+    "Equal(MeasureOfAngle(CAB),90)",
+    "IsBisectorOfAngle(AD,CAB)",
+    "IsMedianOfTriangle(AE,ABC)",
+    "PerpendicularBetweenLine(BG,AG)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EG))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "right_triangle_property_pythagorean(CAB)",
+    "adjacent_complementary_angle(BGA,AGF)",
+    "triangle_property_angle_sum(ABG)",
+    "triangle_property_angle_sum(AGF)",
+    "mirror_congruent_triangle_judgment_aas(GAB,GFA)",
+    "mirror_congruent_triangle_property_line_equal(GAB,GFA)",
+    "mirror_congruent_triangle_property_line_equal(ABG,AGF)",
+    "line_addition(AF,FC)",
+    "midsegment_of_triangle_judgment_midpoint(EG,BCF)",
+    "midsegment_of_triangle_property_length(EG,BCF)"
+  ]
+}

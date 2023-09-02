@@ -1,0 +1,28 @@
+{
+  "problem_id": 6835,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-angle-10051",
+  "problem_level": 1,
+  "problem_text_cn": "如图，在△ABC中，AB＝AC，点D在AC上，以CB、CD为边作▱BCDE．若∠A＝40°，则∠E的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6835.png",
+  "construction_cdl": [
+    "Shape(BA,AD,DC,CB)",
+    "Shape(BE,ED,DC,CB)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(EDCB)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(MeasureOfAngle(BAC),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BED))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ACB)",
+    "isosceles_triangle_property_angle_equal(ACB)",
+    "triangle_property_angle_sum(BAC)",
+    "parallelogram_property_opposite_angle_equal(EDCB)"
+  ]
+}

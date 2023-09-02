@@ -1,0 +1,33 @@
+{
+  "problem_id": 3927,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1845",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在圆O中,点A、B、C在圆上,∠OAB=50°,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, in the circle O, the points A, B, and C are on the circle, ∠OAB = N_0, then the degree of ∠C is ()",
+  "problem_img": "3927.png",
+  "construction_cdl": [
+    "Shape(OBC,OCA,AO,OB)",
+    "Shape(OBC,CB)",
+    "Shape(OAB,BA)",
+    "Shape(OA,AB,BO)",
+    "Shape(BC,CA,AB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OAB),50)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

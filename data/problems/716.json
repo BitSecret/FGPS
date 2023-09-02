@@ -1,0 +1,38 @@
+{
+  "problem_id": 716,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-738",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use rectangle L M N P, parallelogram L K M J to solve the problem. If m \\angle M J N = 35, find m \\angle M P N.",
+  "problem_img": "716.png",
+  "construction_cdl": [
+    "Shape(JP,PN,NJ)",
+    "Shape(PJ,JL,LP)",
+    "Shape(LJ,JM,ML)",
+    "Shape(JN,NM,MJ)",
+    "Shape(LM,MK,KL)",
+    "Collinear(PJM)",
+    "Collinear(NJL)"
+  ],
+  "text_cdl": [
+    "Rectangle(PNML)",
+    "Parallelogram(KLJM)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(MJN),35)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(MPN))",
+  "problem_answer": "17.5",
+  "theorem_seqs": [
+    "rectangle_property_diagonal_equal(PNML)",
+    "parallelogram_property_diagonal_bisection(PNML,J)",
+    "parallelogram_property_diagonal_bisection(NMLP,J)",
+    "line_addition(PJ,JM)",
+    "line_addition(NJ,JL)",
+    "adjacent_complementary_angle(MJN,NJP)",
+    "isosceles_triangle_judgment_line_equal(JPN)",
+    "isosceles_triangle_property_angle_equal(JPN)",
+    "triangle_property_angle_sum(JPN)"
+  ]
+}

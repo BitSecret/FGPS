@@ -1,0 +1,40 @@
+{
+  "problem_id": 6272,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8931",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知,PD为⊙O的直径,直线BC切⊙O于点C,BP的延长线与CD的延长线交于点A,∠A=28°,∠B=26°,则∠PDC等于()",
+  "problem_text_en": "As shown in the figure, it is known that PD is the diameter of ⊙O, the straight line BC tangents ⊙O at point C, the extended line line of BP and the extended line line of CD intersect at point A, ∠A = N_0, ∠B = N_1, then ∠PDC is equal to ()",
+  "problem_img": "6272.png",
+  "construction_cdl": [
+    "Shape(OPC,CO,OP)",
+    "Shape(OCD,DC)",
+    "Shape(ODE,EP,PO,OD)",
+    "Shape(DA,AE,ODE)",
+    "Shape(OEP,PE)",
+    "Shape(OC,CD,DO)",
+    "Shape(PB,BC,OPC)",
+    "Collinear(BPEA)",
+    "Collinear(CDA)",
+    "Collinear(POD)",
+    "Cocircular(O,PCDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(BC,O)",
+    "Equal(MeasureOfAngle(DAP),28)",
+    "Equal(MeasureOfAngle(PBC),26)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDP))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BC,O,O)",
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(BCO,OCD)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(OCD)",
+    "isosceles_triangle_property_angle_equal(OCD)"
+  ]
+}

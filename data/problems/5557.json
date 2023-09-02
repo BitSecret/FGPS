@@ -1,0 +1,21 @@
+{
+  "problem_id": 5557,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6818",
+  "problem_level": 1,
+  "problem_text_cn": "某时刻海上点P处有一客轮,测得灯塔A位于P的北偏东30°方向,且相距50海里．客轮以60海里/小时的速度沿北偏西60°方向航行$\\frac{2}{3}$小时到达B处,那么tan∠BAP=()",
+  "problem_text_en": "At a certain moment, there is a passenger ship at sea point P, and lighthouse A is measured in the direction N_0 north by east of P, and is N_1 nautical miles away. The passenger ship sails at the speed of N_2 nautical mile/hour in the direction of N_3 from north by west for $\\frac{N_4}{N_5}$hours to reach point B, then tan∠BAP = ()",
+  "problem_img": "5557.png",
+  "construction_cdl": [
+    "Shape(AB,BP,PA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PA),50)",
+    "Equal(LengthOfLine(PB),40)",
+    "Equal(MeasureOfAngle(BPA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(BP),LengthOfLine(AP)))",
+  "problem_answer": "4/5",
+  "theorem_seqs": []
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 6198,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8779",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD的顶点A、B、D在⊙O上,顶点C在⊙O的直径BE上,∠ADC=54°,连接AE,则∠AEB的度数为()",
+  "problem_text_en": "As shown in the figure, the vertices A, B, and D of ▱ABCD are on ⊙O, and the vertex C is on the diameter BE of ⊙O, ∠ADC = N_0, connect AE, then the degree of ∠AEB is ()",
+  "problem_img": "6198.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(AF,FD,DA)",
+    "Shape(DF,FE,OED)",
+    "Shape(EF,FC,CE)",
+    "Shape(AB,BC,CF,FA)",
+    "Shape(BA,OAB)",
+    "Shape(EB,OBE)",
+    "Collinear(BOCE)",
+    "Collinear(CFD)",
+    "Collinear(AFE)",
+    "Cocircular(O,ABED)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(BE,O)",
+    "Parallelogram(ABCD)",
+    "Equal(MeasureOfAngle(CDA),54)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BEA))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(DABC)",
+    "diameter_of_circle_property_right_angle(EAB,O)",
+    "triangle_property_angle_sum(EAB)"
+  ]
+}

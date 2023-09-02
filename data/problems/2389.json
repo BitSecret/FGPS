@@ -1,0 +1,25 @@
+{
+  "problem_id": 2389,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2504",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x to the nearest hundredth.",
+  "problem_img": "2389.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CB),15)",
+    "Equal(LengthOfLine(BA),x)",
+    "Equal(MeasureOfAngle(CBA),70)",
+    "PerpendicularBetweenLine(AC,BC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "43.86",
+  "theorem_seqs": [
+    "cosine_theorem(BAC)",
+    "cosine_theorem(CBA)"
+  ]
+}

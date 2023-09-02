@@ -1,0 +1,38 @@
+{
+  "problem_id": 3465,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-1045",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AB,AC的垂直平分线分别交BC于D,E,若∠BAC=110°,则∠DAE的度数为()",
+  "problem_text_en": "As shown in the figure, the perpendicular bisectors of AB and AC in △ABC intersect BC at D and E respectively. If ∠BAC = N_0, then the degree of ∠DAE is ()",
+  "problem_img": "3465.png",
+  "construction_cdl": [
+    "Shape(AM,MD,DA)",
+    "Shape(MB,BD,DM)",
+    "Shape(AD,DE,EA)",
+    "Shape(AE,EN,NA)",
+    "Shape(NE,EC,CN)",
+    "Collinear(AMB)",
+    "Collinear(ANC)",
+    "Collinear(BDEC)"
+  ],
+  "text_cdl": [
+    "IsPerpendicularBisectorOfLine(DM,AB)",
+    "IsPerpendicularBisectorOfLine(EN,AC)",
+    "Equal(MeasureOfAngle(NAM),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EAD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(DM,AB)",
+    "perpendicular_bisector_property_distance_equal(EN,AC)",
+    "isosceles_triangle_judgment_line_equal(DAB)",
+    "isosceles_triangle_judgment_line_equal(ECA)",
+    "isosceles_triangle_property_angle_equal(DAB)",
+    "isosceles_triangle_property_angle_equal(ECA)",
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(EAD,DAM)",
+    "angle_addition(NAE,EAM)"
+  ]
+}

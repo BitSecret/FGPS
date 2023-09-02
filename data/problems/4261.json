@@ -1,0 +1,40 @@
+{
+  "problem_id": 4261,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3049",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C,D是⊙O上两点,若∠D=35°,则∠OCB的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C, D are two points on ⊙O, if ∠D = N_0, then the degree of ∠OCB is ()",
+  "problem_img": "4261.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(AO,OC,CA)",
+    "Shape(OE,EC,CO)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(DE,EA,OAD)",
+    "Shape(BE,ED,DB)",
+    "Shape(BD,ODB)",
+    "Collinear(AOEB)",
+    "Collinear(CED)",
+    "Cocircular(O,CADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(EDB),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCO))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OBC,D)",
+    "arc_property_center_angle(OBC,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(COB)"
+  ]
+}

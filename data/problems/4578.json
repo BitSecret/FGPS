@@ -1,0 +1,33 @@
+{
+  "problem_id": 4578,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3718",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABP的外接圆,半径r=2,∠APB=45°,则弦AB的长为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABP, radius r = N_0, ∠APB = N_1, then the length of chord AB is ()",
+  "problem_img": "4578.png",
+  "construction_cdl": [
+    "Shape(AP,OPA)",
+    "Shape(BA,OAB)",
+    "Shape(PB,OBP)",
+    "Shape(PA,AO,OB,BP)",
+    "Shape(OA,AB,BO)",
+    "Cocircular(O,ABP)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BPA),45)",
+    "Equal(RadiusOfCircle(O),2)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "2*sqrt(2)",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,P)",
+    "arc_property_center_angle(OAB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "right_triangle_judgment_angle(BOA)",
+    "right_triangle_property_pythagorean(BOA)"
+  ]
+}

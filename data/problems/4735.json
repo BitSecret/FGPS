@@ -1,0 +1,40 @@
+{
+  "problem_id": 4735,
+  "annotation": "XiaoxiaoJin_2023-05-14",
+  "source": "GeoQA-4074",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA、PB分别与⊙O相切于点A、B,⊙O的切线EF分别交PA、PB于点E、F,切点C在弧AB上,若PA长为2,则△PEF的周长是()",
+  "problem_text_en": "As shown in the figure, PA and PB are tangent to ⊙O at points A and B respectively, the tangent EF of ⊙O intersects PA and PB at points E and F respectively, and the tangent point C is on the arc AB. If the length of PA is N_0, then the perimeter of △PEF is ()",
+  "problem_img": "4735.png",
+  "construction_cdl": [
+    "Shape(EP,PF,FC,CE)",
+    "Shape(AE,EC,OAC)",
+    "Shape(CF,FB,OCB)",
+    "Collinear(PEA)",
+    "Collinear(PFB)",
+    "Collinear(ECF)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PA),2)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "IsTangentOfCircle(EC,O)",
+    "IsTangentOfCircle(FC,O)",
+    "IsTangentOfCircle(EA,O)",
+    "IsTangentOfCircle(FB,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(EPF))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "tangent_of_circle_property_length_equal(PA,PB,O)",
+    "tangent_of_circle_property_length_equal(EC,EA,O)",
+    "tangent_of_circle_property_length_equal(FC,FB,O)",
+    "line_addition(PE,EA)",
+    "line_addition(PF,FB)",
+    "line_addition(EC,CF)",
+    "triangle_perimeter_formula(EPF)"
+  ]
+}

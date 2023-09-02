@@ -1,0 +1,36 @@
+{
+  "problem_id": 3952,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1878",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C在⊙O上,D是⁀{AB}的中点,若∠ACD=20°,则∠AOB的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are on ⊙O, and D is the midpoint of ⁀AB. If ∠ACD = N_0, then the degree of ∠AOB is ()",
+  "problem_img": "3952.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(OAD,DE,EA)",
+    "Shape(ODB,BO,OD)",
+    "Shape(OE,ED,DO)",
+    "Shape(OBC,CE,EO,OB)",
+    "Shape(CA,AE,EC)",
+    "Collinear(OEA)",
+    "Collinear(CED)",
+    "Cocircular(O,CADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsMidpointOfArc(D,OAB)",
+    "Equal(MeasureOfAngle(DCA),20)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAD,C)",
+    "congruent_arc_judgment_length_equal(OAD,ODB)",
+    "congruent_arc_property_measure_equal(OAD,ODB)",
+    "arc_property_center_angle(OAD,O)",
+    "arc_property_center_angle(ODB,O)",
+    "angle_addition(BOD,DOA)"
+  ]
+}

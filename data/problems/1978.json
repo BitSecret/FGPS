@@ -1,0 +1,35 @@
+{
+  "problem_id": 1978,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2061",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle K.",
+  "problem_img": "1978.png",
+  "construction_cdl": [
+    "Shape(GJ,JK,KG)",
+    "Shape(GKJ,JG,GK)",
+    "Shape(GJK,KJ)",
+    "Shape(GK,KL)",
+    "Cocircular(G,JK)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(G,G)",
+    "Equal(MeasureOfAngle(JGK),194)",
+    "PerpendicularBetweenLine(GK,LK)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(JKL))",
+  "problem_answer": "97",
+  "theorem_seqs": [
+    "round_angle(KGJ,JGK)",
+    "round_angle(GKL,LKG)",
+    "angle_addition(JKG,GKL)",
+    "angle_addition(JKL,LKG)",
+    "radius_of_circle_property_length_equal(GJ,G)",
+    "radius_of_circle_property_length_equal(GK,G)",
+    "isosceles_triangle_judgment_line_equal(GJK)",
+    "isosceles_triangle_property_angle_equal(GJK)",
+    "triangle_property_angle_sum(GJK)"
+  ]
+}

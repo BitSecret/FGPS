@@ -1,0 +1,35 @@
+{
+  "problem_id": 3824,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1689",
+  "problem_level": 1,
+  "problem_text_cn": "以Rt△ABC的直角边AC为直径的⊙O交斜边AB于点D,若∠BAC=30°,则⁀{AD}的度数是()",
+  "problem_text_en": "Taking the leg AC of Rt△ABC as the diameter, ⊙O intersects the hypotenuse AB at point D, if ∠BAC = N_0, then the degree of ⁀AD is ()",
+  "problem_img": "3824.png",
+  "construction_cdl": [
+    "Shape(CO,OA,OAC)",
+    "Shape(DA,AO,OD)",
+    "Shape(AD,ODA)",
+    "Shape(DO,OC,OCD)",
+    "Shape(CB,BD,OCD)",
+    "Collinear(AOC)",
+    "Collinear(ADB)",
+    "Cocircular(O,ACD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "RightTriangle(ACB)",
+    "Equal(MeasureOfAngle(BAC),30)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(ODA))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(DAO)",
+    "arc_property_center_angle(ODA,O)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "problem_id": 4818,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4255",
+  "problem_level": 1,
+  "problem_text_cn": "如图,两个同心圆的半径分别为3cm和5cm,大圆的一条弦AB与小圆相切,则弦AB的长为()",
+  "problem_text_en": "As shown in the figure, the radii of the two concentric circles are N_0 and N_1 respectively, and a chord AB of the great circle is tangent to the small circle, then the length of the chord AB is ()",
+  "problem_img": "4818.png",
+  "construction_cdl": [
+    "Shape(ODC,CO,OD)",
+    "Shape(OCE,EO,OC)",
+    "Shape(DA,AC,ODC)",
+    "Shape(CB,BE,OCE)",
+    "Shape(OAB,BC,CA)",
+    "Shape(OBA,AC,CB)",
+    "Shape(OED,DO,OE)",
+    "Collinear(ADO)",
+    "Collinear(BEO)",
+    "Collinear(ACB)",
+    "Cocircular(O,DCE)",
+    "Cocircular(Z,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsCentreOfCircle(O,Z)",
+    "IsTangentOfCircle(AC,O)",
+    "IsTangentOfCircle(BC,O)",
+    "Equal(RadiusOfCircle(O),3)",
+    "Equal(RadiusOfCircle(Z),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OA,Z)",
+    "radius_of_circle_property_length_equal(OB,Z)",
+    "tangent_of_circle_property_perpendicular(AC,O,O)",
+    "tangent_of_circle_property_perpendicular(BC,O,O)",
+    "right_triangle_judgment_angle(ACO)",
+    "right_triangle_judgment_angle(OCB)",
+    "right_triangle_property_pythagorean(ACO)",
+    "right_triangle_property_pythagorean(OCB)",
+    "line_addition(AC,CB)"
+  ]
+}

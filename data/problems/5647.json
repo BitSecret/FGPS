@@ -1,0 +1,29 @@
+{
+  "problem_id": 5647,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7302",
+  "problem_level": 1,
+  "problem_text_cn": "如图,长4m的楼梯AB的倾斜角∠ABD为60°,为了改善楼梯的安全性能,准备重新建造楼梯,使其倾斜角∠ACD为45°,则调整后的楼梯AC的长为()",
+  "problem_text_en": "As shown in the figure, the inclination angle ∠ABD of the stairs AB with the length N_0 is N_1. In order to improve the safety performance of the stairs, the stairs are prepared to be rebuilt so that the inclination angle ∠ACD is N_2, then the length of the adjusted stairs AC is ()",
+  "problem_img": "5647.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)",
+    "Shape(AB,BD,DA)",
+    "Collinear(CBD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(MeasureOfAngle(ABD),60)",
+    "Equal(MeasureOfAngle(ACD),45)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "2*sqrt(6)",
+  "theorem_seqs": [
+    "sine_theorem(ACB)",
+    "sine_theorem(CBA)",
+    "sine_theorem(BAC)",
+    "sine_theorem(ABD)",
+    "sine_theorem(ACD)"
+  ]
+}

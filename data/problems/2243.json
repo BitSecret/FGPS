@@ -1,0 +1,33 @@
+{
+  "problem_id": 2243,
+  "annotation": "DengfengYue_2023-04-16",
+  "source": "Geometry3k-2342",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use rectangle L M N P, parallelogram L K M J to solve the problem. If M K = 6 x, K L = 3 x + 2 y, and J N = 14 - x, find x.",
+  "problem_img": "2243.png",
+  "construction_cdl": [
+    "Shape(PN,NJ,JP)",
+    "Shape(NM,MJ,JN)",
+    "Shape(JM,ML,LJ)",
+    "Shape(PJ,JL,LP)",
+    "Shape(LM,MK,KL)",
+    "Collinear(PJM)",
+    "Collinear(LJN)"
+  ],
+  "text_cdl": [
+    "Rectangle(PNML)",
+    "Parallelogram(LJMK)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(MK),6*x)",
+    "Equal(LengthOfLine(KL),3*x+2*y)",
+    "Equal(LengthOfLine(JN),14-x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(NMLP,J)",
+    "parallelogram_property_opposite_line_equal(LJMK)"
+  ]
+}

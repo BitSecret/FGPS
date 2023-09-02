@@ -1,0 +1,29 @@
+{
+  "problem_id": 135,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-137",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the parallelogram.",
+  "problem_img": "135.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DB,BC)",
+    "Shape(BD,DE,EB)",
+    "Collinear(ADE)"
+  ],
+  "text_cdl": [
+    "Parallelogram(CADB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(EB),20)",
+    "Equal(LengthOfLine(AC),25)",
+    "Equal(LengthOfLine(AD),21)",
+    "PerpendicularBetweenLine(DE,BE)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CADB))",
+  "problem_answer": "420",
+  "theorem_seqs": [
+    "altitude_of_quadrilateral_judgment_right_vertex(BE,CADB)",
+    "parallelogram_area_formula_common(CADB)"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "problem_id": 6310,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-9090",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在矩形ABCD中,AB=2,BC=3,AE是∠BAD的平分线,EF⊥AE,则AF的长为()",
+  "problem_text_en": "As shown in the figure, in the rectangle ABCD, AB = N_0, BC = N_1, AE is the bisector of ∠BAD, EF ⊥ AE, then the length of AF is ()",
+  "problem_img": "6310.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EF,FA)",
+    "Shape(AF,FD,DA)",
+    "Shape(FE,EC,CF)",
+    "Collinear(DFC)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Rectangle(ABCD)",
+    "IsBisectorOfAngle(AE,DAB)",
+    "Equal(LengthOfLine(AB),2)",
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(MeasureOfAngle(AEF),90)",
+    "Equal(MeasureOfAngle(FEC),45)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AF))",
+  "problem_answer": "sqrt(10)",
+  "theorem_seqs": [
+    "line_addition(DF,FC)",
+    "line_addition(BE,EC)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "triangle_property_angle_sum(FEC)",
+    "isosceles_triangle_judgment_angle_equal(CFE)",
+    "right_triangle_judgment_angle(ABE)",
+    "right_triangle_judgment_angle(AEF)",
+    "right_triangle_judgment_angle(FDA)",
+    "right_triangle_judgment_angle(ECF)",
+    "right_triangle_property_pythagorean(ABE)",
+    "right_triangle_property_pythagorean(AEF)",
+    "right_triangle_property_pythagorean(FDA)",
+    "right_triangle_property_pythagorean(ECF)"
+  ]
+}

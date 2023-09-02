@@ -1,0 +1,27 @@
+{
+  "problem_id": 670,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-687",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "670.png",
+  "construction_cdl": [
+    "Shape(BC,HJC,JB)",
+    "Shape(HJC,HCE,EJ)",
+    "Shape(JE,HEJ)",
+    "Collinear(EJB)",
+    "Cocircular(H,CEJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(EBC),3)",
+    "Equal(MeasureOfArc(HCE),5*x-6)",
+    "Equal(MeasureOfArc(HJC),4*x+8)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "circle_property_circular_power_tangent_and_segment_angle(BC,BJE,H)"
+  ]
+}

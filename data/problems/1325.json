@@ -1,0 +1,39 @@
+{
+  "problem_id": 1325,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-1373",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot X, A B = 30, C D = 30, and m \\widehat C Z = 40. Find A M.",
+  "problem_img": "1325.png",
+  "construction_cdl": [
+    "Shape(XYA,AM,MY)",
+    "Shape(XAC,CN,NX,XM,MA)",
+    "Shape(XCZ,ZN,NC)",
+    "Shape(XZD,DN,NZ)",
+    "Shape(XDB,BM,MX,XN,ND)",
+    "Shape(XBY,YM,MB)",
+    "Collinear(AMB)",
+    "Collinear(YMX)",
+    "Collinear(CND)",
+    "Collinear(XNZ)",
+    "Cocircular(X,ACZDBY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(X,X)",
+    "Equal(LengthOfLine(AB),30)",
+    "Equal(LengthOfLine(CD),30)",
+    "Equal(MeasureOfArc(XCZ),40)",
+    "PerpendicularBetweenLine(AM,YM)",
+    "PerpendicularBetweenLine(DN,ZN)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AM))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AMY,YMB)",
+    "adjacent_complementary_angle(YMB,BMX)",
+    "line_addition(AM,MB)",
+    "circle_property_chord_perpendicular_bisect_chord(X,XM,BA)"
+  ]
+}

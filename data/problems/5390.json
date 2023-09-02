@@ -1,0 +1,33 @@
+{
+  "problem_id": 5390,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5678",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CD,∠A=70°,OC=OE,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, AB ∥ CD, ∠A = N_0, OC = OE, then the degree of ∠C is ()",
+  "problem_img": "5390.png",
+  "construction_cdl": [
+    "Shape(BA,AO)",
+    "Shape(AO,OD)",
+    "Shape(DO,OE)",
+    "Shape(EO,OC,CE)",
+    "Shape(CO,OA)",
+    "Collinear(AOE)",
+    "Collinear(DOC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OC),LengthOfLine(OE))",
+    "Equal(MeasureOfAngle(BAO),70)",
+    "ParallelBetweenLine(AB,OD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OCE))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(AB,OD,E)",
+    "adjacent_complementary_angle(DOE,EOC)",
+    "isosceles_triangle_judgment_line_equal(OCE)",
+    "isosceles_triangle_property_angle_equal(OCE)",
+    "triangle_property_angle_sum(EOC)"
+  ]
+}

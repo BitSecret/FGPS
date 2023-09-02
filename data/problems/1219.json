@@ -1,0 +1,37 @@
+{
+  "problem_id": 1219,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-1259",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of \\triangle C B H, if \\triangle C B H \\sim \\triangle F E H, A D E G is a parallelogram, C H = 7, F H = 10, F E = 11, and E H = 6.",
+  "problem_img": "1219.png",
+  "construction_cdl": [
+    "Shape(CD,DE,EH,HC)",
+    "Shape(HE,EF,FH)",
+    "Shape(CH,HB,BC)",
+    "Shape(HF,FB,BH)",
+    "Shape(FG,GA,AB,BF)",
+    "Collinear(CHF)",
+    "Collinear(BHE)",
+    "Collinear(ABCD)",
+    "Collinear(EFG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenTriangle(CHB,FHE)",
+    "Parallelogram(ADEG)",
+    "Equal(LengthOfLine(CH),7)",
+    "Equal(LengthOfLine(FH),10)",
+    "Equal(LengthOfLine(EF),11)",
+    "Equal(LengthOfLine(HE),6)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(CHB))",
+  "problem_answer": "18.9",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(CHB,FHE)",
+    "similar_triangle_property_line_ratio(HBC,HEF)",
+    "similar_triangle_property_line_ratio(BCH,EFH)",
+    "triangle_perimeter_formula(CHB)"
+  ]
+}

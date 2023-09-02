@@ -1,0 +1,35 @@
+{
+  "problem_id": 4620,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3797",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,且∠OBC=40°,则∠A的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed in ⊙O, and ∠OBC = N_0, then the degree of ∠A is ()",
+  "problem_img": "4620.png",
+  "construction_cdl": [
+    "Shape(OC,OCA,AD,DO)",
+    "Shape(CO,OD,DC)",
+    "Shape(DA,AB,BD)",
+    "Shape(DB,BC,CD)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Collinear(ODB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OBC),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "sine_theorem(OBC)",
+    "triangle_property_angle_sum(OBC)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

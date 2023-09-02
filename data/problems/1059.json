@@ -1,0 +1,43 @@
+{
+  "problem_id": 1059,
+  "annotation": "QikeHuang_2023-04-09",
+  "source": "Geometry3k-1093",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot K, M N = 16 and m \\widehat M N = 98. Find the measure of m \\widehat N J. Round to the nearest hundredth.",
+  "problem_img": "1059.png",
+  "construction_cdl": [
+    "Shape(KJM,MK,KJ)",
+    "Shape(KM,MP,PK)",
+    "Shape(JK,KN,KNJ)",
+    "Shape(KP,PN,NK)",
+    "Shape(KML,LP,PM)",
+    "Shape(KLN,NP,PL)",
+    "Collinear(LPKJ)",
+    "Collinear(MPN)",
+    "Cocircular(K,JMLN)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(MN),16)",
+    "Equal(MeasureOfArc(KMN),98)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(K,K)",
+    "Equal(LengthOfLine(JK),10)",
+    "PerpendicularBetweenLine(MP,KP)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(KNJ))",
+  "problem_answer": "131.00",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(KJ,K)",
+    "radius_of_circle_property_length_equal(KM,K)",
+    "radius_of_circle_property_length_equal(KN,K)",
+    "arc_property_center_angle(KNJ,K)",
+    "arc_property_center_angle(KML,K)",
+    "arc_property_center_angle(KMN,K)",
+    "perpendicular_bisector_judgment_distance_equal(KP,MN)",
+    "perpendicular_bisector_property_bisector(KP,MN)",
+    "angle_addition(NKP,PKM)",
+    "adjacent_complementary_angle(JKN,NKL)"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "problem_id": 4739,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4079",
+  "problem_level": 1,
+  "problem_text_cn": "把直尺、三角尺和圆形螺母按如图所示放置于桌面上,∠CAB=60°,若量出AD=6cm,则圆形螺母的外直径是()",
+  "problem_text_en": "Put the ruler, the triangle ruler and the round nut on the desktop as shown in the figure, ∠CAB = N_0, if AD = N_1, then the outer diameter of the round nut is ()",
+  "problem_img": "4739.png",
+  "construction_cdl": [
+    "Shape(BE,EA,AC,CB)",
+    "Shape(DO,OE,OED)",
+    "Shape(FA,AE,OFE)",
+    "Shape(DA,AF,ODF)",
+    "Shape(EO,OF,OFE)",
+    "Shape(FO,OD,ODF)",
+    "Collinear(OFA)",
+    "Collinear(DAC)",
+    "Collinear(BEA)",
+    "Cocircular(O,DFE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),6)",
+    "Equal(MeasureOfAngle(EAC),60)",
+    "RightTriangle(BAC)",
+    "IsTangentOfCircle(AD,O)",
+    "IsTangentOfCircle(AE,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DAF),MeasureOfAngle(FAE))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OD))",
+  "problem_answer": "10.392304845413264",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AD,O,O)",
+    "angle_addition(DAE,EAC)",
+    "flat_angle(DAC)",
+    "angle_addition(DAO,OAE)",
+    "triangle_property_angle_sum(ODA)",
+    "sine_theorem(DAO)"
+  ]
+}

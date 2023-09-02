@@ -1,0 +1,30 @@
+{
+  "problem_id": 1542,
+  "annotation": "QikeHuang_2023-04-09",
+  "source": "Geometry3k-1601",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the area of the triangle? Round your answer to the nearest tenth if necessary.",
+  "problem_img": "1542.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(DB,BC,CD)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),17)",
+    "Equal(LengthOfLine(DC),15)",
+    "Equal(MeasureOfAngle(ABC),48)",
+    "PerpendicularBetweenLine(CD,BD)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(ABC))",
+  "problem_answer": "161.3",
+  "theorem_seqs": [
+    "sine_theorem(CDB)",
+    "sine_theorem(CAB)",
+    "sine_theorem(ABC)",
+    "cosine_theorem(ABC)",
+    "triangle_area_formula_sine(CAB)"
+  ]
+}

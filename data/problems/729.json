@@ -1,0 +1,32 @@
+{
+  "problem_id": 729,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-754",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of the altitude drawn to the hypotenuse.",
+  "problem_img": "729.png",
+  "construction_cdl": [
+    "Shape(FE,EH,HF)",
+    "Shape(HE,EG,GH)",
+    "Collinear(FHG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(FH),12)",
+    "Equal(LengthOfLine(GH),12)",
+    "PerpendicularBetweenLine(GH,EH)",
+    "PerpendicularBetweenLine(FE,GE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(EH))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "mirror_similar_triangle_judgment_aa(EGH,FEG)",
+    "line_addition(FH,HG)",
+    "right_triangle_judgment_angle(GHE)",
+    "right_triangle_property_pythagorean(GHE)",
+    "mirror_similar_triangle_property_line_ratio(EGH,FEG)",
+    "mirror_similar_triangle_property_line_ratio(GHE,GFE)",
+    "mirror_similar_triangle_property_line_ratio(HEG,EGF)"
+  ]
+}

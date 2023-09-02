@@ -1,0 +1,41 @@
+{
+  "problem_id": 4694,
+  "annotation": "XiaoxiaoJin_2023-05-14",
+  "source": "GeoQA-3991",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,PA切⊙O于点A,连接PO并延长交⊙O于点C,连结AC,∠P=30°,则∠C的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, PA is tangent to ⊙O at point A, connects PO and extends to intersect ⊙O at point C. Connect AC, ∠P = N_0, then the degree of ∠C is ()",
+  "problem_img": "4694.png",
+  "construction_cdl": [
+    "Shape(CO,OB,OBC)",
+    "Shape(OC,CA,AO)",
+    "Shape(AC,OCA)",
+    "Shape(BO,OD,ODB)",
+    "Shape(DO,OA,OAD)",
+    "Shape(AP,PD,OAD)",
+    "Collinear(AOB)",
+    "Collinear(CODP)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "Equal(MeasureOfAngle(APO),30)",
+    "IsTangentOfCircle(PA,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OCA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "triangle_property_angle_sum(OCA)",
+    "triangle_property_angle_sum(OAP)",
+    "triangle_property_angle_sum(CAP)",
+    "adjacent_complementary_angle(DOA,AOC)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)"
+  ]
+}

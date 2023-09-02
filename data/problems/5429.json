@@ -1,0 +1,46 @@
+{
+  "problem_id": 5429,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5749",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,AB=18,AD=12,∠ABC的平分线交CD于点F,交AD的延长线于点E,CG⊥BE,垂足为G,若EF=4,则线段CG的长为()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, AB = N_0, AD = N_1, ∠ABC's bisector intersects CD at point F, and intersects the extended line of AD at point E, CG ⊥ BE, and the vertical foot is G. If EF = N_2, Then the length of the line segment CG is ()",
+  "problem_img": "5429.png",
+  "construction_cdl": [
+    "Shape(ED,DF,FE)",
+    "Shape(EF,FC)",
+    "Shape(DA,AB,BG,GF,FD)",
+    "Shape(FG,GC,CF)",
+    "Shape(CG,GB,BC)",
+    "Collinear(DFC)",
+    "Collinear(ADE)",
+    "Collinear(EFGB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),18)",
+    "Equal(LengthOfLine(AD),12)",
+    "Equal(LengthOfLine(EF),4)",
+    "IsBisectorOfAngle(BE,ABC)",
+    "PerpendicularBetweenLine(FG,CG)",
+    "Parallelogram(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CG))",
+  "problem_answer": "8*sqrt(2)",
+  "theorem_seqs": [
+    "line_addition(DF,FC)",
+    "line_addition(FG,GB)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallel_property_collinear_extend(AD,BC,E)",
+    "parallel_property_collinear_extend(DC,AB,F)",
+    "parallel_property_alternate_interior_angle(DE,BC)",
+    "parallel_property_alternate_interior_angle(FC,AB)",
+    "isosceles_triangle_judgment_angle_equal(CFB)",
+    "perpendicular_bisector_judgment_distance_equal(CG,FB)",
+    "similar_triangle_judgment_aa(FED,FBC)",
+    "similar_triangle_property_line_ratio(EDF,BCF)",
+    "similar_triangle_property_line_ratio(DFE,CFB)",
+    "cosine_theorem(GCF)"
+  ]
+}

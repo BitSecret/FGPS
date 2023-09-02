@@ -1,0 +1,38 @@
+{
+  "problem_id": 1640,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1701",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the figure in feet. Round to the nearest tenth, if necessary.",
+  "problem_img": "1640.png",
+  "construction_cdl": [
+    "Shape(LA,AP,PL)",
+    "Shape(LP,PB,BL)",
+    "Shape(AT,TP,PA)",
+    "Shape(BP,PT,TB)",
+    "Collinear(APB)",
+    "Collinear(LPT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(LA),6)",
+    "Equal(LengthOfLine(LB),3*sqrt(2))",
+    "Equal(LengthOfLine(LP),LengthOfLine(PT))",
+    "Equal(LengthOfLine(PT),LengthOfLine(PB))",
+    "Equal(LengthOfLine(LP),LengthOfLine(PB))",
+    "PerpendicularBetweenLine(LP,BP)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ATBL))",
+  "problem_answer": "20.48",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(APL,LPB)",
+    "adjacent_complementary_angle(LPB,BPT)",
+    "adjacent_complementary_angle(TPA,APL)",
+    "mirror_congruent_triangle_judgment_sas(PBL,PTB)",
+    "mirror_congruent_triangle_judgment_sas(PLA,PAT)",
+    "mirror_congruent_triangle_property_line_equal(PBL,PTB)",
+    "mirror_congruent_triangle_property_line_equal(PLA,PAT)",
+    "quadrilateral_perimeter_formula(ATBL)"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "problem_id": 5544,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6754",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙A,⊙B,⊙C两两不相交,且半径均为0.5,则图中三个阴影部分的面积之和为()",
+  "problem_text_en": "As shown in the figure, ⊙A, ⊙B, and ⊙C do not intersect each other, and the radii are all N_0, then the sum of the area of ​​the three shaded parts in the figure is ()",
+  "problem_img": "5544.png",
+  "construction_cdl": [
+    "Shape(CD,CDE,EC)",
+    "Shape(DF,AGF,GH,BIH,IE,CDE)",
+    "Shape(FA,AG,AGF)",
+    "Shape(BI,BIH,HB)",
+    "Collinear(AFDC)",
+    "Collinear(AGHB)",
+    "Collinear(CEIB)",
+    "Cocircular(C,DE)",
+    "Cocircular(A,GF)",
+    "Cocircular(B,IH)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(C,C)",
+    "IsCentreOfCircle(A,A)",
+    "IsCentreOfCircle(B,B)",
+    "Equal(RadiusOfCircle(A),0.5)",
+    "Equal(RadiusOfCircle(B),0.5)",
+    "Equal(RadiusOfCircle(C),0.5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(AreaOfSector(CDE),AreaOfSector(AGF),AreaOfSector(BIH)))",
+  "problem_answer": "pi/8",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CAB)",
+    "arc_property_center_angle(CDE,C)",
+    "arc_property_center_angle(AGF,A)",
+    "arc_property_center_angle(BIH,B)",
+    "sector_area_formula(CDE)",
+    "sector_area_formula(AGF)",
+    "sector_area_formula(BIH)"
+  ]
+}

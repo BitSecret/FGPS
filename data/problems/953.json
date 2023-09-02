@@ -1,0 +1,40 @@
+{
+  "problem_id": 953,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-982",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Segments A D and C E are medians of \\triangle A C B, A D \\perp C E, A B = 10, and C E = 9. Find C A.",
+  "problem_img": "953.png",
+  "construction_cdl": [
+    "Shape(AC,CF,FA)",
+    "Shape(FC,CD,DF)",
+    "Shape(AF,FE,EA)",
+    "Shape(EF,FD,DB,BE)",
+    "Collinear(AEB)",
+    "Collinear(CDB)",
+    "Collinear(AFD)",
+    "Collinear(CFE)"
+  ],
+  "text_cdl": [
+    "IsMedianOfTriangle(AD,ACB)",
+    "IsMedianOfTriangle(CE,CBA)",
+    "PerpendicularBetweenLine(AF,EF)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(LengthOfLine(CE),9)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CA))",
+  "problem_answer": "sqrt(52)",
+  "theorem_seqs": [
+    "line_addition(AE,EB)",
+    "centroid_of_triangle_judgment_intersection(F,BAC,E,D)",
+    "centroid_of_triangle_property_line_ratio(F,CBA,E)",
+    "line_addition(CF,FE)",
+    "right_triangle_judgment_angle(AFE)",
+    "right_triangle_property_pythagorean(AFE)",
+    "adjacent_complementary_angle(CFA,AFE)",
+    "right_triangle_judgment_angle(CFA)",
+    "right_triangle_property_pythagorean(CFA)"
+  ]
+}

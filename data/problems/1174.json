@@ -1,0 +1,34 @@
+{
+  "problem_id": 1174,
+  "annotation": "ChenyangMao_2023-04-09",
+  "source": "Geometry3k-1214",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 1 = 123. Find the measure of \\angle 11.",
+  "problem_img": "1174.png",
+  "construction_cdl": [
+    "Shape(GK,KF)",
+    "Shape(HU,NU)",
+    "Shape(JA,AM)",
+    "Shape(EQ,QI)",
+    "Shape(KU,UQ,QA,AK)",
+    "Collinear(GKAM)",
+    "Collinear(NUQE)",
+    "Collinear(FKUH)",
+    "Collinear(JAQI)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(HUN),123)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(KA,UQ)",
+    "ParallelBetweenLine(UK,QA)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(QAK))",
+  "problem_answer": "123",
+  "theorem_seqs": [
+    "vertical_angle(HUN,KUQ)",
+    "parallelogram_judgment_parallel_and_parallel(UQAK)",
+    "parallelogram_property_opposite_angle_equal(UQAK)"
+  ]
+}

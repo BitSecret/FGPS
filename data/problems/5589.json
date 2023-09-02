@@ -1,0 +1,25 @@
+{
+  "problem_id": 5589,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7109",
+  "problem_level": 1,
+  "problem_text_cn": "如图,锐角α的顶点在原点,始边在x轴的正半轴上,终边上一点P的坐标为(2,3),那么tanα的值等于()",
+  "problem_text_en": "As shown in the figure, the vertex of the atangente angle α is at the origin, the starting edge is on the positive semi-axis of the x-axis, and the coordinate of a point P on the end edge is (N_0,N_1), then the value of tanα is equal to ()",
+  "problem_img": "5589.png",
+  "construction_cdl": [
+    "Shape(OA,AP,PO)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OA),2)",
+    "Equal(LengthOfLine(AP),3)",
+    "Equal(MeasureOfAngle(OAP),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Tan(MeasureOfAngle(POA)))",
+  "problem_answer": "3/2",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(OAP)",
+    "right_triangle_property_pythagorean(OAP)",
+    "sine_theorem(POA)"
+  ]
+}

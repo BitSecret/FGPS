@@ -1,0 +1,26 @@
+{
+  "problem_id": 3262,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-567",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠A=66°,点I是内心,则∠BIC的大小为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠A = N_0, point I is the heart, then the size of ∠BIC is ()",
+  "problem_img": "3262.png",
+  "construction_cdl": [
+    "Shape(AB,BI,IC,CA)",
+    "Shape(IB,BC,CI)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),66)",
+    "IsIncenterOfTriangle(I,ABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CIB))",
+  "problem_answer": "123",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(ABI,IBC)",
+    "angle_addition(BCI,ICA)",
+    "triangle_property_angle_sum(IBC)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 6705,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9739",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C是半径为1的⊙O上的三点,已知∠C=30°,则弦AB的长为()",
+  "problem_text_en": "As shown in the figure, A, B, and C are three points on ⊙O with a radius of N_0. Given that ∠C = N_1, the length of chord AB is ()",
+  "problem_img": "6705.png",
+  "construction_cdl": [
+    "Shape(OA,AD,DO)",
+    "Shape(DA,AB,BD)",
+    "Shape(CD,DB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Shape(AO,OD,DC,OCA)",
+    "Collinear(ODB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCA),30)",
+    "Equal(RadiusOfCircle(O),1)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "cosine_theorem(OAB)"
+  ]
+}

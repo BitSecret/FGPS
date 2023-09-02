@@ -1,0 +1,38 @@
+{
+  "problem_id": 275,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-278",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the length of line DC if line DG and line JM are altitudes and triangle KLJ is similar to triangle ECD.",
+  "problem_img": "275.png",
+  "construction_cdl": [
+    "Shape(JK,KM,MJ)",
+    "Shape(JM,ML,LJ)",
+    "Shape(DE,EG,GD)",
+    "Shape(DG,GC,CD)",
+    "Collinear(KML)",
+    "Collinear(EGC)"
+  ],
+  "text_cdl": [
+    "IsAltitudeOfTriangle(DG,EDC)",
+    "IsAltitudeOfTriangle(JM,KJL)",
+    "SimilarBetweenTriangle(KLJ,ECD)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(JL),4)",
+    "Equal(LengthOfLine(JM),x)",
+    "PerpendicularBetweenLine(JM,LM)",
+    "Equal(LengthOfLine(DC),6-x)",
+    "Equal(LengthOfLine(DG),2)",
+    "PerpendicularBetweenLine(DG,CG)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(DC))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "similar_triangle_property_angle_equal(LJK,CDE)",
+    "similar_triangle_judgment_aa(JML,DGC)",
+    "similar_triangle_property_line_ratio(LJM,CDG)",
+    "similar_triangle_property_line_ratio(MLJ,GCD)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 2727,
+  "annotation": "ZheZhu_2023-04-23",
+  "source": "Geometry3k-2872",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of m \\angle 1.",
+  "problem_img": "2727.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BC,CA)",
+    "Shape(ACD,DA,AC)",
+    "Shape(ADB,BD)",
+    "Shape(ABC,CB)",
+    "Cocircular(A,DBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(MeasureOfAngle(DAC),218)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DBC))",
+  "problem_answer": "109",
+  "theorem_seqs": [
+    "arc_property_center_angle(ACD,A)",
+    "arc_property_circumference_angle_external(ACD,B)"
+  ]
+}

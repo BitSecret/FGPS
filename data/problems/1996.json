@@ -1,0 +1,32 @@
+{
+  "problem_id": 1996,
+  "annotation": "YimingHe_2023-03-26",
+  "source": "Geometry3k-2080",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1996.png",
+  "construction_cdl": [
+    "Shape(CA,AE,EC)",
+    "Shape(EA,AF,FD,DE)",
+    "Collinear(CAF)",
+    "Collinear(CED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),3*x+2)",
+    "Equal(LengthOfLine(AF),4*x-6)",
+    "Equal(LengthOfLine(EC),LengthOfLine(ED))",
+    "PerpendicularBetweenLine(CA,EA)",
+    "PerpendicularBetweenLine(AF,DF)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "similar_triangle_judgment_aa(ECA,DCF)",
+    "line_addition(CE,ED)",
+    "line_addition(CA,AF)",
+    "similar_triangle_property_line_ratio(ECA,DCF)",
+    "similar_triangle_property_line_ratio(AEC,FDC)"
+  ]
+}

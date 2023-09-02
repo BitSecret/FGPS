@@ -1,0 +1,40 @@
+{
+  "problem_id": 4875,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4390",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA、PB是⊙O的切线,切点为A、B,若∠OAB=30°,则∠P的度数为()",
+  "problem_text_en": "As shown in the figure, PA and PB are the tangents of ⊙O, and the tangent points are A and B. If ∠OAB = N_0, then the degree of ∠P is ()",
+  "problem_img": "4875.png",
+  "construction_cdl": [
+    "Shape(BO,OA,OAB)",
+    "Shape(AO,OC,CA)",
+    "Shape(CO,OB,BC)",
+    "Shape(AC,CD,ODA)",
+    "Shape(DC,CB,OBD)",
+    "Shape(DP,PA,ODA)",
+    "Shape(BP,PD,OBD)",
+    "Collinear(ACB)",
+    "Collinear(OCDP)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(MeasureOfAngle(BAO),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BPA))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBA)",
+    "isosceles_triangle_property_angle_equal(OBA)",
+    "triangle_property_angle_sum(AOB)",
+    "quadrilateral_property_angle_sum(PAOB)"
+  ]
+}

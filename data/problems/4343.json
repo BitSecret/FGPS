@@ -1,0 +1,41 @@
+{
+  "problem_id": 4343,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3232",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB和CD是⊙O的两条直径,弦DE∥AB,若弧DE为40°的弧,则∠BOC=()",
+  "problem_text_en": "As shown in the figure, AB and CD are the two diameters of ⊙O, the chord DE ∥ AB, if the arc DE is the arc of N_0, then ∠BOC = ()",
+  "problem_img": "4343.png",
+  "construction_cdl": [
+    "Shape(OA,OAC,CO)",
+    "Shape(OC,OCB,BO)",
+    "Shape(AO,OE,OEA)",
+    "Shape(EO,OD,DE)",
+    "Shape(ODE,ED)",
+    "Shape(OB,OBD,DO)",
+    "Collinear(AOB)",
+    "Collinear(COD)",
+    "Cocircular(O,ACBDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "ParallelBetweenLine(BA,DE)",
+    "Equal(MeasureOfAngle(EOD),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOC))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "isosceles_triangle_judgment_line_equal(ODE)",
+    "isosceles_triangle_property_angle_equal(ODE)",
+    "triangle_property_angle_sum(EOD)",
+    "parallel_property_collinear_extend(BA,DE,O)",
+    "parallel_property_corresponding_angle(OA,DE,C)",
+    "flat_angle(BOA)",
+    "angle_addition(BOC,COA)"
+  ]
+}

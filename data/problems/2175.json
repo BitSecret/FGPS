@@ -1,0 +1,41 @@
+{
+  "problem_id": 2175,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-2271",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Point S is the incenter of \\triangle J P L. Find Q J.",
+  "problem_img": "2175.png",
+  "construction_cdl": [
+    "Shape(JQ,QS,SJ)",
+    "Shape(JS,SK,KJ)",
+    "Shape(SQ,QP,PS)",
+    "Shape(SP,PM,MS)",
+    "Shape(SM,ML,LS)",
+    "Shape(KS,SL,LK)",
+    "Collinear(JQP)",
+    "Collinear(JKL)",
+    "Collinear(QSL)",
+    "Collinear(KSP)",
+    "Collinear(PML)",
+    "Collinear(JSM)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsIncenterOfTriangle(S,JPL)",
+    "Equal(LengthOfLine(JK),8)",
+    "Equal(LengthOfLine(JS),10)",
+    "Equal(MeasureOfAngle(SLK),24.5)",
+    "Equal(MeasureOfAngle(KPL),28)",
+    "PerpendicularBetweenLine(SK,JK)",
+    "PerpendicularBetweenLine(SQ,PQ)",
+    "PerpendicularBetweenLine(PM,SM)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(QJ))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(JQS,SQP)",
+    "mirror_congruent_triangle_judgment_aas(SJQ,SKJ)",
+    "mirror_congruent_triangle_property_line_equal(SJQ,SKJ)"
+  ]
+}

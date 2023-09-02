@@ -1,0 +1,26 @@
+{
+  "problem_id": 4,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-3",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle Z in the trapezoid X Y Z W.",
+  "problem_img": "4.png",
+  "construction_cdl": [
+    "Shape(WX,XY,YZ,ZW)"
+  ],
+  "text_cdl": [
+    "Trapezoid(XYZW)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(WZ),23)",
+    "Equal(MeasureOfAngle(ZWX),112)",
+    "Equal(LengthOfLine(XY),23)",
+    "ParallelBetweenLine(XW,YZ)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(YZW))",
+  "problem_answer": "68",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(ZY,WX)"
+  ]
+}

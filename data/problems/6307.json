@@ -1,0 +1,36 @@
+{
+  "problem_id": 6307,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-9080",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在矩形ABCD中,AB=4,BC=2,P是矩形上方一个动点．且满足∠APB=90°,连接DP,则DP的最大值是()",
+  "problem_text_en": "As shown in the figure, in the rectangle ABCD, AB = N_0, BC = N_1, and P is a moving point above the rectangle. And satisfies ∠APB = N_2, connected to DP, then the maximum value of DP is ()",
+  "problem_img": "6307.png",
+  "construction_cdl": [
+    "Shape(OA,AD,DO)",
+    "Shape(AO,OP,PA)",
+    "Shape(PO,OB,BP)",
+    "Shape(OD,DC,CB,BO)",
+    "Collinear(AOB)",
+    "Collinear(POD)"
+  ],
+  "text_cdl": [
+    "Rectangle(ADCB)",
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(LengthOfLine(OA),2)",
+    "Equal(LengthOfLine(OB),2)",
+    "Equal(LengthOfLine(AD),2)",
+    "IsMedianOfTriangle(PO,PAB)",
+    "Equal(MeasureOfAngle(BPA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DP))",
+  "problem_answer": "2*sqrt(2)+2",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(OAD)",
+    "right_triangle_judgment_angle(BPA)",
+    "right_triangle_property_pythagorean(OAD)",
+    "right_triangle_property_length_of_median(BPA,O)",
+    "line_addition(PO,OD)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 6322,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9119",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,∠BAD=120°,对角线AC的长为3,则菱形ABCD的周长为()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, ∠BAD = N_0, the length of the diagonal AC is N_1, then the perimeter of the diamond ABCD is ()",
+  "problem_img": "6322.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(DAB),120)",
+    "Equal(LengthOfLine(AC),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "isosceles_triangle_judgment_line_equal(BCA)",
+    "isosceles_triangle_property_angle_equal(BCA)",
+    "angle_addition(DAC,CAB)",
+    "triangle_property_angle_sum(ABC)",
+    "isosceles_triangle_judgment_angle_equal(CAB)",
+    "quadrilateral_perimeter_formula(ABCD)"
+  ]
+}

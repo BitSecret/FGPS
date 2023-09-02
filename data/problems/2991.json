@@ -1,0 +1,34 @@
+{
+  "problem_id": 2991,
+  "annotation": "NaZhu_2023-04-16",
+  "source": "GeoQA-193",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB∥CD,直线EF分别交AB、CD于点E、F,EG平分∠BEF交CD于点G,如果∠1=50°,则∠2的度数是()",
+  "problem_text_en": "As shown in the figure, given that AB ∥ CD, the straight line EF intersects AB and CD at points E and F respectively, and EG bisects ∠BEF intersects CD at point G. If ∠1 = N_0, then the degree of ∠2 is () ",
+  "problem_img": "2991.png",
+  "construction_cdl": [
+    "Shape(EF,FG,GE)",
+    "Shape(FE,EA)",
+    "Shape(BE,EG)",
+    "Shape(BE,EF)",
+    "Shape(CF,FE)",
+    "Shape(EG,GD)",
+    "Collinear(AEB)",
+    "Collinear(CFGD)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "IsBisectorOfAngle(EG,BEF)",
+    "Equal(MeasureOfAngle(EFG),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FGE))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(DC,BA,F)",
+    "parallel_property_collinear_extend(AB,FD,E)",
+    "parallel_property_ipsilateral_internal_angle(EB,FD)",
+    "angle_addition(BEG,GEF)",
+    "triangle_property_angle_sum(EFG)"
+  ]
+}

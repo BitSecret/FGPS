@@ -1,0 +1,26 @@
+{
+  "problem_id": 2339,
+  "annotation": "FangzhenZhu_2023-04-23",
+  "source": "Geometry3k-2453",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The diagonals of rhombus F G H J intersect at K. If G H = x + 9 and J H = 5 x - 2, find x.",
+  "problem_img": "2339.png",
+  "construction_cdl": [
+    "Shape(GF,FK,KG)",
+    "Shape(GK,KH,HG)",
+    "Shape(FJ,JK,KF)",
+    "Shape(KJ,JH,HK)",
+    "Collinear(FKH)",
+    "Collinear(JKG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rhombus(FJHG)",
+    "Equal(LengthOfLine(GH),x+9)",
+    "Equal(LengthOfLine(JH),5*x-2)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "2.75",
+  "theorem_seqs": []
+}

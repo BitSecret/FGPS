@@ -1,0 +1,33 @@
+{
+  "problem_id": 2331,
+  "annotation": "ChenyangMao_2023-04-09",
+  "source": "Geometry3k-2444",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. Round to the nearest tenth.",
+  "problem_img": "2331.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)",
+    "Shape(BA,AD,DB)",
+    "Collinear(CAD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BD),22)",
+    "Equal(LengthOfLine(BC),40)",
+    "Equal(MeasureOfAngle(BCA),y)",
+    "Equal(MeasureOfAngle(DBA),x)",
+    "Equal(LengthOfLine(AD),LengthOfLine(AC))",
+    "PerpendicularBetweenLine(AD,BD)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "37.2",
+  "theorem_seqs": [
+    "line_addition(CA,AD)",
+    "right_triangle_judgment_angle(CDB)",
+    "right_triangle_property_pythagorean(CDB)",
+    "right_triangle_judgment_angle(ADB)",
+    "right_triangle_property_pythagorean(ADB)",
+    "sine_theorem(ADB)"
+  ]
+}

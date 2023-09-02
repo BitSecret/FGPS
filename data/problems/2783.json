@@ -1,0 +1,24 @@
+{
+  "problem_id": 2783,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-2930",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use a calculator to find the measure of \\angle J to the nearest degree.",
+  "problem_img": "2783.png",
+  "construction_cdl": [
+    "Shape(LJ,JK,KL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(KL),9)",
+    "Equal(LengthOfLine(JK),14)",
+    "RightTriangle(KLJ)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(LJK))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "right_triangle_property_pythagorean(KLJ)",
+    "cosine_theorem(JKL)"
+  ]
+}

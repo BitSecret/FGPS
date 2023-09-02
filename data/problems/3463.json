@@ -1,0 +1,35 @@
+{
+  "problem_id": 3463,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-1040",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,CD为⊙O的弦,∠ABD=63°,则∠BCD为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, CD is the chord of ⊙O, ∠ABD = N_0, then ∠BCD is ()",
+  "problem_img": "3463.png",
+  "construction_cdl": [
+    "Shape(OAD,DE,EA)",
+    "Shape(ODB,BD)",
+    "Shape(ED,DO,OE)",
+    "Shape(OD,DB,BO)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AE,EC)",
+    "Shape(CE,EO,OB,BC)",
+    "Collinear(BOEA)",
+    "Collinear(DEC)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DBO),63)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCE))",
+  "problem_answer": "27",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAD,B)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "arc_property_center_angle(OAD,O)",
+    "arc_property_center_angle(ODB,O)",
+    "adjacent_complementary_angle(BOD,DOE)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "problem_id": 861,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-890",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram A B C D to find C D.",
+  "problem_img": "861.png",
+  "construction_cdl": [
+    "Shape(AD,DF,FA)",
+    "Shape(AF,FB,BA)",
+    "Shape(FD,DC,CF)",
+    "Shape(BF,FC,CB)",
+    "Collinear(AFC)",
+    "Collinear(DFB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ADCB)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(FAD),20)",
+    "Equal(LengthOfLine(DA),9)",
+    "Equal(MeasureOfAngle(BAF),32)",
+    "Equal(LengthOfLine(BA),6)",
+    "Equal(LengthOfLine(CF),6.86)",
+    "Equal(MeasureOfAngle(CBF),40.1)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(DF))",
+  "problem_answer": "2.623",
+  "theorem_seqs": [
+    "angle_addition(BAF,FAD)",
+    "angle_addition(CBF,FBA)",
+    "parallel_property_ipsilateral_internal_angle(BC,AD)",
+    "triangle_property_angle_sum(AFB)",
+    "vertical_angle(CFD,AFB)",
+    "parallelogram_property_opposite_line_equal(DCBA)",
+    "cosine_theorem(FDC)"
+  ]
+}

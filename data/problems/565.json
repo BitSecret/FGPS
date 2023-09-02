@@ -1,0 +1,31 @@
+{
+  "problem_id": 565,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-578",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the triangle. Round to the nearest tenth if necessary.",
+  "problem_img": "565.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)",
+    "Shape(CA,AD,DC)",
+    "Collinear(BAD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(DC),15)",
+    "Equal(LengthOfLine(BA),16)",
+    "Equal(LengthOfLine(DA),9)",
+    "PerpendicularBetweenLine(CA,DA)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(CBA))",
+  "problem_answer": "48",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BAC,CAD)",
+    "right_triangle_judgment_angle(BAC)",
+    "right_triangle_judgment_angle(CAD)",
+    "right_triangle_property_pythagorean(BAC)",
+    "right_triangle_property_pythagorean(CAD)",
+    "triangle_perimeter_formula(CBA)"
+  ]
+}

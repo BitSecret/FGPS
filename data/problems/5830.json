@@ -1,0 +1,27 @@
+{
+  "problem_id": 5830,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7827",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC和△DEF中,AB=2DE,AC=2DF,∠A=∠D,△ABC的面积是24,则△DEF的面积为()",
+  "problem_text_en": "As shown in the figure, in △ABC and △DEF, AB =2 DE, AC = 2 DF, ∠A = ∠D, the area of ​​△ABC is N_0, then the area of ​​△DEF is ()",
+  "problem_img": "5830.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(DE,EF,FD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),Mul(2,LengthOfLine(DE)))",
+    "Equal(LengthOfLine(AC),Mul(2,LengthOfLine(DF)))",
+    "Equal(MeasureOfAngle(CAB),MeasureOfAngle(FDE))",
+    "Equal(AreaOfTriangle(ABC),24)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(DEF))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "similar_triangle_judgment_sas(ABC,DEF)",
+    "similar_triangle_property_line_ratio(CAB,FDE)",
+    "similar_triangle_property_area_square_ratio(ABC,DEF)"
+  ]
+}

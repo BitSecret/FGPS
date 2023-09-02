@@ -1,0 +1,38 @@
+{
+  "problem_id": 4554,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3661",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC是⊙O的内接三角形,若∠ACB=30°,AB=6,则⊙O的半径是()",
+  "problem_text_en": "As shown in the figure, △ABC is the inscribed triangle of ⊙O, if ∠ACB = N_0, AB = N_1, then the radius of ⊙O is ()",
+  "problem_img": "4554.png",
+  "construction_cdl": [
+    "Shape(OE,EC,OCB,BO)",
+    "Shape(CE,EA,AC)",
+    "Shape(CA,OAC)",
+    "Shape(AB,OBA)",
+    "Shape(OB,BE,EO)",
+    "Shape(EB,BA,AE)",
+    "Collinear(CEB)",
+    "Collinear(OEA)",
+    "Cocircular(O,BAC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(MeasureOfAngle(ACB),30)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBA,C)",
+    "arc_property_center_angle(OBA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "isosceles_triangle_judgment_line_equal(OBA)",
+    "triangle_property_angle_sum(OBA)",
+    "isosceles_triangle_property_angle_equal(OBA)",
+    "sine_theorem(AOB)"
+  ]
+}

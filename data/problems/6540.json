@@ -1,0 +1,26 @@
+{
+  "problem_id": 6540,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9463",
+  "problem_level": 1,
+  "problem_text_cn": "在如图的平行四边形ABCD中,AB=3,AC=4,BC=5,则S~□ABCD~=()",
+  "problem_text_en": "In the parallelogram ABCD as shown in the figure, AB = N_0, AC = N_1, BC = N_2, then S~ABCD~ = ()",
+  "problem_img": "6540.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(BC),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "cosine_theorem(BCA)",
+    "parallelogram_area_formula_sine(ABCD)"
+  ]
+}

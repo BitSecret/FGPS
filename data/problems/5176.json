@@ -1,0 +1,26 @@
+{
+  "problem_id": 5176,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5142",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知点C在线段AB上,点M、N分别是AC、BC的中点,且AB=8cm,则MN的长度为cm．()",
+  "problem_text_en": "As shown in the figure, the known point C is on the line segment AB, the points M and N are the midpoints of AC and BC respectively, and AB = N_0, then the length of MN is. ()",
+  "problem_img": "5176.png",
+  "construction_cdl": [
+    "Collinear(AMCNB)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(M,AC)",
+    "IsMidpointOfLine(N,CB)",
+    "Equal(LengthOfLine(AB),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(MN))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "line_addition(AM,MC)",
+    "line_addition(CN,NB)",
+    "line_addition(AC,CB)",
+    "line_addition(MC,CN)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 6018,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8498",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC的顶点A、B、C均在⊙O上,∠OAC=40°,∠OBC=15°则∠AOB的度数是()",
+  "problem_text_en": "As shown in the figure, the vertices A, B, and C of △ABC are all on ⊙O, ∠OAC = N_0, ∠OBC = N_1, then the degree of ∠AOB is ()",
+  "problem_img": "6018.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(CA,AO,OC)",
+    "Shape(OA,AB,BO)",
+    "Shape(OAB,BA)",
+    "Shape(OB,BC,CO)",
+    "Shape(OBC,CB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OBC),15)",
+    "Equal(MeasureOfAngle(CAO),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "angle_addition(BCO,OCA)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)"
+  ]
+}

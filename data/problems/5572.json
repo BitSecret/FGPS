@@ -1,0 +1,24 @@
+{
+  "problem_id": 5572,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6850",
+  "problem_level": 1,
+  "problem_text_cn": "上午9时,一条船从A处出发,以每小时40海里的速度向正东方向航行,9时30分到达B处(如图)．从A、B两处分别测得小岛M在北偏东45°和北偏东15°方向,那么在B处船与小岛M的距离为()",
+  "problem_text_en": "At N_0 o'clock in the morning, a boat departs from point A and sails eastward at a speed of N_1 nautical miles per hour, and arrives at point B at N_2 o'clock and N_3 minutes (as shown in the figure). From the two points A and B, it is measured that the small island M is in the direction of N_4 east by north and N_5 east by north, then the distance between the ship and the small island M at B is ()",
+  "problem_img": "5572.png",
+  "construction_cdl": [
+    "Shape(MA,AB,BM)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),20)",
+    "Equal(MeasureOfAngle(MAB),45)",
+    "Equal(MeasureOfAngle(ABM),105)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BM))",
+  "problem_answer": "20*sqrt(2)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(MAB)",
+    "sine_theorem(BMA)"
+  ]
+}

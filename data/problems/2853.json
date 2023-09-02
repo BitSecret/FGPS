@@ -1,0 +1,35 @@
+{
+  "problem_id": 2853,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-5",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知直线a∥b,直线c与a、b分别交于A、B；且∠1=120°,则∠2=()",
+  "problem_text_en": "As shown in the figure, given the straight line a ∥ b, the straight line c and a and b intersect at A and B respectively; and ∠1 = N_0, then ∠2 = ()",
+  "problem_img": "2853.png",
+  "construction_cdl": [
+    "Shape(FA,AC)",
+    "Shape(CA,AE)",
+    "Shape(HB,BA)",
+    "Shape(BA,AF)",
+    "Shape(EA,AB)",
+    "Shape(AB,BG)",
+    "Shape(DB,BH)",
+    "Shape(GB,BD)",
+    "Collinear(CABD)",
+    "Collinear(FAE)",
+    "Collinear(HBG)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(FE,HG)",
+    "Equal(MeasureOfAngle(GBD),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FAC))",
+  "problem_answer": "120",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(FE,HG,A)",
+    "parallel_property_collinear_extend(GH,EA,B)",
+    "vertical_angle(FAC,EAB)",
+    "parallel_property_corresponding_angle(AE,BG,D)"
+  ]
+}

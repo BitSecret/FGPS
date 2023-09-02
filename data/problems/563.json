@@ -1,0 +1,31 @@
+{
+  "problem_id": 563,
+  "annotation": "YimingHe_2023-04-09",
+  "source": "Geometry3k-576",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If M D = 7, find R I.",
+  "problem_img": "563.png",
+  "construction_cdl": [
+    "Shape(AM,MD,MDA)",
+    "Shape(DM,MH,MHD)",
+    "Shape(RM,MA,MAR)",
+    "Shape(HR,MRS,SU,MUH)",
+    "Shape(MSU,US)",
+    "Collinear(RMH)",
+    "Cocircular(M,DARSUH)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(RH,M)",
+    "IsCentreOfCircle(M,M)",
+    "Equal(LengthOfLine(MD),7)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(RH))",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(MD,M)",
+    "circle_property_length_of_radius_and_diameter(M)",
+    "diameter_of_circle_property_length_equal(RH,M)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 3284,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-598",
+  "problem_level": 1,
+  "problem_text_cn": "将一副直角三角板如图放置,使含30°角的三角板的直角边和含45°角的三角板的一条直角边在同一条直线上,则∠1的度数为()",
+  "problem_text_en": "Place a pair of right triangle plates as shown in the figure, so that the leg of the triangle plate with angle N_0 and the leg of the triangle plate with angle N_1 are on the same straight line, then the degree of ∠1 is ()",
+  "problem_img": "3284.png",
+  "construction_cdl": [
+    "Shape(NB,BM,MN)",
+    "Shape(AF,FN,NA)",
+    "Shape(AN,NM,ML,LE,EA)",
+    "Shape(MD,DL,LM)",
+    "Shape(EL,LC,CE)",
+    "Shape(BN,NF)",
+    "Shape(DM,MB)",
+    "Shape(CL,LD)",
+    "Collinear(FAEC)",
+    "Collinear(FNMD)",
+    "Collinear(ELD)",
+    "Collinear(ANB)",
+    "Collinear(BMLC)"
+  ],
+  "text_cdl": [
+    "RightTriangle(DEF)",
+    "RightTriangle(CAB)",
+    "Equal(MeasureOfAngle(ABC),45)",
+    "Equal(MeasureOfAngle(FDE),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DMB))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "parallel_judgment_ipsilateral_internal_angle(ED,AB)",
+    "parallel_property_collinear_extend(BA,DE,N)",
+    "parallel_property_alternate_interior_angle(BN,DE)",
+    "triangle_property_angle_sum(NBM)",
+    "adjacent_complementary_angle(DMB,BMN)"
+  ]
+}

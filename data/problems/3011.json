@@ -1,0 +1,38 @@
+{
+  "problem_id": 3011,
+  "annotation": "NaZhu_2023-04-16",
+  "source": "GeoQA-216",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知直线AB∥CD,且直线EF分别交AB、CD于M、N两点,NH是∠MND的角平分线．若∠AMN=56°,则∠MNH的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that the straight line AB ∥ CD, and the straight line EF intersects AB and CD at the two points M and N respectively. NH is the angular bisector of ∠MND. If ∠AMN = N_0, then the degree of ∠MNH is ()",
+  "problem_img": "3011.png",
+  "construction_cdl": [
+    "Shape(AM,ME)",
+    "Shape(EM,MB)",
+    "Shape(NM,MA)",
+    "Shape(BM,MN)",
+    "Shape(CN,NM)",
+    "Shape(MN,NH)",
+    "Shape(HN,ND)",
+    "Shape(MN,ND)",
+    "Shape(FN,NC)",
+    "Shape(DN,NF)",
+    "Collinear(AMB)",
+    "Collinear(CND)",
+    "Collinear(EMNF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "IsBisectorOfAngle(NH,MND)",
+    "Equal(MeasureOfAngle(NMA),56)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(MNH))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(DC,BA,N)",
+    "parallel_property_collinear_extend(AB,ND,M)",
+    "parallel_property_alternate_interior_angle(AM,ND)",
+    "angle_addition(MNH,HND)"
+  ]
+}

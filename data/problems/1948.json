@@ -1,0 +1,29 @@
+{
+  "problem_id": 1948,
+  "annotation": "ZheZhu_2023-04-16",
+  "source": "Geometry3k-2027",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth.",
+  "problem_img": "1948.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BC,CA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CA),22)",
+    "Equal(LengthOfLine(AD),17)",
+    "PerpendicularBetweenLine(CA,DA)",
+    "PerpendicularBetweenLine(AD,BD)",
+    "PerpendicularBetweenLine(DB,CB)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CADB))",
+  "problem_answer": "374",
+  "theorem_seqs": [
+    "parallel_judgment_ipsilateral_internal_angle(DA,BC)",
+    "parallel_judgment_ipsilateral_internal_angle(BD,CA)",
+    "parallelogram_judgment_parallel_and_parallel(CADB)",
+    "parallelogram_area_formula_sine(CADB)"
+  ]
+}

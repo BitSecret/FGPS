@@ -1,0 +1,26 @@
+{
+  "problem_id": 2700,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-2843",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\triangle L M N \\cong \\triangle Q R S. Find x.",
+  "problem_img": "2700.png",
+  "construction_cdl": [
+    "Shape(NL,LM,MN)",
+    "Shape(SR,RQ,QS)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "MirrorCongruentBetweenTriangle(NLM,SRQ)",
+    "Equal(MeasureOfAngle(RSQ),2*y-12)",
+    "Equal(LengthOfLine(LN),3*x+5)",
+    "Equal(LengthOfLine(QS),2*x+10)",
+    "Equal(MeasureOfAngle(LNM),y+6)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_line_equal(MNL,RQS)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 5156,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5089",
+  "problem_level": 1,
+  "problem_text_cn": "如图将三角形纸板的直角顶点放在直尺的一条边上,∠1=30°,∠2=60°,则∠3为()",
+  "problem_text_en": "As shown in the figure, put the right-angled vertex of the triangular cardboard on one side of the ruler, ∠1 = N_0, ∠2 = N_1, then ∠3 is ()",
+  "problem_img": "5156.png",
+  "construction_cdl": [
+    "Shape(AD,DC,CA)",
+    "Shape(ED,DA)",
+    "Shape(DB,BC,CD)",
+    "Collinear(ADB)",
+    "Collinear(EDC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAD),30)",
+    "Equal(MeasureOfAngle(EDA),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EDA,ADC)",
+    "triangle_property_angle_sum(ADC)"
+  ]
+}

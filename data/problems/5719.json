@@ -1,0 +1,30 @@
+{
+  "problem_id": 5719,
+  "annotation": "NaZhu_2023-05-28",
+  "source": "GeoQA-7497",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE∥BC,AD:AB=1:3,若△ADE的面积等于3,则△ABC的面积等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE ∥ BC, AD:AB = N_0:N_1, if the area of ​​△ADE is equal to N_2, then the area of ​​△ABC is equal to ()",
+  "problem_img": "5719.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),1/3)",
+    "Equal(AreaOfTriangle(ADE),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(ABC))",
+  "problem_answer": "27",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ABC,ADE)",
+    "similar_triangle_property_line_ratio(CAB,EAD)",
+    "similar_triangle_property_area_square_ratio(ABC,ADE)"
+  ]
+}

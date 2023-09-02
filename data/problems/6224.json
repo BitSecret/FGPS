@@ -1,0 +1,41 @@
+{
+  "problem_id": 6224,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8819",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C为圆上一点,点D是弧BC的中点,若∠ABC=50°,则∠BAD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C is a point on the circle, and point D is the midpoint of arc BC. If ∠ABC = N_0, then the degree of ∠BAD is ()",
+  "problem_img": "6224.png",
+  "construction_cdl": [
+    "Shape(OAC,CA)",
+    "Shape(OCD,DM,MC)",
+    "Shape(AC,CM,MA)",
+    "Shape(ODB,BM,MD)",
+    "Shape(AM,MB,BO,OA)",
+    "Shape(OBA,AO,OB)",
+    "Collinear(AOB)",
+    "Collinear(AMD)",
+    "Collinear(CMB)",
+    "Cocircular(O,ACDB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CBA),50)",
+    "IsMidpointOfArc(D,OCB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(AOB,O)",
+    "diameter_of_circle_property_right_angle(ACB,O)",
+    "triangle_property_angle_sum(ACM)",
+    "triangle_property_angle_sum(ACB)",
+    "arc_addition_measure(OCD,ODB)",
+    "congruent_arc_judgment_length_equal(OCD,ODB)",
+    "congruent_arc_property_measure_equal(OCD,ODB)",
+    "arc_property_circumference_angle_external(OCD,A)",
+    "arc_property_circumference_angle_external(OCB,A)",
+    "arc_property_circumference_angle_external(ODB,A)"
+  ]
+}

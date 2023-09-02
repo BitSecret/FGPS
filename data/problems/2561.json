@@ -1,0 +1,31 @@
+{
+  "problem_id": 2561,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2688",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of t in the parallelogram.",
+  "problem_img": "2561.png",
+  "construction_cdl": [
+    "Shape(BW,WY,YB)",
+    "Shape(BY,YZ,ZB)",
+    "Shape(BZ,ZX,XB)",
+    "Shape(BX,XW,WB)",
+    "Collinear(WBZ)",
+    "Collinear(XBY)"
+  ],
+  "text_cdl": [
+    "Parallelogram(WYZX)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(WB),8)",
+    "Equal(LengthOfLine(BX),s-7)",
+    "Equal(LengthOfLine(YB),6)",
+    "Equal(LengthOfLine(ZB),2*t-6)"
+  ],
+  "goal_cdl": "Value(t)",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(WYZX,B)"
+  ]
+}

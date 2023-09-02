@@ -1,0 +1,30 @@
+{
+  "problem_id": 4677,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3954",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠NAM=30°,O为边AN上一点,以点O为圆心,2为半径作⊙O,交AN边于D、E两点,则当⊙O与AM相切时,AD等于()",
+  "problem_text_en": "As shown in the figure, ∠NAM = N_0, O is a point on the edge AN, take the point O as the center and N_1 as the radius as ⊙O, and intersect the AN edge at the two points D and E, then when ⊙O and AM are tangent, AD is equal to ()",
+  "problem_img": "4677.png",
+  "construction_cdl": [
+    "Shape(BA,AD,OBD)",
+    "Shape(OB,OBD,DO)",
+    "Collinear(ADO)",
+    "Cocircular(O,BD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(AB,O)",
+    "Equal(LengthOfLine(OB),2)",
+    "Equal(LengthOfLine(OD),2)",
+    "Equal(MeasureOfAngle(BAO),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AB,O,O)",
+    "sine_theorem(OBA)",
+    "line_addition(AD,DO)"
+  ]
+}

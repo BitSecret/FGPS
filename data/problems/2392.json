@@ -1,0 +1,31 @@
+{
+  "problem_id": 2392,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2507",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x if \\triangle J L M \\sim \\triangle Q S T.",
+  "problem_img": "2392.png",
+  "construction_cdl": [
+    "Shape(JL,LM,MJ)",
+    "Shape(ST,TQ,QS)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "SimilarBetweenTriangle(JLM,QST)",
+    "Equal(MeasureOfAngle(MJL),MeasureOfAngle(TQS))",
+    "Equal(MeasureOfAngle(LMJ),MeasureOfAngle(STQ))",
+    "Equal(LengthOfLine(MJ),4)",
+    "Equal(LengthOfLine(ST),3)",
+    "Equal(LengthOfLine(TQ),2)",
+    "Equal(LengthOfLine(QS),5)",
+    "Equal(LengthOfLine(LM),6*x-3)",
+    "Equal(LengthOfLine(JL),3*y-2)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "1.5",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(JLM,QST)",
+    "similar_triangle_property_line_ratio(LMJ,STQ)"
+  ]
+}

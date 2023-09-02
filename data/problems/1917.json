@@ -1,0 +1,27 @@
+{
+  "problem_id": 1917,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-1993",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In quadrilateral P Q R S, P Q = 721, Q R = 547, R S = 593, P S = 756, and m \\angle P = 58. Find m \\angle R.",
+  "problem_img": "1917.png",
+  "construction_cdl": [
+    "Shape(PS,SQ,QP)",
+    "Shape(QS,SR,RQ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(PQ),721)",
+    "Equal(LengthOfLine(QR),547)",
+    "Equal(LengthOfLine(RS),593)",
+    "Equal(LengthOfLine(PS),756)",
+    "Equal(MeasureOfAngle(QPS),58)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(SRQ))",
+  "problem_answer": "77.79",
+  "theorem_seqs": [
+    "cosine_theorem(PSQ)",
+    "cosine_theorem(RQS)"
+  ]
+}

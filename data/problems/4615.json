@@ -1,0 +1,30 @@
+{
+  "problem_id": 4615,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3789",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠BAC=70°,∠ABC=45°,点O是△ABC的外接圆的圆心,则∠AOB等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠BAC = N_0, ∠ABC = N_1, point O is the center of the circumscribed circle of △ABC, then ∠AOB is equal to ()",
+  "problem_img": "4615.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(AO,OB,BC,CA)",
+    "Shape(OAB,BA)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ABC),45)",
+    "Equal(MeasureOfAngle(CAB),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

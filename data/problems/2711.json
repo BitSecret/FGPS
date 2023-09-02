@@ -1,0 +1,32 @@
+{
+  "problem_id": 2711,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-2855",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "2711.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BA)",
+    "Shape(BC,CA,AB)",
+    "Collinear(DBC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ADB),45)",
+    "Equal(LengthOfLine(AB),y)",
+    "Equal(LengthOfLine(CD),x)",
+    "Equal(LengthOfLine(AC),5)",
+    "PerpendicularBetweenLine(CA,DA)",
+    "PerpendicularBetweenLine(AB,CB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "5*sqrt(2)/2",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ADC)",
+    "triangle_property_angle_sum(ABC)",
+    "isosceles_triangle_judgment_angle_equal(BCA)",
+    "right_triangle_judgment_angle(ABC)",
+    "right_triangle_property_pythagorean(ABC)"
+  ]
+}

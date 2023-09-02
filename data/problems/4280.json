@@ -1,0 +1,36 @@
+{
+  "problem_id": 4280,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3077",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,已知∠ABO=50°,则∠ACB的大小为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, and it is known that ∠ABO = N_0, then the size of ∠ACB is ()",
+  "problem_img": "4280.png",
+  "construction_cdl": [
+    "Shape(CO,OA,OAC)",
+    "Shape(CD,DO,OC)",
+    "Shape(OD,DA,AO)",
+    "Shape(AO,OB,BA)",
+    "Shape(DC,CB,BD)",
+    "Shape(BC,OCB)",
+    "Shape(AB,OBA)",
+    "Collinear(CDA)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OBA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBA)",
+    "isosceles_triangle_property_angle_equal(OBA)",
+    "triangle_property_angle_sum(AOB)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)"
+  ]
+}

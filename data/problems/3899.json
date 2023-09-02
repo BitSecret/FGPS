@@ -1,0 +1,29 @@
+{
+  "problem_id": 3899,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1803",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点B、C、D在⊙O上,若∠BCD=140°,则∠BOD的度数是()",
+  "problem_text_en": "As shown in the figure, points B, C, D are on ⊙O, if ∠BCD = N_0, then the degree of ∠BOD is ()",
+  "problem_img": "3899.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DA,AB,BO,OD)",
+    "Shape(BA,OAB)",
+    "Shape(DO,OB,BC,CD)",
+    "Shape(DC,OCD)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,BCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BCD),140)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DOB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_internal(OBD,C)"
+  ]
+}

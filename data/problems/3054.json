@@ -1,0 +1,36 @@
+{
+  "problem_id": 3054,
+  "annotation": "XiaokaiZhang_2023-04-16",
+  "source": "GeoQA-273",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD是⊙O的直径,A、B是⊙O上的两点,若∠ABD=20°,则∠ADC的度数为()",
+  "problem_text_en": "As shown in the figure, CD is the diameter of ⊙O, A and B are two points on ⊙O, if ∠ABD = N_0, then the degree of ∠ADC is ()",
+  "problem_img": "3054.png",
+  "construction_cdl": [
+    "Shape(OAC,CA)",
+    "Shape(EA,AC,CO,OE)",
+    "Shape(OCB,BE,EO,OC)",
+    "Shape(AE,ED,DA)",
+    "Shape(EB,BD,DE)",
+    "Shape(ODA,AD)",
+    "Shape(OBD,DB)",
+    "Collinear(COED)",
+    "Collinear(AEB)",
+    "Cocircular(O,CBDA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABD),20)"
+  ],
+  "image_cdl": [
+    "IsDiameterOfCircle(DC,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODA,B)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "diameter_of_circle_property_right_angle(DAC,O)",
+    "triangle_property_angle_sum(ACD)"
+  ]
+}

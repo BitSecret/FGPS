@@ -1,0 +1,38 @@
+{
+  "problem_id": 3698,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1456",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将一张矩形纸片折叠,若∠1=80°,则∠2的度数是()",
+  "problem_text_en": "As shown in the figure, fold a rectangular piece of paper, if ∠1 = N_0, then the degree of ∠2 is ()",
+  "problem_img": "3698.png",
+  "construction_cdl": [
+    "Shape(MB,BA)",
+    "Shape(AB,BN)",
+    "Shape(CB,BM)",
+    "Shape(NB,BC)",
+    "Shape(RN,NC)",
+    "Shape(CN,NB)",
+    "Shape(PC,CB)",
+    "Shape(BC,CN)",
+    "Shape(NC,CQ)",
+    "Shape(BC,CN,NB)",
+    "Collinear(ABC)",
+    "Collinear(MBNR)",
+    "Collinear(PCQ)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(MBA),80)",
+    "ParallelBetweenLine(CP,BM)",
+    "Equal(MeasureOfAngle(BCN),MeasureOfAngle(NCQ))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(NCQ))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(CP,BM,A)",
+    "angle_addition(PCB,BCN)",
+    "angle_addition(PCN,NCQ)",
+    "flat_angle(PCQ)"
+  ]
+}

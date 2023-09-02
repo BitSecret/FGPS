@@ -1,0 +1,51 @@
+{
+  "problem_id": 5751,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7588",
+  "problem_level": 1,
+  "problem_text_cn": "在⊙O中,半径OA、OB互相垂直,点C为弧⁀{AB}上一点(不与A、B重合),CD⊥OA,CE⊥OB,垂足分别为D、E,点G、H分别在CE、CD上,且CG=\\frac{1}{3}CE,CH=\\frac{1}{3}CD,当C点在弧⁀{AB}上顺时针运动时,已知⊙O的半径长为6,则GH的长度为()",
+  "problem_text_en": "In ⊙O, the radii OA and OB are perpendicular to each other, the point C is a point on the arc ⁀AB (not coincident with A and B), CD ⊥ OA, CE ⊥ OB, the vertical feet are D and E respectively, and the points G and H are respectively on CE and CD, and CG=\\frac{N_0}{N_1}CE,CH=\\frac{N_2}{N_3}CD, when point C moves clockwise on arc ⁀AB, the radius of ⊙O is known to be N_4, then the length of GH is ()",
+  "problem_img": "5751.png",
+  "construction_cdl": [
+    "Shape(OBC,CG,GE,EB)",
+    "Shape(GC,CF,FG)",
+    "Shape(EG,GF,FN,NE)",
+    "Shape(EN,NO,OE)",
+    "Shape(FC,CH,HF)",
+    "Shape(NF,FH,HD,DN)",
+    "Shape(ND,DO,ON)",
+    "Shape(OAC,AD,DH,HC)",
+    "Shape(OD,DA,OAB,BE,EO)",
+    "Collinear(BEO)",
+    "Collinear(ADO)",
+    "Collinear(CGE)",
+    "Collinear(CHD)",
+    "Collinear(CFNO)",
+    "Collinear(GFH)",
+    "Collinear(END)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(AO,BO)",
+    "PerpendicularBetweenLine(CD,OD)",
+    "PerpendicularBetweenLine(OE,CE)",
+    "Equal(LengthOfLine(CG),Mul(1/3,LengthOfLine(CE)))",
+    "Equal(LengthOfLine(CH),Mul(1/3,LengthOfLine(CD)))",
+    "Equal(RadiusOfCircle(O),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(GH))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "parallel_judgment_ipsilateral_internal_angle(DC,OE)",
+    "parallel_judgment_ipsilateral_internal_angle(OD,EC)",
+    "parallelogram_judgment_parallel_and_parallel(CDOE)",
+    "rectangle_judgment_right_angle(CDOE)",
+    "rectangle_property_diagonal_equal(CDOE)",
+    "similar_triangle_judgment_sas(CHG,CDE)",
+    "similar_triangle_property_line_ratio(GCH,ECD)",
+    "similar_triangle_property_line_ratio(CHG,CDE)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "problem_id": 3882,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1774",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的弦,OC⊥AB交⊙O于点C,点D是⊙O上一点,∠ADC=30°,则∠BOC的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the chord of ⊙O, OC ⊥ AB intersects ⊙O at point C, point D is a point on ⊙O, ∠ADC = N_0, then the degree of ∠BOC is ()",
+  "problem_img": "3882.png",
+  "construction_cdl": [
+    "Shape(AE,EC,OCA)",
+    "Shape(CE,EF,FC)",
+    "Shape(CF,FB,OBC)",
+    "Shape(AO,OE,EA)",
+    "Shape(FE,EO,OG,GF)",
+    "Shape(BF,FG,GB)",
+    "Shape(GO,OA,AD,DG)",
+    "Shape(BG,GD,ODB)",
+    "Shape(DA,OAD)",
+    "Collinear(AEFB)",
+    "Collinear(OGB)",
+    "Collinear(CEO)",
+    "Collinear(CFGD)",
+    "Cocircular(O,CADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(BE,OE)",
+    "Equal(MeasureOfAngle(ADC),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,D)",
+    "arc_property_center_angle(OCA,O)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,BA)",
+    "perpendicular_bisector_property_bisector(OE,BA)"
+  ]
+}

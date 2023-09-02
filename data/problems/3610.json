@@ -1,0 +1,31 @@
+{
+  "problem_id": 3610,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1279",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB、CD相交于点O,OE平分∠AOD,若∠BOC=70°,则∠COE的度数是()",
+  "problem_text_en": "As shown in the figure, the straight lines AB and CD intersect at point O, and OE bisects ∠AOD. If ∠BOC = N_0, then the degree of ∠COE is ()",
+  "problem_img": "3610.png",
+  "construction_cdl": [
+    "Shape(CO,OA)",
+    "Shape(AO,OE)",
+    "Shape(EO,OD)",
+    "Shape(DO,OB)",
+    "Shape(BO,OC)",
+    "Collinear(COD)",
+    "Collinear(AOB)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(OE,AOD)",
+    "Equal(MeasureOfAngle(BOC),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COE))",
+  "problem_answer": "145",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BOC,COA)",
+    "adjacent_complementary_angle(COA,AOD)",
+    "angle_addition(AOE,EOD)",
+    "angle_addition(COA,AOE)"
+  ]
+}

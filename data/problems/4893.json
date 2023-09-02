@@ -1,0 +1,36 @@
+{
+  "problem_id": 4893,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4430",
+  "problem_level": 1,
+  "problem_text_cn": "一个边长为4的等边三角形ABC的高与⊙O的直径相等,如图放置,⊙O与BC相切于点C,⊙O与AC相交于点E,则CE的长是()",
+  "problem_text_en": "The height of an equilateral triangle ABC with edge length N_0 is equal to the diameter of ⊙O, as shown in the figure, ⊙O is tangent to BC at point C, and ⊙O and AC intersect at point E, then the length of CE is ()",
+  "problem_img": "4893.png",
+  "construction_cdl": [
+    "Shape(EA,AB,BC,OEC)",
+    "Shape(CF,FE,OEC)",
+    "Shape(OE,EF,FO)",
+    "Shape(OF,FC,CO)",
+    "Shape(EO,OC,OCE)",
+    "Collinear(AEFC)",
+    "Cocircular(O,EC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(BC,O)",
+    "EquilateralTriangle(ABC)",
+    "IsPerpendicularBisectorOfLine(OF,EC)",
+    "Equal(LengthOfLine(CO),sqrt(3))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CE))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BC,O,O)",
+    "angle_addition(BCF,FCO)",
+    "equilateral_triangle_property_angle(CAB)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "cosine_theorem(COE)"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "problem_id": 3512,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1124",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠1=70°,∠2=70°,∠3=60°,则∠4的度数等于()",
+  "problem_text_en": "As shown in the figure, ∠1 = N_0, ∠2 = N_1, ∠3 = N_2, then the degree of ∠4 is equal to ()",
+  "problem_img": "3512.png",
+  "construction_cdl": [
+    "Shape(AM,ME)",
+    "Shape(EM,MN)",
+    "Shape(MN,NG)",
+    "Shape(GN,NB)",
+    "Shape(BN,NY)",
+    "Shape(BY,YD)",
+    "Shape(DY,YH)",
+    "Shape(HY,YX)",
+    "Shape(YX,XF)",
+    "Shape(FX,XC)",
+    "Shape(CX,XM)",
+    "Shape(XM,MA)",
+    "Shape(MX,XY,YN,NM)",
+    "Collinear(AMNB)",
+    "Collinear(CXYD)",
+    "Collinear(EMXF)",
+    "Collinear(GNYH)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(EMN),70)",
+    "Equal(MeasureOfAngle(MXY),70)",
+    "Equal(MeasureOfAngle(BNY),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(XYN))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EMN,NMX)",
+    "adjacent_complementary_angle(BNY,YNM)",
+    "quadrilateral_property_angle_sum(MXYN)"
+  ]
+}

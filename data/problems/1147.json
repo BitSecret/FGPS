@@ -1,0 +1,29 @@
+{
+  "problem_id": 1147,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1186",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\triangle D F G and \\triangle F G H are isosceles, m \\angle F D H = 28 and D G \\cong F G \\cong F H. Find the measure of \\angle D F G.",
+  "problem_img": "1147.png",
+  "construction_cdl": [
+    "Shape(DG,GF,FD)",
+    "Shape(GH,HF,FG)",
+    "Collinear(DGH)"
+  ],
+  "text_cdl": [
+    "IsoscelesTriangle(FGH))"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(DG),LengthOfLine(FG))",
+    "Equal(LengthOfLine(FG),LengthOfLine(FH))",
+    "Equal(MeasureOfAngle(FDH),28)",
+    "Equal(LengthOfLine(FH),LengthOfLine(DG))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(GFD))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(GFD)",
+    "isosceles_triangle_property_angle_equal(GFD)"
+  ]
+}

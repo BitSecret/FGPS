@@ -1,0 +1,43 @@
+{
+  "problem_id": 5123,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4982",
+  "problem_level": 1,
+  "problem_text_cn": "M是△ABC的边BC的中点,AN是△ABC的外角平分线,BN⊥AN于点N,且AB=4,MN=2.8,则AC的长是()",
+  "problem_text_en": "M is the midpoint of side BC of △ABC, AN is the bisector of exterior angle of △ABC, BN ⊥ AN is at point N, and AB = N_0, MN = N_1, then the length of AC is ()",
+  "problem_img": "5123.png",
+  "construction_cdl": [
+    "Shape(NB,BO,ON)",
+    "Shape(NA,AD,DN)",
+    "Shape(NO,OA,AN)",
+    "Shape(OB,BM,MO)",
+    "Shape(OM,MC,CA,AO)",
+    "Collinear(BOA)",
+    "Collinear(NOM)",
+    "Collinear(DNB)",
+    "Collinear(DAC)",
+    "Collinear(BMC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(M,BC)",
+    "IsBisectorOfAngle(AN,BAD)",
+    "PerpendicularBetweenLine(AN,BN)",
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(LengthOfLine(MN),2.8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "1.6",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DNA,ANB)",
+    "mirror_congruent_triangle_judgment_aas(DNA,BAN)",
+    "mirror_congruent_triangle_property_line_equal(NAD,NBA)",
+    "mirror_congruent_triangle_property_line_equal(ADN,ANB)",
+    "line_addition(DN,NB)",
+    "line_addition(DA,AC)",
+    "line_addition(BM,MC)",
+    "similar_triangle_judgment_sas(BMN,BCD)",
+    "similar_triangle_property_line_ratio(BMN,BCD)",
+    "similar_triangle_property_line_ratio(NBM,DBC)"
+  ]
+}

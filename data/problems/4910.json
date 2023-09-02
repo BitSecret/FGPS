@@ -1,0 +1,34 @@
+{
+  "problem_id": 4910,
+  "annotation": "YifanWang_2023-05-21",
+  "source": "GeoQA-4458",
+  "problem_level": 1,
+  "problem_text_cn": "如图,BC与⊙O相切于点C,BO的延长线交⊙O于点A,连结AC,若∠ACB=120°,则∠A的度数等于()",
+  "problem_text_en": "As shown in the figure, BC is tangent to ⊙O at point C, and the extended line of BO intersects ⊙O at point A, connect AC, if ∠ACB = N_0, then the degree of ∠A is equal to ()",
+  "problem_img": "4910.png",
+  "construction_cdl": [
+    "Shape(AO,OD,ODA)",
+    "Shape(OA,AC,CO)",
+    "Shape(DO,OC,OCD)",
+    "Shape(CA,OAC)",
+    "Shape(CB,BD,OCD)",
+    "Collinear(AODB)",
+    "Cocircular(O,ACD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(BC,O)",
+    "Equal(MeasureOfAngle(ACB),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BAC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BC,O,O)",
+    "angle_addition(ACO,OCB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OAC)",
+    "isosceles_triangle_property_angle_equal(OAC)"
+  ]
+}

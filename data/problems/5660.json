@@ -1,0 +1,24 @@
+{
+  "problem_id": 5660,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7338",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将一个Rt△ABC形状的楔子从木桩的底端点P沿水平方向打入木桩底下,使木桩向上运动．已知楔子斜面的倾斜角为15°,若楔子沿水平方向前进6cm(如箭头所示),则木桩上升了()",
+  "problem_text_en": "As shown in the figure, drive a wedge in the shape of Rt△ABC from the bottom end point P of the wooden pile into the bottom of the wooden pile in the horizontal direction to make the wooden pile move upward. It is known that the inclination angle of the inclined surface of the wedge is N_0. If the wedge advances in the horizontal direction N_1 (as shown by the arrow), the wooden pile rises ()",
+  "problem_img": "5660.png",
+  "construction_cdl": [
+    "Shape(BD,DE,EB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BD),6)",
+    "Equal(MeasureOfAngle(EBD),15)",
+    "Equal(MeasureOfAngle(BDE),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "1.607",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BDE)",
+    "sine_theorem(DEB)"
+  ]
+}

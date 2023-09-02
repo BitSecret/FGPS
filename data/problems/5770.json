@@ -1,0 +1,41 @@
+{
+  "problem_id": 5770,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7649",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在等边△ABC中,AC=4,点D、E、F分别在三边AB、BC、AC上,且AF=1,FD⊥DE,∠DFE=60°,则AD的长为()",
+  "problem_text_en": "As shown in the figure, in the equilateral △ABC, AC = N_0, points D, E, and F are on the three edges AB, BC, AC, and AF = N_1, FD ⊥ DE, ∠DFE = N_2, then the length of AD is ()",
+  "problem_img": "5770.png",
+  "construction_cdl": [
+    "Shape(CF,FE,EC)",
+    "Shape(FA,AD,DF)",
+    "Shape(FD,DE,EF)",
+    "Shape(ED,DB,BE)",
+    "Collinear(CFA)",
+    "Collinear(CEB)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(CAB)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(AF),1)",
+    "PerpendicularBetweenLine(FD,ED)",
+    "Equal(MeasureOfAngle(EFD),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "3/2",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(CAB)",
+    "equilateral_triangle_property_angle(ABC)",
+    "triangle_property_angle_sum(FAD)",
+    "angle_addition(CFE,EFD)",
+    "adjacent_complementary_angle(CFD,DFA)",
+    "similar_triangle_judgment_aa(ECF,FAD)",
+    "line_addition(AF,FC)",
+    "similar_triangle_property_line_ratio(ECF,FAD)",
+    "similar_triangle_property_line_ratio(CFE,ADF)",
+    "triangle_property_angle_sum(EFD)",
+    "sine_theorem(FDE)"
+  ]
+}

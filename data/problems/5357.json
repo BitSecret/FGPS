@@ -1,0 +1,35 @@
+{
+  "problem_id": 5357,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5631",
+  "problem_level": 1,
+  "problem_text_cn": "如图,E,F分别为矩形ABCD的边AD,BC的中点,若矩形ABCD与矩形EABF相似,AB=1,则矩形ABCD的面积是()",
+  "problem_text_en": "As shown in the figure, E and F are the edges AD of the rectangle ABCD and the midpoint of BC, respectively. If the rectangle ABCD is similar to the rectangle EABF, AB = N_0, then the area of ​​the rectangle ABCD is ()",
+  "problem_img": "5357.png",
+  "construction_cdl": [
+    "Shape(AB,BF,FE,EA)",
+    "Shape(EF,FC,CD,DE)",
+    "Collinear(AED)",
+    "Collinear(BFC)"
+  ],
+  "text_cdl": [
+    "Rectangle(ABCD)",
+    "Rectangle(EABF)",
+    "IsMidpointOfLine(E,AD)",
+    "IsMidpointOfLine(F,BC)",
+    "SimilarBetweenQuadrilateral(ABCD,EABF)",
+    "Equal(LengthOfLine(AB),1)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "sqrt(2)",
+  "theorem_seqs": [
+    "line_addition(AE,ED)",
+    "line_addition(BF,FC)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallelogram_property_opposite_line_equal(EABF)",
+    "similar_quadrilateral_property_line_ratio(ABCD,EABF)",
+    "similar_quadrilateral_property_line_ratio(BCDA,ABFE)",
+    "parallelogram_area_formula_sine(ABCD)"
+  ]
+}

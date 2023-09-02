@@ -1,0 +1,39 @@
+{
+  "problem_id": 1354,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-1402",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For the pair of similar figures, find the area of the green figure.",
+  "problem_img": "1354.png",
+  "construction_cdl": [
+    "Shape(EF,FM,ME)",
+    "Shape(EM,MG,GH,HE)",
+    "Shape(AT,TD,DA)",
+    "Shape(AD,DB,BC,CA)",
+    "Collinear(FMG)",
+    "Collinear(TDB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(EFGH)",
+    "Parallelogram(ATBC)",
+    "SimilarBetweenQuadrilateral(EFGH,ATBC)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(EM),7.5)",
+    "Equal(LengthOfLine(AD),15)",
+    "Equal(AreaOfQuadrilateral(EFGH),60)",
+    "PerpendicularBetweenLine(FM,EM)",
+    "PerpendicularBetweenLine(TD,AD)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ATBC))",
+  "problem_answer": "240",
+  "theorem_seqs": [
+    "altitude_of_quadrilateral_judgment_left_vertex(EM,EFGH)",
+    "altitude_of_quadrilateral_judgment_left_vertex(AD,ATBC)",
+    "parallelogram_area_formula_common(EFGH)",
+    "parallelogram_area_formula_common(ATBC)",
+    "similar_quadrilateral_property_line_ratio(FGHE,TBCA)",
+    "similar_quadrilateral_property_area_square_ratio(EFGH,ATBC)"
+  ]
+}

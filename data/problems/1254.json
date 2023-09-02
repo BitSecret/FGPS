@@ -1,0 +1,38 @@
+{
+  "problem_id": 1254,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-1296",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the parallelogram. Round to the nearest tenth if necessary.",
+  "problem_img": "1254.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EC,CA)",
+    "Shape(CE,ES,SC)",
+    "Collinear(BES)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(ABSC)",
+    "Equal(LengthOfLine(CA),32)",
+    "Equal(MeasureOfAngle(SCE),30)",
+    "Equal(LengthOfLine(ES),12)",
+    "PerpendicularBetweenLine(BE,CE)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABSC))",
+  "problem_answer": "665.1",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BEC,CES)",
+    "parallelogram_property_opposite_angle_equal(ABSC)",
+    "parallelogram_property_opposite_angle_equal(BSCA)",
+    "cosine_theorem(CES)",
+    "right_triangle_judgment_angle(CES)",
+    "right_triangle_property_pythagorean(CES)",
+    "altitude_of_quadrilateral_judgment_right_vertex(CE,ABSC)",
+    "parallelogram_area_formula_sine(ABSC)",
+    "parallelogram_area_formula_sine(BSCA)",
+    "parallelogram_area_formula_sine(SCAB)",
+    "parallelogram_area_formula_sine(CABS)",
+    "parallelogram_area_formula_common(ABSC)"
+  ]
+}

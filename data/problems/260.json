@@ -1,0 +1,32 @@
+{
+  "problem_id": 260,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-263",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. Round to the nearest tenth if necessary. Assume that segments that appear to be tangent are tangent.",
+  "problem_img": "260.png",
+  "construction_cdl": [
+    "Shape(EDF,DB,BF)",
+    "Shape(EAD,DA)",
+    "Shape(EDF,FC,ECA,AD)",
+    "Shape(EFC,CF)",
+    "Collinear(BDA)",
+    "Collinear(BFC)",
+    "Cocircular(E,DFCA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),5+x)",
+    "Equal(LengthOfLine(BD),x)",
+    "Equal(LengthOfLine(CF),5+x)",
+    "Equal(LengthOfLine(BF),5)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "line_addition(BD,DA)",
+    "line_addition(BF,FC)",
+    "circle_property_circular_power_segment_and_segment_line(BDA,BFC,E)"
+  ]
+}

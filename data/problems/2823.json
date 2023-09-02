@@ -1,0 +1,42 @@
+{
+  "problem_id": 2823,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-2972",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "U J = 9, V J = 3, and Z T = 18. Find S J.",
+  "problem_img": "2823.png",
+  "construction_cdl": [
+    "Shape(SY,YJ,JS)",
+    "Shape(JY,YZ,ZJ)",
+    "Shape(JZ,ZV,VJ)",
+    "Shape(JV,VU,UJ)",
+    "Shape(JU,UT,TJ)",
+    "Shape(SJ,JT,TS)",
+    "Collinear(SJV)",
+    "Collinear(YJU)",
+    "Collinear(ZJT)",
+    "Collinear(SYZ)",
+    "Collinear(ZVU)",
+    "Collinear(SJV)",
+    "Collinear(UTS)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(UJ),9)",
+    "Equal(LengthOfLine(TZ),18)",
+    "Equal(LengthOfLine(JV),3)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(TS),LengthOfLine(UT))",
+    "Equal(LengthOfLine(ZV),LengthOfLine(VU))",
+    "Equal(LengthOfLine(SY),LengthOfLine(YZ))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(SJ))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "median_of_triangle_judgment(SV,SZU)",
+    "median_of_triangle_judgment(UY,USZ)",
+    "centroid_of_triangle_judgment_intersection(J,ZUS,V,Y)",
+    "centroid_of_triangle_property_line_ratio(J,SZU,V)"
+  ]
+}

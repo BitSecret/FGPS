@@ -1,0 +1,39 @@
+{
+  "problem_id": 251,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-254",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle S.",
+  "problem_img": "251.png",
+  "construction_cdl": [
+    "Shape(OUR,RO,OU)",
+    "Shape(OTU,UT)",
+    "Shape(OT,TU,UO)",
+    "Shape(ORT,TO,OR)",
+    "Shape(ORT,RS,ST)",
+    "Collinear(UTS)",
+    "Cocircular(O,URT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(UOR),179)",
+    "Equal(MeasureOfAngle(TOR),71)",
+    "IsTangentOfCircle(SR,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(RST))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "angle_addition(UOT,TOR)",
+    "radius_of_circle_property_length_equal(OU,O)",
+    "radius_of_circle_property_length_equal(OT,O)",
+    "isosceles_triangle_judgment_line_equal(OTU)",
+    "isosceles_triangle_property_angle_equal(OTU)",
+    "triangle_property_angle_sum(UOT)",
+    "flat_angle(STU)",
+    "angle_addition(STO,OTU)",
+    "tangent_of_circle_property_perpendicular(SR,O,O)",
+    "quadrilateral_property_angle_sum(ORST)"
+  ]
+}

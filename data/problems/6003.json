@@ -1,0 +1,35 @@
+{
+  "problem_id": 6003,
+  "annotation": "Yangli_2023-05-28",
+  "source": "GeoQA-8475",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C在⊙O上,∠OAB=22.5°,则∠ACB的度数是()",
+  "problem_text_en": "As shown in the figure, A, B, C are on ⊙O, ∠OAB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "6003.png",
+  "construction_cdl": [
+    "Shape(DA,AO,OB,BD)",
+    "Shape(OA,AB,BO)",
+    "Shape(BA,AC,CB)",
+    "Shape(DB,OBD)",
+    "Shape(AD,ODA)",
+    "Shape(CA,OAC)",
+    "Shape(BC,OCB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(OAB),22.5)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "112.5",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_internal(OAB,C)"
+  ]
+}

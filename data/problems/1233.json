@@ -1,0 +1,35 @@
+{
+  "problem_id": 1233,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-1273",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded region.",
+  "problem_img": "1233.png",
+  "construction_cdl": [
+    "Shape(A)",
+    "Shape(C)",
+    "Collinear(FDOEB)",
+    "Cocircular(C,FB)",
+    "Cocircular(A,DE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(FB,C)",
+    "IsDiameterOfCircle(DE,A)",
+    "IsCentreOfCircle(O,A)",
+    "IsCentreOfCircle(O,C)",
+    "Equal(LengthOfLine(FB),9)",
+    "Equal(LengthOfLine(DE),4.5)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfCircle(C),AreaOfCircle(A)))",
+  "problem_answer": "47.71",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(FB,C)",
+    "diameter_of_circle_property_length_equal(DE,A)",
+    "circle_property_length_of_radius_and_diameter(C)",
+    "circle_property_length_of_radius_and_diameter(A)",
+    "circle_area_formula(C)",
+    "circle_area_formula(A)"
+  ]
+}

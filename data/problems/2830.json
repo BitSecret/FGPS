@@ -1,0 +1,28 @@
+{
+  "problem_id": 2830,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2980",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the length of \\widehat Z Y. Round to the nearest hundredth.",
+  "problem_img": "2830.png",
+  "construction_cdl": [
+    "Shape(XY,XYZ,ZX)",
+    "Shape(XZ,XZY,YX)",
+    "Cocircular(X,YZ)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(X,X)"
+  ],
+  "image_cdl": [
+    "Equal(RadiusOfCircle(X),6)",
+    "Equal(LengthOfLine(YX),6)",
+    "Equal(MeasureOfAngle(ZXY),75)"
+  ],
+  "goal_cdl": "Value(LengthOfArc(XYZ))",
+  "problem_answer": "5*pi/2",
+  "theorem_seqs": [
+    "arc_property_center_angle(XYZ,X)",
+    "arc_length_formula(XYZ)"
+  ]
+}

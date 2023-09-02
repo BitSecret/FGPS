@@ -1,0 +1,35 @@
+{
+  "problem_id": 3420,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-969",
+  "problem_level": 1,
+  "problem_text_cn": "某轮船由西向东航行,在A处测得小岛P的方位是北偏东75°,继续航行7海里后,在B处测得小岛P的方位是北偏东60°,则此时轮船与小岛P的距离BP=()",
+  "problem_text_en": "A certain ship sails from west to east. At vertex A, the orientation of island P is measured to be N_0 east by north. After continuing to sail for N_1 nautical miles, the orientation of island P is measured at vertex B to be N_2 from east to north. The distance of the island P BP = ()",
+  "problem_img": "3420.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(PE,EB,BP)",
+    "Shape(CA,AE)",
+    "Shape(AE,ED)",
+    "Shape(DE,EP)",
+    "Collinear(AEP)",
+    "Collinear(DEB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),7)",
+    "Equal(MeasureOfAngle(CAE),75)",
+    "Equal(MeasureOfAngle(EBP),60)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(CA,BA)",
+    "PerpendicularBetweenLine(AB,EB)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BP))",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "angle_addition(ABE,EBP)",
+    "angle_addition(CAE,EAB)",
+    "triangle_property_angle_sum(PAB)",
+    "sine_theorem(BPA)"
+  ]
+}

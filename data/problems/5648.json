@@ -1,0 +1,26 @@
+{
+  "problem_id": 5648,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7303",
+  "problem_level": 1,
+  "problem_text_cn": "如图是拦水坝的横断面,斜坡AB的水平宽度为12m,斜面坡度为1:2,则斜坡AB的长为()",
+  "problem_text_en": "As shown in the figure, the cross section of the dam, the horizontal width of the slope AB is N_0, and the slope of the slope is N_1:N_2, then the length of the slope AB is ()",
+  "problem_img": "5648.png",
+  "construction_cdl": [
+    "Shape(DE,EC,CB,BD)",
+    "Shape(BC,CA,AB)",
+    "Collinear(ECA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),12)",
+    "Equal(Div(LengthOfLine(BC),LengthOfLine(AC)),1/2)",
+    "Equal(MeasureOfAngle(BCA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "6*sqrt(5)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

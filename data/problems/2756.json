@@ -1,0 +1,24 @@
+{
+  "problem_id": 2756,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-2903",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Express the ratio of \\sin N as a decimal to the nearest hundredth.",
+  "problem_img": "2756.png",
+  "construction_cdl": [
+    "Shape(PN,NM,MP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(MN),39)",
+    "Equal(LengthOfLine(MP),36)",
+    "Equal(LengthOfLine(NP),15)",
+    "PerpendicularBetweenLine(MP,NP)"
+  ],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(PNM)))",
+  "problem_answer": "0.923",
+  "theorem_seqs": [
+    "sine_theorem(MPN)"
+  ]
+}

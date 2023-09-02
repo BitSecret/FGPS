@@ -1,0 +1,38 @@
+{
+  "problem_id": 1092,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-1129",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Square F G H J is inscribed in \\odot K. Find the measure of a central angle.",
+  "problem_img": "1092.png",
+  "construction_cdl": [
+    "Shape(GF,FK,KG)",
+    "Shape(FJ,JH,HK,KF)",
+    "Shape(GK,KL,LG)",
+    "Shape(KH,HL,LK)",
+    "Shape(FG,KGF)",
+    "Shape(JF,KFJ)",
+    "Shape(HJ,KJH)",
+    "Shape(GH,KHG)",
+    "Collinear(GLH)",
+    "Collinear(FKH)",
+    "Cocircular(K,FJHG)"
+  ],
+  "text_cdl": [
+    "Square(FJHG)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(K,K)",
+    "PerpendicularBetweenLine(KL,GL)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(GKH))",
+  "problem_answer": "90",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(KF,K)",
+    "radius_of_circle_property_length_equal(KH,K)",
+    "isosceles_triangle_judgment_line_equal(GFH)",
+    "median_of_triangle_judgment(GK,GFH)",
+    "isosceles_triangle_property_line_coincidence(GFH,K)"
+  ]
+}

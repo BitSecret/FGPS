@@ -1,0 +1,30 @@
+{
+  "problem_id": 446,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-456",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. A = 177 cm^2.",
+  "problem_img": "446.png",
+  "construction_cdl": [
+    "Shape(BD,DA,AE,EB)",
+    "Shape(EA,AC,CE)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Trapezoid(BDAC)",
+    "Equal(AreaOfQuadrilateral(BDAC),177)",
+    "Equal(LengthOfLine(AE),13)",
+    "Equal(LengthOfLine(AD),11)",
+    "Equal(LengthOfLine(BC),x)",
+    "PerpendicularBetweenLine(AE,BE)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "16.230",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CEA,AEB)",
+    "altitude_of_quadrilateral_judgment_left_vertex(AE,ACBD)",
+    "trapezoid_area_formula(ACBD)"
+  ]
+}

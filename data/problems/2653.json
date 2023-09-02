@@ -1,0 +1,42 @@
+{
+  "problem_id": 2653,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2789",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot T, Z V = 1, and T W = 13. Find X Y.",
+  "problem_img": "2653.png",
+  "construction_cdl": [
+    "Shape(ZV,VY,TYZ)",
+    "Shape(XV,VZ,TZX)",
+    "Shape(TV,VX,XT)",
+    "Shape(YV,VT,TY)",
+    "Shape(YT,TX,TXY)",
+    "Collinear(XVY)",
+    "Collinear(ZVTW)",
+    "Cocircular(T,YZXW)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(T,T)",
+    "Equal(LengthOfLine(ZV),1)",
+    "Equal(LengthOfLine(TW),13)",
+    "PerpendicularBetweenLine(TV,XV)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(XY))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(TW,T)",
+    "radius_of_circle_property_length_equal(TZ,T)",
+    "radius_of_circle_property_length_equal(TX,T)",
+    "radius_of_circle_property_length_equal(TY,T)",
+    "line_addition(ZV,VT)",
+    "flat_angle(YVX)",
+    "angle_addition(YVT,TVX)",
+    "right_triangle_judgment_angle(TVX)",
+    "right_triangle_judgment_angle(YVT)",
+    "right_triangle_property_pythagorean(TVX)",
+    "right_triangle_property_pythagorean(YVT)",
+    "line_addition(XV,VY)"
+  ]
+}

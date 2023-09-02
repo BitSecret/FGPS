@@ -1,0 +1,44 @@
+{
+  "problem_id": 265,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-268",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "265.png",
+  "construction_cdl": [
+    "Shape(EDC,CD)",
+    "Shape(DC,CE,ED)",
+    "Shape(ECG,GE,EC)",
+    "Shape(EGK,KE,EG)",
+    "Shape(EKD,DE,EK)",
+    "Shape(EKD,KF,FD)",
+    "Collinear(GEKF)",
+    "Collinear(CDF)",
+    "Cocircular(E,CGKD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(E,E)",
+    "Equal(MeasureOfArc(EDC),130)",
+    "Equal(MeasureOfAngle(KFD),x)",
+    "Equal(MeasureOfArc(ECG),45)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "arc_property_center_angle(EDC,E)",
+    "arc_property_center_angle(ECG,E)",
+    "radius_of_circle_property_length_equal(EC,E)",
+    "radius_of_circle_property_length_equal(ED,E)",
+    "isosceles_triangle_judgment_line_equal(EDC)",
+    "isosceles_triangle_property_angle_equal(EDC)",
+    "triangle_property_angle_sum(DCE)",
+    "flat_angle(FDC)",
+    "angle_addition(FDE,EDC)",
+    "flat_angle(GEK)",
+    "angle_addition(GEC,CED)",
+    "angle_addition(GED,DEF)",
+    "triangle_property_angle_sum(DEF)"
+  ]
+}

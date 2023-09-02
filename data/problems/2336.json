@@ -1,0 +1,24 @@
+{
+  "problem_id": 2336,
+  "annotation": "ChenyangMao_2023-04-09",
+  "source": "Geometry3k-2450",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "A plane travels from Des Moines to Phoenix, on to Atlanta, and back to Des Moines, as shown below. Find the distance in miles from Phoenix to Atlanta if the total trip was 3482 miles.",
+  "problem_img": "2336.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(PerimeterOfTriangle(CBA),3482)",
+    "Equal(LengthOfLine(AC),73.8*x)",
+    "Equal(LengthOfLine(AB),150*x+91)",
+    "Equal(LengthOfLine(BC),110*x+53)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BA))",
+  "problem_answer": "1591",
+  "theorem_seqs": [
+    "triangle_perimeter_formula(CBA)"
+  ]
+}

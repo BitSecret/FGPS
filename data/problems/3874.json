@@ -1,0 +1,37 @@
+{
+  "problem_id": 3874,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1764",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C、D为圆上两点,∠D=34°,则∠BOC的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C and D are two points on the circle, ∠D = N_0, then the degree of ∠BOC is ()",
+  "problem_img": "3874.png",
+  "construction_cdl": [
+    "Shape(AE,EC,OCA)",
+    "Shape(CE,EO,OC)",
+    "Shape(CO,OB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(DA,OAD)",
+    "Shape(AD,DE,EA)",
+    "Shape(BE,ED,ODB)",
+    "Collinear(AEOB)",
+    "Collinear(CED)",
+    "Cocircular(O,CADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ADE),34)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "112",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

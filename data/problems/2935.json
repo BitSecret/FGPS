@@ -1,0 +1,28 @@
+{
+  "problem_id": 2935,
+  "annotation": "JiaZou_2023-04-16",
+  "source": "GeoQA-119",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC≌△DCB,点A、B的对应顶点分别为点D、C,如果AB=7cm,BC=12cm,AC=9cm,那么BD的长是()．",
+  "problem_text_en": "As shown in the figure, △ABC ≌ △DCB, the corresponding vertices of points A and B are points D and C, respectively. If AB = N_0, BC = N_1, AC = N_2, then the length of BD is ()",
+  "problem_img": "2935.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Shape(DO,OC,CD)",
+    "Collinear(AOC)",
+    "Collinear(DOB)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(ABC,DBC)",
+    "Equal(LengthOfLine(AB),7)",
+    "Equal(LengthOfLine(BC),12)",
+    "Equal(LengthOfLine(AC),9)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_line_equal(BCA,CDB)"
+  ]
+}

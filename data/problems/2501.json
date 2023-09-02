@@ -1,0 +1,29 @@
+{
+  "problem_id": 2501,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2625",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral D E F G is a rectangle. If m \\angle E F D = 2 x - 3 and m \\angle D F G = x + 12, find m \\angle E F D.",
+  "problem_img": "2501.png",
+  "construction_cdl": [
+    "Shape(AD,DG,GA)",
+    "Shape(AG,GF,FA)",
+    "Shape(AF,FE,EA)",
+    "Shape(AE,ED,DA)",
+    "Collinear(DAF)",
+    "Collinear(EAG)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(DGFE)",
+    "Equal(MeasureOfAngle(DFE),2*x-3)",
+    "Equal(MeasureOfAngle(GFD),x+12)",
+    "PerpendicularBetweenLine(DG,FG)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DFE))",
+  "problem_answer": "51",
+  "theorem_seqs": [
+    "angle_addition(GFD,DFE)"
+  ]
+}

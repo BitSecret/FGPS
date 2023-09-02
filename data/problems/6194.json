@@ -1,0 +1,29 @@
+{
+  "problem_id": 6194,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8774",
+  "problem_level": 1,
+  "problem_text_cn": "如图,A、B、C是⊙O上的三点,点C是劣弧AB的中点,∠A=40°,则∠B的度数等于()",
+  "problem_text_en": "As shown in the figure, A, B, C are three vertices on ⊙O, point C is the midpoint of the minor arc AB, ∠A = N_0, then the degree of ∠B is equal to ()",
+  "problem_img": "6194.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(AB,BC,CA)",
+    "Shape(AC,OCA)",
+    "Cocircular(O,BCA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsMidpointOfArc(C,OBA)",
+    "Equal(MeasureOfAngle(CAB),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(OBC,OCA)",
+    "congruent_arc_property_measure_equal(OBC,OCA)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(OCA,B)"
+  ]
+}

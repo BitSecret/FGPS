@@ -1,0 +1,36 @@
+{
+  "problem_id": 6735,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9787",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC顶点A、B、C都在⊙O上,连接AO、BO,若∠OAB=50°,则∠ACB的大小是()",
+  "problem_text_en": "As shown in the figure, △ABC vertices A, B, and C are all on ⊙O, connecting AO and BO, if ∠OAB = N_0, then the size of ∠ACB is ()",
+  "problem_img": "6735.png",
+  "construction_cdl": [
+    "Shape(OA,AD,DO)",
+    "Shape(DA,AB,BD)",
+    "Shape(CD,DB,BC)",
+    "Shape(BA,OAB)",
+    "Shape(CB,OBC)",
+    "Shape(AO,OD,DC,OCA)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OAB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)"
+  ]
+}

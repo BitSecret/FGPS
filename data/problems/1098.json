@@ -1,0 +1,48 @@
+{
+  "problem_id": 1098,
+  "annotation": "XiaoxiaoJin_2023-04-09",
+  "source": "Geometry3k-1135",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find z in the figure.",
+  "problem_img": "1098.png",
+  "construction_cdl": [
+    "Shape(JM,ME)",
+    "Shape(EM,MN)",
+    "Shape(NM,MP)",
+    "Shape(PM,MJ)",
+    "Shape(HI,IE)",
+    "Shape(EI,IK)",
+    "Shape(KI,IP)",
+    "Shape(PI,IH)",
+    "Shape(BL,LE)",
+    "Shape(EL,LR)",
+    "Shape(RL,LP)",
+    "Shape(PL,LB)",
+    "Collinear(JSCMN)",
+    "Collinear(HFIAK)",
+    "Collinear(BQLGODR)",
+    "Collinear(PLIME)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(JME),z)",
+    "Equal(MeasureOfAngle(KIP),4*x+6)",
+    "Equal(MeasureOfAngle(ILR),2*y+8)",
+    "Equal(MeasureOfAngle(RLP),142)",
+    "ParallelBetweenLine(JN,HK)",
+    "ParallelBetweenLine(HK,BR)"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "142",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ELR,RLP)",
+    "parallel_property_collinear_extend(HK,BR,I)",
+    "parallel_property_collinear_extend(RB,KI,L)",
+    "parallel_property_collinear_extend(JN,HK,M)",
+    "parallel_property_collinear_extend(KH,NM,I)",
+    "parallel_property_corresponding_angle(IK,LR,E)",
+    "parallel_property_corresponding_angle(MN,IK,E)",
+    "adjacent_complementary_angle(JME,EMN)"
+  ]
+}

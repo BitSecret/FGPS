@@ -1,0 +1,47 @@
+{
+  "problem_id": 6406,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9267",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,AB=10,∠BAD的平分线与BC的延长线交于点E,与DC交于点F,且点F恰好为DC的中点,DG⊥AE,垂足为G．若DG=3,则AE的边长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, AB = N_0, the bisector of ∠BAD and the extended line of BC intersect at point E, and DC at point F, and point F is exactly the midpoint of DC, DG ⊥ AE, foot of perpendicular is G. If DG = N_1, then the side length of AE is ()",
+  "problem_img": "6406.png",
+  "construction_cdl": [
+    "Shape(AG,GD,DA)",
+    "Shape(DG,GF,FD)",
+    "Shape(FC,CE,EF)",
+    "Shape(AB,BC,CF,FG,GA)",
+    "Collinear(AGFE)",
+    "Collinear(DFC)",
+    "Collinear(BCE)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),10)",
+    "IsBisectorOfAngle(AE,DAB)",
+    "IsMidpointOfLine(F,CD)",
+    "PerpendicularBetweenLine(DG,FG)",
+    "Equal(LengthOfLine(DG),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "line_addition(DF,FC)",
+    "line_addition(AF,FE)",
+    "line_addition(AG,GF)",
+    "adjacent_complementary_angle(AGD,DGF)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallel_property_collinear_extend(DC,AB,F)",
+    "parallel_property_alternate_interior_angle(EC,DA)",
+    "parallel_property_alternate_interior_angle(DF,AB)",
+    "isosceles_triangle_judgment_angle_equal(DAF)",
+    "right_triangle_judgment_angle(AGD)",
+    "right_triangle_judgment_angle(DGF)",
+    "right_triangle_property_pythagorean(AGD)",
+    "right_triangle_property_pythagorean(DGF)",
+    "congruent_triangle_judgment_aas(FCE,FDA)",
+    "congruent_triangle_property_line_equal(CEF,DAF)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 3687,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1437",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB、CD相交于点O,OE平分∠AOD,若∠COE=140°,则∠BOC=()",
+  "problem_text_en": "As shown in the figure, the lines AB and CD intersect at point O, and OE bisects ∠AOD. If ∠COE = N_0, then ∠BOC = ()",
+  "problem_img": "3687.png",
+  "construction_cdl": [
+    "Shape(BO,OC)",
+    "Shape(CO,OA)",
+    "Shape(AO,OE)",
+    "Shape(EO,OD)",
+    "Shape(DO,OB)",
+    "Collinear(BOA)",
+    "Collinear(COD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(COE),140)",
+    "IsBisectorOfAngle(OE,AOD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOC))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "angle_addition(COA,AOE)",
+    "adjacent_complementary_angle(BOC,COA)",
+    "adjacent_complementary_angle(COE,EOD)"
+  ]
+}

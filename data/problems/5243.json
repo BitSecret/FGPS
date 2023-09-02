@@ -1,0 +1,26 @@
+{
+  "problem_id": 5243,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5325",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点E、F分别在AB、CD上,∠B=40°,∠C=60°,则∠1+∠2等于()",
+  "problem_text_en": "As shown in the figure, points E and F are on AB and CD respectively, ∠B = N_0, ∠C = N_1, then ∠1 + ∠2 is equal to ()",
+  "problem_img": "5243.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BC,CF,FE)",
+    "Collinear(AEB)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABC),40)",
+    "Equal(MeasureOfAngle(BCA),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(AEF),MeasureOfAngle(EFA)))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(AEF)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

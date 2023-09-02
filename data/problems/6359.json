@@ -1,0 +1,39 @@
+{
+  "problem_id": 6359,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9199",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,在菱形ABCD中,∠BAD=110°,AB的垂直平分线交对角线AC于点F,E为垂足,连结DF,则∠CDF等于()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, ∠BAD = N_0, the perpendicular bisector of AB intersects the diagonal AC at point F, E is the foot of perpendicular, connects DF, then ∠CDF is equal to ()",
+  "problem_img": "6359.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BF,FE)",
+    "Shape(FB,BC,CF)",
+    "Shape(AF,FD,DA)",
+    "Shape(FC,CD,DF)",
+    "Collinear(AEB)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(DAB),110)",
+    "IsPerpendicularBisectorOfLine(FE,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDF))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "isosceles_triangle_judgment_line_equal(BCA)",
+    "isosceles_triangle_property_angle_equal(BCA)",
+    "angle_addition(DAF,FAB)",
+    "perpendicular_bisector_property_distance_equal(FE,AB)",
+    "isosceles_triangle_judgment_line_equal(FAB)",
+    "isosceles_triangle_property_angle_equal(FAB)",
+    "mirror_congruent_triangle_judgment_sas(ABF,AFD)",
+    "mirror_congruent_triangle_property_angle_equal(BFA,DAF)",
+    "parallel_property_ipsilateral_internal_angle(DC,AB)",
+    "angle_addition(CDF,FDA)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 4077,
+  "annotation": "XiaokaiZhang_2023-05-07",
+  "source": "GeoQA-2421",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O中,弦BC与半径OA相交于点D,连接AB,OC．若∠A=60°,∠ADC=85°,则∠C的度数是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, chord BC and radius OA intersect at point D, connecting AB and OC. If ∠A = N_0, ∠ADC = N_1, then the degree of ∠C is ()",
+  "problem_img": "4077.png",
+  "construction_cdl": [
+    "Shape(OCB,BD,DO,OC)",
+    "Shape(DB,BA,AD)",
+    "Shape(CO,OD,DC)",
+    "Shape(DA,OAC,CD)",
+    "Shape(OBA,AB)",
+    "Collinear(BDC)",
+    "Collinear(ODA)",
+    "Cocircular(O,BAC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BAO),60)",
+    "Equal(MeasureOfAngle(CDA),85)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCO))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDA,ADB)",
+    "adjacent_complementary_angle(ODC,CDA)",
+    "triangle_property_angle_sum(DBA)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "arc_property_center_angle(OAC,O)",
+    "triangle_property_angle_sum(ODC)"
+  ]
+}

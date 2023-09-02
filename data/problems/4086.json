@@ -1,0 +1,28 @@
+{
+  "problem_id": 4086,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2445",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD是平面镜子,光线从A点射出,经CD上一点E反射后照射到B点,若入射角为α,AC⊥CD,BD⊥CD,垂足分别为C、D,且AC=3,BD=6,CD=10,则线段ED的长为()",
+  "problem_text_en": "As shown in the figure, CD is a plane mirror, the light is emitted from point A, reflected by point E on CD, and irradiated to point B. If the incident angle is α, AC ⊥ CD, BD ⊥ CD, the feet of perpendicular are C, D, and AC = N_0, BD = N_1, CD = N_2, then the length of the line segment ED is ()",
+  "problem_img": "4086.png",
+  "construction_cdl": [
+    "Shape(AC,CE,EA)",
+    "Shape(ED,DB,BE)",
+    "Collinear(CED)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),3)",
+    "Equal(LengthOfLine(BD),6)",
+    "Equal(LengthOfLine(CD),10)",
+    "MirrorSimilarBetweenTriangle(EAC,EDB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(ED))",
+  "problem_answer": "20/3",
+  "theorem_seqs": [
+    "mirror_similar_triangle_property_line_ratio(EAC,EDB)",
+    "mirror_similar_triangle_property_line_ratio(ACE,BED)",
+    "line_addition(CE,ED)"
+  ]
+}

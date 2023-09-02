@@ -1,0 +1,37 @@
+{
+  "problem_id": 6795,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-9922",
+  "problem_level": 1,
+  "problem_text_cn": "图中,EB为半圆O的直径,点A在EB的延长线上,AD切半圆O于点D,BC⊥AD于点C,AB=2,半圆O的半径为2,则BC的长为()",
+  "problem_text_en": "In the figure, EB is the diameter of semicircle O, point A is on the extended line of EB, AD tangents semicircle O at point D, BC ⊥ AD is at point C, AB = N_0, the radius of semicircle O is N_1, then the length of BC is ()",
+  "problem_img": "6795.png",
+  "construction_cdl": [
+    "Shape(ODE,EO,OD)",
+    "Shape(OBD,DO,OB)",
+    "Shape(BC,CD,OBD)",
+    "Shape(AC,CB,BA)",
+    "Collinear(EOBA)",
+    "Collinear(DCA)",
+    "Cocircular(O,BDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(EB,O)",
+    "IsTangentOfCircle(AD,O)",
+    "PerpendicularBetweenLine(AC,BC)",
+    "Equal(LengthOfLine(AB),2)",
+    "Equal(RadiusOfCircle(O),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "tangent_of_circle_property_perpendicular(AD,O,O)",
+    "parallel_judgment_corresponding_angle(CB,DO,A)",
+    "midsegment_of_triangle_judgment_parallel(CB,ADO)",
+    "midsegment_of_triangle_property_length(CB,ADO)"
+  ]
+}

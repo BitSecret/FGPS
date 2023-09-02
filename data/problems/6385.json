@@ -1,0 +1,25 @@
+{
+  "problem_id": 6385,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9242",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,M是BC延长线上的一点,若∠A=135°,则∠MCD的度数是()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, M is a point on the extended line line of BC, if ∠A = N_0, then the degree of ∠MCD is ()",
+  "problem_img": "6385.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)",
+    "Shape(DC,CM)",
+    "Collinear(BCM)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(MeasureOfAngle(DAB),135)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCM))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(ABCD)",
+    "adjacent_complementary_angle(BCD,DCM)"
+  ]
+}

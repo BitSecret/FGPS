@@ -1,0 +1,31 @@
+{
+  "problem_id": 2847,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-3000",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "A B C D is a rhombus. If P B = 12, A B = 15, and m \\angle A B D = 24. Find m \\angle B D A.",
+  "problem_img": "2847.png",
+  "construction_cdl": [
+    "Shape(AD,DP,PA)",
+    "Shape(PD,DC,CP)",
+    "Shape(PC,CB,BP)",
+    "Shape(PB,BA,AP)",
+    "Collinear(APC)",
+    "Collinear(DPB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rhombus(ADCB)",
+    "Equal(LengthOfLine(PA),12)",
+    "Equal(LengthOfLine(BB),15)",
+    "Equal(MeasureOfAngle(DBA),24)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ADB))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(DCBA,P)",
+    "mirror_similar_triangle_judgment_sss(ADP,APB)",
+    "mirror_similar_triangle_property_angle_equal(DPA,BAP)"
+  ]
+}

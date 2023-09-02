@@ -1,0 +1,32 @@
+{
+  "problem_id": 6844,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10060",
+  "problem_level": 1,
+  "problem_text_cn": "三角板是我们学习数学的工具，一副三角板拼成如图方式，则图中∠2﹣∠1的值为（）",
+  "problem_text_en": "",
+  "problem_img": "6844.png",
+  "construction_cdl": [
+    "Shape(AB,BH,HG,GE,EA)",
+    "Shape(DE,EF,FD)",
+    "Shape(FE,EG,GH,HI,IF)",
+    "Shape(FI,IC,CF)",
+    "Shape(HJ,JI,IH)",
+    "Collinear(AEFC)",
+    "Collinear(DFIJ)",
+    "Collinear(DEG)",
+    "Collinear(BHIC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DGJ),90)",
+    "Equal(MeasureOfAngle(EFD),90)",
+    "Equal(MeasureOfAngle(FDE),45)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sub(MeasureOfAngle(FEG),MeasureOfAngle(EFD)))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(DEF)",
+    "adjacent_complementary_angle(DEF,FEG)"
+  ]
+}

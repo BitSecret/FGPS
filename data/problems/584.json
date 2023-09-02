@@ -1,0 +1,30 @@
+{
+  "problem_id": 584,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-598",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "584.png",
+  "construction_cdl": [
+    "Shape(EA,AG,GE)",
+    "Shape(GA,AD,DG)",
+    "Collinear(EGD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(DEA),45)",
+    "Equal(LengthOfLine(EA),8)",
+    "Equal(MeasureOfAngle(ADE),30)",
+    "PerpendicularBetweenLine(DG,AG)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(GD))",
+  "problem_answer": "4*sqrt(6)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DGA,AGE)",
+    "triangle_property_angle_sum(DGA)",
+    "sine_theorem(DGA)",
+    "sine_theorem(ADG)",
+    "sine_theorem(AGE)"
+  ]
+}

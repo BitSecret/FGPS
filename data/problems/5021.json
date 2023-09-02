@@ -1,0 +1,49 @@
+{
+  "problem_id": 5021,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4740",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,E为AB的中点,F为AD上一点,EF交AC于G,AF=2cm,DF=4cm,AG=3cm,则AC的长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, E is the midpoint of AB, F is the point on AD, EF intersects AC at G, AF = N_0, DF = N_1, AG = N_2, then the length of AC is ()",
+  "problem_img": "5021.png",
+  "construction_cdl": [
+    "Shape(DF,FG,GC,CD)",
+    "Shape(GF,FA,AG)",
+    "Shape(GA,AE,EG)",
+    "Shape(CG,GE,EB,BC)",
+    "Shape(BE,EH,HB)",
+    "Collinear(DFA)",
+    "Collinear(AGC)",
+    "Collinear(AEB)",
+    "Collinear(FGEH)",
+    "Collinear(CBH)"
+  ],
+  "text_cdl": [
+    "Parallelogram(DABC)",
+    "Equal(LengthOfLine(AE),LengthOfLine(EB))",
+    "Equal(LengthOfLine(AF),2)",
+    "Equal(LengthOfLine(DF),4)",
+    "Equal(LengthOfLine(AG),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CB,DA,H)",
+    "parallel_property_collinear_extend(AD,HC,F)",
+    "parallel_property_alternate_interior_angle(AD,BC)",
+    "parallel_property_alternate_interior_angle(AF,HC)",
+    "parallel_property_alternate_interior_angle(DC,AB)",
+    "vertical_angle(AEF,BEH)",
+    "congruent_triangle_judgment_aas(BEH,AEF)",
+    "congruent_triangle_judgment_aas(DAC,BCA)",
+    "congruent_triangle_property_line_equal(EHB,EFA)",
+    "congruent_triangle_property_line_equal(CDA,ABC)",
+    "line_addition(DF,FA)",
+    "line_addition(AG,GC)",
+    "line_addition(CB,BH)",
+    "similar_triangle_judgment_aa(GFA,GHC)",
+    "similar_triangle_property_line_ratio(GFA,GHC)",
+    "similar_triangle_property_line_ratio(FAG,HCG)"
+  ]
+}

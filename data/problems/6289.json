@@ -1,0 +1,39 @@
+{
+  "problem_id": 6289,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-8981",
+  "problem_level": 1,
+  "problem_text_cn": "如图,正方形ABCD中,CE=MN,∠MCE=42°,则∠ANM等于()",
+  "problem_text_en": "As shown in the figure, in the square ABCD, CE = MN, ∠MCE = N_0, then ∠ANM is equal to ()",
+  "problem_img": "6289.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FN,NA)",
+    "Shape(FE,EB,BM,MF)",
+    "Shape(FM,MG,GH,HF)",
+    "Shape(HG,GC,CH)",
+    "Shape(NH,HC,CD,DN)",
+    "Shape(NF,FH,HN)",
+    "Collinear(AND)",
+    "Collinear(AEB)",
+    "Collinear(EFHC)",
+    "Collinear(BMGC)",
+    "Collinear(NFM)",
+    "Collinear(NHG)"
+  ],
+  "text_cdl": [
+    "Square(ABCD)",
+    "Equal(LengthOfLine(CE),LengthOfLine(MN))",
+    "Equal(LengthOfLine(BC),LengthOfLine(NG))",
+    "Equal(MeasureOfAngle(MCE),42)",
+    "Equal(MeasureOfAngle(MGN),90)",
+    "Equal(MeasureOfAngle(GNA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(MNA))",
+  "problem_answer": "48",
+  "theorem_seqs": [
+    "congruent_triangle_judgment_hl(MGN,EBC)",
+    "congruent_triangle_property_angle_equal(NMG,CEB)",
+    "angle_addition(GNM,MNA)"
+  ]
+}

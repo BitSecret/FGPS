@@ -1,0 +1,33 @@
+{
+  "problem_id": 455,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-465",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y and so that the quadrilateral is a parallelogram.",
+  "problem_img": "455.png",
+  "construction_cdl": [
+    "Shape(CA,AE,EC)",
+    "Shape(EA,AB,BE)",
+    "Shape(EB,BD,DE)",
+    "Shape(ED,DC,CE)",
+    "Collinear(AED)",
+    "Collinear(CEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(CABD)",
+    "Equal(LengthOfLine(DE),3*y+4)",
+    "Equal(LengthOfLine(CE),4*y)",
+    "Equal(LengthOfLine(BE),2/3*x)",
+    "Equal(LengthOfLine(AE),x)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "4/3",
+  "theorem_seqs": [
+    "line_addition(AE,ED)",
+    "line_addition(CE,EB)",
+    "parallelogram_property_diagonal_bisection(CABD,E)",
+    "parallelogram_property_diagonal_bisection(ABDC,E)"
+  ]
+}

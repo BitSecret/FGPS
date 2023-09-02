@@ -1,0 +1,32 @@
+{
+  "problem_id": 4768,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4141",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是Rt△ABC的外接圆,∠ACB=90°,∠A=25°,过点C作⊙O的切线,交AB的延长线于点D,则∠D的度数是()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of Rt△ABC, ∠ACB = N_0, ∠A = N_1, crossing point C to draw the tangent of ⊙O, and intersects the extended line of AB at point D, then the degree of ∠D is ()",
+  "problem_img": "4768.png",
+  "construction_cdl": [
+    "Shape(CD,DB,OCB)",
+    "Shape(AC,CO,OA)",
+    "Shape(CA,OAC)",
+    "Shape(BO,OC,OCB)",
+    "Shape(AO,OB,OBA)",
+    "Collinear(AOBD)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(OAC),20)",
+    "IsTangentOfCircle(DC,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(DC,O,O)",
+    "arc_property_circumference_angle_external(OCB,A)",
+    "arc_property_center_angle(OCB,O)",
+    "triangle_property_angle_sum(OCD)"
+  ]
+}

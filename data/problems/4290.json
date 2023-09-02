@@ -1,0 +1,35 @@
+{
+  "problem_id": 4290,
+  "annotation": "DengfengYue_2023-05-07",
+  "source": "GeoQA-3089",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,AD是直径,∠ABC=40°,则∠CAD等于()",
+  "problem_text_en": "As shown in the figure, in ⊙O, AD is the diameter, ∠ABC = N_0, then ∠CAD is equal to ()",
+  "problem_img": "4290.png",
+  "construction_cdl": [
+    "Shape(DC,OCD)",
+    "Shape(CD,DE,EC)",
+    "Shape(CE,EA,AC)",
+    "Shape(CA,OAC)",
+    "Shape(AE,EB,BA)",
+    "Shape(AB,OBA)",
+    "Shape(BE,ED,ODB)",
+    "Collinear(DOEA)",
+    "Collinear(CEB)",
+    "Cocircular(O,CDBA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(DA,O)",
+    "Equal(MeasureOfAngle(CBA),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAC))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAC,D)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "diameter_of_circle_property_right_angle(ACD,O)",
+    "triangle_property_angle_sum(CDA)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 4725,
+  "annotation": "XiaoxiaoJin_2023-05-14",
+  "source": "GeoQA-4056",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知AB是⊙O的直径,点C在⊙O上,过点C的切线与AB的延长线交于点P,连接AC,若∠A=30°,PC=3,则⊙O的半径为()",
+  "problem_text_en": "As shown in the figure, it is known that AB is the diameter of ⊙O, point C is on ⊙O, the tangent passing point C and the extended line of AB intersect at point P, connect AC, if ∠A = N_0, PC = N_1, then ⊙O The radius is ()",
+  "problem_img": "4725.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(AO,OC,CA)",
+    "Shape(CO,OB,OBC)",
+    "Shape(BP,PC,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(AOBP)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PC),3)",
+    "IsTangentOfCircle(PC,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "sqrt(3)",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "tangent_of_circle_property_perpendicular(PC,O,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "triangle_property_angle_sum(COP)",
+    "sine_theorem(COP)"
+  ]
+}

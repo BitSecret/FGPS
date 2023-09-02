@@ -1,0 +1,33 @@
+{
+  "problem_id": 1402,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1452",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the kite.",
+  "problem_img": "1402.png",
+  "construction_cdl": [
+    "Shape(SB,BE,ES)",
+    "Shape(SE,EC,CS)",
+    "Shape(EB,BA,AE)",
+    "Shape(CE,EA,AC)",
+    "Collinear(SEA)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Kite(SBAC)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(BE),5)",
+    "Equal(LengthOfLine(SE),14)",
+    "Equal(LengthOfLine(AE),8)",
+    "Equal(LengthOfLine(BE),LengthOfLine(EC))"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(SBAC))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "line_addition(SE,EA)",
+    "line_addition(BE,EC)",
+    "kite_area_formula_diagonal(SBAC)"
+  ]
+}

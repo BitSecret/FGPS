@@ -1,0 +1,35 @@
+{
+  "problem_id": 6898,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10132",
+  "problem_level": 1,
+  "problem_text_cn": "如图，两条弦AB，CD相交于点E，且弧AD等于弧CB，∠C＝50°，则∠CEB的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6898.png",
+  "construction_cdl": [
+    "Shape(EA,AC,CE)",
+    "Shape(DE,EB,OBD)",
+    "Shape(EC,OCB,BE)",
+    "Shape(AE,ED,ODA)",
+    "Collinear(AEB)",
+    "Collinear(CED)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfArc(ODA),LengthOfArc(OCB))",
+    "Equal(MeasureOfAngle(ACE),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BEC))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(ODA,OCB)",
+    "congruent_arc_property_measure_equal(ODA,OCB)",
+    "arc_property_circumference_angle_external(OCB,A)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "triangle_property_angle_sum(EAC)",
+    "flat_angle(BEA)",
+    "angle_addition(BEC,CEA)"
+  ]
+}

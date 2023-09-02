@@ -1,0 +1,28 @@
+{
+  "problem_id": 488,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-499",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral M N O P is a rectangle. If M O = 6 x + 14 and P N = 9 x + 5, find x.",
+  "problem_img": "488.png",
+  "construction_cdl": [
+    "Shape(AP,PM,MA)",
+    "Shape(AO,OP,PA)",
+    "Shape(AN,NO,OA)",
+    "Shape(AM,MN,NA)",
+    "Collinear(PAN)",
+    "Collinear(MAO)"
+  ],
+  "text_cdl": [
+    "Rectangle(MNOP)",
+    "Equal(LengthOfLine(MO),6*x+14)",
+    "Equal(LengthOfLine(PN),9*x+5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "rectangle_property_diagonal_equal(MNOP)"
+  ]
+}

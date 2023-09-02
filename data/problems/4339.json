@@ -1,0 +1,37 @@
+{
+  "problem_id": 4339,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3216",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠ACB是⊙O的弧AB所对的圆周角,点P是⊙O的割线m上任意一点,线段PA,PB的中点分别为D,E,若⊙O的半径为8cm,∠ACB=30°,则线段DE的长为()",
+  "problem_text_en": "As shown in the figure, ∠ACB is the angle of the circumference of the arc AB of ⊙O, point P is any point on the secant line of ⊙O, and the midpoints of line segments PA and PB are D and E respectively. If the radius of ⊙O is N_0, ∠ACB = N_1, then the length of the line segment DE is ()",
+  "problem_img": "4339.png",
+  "construction_cdl": [
+    "Shape(OA,AD,DO)",
+    "Shape(DA,AB,BD)",
+    "Shape(OAB,BA)",
+    "Shape(CD,DB,BC)",
+    "Shape(OBC,CB)",
+    "Shape(OD,DC,OCA,AO)",
+    "Collinear(ADC)",
+    "Collinear(ODB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(OA),8)",
+    "Equal(LengthOfLine(OB),8)",
+    "Equal(MeasureOfAngle(BCA),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_center_angle(OAB,O)",
+    "isosceles_triangle_judgment_line_equal(OAB)",
+    "isosceles_triangle_property_angle_equal(OAB)",
+    "triangle_property_angle_sum(OAB)",
+    "isosceles_triangle_judgment_angle_equal(ABO)"
+  ]
+}

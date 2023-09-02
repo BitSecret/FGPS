@@ -1,0 +1,36 @@
+{
+  "problem_id": 5409,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5706",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=AC,BC=9,点D在边AB上,且BD=5将线段BD沿着BC的方向平移得到线段EF,若平移的距离为6时点F恰好落在AC边上,则△CEF的周长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, BC = N_0, point D is on the side AB, and BD = N_1 translate the line segment BD along the direction of BC to obtain the line segment EF, if the translation distance is N_2, the point F is exactly falling on AC, the perimeter of △CEF is ()",
+  "problem_img": "5409.png",
+  "construction_cdl": [
+    "Shape(AD,DF,FA)",
+    "Shape(DB,BE,EF,FD)",
+    "Shape(FE,EC,CF)",
+    "Collinear(ADB)",
+    "Collinear(AFC)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(BC),9)",
+    "Equal(LengthOfLine(BD),5)",
+    "Equal(LengthOfLine(BE),6)",
+    "Parallelogram(BEFD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(FEC))",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(EFDB)",
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "parallel_property_corresponding_angle(BD,EF,C)",
+    "isosceles_triangle_judgment_angle_equal(FEC)",
+    "line_addition(BE,EC)",
+    "triangle_perimeter_formula(FEC)"
+  ]
+}

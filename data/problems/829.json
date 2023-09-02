@@ -1,0 +1,33 @@
+{
+  "problem_id": 829,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-858",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the kite.",
+  "problem_img": "829.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DC,CE,ED)",
+    "Shape(AE,EY,YA)",
+    "Shape(EC,CY,YE)",
+    "Collinear(DEY)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Kite(DCYA)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AE),4)",
+    "Equal(LengthOfLine(DE),7)",
+    "Equal(LengthOfLine(YE),11)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ADCY))",
+  "problem_answer": "72",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(DCYA,E)",
+    "line_addition(DE,EY)",
+    "line_addition(AE,EC)",
+    "kite_area_formula_diagonal(DCYA)"
+  ]
+}

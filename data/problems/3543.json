@@ -1,0 +1,33 @@
+{
+  "problem_id": 3543,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1171",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,点C为⊙O上的一点,过点C作⊙O的切线,交直径AB的延长线于点D；若∠A=23°,则∠D的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, point C is a point on ⊙O, passing point C is the tangent of ⊙O, and the extended line line of diameter AB is at point D; if ∠A = N_0, then the degree of ∠D is ()",
+  "problem_img": "3543.png",
+  "construction_cdl": [
+    "Shape(AB,OBA)",
+    "Shape(OA,AC,CO)",
+    "Shape(OC,CB,BO)",
+    "Shape(BC,OCB)",
+    "Shape(CA,OAC)",
+    "Shape(CD,DB,OCB)",
+    "Collinear(AOBD)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(DC,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BAC),23)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "44",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCB,A)",
+    "arc_property_center_angle(OCB,O)",
+    "tangent_of_circle_property_perpendicular(DC,O,O)",
+    "triangle_property_angle_sum(OCD)"
+  ]
+}

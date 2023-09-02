@@ -1,0 +1,37 @@
+{
+  "problem_id": 6212,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8801",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是半⊙O的直径,C是⊙O上一点,OD⊥BC于D,若AC:BC=4:3,AB=10cm,则OD的长为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of half ⊙O, C is a point on ⊙O, OD ⊥ BC is in D, if AC:BC = N_0:N_1, AB = N_2, then the length of OD is ()",
+  "problem_img": "6212.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CA,AO,OD,DC)",
+    "Shape(DO,OB,BD)",
+    "Shape(CB,OBC)",
+    "Collinear(CDB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(LengthOfLine(AB),10)",
+    "Equal(Div(LengthOfLine(AC),LengthOfLine(BC)),4/3)",
+    "PerpendicularBetweenLine(BD,OD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OD))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)",
+    "parallel_judgment_corresponding_angle(DO,CA,B)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OD,BC)",
+    "midsegment_of_triangle_judgment_parallel(DO,BCA)",
+    "midsegment_of_triangle_property_length(DO,BCA)"
+  ]
+}

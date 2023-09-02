@@ -1,0 +1,30 @@
+{
+  "problem_id": 1334,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-1382",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of s in the parallelogram.",
+  "problem_img": "1334.png",
+  "construction_cdl": [
+    "Shape(WY,YB,BW)",
+    "Shape(BY,YZ,ZB)",
+    "Shape(BZ,ZX,XB)",
+    "Shape(BX,XW,WB)",
+    "Collinear(WBZ)",
+    "Collinear(YBX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(WYZX)",
+    "Equal(LengthOfLine(WB),8)",
+    "Equal(LengthOfLine(BX),s-7)",
+    "Equal(LengthOfLine(YB),6)",
+    "Equal(LengthOfLine(ZB),2*t-6)"
+  ],
+  "goal_cdl": "Value(s)",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(YZXW,B)"
+  ]
+}

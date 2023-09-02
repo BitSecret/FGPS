@@ -1,0 +1,27 @@
+{
+  "problem_id": 6494,
+  "annotation": "NaZhu_2023-06-04",
+  "source": "GeoQA-9404",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,延长CD至点E,延长AD至点F,连结EF,如果∠B=110°,那么∠E+∠F=()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, extend CD to point E, extend AD to point F, and connect EF. If ∠B = N_0, then ∠E + ∠F = ()",
+  "problem_img": "6494.png",
+  "construction_cdl": [
+    "Shape(ED,DF,FE)",
+    "Shape(AB,BC,CD,DA)",
+    "Collinear(EDC)",
+    "Collinear(FDA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(MeasureOfAngle(ABC),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(FED),MeasureOfAngle(DFE)))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "vertical_angle(EDF,CDA)",
+    "triangle_property_angle_sum(EDF)"
+  ]
+}

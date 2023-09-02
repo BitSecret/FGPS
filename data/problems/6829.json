@@ -1,0 +1,24 @@
+{
+  "problem_id": 6829,
+  "annotation": "ChenyangMao_2023-06-04",
+  "source": "GeoQA-angle-10044",
+  "problem_level": 1,
+  "problem_text_cn": "如图，在▱ABCD中，若∠A+∠C＝110°，则∠B的度数是（）",
+  "problem_text_en": "",
+  "problem_img": "6829.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(Add(MeasureOfAngle(DAB),MeasureOfAngle(BCD)),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "125",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(ABCD)",
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "quadrilateral_property_angle_sum(ABCD)"
+  ]
+}

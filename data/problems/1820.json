@@ -1,0 +1,55 @@
+{
+  "problem_id": 1820,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1888",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Triangle R S T is circumscribed about the circle below. What is the perimeter of the triangle?",
+  "problem_img": "1820.png",
+  "construction_cdl": [
+    "Shape(RB,ACB,CR)",
+    "Shape(ACB,BA,AC)",
+    "Shape(BS,SD,ABD)",
+    "Shape(ABD,DA,AB)",
+    "Shape(ADE,EA,AD)",
+    "Shape(ADE,DT,TE)",
+    "Shape(AEC,CA,AE)",
+    "Shape(AEC,ET,TC)",
+    "Collinear(RBS)",
+    "Collinear(SDT)",
+    "Collinear(RCT)",
+    "Collinear(AET)",
+    "Cocircular(A,BDEC)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(RB,A)",
+    "IsTangentOfCircle(RC,A)",
+    "IsTangentOfCircle(SB,A)",
+    "IsTangentOfCircle(SD,A)",
+    "IsTangentOfCircle(TC,A)",
+    "IsTangentOfCircle(TD,A)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(LengthOfLine(RB),5)",
+    "Equal(LengthOfLine(BS),x-1)",
+    "Equal(LengthOfLine(SD),x-1)",
+    "Equal(LengthOfLine(TD),10)",
+    "Equal(LengthOfLine(TC),3*x-2)",
+    "Equal(LengthOfLine(RC),x+1)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(RST))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(TC,A,A)",
+    "tangent_of_circle_property_perpendicular(TD,A,A)",
+    "radius_of_circle_property_length_equal(AC,A)",
+    "radius_of_circle_property_length_equal(AD,A)",
+    "mirror_congruent_triangle_judgment_hl(ADT,ATC)",
+    "mirror_congruent_triangle_property_line_equal(ADT,ATC)",
+    "line_addition(RB,BS)",
+    "line_addition(SD,DT)",
+    "line_addition(RC,CT)",
+    "triangle_perimeter_formula(RST)"
+  ]
+}

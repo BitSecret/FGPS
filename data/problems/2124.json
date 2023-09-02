@@ -1,0 +1,28 @@
+{
+  "problem_id": 2124,
+  "annotation": "YiwenHuang_2023-04-23",
+  "source": "Geometry3k-2216",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find R S.",
+  "problem_img": "2124.png",
+  "construction_cdl": [
+    "Shape(RQ,QT,TR)",
+    "Shape(QS,ST,TQ)",
+    "Collinear(RQS)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(RQ),4.5)",
+    "PerpendicularBetweenLine(RQ,TQ)",
+    "Equal(LengthOfLine(TR),LengthOfLine(TS))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(RS))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "altitude_of_triangle_judgment(TQ,TRS)",
+    "isosceles_triangle_judgment_line_equal(TRS)",
+    "isosceles_triangle_property_line_coincidence(TRS,Q)",
+    "line_addition(RQ,QS)"
+  ]
+}

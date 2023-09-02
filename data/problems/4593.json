@@ -1,0 +1,35 @@
+{
+  "problem_id": 4593,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3750",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,点C、O在弦AB的同侧．若∠ACB=40°,则∠ABO的大小为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, and points C and O are on the same side of chord AB. If ∠ACB = N_0, then the size of ∠ABO is ()",
+  "problem_img": "4593.png",
+  "construction_cdl": [
+    "Shape(OAC,CM,MO,OA)",
+    "Shape(AO,OM,MA)",
+    "Shape(MC,CB,BM)",
+    "Shape(AM,MB,BA)",
+    "Shape(AB,OBA)",
+    "Shape(BC,OCB)",
+    "Collinear(OMB)",
+    "Collinear(AMC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ACB),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OBA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "triangle_property_angle_sum(OBA)",
+    "sine_theorem(OBA)"
+  ]
+}

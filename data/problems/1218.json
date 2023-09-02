@@ -1,0 +1,27 @@
+{
+  "problem_id": 1218,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1258",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "What is the perimeter of the triangle?",
+  "problem_img": "1218.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(CAB),60)",
+    "Equal(LengthOfLine(AB),12)",
+    "Equal(LengthOfLine(AC),12)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
+  "problem_answer": "36",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "triangle_property_angle_sum(ABC)",
+    "isosceles_triangle_judgment_angle_equal(BCA)",
+    "triangle_perimeter_formula(ABC)"
+  ]
+}

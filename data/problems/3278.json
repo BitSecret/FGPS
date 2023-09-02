@@ -1,0 +1,34 @@
+{
+  "problem_id": 3278,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-588",
+  "problem_level": 1,
+  "problem_text_cn": "将量角器按如图摆放在三角形纸板上,使点C在半圆上．点A、B的读数分别为86°、30°,则∠ACB的大小为()",
+  "problem_text_en": "Place the protractor on the triangular cardboard as shown, so that point C is on a semicircle. The readings of points A and B are N_0 and N_1 respectively, then the size of ∠ACB is ()",
+  "problem_img": "3278.png",
+  "construction_cdl": [
+    "Shape(OAB,BF,FA)",
+    "Shape(OBD,DO,OB)",
+    "Shape(OF,FB,BO)",
+    "Shape(AF,FC,CA)",
+    "Shape(OCA,AC)",
+    "Shape(CF,FO,OE,OEC)",
+    "Collinear(BFC)",
+    "Collinear(AFO)",
+    "Collinear(DOE)",
+    "Cocircular(O,ECABD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DOB),30)",
+    "Equal(MeasureOfAngle(DOA),86)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "28",
+  "theorem_seqs": [
+    "angle_addition(DOB,BOA)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

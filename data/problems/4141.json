@@ -1,0 +1,32 @@
+{
+  "problem_id": 4141,
+  "annotation": "XiaoxiaoJin_2023-05-07",
+  "source": "GeoQA-2723",
+  "problem_level": 1,
+  "problem_text_cn": "把一副(30°60°90°)和(45°45°90°)的三角板如图放置,则重叠处的夹角a为()",
+  "problem_text_en": "Put a set of(N_0°N_1°N_2°) and (N_3°N_4°N_5°) triangular plates as shown in the figure, then the overlapping angle a is ()",
+  "problem_img": "4141.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(CB,BD,DC)",
+    "Shape(CD,DE,EF,FC)",
+    "Collinear(ACD)",
+    "Collinear(BCF)",
+    "Collinear(BDE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABD),90)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "Equal(MeasureOfAngle(BDA),60)",
+    "Equal(MeasureOfAngle(FBE),45)",
+    "Equal(MeasureOfAngle(EFC),45)",
+    "Equal(MeasureOfAngle(BEF),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FCD))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CBD)",
+    "adjacent_complementary_angle(FCD,DCB)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 6840,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10056",
+  "problem_level": 1,
+  "problem_text_cn": "如图，在△ABC中，∠B＝70°，∠C＝50°，若点D，E，F分别是边AB，BC，CA的中点，则∠DEF＝（）",
+  "problem_text_en": "",
+  "problem_img": "6840.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EF,FA)",
+    "Shape(DB,BE,ED)",
+    "Shape(FE,EC,CF)",
+    "Collinear(ADB)",
+    "Collinear(AFC)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(D,AB)",
+    "IsMidpointOfLine(E,BC)",
+    "IsMidpointOfLine(F,AC)",
+    "Equal(MeasureOfAngle(DBE),70)",
+    "Equal(MeasureOfAngle(ECF),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DEF))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BCA)",
+    "midsegment_of_triangle_judgment_midpoint(ED,BCA)",
+    "midsegment_of_triangle_judgment_midpoint(FE,CAB)",
+    "midsegment_of_triangle_property_parallel(ED,BCA)",
+    "midsegment_of_triangle_property_parallel(FE,CAB)",
+    "parallel_property_collinear_extend(AC,DE,F)",
+    "parallel_property_collinear_extend(BA,EF,D)",
+    "parallelogram_judgment_parallel_and_parallel(ADEF)",
+    "parallelogram_property_opposite_angle_equal(ADEF)"
+  ]
+}

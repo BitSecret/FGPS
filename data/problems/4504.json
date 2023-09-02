@@ -1,0 +1,32 @@
+{
+  "problem_id": 4504,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3524",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD内接于圆O,若∠BOD=138°,则它的一个外角∠DCE的度数为()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is inscribed in circle O. If ∠BOD = N_0, then the degree of one of its exterior angles ∠DCE is ()",
+  "problem_img": "4504.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AD)",
+    "Shape(AB,BO,OD,DA)",
+    "Shape(OB,BC,CD,DO)",
+    "Shape(DC,CE)",
+    "Collinear(BCE)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DOB),138)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCE))",
+  "problem_answer": "69",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_internal(OBD,C)",
+    "adjacent_complementary_angle(BCD,DCE)"
+  ]
+}

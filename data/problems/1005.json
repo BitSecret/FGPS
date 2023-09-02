@@ -1,0 +1,32 @@
+{
+  "problem_id": 1005,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-1037",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Each pair of polygons is similar. Find A B.",
+  "problem_img": "1005.png",
+  "construction_cdl": [
+    "Shape(BA,AD,DC,CB)",
+    "Shape(EH,HG,GF,FE)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenQuadrilateral(BADC,FEHG)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),x+1)",
+    "Equal(LengthOfLine(CD),x-1)",
+    "Equal(LengthOfLine(FE),8)",
+    "Equal(LengthOfLine(HG),5)",
+    "Equal(MeasureOfAngle(CBA),MeasureOfAngle(GFE))",
+    "Equal(MeasureOfAngle(BAD),MeasureOfAngle(FEH))",
+    "Equal(MeasureOfAngle(ADC),MeasureOfAngle(EHG))",
+    "Equal(MeasureOfAngle(DCB),MeasureOfAngle(HGF))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "16/3",
+  "theorem_seqs": [
+    "similar_quadrilateral_property_line_ratio(BADC,FEHG)",
+    "similar_quadrilateral_property_line_ratio(DCBA,HGFE)"
+  ]
+}

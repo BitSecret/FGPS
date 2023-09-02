@@ -1,0 +1,39 @@
+{
+  "problem_id": 5976,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8420",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O的半径OC=5cm,直线l⊥OC,垂足为H,且l交⊙O于A、B两点,AB=8cm,若l要与⊙O相切,则要沿OC所在直线向下平移()",
+  "problem_text_en": "As shown in the figure, the radius of ⊙O OC = N_0, the straight line l ⊥ OC, the perpendicular foot is H, and l intersects ⊙O at the two points A and B, AB = N_1, if l is required to be tangent to ⊙O, then it needs to translate downward () along the line where the OC is located ",
+  "problem_img": "5976.png",
+  "construction_cdl": [
+    "Shape(OA,AH,HO)",
+    "Shape(OH,HB,BO)",
+    "Shape(CH,HA,OAC)",
+    "Shape(BH,HC,OCB)",
+    "Collinear(AHB)",
+    "Collinear(OHC)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(OA),5)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AHO),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(HC))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OH,AB)",
+    "right_triangle_judgment_angle(AHO)",
+    "right_triangle_judgment_angle(OHB)",
+    "right_triangle_property_pythagorean(AHO)",
+    "right_triangle_property_pythagorean(OHB)",
+    "line_addition(AH,HB)",
+    "line_addition(OH,HC)"
+  ]
+}

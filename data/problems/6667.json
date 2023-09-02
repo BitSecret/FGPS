@@ -1,0 +1,35 @@
+{
+  "problem_id": 6667,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9690",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于⊙O,AC是⊙O的直径,∠BDC=40°(点D在⊙O上),则∠ACB=()",
+  "problem_text_en": "As shown in the figure, △ABC is internally connected to ⊙O, AC is the diameter of ⊙O, ∠BDC = N_0 (point D is on ⊙O), then ∠ACB = ()",
+  "problem_img": "6667.png",
+  "construction_cdl": [
+    "Shape(OA,OAD,DM,MO)",
+    "Shape(AO,OM,MB,BA)",
+    "Shape(AB,OBA)",
+    "Shape(MD,DC,CM)",
+    "Shape(CD,ODC)",
+    "Shape(MC,CB,BM)",
+    "Shape(BC,OCB)",
+    "Collinear(DMB)",
+    "Collinear(CMOA)",
+    "Cocircular(O,DCBA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AC,O)",
+    "Equal(MeasureOfAngle(BDC),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OCB,D)",
+    "arc_property_circumference_angle_external(OCB,A)",
+    "diameter_of_circle_property_right_angle(CBA,O)",
+    "triangle_property_angle_sum(ACB)"
+  ]
+}

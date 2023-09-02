@@ -1,0 +1,30 @@
+{
+  "problem_id": 1319,
+  "annotation": "DengfengYue_2023-04-09",
+  "source": "Geometry3k-1367",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral M N O P is a rhombus. If m \\angle P O N = 124, find m \\angle P O M.",
+  "problem_img": "1319.png",
+  "construction_cdl": [
+    "Shape(MP,PR,RM)",
+    "Shape(PO,OR,RP)",
+    "Shape(RO,ON,NR)",
+    "Shape(RN,NM,MR)",
+    "Collinear(MRO)",
+    "Collinear(PRN)"
+  ],
+  "text_cdl": [
+    "Rhombus(MPON)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(PON),124)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(POM))",
+  "problem_answer": "62",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(ONMP,R)",
+    "perpendicular_bisector_property_bisector(OR,NP)",
+    "angle_addition(POR,RON)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 4009,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1988",
+  "problem_level": 1,
+  "problem_text_cn": "如图,半径为1cm,圆心角为90°的扇形OAB中,分别以OA,OB为直径作半圆,则图中阴影部分的面积为()",
+  "problem_text_en": "As shown in the figure, in the sector OAB with a radius of N_0 and a central angle of N_1, OA and OB are the diameters respectively as a semicircle, and the area of ​​the shaded part in the figure is ()",
+  "problem_img": "4009.png",
+  "construction_cdl": [
+    "Shape(BO,OA,AB)",
+    "Shape(OAB,BA)",
+    "Shape(OB,OBA,AO)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(OA),1)",
+    "Equal(MeasureOfAngle(BOA),90)"
+  ],
+  "goal_cdl": "Value(AreaOfTriangle(BOA))",
+  "problem_answer": "1/2",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "triangle_area_formula_sine(OAB)"
+  ]
+}

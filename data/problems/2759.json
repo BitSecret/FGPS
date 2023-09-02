@@ -1,0 +1,30 @@
+{
+  "problem_id": 2759,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-2906",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Quadrilateral A B C D is a rectangle. Find x.",
+  "problem_img": "2759.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(BA,AE,EB)",
+    "Shape(ED,DC,CE)",
+    "Shape(BE,EC,CB)",
+    "Collinear(AEC)",
+    "Collinear(DEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(ADCB)",
+    "Equal(MeasureOfAngle(BDC),3*y+10)",
+    "Equal(MeasureOfAngle(CAD),5*x+5)",
+    "Equal(MeasureOfAngle(BAC),2*x+1)",
+    "Equal(MeasureOfAngle(DBA),y*y)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "angle_addition(BAE,EAD)"
+  ]
+}

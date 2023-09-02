@@ -1,0 +1,38 @@
+{
+  "problem_id": 6269,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8926",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,AB是⊙O的直径,AC为弦,OD⊥AC于点D,且OD=1cm,则BC的长为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, AC is the chord, OD ⊥ AC is at point D, and OD = N_0, then the length of BC is ()",
+  "problem_img": "6269.png",
+  "construction_cdl": [
+    "Shape(OAB,BO,OA)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AD,DC)",
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OB,BC,CD)",
+    "Collinear(ADC)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(OD),1)",
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(CD,OD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDO,ODA)",
+    "line_addition(AO,OB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "diameter_of_circle_judgment_pass_centre(AOB,O)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "similar_triangle_judgment_aa(BCA,ODA)",
+    "similar_triangle_property_line_ratio(CAB,DAO)",
+    "similar_triangle_property_line_ratio(ABC,AOD)"
+  ]
+}

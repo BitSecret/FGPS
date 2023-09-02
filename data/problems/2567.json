@@ -1,0 +1,28 @@
+{
+  "problem_id": 2567,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2695",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\widehat L P.",
+  "problem_img": "2567.png",
+  "construction_cdl": [
+    "Shape(LM,MN,BLN)",
+    "Shape(BLN,NP,BPL)",
+    "Shape(BNP,PN)",
+    "Collinear(MNP)",
+    "Cocircular(B,LNP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(B,B)",
+    "IsTangentOfCircle(ML,B)",
+    "Equal(MeasureOfArc(BLN),78)",
+    "Equal(MeasureOfAngle(LMN),36)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(BPL))",
+  "problem_answer": "150",
+  "theorem_seqs": [
+    "circle_property_circular_power_tangent_and_segment_angle(ML,MNP,B)"
+  ]
+}

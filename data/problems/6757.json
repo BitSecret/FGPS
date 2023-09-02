@@ -1,0 +1,29 @@
+{
+  "problem_id": 6757,
+  "annotation": "Yangli_2023-06-04",
+  "source": "GeoQA-9829",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C在⊙O上,若∠ABC=30°,则∠CAB为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, point C is on ⊙O, if ∠ABC = N_0, then ∠CAB is ()",
+  "problem_img": "6757.png",
+  "construction_cdl": [
+    "Shape(CA,AO,OB,BC)",
+    "Shape(AC,OCA)",
+    "Shape(CB,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(OBC),30)",
+    "IsDiameterOfCircle(AB,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAO))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

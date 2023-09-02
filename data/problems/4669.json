@@ -1,0 +1,26 @@
+{
+  "problem_id": 4669,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3939",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA、PB是⊙O的两条切线,A、B为切点,∠APB=60°,PO=4,⊙O的半径是()",
+  "problem_text_en": "As shown in the figure, PA and PB are the two tangents of ⊙O, A and B are the tangent points, ∠APB = N_0, PO = N_1, the radius of ⊙O is ()",
+  "problem_img": "4669.png",
+  "construction_cdl": [
+    "Shape(PA,AO,OA)",
+    "Shape(OP,PB,BO)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(PO),4)",
+    "Equal(MeasureOfAngle(APO),30)",
+    "Equal(MeasureOfAngle(OPB),30)",
+    "Equal(MeasureOfAngle(OAP),90)",
+    "Equal(MeasureOfAngle(PBO),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BO))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "sine_theorem(OPB)"
+  ]
+}

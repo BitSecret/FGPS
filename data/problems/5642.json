@@ -1,0 +1,31 @@
+{
+  "problem_id": 5642,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7290",
+  "problem_level": 1,
+  "problem_text_cn": "如图,菱形ABCD的边长为1,直线l过点C,交AB的延长线于M,交AD的延长线于N,则\\frac{1}{AM}+\\frac{1}{AN}的值为()",
+  "problem_text_en": "As shown in the figure, the edge length of the diamond ABCD is N_0, the straight line l passes through the point C, the extended line line of crossing AB is at M, and the extended line line of crossing AD is at N, then the value of \\frac{N_1}{AM}+\\frac{N_2}{AN} is ()",
+  "problem_img": "5642.png",
+  "construction_cdl": [
+    "Shape(ND,DC,CN)",
+    "Shape(DA,AB,BC,CD)",
+    "Shape(CB,BM,MC)",
+    "Collinear(ADN)",
+    "Collinear(MCN)",
+    "Collinear(ABM)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AB),1)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(Div(1,LengthOfLine(AM)),Div(1,LengthOfLine(AN))))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(AD,BC,M)",
+    "line_addition(AB,BM)",
+    "similar_triangle_judgment_aa(NAM,CBM)",
+    "similar_triangle_property_line_ratio(NAM,CBM)",
+    "similar_triangle_property_line_ratio(MNA,MCB)"
+  ]
+}

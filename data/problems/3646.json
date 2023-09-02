@@ -1,0 +1,30 @@
+{
+  "problem_id": 3646,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1342",
+  "problem_level": 1,
+  "problem_text_cn": "将一张长方形纸片按如图所示折叠后,再展开．如果∠1=56°,那么∠2等于()",
+  "problem_text_en": "Fold a rectangular piece of paper as shown in the picture, and then unfold it. If ∠1 = N_0, then ∠2 is equal to ()",
+  "problem_img": "3646.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EF,FA)",
+    "Shape(GE,EC,CD,DG)",
+    "Shape(FE,EG,GF)",
+    "Collinear(AFGD)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BEF),56)",
+    "Equal(MeasureOfAngle(BEF),MeasureOfAngle(FEG))",
+    "Rectangle(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EGF))",
+  "problem_answer": "68",
+  "theorem_seqs": [
+    "angle_addition(BEF,FEG)",
+    "parallel_property_collinear_extend(AD,BC,G)",
+    "parallel_property_collinear_extend(CB,GA,E)",
+    "parallel_property_ipsilateral_internal_angle(EB,GA)"
+  ]
+}

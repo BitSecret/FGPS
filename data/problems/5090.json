@@ -1,0 +1,39 @@
+{
+  "problem_id": 5090,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4901",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知在△ABC中,点D,E,F分别是边AB,AC,BC上的点,DE∥BC,EF∥AB,且AD:DB=1:2,CF=6,那么BF等于()",
+  "problem_text_en": "As shown in the figure, it is known that in △ABC, points D, E, and F are points on the edges AB, AC, and BC respectively, DE ∥ BC, EF ∥ AB, and AD:DB=N_0:N_1, CF=N_2, then BF is equal to ()",
+  "problem_img": "5090.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BF,FE,ED)",
+    "Shape(EF,FC,CE)",
+    "Collinear(AEC)",
+    "Collinear(BFC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "ParallelBetweenLine(EF,AB)",
+    "Equal(Div(LengthOfLine(DB),LengthOfLine(AD)),2)",
+    "Equal(LengthOfLine(CF),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BF))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "parallel_property_collinear_extend(CB,ED,F)",
+    "parallel_property_collinear_extend(BA,FE,D)",
+    "parallelogram_judgment_parallel_and_parallel(DBFE)",
+    "parallelogram_property_opposite_line_equal(BFED)",
+    "line_addition(BF,FC)",
+    "line_addition(AD,DB)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "problem_id": 5554,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6803",
+  "problem_level": 1,
+  "problem_text_cn": "如图是某水库大坝的横截面示意图,已知AD∥BC,且AD、BC之间的距离为15米,背水坡CD的坡度i=1:0.6,为提高大坝的防洪能力,需对大坝进行加固,加固后大坝顶端AE比原来的顶端AD加宽了2米,背水坡EF的坡度i=3:4,则大坝底端增加的长度CF是()米．",
+  "problem_text_en": "The figure is a cross-sectional schematic diagram of a reservoir dam. It is known that AD ∥ BC, and the distance between AD and BC is N_0, and the slope of the backwater slope CD is i = N_1:N_2. In order to improve the flood control capacity of the dam, it is necessary to strengthen the dam. After reinforcement, the top AE of the dam is wider than the original top AD by N_3, and the slope of the backwater slope EF is i = N_4:N_5, then the increased length CF at the bottom of the dam is ().",
+  "problem_img": "5554.png",
+  "construction_cdl": [
+    "Shape(AB,BG,GD,DA)",
+    "Shape(DG,GH,HI,ID)",
+    "Shape(ED,DI,IE)",
+    "Shape(IH,HC,CI)",
+    "Shape(EI,IC,CF,FE)",
+    "Collinear(ADE)",
+    "Collinear(BGHCF)",
+    "Collinear(EIH)",
+    "Collinear(DIC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AD,BC)",
+    "ParallelBetweenLine(DE,HC)",
+    "PerpendicularBetweenLine(DG,FG)",
+    "PerpendicularBetweenLine(EH,FH)",
+    "Equal(LengthOfLine(DE),2)",
+    "Equal(LengthOfLine(GH),2)",
+    "Equal(LengthOfLine(DG),15)",
+    "Equal(LengthOfLine(EH),15)",
+    "Equal(Div(LengthOfLine(DG),LengthOfLine(CG)),1/0.6)",
+    "Equal(Div(LengthOfLine(EH),LengthOfLine(HF)),3/4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CF))",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "line_addition(GH,HC)",
+    "line_addition(HC,CF)"
+  ]
+}

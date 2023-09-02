@@ -1,0 +1,41 @@
+{
+  "problem_id": 130,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-132",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot A, W X = X Y = 22. Find A B.",
+  "problem_img": "130.png",
+  "construction_cdl": [
+    "Shape(AYW,WB,BA,AC,CY)",
+    "Shape(BW,AWX,XB)",
+    "Shape(AB,BX,XA)",
+    "Shape(AX,XC,CA)",
+    "Shape(CX,AXY,YC)",
+    "Collinear(WBX)",
+    "Collinear(XCY)",
+    "Cocircular(A,WXY)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(WX),22)",
+    "Equal(LengthOfLine(XY),22)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "Equal(LengthOfLine(CA),3*x+4)",
+    "Equal(LengthOfLine(AB),5*x)",
+    "PerpendicularBetweenLine(AB,XB)",
+    "PerpendicularBetweenLine(XC,AC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(WBA,ABX)",
+    "circle_property_chord_perpendicular_bisect_chord(A,AB,WX)",
+    "circle_property_chord_perpendicular_bisect_chord(A,AC,XY)",
+    "line_addition(WB,BX)",
+    "line_addition(XC,CY)",
+    "mirror_congruent_triangle_judgment_hl(ABX,AXC)",
+    "mirror_congruent_triangle_property_line_equal(XAB,XCA)"
+  ]
+}

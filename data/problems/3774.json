@@ -1,0 +1,36 @@
+{
+  "problem_id": 3774,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1602",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠1+∠2=180°,∠3=50°,则∠4的度数为()",
+  "problem_text_en": "As shown in the figure, ∠1 + ∠2 = N_0, ∠3 = N_1, then the degree of ∠4 is ()",
+  "problem_img": "3774.png",
+  "construction_cdl": [
+    "Shape(GB,BA)",
+    "Shape(CB,BG,GH,HC)",
+    "Shape(DC,CE)",
+    "Shape(EC,CH)",
+    "Shape(FG,GA)",
+    "Shape(IG,GF)",
+    "Shape(HG,GI,IH)",
+    "Collinear(ABCE)",
+    "Collinear(FGH)",
+    "Collinear(BGI)",
+    "Collinear(IHCD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(Add(MeasureOfAngle(GBA),MeasureOfAngle(FGB)),180)",
+    "Equal(MeasureOfAngle(IHG),50)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DCE))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "parallel_judgment_ipsilateral_internal_angle(GF,BA)",
+    "parallel_property_collinear_extend(GF,BA,H)",
+    "parallel_property_collinear_extend(AB,GH,C)",
+    "parallel_property_corresponding_angle(HG,CA,I)",
+    "vertical_angle(ICA,DCE)"
+  ]
+}

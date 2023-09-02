@@ -1,0 +1,38 @@
+{
+  "problem_id": 5890,
+  "annotation": "YiwenHuang_2023-06-04",
+  "source": "GeoQA-7976",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点E是BC的中点,AD是∠BAC的平分线,EF∥AD,若AB=7,AC=11,则FC的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, point E is the midpoint of BC, AD is the bisector of ∠BAC, EF ∥ AD, if AB = N_0, AC = N_1, then the length of FC is ()",
+  "problem_img": "5890.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(FA,AD,DE,EF)",
+    "Shape(FE,EN,NF)",
+    "Shape(NE,EC,CN)",
+    "Collinear(AFNC)",
+    "Collinear(BDEC)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(AD,CAB)",
+    "Equal(LengthOfLine(AB),7)",
+    "Equal(LengthOfLine(AC),11)",
+    "Equal(LengthOfLine(BE),LengthOfLine(EC))",
+    "Equal(LengthOfLine(AN),LengthOfLine(NC))",
+    "Equal(MeasureOfAngle(CNE),Add(MeasureOfAngle(NFE),MeasureOfAngle(FEN)))",
+    "ParallelBetweenLine(DA,EF)",
+    "ParallelBetweenLine(AD,FE)",
+    "IsoscelesTriangle(NFE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(FC))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_midpoint(NE,CAB)",
+    "midsegment_of_triangle_property_length(NE,CAB)",
+    "line_addition(AF,FN)",
+    "line_addition(AF,FC)",
+    "line_addition(AN,NC)"
+  ]
+}

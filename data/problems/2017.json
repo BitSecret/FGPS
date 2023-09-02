@@ -1,0 +1,44 @@
+{
+  "problem_id": 2017,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2103",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "2017.png",
+  "construction_cdl": [
+    "Shape(AC,CE,EA)",
+    "Shape(AE,EF,FN,NA)",
+    "Shape(NF,FB,BN)",
+    "Collinear(CEFB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Trapezoid(ACBN)",
+    "Equal(LengthOfLine(FN),20)",
+    "Equal(LengthOfLine(BF),10)",
+    "Equal(LengthOfLine(CE),2)",
+    "Equal(LengthOfLine(AN),19)",
+    "PerpendicularBetweenLine(AE,FE)",
+    "PerpendicularBetweenLine(EF,NF)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ACBN))",
+  "problem_answer": "92.46",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CEA,AEF)",
+    "adjacent_complementary_angle(CFN,NFB)",
+    "parallel_judgment_per_per(EA,FN)",
+    "parallel_property_collinear_extend(BC,NA,F)",
+    "parallel_property_collinear_extend(FC,NA,E)",
+    "parallelogram_judgment_parallel_and_parallel(AEFN)",
+    "parallelogram_property_opposite_line_equal(AEFN)",
+    "parallelogram_property_opposite_line_equal(EFNA)",
+    "right_triangle_judgment_angle(CEA)",
+    "right_triangle_judgment_angle(NFB)",
+    "right_triangle_property_pythagorean(CEA)",
+    "right_triangle_property_pythagorean(NFB)",
+    "line_addition(CE,EF)",
+    "line_addition(CF,FB)",
+    "quadrilateral_perimeter_formula(ACBN)"
+  ]
+}

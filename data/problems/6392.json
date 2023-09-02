@@ -1,0 +1,30 @@
+{
+  "problem_id": 6392,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9249",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,已知AD=5cm,AB=3cm,AE平分∠BAD交BC边于点E,则EC等于()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, it is known that AD = N_0, AB = N_1, AE bisects ∠BAD and BC edge at point E, then EC is equal to ()",
+  "problem_img": "6392.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EC,CD,DA)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AD),5)",
+    "Equal(LengthOfLine(AB),3)",
+    "IsBisectorOfAngle(AE,DAB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "parallel_property_alternate_interior_angle(EB,DA)",
+    "isosceles_triangle_judgment_angle_equal(BEA)",
+    "line_addition(BE,EC)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "problem_id": 108,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-110",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "P M is a diameter of \\odot R. Find m \\widehat M Q.",
+  "problem_img": "108.png",
+  "construction_cdl": [
+    "Shape(RPN,NR,RP)",
+    "Shape(RNM,MR,RN)",
+    "Shape(RMQ,QR,RM)",
+    "Shape(RQP,PR,RQ)",
+    "Collinear(PRM)",
+    "Cocircular(R,PNMQ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(R,R)",
+    "Equal(MeasureOfAngle(PRQ),115)",
+    "PerpendicularBetweenLine(NR,PR)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(RMQ))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(PRQ,QRM)",
+    "arc_property_center_angle(RMQ,R)"
+  ]
+}

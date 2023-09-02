@@ -1,0 +1,37 @@
+{
+  "problem_id": 3467,
+  "annotation": "NaZhu_2023-04-30",
+  "source": "GeoQA-1049",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点O是∠BAC的边AC上的一点,⊙O与边AB相切于点D,与线段AO相交于点E,若点P是⊙O上一点,且∠EPD=35°,则∠BAC的度数为()",
+  "problem_text_en": "As shown in the figure, point O is a point on edge AC of ∠BAC, ⊙O is tangent to edge AB at point D, and intersects line segment AO at point E, if point P is a point on ⊙O, and ∠EPD = N_0, then ∠The degree of BAC is ()",
+  "problem_img": "3467.png",
+  "construction_cdl": [
+    "Shape(ODE,DA,AE)",
+    "Shape(ODE,EF,FD)",
+    "Shape(OD,DF,FO)",
+    "Shape(OCD,DO,OC)",
+    "Shape(OEP,PE)",
+    "Shape(FE,EP,PF)",
+    "Shape(OPC,CO,OF,FP)",
+    "Collinear(AEFOC)",
+    "Collinear(ADB)",
+    "Collinear(DFP)",
+    "Cocircular(O,CDEP)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(AD,O)",
+    "Equal(MeasureOfAngle(EPF),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAE))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODE,P)",
+    "arc_property_center_angle(OCD,O)",
+    "arc_property_center_angle(ODE,O)",
+    "adjacent_complementary_angle(FOD,DOC)",
+    "circle_property_circular_power_tangent_and_segment_angle(AD,AEC,O)"
+  ]
+}

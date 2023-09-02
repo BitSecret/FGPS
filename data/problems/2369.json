@@ -1,0 +1,25 @@
+{
+  "problem_id": 2369,
+  "annotation": "ChenyangMao_2023-04-09",
+  "source": "Geometry3k-2484",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2369.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),42)",
+    "Equal(LengthOfLine(BC),38)",
+    "Equal(LengthOfLine(CA),x)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8*sqrt(5)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 2731,
+  "annotation": "FangzhenZhu_2023-04-09",
+  "source": "Geometry3k-2876",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of \\triangle D E F, if \\triangle D E F \\sim \\triangle C B F, perimeter of \\triangle C B F = 27, D F = 6, and F C = 8.",
+  "problem_img": "2731.png",
+  "construction_cdl": [
+    "Shape(ED,DF,FE)",
+    "Shape(BC,CF,FB)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(EDF,BCF)",
+    "Equal(PerimeterOfTriangle(BCF),27)",
+    "Equal(LengthOfLine(DF),6)",
+    "Equal(LengthOfLine(FC),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(EDF))",
+  "problem_answer": "20.25",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(EDF,BCF)",
+    "similar_triangle_property_perimeter_ratio(EDF,BCF)"
+  ]
+}

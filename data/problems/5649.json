@@ -1,0 +1,23 @@
+{
+  "problem_id": 5649,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7304",
+  "problem_level": 1,
+  "problem_text_cn": "如图,某登山运动员从营地A沿坡角为30°的斜坡AB到达山顶B,如果AB=600m,那么他实际上升的高度BC为()",
+  "problem_text_en": "As shown in the figure, a mountaineer walks from camp A along slope AB with slope angle N_0 to summit B. If AB = N_1, then his actual ascent height BC is ()",
+  "problem_img": "5649.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),600)",
+    "Equal(MeasureOfAngle(BAC),30)",
+    "Equal(MeasureOfAngle(ACB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "300",
+  "theorem_seqs": [
+    "sine_theorem(BAC)"
+  ]
+}

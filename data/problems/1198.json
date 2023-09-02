@@ -1,0 +1,33 @@
+{
+  "problem_id": 1198,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-1238",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of the variable x in the figure.",
+  "problem_img": "1198.png",
+  "construction_cdl": [
+    "Shape(AE,EI)",
+    "Shape(IE,EH)",
+    "Shape(GE,EA)",
+    "Shape(HE,EG)",
+    "Shape(CG,GE)",
+    "Shape(EG,GB)",
+    "Collinear(IEG)",
+    "Collinear(AEH)",
+    "Collinear(CGB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(GEA),2*x-15)",
+    "Equal(MeasureOfAngle(EGB),x+55)",
+    "ParallelBetweenLine(AH,CB)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(BC,HA,G)",
+    "parallel_property_collinear_extend(AH,GB,E)",
+    "parallel_property_alternate_interior_angle(AE,GB)"
+  ]
+}

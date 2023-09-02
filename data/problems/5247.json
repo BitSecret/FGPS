@@ -1,0 +1,28 @@
+{
+  "problem_id": 5247,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5334",
+  "problem_level": 1,
+  "problem_text_cn": "如图在灯塔O处观测到轮船A位于北偏西56°的方向,同时轮船B在南偏东17°的方向,那么∠AOB的大小为()",
+  "problem_text_en": "As shown in the figure, at the lighthouse O, it is observed that the ship A is located in the direction of N_0 west by north, and the ship B is in the direction of N_1 east by south, then the size of ∠AOB is ()",
+  "problem_img": "5247.png",
+  "construction_cdl": [
+    "Shape(AO,OC)",
+    "Shape(CO,OD)",
+    "Shape(DO,OB)",
+    "Shape(BO,OA)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AOC),56)",
+    "Equal(MeasureOfAngle(DOB),73)",
+    "Equal(MeasureOfAngle(COD),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "141",
+  "theorem_seqs": [
+    "angle_addition(AOC,COD)",
+    "angle_addition(AOD,DOB)",
+    "round_angle(AOB,BOA)"
+  ]
+}

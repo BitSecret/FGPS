@@ -1,0 +1,31 @@
+{
+  "problem_id": 4234,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-3001",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知CD为圆O的直径,过点D的弦DE平行于半径OA,若角D=50°,则角C的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that CD is the diameter of circle O, and the chord DE passing through the point D is parallel to the radius OA. If the angle D = N_0, the degree of the angle C is ()",
+  "problem_img": "4234.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(OAD,DO,OA)",
+    "Shape(ODE,ED)",
+    "Shape(OEC,CO,OD,DE)",
+    "Shape(OC,CA,AO)",
+    "Collinear(COD)",
+    "Cocircular(O,CADE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(AO,DE)",
+    "Equal(MeasureOfAngle(ODE),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OCA))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AO,DE)",
+    "arc_property_center_angle(OAD,O)",
+    "arc_property_circumference_angle_external(OAD,C)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 6301,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-9050",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知△ABC中,AC=2,BC=4,以AB为边向形外作正方形ABMN,若∠ACB的度数发生变化,连接CN,则CN的最大值是()",
+  "problem_text_en": "As shown in the figure, it is known that in △ABC, AC = N_0, BC = N_1, and AB is the side shape to make a square ABMN. If the degree of ∠ACB changes and connects to CN, the maximum value of CN is ()",
+  "problem_img": "6301.png",
+  "construction_cdl": [
+    "Shape(NA,AD,DN)",
+    "Shape(DA,AC,CD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),2)",
+    "Equal(LengthOfLine(AC),2)",
+    "Equal(LengthOfLine(ND),4)",
+    "Equal(MeasureOfAngle(DAC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(LengthOfLine(ND),LengthOfLine(DC)))",
+  "problem_answer": "4+2*sqrt(2)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(DAC)",
+    "right_triangle_property_pythagorean(DAC)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "problem_id": 6055,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8559",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD为⊙O的直径,过点D的弦DE平行于半径OA,若∠D的度数是50°,则∠A的度数为()",
+  "problem_text_en": "As shown in the figure, CD is the diameter of O, and the chord DE passing through point D is parallel to the radius OA. If the degree of ∠D is N_0, then the degree of ∠A is ()",
+  "problem_img": "6055.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(AO,OC,CA)",
+    "Shape(OAD,DO,OA)",
+    "Shape(CO,OD,DE,OEC)",
+    "Shape(ODE,ED)",
+    "Collinear(COD)",
+    "Cocircular(O,ADEC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "ParallelBetweenLine(AO,DE)",
+    "Equal(MeasureOfAngle(CDE),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAO))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AO,DE)",
+    "arc_property_center_angle(OAD,O)",
+    "arc_property_circumference_angle_external(OAD,C)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OCA)",
+    "isosceles_triangle_property_angle_equal(OCA)"
+  ]
+}

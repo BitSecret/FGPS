@@ -1,0 +1,27 @@
+{
+  "problem_id": 2061,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2148",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "W X Y Z is a rhombus. If m \\angle X Y Z = 110, find m \\angle Z W Y.",
+  "problem_img": "2061.png",
+  "construction_cdl": [
+    "Shape(WZ,ZY,YW)",
+    "Shape(XW,WY,YX)"
+  ],
+  "text_cdl": [
+    "Rhombus(WZYX)",
+    "Equal(MeasureOfAngle(ZYX),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(YWZ))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "kite_property_opposite_angle_equal(WZYX)",
+    "kite_property_opposite_angle_equal(ZYXW)",
+    "quadrilateral_property_angle_sum(WZYX)",
+    "sine_theorem(ZYW)",
+    "triangle_property_angle_sum(WZY)"
+  ]
+}

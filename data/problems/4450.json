@@ -1,0 +1,35 @@
+{
+  "problem_id": 4450,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3415",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C,D两点在⊙O上,若∠C=40°,则∠ABD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, and the two points C and D are on ⊙O. If ∠C = N_0, then the degree of ∠ABD is ()",
+  "problem_img": "4450.png",
+  "construction_cdl": [
+    "Shape(AO,OE,EC,OCA)",
+    "Shape(EO,OA,AD,DE)",
+    "Shape(DA,OAD)",
+    "Shape(BD,ODB)",
+    "Shape(CB,OBC)",
+    "Shape(CE,EB,BC)",
+    "Shape(ED,DB,BE)",
+    "Collinear(AOEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ADBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(BCD),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(ODB,C)",
+    "arc_property_circumference_angle_external(ODB,A)",
+    "diameter_of_circle_property_right_angle(ADB,O)",
+    "triangle_property_angle_sum(ADB)"
+  ]
+}

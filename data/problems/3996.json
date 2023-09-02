@@ -1,0 +1,38 @@
+{
+  "problem_id": 3996,
+  "annotation": "ZheZhu_2023-04-30",
+  "source": "GeoQA-1949",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将一把两边都带有刻度的直尺放在半圆形纸片上,使其一边经过圆心O,另一边所在直线与半圆相交于点D、E,量出半径OC=5cm,弦DE=8cm,则直尺的宽度为()",
+  "problem_text_en": "As shown in the figure, put a ruler with scales on both sides on the semicircular piece of paper, make one edgepass through the center O, and the straight line on the other edgeintersects the semicircle at vertices D and E, and measure the radius OC = N_0, chord DE = N_1, the width of the ruler is ()",
+  "problem_img": "3996.png",
+  "construction_cdl": [
+    "Shape(OC,OCA,AO)",
+    "Shape(CO,OD,ODC)",
+    "Shape(DO,OF,FD)",
+    "Shape(OED,DE)",
+    "Shape(FO,OB,OBE,EF)",
+    "Shape(OA,OAB,BO)",
+    "Collinear(DFE)",
+    "Collinear(AOB)",
+    "Cocircular(O,DCABE)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(OC),5)",
+    "Equal(LengthOfLine(DE),8)",
+    "PerpendicularBetweenLine(OF,DF)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(OF))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EFO,OFD)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OF,ED)",
+    "line_addition(DF,FE)",
+    "right_triangle_judgment_angle(OFD)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "right_triangle_property_pythagorean(OFD)"
+  ]
+}

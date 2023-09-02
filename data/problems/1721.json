@@ -1,0 +1,29 @@
+{
+  "problem_id": 1721,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1786",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "1721.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)",
+    "Shape(CA,AD,DC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),y)",
+    "Equal(MeasureOfAngle(ACB),x)",
+    "Equal(LengthOfLine(AD),9.6)",
+    "PerpendicularBetweenLine(CB,AB)",
+    "Equal(LengthOfLine(CD),LengthOfLine(BC))",
+    "Equal(LengthOfLine(BC),LengthOfLine(AB))",
+    "Equal(LengthOfLine(CD),LengthOfLine(AD))"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "9.6*sqrt(2)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CBA)",
+    "right_triangle_property_pythagorean(CBA)"
+  ]
+}

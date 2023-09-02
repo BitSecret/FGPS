@@ -1,0 +1,37 @@
+{
+  "problem_id": 6900,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10140",
+  "problem_level": 1,
+  "problem_text_cn": "如图，AB是⊙O的直径，点C、D是⊙O上的点，OD⊥AC，连接DC，若∠COB＝20°，则∠ACD的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6900.png",
+  "construction_cdl": [
+    "Shape(AE,ED,ODA)",
+    "Shape(EA,AO,OE)",
+    "Shape(CD,DE,EC)",
+    "Shape(CE,EO,OC)",
+    "Shape(CO,OB,OBC)",
+    "Shape(OCD,DC)",
+    "Collinear(AOB)",
+    "Collinear(DEO)",
+    "Collinear(AEC)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(OEA),90)",
+    "Equal(MeasureOfAngle(COB),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_center_angle(ODA,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(ODA,C)",
+    "triangle_property_angle_sum(EAO)"
+  ]
+}

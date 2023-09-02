@@ -1,0 +1,37 @@
+{
+  "problem_id": 4471,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3458",
+  "problem_level": 1,
+  "problem_text_cn": "如图,分别延长圆内接四边形ABDE的两组对边,延长线相交于点F、C,若∠F=27°,∠A=53°,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, the two opposite sides of the quadrilateral ABDE are respectively extended in the circle, and the extension lines intersect at points F and C. If ∠F = N_0, ∠A = N_1, then the degree of ∠C is ()",
+  "problem_img": "4471.png",
+  "construction_cdl": [
+    "Shape(OEA,AE)",
+    "Shape(OAB,BA)",
+    "Shape(OBD,DB)",
+    "Shape(ODE,ED)",
+    "Shape(AB,BD,DE,EA)",
+    "Shape(OBD,BC,CD)",
+    "Shape(ODE,DF,FE)",
+    "Collinear(EDC)",
+    "Collinear(BDF)",
+    "Collinear(AEF)",
+    "Collinear(ABC)",
+    "Cocircular(O,ABDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DFE),27)",
+    "Equal(MeasureOfAngle(EAB),53)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "47",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(FAB)",
+    "arc_property_circumference_angle_external(ODA,B)",
+    "arc_property_circumference_angle_internal(ODA,E)",
+    "triangle_property_angle_sum(CEA)"
+  ]
+}

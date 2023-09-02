@@ -1,0 +1,32 @@
+{
+  "problem_id": 6847,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10064",
+  "problem_level": 1,
+  "problem_text_cn": "如图，若∠A＝20°，∠B＝45°，∠C＝35°，则∠DFE等于（）",
+  "problem_text_en": "",
+  "problem_img": "6847.png",
+  "construction_cdl": [
+    "Shape(AF,FD,DA)",
+    "Shape(FB,BE,EF)",
+    "Shape(DF,FE,EC,CD)",
+    "Collinear(AFE)",
+    "Collinear(ADC)",
+    "Collinear(DFB)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DAE),20)",
+    "Equal(MeasureOfAngle(FBE),45)",
+    "Equal(MeasureOfAngle(ECD),35)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DFE))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(FBE)",
+    "triangle_property_angle_sum(AEC)",
+    "adjacent_complementary_angle(DFE,EFB)",
+    "adjacent_complementary_angle(BEF,FEC)"
+  ]
+}

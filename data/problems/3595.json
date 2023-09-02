@@ -1,0 +1,34 @@
+{
+  "problem_id": 3595,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1244",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,在等边三角形ABC中,AD⊥BC,E为AD上一点,∠CED=50°,则∠ABE等于()",
+  "problem_text_en": "As shown in the figure, in the equilateral triangle ABC, AD ⊥ BC, E is a point on AD, ∠CED = N_0, then ∠ABE is equal to ()",
+  "problem_img": "3595.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EC,CA)",
+    "Shape(EB,BD,DE)",
+    "Shape(ED,DC,CE)",
+    "Collinear(AED)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(ABC)",
+    "IsAltitudeOfTriangle(AD,ABC)",
+    "Equal(MeasureOfAngle(CED),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABE))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "isosceles_triangle_property_line_coincidence(ABC,D)",
+    "equilateral_triangle_property_angle(ABC)",
+    "angle_addition(CAE,EAB)",
+    "perpendicular_bisector_judgment_per_and_mid(ED,BC)",
+    "perpendicular_bisector_property_bisector(ED,BC)",
+    "triangle_property_angle_sum(ABE)",
+    "adjacent_complementary_angle(DEB,BEA)"
+  ]
+}

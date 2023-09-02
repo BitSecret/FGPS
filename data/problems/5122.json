@@ -1,0 +1,40 @@
+{
+  "problem_id": 5122,
+  "annotation": "YimingHe_2023-05-21",
+  "source": "GeoQA-4981",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在四边形ABCD中,AB=CD,M,N,P分别是AD,BC,BD的中点,若∠MPN=140°,则∠PMN的度数是()",
+  "problem_text_en": "As shown in the figure, in the quadrilateral ABCD, AB = CD, M, N, and P are the midpoints of AD, BC, and BD, respectively. If ∠MPN = N_0, then the degree of ∠PMN is ()",
+  "problem_img": "5122.png",
+  "construction_cdl": [
+    "Shape(AB,BP,PM,MA)",
+    "Shape(MP,PO,OM)",
+    "Shape(MO,OD,DM)",
+    "Shape(PB,BN,NP)",
+    "Shape(PN,NO,OP)",
+    "Shape(DO,ON,NC,CD)",
+    "Collinear(AMD)",
+    "Collinear(BNC)",
+    "Collinear(BPOD)",
+    "Collinear(MON)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(M,AD)",
+    "IsMidpointOfLine(N,BC)",
+    "IsMidpointOfLine(P,BD)",
+    "Equal(LengthOfLine(AB),LengthOfLine(CD))",
+    "Equal(MeasureOfAngle(MPN),140)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(NMP))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_midpoint(MP,DAB)",
+    "midsegment_of_triangle_judgment_midpoint(NP,BCD)",
+    "midsegment_of_triangle_property_length(MP,DAB)",
+    "midsegment_of_triangle_property_length(NP,BCD)",
+    "isosceles_triangle_judgment_line_equal(PNM)",
+    "isosceles_triangle_property_angle_equal(PNM)",
+    "triangle_property_angle_sum(MPN)"
+  ]
+}

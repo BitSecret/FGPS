@@ -1,0 +1,34 @@
+{
+  "problem_id": 3822,
+  "annotation": "YifanWang_2023-05-07",
+  "source": "GeoQA-1686",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,若∠AOC=70°,且AD∥OC,则∠AOD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, if ∠AOC = N_0, and AD ∥ OC, then the degree of ∠AOD is ()",
+  "problem_img": "3822.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(DA,AO,OD)",
+    "Shape(DO,OB,OBD)",
+    "Shape(OA,OAC,CO)",
+    "Shape(BO,OC,OCB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "ParallelBetweenLine(AD,CO)",
+    "Equal(MeasureOfAngle(COA),70)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AOD))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AD,CO)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(DAO)"
+  ]
+}

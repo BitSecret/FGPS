@@ -1,0 +1,30 @@
+{
+  "problem_id": 2027,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2113",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In rhombus L M P Q, m \\angle Q L M = 2 x^ { 2 } - 10, m \\angle Q P M = 8 x, and M P = 10. Find m \\angle L Q P.",
+  "problem_img": "2027.png",
+  "construction_cdl": [
+    "Shape(QL,LR,RQ)",
+    "Shape(RL,LM,MR)",
+    "Shape(QR,RP,PQ)",
+    "Shape(RM,MP,PR)",
+    "Collinear(QRM)",
+    "Collinear(LRP)"
+  ],
+  "text_cdl": [
+    "Rhombus(LMPQ)",
+    "Equal(MeasureOfAngle(QLM),2*x^{2}-10)",
+    "Equal(MeasureOfAngle(MPQ),8*x)",
+    "Equal(LengthOfLine(MP),10)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(PQL))",
+  "problem_answer": "140",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(LMPQ)",
+    "parallel_property_ipsilateral_internal_angle(PM,QL)"
+  ]
+}

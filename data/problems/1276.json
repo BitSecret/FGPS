@@ -1,0 +1,32 @@
+{
+  "problem_id": 1276,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1322",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "1276.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(DA,AB,BD)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CD),y)",
+    "Equal(LengthOfLine(AB),x)",
+    "Equal(LengthOfLine(BD),9)",
+    "Equal(LengthOfLine(AD),3*sqrt(3))",
+    "Equal(MeasureOfAngle(ABC),30)",
+    "Equal(MeasureOfAngle(BCA),60)",
+    "PerpendicularBetweenLine(AD,CD)",
+    "PerpendicularBetweenLine(CA,BA)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ADC)",
+    "sine_theorem(ADC)",
+    "sine_theorem(CAD)"
+  ]
+}

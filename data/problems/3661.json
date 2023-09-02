@@ -1,0 +1,26 @@
+{
+  "problem_id": 3661,
+  "annotation": "XiaoxiaoJin_2023-04-30",
+  "source": "GeoQA-1371",
+  "problem_level": 1,
+  "problem_text_cn": "如图,把一块含有45°角的直角三角板的两个顶点放在直尺的对边上．如果∠1=15°,则∠2的度数是()",
+  "problem_text_en": "As shown in the figure, put the two vertices of a right-angled triangle plate with N_0 angles on the opposite edges of the ruler. If ∠1 = N_1, then the degree of ∠2 is ()",
+  "problem_img": "3661.png",
+  "construction_cdl": [
+    "Shape(AB,BC)",
+    "Shape(DB,BA)",
+    "Shape(BD,DF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,DF)",
+    "Equal(MeasureOfAngle(BDF),15)",
+    "Equal(MeasureOfAngle(DBC),45)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,DF)",
+    "angle_addition(DBA,ABC)"
+  ]
+}

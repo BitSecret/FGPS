@@ -1,0 +1,39 @@
+{
+  "problem_id": 3481,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1076",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD的周长为36,对角线AC、BD相交于点O,点E是CD的中点,BD=12,则△DOE的周长为()",
+  "problem_text_en": "As shown in the figure, the perimeter of ▱ABCD is N_0, the diagonal AC and BD intersect at point O, point E is the midpoint of CD, BD = N_1, then the perimeter of △DOE is ()",
+  "problem_img": "3481.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(DA,AO,OD)",
+    "Shape(OB,BC,CO)",
+    "Shape(DO,OE,ED)",
+    "Shape(EO,OC,CE)",
+    "Collinear(AOC)",
+    "Collinear(BOD)",
+    "Collinear(DEC)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(PerimeterOfQuadrilateral(ABCD),36)",
+    "IsMidpointOfLine(E,DC)",
+    "Equal(LengthOfLine(BD),12)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(DOE))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "line_addition(BO,OD)",
+    "midsegment_of_triangle_judgment_midpoint(OE,DBC)",
+    "midsegment_of_triangle_property_length(OE,DBC)",
+    "line_addition(CE,ED)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "quadrilateral_perimeter_formula(ABCD)",
+    "triangle_perimeter_formula(DOE)"
+  ]
+}

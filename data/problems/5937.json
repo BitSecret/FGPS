@@ -1,0 +1,28 @@
+{
+  "problem_id": 5937,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8255",
+  "problem_level": 1,
+  "problem_text_cn": "如图,热气球的探测器显示,从热气球A看一栋高楼顶部B的仰角为30°,看这栋高楼底部C的俯角为60°,热气球A与高楼的水平距离为120m,这栋高楼BC的高度为()",
+  "problem_text_en": "As shown in the figure, the hot air balloon detector shows that the elevation angle of the top B of a tall building from hot air balloon A is N_0, the depression angle of the bottom C of this tall building is N_1, and the horizontal distance between hot air balloon A and the tall building is N_2. The height of this tall building BC is ()",
+  "problem_img": "5937.png",
+  "construction_cdl": [
+    "Shape(BA,AD,DB)",
+    "Shape(DA,AC,CD)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),120)",
+    "Equal(MeasureOfAngle(ACB),60)",
+    "Equal(MeasureOfAngle(CBA),30)",
+    "Equal(MeasureOfAngle(ADB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "160*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BAC)",
+    "sine_theorem(ADB)",
+    "sine_theorem(BAC)"
+  ]
+}

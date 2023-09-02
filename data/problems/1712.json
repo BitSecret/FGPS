@@ -1,0 +1,34 @@
+{
+  "problem_id": 1712,
+  "annotation": "NaZhu_2023-03-26",
+  "source": "Geometry3k-1776",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of \\triangle A B C.",
+  "problem_img": "1712.png",
+  "construction_cdl": [
+    "Shape(AC,CM,MA)",
+    "Shape(MC,CB,BM)",
+    "Collinear(AMB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CA),10)",
+    "Equal(LengthOfLine(CM),6)",
+    "PerpendicularBetweenLine(BM,CM)",
+    "PerpendicularBetweenLine(AC,BC)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(ACB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BMC,CMA)",
+    "right_triangle_judgment_angle(CMA)",
+    "right_triangle_property_pythagorean(CMA)",
+    "line_addition(AM,MB)",
+    "right_triangle_judgment_angle(BMC)",
+    "right_triangle_property_pythagorean(BMC)",
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_property_pythagorean(ACB)",
+    "triangle_perimeter_formula(ACB)"
+  ]
+}

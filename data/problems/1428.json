@@ -1,0 +1,38 @@
+{
+  "problem_id": 1428,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1480",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram M N P R to find z.",
+  "problem_img": "1428.png",
+  "construction_cdl": [
+    "Shape(MR,RQ,QM)",
+    "Shape(QR,RP,PQ)",
+    "Shape(QP,PN,NQ)",
+    "Shape(MQ,QN,NM)",
+    "Collinear(MQP)",
+    "Collinear(RQN)"
+  ],
+  "text_cdl": [
+    "Parallelogram(MRPN)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(PQ),11.1)",
+    "Equal(MeasureOfAngle(NQP),83)",
+    "Equal(LengthOfLine(RP),20)",
+    "Equal(LengthOfLine(MN),3*x-4)",
+    "Equal(LengthOfLine(PN),2*y+5)",
+    "Equal(LengthOfLine(NQ),15.4)",
+    "Equal(MeasureOfAngle(QNM),33)",
+    "Equal(LengthOfLine(MN),3*x-4)",
+    "Equal(LengthOfLine(RQ),3*z-3)",
+    "Equal(MeasureOfAngle(MRQ),38)",
+    "Equal(LengthOfLine(RM),17.9)"
+  ],
+  "goal_cdl": "Value(z)",
+  "problem_answer": "6.133",
+  "theorem_seqs": [
+    "parallelogram_property_diagonal_bisection(NMRP,Q)"
+  ]
+}

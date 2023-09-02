@@ -1,0 +1,29 @@
+{
+  "problem_id": 5758,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7618",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠ACB=90°,D是AB上一点,连接CD,∠ACD=∠B,若BC=13cm,CD=5cm,则BD=()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠ACB = N_0, D is the point on AB, connect CD, ∠ACD = ∠B, if BC = N_1, CD = N_2, then BD = ()",
+  "problem_img": "5758.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(DC,CB,BD)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ACB),90)",
+    "Equal(MeasureOfAngle(ACD),MeasureOfAngle(CBA))",
+    "Equal(LengthOfLine(BC),13)",
+    "Equal(LengthOfLine(CD),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "angle_addition(ACD,DCB)",
+    "triangle_property_angle_sum(DCB)",
+    "right_triangle_judgment_angle(BDC)",
+    "right_triangle_property_pythagorean(BDC)"
+  ]
+}

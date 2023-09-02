@@ -1,0 +1,27 @@
+{
+  "problem_id": 3522,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1136",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点B、D、C是⊙O上的点,∠BDC=130°,则∠BOC是()",
+  "problem_text_en": "As shown in the figure, points B, D, C are points on ⊙O, ∠BDC = N_0, then ∠BOC is ()",
+  "problem_img": "3522.png",
+  "construction_cdl": [
+    "Shape(OCB,BO,OC)",
+    "Shape(OB,BD,DC,CO)",
+    "Shape(OBD,DB)",
+    "Shape(ODC,CD)",
+    "Cocircular(O,BDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BDC),130)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_internal(OBC,D)",
+    "arc_property_center_angle(OBC,O)"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "problem_id": 3561,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1191",
+  "problem_level": 1,
+  "problem_text_cn": "已知直线a∥b,∠1和∠2互余,∠3=121°,那么∠4等于()",
+  "problem_text_en": "Given that the straight line a ∥ b, ∠1 and ∠2 are mutually complementary, ∠3 = N_0, then ∠4 is equal to ()",
+  "problem_img": "3561.png",
+  "construction_cdl": [
+    "Shape(HB,BA)",
+    "Shape(BH,HD,DC,CB)",
+    "Shape(GH,HB)",
+    "Shape(CD,DE)",
+    "Shape(ED,DF)",
+    "Shape(DH,HI)",
+    "Shape(FD,DH)",
+    "Shape(IH,HG)",
+    "Collinear(ABC)",
+    "Collinear(GHDE)",
+    "Collinear(BHI)",
+    "Collinear(CDF)"
+  ],
+  "text_cdl": [
+    "Equal(Add(MeasureOfAngle(HBA),MeasureOfAngle(DCB)),90)",
+    "Equal(MeasureOfAngle(EDF),121)",
+    "ParallelBetweenLine(BC,HD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(GHB))",
+  "problem_answer": "149",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(BC,HD,A)",
+    "parallel_property_collinear_extend(DH,BA,G)",
+    "vertical_angle(GDC,EDF)",
+    "parallel_property_ipsilateral_internal_angle(DH,CB)",
+    "parallel_property_ipsilateral_internal_angle(HG,BA)"
+  ]
+}

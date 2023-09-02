@@ -1,0 +1,23 @@
+{
+  "problem_id": 5915,
+  "annotation": "YiwenHuang_2023-06-04",
+  "source": "GeoQA-8062",
+  "problem_level": 1,
+  "problem_text_cn": "如图,为了绿化荒山,某地打算从位于山脚下的机井房沿着山坡铺设水管,在山坡上修建一座扬水站,对坡面的绿地进行喷灌．现测得斜坡与水平面所成角的度数是30°,为使出水口的高度为35m,那么需要准备的水管的长为()",
+  "problem_text_en": "As shown in the figure, in order to green the barren hills, a certain place plans to lay water pipes along the hillside from the machine well room located at the foot of the hill, and build a pumping station on the hillside to sprinkle and irrigate the green land on the slope. It is now measured that the degree of the angle between the slope and the horizontal plane is N_0. In order to make the height of the water outlet N_1, the length of the water pipe that needs to be prepared is ()",
+  "problem_img": "5915.png",
+  "construction_cdl": [
+    "Shape(BA,AC,CB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),35)",
+    "Equal(MeasureOfAngle(BAC),30)",
+    "Equal(MeasureOfAngle(ACB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "sine_theorem(BAC)"
+  ]
+}

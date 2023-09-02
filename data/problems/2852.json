@@ -1,0 +1,39 @@
+{
+  "problem_id": 2852,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-4",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a⊥直线c,直线b⊥直线c,若∠1=70°,则∠2=()",
+  "problem_text_en": "As shown in the figure, the straight line a ⊥ the straight line c, the straight line b ⊥ the straight line c, if ∠1 = N_0, then ∠2 = ()",
+  "problem_img": "2852.png",
+  "construction_cdl": [
+    "Shape(CM,MD)",
+    "Shape(MD,DG)",
+    "Shape(GD,DA)",
+    "Shape(AD,DE)",
+    "Shape(DE,EB)",
+    "Shape(BE,EF)",
+    "Shape(MN,NE,ED,DM)",
+    "Shape(NF,FE,EN)",
+    "Collinear(CMNF)",
+    "Collinear(GDEF)",
+    "Collinear(MDA)",
+    "Collinear(NEB)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(CM,DM)",
+    "PerpendicularBetweenLine(MN,EN)",
+    "Equal(MeasureOfAngle(GDA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FEN))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CMD,DMN)",
+    "adjacent_complementary_angle(GDA,ADE)",
+    "adjacent_complementary_angle(ADE,EDM)",
+    "perpendicular_judgment_angle(DM,NM)",
+    "parallel_judgment_per_per(MD,NE)",
+    "parallel_property_corresponding_angle(EN,DM,F)"
+  ]
+}

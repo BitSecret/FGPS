@@ -1,0 +1,31 @@
+{
+  "problem_id": 4512,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3538",
+  "problem_level": 1,
+  "problem_text_cn": "已知如图,四边形ABCD内接于⊙O,若∠BOD=100°,则∠BCD的度数是()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is inscribed in ⊙O, if ∠BOD = N_0, then the degree of ∠BCD is ()",
+  "problem_img": "4512.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AD)",
+    "Shape(AB,BO,OD,DA)",
+    "Shape(OB,BC,CD,DO)",
+    "Shape(DC,CE)",
+    "Collinear(BCE)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(DOB),100)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "130",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_internal(OBD,C)"
+  ]
+}

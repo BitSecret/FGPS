@@ -1,0 +1,36 @@
+{
+  "problem_id": 6184,
+  "annotation": "DengfengYue_2023-05-28",
+  "source": "GeoQA-8757",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,点C、D都在⊙O上,若∠ABC=50°,则∠BDC=()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, vertices C and D are on ⊙O, if ∠ABC = N_0, then ∠BDC = ()",
+  "problem_img": "6184.png",
+  "construction_cdl": [
+    "Shape(AE,ED,ODA)",
+    "Shape(DE,EC,CD)",
+    "Shape(DC,OCD)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(AB,BE,EA)",
+    "Shape(BA,OAB)",
+    "Collinear(AEC)",
+    "Collinear(DEB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(ABC),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(BCA)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

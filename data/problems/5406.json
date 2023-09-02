@@ -1,0 +1,33 @@
+{
+  "problem_id": 5406,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5701",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AB=AC=13,BC=10,AD平分∠BAC交BC于点D,AD的垂直平分线交AC于点E,连接DE,则△CDE的周长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC = N_0, BC = N_1, AD bisects ∠BAC and intersects BC at point D, the perpendicular bisector of AD intersects AC at point E,. Connect DE, then the perimeter of △CDE is ()",
+  "problem_img": "5406.png",
+  "construction_cdl": [
+    "Shape(AD,DB,BA)",
+    "Shape(AE,ED,DA)",
+    "Shape(DE,EC,CD)",
+    "Collinear(AEC)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),13)",
+    "Equal(LengthOfLine(BC),10)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(AE),LengthOfLine(ED))",
+    "IsBisectorOfAngle(AD,BAC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(PerimeterOfTriangle(DEC))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "line_addition(CD,DB)",
+    "isosceles_triangle_judgment_line_equal(ACB)",
+    "isosceles_triangle_property_line_coincidence(ACB,D)",
+    "triangle_perimeter_formula(DEC)"
+  ]
+}

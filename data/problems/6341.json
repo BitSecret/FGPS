@@ -1,0 +1,39 @@
+{
+  "problem_id": 6341,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9160",
+  "problem_level": 1,
+  "problem_text_cn": "如图,小华剪了两条宽为1的纸条,交叉叠放在一起,且它们的交角为60°,则它们重叠部分的面积为()",
+  "problem_text_en": "As shown in the figure, Xiaohua cut two paper strips with a width of N_0, and stacked them together, and their intersection angle is N_1, then the area of ​​their overlapping part is ()",
+  "problem_img": "6341.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(EB,BF,FD,DE)",
+    "Shape(BC,CF,FB)",
+    "Collinear(AED)",
+    "Collinear(DFC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AD,BC)",
+    "ParallelBetweenLine(DC,AB)",
+    "PerpendicularBetweenLine(BE,AE)",
+    "PerpendicularBetweenLine(CF,BF)",
+    "Equal(LengthOfLine(BE),1)",
+    "Equal(LengthOfLine(BF),1)",
+    "Equal(MeasureOfAngle(BCD),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
+  "problem_answer": "2*sqrt(3)/3",
+  "theorem_seqs": [
+    "parallelogram_judgment_parallel_and_parallel(ABCD)",
+    "parallelogram_property_opposite_angle_equal(ABCD)",
+    "sine_theorem(BEA)",
+    "sine_theorem(BCF)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(BCDA)",
+    "kite_judgment_equal_and_equal(ABCD)",
+    "parallel_property_ipsilateral_internal_angle(BA,CD)",
+    "kite_area_formula_sine(ABCD)"
+  ]
+}

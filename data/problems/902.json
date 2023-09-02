@@ -1,0 +1,31 @@
+{
+  "problem_id": 902,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-931",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "W X Y Z is a kite. If m \\angle W X Y = 13 x + 24, m \\angle W Z Y = 35, and m \\angle Z W X = 13 x + 14, find m \\angle Z Y X.",
+  "problem_img": "902.png",
+  "construction_cdl": [
+    "Shape(XW,WU,UX)",
+    "Shape(UW,WZ,ZU)",
+    "Shape(UZ,ZY,YU)",
+    "Shape(UY,YX,XU)",
+    "Collinear(ZUX)",
+    "Collinear(WUY)"
+  ],
+  "text_cdl": [
+    "Kite(XWZY)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(YXW),13*x+24)",
+    "Equal(MeasureOfAngle(WZY),35)",
+    "Equal(MeasureOfAngle(XWZ),13*x+14)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ZYX))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "kite_property_opposite_angle_equal(XWZY)",
+    "quadrilateral_property_angle_sum(XWZY)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 1908,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-1983",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For the pair of similar figures, use the given areas to find x.",
+  "problem_img": "1908.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(DE,EF,FD)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(ABC,DEF)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),5)",
+    "Equal(LengthOfLine(DF),x)",
+    "Equal(AreaOfTriangle(ABC),40)",
+    "Equal(AreaOfTriangle(DEF),30)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4.330",
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(BCA,EFD)",
+    "similar_triangle_property_area_square_ratio(BCA,EFD)"
+  ]
+}

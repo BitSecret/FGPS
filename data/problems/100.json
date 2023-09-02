@@ -1,0 +1,36 @@
+{
+  "problem_id": 100,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-101",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "100.png",
+  "construction_cdl": [
+    "Shape(AY,YN,NA)",
+    "Shape(AN,NB,BA)",
+    "Collinear(YNB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AY),5)",
+    "Equal(LengthOfLine(AN),x)",
+    "Equal(LengthOfLine(AB),z)",
+    "Equal(LengthOfLine(YN),y)",
+    "Equal(LengthOfLine(YB),14)",
+    "PerpendicularBetweenLine(YN,AN)",
+    "PerpendicularBetweenLine(BA,YA)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "25/14",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(YNA,ANB)",
+    "line_addition(YN,NB)",
+    "right_triangle_judgment_angle(YNA)",
+    "right_triangle_judgment_angle(ANB)",
+    "right_triangle_judgment_angle(BAY)",
+    "right_triangle_property_pythagorean(YNA)",
+    "right_triangle_property_pythagorean(ANB)",
+    "right_triangle_property_pythagorean(BAY)"
+  ]
+}

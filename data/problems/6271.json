@@ -1,0 +1,33 @@
+{
+  "problem_id": 6271,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8930",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,P是AB延长线上的一点,PC切⊙O于点C,PC=3,PB=1,则⊙O的半径等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, P is a point on the extended line of AB, PC is tangent to ⊙O at point C, PC = N_0, PB = N_1, then the radius of ⊙O is equal to ()",
+  "problem_img": "6271.png",
+  "construction_cdl": [
+    "Shape(OAB,BO,OA)",
+    "Shape(OBC,OCA,AO,OB)",
+    "Shape(PC,OBC,BP)",
+    "Collinear(AOBP)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(PC),3)",
+    "Equal(LengthOfLine(PB),1)",
+    "IsTangentOfCircle(PC,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "circle_property_circular_power_tangent_and_segment_line(PC,PBA,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "line_addition(AO,OB)",
+    "line_addition(AO,OP)",
+    "line_addition(AB,BP)"
+  ]
+}

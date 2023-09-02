@@ -1,0 +1,34 @@
+{
+  "problem_id": 53,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-53",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "E C and A B are diameters of \\odot O. Find its measure of \\widehat A C E.",
+  "problem_img": "53.png",
+  "construction_cdl": [
+    "Shape(OE,OEF,FO)",
+    "Shape(OF,OFA,AO)",
+    "Shape(OA,OAC,CO)",
+    "Shape(OC,OCB,BO)",
+    "Shape(OB,OBE,EO)",
+    "Collinear(EOC)",
+    "Collinear(AOB)",
+    "Cocircular(O,EFACB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(CO,AO)",
+    "PerpendicularBetweenLine(EO,BO)",
+    "Equal(MeasureOfAngle(FOE),45)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(OAE))",
+  "problem_answer": "270",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(EOB,BOC)",
+    "angle_addition(EOB,BOC)",
+    "angle_addition(EOC,COA)",
+    "arc_property_center_angle(OAE,O)"
+  ]
+}

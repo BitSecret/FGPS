@@ -1,0 +1,28 @@
+{
+  "problem_id": 2767,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-2914",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the parallelogram. Round to the nearest tenth if necessary.",
+  "problem_img": "2767.png",
+  "construction_cdl": [
+    "Shape(CB,BE,EC)",
+    "Shape(CE,ED,DA,AC)",
+    "Collinear(BED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(CBDA)",
+    "Equal(LengthOfLine(CB),26)",
+    "Equal(LengthOfLine(CE),24)",
+    "Equal(LengthOfLine(DB),22)",
+    "PerpendicularBetweenLine(BE,CE)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(CBDA))",
+  "problem_answer": "528",
+  "theorem_seqs": [
+    "altitude_of_quadrilateral_judgment_left_vertex(CE,CBDA)",
+    "parallelogram_area_formula_common(CBDA)"
+  ]
+}

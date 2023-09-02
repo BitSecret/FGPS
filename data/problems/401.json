@@ -1,0 +1,55 @@
+{
+  "problem_id": 401,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-409",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If P R \\parallel W X, W X = 10, X Y = 6, W Y = 8, R Y = 5, and P S = 3, find P Q.",
+  "problem_img": "401.png",
+  "construction_cdl": [
+    "Shape(YR,RA,AY)",
+    "Shape(PY,YS,SP)",
+    "Shape(YA,AQ,QS,SY)",
+    "Shape(AX,XQ,QA)",
+    "Shape(SQ,QW,WS)",
+    "Collinear(YAX)",
+    "Collinear(YSW)",
+    "Collinear(PSQ)",
+    "Collinear(RAQ)",
+    "Collinear(RYP)",
+    "Collinear(XQW)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(RP,XW)",
+    "Equal(LengthOfLine(WX),10)",
+    "Equal(LengthOfLine(XY),6)",
+    "Equal(LengthOfLine(WY),8)",
+    "Equal(LengthOfLine(RY),5)",
+    "Equal(LengthOfLine(PS),3)"
+  ],
+  "image_cdl": [
+    "PerpendicularBetweenLine(RQ,PQ)",
+    "PerpendicularBetweenLine(YS,PS)",
+    "PerpendicularBetweenLine(WY,XY)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(PQ))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(RP,XW,Y)",
+    "parallel_property_collinear_extend(WX,PY,Q)",
+    "adjacent_complementary_angle(QSY,YSP)",
+    "adjacent_complementary_angle(RAY,YAQ)",
+    "parallel_judgment_ipsilateral_internal_angle(QA,SY)",
+    "parallel_judgment_ipsilateral_internal_angle(SQ,YA)",
+    "parallel_judgment_ipsilateral_internal_angle(QR,SY)",
+    "parallel_property_ipsilateral_internal_angle(YS,AQ)",
+    "parallel_property_alternate_interior_angle(YP,QW)",
+    "parallel_property_corresponding_angle(YS,RQ,P)",
+    "similar_triangle_judgment_aa(XWY,YRA)",
+    "similar_triangle_property_line_ratio(WYX,RAY)",
+    "similar_triangle_property_line_ratio(YXW,AYR)",
+    "parallelogram_judgment_parallel_and_parallel(YAQS)",
+    "parallelogram_property_opposite_line_equal(YAQS)",
+    "line_addition(PS,SQ)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 5521,
+  "annotation": "DengfengYue_2023-05-21",
+  "source": "GeoQA-5996",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,AB=AC,DE是AC的垂直平分线,△BCD的周长为24,BC=10,则AC等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = AC, DE is the perpendicular bisector of AC, the perimeter of △BCD is N_0, BC = N_1, then AC is equal to ()",
+  "problem_img": "5521.png",
+  "construction_cdl": [
+    "Shape(EA,AD,DE)",
+    "Shape(CE,ED,DC)",
+    "Shape(CD,DB,BC)",
+    "Collinear(CEA)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(BC),10)",
+    "IsPerpendicularBisectorOfLine(DE,CA)",
+    "Equal(PerimeterOfTriangle(BCD),24)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(DE,CA)",
+    "line_addition(AD,DB)",
+    "triangle_perimeter_formula(BCD)"
+  ]
+}

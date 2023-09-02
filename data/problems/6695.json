@@ -1,0 +1,36 @@
+{
+  "problem_id": 6695,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9725",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,∠ABD=38°,则∠DCB=()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, ∠ABD = N_0, then ∠DCB = ()",
+  "problem_img": "6695.png",
+  "construction_cdl": [
+    "Shape(ODA,AO,OD)",
+    "Shape(DO,OB,BD)",
+    "Shape(DB,OBD)",
+    "Shape(BO,OC,CB)",
+    "Shape(BC,OCB)",
+    "Shape(OA,OAC,CO)",
+    "Collinear(AOB)",
+    "Collinear(DOC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(ABD),38)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCB))",
+  "problem_answer": "52",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "sine_theorem(OBD)",
+    "diameter_of_circle_judgment_pass_centre(COD,O)",
+    "diameter_of_circle_property_right_angle(CBD,O)",
+    "triangle_property_angle_sum(CBD)"
+  ]
+}

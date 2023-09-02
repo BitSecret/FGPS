@@ -1,0 +1,27 @@
+{
+  "problem_id": 6106,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8654",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将含有30°角的直角三角板另一个锐角顶点放在圆心O上,斜边和一直角边分别与⊙O相交于A、B两点,P是优弧AB上任意一点(与A、B不重合),则∠APB=()",
+  "problem_text_en": "As shown in the figure, place the other acute angle vertex of the right triangle plate with N_0 angle on the center O, the hypotenuse and the right-angled edge intersect ⊙O at two vertices A and B respectively, and P is any point on the superior arc AB (with A, B does not coincide), then ∠APB = ()",
+  "problem_img": "6106.png",
+  "construction_cdl": [
+    "Shape(AP,OPA)",
+    "Shape(PA,AO,OB,BP)",
+    "Shape(BO,OA,OAB)",
+    "Shape(PB,OBP)",
+    "Cocircular(O,ABP)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BPA))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,P)"
+  ]
+}

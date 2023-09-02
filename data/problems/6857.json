@@ -1,0 +1,29 @@
+{
+  "problem_id": 6857,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10080",
+  "problem_level": 1,
+  "problem_text_cn": "如图，将一副三角板摆放在直线AB上，∠ECD＝∠FDG＝90°，∠EDC＝45°，设∠EDF＝20，则∠GDB的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6857.png",
+  "construction_cdl": [
+    "Shape(EC,CD,DE)",
+    "Shape(FD,DG,GF)",
+    "Shape(ED,DF,FE)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ECD),90)",
+    "Equal(MeasureOfAngle(FDG),90)",
+    "Equal(MeasureOfAngle(CDE),45)",
+    "Equal(MeasureOfAngle(EDF),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(GDB))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "angle_addition(CDE,EDF)",
+    "angle_addition(CDF,FDG)",
+    "adjacent_complementary_angle(CDG,GDB)"
+  ]
+}

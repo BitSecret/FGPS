@@ -1,0 +1,38 @@
+{
+  "problem_id": 4190,
+  "annotation": "Yangli_2023-05-07",
+  "source": "GeoQA-2865",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,C是⊙O上一点,OD⊥BC于点D,AC=4,则OD的长为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C is a point on ⊙O, OD ⊥ BC at point D, AC = N_0, then the length of OD is ()",
+  "problem_img": "4190.png",
+  "construction_cdl": [
+    "Shape(DO,OB,BD)",
+    "Shape(AO,OD,DC,CA)",
+    "Shape(BO,OA,OAB)",
+    "Shape(CD,DB,OBC)",
+    "Shape(AC,OCA)",
+    "Collinear(AOB)",
+    "Collinear(CDB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),4)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(BDO),90)",
+    "PerpendicularBetweenLine(OD,CD)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OD))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "line_addition(AO,OB)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "similar_triangle_judgment_aa(OBD,ABC)",
+    "similar_triangle_property_line_ratio(DOB,CAB)",
+    "similar_triangle_property_line_ratio(BDO,BCA)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 6864,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10090",
+  "problem_level": 1,
+  "problem_text_cn": "如图，AB是⊙O的直径，点C，D为⊙O上的点．若∠D＝120°，则∠CAB的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6864.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DC,OCD)",
+    "Shape(DA,AC,CD)",
+    "Shape(CA,AB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CDA),120)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_internal(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(CAB)"
+  ]
+}

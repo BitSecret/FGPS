@@ -1,0 +1,46 @@
+{
+  "problem_id": 5592,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7122",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在正方形ABCD中,G为CD边中点,连接AG并延长,分别交对角线BD于点F,交BC边延长线于点E．若AD=2,则AE的长度为()",
+  "problem_text_en": "As shown in the figure, in the square ABCD, G is the midpoint of the CD edge, which is connected to AG and extended, crossing the diagonal line BD at point F, and crossing the extended line line of the BC edge at point E. If FG = N_0, then the length of AE is ()",
+  "problem_img": "5592.png",
+  "construction_cdl": [
+    "Shape(AF,FD,DA)",
+    "Shape(AB,BF,FA)",
+    "Shape(DF,FG,GD)",
+    "Shape(FB,BC,CG,GF)",
+    "Shape(GC,CE,EG)",
+    "Collinear(AFGE)",
+    "Collinear(BCE)",
+    "Collinear(DGC)",
+    "Collinear(BFD)"
+  ],
+  "text_cdl": [
+    "Square(ABCD)",
+    "IsMidpointOfLine(G,CD)",
+    "Equal(LengthOfLine(FG),5^{1/2})",
+    "Equal(LengthOfLine(AD),2)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "13.41",
+  "theorem_seqs": [
+    "line_addition(DG,GC)",
+    "parallel_judgment_ipsilateral_internal_angle(DG,AB)",
+    "parallel_property_alternate_interior_angle(BA,CD)",
+    "parallel_property_alternate_interior_angle(DG,AB)",
+    "similar_triangle_judgment_aa(FAB,FGD)",
+    "similar_triangle_property_line_ratio(FAB,FGD)",
+    "similar_triangle_property_line_ratio(BFA,DFG)",
+    "line_addition(AF,FG)",
+    "parallel_property_collinear_extend(DG,AB,C)",
+    "parallel_property_corresponding_angle(GC,AB,E)",
+    "parallel_property_corresponding_angle(BA,CD,E)",
+    "similar_triangle_judgment_aa(EGC,EAB)",
+    "similar_triangle_property_line_ratio(EGC,EAB)",
+    "similar_triangle_property_line_ratio(CEG,BEA)",
+    "line_addition(AG,GE)"
+  ]
+}

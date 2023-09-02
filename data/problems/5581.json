@@ -1,0 +1,30 @@
+{
+  "problem_id": 5581,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7080",
+  "problem_level": 1,
+  "problem_text_cn": "已知:如图,PA为⊙O的切线,A为切点,PO交⊙O于点B,PA=4,OA=3,则cos∠APO的值为()",
+  "problem_text_en": "Known: As shown in the figure, PA is the tangent of ⊙O, A is the tangent point, PO intersects ⊙O at point B, PA = N_0, OA = N_1, then the value of cos∠APO is ()",
+  "problem_img": "5581.png",
+  "construction_cdl": [
+    "Shape(PB,OAB,AP)",
+    "Shape(BO,OA,OAB)",
+    "Shape(AO,OB,OBA)",
+    "Collinear(OBP)",
+    "Cocircular(O,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(PA),4)",
+    "Equal(LengthOfLine(OA),3)",
+    "IsTangentOfCircle(PA,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Cos(MeasureOfAngle(APO)))",
+  "problem_answer": "4/5",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "cosine_theorem(APO)",
+    "cosine_theorem(POA)"
+  ]
+}

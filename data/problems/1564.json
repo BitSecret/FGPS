@@ -1,0 +1,32 @@
+{
+  "problem_id": 1564,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1623",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the parallelogram. Round to the nearest tenth if necessary.",
+  "problem_img": "1564.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BS,SA)",
+    "Shape(SB,BD,DS)",
+    "Collinear(ASD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ACBS)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(CB),40)",
+    "Equal(LengthOfLine(SD),28)",
+    "Equal(LengthOfLine(DB),38)",
+    "PerpendicularBetweenLine(BD,SD)"
+  ],
+  "goal_cdl": "Value(PerimeterOfQuadrilateral(ACBS))",
+  "problem_answer": "174.4",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BDS)",
+    "right_triangle_property_pythagorean(BDS)",
+    "parallelogram_property_opposite_line_equal(ACBS)",
+    "parallelogram_property_opposite_line_equal(CBSA)",
+    "quadrilateral_perimeter_formula(ACBS)"
+  ]
+}

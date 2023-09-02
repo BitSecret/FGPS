@@ -1,0 +1,36 @@
+{
+  "problem_id": 3875,
+  "annotation": "DengfengYue_2023-04-30",
+  "source": "GeoQA-1765",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,弦CD⊥AB于点E,连接OC、BD,若∠AOC=110°,则∠ABD的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, chord CD ⊥ AB is at point E, connecting OC and BD, if ∠AOC = N_0, then the degree of ∠ABD is ()",
+  "problem_img": "3875.png",
+  "construction_cdl": [
+    "Shape(AO,OC,OCA)",
+    "Shape(CO,OE,EC)",
+    "Shape(CE,EB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(DE,EA,OAD)",
+    "Shape(BE,ED,DB)",
+    "Shape(BD,ODB)",
+    "Collinear(AOEB)",
+    "Collinear(CED)",
+    "Cocircular(O,CADB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(DE,OE)",
+    "Equal(MeasureOfAngle(AOC),110)",
+    "Equal(LengthOfArc(OCA),LengthOfArc(OAD))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DBA))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCA,O)",
+    "congruent_arc_judgment_length_equal(OCA,OAD)",
+    "congruent_arc_property_measure_equal(OCA,OAD)",
+    "arc_property_circumference_angle_external(OAD,B)"
+  ]
+}

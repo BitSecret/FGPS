@@ -1,0 +1,43 @@
+{
+  "problem_id": 3151,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-413",
+  "problem_level": 1,
+  "problem_text_cn": "直线a、b、c、d的位置如图,如果∠1=100°,∠2=100°,∠3=125°,那么∠4等于()",
+  "problem_text_en": "The positions of straight lines a, b, c, and d are shown in the figure. If ∠1 = N_0, ∠2 = N_1, ∠3 = N_2, then ∠4 is equal to ()",
+  "problem_img": "3151.png",
+  "construction_cdl": [
+    "Shape(CD,DA)",
+    "Shape(AD,DE)",
+    "Shape(DE,EB)",
+    "Shape(BE,EF)",
+    "Shape(HD,DC)",
+    "Shape(FE,EI)",
+    "Shape(GH,HD)",
+    "Shape(EI,IJ)",
+    "Shape(KH,HG)",
+    "Shape(IH,HK)",
+    "Shape(LI,IH)",
+    "Shape(JI,IL)",
+    "Shape(DH,HI,IE,ED)",
+    "Collinear(CDEF)",
+    "Collinear(GHIJ)",
+    "Collinear(ADHK)",
+    "Collinear(BEIL)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(CF,GJ)",
+    "Equal(MeasureOfAngle(CDA),100)",
+    "Equal(MeasureOfAngle(GHD),100)",
+    "Equal(MeasureOfAngle(BEF),125)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(HIE))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "vertical_angle(CDA,EDH)",
+    "vertical_angle(BEF,IED)",
+    "adjacent_complementary_angle(GHD,DHI)",
+    "quadrilateral_property_angle_sum(DHIE)"
+  ]
+}

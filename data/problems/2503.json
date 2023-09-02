@@ -1,0 +1,30 @@
+{
+  "problem_id": 2503,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2627",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "2503.png",
+  "construction_cdl": [
+    "Shape(SR,RB,BT,TS)",
+    "Shape(BSR,RS)",
+    "Shape(BRT,TB,BR)",
+    "Shape(BTS,ST)",
+    "Collinear(RBT)",
+    "Cocircular(B,SRT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsDiameterOfCircle(TR,B)",
+    "IsCentreOfCircle(B,B)",
+    "Equal(MeasureOfAngle(RTS),2*x)",
+    "Equal(MeasureOfAngle(SRT),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(TSR,B)",
+    "triangle_property_angle_sum(SRT)"
+  ]
+}

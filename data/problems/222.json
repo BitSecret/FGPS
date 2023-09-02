@@ -1,0 +1,28 @@
+{
+  "problem_id": 222,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-224",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the shaded sector. Round to the nearest tenth.",
+  "problem_img": "222.png",
+  "construction_cdl": [
+    "Shape(KJL,LK,KJ)",
+    "Shape(KLJ,JK,KL)",
+    "Cocircular(K,JL)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(K,K)",
+    "Equal(MeasureOfAngle(LKJ),85)",
+    "Equal(LengthOfLine(KL),9.3)"
+  ],
+  "goal_cdl": "Value(AreaOfSector(KLJ))",
+  "problem_answer": "207.561",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(KL,K)",
+    "arc_property_center_angle(KLJ,K)",
+    "round_angle(LKJ,JKL)",
+    "sector_area_formula(KLJ)"
+  ]
+}

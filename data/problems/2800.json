@@ -1,0 +1,28 @@
+{
+  "problem_id": 2800,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2949",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "2800.png",
+  "construction_cdl": [
+    "Shape(BC,CH,HB)",
+    "Shape(BH,HA,AD,DB)",
+    "Collinear(CHA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Trapezoid(BCAD)",
+    "IsAltitudeOfQuadrilateral(BH,BCAD)",
+    "Equal(LengthOfLine(AC),11)",
+    "Equal(LengthOfLine(DB),8)",
+    "Equal(LengthOfLine(BH),10)",
+    "PerpendicularBetweenLine(BH,AH)"
+  ],
+  "goal_cdl": "Value(AreaOfQuadrilateral(BCAD))",
+  "problem_answer": "95",
+  "theorem_seqs": [
+    "trapezoid_area_formula(BCAD)"
+  ]
+}

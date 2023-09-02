@@ -1,0 +1,52 @@
+{
+  "problem_id": 3217,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-513",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥CD,EMNF是直线AB、CD间的一条折线．若∠1=40°,∠2=60°,∠3=70°,则∠4的度数为()",
+  "problem_text_en": "As shown in the figure, AB ∥ CD, EMNF is a broken line between the straight lines AB and CD. If ∠1 = N_0, ∠2 = N_1, ∠3 = N_2, then the degree of ∠4 is ()",
+  "problem_img": "3217.png",
+  "construction_cdl": [
+    "Shape(ME,EA)",
+    "Shape(BE,EM)",
+    "Shape(GM,ME)",
+    "Shape(EM,MH)",
+    "Shape(NM,MG)",
+    "Shape(HM,MN)",
+    "Shape(PN,NM)",
+    "Shape(MN,NQ)",
+    "Shape(FN,NP)",
+    "Shape(QN,NF)",
+    "Shape(CF,FN)",
+    "Shape(NF,FD)",
+    "Collinear(AEB)",
+    "Collinear(GMH)",
+    "Collinear(PNQ)",
+    "Collinear(CFD)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,CD)",
+    "ParallelBetweenLine(AB,GH)",
+    "ParallelBetweenLine(GH,PQ)",
+    "ParallelBetweenLine(PQ,CD)",
+    "Equal(MeasureOfAngle(MEA),40)",
+    "Equal(MeasureOfAngle(EMN),60)",
+    "Equal(MeasureOfAngle(FNM),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(NFD))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AB,GH,E)",
+    "parallel_property_collinear_extend(GH,PQ,M)",
+    "parallel_property_collinear_extend(PQ,CD,N)",
+    "parallel_property_collinear_extend(HG,EA,M)",
+    "parallel_property_collinear_extend(QP,HM,N)",
+    "parallel_property_collinear_extend(DC,NP,F)",
+    "parallel_property_alternate_interior_angle(NP,HM)",
+    "parallel_property_alternate_interior_angle(HM,EA)",
+    "parallel_property_alternate_interior_angle(DF,NP)",
+    "angle_addition(EMH,HMN)",
+    "angle_addition(FNP,PNM)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "problem_id": 832,
+  "annotation": "NaZhu_2023-04-09",
+  "source": "Geometry3k-861",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find \\angle 4.",
+  "problem_img": "832.png",
+  "construction_cdl": [
+    "Shape(FDE,EA,AD)",
+    "Shape(FEC,CE)",
+    "Shape(FCB,BA,AC)",
+    "Shape(FBD,DA,AB)",
+    "Shape(AE,EC,CA)",
+    "Collinear(EAB)",
+    "Collinear(DAC)",
+    "Cocircular(F,DECB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(FDE),45)",
+    "Equal(MeasureOfArc(FCB),75)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(EAD))",
+  "problem_answer": "60",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(FDE,C)",
+    "arc_property_circumference_angle_external(FCB,E)",
+    "triangle_property_angle_sum(ECA)",
+    "adjacent_complementary_angle(CAE,EAD)"
+  ]
+}

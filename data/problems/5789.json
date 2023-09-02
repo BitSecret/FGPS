@@ -1,0 +1,46 @@
+{
+  "problem_id": 5789,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7706",
+  "problem_level": 1,
+  "problem_text_cn": "如图,F是平行四边形ABCD的边CD上的点,FD=2FC,连结AF并延长交BC于E,CE=2,则AD的长为()",
+  "problem_text_en": "As shown in the figure, F is the point on CD of the parallelogram ABCD, FD = N_0 FC. Connect AF and extend BC to E, CE = N_1, then the length of AD is ()",
+  "problem_img": "5789.png",
+  "construction_cdl": [
+    "Shape(BC,CF,FA,AB)",
+    "Shape(AF,FD,DA)",
+    "Shape(FC,CE,EF)",
+    "Collinear(AFE)",
+    "Collinear(DFC)",
+    "Collinear(BCE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CE),2)",
+    "Equal(Div(LengthOfLine(FD),LengthOfLine(FC)),2)",
+    "Parallelogram(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AD))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallel_property_collinear_extend(DC,AB,F)",
+    "parallel_property_alternate_interior_angle(EC,DA)",
+    "parallel_property_alternate_interior_angle(DF,AB)",
+    "similar_triangle_judgment_aa(FDA,FCE)",
+    "similar_triangle_judgment_aa(DAF,BEA)",
+    "similar_triangle_judgment_aa(FCE,FDA)",
+    "similar_triangle_judgment_aa(BEA,DAF)",
+    "similar_triangle_property_line_ratio(FDA,FCE)",
+    "similar_triangle_property_line_ratio(DAF,CEF)",
+    "similar_triangle_property_line_ratio(AFD,EFC)",
+    "similar_triangle_property_line_ratio(DAF,BEA)",
+    "similar_triangle_property_line_ratio(AFD,EAB)",
+    "similar_triangle_property_line_ratio(FDA,ABE)",
+    "similar_triangle_property_line_ratio(FCE,FDA)",
+    "similar_triangle_property_line_ratio(CEF,DAF)",
+    "similar_triangle_property_line_ratio(EFC,AFD)",
+    "similar_triangle_property_line_ratio(BEA,DAF)",
+    "similar_triangle_property_line_ratio(EAB,AFD)"
+  ]
+}

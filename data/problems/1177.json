@@ -1,0 +1,33 @@
+{
+  "problem_id": 1177,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1217",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1177.png",
+  "construction_cdl": [
+    "Shape(RS,ST,TQ,QR)",
+    "Shape(QT,TP,PQ)",
+    "Collinear(RQP)",
+    "Collinear(STP)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(RQ),6)",
+    "Equal(LengthOfLine(PQ),2*x+1)",
+    "Equal(LengthOfLine(ST),4)",
+    "Equal(LengthOfLine(PT),10)",
+    "ParallelBetweenLine(QT,RS)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(QT,RS,P)",
+    "similar_triangle_judgment_aa(TPQ,SPR)",
+    "line_addition(PQ,QR)",
+    "line_addition(PT,TS)",
+    "similar_triangle_property_line_ratio(TPQ,SPR)",
+    "similar_triangle_property_line_ratio(QTP,RSP)"
+  ]
+}

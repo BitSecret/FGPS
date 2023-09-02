@@ -1,0 +1,26 @@
+{
+  "problem_id": 5942,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8273",
+  "problem_level": 1,
+  "problem_text_cn": "数学实践探究课中,老师布置同学们测量学校旗杆的高度．如图所示,小明所在的学习小组在距离旗杆底部10米的地方,用测角仪测得旗杆顶端的仰角为60°,则旗杆的高度是()米．",
+  "problem_text_en": "In the mathematics practice inquiry class, the teacher arranged for the students to measure the height of the school flagpole. As shown in the figure, Xiao Ming's study group is at a distance of N_0 from the bottom of the flagpole. The elevation angle of the top of the flagpole is measured with a goniometer as N_1, then the height of the flagpole is ().",
+  "problem_img": "5942.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),10)",
+    "Equal(MeasureOfAngle(ABC),60)",
+    "Equal(MeasureOfAngle(BCA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "10*sqrt(3)",
+  "theorem_seqs": [
+    "sine_theorem(ABC)",
+    "sine_theorem(BCA)",
+    "sine_theorem(CAB)",
+    "cosine_theorem(ABC)"
+  ]
+}

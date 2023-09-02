@@ -1,0 +1,43 @@
+{
+  "problem_id": 3735,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1523",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC的外角平分线BD、CD交于点D,如果∠A=70°,那么∠BDC的度数为()",
+  "problem_text_en": "As shown in the figure, the bisectors of exterior angles BD and CD of △ABC intersect at point D. If ∠A = N_0, then the degree of ∠BDC is ()",
+  "problem_img": "3735.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(BD,DC,CB)",
+    "Shape(DB,BE)",
+    "Shape(FC,CD)",
+    "Collinear(ABE)",
+    "Collinear(ACF)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),70)",
+    "IsBisectorOfAngle(BD,CBE)",
+    "IsBisectorOfAngle(CD,FCB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BDC))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "angle_addition(ABE,EBC)",
+    "angle_addition(ABE,EBD)",
+    "angle_addition(EBA,ABC)",
+    "angle_addition(EBA,ABD)",
+    "angle_addition(ABC,CBD)",
+    "angle_addition(ABC,CBE)",
+    "angle_addition(CBD,DBE)",
+    "angle_addition(FCD,DCB)",
+    "angle_addition(EBC,CBD)",
+    "angle_addition(CBE,EBD)",
+    "angle_addition(FCB,BCA)",
+    "flat_angle(ABE)",
+    "flat_angle(EBA)",
+    "flat_angle(FCA)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(BDC)"
+  ]
+}

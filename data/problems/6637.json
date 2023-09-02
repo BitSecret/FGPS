@@ -1,0 +1,33 @@
+{
+  "problem_id": 6637,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9648",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点C在以AB为直径的⊙O上(点C不与A、B重合),点E在弦AC上,EF⊥AB于点F,若∠B=66°,则∠AEF的大小为()",
+  "problem_text_en": "As shown in the figure, point C is on ⊙O with AB as the diameter (point C does not coincide with A and B), point E is on chord AC, EF ⊥ AB is at point F, if ∠B = N_0, then the size of ∠AEF for()",
+  "problem_img": "6637.png",
+  "construction_cdl": [
+    "Shape(AE,EC,OCA)",
+    "Shape(EA,AO,OF,FE)",
+    "Shape(EF,FB,BC,CE)",
+    "Shape(CB,OBC)",
+    "Shape(BF,FO,OA,OAB)",
+    "Collinear(AOFB)",
+    "Collinear(AEC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AF,EF)",
+    "Equal(MeasureOfAngle(ABC),66)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FEA))",
+  "problem_answer": "66",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(EAF)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

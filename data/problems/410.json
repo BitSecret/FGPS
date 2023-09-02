@@ -1,0 +1,33 @@
+{
+  "problem_id": 410,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-418",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "410.png",
+  "construction_cdl": [
+    "Shape(FB,BA,AF)",
+    "Shape(BL,LA,AB)",
+    "Collinear(LBF)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(LF),2*sqrt(3))",
+    "Equal(LengthOfLine(BF),x)",
+    "Equal(LengthOfLine(BA),y)",
+    "Equal(LengthOfLine(FA),z)",
+    "Equal(LengthOfLine(LA),sqrt(3))",
+    "PerpendicularBetweenLine(FB,AB)",
+    "PerpendicularBetweenLine(LA,FA)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "3/2*sqrt(3)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(FBA,ABL)",
+    "mirror_similar_triangle_judgment_aa(ABL,FLA)",
+    "mirror_similar_triangle_property_line_ratio(ABL,FLA)",
+    "mirror_similar_triangle_property_line_ratio(BLA,AFL)",
+    "line_addition(LB,BF)"
+  ]
+}

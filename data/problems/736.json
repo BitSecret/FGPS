@@ -1,0 +1,24 @@
+{
+  "problem_id": 736,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-761",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "736.png",
+  "construction_cdl": [
+    "Shape(CB,BA,AC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(BC),5)",
+    "PerpendicularBetweenLine(CB,AB)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(CA))",
+  "problem_answer": "5*sqrt(2)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(CBA)",
+    "right_triangle_property_pythagorean(CBA)"
+  ]
+}

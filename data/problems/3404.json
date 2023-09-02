@@ -1,0 +1,36 @@
+{
+  "problem_id": 3404,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-937",
+  "problem_level": 1,
+  "problem_text_cn": "如图,一个2.5米长的梯子,底端D放在距离墙根C点1.5米处,另一头E点靠墙,如果梯子的底部向墙移动0.8米,梯子的另一端向上移动()米.",
+  "problem_text_en": "As shown in the figure, a ladder with a length of N_0, the bottom end D is placed at the point N_1 from the root of the wall, and the other end point E is against the wall. If the bottom of the ladder moves to the wall by N_2, the other end of the ladder moves up ()",
+  "problem_img": "3404.png",
+  "construction_cdl": [
+    "Shape(BF,FE,EB)",
+    "Shape(FD,DA,AF)",
+    "Shape(FA,AC,CE,EF)",
+    "Collinear(BFA)",
+    "Collinear(DFE)",
+    "Collinear(BEC)",
+    "Collinear(DAC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),2.5)",
+    "Equal(LengthOfLine(DE),2.5)",
+    "Equal(LengthOfLine(DC),1.5)",
+    "Equal(LengthOfLine(DA),0.8)",
+    "Equal(MeasureOfAngle(ACE),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BE))",
+  "problem_answer": "0.4",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ACB)",
+    "right_triangle_judgment_angle(DCE)",
+    "line_addition(DA,AC)",
+    "right_triangle_property_pythagorean(DCE)",
+    "right_triangle_property_pythagorean(ACB)",
+    "line_addition(BE,EC)"
+  ]
+}

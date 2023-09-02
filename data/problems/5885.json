@@ -1,0 +1,41 @@
+{
+  "problem_id": 5885,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7945",
+  "problem_level": 1,
+  "problem_text_cn": "如图,把边长分别为8cm和6cm的两个正方形ABCD与BEFG并排放在一起,直线EG交DC于P,AC交PG于K,则△AEK的面积是()",
+  "problem_text_en": "As shown in the figure, the two squares ABCD and BEFG with edge length N_0 and N_1 are placed side by side. The straight line EG crosses DC to P, AC intersects PG at K, then the area of ​​△AEK is ()",
+  "problem_img": "5885.png",
+  "construction_cdl": [
+    "Shape(DA,AK,KP,PD)",
+    "Shape(PK,KC,CP)",
+    "Shape(CK,KG,GC)",
+    "Shape(KA,AB,BG,GK)",
+    "Shape(GB,BE,EG)",
+    "Shape(GE,EF,FG)",
+    "Collinear(PKGE)",
+    "Collinear(AKC)",
+    "Collinear(DPC)",
+    "Collinear(CGB)",
+    "Collinear(ABE)"
+  ],
+  "text_cdl": [
+    "Square(ABCD)",
+    "Square(BEFG)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(BE),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(AEK))",
+  "problem_answer": "49",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(BEG)",
+    "triangle_property_angle_sum(AEK)",
+    "sine_theorem(BCA)",
+    "sine_theorem(BEG)",
+    "sine_theorem(AEK)",
+    "line_addition(AB,BE)",
+    "triangle_area_formula_sine(AEK)"
+  ]
+}

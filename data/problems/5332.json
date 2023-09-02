@@ -1,0 +1,45 @@
+{
+  "problem_id": 5332,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5557",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的内切圆,切AB,AC于点D、E,∠DOE=110°,则∠BOC的度数为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the inscribed circle of △ABC, tangent to AB, AC at points D and E, ∠DOE = N_0, then the degree of ∠BOC is ()",
+  "problem_img": "5332.png",
+  "construction_cdl": [
+    "Shape(AD,OED,EA)",
+    "Shape(DO,OE,OED)",
+    "Shape(OD,ODM,MO)",
+    "Shape(EO,ON,ONE)",
+    "Shape(OM,OMF,OFN,NO)",
+    "Shape(ODM,DB,BM)",
+    "Shape(OMF,MB,BF)",
+    "Shape(OFN,FC,CN)",
+    "Shape(ONE,NC,CE)",
+    "Collinear(ADB)",
+    "Collinear(BFC)",
+    "Collinear(AEC)",
+    "Collinear(BMO)",
+    "Collinear(ONC)",
+    "Cocircular(O,DMFNE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsIncenterOfTriangle(O,ABC)",
+    "IsTangentOfCircle(AD,O)",
+    "IsTangentOfCircle(AE,O)",
+    "Equal(MeasureOfAngle(DOE),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "125",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(AD,O,O)",
+    "tangent_of_circle_property_perpendicular(AE,O,O)",
+    "quadrilateral_property_angle_sum(ADOE)",
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(ABO,OBC)",
+    "angle_addition(BCO,OCA)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

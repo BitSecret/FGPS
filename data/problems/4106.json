@@ -1,0 +1,25 @@
+{
+  "problem_id": 4106,
+  "annotation": "QikeHuang_2023-05-07",
+  "source": "GeoQA-2545",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在Rt△ABC中,∠C=90°,AC=4,BC=3,则sinB的值等于()",
+  "problem_text_en": "As shown in the figure, in Rt△ABC, ∠C = N_0, AC = N_1, BC = N_2, then the value of sinB is equal to ()",
+  "problem_img": "4106.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(MeasureOfAngle(BCA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(ABC)))",
+  "problem_answer": "4/5",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_pythagorean(BCA)",
+    "sine_theorem(ABC)"
+  ]
+}

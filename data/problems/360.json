@@ -1,0 +1,24 @@
+{
+  "problem_id": 360,
+  "annotation": "NaZhu_2023-03-12",
+  "source": "Geometry3k-367",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Express the ratio of \\tan B as a decimal to the nearest hundredth.",
+  "problem_img": "360.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AC),24)",
+    "Equal(LengthOfLine(AB),26)",
+    "Equal(LengthOfLine(CB),10)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(Tan(MeasureOfAngle(ABC)))",
+  "problem_answer": "2.40",
+  "theorem_seqs": [
+    "cosine_theorem(BCA)"
+  ]
+}

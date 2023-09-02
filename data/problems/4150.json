@@ -1,0 +1,24 @@
+{
+  "problem_id": 4150,
+  "annotation": "XiaoxiaoJin_2023-05-07",
+  "source": "GeoQA-2743",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠C=90°,BC=2,AB=3,则sinA的值是()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠C = N_0, BC = N_1, AB = N_2, then the value of sinA is ()",
+  "problem_img": "4150.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),2)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(MeasureOfAngle(ACB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Sin(MeasureOfAngle(BAC)))",
+  "problem_answer": "2/3",
+  "theorem_seqs": [
+    "cosine_theorem(ACB)",
+    "cosine_theorem(CBA)"
+  ]
+}

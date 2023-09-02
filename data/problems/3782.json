@@ -1,0 +1,28 @@
+{
+  "problem_id": 3782,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1615",
+  "problem_level": 1,
+  "problem_text_cn": "如图,平行四边形ABCD中,CE⊥AB于E,如果∠A=125°,则∠BCE度数是()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, CE ⊥ AB is in E, if ∠A = N_0, then the degree of ∠BCE is ()",
+  "problem_img": "3782.png",
+  "construction_cdl": [
+    "Shape(AE,EC,CD,DA)",
+    "Shape(EB,BC,CE)",
+    "Collinear(AEB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(ABCD)",
+    "PerpendicularBetweenLine(AE,CE)",
+    "Equal(MeasureOfAngle(DAE),125)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCE))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(ABCD)",
+    "parallel_property_ipsilateral_internal_angle(CB,DA)",
+    "quadrilateral_property_angle_sum(AECD)",
+    "angle_addition(BCE,ECD)"
+  ]
+}

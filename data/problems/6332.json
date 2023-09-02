@@ -1,0 +1,43 @@
+{
+  "problem_id": 6332,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9141",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,若∠B=60°,点E、F分别在AB、AD上,且BE=AF,则∠AEC+∠AFC的度数等于()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, if ∠B = N_0, points E and F are on AB and AD respectively, and BE = AF, then the degree of ∠AEC + ∠AFC is equal to ()",
+  "problem_img": "6332.png",
+  "construction_cdl": [
+    "Shape(AE,EC,CA)",
+    "Shape(AC,CF,FA)",
+    "Shape(EB,BC,CE)",
+    "Shape(FC,CD,DF)",
+    "Collinear(BEA)",
+    "Collinear(AFD)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(EBC),60)",
+    "Equal(LengthOfLine(BE),LengthOfLine(AF))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Add(MeasureOfAngle(AEC),MeasureOfAngle(CFA)))",
+  "problem_answer": "180",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(BCA)",
+    "isosceles_triangle_property_angle_equal(BCA)",
+    "triangle_property_angle_sum(ABC)",
+    "parallelogram_property_opposite_angle_equal(DABC)",
+    "isosceles_triangle_judgment_line_equal(DAC)",
+    "isosceles_triangle_property_angle_equal(DAC)",
+    "triangle_property_angle_sum(DAC)",
+    "isosceles_triangle_judgment_angle_equal(CDA)",
+    "line_addition(BE,EA)",
+    "line_addition(AF,FD)",
+    "congruent_triangle_judgment_sas(AEC,DFC)",
+    "congruent_triangle_property_angle_equal(CAE,CDF)",
+    "angle_addition(ACF,FCD)",
+    "angle_addition(ECA,ACF)",
+    "angle_addition(FAC,CAE)",
+    "quadrilateral_property_angle_sum(AECF)"
+  ]
+}

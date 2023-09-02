@@ -1,0 +1,33 @@
+{
+  "problem_id": 1803,
+  "annotation": "ChenyangMao_2023-04-16",
+  "source": "Geometry3k-1869",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle D A B.",
+  "problem_img": "1803.png",
+  "construction_cdl": [
+    "Shape(BA,AI)",
+    "Shape(IA,AD,DI)",
+    "Shape(IAD,DA)",
+    "Shape(IDA,AI,ID)",
+    "Cocircular(I,AD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(I,I)",
+    "IsTangentOfCircle(BA,I)",
+    "Equal(MeasureOfAngle(DIA),110)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BAD))",
+  "problem_answer": "125",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BA,I,I)",
+    "radius_of_circle_property_length_equal(IA,I)",
+    "radius_of_circle_property_length_equal(ID,I)",
+    "isosceles_triangle_judgment_line_equal(IAD)",
+    "triangle_property_angle_sum(IAD)",
+    "isosceles_triangle_property_angle_equal(IAD)",
+    "angle_addition(BAI,IAD)"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": 6163,
+  "annotation": "YifanWang_2023-06-04",
+  "source": "GeoQA-8727",
+  "problem_level": 1,
+  "problem_text_cn": "如下图,点C在以AB为直径的半圆O上,∠BAC=20°,则∠BOC等于()",
+  "problem_text_en": "As shown in the figure below, point C is on the semicircle O with AB as the diameter, ∠BAC = N_0, then ∠BOC is equal to ()",
+  "problem_img": "6163.png",
+  "construction_cdl": [
+    "Shape(AC,OCA)",
+    "Shape(CA,AO,OC)",
+    "Shape(CO,OB,OBC)",
+    "Shape(BO,OA,OAB)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(COB))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)"
+  ]
+}

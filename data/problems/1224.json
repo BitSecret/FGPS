@@ -1,0 +1,35 @@
+{
+  "problem_id": 1224,
+  "annotation": "JiaZou_2023-03-19",
+  "source": "Geometry3k-1264",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find A F.",
+  "problem_img": "1224.png",
+  "construction_cdl": [
+    "Shape(AD,DF,FA)",
+    "Shape(FD,DC,CB,BF)",
+    "Collinear(ADC)",
+    "Collinear(AFB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),18)",
+    "Equal(LengthOfLine(AD),9)",
+    "Equal(LengthOfLine(DC),6)",
+    "PerpendicularBetweenLine(AD,FD)",
+    "PerpendicularBetweenLine(DC,BC)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AF))",
+  "problem_answer": "10.8",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ADF,FDC)",
+    "perpendicular_judgment_angle(FD,CD)",
+    "parallel_judgment_per_per(DF,CB)",
+    "parallel_property_corresponding_angle(DF,CB,A)",
+    "similar_triangle_judgment_aa(FAD,BAC)",
+    "line_addition(AD,DC)",
+    "similar_triangle_property_line_ratio(FAD,BAC)",
+    "similar_triangle_property_line_ratio(DFA,CBA)"
+  ]
+}

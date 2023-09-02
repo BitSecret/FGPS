@@ -1,0 +1,32 @@
+{
+  "problem_id": 3172,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-448",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB∥CD,∠C=44°,∠E为直角,则∠1等于()",
+  "problem_text_en": "As shown in the figure, the straight line AB ∥ CD, ∠C = N_0, ∠E is a right angle, then ∠1 is equal to ()",
+  "problem_img": "3172.png",
+  "construction_cdl": [
+    "Shape(MA,AB)",
+    "Shape(BA,AE)",
+    "Shape(FE,EA)",
+    "Shape(CE,EF)",
+    "Shape(EC,CD)",
+    "Collinear(MAE)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,FE)",
+    "ParallelBetweenLine(FE,CD)",
+    "Equal(MeasureOfAngle(ECD),44)",
+    "Equal(MeasureOfAngle(CEA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(MAB))",
+  "problem_answer": "134",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(FE,CD)",
+    "parallel_property_alternate_interior_angle(AB,FE)",
+    "angle_addition(CEF,FEA)",
+    "adjacent_complementary_angle(MAB,BAE)"
+  ]
+}

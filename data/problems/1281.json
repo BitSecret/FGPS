@@ -1,0 +1,33 @@
+{
+  "problem_id": 1281,
+  "annotation": "YiwenHuang_2023-05-07",
+  "source": "Geometry3k-1327",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the area of the figure. Round to the nearest tenth if necessary.",
+  "problem_img": "1281.png",
+  "construction_cdl": [
+    "Shape(BD,DA,AO,OB)",
+    "Shape(CB,BE,EC)",
+    "Shape(CE,EO,OC)",
+    "Collinear(BEO)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Rectangle(BDAO)",
+    "Equal(LengthOfLine(EC),27)",
+    "Equal(LengthOfLine(AD),62)",
+    "Equal(LengthOfLine(AO),54)",
+    "PerpendicularBetweenLine(BE,CE)",
+    "Equal(x,Add(AreaOfTriangle(CBO),AreaOfQuadrilateral(BDAO)))"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4185",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(BDAO)",
+    "parallelogram_property_opposite_line_equal(DAOB)",
+    "altitude_of_triangle_judgment(CE,CBO)",
+    "triangle_area_formula_common(CBO)",
+    "parallelogram_area_formula_sine(BDAO)"
+  ]
+}

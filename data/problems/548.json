@@ -1,0 +1,30 @@
+{
+  "problem_id": 548,
+  "annotation": "JiaZou_2023-03-12",
+  "source": "Geometry3k-561",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If x = 7 \\sqrt { 3 }, find b.",
+  "problem_img": "548.png",
+  "construction_cdl": [
+    "Shape(BC,CE,EB)",
+    "Shape(EC,CA,AE)",
+    "Collinear(BEA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(BE),7*sqrt(3))",
+    "Equal(MeasureOfAngle(EBC),60)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "PerpendicularBetweenLine(BC,AC)",
+    "PerpendicularBetweenLine(AE,CE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(CA))",
+  "problem_answer": "42.008",
+  "theorem_seqs": [
+    "line_addition(BE,EA)",
+    "triangle_property_angle_sum(AEC)",
+    "sine_theorem(AEC)",
+    "sine_theorem(ABC)"
+  ]
+}

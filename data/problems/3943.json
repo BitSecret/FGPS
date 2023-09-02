@@ -1,0 +1,30 @@
+{
+  "problem_id": 3943,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1865",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点A、B、C在⊙O上,若∠AOB=130°,则∠C的度数为()",
+  "problem_text_en": "As shown in the figure, points A, B, and C are on ⊙O, if ∠AOB = N_0, then the degree of ∠C is ()",
+  "problem_img": "3943.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(OBC,CB)",
+    "Shape(OAD,DA)",
+    "Shape(ODB,BD)",
+    "Shape(OB,BC,CA,AO)",
+    "Shape(DO,OA,AD)",
+    "Shape(DB,BO,OD)",
+    "Cocircular(O,BCAD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(AOB),130)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "115",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_internal(OBA,C)"
+  ]
+}

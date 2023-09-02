@@ -1,0 +1,28 @@
+{
+  "problem_id": 5051,
+  "annotation": "ChengQin_2023-05-21",
+  "source": "GeoQA-4802",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D、E分别是边BC、AC上的点,连结DE,若△EDC∽△ABC,且AE=4,CE=5,则\\frac{CD}{CB}的值是()",
+  "problem_text_en": "As shown in the figure, in △ABC, points D and E are points on edges BC and AC respectively. Connect DE, if △EDC ∽ △ABC, and AE = N_0, CE = N_1, then the value of \\frac CDCB is ()",
+  "problem_img": "5051.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DE,EA)",
+    "Shape(ED,DC,CE)",
+    "Collinear(AEC)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "SimilarBetweenTriangle(EDC,ABC)",
+    "Equal(LengthOfLine(AE),4)",
+    "Equal(LengthOfLine(EC),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(CD),LengthOfLine(CB)))",
+  "problem_answer": "5/9",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "similar_triangle_property_line_ratio(DCE,BCA)",
+    "similar_triangle_property_line_ratio(EDC,ABC)"
+  ]
+}

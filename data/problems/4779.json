@@ -1,0 +1,37 @@
+{
+  "problem_id": 4779,
+  "annotation": "Yangli_2023-05-14",
+  "source": "GeoQA-4165",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,AB=5,BC=3,AC=4,以点C为圆心的圆与AB相切,则⊙C的半径为()",
+  "problem_text_en": "As shown in the figure, in △ABC, AB = N_0, BC = N_1, AC = N_2, the circle with point C as the center is tangent to AB, then the radius of ⊙C is ()",
+  "problem_img": "4779.png",
+  "construction_cdl": [
+    "Shape(DA,AC,ODC)",
+    "Shape(CB,BE,OCE)",
+    "Shape(CO,OD,ODC)",
+    "Shape(EO,OC,OCE)",
+    "Shape(DO,OE,OED)",
+    "Collinear(ACB)",
+    "Collinear(BEO)",
+    "Collinear(ADO)",
+    "Cocircular(O,DCE)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BC),3)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(LengthOfLine(AB),5)",
+    "IsTangentOfCircle(AC,O)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(OC))",
+  "problem_answer": "2.4",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal",
+    "tangent_of_circle_property_perpendicular",
+    "right_triangle_judgment_pythagorean_inverse",
+    "triangle_area_formula_common(OAB)",
+    "triangle_area_formula_sine(OAB)"
+  ]
+}

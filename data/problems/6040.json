@@ -1,0 +1,36 @@
+{
+  "problem_id": 6040,
+  "annotation": "ChenyangMao_2023-05-28",
+  "source": "GeoQA-8537",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,OD⊥BC,∠BOD=50°,则∠CAD的度数等于()",
+  "problem_text_en": "As shown in the figure, in ⊙O, OD ⊥ BC, ∠BOD = N_0, then the degree of ∠CAD is equal to ()",
+  "problem_img": "6040.png",
+  "construction_cdl": [
+    "Shape(OAB,OBD,DA)",
+    "Shape(OCA,AC)",
+    "Shape(OB,BE,EO)",
+    "Shape(OE,EC,CO)",
+    "Shape(OBD,DE,EB)",
+    "Shape(ODC,CA,AD)",
+    "Shape(ODC,CE,ED)",
+    "Collinear(BEC)",
+    "Collinear(OED)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(BE,OE)",
+    "Equal(MeasureOfAngle(DOB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAD))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "circle_property_chord_perpendicular_bisect_arc(OBC,OED)",
+    "congruent_arc_judgment_length_equal(OBD,ODC)",
+    "congruent_arc_property_measure_equal(OBD,ODC)",
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_external(ODC,A)"
+  ]
+}

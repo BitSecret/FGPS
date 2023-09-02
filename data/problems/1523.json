@@ -1,0 +1,42 @@
+{
+  "problem_id": 1523,
+  "annotation": "YanjunGuo_2023-04-09",
+  "source": "Geometry3k-1581",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "U J = 9, V J = 3, and Z T = 18. Find Z J.",
+  "problem_img": "1523.png",
+  "construction_cdl": [
+    "Shape(SY,YJ,JS)",
+    "Shape(YZ,ZJ,JY)",
+    "Shape(JZ,ZV,VJ)",
+    "Shape(JV,VU,UJ)",
+    "Shape(TJ,JU,UT)",
+    "Shape(SJ,JT,TS)",
+    "Collinear(SJV)",
+    "Collinear(YJU)",
+    "Collinear(ZJT)",
+    "Collinear(SYZ)",
+    "Collinear(ZVU)",
+    "Collinear(UTS)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(UJ),9)",
+    "Equal(LengthOfLine(VJ),3)",
+    "Equal(LengthOfLine(ZT),18)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(ST),LengthOfLine(UT))",
+    "Equal(LengthOfLine(ZV),LengthOfLine(UV))",
+    "Equal(LengthOfLine(SY),LengthOfLine(YZ))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(ZJ))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "median_of_triangle_judgment(UY,USZ)",
+    "median_of_triangle_judgment(SV,SZU)",
+    "centroid_of_triangle_judgment_intersection(J,ZUS,V,Y)",
+    "centroid_of_triangle_property_line_ratio(J,ZUS,T)",
+    "line_addition(ZJ,JT)"
+  ]
+}

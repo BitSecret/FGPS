@@ -1,0 +1,38 @@
+{
+  "problem_id": 3734,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1521",
+  "problem_level": 1,
+  "problem_text_cn": "如图,DE、FG分别是△ABC的AB、AC边上的垂直平分线,且∠BAC=100°,那么∠DAF的度数为()",
+  "problem_text_en": "As shown in the figure, DE and FG are the perpendicular bisectors on the AB and AC sides of △ABC, and ∠BAC = N_0, then the degree of ∠DAF is ()",
+  "problem_img": "3734.png",
+  "construction_cdl": [
+    "Shape(BD,DE,EB)",
+    "Shape(AE,ED,DA)",
+    "Shape(AD,DF,FA)",
+    "Shape(AF,FG,GA)",
+    "Shape(GF,FC,CG)",
+    "Collinear(BEA)",
+    "Collinear(AGC)",
+    "Collinear(BDFC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(CAB),100)",
+    "IsPerpendicularBisectorOfLine(DE,AB)",
+    "IsPerpendicularBisectorOfLine(FG,AC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FAD))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(DE,AB)",
+    "perpendicular_bisector_property_distance_equal(FG,AC)",
+    "isosceles_triangle_judgment_line_equal(DAB)",
+    "isosceles_triangle_judgment_line_equal(FCA)",
+    "isosceles_triangle_property_angle_equal(DAB)",
+    "isosceles_triangle_property_angle_equal(FCA)",
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(GAF,FAD)",
+    "angle_addition(GAD,DAE)"
+  ]
+}

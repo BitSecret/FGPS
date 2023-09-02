@@ -1,0 +1,38 @@
+{
+  "problem_id": 5333,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5558",
+  "problem_level": 1,
+  "problem_text_cn": "如图,点I是△ABC的内心,∠BIC=130°,则∠BAC=()",
+  "problem_text_en": "As shown in the figure, point I is the incenter of △ABC, ∠BIC = N_0, then ∠BAC = ()",
+  "problem_img": "5333.png",
+  "construction_cdl": [
+    "Shape(AD,IED,EA)",
+    "Shape(IN,INE,IED,IDM,MI)",
+    "Shape(IM,IMF,IFN,NI)",
+    "Shape(IDM,DB,BM)",
+    "Shape(IMF,MB,BF)",
+    "Shape(IFN,FC,CN)",
+    "Shape(INE,NC,CE)",
+    "Collinear(ADB)",
+    "Collinear(BFC)",
+    "Collinear(AEC)",
+    "Collinear(BMI)",
+    "Collinear(INC)",
+    "Cocircular(I,DMFNE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(I,I)",
+    "IsIncenterOfTriangle(I,ABC)",
+    "Equal(MeasureOfAngle(CIB),130)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(ABI,IBC)",
+    "angle_addition(BCI,ICA)",
+    "triangle_property_angle_sum(IBC)"
+  ]
+}

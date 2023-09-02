@@ -1,0 +1,33 @@
+{
+  "problem_id": 4452,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3422",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O直径,CD为弦,AB⊥CD,如果∠BOC=70°,那么∠A的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, CD is the chord, AB ⊥ CD, if ∠BOC = N_0, then the degree of ∠A is ()",
+  "problem_img": "4452.png",
+  "construction_cdl": [
+    "Shape(AC,CO,OA)",
+    "Shape(OC,CE,EO)",
+    "Shape(DE,EB,OBD)",
+    "Shape(AO,OE,ED,EDA)",
+    "Shape(CA,OAC)",
+    "Shape(BE,EC,OCB)",
+    "Collinear(CED)",
+    "Collinear(AOEB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(AED),90)",
+    "Equal(MeasureOfAngle(BOC),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OAC))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCB,O)",
+    "arc_property_circumference_angle_external(OCB,A)"
+  ]
+}

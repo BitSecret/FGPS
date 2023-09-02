@@ -1,0 +1,44 @@
+{
+  "problem_id": 5328,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5550",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC内接于圆,D是BC上一点,将∠B沿AD翻折,B点正好落在圆点E处,若∠C=50°,则∠BAE的度数是()",
+  "problem_text_en": "As shown in the figure, △ABC is inscribed to the circle, D is a point on BC, fold ∠B along AD, point B just falls on the circle point E, if ∠C = N_0, then the degree of ∠BAE is ()",
+  "problem_img": "5328.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BP,PA)",
+    "Shape(PB,BD,DP)",
+    "Shape(PD,DM,MQ,QP)",
+    "Shape(AQ,QE,EA)",
+    "Shape(AP,PQ,QA)",
+    "Shape(QM,ME,EQ)",
+    "Shape(MD,DC,CM)",
+    "Shape(AE,OEA)",
+    "Shape(EM,MC,OCE)",
+    "Shape(CD,DB,OBC)",
+    "Shape(O)",
+    "Collinear(BDC)",
+    "Collinear(AQMC)",
+    "Collinear(DME)",
+    "Collinear(BPQE)",
+    "Collinear(APD)",
+    "Cocircular(O,ABCE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "MirrorCongruentBetweenTriangle(ABD,ADE)",
+    "Equal(MeasureOfAngle(BCA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EAB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_circumference_angle_external(OAB,E)",
+    "mirror_congruent_triangle_property_line_equal(DAB,DEA)",
+    "sine_theorem(ABE)",
+    "triangle_property_angle_sum(ABE)"
+  ]
+}

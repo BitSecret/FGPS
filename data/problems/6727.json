@@ -1,0 +1,39 @@
+{
+  "problem_id": 6727,
+  "annotation": "XiaoxiaoJin_2023-06-04",
+  "source": "GeoQA-9775",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知△ABC中,∠ACB=90°,∠B=30°,以C为圆心,CA为半径的⊙C交AB于点D,交BC的延长线于点E,则∠E的度数为()",
+  "problem_text_en": "As shown in the figure, it is known that in △ABC, ∠ACB = N_0, ∠B = N_1, with C as the center and CA as the radius of ⊙C intersects AB at point D, intersects the extended line line of BC at point E, then the degree of ∠E for()",
+  "problem_img": "6727.png",
+  "construction_cdl": [
+    "Shape(DB,BF,ODF)",
+    "Shape(FC,CG,GD,ODF)",
+    "Shape(DA,OAD)",
+    "Shape(AD,DG,GA)",
+    "Shape(GC,CE,EG)",
+    "Shape(AG,GE,OEA)",
+    "Shape(EC,CF,OFE)",
+    "Collinear(BDA)",
+    "Collinear(BFCE)",
+    "Collinear(AGC)",
+    "Collinear(DGE)",
+    "Cocircular(C,ADFE)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(BC,AC)",
+    "IsCentreOfCircle(C,C)",
+    "Equal(MeasureOfAngle(ABC),30)",
+    "IsDiameterOfCircle(EF,C)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BED))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "arc_property_center_angle(CEA,C)",
+    "arc_property_circumference_angle_external(CEA,D)",
+    "adjacent_complementary_angle(ADG,GDB)",
+    "adjacent_complementary_angle(BCG,GCE)",
+    "triangle_property_angle_sum(DBE)"
+  ]
+}

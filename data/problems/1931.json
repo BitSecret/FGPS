@@ -1,0 +1,25 @@
+{
+  "problem_id": 1931,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-2009",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find Y Z.",
+  "problem_img": "1931.png",
+  "construction_cdl": [
+    "Shape(XY,YZ,ZX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(YX),4)",
+    "Equal(LengthOfLine(ZX),4)",
+    "Equal(MeasureOfAngle(XYZ),60)",
+    "Equal(MeasureOfAngle(YZX),60)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(YZ))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(XYZ)",
+    "isosceles_triangle_judgment_angle_equal(YZX)"
+  ]
+}

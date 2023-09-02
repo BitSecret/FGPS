@@ -1,0 +1,32 @@
+{
+  "problem_id": 4655,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3897",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,C、D是⊙O上的两点,∠CDB=25°,过点C作⊙O的切线交AB的延长线于点E,则∠E的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C and D are two points on ⊙O, ∠CDB = N_0, passing point C to draw the tangent of ⊙O and crossing the extended line of AB at point E, then the degree of ∠E is ( )",
+  "problem_img": "4655.png",
+  "construction_cdl": [
+    "Shape(CA,AO,OC)",
+    "Shape(CO,OB,OBC)",
+    "Shape(OCA,AC)",
+    "Shape(OBC,BE,EC)",
+    "Collinear(AOBE)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(EC,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CAB),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AEC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(EC,O,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "triangle_property_angle_sum(COE)"
+  ]
+}

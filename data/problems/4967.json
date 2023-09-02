@@ -1,0 +1,37 @@
+{
+  "problem_id": 4967,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4648",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知D为△ABC边AB上一点,AD=2BD,DE∥BC交AC于E,AE=6,则EC=()",
+  "problem_text_en": "As shown in the figure, it is known that D is a point on the edge AB of △ABC, AD = 2BD, DE ∥ BC and it intersects AC at E, AE = N_0, then EC = ()",
+  "problem_img": "4967.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AE),6)",
+    "Equal(LengthOfLine(AD),Mul(LengthOfLine(BD),2))",
+    "ParallelBetweenLine(DE,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_judgment_aa(ABC,ADE)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(ABC,ADE)",
+    "similar_triangle_property_line_ratio(BCA,DEA)",
+    "similar_triangle_property_line_ratio(CAB,EAD)",
+    "line_addition(AD,DB)",
+    "line_addition(AE,EC)"
+  ]
+}

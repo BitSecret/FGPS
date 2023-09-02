@@ -1,0 +1,28 @@
+{
+  "problem_id": 2659,
+  "annotation": "DengfengYue_2023-04-23",
+  "source": "Geometry3k-2796",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the measure of m \\widehat Y X Z.",
+  "problem_img": "2659.png",
+  "construction_cdl": [
+    "Shape(XW,WY,BXY)",
+    "Shape(ZX,BXZ)",
+    "Shape(XZ,BZX)",
+    "Collinear(CZXW)",
+    "Collinear(AYW)",
+    "Cocircular(B,YZX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(B,B)",
+    "Equal(MeasureOfArc(BXY),96)",
+    "Equal(MeasureOfAngle(XWY),49)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(BYZ))",
+  "problem_answer": "194",
+  "theorem_seqs": [
+    "circle_property_circular_power_tangent_and_segment_angle(WY,WXZ,B)"
+  ]
+}

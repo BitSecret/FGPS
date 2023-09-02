@@ -1,0 +1,36 @@
+{
+  "problem_id": 2872,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-38",
+  "problem_level": 1,
+  "problem_text_cn": "绍兴市著名的桥乡,如图,石拱桥的桥顶到水面的距离CD为8m,桥拱半径OC为5m,则水面宽AB为()",
+  "problem_text_en": "The famous bridge township in Shaoxing, as shown in the figure, the distance CD from the top of the stone arch bridge to the water surface is N_0, the arch radius OC is N_1, and the water surface width AB is ()",
+  "problem_img": "2872.png",
+  "construction_cdl": [
+    "Shape(AD,DO,OA)",
+    "Shape(AO,OC,OCA)",
+    "Shape(OD,DB,BO)",
+    "Shape(CO,OB,OBC)",
+    "Collinear(ADB)",
+    "Collinear(COD)",
+    "Cocircular(OBCA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(CD),8)",
+    "Equal(RadiusOfCircle(O),5)",
+    "IsPerpendicularBisectorOfLine(OD,AB)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "line_addition(CO,OD)",
+    "right_triangle_judgment_angle(ADO)",
+    "right_triangle_property_pythagorean(ADO)",
+    "line_addition(AD,DB)"
+  ]
+}

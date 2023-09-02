@@ -1,0 +1,43 @@
+{
+  "problem_id": 1424,
+  "annotation": "YanjunGuo_2023-04-16",
+  "source": "Geometry3k-1475",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 3 = 110 and m \\angle 12 = 55. Find the measure of \\angle 15.",
+  "problem_img": "1424.png",
+  "construction_cdl": [
+    "Shape(DI,IC)",
+    "Shape(CI,IH)",
+    "Shape(IH,HF)",
+    "Shape(FH,HB)",
+    "Shape(AI,ID)",
+    "Shape(HI,IA)",
+    "Shape(EH,HI)",
+    "Shape(BH,HE)",
+    "Shape(JA,AI)",
+    "Shape(IA,AE)",
+    "Shape(AE,EH)",
+    "Shape(HE,EL)",
+    "Shape(KA,AJ)",
+    "Shape(EA,AK)",
+    "Shape(GE,EA)",
+    "Shape(LE,EG)",
+    "Collinear(CIAK)",
+    "Collinear(FHEG)",
+    "Collinear(DIHB)",
+    "Collinear(JAEL)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(IHF),110)",
+    "Equal(MeasureOfAngle(HEL),55)"
+  ],
+  "image_cdl": [
+    "ParallelBetweenLine(KC,GF)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(GEA))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "vertical_angle(HEL,GEA)"
+  ]
+}

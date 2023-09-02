@@ -1,0 +1,33 @@
+{
+  "problem_id": 3259,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-563",
+  "problem_level": 1,
+  "problem_text_cn": "(2017•营口)如图,已知矩形纸片的一条边经过一个含30°角的直角三角尺的直角顶点,若矩形纸片的一组对边分别与直角三角尺的两边相交,∠2=115°,则∠1的度数是()",
+  "problem_text_en": "As shown in the figure, it is known that one side of a rectangular piece of paper passes through a right-angled vertex of a right triangle with N_1 angles. If a set of opposite sides of the rectangular piece of paper intersect the two sides of the right triangle, ∠2 = N_2, then the degree of ∠1 is ()",
+  "problem_img": "3259.png",
+  "construction_cdl": [
+    "Shape(AD,DG,GA)",
+    "Shape(DF,FC,CG,GD)",
+    "Shape(FB,BC,CF)",
+    "Shape(AG,GE)",
+    "Shape(EG,GC)",
+    "Collinear(ADFB)",
+    "Collinear(AGC)",
+    "Collinear(DGE)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,FC)",
+    "RightTriangle(BCA)",
+    "Equal(MeasureOfAngle(CAB),30)",
+    "Equal(MeasureOfAngle(AGE),115)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DFC))",
+  "problem_answer": "85",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DGA,AGE)",
+    "triangle_property_angle_sum(ADG)",
+    "parallel_property_corresponding_angle(DE,FC,A)"
+  ]
+}

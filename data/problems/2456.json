@@ -1,0 +1,23 @@
+{
+  "problem_id": 2456,
+  "annotation": "RunanWang_2023-04-23",
+  "source": "Geometry3k-2576",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find X Y of isosceles \\triangle X Y Z.",
+  "problem_img": "2456.png",
+  "construction_cdl": [
+    "Shape(YX,XZ,ZY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsoscelesTriangle(YXZ)",
+    "Equal(LengthOfLine(YX),2*x+3)",
+    "Equal(LengthOfLine(XZ),8*x-4)",
+    "Equal(LengthOfLine(ZY),4*x-1)",
+    "Equal(LengthOfLine(ZY),LengthOfLine(YX))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(YX))",
+  "problem_answer": "7",
+  "theorem_seqs": []
+}

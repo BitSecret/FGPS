@@ -1,0 +1,39 @@
+{
+  "problem_id": 89,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-90",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 12 = 64. Find the measure of \\angle 11.",
+  "problem_img": "89.png",
+  "construction_cdl": [
+    "Shape(AB,BC)",
+    "Shape(CB,BD)",
+    "Shape(BD,DE)",
+    "Shape(ED,DF)",
+    "Shape(FD,DG)",
+    "Shape(DG,GH)",
+    "Shape(HG,GI)",
+    "Shape(IG,GJ)",
+    "Shape(GJ,JK)",
+    "Shape(KJ,JL)",
+    "Shape(LJ,JB)",
+    "Shape(JB,BA)",
+    "Shape(BJ,JG,GD,DB)",
+    "Collinear(ABDF)",
+    "Collinear(LJGH)",
+    "Collinear(CBJK)",
+    "Collinear(EDGI)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(DGH),64)",
+    "ParallelBetweenLine(WJ,AK)",
+    "ParallelBetweenLine(IL,BN)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(JGD))",
+  "problem_answer": "116",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(JGD,DGH)"
+  ]
+}

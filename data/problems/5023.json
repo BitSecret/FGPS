@@ -1,0 +1,37 @@
+{
+  "problem_id": 5023,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4747",
+  "problem_level": 1,
+  "problem_text_cn": "如图,E是平行四边形ABCD的AD边上一点,过点E作EF∥AB交BD于F,若DE:EA=2:3,EF=4,则CD的长为()",
+  "problem_text_en": "As shown in the figure, E is a point on AD of the parallelogram ABCD, passing the point E to draw EF ∥ AB and it intersects BD at F, if DE:EA=N_0:N_1,EF=N_2, then the length of CD is ()",
+  "problem_img": "5023.png",
+  "construction_cdl": [
+    "Shape(DE,EF,FD)",
+    "Shape(EA,AB,BF,FE)",
+    "Shape(CD,DF,FB,BC)",
+    "Collinear(DEA)",
+    "Collinear(DFB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(DABC)",
+    "ParallelBetweenLine(EF,AB)",
+    "Equal(Div(LengthOfLine(DE),LengthOfLine(EA)),2/3)",
+    "Equal(LengthOfLine(EF),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "10",
+  "theorem_seqs": [
+    "line_addition(DE,EA)",
+    "parallel_property_corresponding_angle(EF,AB,D)",
+    "parallel_property_corresponding_angle(BA,FE,D)",
+    "similar_triangle_judgment_aa(DEF,DAB)",
+    "similar_triangle_judgment_aa(DAB,DEF)",
+    "similar_triangle_property_line_ratio(DEF,DAB)",
+    "similar_triangle_property_line_ratio(FDE,BDA)",
+    "similar_triangle_property_line_ratio(DAB,DEF)",
+    "similar_triangle_property_line_ratio(BDA,FDE)",
+    "parallelogram_property_opposite_line_equal(ABCD)"
+  ]
+}

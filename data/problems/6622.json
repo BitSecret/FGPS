@@ -1,0 +1,35 @@
+{
+  "problem_id": 6622,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9621",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,已知∠ACD=20°,则∠BAD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, and it is known that ∠ACD = N_0, then the degree of ∠BAD is ()",
+  "problem_img": "6622.png",
+  "construction_cdl": [
+    "Shape(BC,OCB)",
+    "Shape(DE,EB,OBD)",
+    "Shape(AD,ODA)",
+    "Shape(CA,OAC)",
+    "Shape(CB,BE,EC)",
+    "Shape(CE,EA,AC)",
+    "Shape(AE,ED,DA)",
+    "Collinear(CED)",
+    "Collinear(BOEA)",
+    "Cocircular(O,BDAC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ACD),20)",
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(ACB,O)",
+    "angle_addition(ACE,ECB)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(OBD,C)"
+  ]
+}

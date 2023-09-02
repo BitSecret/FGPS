@@ -1,0 +1,37 @@
+{
+  "problem_id": 957,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-986",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find m \\angle F E D.",
+  "problem_img": "957.png",
+  "construction_cdl": [
+    "Shape(AF,FE,ED,DA)",
+    "Shape(FC,CE,EF)",
+    "Shape(DE,EB,BD)",
+    "Collinear(AFC)",
+    "Collinear(CEB)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(CA),15)",
+    "Equal(MeasureOfAngle(BDE),82)",
+    "Equal(LengthOfLine(EF),9.2)",
+    "Equal(LengthOfLine(AF),LengthOfLine(FC))",
+    "Equal(LengthOfLine(AD),LengthOfLine(DB))",
+    "Equal(LengthOfLine(CE),LengthOfLine(EB))"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(FED))",
+  "problem_answer": "82",
+  "theorem_seqs": [
+    "line_addition(CF,FA)",
+    "line_addition(CE,EB)",
+    "similar_triangle_judgment_sas(CEF,CBA)",
+    "similar_triangle_property_angle_equal(FCE,ACB)",
+    "parallel_judgment_corresponding_angle(AD,FE,C)",
+    "adjacent_complementary_angle(BDE,EDA)",
+    "parallel_property_ipsilateral_internal_angle(EF,DA)"
+  ]
+}

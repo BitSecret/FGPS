@@ -1,0 +1,30 @@
+{
+  "problem_id": 2557,
+  "annotation": "ChenyangMao_2023-04-23",
+  "source": "Geometry3k-2684",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the variable of x to the nearest tenth. Assume that segments that appear to be tangent are tangent.",
+  "problem_img": "2557.png",
+  "construction_cdl": [
+    "Shape(BEF,BFC,CE)",
+    "Shape(EA,AF,BEF)",
+    "Shape(BCE,EC)",
+    "Collinear(AEC)",
+    "Cocircular(B,EFC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(B,B)",
+    "IsTangentOfCircle(AF,B)",
+    "Equal(LengthOfLine(AE),x)",
+    "Equal(LengthOfLine(AF),sqrt(174))",
+    "Equal(LengthOfLine(CE),3*x+5)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "6.0",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "circle_property_circular_power_tangent_and_segment_line(AF,AEC,B)"
+  ]
+}

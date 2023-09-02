@@ -1,0 +1,30 @@
+{
+  "problem_id": 425,
+  "annotation": "JiaZou_2023-04-09",
+  "source": "Geometry3k-433",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If S P = 4, P T = 6, and Q R = 12, find S Q.",
+  "problem_img": "425.png",
+  "construction_cdl": [
+    "Shape(SP,PT,TS)",
+    "Shape(PQ,QR,RT,TP)",
+    "Collinear(SPQ)",
+    "Collinear(STR)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(SP),4)",
+    "Equal(LengthOfLine(PT),6)",
+    "Equal(LengthOfLine(QR),12)",
+    "ParallelBetweenLine(PT,QR)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(SQ))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(PT,QR,S)",
+    "similar_triangle_judgment_aa(TSP,RSQ)",
+    "similar_triangle_property_line_ratio(TSP,RSQ)",
+    "similar_triangle_property_line_ratio(SPT,SQR)"
+  ]
+}

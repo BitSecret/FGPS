@@ -1,0 +1,33 @@
+{
+  "problem_id": 3738,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1530",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O直径,若∠AOC=130°,则∠D的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, if ∠AOC = N_0, then the degree of ∠D is ()",
+  "problem_img": "3738.png",
+  "construction_cdl": [
+    "Shape(BD,ODB)",
+    "Shape(CE,EB,OBC)",
+    "Shape(CO,OE,EC)",
+    "Shape(AO,OC,OCA)",
+    "Shape(DB,BE,ED)",
+    "Shape(DE,EO,OA,OAD)",
+    "Collinear(BEOA)",
+    "Collinear(DEC)",
+    "Cocircular(O,BCAD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(AOC),130)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(EDB))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AOC,COE)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,D)"
+  ]
+}

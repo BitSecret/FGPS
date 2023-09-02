@@ -1,0 +1,32 @@
+{
+  "problem_id": 3119,
+  "annotation": "YimingHe_2023-04-23",
+  "source": "GeoQA-370",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D、E、F分别在边AC、AB、BC上,EF∥AC,DF∥AB,若∠B=45°,∠C=65°,则∠EFD的大小为()",
+  "problem_text_en": "As shown in the figure, in △ABC, the vertices D, E, and F are on the edges AC, AB, and BC respectively, EF ∥ AC, DF ∥ AB, if ∠B = N_0, ∠C = N_1, then the size of ∠EFD is ( )",
+  "problem_img": "3119.png",
+  "construction_cdl": [
+    "Shape(EB,BF,FE)",
+    "Shape(AE,EF,FD,DA)",
+    "Shape(DF,FC,CD)",
+    "Collinear(BFC)",
+    "Collinear(BEA)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(FE,CA)",
+    "ParallelBetweenLine(DF,AB)",
+    "Equal(MeasureOfAngle(EBF),45)",
+    "Equal(MeasureOfAngle(FCD),65)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EFD))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(FE,CA,B)",
+    "parallel_property_corresponding_angle(BA,FD,C)",
+    "angle_addition(BFE,EFD)",
+    "adjacent_complementary_angle(BFD,DFC)"
+  ]
+}

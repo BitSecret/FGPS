@@ -1,0 +1,36 @@
+{
+  "problem_id": 6867,
+  "annotation": "DengfengYue_2023-06-04",
+  "source": "GeoQA-angle-10093",
+  "problem_level": 1,
+  "problem_text_cn": "如图，已知点A，B，C依次在⊙O上，∠B﹣∠A＝40°，则∠AOB的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6867.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DC,OCA)",
+    "Shape(CD,DB,BC)",
+    "Shape(CB,OBC)",
+    "Shape(BD,DA,OAB)",
+    "Shape(OA,AD,DO)",
+    "Collinear(ODB)",
+    "Collinear(ADC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(Sub(MeasureOfAngle(DBC),MeasureOfAngle(OAD)),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BOA))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "adjacent_complementary_angle(ODC,CDB)",
+    "adjacent_complementary_angle(BDA,ADO)",
+    "adjacent_complementary_angle(ADO,ODC)",
+    "adjacent_complementary_angle(CDB,BDA)",
+    "triangle_property_angle_sum(CDB)",
+    "triangle_property_angle_sum(OAD)"
+  ]
+}

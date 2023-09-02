@@ -1,0 +1,29 @@
+{
+  "problem_id": 6354,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9177",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,E是AB的中点,作EF∥BC,交AC于点F、如果EF=4,那么CD的长为()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, E is the midpoint of AB, as EF ∥ BC, crossing AC at point F, if EF = N_0, then the length of CD is ()",
+  "problem_img": "6354.png",
+  "construction_cdl": [
+    "Shape(AE,EF,FA)",
+    "Shape(EB,BC,CF,FE)",
+    "Shape(AF,FC,CD,DA)",
+    "Collinear(AEB)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "IsMidpointOfLine(E,AB)",
+    "ParallelBetweenLine(EF,BC)",
+    "Equal(LengthOfLine(EF),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_parallel(EF,ABC)",
+    "midsegment_of_triangle_property_length(EF,ABC)"
+  ]
+}

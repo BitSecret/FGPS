@@ -1,0 +1,26 @@
+{
+  "problem_id": 3784,
+  "annotation": "ChenyangMao_2023-04-30",
+  "source": "GeoQA-1617",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB,CD相交于点O,OE⊥AB于O,∠COE=55°,则∠BOD的度数是()",
+  "problem_text_en": "As shown in the figure, the straight lines AB and CD intersect at point O, OE ⊥ AB at O, ∠COE = N_0, then the degree of ∠BOD is ()",
+  "problem_img": "3784.png",
+  "construction_cdl": [
+    "Shape(CO,OE)",
+    "Shape(EO,OB)",
+    "Shape(BO,OD)",
+    "Collinear(COD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "PerpendicularBetweenLine(EO,BO)",
+    "Equal(MeasureOfAngle(COE),55)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(BOD))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "angle_addition(COE,EOB)",
+    "adjacent_complementary_angle(COB,BOD)"
+  ]
+}

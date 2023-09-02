@@ -1,0 +1,33 @@
+{
+  "problem_id": 4810,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4235",
+  "problem_level": 1,
+  "problem_text_cn": "如图,PA、PB分别切⊙O于点A、B,若∠P=70°,则∠C的大小为()",
+  "problem_text_en": "As shown in the figure, PA and PB are tangent to ⊙O at points A and B respectively, if ∠P = N_0, then the size of ∠C is ()",
+  "problem_img": "4810.png",
+  "construction_cdl": [
+    "Shape(OBA,AO,OB)",
+    "Shape(OAC,CA)",
+    "Shape(OCB,BC)",
+    "Shape(AC,CB,BO,OA)",
+    "Shape(OBA,BP,PA)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(PA,O)",
+    "IsTangentOfCircle(PB,O)",
+    "Equal(MeasureOfAngle(BPA),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACB))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(PA,O,O)",
+    "tangent_of_circle_property_perpendicular(PB,O,O)",
+    "quadrilateral_property_angle_sum(AOBP)",
+    "arc_property_center_angle(OBA,O)",
+    "arc_property_circumference_angle_external(OBA,C)"
+  ]
+}

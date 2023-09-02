@@ -1,0 +1,41 @@
+{
+  "problem_id": 2062,
+  "annotation": "YimingHe_2023-03-26",
+  "source": "Geometry3k-2149",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "U J = 9, V J = 3, and Z T = 18. Find Y U.",
+  "problem_img": "2062.png",
+  "construction_cdl": [
+    "Shape(SY,YJ,JS)",
+    "Shape(YZ,ZJ,JY)",
+    "Shape(JZ,ZV,VJ)",
+    "Shape(JV,VU,UJ)",
+    "Shape(JU,UT,TJ)",
+    "Shape(JT,TS,SJ)",
+    "Collinear(SYZ)",
+    "Collinear(ZVU)",
+    "Collinear(STU)",
+    "Collinear(SJV)",
+    "Collinear(ZJT)",
+    "Collinear(YJU)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(UJ),9)",
+    "Equal(LengthOfLine(ZT),18)",
+    "Equal(LengthOfLine(JV),3)",
+    "Equal(LengthOfLine(ST),LengthOfLine(UT))",
+    "Equal(LengthOfLine(ZV),LengthOfLine(UV))",
+    "Equal(LengthOfLine(SY),LengthOfLine(YZ))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(YU))",
+  "problem_answer": "13.5",
+  "theorem_seqs": [
+    "median_of_triangle_judgment(ZT,ZUS)",
+    "median_of_triangle_judgment(UY,USZ)",
+    "centroid_of_triangle_judgment_intersection(J,SZU,Y,T)",
+    "centroid_of_triangle_property_line_ratio(J,USZ,Y)",
+    "line_addition(YJ,JU)"
+  ]
+}

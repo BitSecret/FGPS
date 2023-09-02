@@ -1,0 +1,24 @@
+{
+  "problem_id": 5562,
+  "annotation": "ZheZhu_2023-05-21",
+  "source": "GeoQA-6829",
+  "problem_level": 1,
+  "problem_text_cn": "如图,某飞机在空中A处探测到它的正下方地平面上目标C,此时飞行高度AC=1200m,从飞机上看地平面指挥台B的俯角α=30°,则飞机A与指挥台B的距离为()",
+  "problem_text_en": "As shown in the figure, an aircraft detects the target C on the ground plane directly below it in the air A, at this time the flying height AC = N_0, the depression angle of the ground plane command station B from the aircraft is α = N_1, then the distance between the aircraft A and the command station B is ()",
+  "problem_img": "5562.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AC),1200)",
+    "Equal(MeasureOfAngle(CAB),60)",
+    "Equal(MeasureOfAngle(BCA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "2400",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "sine_theorem(ABC)"
+  ]
+}

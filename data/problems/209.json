@@ -1,0 +1,32 @@
+{
+  "problem_id": 209,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-211",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If IJ*YJ=HJ*XJ, WXH=130, and YZI=20, find the measure of angle HIJ.",
+  "problem_img": "209.png",
+  "construction_cdl": [
+    "Shape(JH,HI,IJ)",
+    "Shape(HX,XY,YI,IH)",
+    "Shape(IY,YZ,ZI)",
+    "Shape(WX,XH)",
+    "Collinear(WXYZ)",
+    "Collinear(JHX)",
+    "Collinear(JIY)",
+    "Collinear(HIZ)"
+  ],
+  "text_cdl": [
+    "Equal(Mul(LengthOfLine(IJ),LengthOfLine(YJ)),Mul(LengthOfLine(HJ),LengthOfLine(XJ)))",
+    "Equal(MeasureOfAngle(WXH),130)",
+    "Equal(MeasureOfAngle(YZI),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(HIJ))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(WXH,HXY)",
+    "mirror_similar_triangle_judgment_sas(JHI,JXY)",
+    "mirror_similar_triangle_property_angle_equal(IJH,XYJ)"
+  ]
+}

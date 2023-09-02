@@ -1,0 +1,31 @@
+{
+  "problem_id": 4470,
+  "annotation": "NaZhu_2023-05-14",
+  "source": "GeoQA-3456",
+  "problem_level": 1,
+  "problem_text_cn": "如图,四边形ABCD内接于⊙O,已知∠BCE=70°,则∠A的度数是()",
+  "problem_text_en": "As shown in the figure, the quadrilateral ABCD is inscribed in ⊙O, and it is known that ∠BCE = N_0, then the degree of ∠A is ()",
+  "problem_img": "4470.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AD)",
+    "Shape(AB,BC,CD,DA)",
+    "Shape(EC,CB)",
+    "Collinear(ECD)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(ECB),70)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAB))",
+  "problem_answer": "70",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(ECB,BCD)",
+    "arc_property_circumference_angle_external(ODB,C)",
+    "arc_property_circumference_angle_internal(ODB,A)"
+  ]
+}

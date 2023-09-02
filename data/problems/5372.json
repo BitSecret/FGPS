@@ -1,0 +1,27 @@
+{
+  "problem_id": 5372,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5655",
+  "problem_level": 1,
+  "problem_text_cn": "如图,若▱ABCD与▱BCFE关于BC所在直线对称,∠ABE=86°,则∠E等于()",
+  "problem_text_en": "As shown in the figure, if ▱ABCD and ▱BCFE are symmetric with respect to the line where BC is located, ∠ABE = N_0, then ∠E is equal to ()",
+  "problem_img": "5372.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)",
+    "Shape(BE,EF,FC,CB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Parallelogram(BEFC)",
+    "MirrorCongruentBetweenQuadrilateral(BCDA,BEFC)",
+    "Equal(MeasureOfAngle(ABE),86)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BEF))",
+  "problem_answer": "137",
+  "theorem_seqs": [
+    "mirror_congruent_quadrilateral_property_angle_equal(BCDA,BEFC)",
+    "angle_addition(ABC,CBE)",
+    "parallel_property_ipsilateral_internal_angle(BC,EF)"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "problem_id": 6959,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10213",
+  "problem_level": 1,
+  "problem_text_cn": "如图，正方形ABCD内接于⊙O，点P在AB上，则∠BPC的度数为（）",
+  "problem_text_en": "",
+  "problem_img": "6959.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(DA,AO,OD)",
+    "Shape(OCD,DC)",
+    "Shape(DO,OC,CD)",
+    "Shape(OAP,PE,EA)",
+    "Shape(AE,EF,FO,OA)",
+    "Shape(OPB,BP)",
+    "Shape(PB,BE,EP)",
+    "Shape(OF,FC,CO)",
+    "Shape(EB,BF,FE)",
+    "Shape(FB,BC,CF)",
+    "Shape(OBC,CB)",
+    "Collinear(AOC)",
+    "Collinear(AEB)",
+    "Collinear(BFOD)",
+    "Collinear(PEFC)",
+    "Cocircular(O,PBCDA)"
+  ],
+  "text_cdl": [
+    "Square(ABCD)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CPB))",
+  "problem_answer": "45",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,P)"
+  ]
+}

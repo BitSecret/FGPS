@@ -1,0 +1,41 @@
+{
+  "problem_id": 1953,
+  "annotation": "JiaZou_2023-03-26",
+  "source": "Geometry3k-2032",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "J is the incenter of \\angle A B C. Find J F.",
+  "problem_img": "1953.png",
+  "construction_cdl": [
+    "Shape(JD,DB,BJ)",
+    "Shape(JB,BE,EJ)",
+    "Shape(JE,EA,AJ)",
+    "Shape(JA,AF,FJ)",
+    "Shape(JF,FC,CJ)",
+    "Shape(JC,CD,DJ)",
+    "Collinear(BDC)",
+    "Collinear(BEA)",
+    "Collinear(CFA)"
+  ],
+  "text_cdl": [
+    "IsIncenterOfTriangle(J,ACB)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(JCB),32)",
+    "Equal(MeasureOfAngle(JBA),34)",
+    "Equal(LengthOfLine(AJ),15)",
+    "Equal(LengthOfLine(AE),12)",
+    "PerpendicularBetweenLine(CD,JD)",
+    "PerpendicularBetweenLine(JF,CF)",
+    "PerpendicularBetweenLine(JE,AE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(JF))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AFJ,JFC)",
+    "right_triangle_judgment_angle(JEA)",
+    "right_triangle_property_pythagorean(JEA)",
+    "bisector_of_angle_judgment_angle_equal(AJ,EAF)",
+    "bisector_of_angle_property_distance_equal(AJ,EAF)"
+  ]
+}

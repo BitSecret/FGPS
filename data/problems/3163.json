@@ -1,0 +1,32 @@
+{
+  "problem_id": 3163,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-433",
+  "problem_level": 1,
+  "problem_text_cn": "如图,弦AC∥OB,∠B=25°,则∠O=()",
+  "problem_text_en": "As shown in the figure, the string AC ∥ OB, ∠B = N_0, then ∠O = ()",
+  "problem_img": "3163.png",
+  "construction_cdl": [
+    "Shape(OB,BD,DO)",
+    "Shape(CD,DB,OBC)",
+    "Shape(DC,CA,AD)",
+    "Shape(AC,OCA)",
+    "Shape(BO,OD,DA,OAB)",
+    "Collinear(ODC)",
+    "Collinear(ADB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(BO,CA)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(OBD),25)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DOB))",
+  "problem_answer": "50",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(BO,CA)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "arc_property_center_angle(OBC,O)"
+  ]
+}

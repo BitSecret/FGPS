@@ -1,0 +1,37 @@
+{
+  "problem_id": 5865,
+  "annotation": "QikeHuang_2023-05-28",
+  "source": "GeoQA-7903",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在边长为9的等边△ABC中,BD=3,∠ADE=60°,则AE的长为()",
+  "problem_text_en": "As shown in the figure, in the equilateral △ABC with edge length N_0, BD = N_1, ∠ADE = N_2, then the length of AE is ()",
+  "problem_img": "5865.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(DC,CE,ED)",
+    "Collinear(BDC)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(ABC)",
+    "Equal(LengthOfLine(AB),9)",
+    "Equal(LengthOfLine(BD),3)",
+    "Equal(MeasureOfAngle(ADE),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "7",
+  "theorem_seqs": [
+    "equilateral_triangle_property_angle(BCA)",
+    "equilateral_triangle_property_angle(CAB)",
+    "triangle_property_angle_sum(ABD)",
+    "angle_addition(BDA,ADE)",
+    "adjacent_complementary_angle(BDE,EDC)",
+    "similar_triangle_judgment_aa(DAB,EDC)",
+    "line_addition(BD,DC)",
+    "line_addition(AE,EC)",
+    "similar_triangle_property_line_ratio(DAB,EDC)",
+    "similar_triangle_property_line_ratio(ABD,DCE)"
+  ]
+}

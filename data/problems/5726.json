@@ -1,0 +1,30 @@
+{
+  "problem_id": 5726,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7522",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,△ABC中,∠BAC=90°,AD⊥BC于D,若AB=3,BC=5,则DC的长度()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠BAC = N_0, AD ⊥ BC at D, if AB = N_1, BC = N_2, then the length of DC ()",
+  "problem_img": "5726.png",
+  "construction_cdl": [
+    "Shape(AC,CD,DA)",
+    "Shape(AD,DB,BA)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(BAC),90)",
+    "Equal(LengthOfLine(AB),3)",
+    "Equal(LengthOfLine(BC),5)",
+    "PerpendicularBetweenLine(CD,AD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DC))",
+  "problem_answer": "16/5",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDA,ADB)",
+    "mirror_similar_triangle_judgment_aa(CBA,ADB)",
+    "mirror_similar_triangle_property_line_ratio(CBA,ADB)",
+    "mirror_similar_triangle_property_line_ratio(ACB,DBA)",
+    "line_addition(CD,DB)"
+  ]
+}

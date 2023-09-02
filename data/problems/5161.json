@@ -1,0 +1,49 @@
+{
+  "problem_id": 5161,
+  "annotation": "JiaZou_2023-05-21",
+  "source": "GeoQA-5105",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在半径为2的扇形AOB中,∠AOB=90°,点C是弧AB上的一个动点,OD⊥BC,OE⊥AC,垂足分别为D、E,则线段DE的长为()",
+  "problem_text_en": "As shown in the figure, in a sector AOB with a radius of N_0, ∠AOB = N_1, point C is a moving point on arc AB, OD ⊥ BC, OE ⊥ AC, and the vertical feet are D and E respectively, then the length of the line segment DE is ()",
+  "problem_img": "5161.png",
+  "construction_cdl": [
+    "Shape(BO,OF,FB)",
+    "Shape(BF,FD,DB)",
+    "Shape(DF,FG,GE,ED)",
+    "Shape(FO,OG,GF)",
+    "Shape(EG,GA,AE)",
+    "Shape(GO,OA,AG)",
+    "Shape(DE,EC,CD)",
+    "Shape(BD,DC,OCB)",
+    "Shape(CE,EA,OAC)",
+    "Collinear(BDC)",
+    "Collinear(CEA)",
+    "Collinear(BFGA)",
+    "Collinear(OFD)",
+    "Collinear(OGE)",
+    "Cocircular(O,ACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),2)",
+    "PerpendicularBetweenLine(CD,OD)",
+    "PerpendicularBetweenLine(AE,OE)",
+    "Equal(MeasureOfAngle(BOA),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DE))",
+  "problem_answer": "sqrt(2)",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(BOA)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "right_triangle_property_pythagorean(BOA)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OD,CB)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,AC)",
+    "line_addition(BD,DC)",
+    "line_addition(CE,EA)",
+    "similar_triangle_judgment_sas(CDE,CBA)",
+    "similar_triangle_property_line_ratio(ECD,ACB)",
+    "similar_triangle_property_line_ratio(CDE,CBA)"
+  ]
+}

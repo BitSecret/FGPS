@@ -1,0 +1,43 @@
+{
+  "problem_id": 5466,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5881",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,∠ACB=90°,∠CBA=60°．△ABE是等边三角形,D是AB的中点,连接CD并延长,交AE于点F．若CD=2,则EF的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠ACB = N_0, ∠CBA = N_1. △ABE is an equilateral triangle, D is the midpoint of AB, connect CD and extend, and intersect AE at point F. If CD = N_2, then the length of EF is ()",
+  "problem_img": "5466.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(CD,DB,BC)",
+    "Shape(DA,AF,FD)",
+    "Shape(DF,FE,EB,BD)",
+    "Collinear(ADB)",
+    "Collinear(CDF)",
+    "Collinear(AFE)"
+  ],
+  "text_cdl": [
+    "IsMedianOfTriangle(CD,CAB)",
+    "EquilateralTriangle(AEB)",
+    "Equal(LengthOfLine(CD),2)",
+    "Equal(MeasureOfAngle(BCA),90)",
+    "Equal(MeasureOfAngle(ABC),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EF))",
+  "problem_answer": "2",
+  "theorem_seqs": [
+    "line_addition(AD,DB)",
+    "line_addition(AF,FE)",
+    "equilateral_triangle_property_angle(AEB)",
+    "equilateral_triangle_property_angle(EBA)",
+    "triangle_property_angle_sum(CDB)",
+    "triangle_property_angle_sum(DAF)",
+    "right_triangle_judgment_angle(BCA)",
+    "right_triangle_property_length_of_median(BCA,D)",
+    "isosceles_triangle_judgment_line_equal(DBC)",
+    "isosceles_triangle_property_angle_equal(DBC)",
+    "vertical_angle(CDB,FDA)",
+    "parallel_judgment_corresponding_angle(FD,EB,A)",
+    "midsegment_of_triangle_judgment_parallel(FD,AEB)"
+  ]
+}

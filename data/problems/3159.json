@@ -1,0 +1,33 @@
+{
+  "problem_id": 3159,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-428",
+  "problem_level": 1,
+  "problem_text_cn": "如下图,AB∥EF∥CD,∠ABC=46°,∠BCE=20°,则∠CEF=()",
+  "problem_text_en": "As shown in the figure below, AB ∥ EF ∥ CD, ∠ABC = N_0, ∠BCE = N_1, then ∠CEF = ()",
+  "problem_img": "3159.png",
+  "construction_cdl": [
+    "Shape(GB,BA)",
+    "Shape(BG,GE,EF,FB)",
+    "Shape(GC,CE,EG)",
+    "Shape(EC,CD,DF,FE)",
+    "Collinear(BGC)",
+    "Collinear(GEF)",
+    "Collinear(BFD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(GBA),46)",
+    "Equal(MeasureOfAngle(BCE),20)",
+    "ParallelBetweenLine(AB,GF)",
+    "ParallelBetweenLine(GF,CD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FEC))",
+  "problem_answer": "154",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,GF)",
+    "adjacent_complementary_angle(BGE,EGC)",
+    "triangle_property_angle_sum(GCE)",
+    "adjacent_complementary_angle(FEC,CEG)"
+  ]
+}

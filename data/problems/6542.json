@@ -1,0 +1,33 @@
+{
+  "problem_id": 6542,
+  "annotation": "XiaokaiZhang_2023-06-04",
+  "source": "GeoQA-9465",
+  "problem_level": 1,
+  "problem_text_cn": "如图平行四边形ABCD的对角线AC与BD相交于点O,AB=7,AC=10,△ABO周长为16,那么对角线BD的长等于()",
+  "problem_text_en": "As shown in the figure, the diagonal AC and BD of the parallelogram ABCD intersect at the point O, AB = N_0, AC = N_1, the perimeter of △ABO is N_2, then the length of the diagonal BD is equal to ()",
+  "problem_img": "6542.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Collinear(AOC)",
+    "Collinear(BOD)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "Equal(LengthOfLine(AB),7)",
+    "Equal(LengthOfLine(AC),10)",
+    "Equal(PerimeterOfTriangle(ABO),16)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "triangle_perimeter_formula(ABO)",
+    "parallelogram_property_diagonal_bisection(ABCD,O)",
+    "parallelogram_property_diagonal_bisection(BCDA,O)",
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)"
+  ]
+}

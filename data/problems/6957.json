@@ -1,0 +1,37 @@
+{
+  "problem_id": 6957,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-angle-10211",
+  "problem_level": 1,
+  "problem_text_cn": "如图，点A，B，C，D，E在⊙O上，AB＝CD，∠AOB＝42°，则∠CED＝（）",
+  "problem_text_en": "",
+  "problem_img": "6957.png",
+  "construction_cdl": [
+    "Shape(OF,FE,OEA,AO)",
+    "Shape(OAB,BA)",
+    "Shape(OA,AB,BO)",
+    "Shape(OB,OBC,CO)",
+    "Shape(OC,CF,FO)",
+    "Shape(FC,CD,DF)",
+    "Shape(EF,FD,DE)",
+    "Shape(ODE,ED)",
+    "Shape(OCD,DC)",
+    "Collinear(OFD)",
+    "Collinear(CFE)",
+    "Cocircular(O,ABCDE)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),LengthOfLine(CD))",
+    "Equal(MeasureOfAngle(BOA),42)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DEC))",
+  "problem_answer": "21",
+  "theorem_seqs": [
+    "congruent_arc_judgment_chord_equal(OAB,OCD)",
+    "congruent_arc_property_measure_equal(OAB,OCD)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OCD,E)"
+  ]
+}

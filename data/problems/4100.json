@@ -1,0 +1,39 @@
+{
+  "problem_id": 4100,
+  "annotation": "YanjunGuo_2023-05-07",
+  "source": "GeoQA-2509",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,OC⊥AB,∠OBA=26°,则∠ADC的度数是()",
+  "problem_text_en": "As shown in the figure, in ⊙O, OC ⊥ AB, ∠OBA = N_0, then the degree of ∠ADC is ()",
+  "problem_img": "4100.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(AE,ED,DA)",
+    "Shape(EA,OAC,CE)",
+    "Shape(EC,CF,FE)",
+    "Shape(OF,FB,BO)",
+    "Shape(BF,FC,OCB)",
+    "Shape(DE,EF,FO,OB,OBD)",
+    "Collinear(DEC)",
+    "Collinear(OFC)",
+    "Collinear(AEFB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AF,OF)",
+    "Equal(MeasureOfAngle(ABO),26)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CDA))",
+  "problem_answer": "32",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(OFB)",
+    "arc_property_center_angle(OCB,O)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OF,AB)",
+    "circle_property_chord_perpendicular_bisect_arc(OAB,OFC)",
+    "congruent_arc_judgment_length_equal(OAC,OCB)",
+    "congruent_arc_property_measure_equal(OAC,OCB)",
+    "arc_property_circumference_angle_external(OAC,D)"
+  ]
+}

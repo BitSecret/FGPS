@@ -1,0 +1,37 @@
+{
+  "problem_id": 4650,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3880",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,AC是⊙O的切线,OC交⊙O于点D,若∠ABD=24°,则∠C的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, AC is the tangent of ⊙O, OC intersects with ⊙O at point D, if ∠ABD = N_0, then the degree of ∠C is ()",
+  "problem_img": "4650.png",
+  "construction_cdl": [
+    "Shape(BO,OD,DB)",
+    "Shape(DO,OA,OAD)",
+    "Shape(OAD,AC,CD)",
+    "Collinear(BOA)",
+    "Collinear(ODC)",
+    "Cocircular(O,BAD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(BA,O)",
+    "IsTangentOfCircle(CA,O)",
+    "Equal(MeasureOfAngle(DBA),24)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACO))",
+  "problem_answer": "42",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(CA,O,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(ODB)",
+    "isosceles_triangle_property_angle_equal(ODB)",
+    "triangle_property_angle_sum(BOD)",
+    "triangle_property_angle_sum(OAC)",
+    "flat_angle(BOA)",
+    "angle_addition(BOD,DOA)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 5316,
+  "annotation": "YanjunGuo_2023-05-21",
+  "source": "GeoQA-5522",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,DE∥BC,AD=8,DB=4,AE=6,则EC的长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, DE ∥ BC, AD = N_0, DB = N_1, AE = N_2, then the length of EC is ()",
+  "problem_img": "5316.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),8)",
+    "Equal(LengthOfLine(DB),4)",
+    "Equal(LengthOfLine(AE),6)",
+    "ParallelBetweenLine(DE,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "line_addition(AD,DB)",
+    "line_addition(AE,EC)"
+  ]
+}

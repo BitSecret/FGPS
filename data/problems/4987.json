@@ -1,0 +1,39 @@
+{
+  "problem_id": 4987,
+  "annotation": "FangzhenZhu_2023-05-21",
+  "source": "GeoQA-4677",
+  "problem_level": 1,
+  "problem_text_cn": "如图,平行四边形ABCD中,EF∥AB,DE:EA=1:2,EF=4,则CD的长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, EF ∥ AB, DE:EA = N_0:N_1, EF = N_2, then the length of CD is ()",
+  "problem_img": "4987.png",
+  "construction_cdl": [
+    "Shape(DE,EF,FD)",
+    "Shape(EA,AB,BF,FE)",
+    "Shape(DF,FB,BC,CD)",
+    "Collinear(DEA)",
+    "Collinear(DFB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(EF),4)",
+    "ParallelBetweenLine(EF,AB)",
+    "Equal(Mul(LengthOfLine(DE),2),LengthOfLine(EA))",
+    "Parallelogram(DABC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(EF,AB,D)",
+    "parallel_property_corresponding_angle(BA,FE,D)",
+    "similar_triangle_judgment_aa(DEF,DAB)",
+    "similar_triangle_judgment_aa(DAB,DEF)",
+    "similar_triangle_property_line_ratio(DEF,DAB)",
+    "similar_triangle_property_line_ratio(EFD,ABD)",
+    "similar_triangle_property_line_ratio(FDE,BDA)",
+    "similar_triangle_property_line_ratio(DAB,DEF)",
+    "similar_triangle_property_line_ratio(ABD,EFD)",
+    "similar_triangle_property_line_ratio(BDA,FDE)",
+    "line_addition(DE,EA)",
+    "parallelogram_property_opposite_line_equal(ABCD)"
+  ]
+}

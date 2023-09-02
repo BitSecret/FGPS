@@ -1,0 +1,31 @@
+{
+  "problem_id": 4320,
+  "annotation": "ZheZhu_2023-05-07",
+  "source": "GeoQA-3162",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,弧AB=⁀{AC},∠C=75°,则∠A的度数为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, the arc AB = ⁀AC, ∠C = N_0, then the degree of ∠A is ()",
+  "problem_img": "4320.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCA,AC)",
+    "Shape(AB,BC,CA)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfArc(OAB),LengthOfArc(OCA))",
+    "Equal(MeasureOfAngle(BCA),75)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "congruent_arc_judgment_length_equal(OAB,OCA)",
+    "congruent_arc_property_measure_equal(OAB,OCA)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

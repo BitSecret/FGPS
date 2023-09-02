@@ -1,0 +1,47 @@
+{
+  "problem_id": 973,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-1002",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\odot X, A B = 30, C D = 30, and m \\widehat C Z = 40. Find m \\widehat Y B.",
+  "problem_img": "973.png",
+  "construction_cdl": [
+    "Shape(XYA,AM,MY)",
+    "Shape(XM,MA,XAC,CN,NX)",
+    "Shape(NC,XCZ,ZN)",
+    "Shape(NZ,XZD,DN)",
+    "Shape(XN,ND,XDB,BM,MX)",
+    "Shape(YM,MB,XBY)",
+    "Collinear(AMB)",
+    "Collinear(YMX)",
+    "Collinear(XNZ)",
+    "Collinear(CND)",
+    "Cocircular(X,ACZDBY)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(X,X)",
+    "Equal(LengthOfLine(AB),30)",
+    "Equal(LengthOfLine(CD),30)",
+    "Equal(MeasureOfArc(XCZ),40)",
+    "PerpendicularBetweenLine(AM,YM)",
+    "PerpendicularBetweenLine(DN,ZN)"
+  ],
+  "goal_cdl": "Value(MeasureOfArc(XBY))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "vertical_angle(CNX,DNZ)",
+    "circle_property_chord_perpendicular_bisect_arc(XCD,XNZ)",
+    "congruent_arc_judgment_length_equal(XCZ,XZD)",
+    "congruent_arc_property_measure_equal(XCZ,XZD)",
+    "arc_addition_measure(XCZ,XZD)",
+    "congruent_arc_judgment_chord_equal(XBA,XCD)",
+    "congruent_arc_property_measure_equal(XBA,XCD)",
+    "vertical_angle(AMY,BMX)",
+    "circle_property_chord_perpendicular_bisect_arc(XBA,XMY)",
+    "congruent_arc_judgment_length_equal(XBY,XYA)",
+    "congruent_arc_property_measure_equal(XBY,XYA)",
+    "arc_addition_measure(XBY,XYA)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 1127,
+  "annotation": "Yangli_2023-04-09",
+  "source": "Geometry3k-1164",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y so that the quadrilateral is a parallelogram.",
+  "problem_img": "1127.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AD,DB)"
+  ],
+  "text_cdl": [
+    "Parallelogram(CADB)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(CB),2*x+4*y)",
+    "Equal(LengthOfLine(AC),21)",
+    "Equal(LengthOfLine(DB),3*x+3*y)",
+    "Equal(LengthOfLine(AD),6*y+1/2*x)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "3",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_line_equal(BCAD)",
+    "parallelogram_property_opposite_line_equal(CADB)"
+  ]
+}

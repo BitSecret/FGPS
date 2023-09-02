@@ -1,0 +1,31 @@
+{
+  "problem_id": 4790,
+  "annotation": "ChenyangMao_2023-05-14",
+  "source": "GeoQA-4184",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线AB与⊙O相切于点A,⊙O的半径为2,若∠OBA=30°,则AB的长为()",
+  "problem_text_en": "As shown in the figure, the straight line AB and ⊙O are tangent to point A, the radius of ⊙O is N_0, if ∠OBA = N_1, then the length of AB is ()",
+  "problem_img": "4790.png",
+  "construction_cdl": [
+    "Shape(OAC,CO,OA)",
+    "Shape(OCA,AO,OC)",
+    "Shape(OAC,AB,BC)",
+    "Collinear(OCB)",
+    "Cocircular(O,AC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(BA,O)",
+    "Equal(RadiusOfCircle(O),2)",
+    "Equal(MeasureOfAngle(ABC),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "2*sqrt(3)",
+  "theorem_seqs": [
+    "tangent_of_circle_property_perpendicular(BA,O,O)",
+    "triangle_property_angle_sum(OAB)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "sine_theorem(ABO)"
+  ]
+}

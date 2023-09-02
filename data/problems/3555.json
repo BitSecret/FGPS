@@ -1,0 +1,35 @@
+{
+  "problem_id": 3555,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1185",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线a∥b,∠1=85°,∠2=30°,则∠3=()",
+  "problem_text_en": "As shown in the figure, the straight line a ∥ b, ∠1 = N_0, ∠2 = N_1, then ∠3 = ()",
+  "problem_img": "3555.png",
+  "construction_cdl": [
+    "Shape(DB,BA)",
+    "Shape(BD,DF,FC,CB)",
+    "Shape(DE,EF,FD)",
+    "Shape(CF,FG)",
+    "Shape(GF,FE)",
+    "Collinear(ABC)",
+    "Collinear(DFG)",
+    "Collinear(BDE)",
+    "Collinear(CFE)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DEF),30)",
+    "Equal(MeasureOfAngle(DBA),85)",
+    "ParallelBetweenLine(AB,DF)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CFG))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(AB,DF)",
+    "adjacent_complementary_angle(GFE,EFD)",
+    "adjacent_complementary_angle(BDF,FDE)",
+    "adjacent_complementary_angle(CFG,GFE)",
+    "triangle_property_angle_sum(DEF)"
+  ]
+}

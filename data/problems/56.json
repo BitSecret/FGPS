@@ -1,0 +1,39 @@
+{
+  "problem_id": 56,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-56",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "P is the incenter of triangle AEC. Find the measure of angle CAD.",
+  "problem_img": "56.png",
+  "construction_cdl": [
+    "Shape(AF,FP,PA)",
+    "Shape(FE,EP,PF)",
+    "Shape(AP,PB,BA)",
+    "Shape(PE,ED,DP)",
+    "Shape(PD,DC,CP)",
+    "Shape(BP,PC,CB)",
+    "Collinear(AFE)",
+    "Collinear(EDC)",
+    "Collinear(CBA)",
+    "Collinear(EPB)",
+    "Collinear(FPC)",
+    "Collinear(DPA)"
+  ],
+  "text_cdl": [
+    "IsIncenterOfTriangle(P,AEC)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(PAE),33)",
+    "Equal(LengthOfLine(AB),10.9)",
+    "Equal(LengthOfLine(PA),13)",
+    "Equal(LengthOfLine(EP),14.9)",
+    "Equal(MeasureOfAngle(DCP),28.5)",
+    "PerpendicularBetweenLine(PF,EF)",
+    "PerpendicularBetweenLine(ED,PD)",
+    "PerpendicularBetweenLine(PB,AB)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(CAD))",
+  "problem_answer": "33",
+  "theorem_seqs": []
+}

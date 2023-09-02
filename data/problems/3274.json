@@ -1,0 +1,43 @@
+{
+  "problem_id": 3274,
+  "annotation": "XiaokaiZhang_2023-04-23",
+  "source": "GeoQA-581",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,对角线AC、BD相交于点O,AB=5,AC=6,过点D作AC的平行线交BC的延长线于点E,则△BDE的面积为()",
+  "problem_text_en": "As shown in the figure, in the rhombus ABCD, the diagonal AC and BD intersect at point O, AB = N_0, AC = N_1, and the parallel line passing through the point D as AC intersects the extended line of BC at point E, then the area of ​​△BDE is ()",
+  "problem_img": "3274.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BC,CO)",
+    "Shape(AO,OD,DA)",
+    "Shape(DO,OC,CD)",
+    "Shape(DC,CE,ED)",
+    "Collinear(AOC)",
+    "Collinear(BOD)",
+    "Collinear(BCE)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(AC),6)",
+    "ParallelBetweenLine(CA,ED)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(AreaOfTriangle(BED))",
+  "problem_answer": "24",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
+    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
+    "line_addition(AO,OC)",
+    "line_addition(BO,OD)",
+    "right_triangle_judgment_angle(BOA)",
+    "right_triangle_property_pythagorean(BOA)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallelogram_judgment_parallel_and_parallel(ACED)",
+    "parallelogram_property_opposite_line_equal(ACED)",
+    "parallelogram_property_opposite_line_equal(CEDA)",
+    "line_addition(BC,CE)",
+    "right_triangle_judgment_pythagorean_inverse(EDB)",
+    "triangle_area_formula_sine(DBE)"
+  ]
+}

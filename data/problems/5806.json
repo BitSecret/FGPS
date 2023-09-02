@@ -1,0 +1,51 @@
+{
+  "problem_id": 5806,
+  "annotation": "YanjunGuo_2023-05-28",
+  "source": "GeoQA-7752",
+  "problem_level": 1,
+  "problem_text_cn": "在▱ABCD中,BE平分∠ABC交AD于点E,AF⊥CD于点F,交BE于点G,AH⊥BC于点H,交BE于点I．若BI=IG,且AI=3,则AE的长为()",
+  "problem_text_en": "In ▱ABCD, BE bisects ∠ABC and intersects AD at point E, AF ⊥ CD at point F, and intersects BE at point G, AH ⊥ BC at point H, and intersects BE at point I. If BI = IG, and AI = N_0, then the length of AE is ()",
+  "problem_img": "5806.png",
+  "construction_cdl": [
+    "Shape(AB,BI,IA)",
+    "Shape(AI,IG,GA)",
+    "Shape(AG,GE,EA)",
+    "Shape(EG,GF,FD,DE)",
+    "Shape(GI,IH,HC,CF,FG)",
+    "Shape(IB,BH,HI)",
+    "Collinear(AIH)",
+    "Collinear(BIGE)",
+    "Collinear(AGF)",
+    "Collinear(AED)",
+    "Collinear(DFC)",
+    "Collinear(BHC)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(BE,ABC)",
+    "PerpendicularBetweenLine(AF,DF)",
+    "PerpendicularBetweenLine(BH,AH)",
+    "Equal(LengthOfLine(AI),3)",
+    "Equal(LengthOfLine(BI),LengthOfLine(IG))",
+    "Parallelogram(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "3*sqrt(3)",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(AD,BC,E)",
+    "parallel_property_collinear_extend(CB,DA,H)",
+    "parallel_property_alternate_interior_angle(HB,DA)",
+    "parallel_property_alternate_interior_angle(AE,BC)",
+    "isosceles_triangle_judgment_angle_equal(ABE)",
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "mirror_similar_triangle_judgment_aa(ABH,AFD)",
+    "mirror_similar_triangle_property_angle_equal(ABH,AFD)",
+    "mirror_congruent_triangle_judgment_aas(IAB,GEA)",
+    "mirror_congruent_triangle_property_line_equal(ABI,AGE)",
+    "mirror_congruent_triangle_property_line_equal(BIA,EAG)",
+    "right_triangle_judgment_angle(EAI)",
+    "median_of_triangle_judgment(AG,AIE)",
+    "right_triangle_property_length_of_median(EAI,G)",
+    "right_triangle_property_pythagorean(EAI)"
+  ]
+}

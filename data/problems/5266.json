@@ -1,0 +1,29 @@
+{
+  "problem_id": 5266,
+  "annotation": "XiaokaiZhang_2023-05-21",
+  "source": "GeoQA-5382",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB∥DF,AC⊥CE于C,BC与DF交于点E,若∠A=20°,则∠CEF等于()",
+  "problem_text_en": "As shown in the figure, AB ∥ DF, AC ⊥ CE at C, BC and DF intersect at point E, if ∠A = N_0, then ∠CEF is equal to ()",
+  "problem_img": "5266.png",
+  "construction_cdl": [
+    "Shape(CA,AB,BC)",
+    "Shape(AD,DE,EB,BA)",
+    "Shape(BE,EF)",
+    "Collinear(CBE)",
+    "Collinear(DEF)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(AB,DE)",
+    "PerpendicularBetweenLine(EC,AC)",
+    "Equal(MeasureOfAngle(CAB),20)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CEF))",
+  "problem_answer": "110",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(CAB)",
+    "parallel_property_corresponding_angle(ED,BA,C)",
+    "adjacent_complementary_angle(DEC,CEF)"
+  ]
+}

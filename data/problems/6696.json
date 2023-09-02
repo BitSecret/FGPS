@@ -1,0 +1,33 @@
+{
+  "problem_id": 6696,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9726",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,∠AOC=130°,则∠D等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of O, ∠AOC = N_0, then ∠D is equal to ()",
+  "problem_img": "6696.png",
+  "construction_cdl": [
+    "Shape(ODA,AO,OM,MD)",
+    "Shape(DM,MB,BD)",
+    "Shape(DB,OBD)",
+    "Shape(MO,OC,CM)",
+    "Shape(BM,MC,OCB)",
+    "Shape(OA,OAC,CO)",
+    "Collinear(AOMB)",
+    "Collinear(DMC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(COA),130)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BDC))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(MOC,COA)",
+    "arc_property_center_angle(OCB,O)",
+    "arc_property_circumference_angle_external(OCB,D)"
+  ]
+}

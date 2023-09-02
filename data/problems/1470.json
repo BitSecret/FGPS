@@ -1,0 +1,30 @@
+{
+  "problem_id": 1470,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1524",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "1470.png",
+  "construction_cdl": [
+    "Shape(EA,AB,BF,FD,DE)",
+    "Shape(CE)",
+    "Shape(CE,ED)",
+    "Collinear(CEA)",
+    "Collinear(BFD)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(FDE),x)",
+    "Equal(MeasureOfAngle(CED),x+24)",
+    "Equal(MeasureOfAngle(DEA),2*y-56)",
+    "Equal(MeasureOfAngle(ABF),115)",
+    "ParallelBetweenLine(ED,AB)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "73.5",
+  "theorem_seqs": [
+    "parallel_property_ipsilateral_internal_angle(BA,DE)",
+    "adjacent_complementary_angle(CED,DEA)"
+  ]
+}

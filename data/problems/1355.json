@@ -1,0 +1,32 @@
+{
+  "problem_id": 1355,
+  "annotation": "ZheZhu_2023-04-09",
+  "source": "Geometry3k-1403",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 3 = 43. Find the measure of \\angle 13.",
+  "problem_img": "1355.png",
+  "construction_cdl": [
+    "Shape(KO,OM)",
+    "Shape(GN,NM)",
+    "Shape(AN,NQ)",
+    "Collinear(BPHF)",
+    "Collinear(MONQ)",
+    "Collinear(KPOC)",
+    "Collinear(GHRNAIJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(KOM),43)",
+    "ParallelBetweenLine(BF,MQ)",
+    "ParallelBetweenLine(KC,GJ)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(ANQ))",
+  "problem_answer": "43",
+  "theorem_seqs": [
+    "parallel_property_collinear_extend(KC,GJ,O)",
+    "parallel_property_collinear_extend(JG,OK,N)",
+    "parallel_property_corresponding_angle(NG,OK,M)",
+    "vertical_angle(GNM,ANQ)"
+  ]
+}

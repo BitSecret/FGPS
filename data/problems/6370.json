@@ -1,0 +1,42 @@
+{
+  "problem_id": 6370,
+  "annotation": "ChengQin_2023-06-04",
+  "source": "GeoQA-9224",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在菱形ABCD中,∠C=110°,BC的垂直平分线交BD于点E,F为垂足,连接AE,则∠EAD的度数是()",
+  "problem_text_en": "As shown in the figure, in the diamond ABCD, ∠C = N_0, the perpendicular bisector of BC intersects BD at point E, F is the foot of perpendicular, connects AE, then the degree of ∠EAD is ()",
+  "problem_img": "6370.png",
+  "construction_cdl": [
+    "Shape(AB,BE,EA)",
+    "Shape(AE,EO,OA)",
+    "Shape(AO,OD,DA)",
+    "Shape(BF,FE,EB)",
+    "Shape(EF,FC,CE)",
+    "Shape(EC,CO,OE)",
+    "Shape(OC,CD,DO)",
+    "Collinear(BEOD)",
+    "Collinear(BFC)",
+    "Collinear(AOC)"
+  ],
+  "text_cdl": [
+    "Rhombus(ABCD)",
+    "Equal(MeasureOfAngle(BCD),110)",
+    "IsPerpendicularBisectorOfLine(EF,BC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAE))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
+    "perpendicular_bisector_judgment_per_and_mid(EO,CA)",
+    "perpendicular_bisector_property_distance_equal(EO,CA)",
+    "perpendicular_bisector_property_distance_equal(EF,BC)",
+    "isosceles_triangle_judgment_line_equal(EAB)",
+    "isosceles_triangle_property_angle_equal(EAB)",
+    "parallel_property_ipsilateral_internal_angle(BA,CD)",
+    "perpendicular_bisector_property_bisector(BO,CA)",
+    "angle_addition(ABE,EBF)",
+    "parallelogram_property_opposite_angle_equal(ABCD)",
+    "angle_addition(DAE,EAB)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 1886,
+  "annotation": "YanjunGuo_2023-04-23",
+  "source": "Geometry3k-1961",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "P Q is tangent to the circle. Find x. Round to the nearest tenth.",
+  "problem_img": "1886.png",
+  "construction_cdl": [
+    "Shape(SR,BRS)",
+    "Shape(RS,BSR)",
+    "Shape(RQ,QP,BRP)",
+    "Collinear(SRQ)",
+    "Cocircular(B,SRP)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(QP,B)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(QP),8)",
+    "Equal(LengthOfLine(SR),7)",
+    "Equal(LengthOfLine(QR),x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5.232",
+  "theorem_seqs": [
+    "circle_property_circular_power_tangent_and_segment_line(QP,QRS,B)",
+    "line_addition(SR,RQ)"
+  ]
+}

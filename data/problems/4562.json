@@ -1,0 +1,44 @@
+{
+  "problem_id": 4562,
+  "annotation": "YanjunGuo_2023-05-14",
+  "source": "GeoQA-3683",
+  "problem_level": 1,
+  "problem_text_cn": "已知⊙O的半径为5,锐角△ABC内接于⊙O,AB=8,BD⊥AC于D,若CD=4,则BD的长为()",
+  "problem_text_en": "Knowing that the radius of ⊙O is N_0, the acute angle △ABC is inscribed in ⊙O, AB = N_1, BD ⊥ AC at D, if CD = N_2, then the length of BD is ()",
+  "problem_img": "4562.png",
+  "construction_cdl": [
+    "Shape(HE,EC,OCH)",
+    "Shape(HA,AE,EH)",
+    "Shape(AH,OHA)",
+    "Shape(EA,AB,BE)",
+    "Shape(BA,OAB)",
+    "Shape(DE,EB,BD)",
+    "Shape(CD,DB,BC)",
+    "Shape(CB,OBC)",
+    "Collinear(HEOB)",
+    "Collinear(AEDC)",
+    "Cocircular(O,HABC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(CD),4)",
+    "Equal(DiameterOfCircle(O),10)",
+    "PerpendicularBetweenLine(CD,BD)",
+    "IsCentreOfCircle(O,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BD))",
+  "problem_answer": "16/3",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(HOB,O)",
+    "diameter_of_circle_property_right_angle(HAB,O)",
+    "diameter_of_circle_property_length_equal(HB,O)",
+    "right_triangle_judgment_angle(HAB)",
+    "right_triangle_property_pythagorean(HAB)",
+    "arc_property_circumference_angle_external(OAB,H)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "similar_triangle_judgment_aa(BCD,BHA)",
+    "similar_triangle_property_line_ratio(BCD,BHA)",
+    "similar_triangle_property_line_ratio(CDB,HAB)"
+  ]
+}

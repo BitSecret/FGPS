@@ -1,0 +1,31 @@
+{
+  "problem_id": 833,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-862",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "\\triangle M H J \\cong \\triangle P Q J. Find y.",
+  "problem_img": "833.png",
+  "construction_cdl": [
+    "Shape(MH,HJ,JM)",
+    "Shape(JQ,QP,PJ)",
+    "Collinear(HJP)",
+    "Collinear(MJQ)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(JMH,JQP)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(JMH),14*y-8)",
+    "Equal(MeasureOfAngle(PJQ),53)",
+    "Equal(MeasureOfAngle(MHJ),13*y)",
+    "Equal(LengthOfLine(JQ),2*y-1)",
+    "Equal(LengthOfLine(PQ),8.1)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_angle_equal(JMH,JQP)",
+    "triangle_property_angle_sum(JMH)"
+  ]
+}

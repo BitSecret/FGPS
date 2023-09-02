@@ -1,0 +1,28 @@
+{
+  "problem_id": 1401,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1451",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Given right triangle X Y Z with hypotenuse X Y, Y P is equal to Y Z. If m \\angle P Y Z = 26, find m \\angle X Z P.",
+  "problem_img": "1401.png",
+  "construction_cdl": [
+    "Shape(YZ,ZP,PY)",
+    "Shape(PZ,ZX,XP)",
+    "Collinear(YPX)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "PerpendicularBetweenLine(YZ,XZ)",
+    "Equal(LengthOfLine(YP),LengthOfLine(YZ))",
+    "Equal(MeasureOfAngle(PYZ),26)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(PZX))",
+  "problem_answer": "13",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(YZP)",
+    "isosceles_triangle_property_angle_equal(YZP)",
+    "triangle_property_angle_sum(YZP)",
+    "angle_addition(YZP,PZX)"
+  ]
+}

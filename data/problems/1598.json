@@ -1,0 +1,28 @@
+{
+  "problem_id": 1598,
+  "annotation": "XiaoxiaoJin_2023-04-16",
+  "source": "Geometry3k-1658",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the value of x.",
+  "problem_img": "1598.png",
+  "construction_cdl": [
+    "Shape(EA,DAE)",
+    "Shape(CB,DBC)",
+    "Shape(AE,DEB,BC,DCA)",
+    "Cocircular(D,AEBC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(DAE),142)",
+    "Equal(LengthOfLine(AE),3*x+7)",
+    "Equal(LengthOfLine(BC),5*x-9)",
+    "Equal(MeasureOfArc(DBC),142)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "congruent_arc_judgment_measure_equal(DAE,DBC)",
+    "congruent_arc_property_chord_equal(DAE,DBC)"
+  ]
+}

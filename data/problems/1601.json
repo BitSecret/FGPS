@@ -1,0 +1,27 @@
+{
+  "problem_id": 1601,
+  "annotation": "QikeHuang_2023-04-09",
+  "source": "Geometry3k-1661",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1601.png",
+  "construction_cdl": [
+    "Shape(XY,YZ,ZX)",
+    "Shape(BV,VC,CB)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ZXY),15*x-8*y)",
+    "Equal(MeasureOfAngle(BVC),52)",
+    "Equal(MeasureOfAngle(VCB),6*x+14*y)",
+    "Equal(MeasureOfAngle(BVC),MeasureOfAngle(ZXY))",
+    "PerpendicularBetweenLine(CB,VB)",
+    "PerpendicularBetweenLine(XY,ZY)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BVC)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 1668,
+  "annotation": "Yangli_2023-04-16",
+  "source": "Geometry3k-1732",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "One side of a square is a diameter of a circle. The length of one side of the square is 5 feet. To the nearest hundredth, what is the probability that a point chosen at random is in the shaded region?",
+  "problem_img": "1668.png",
+  "construction_cdl": [
+    "Shape(AT,TC,CB,DAB)",
+    "Shape(BD,DA,DAB)",
+    "Shape(AD,DB,DBA)",
+    "Collinear(BDA)",
+    "Cocircular(D,AB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(D,D)",
+    "IsDiameterOfCircle(AB,D)",
+    "Square(BATC)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),5)",
+    "Equal(LengthOfLine(TC),5)"
+  ],
+  "goal_cdl": "Value(Sub(AreaOfQuadrilateral(BATC),AreaOfSector(DAB)))",
+  "problem_answer": "25-25*pi/8",
+  "theorem_seqs": [
+    "diameter_of_circle_property_length_equal(AB,D)",
+    "circle_property_length_of_radius_and_diameter(D)",
+    "parallelogram_area_formula_sine(ATCB)",
+    "flat_angle(BDA)",
+    "arc_property_center_angle(DAB,D)",
+    "sector_area_formula(DAB)"
+  ]
+}

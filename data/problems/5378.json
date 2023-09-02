@@ -1,0 +1,27 @@
+{
+  "problem_id": 5378,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5662",
+  "problem_level": 1,
+  "problem_text_cn": "如图,▱ABCD与▱EBCF关于边BC所在的直线对称,若∠ABE=110°,则∠F等于()",
+  "problem_text_en": "As shown in the figure, ▱ABCD and ▱EBCF are symmetric with respect to the line where the edge BC is located. If ∠ABE = N_0, then ∠F is equal to ()",
+  "problem_img": "5378.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CD,DA)",
+    "Shape(BE,EF,FC,CB)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenQuadrilateral(BCDA,BEFC)",
+    "Parallelogram(ABCD)",
+    "Parallelogram(BEFC)",
+    "Equal(MeasureOfAngle(ABE),110)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(EFC))",
+  "problem_answer": "55",
+  "theorem_seqs": [
+    "angle_addition(ABC,CBE)",
+    "mirror_congruent_quadrilateral_property_angle_equal(BCDA,BEFC)",
+    "parallelogram_property_opposite_angle_equal(BEFC)"
+  ]
+}

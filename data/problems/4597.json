@@ -1,0 +1,46 @@
+{
+  "problem_id": 4597,
+  "annotation": "QikeHuang_2023-05-14",
+  "source": "GeoQA-3755",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O是△ABC的外接圆,直径AD与BC相交于点E,连接CD,若⊙O的半径为5,AB=AC=8,则EC长为()",
+  "problem_text_en": "As shown in the figure, ⊙O is the circumscribed circle of △ABC, the diameter AD and BC intersect at point E. Connect CD, if the radius of ⊙O is N_0, AB = AC = N_1, then the length of EC is ()",
+  "problem_img": "4597.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(AB,BE,EO,OA)",
+    "Shape(AO,OE,EC,CA)",
+    "Shape(AC,OCA)",
+    "Shape(ED,DC,CE)",
+    "Shape(CD,ODC)",
+    "Shape(EB,OBD,DE)",
+    "Collinear(AOED)",
+    "Collinear(BEC)",
+    "Cocircular(O,ABDC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AD,O)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AC))",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(RadiusOfCircle(O),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(EC))",
+  "problem_answer": "24/5",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "line_addition(AO,OD)",
+    "diameter_of_circle_property_right_angle(DCA,O)",
+    "right_triangle_judgment_angle(DCA)",
+    "right_triangle_property_pythagorean(DCA)",
+    "congruent_arc_judgment_chord_equal(OAB,OCA)",
+    "congruent_arc_property_measure_equal(OAB,OCA)",
+    "arc_property_circumference_angle_external(OCA,D)",
+    "arc_property_circumference_angle_external(OAB,C)",
+    "mirror_similar_triangle_judgment_aa(ECA,CAD)",
+    "mirror_similar_triangle_property_line_ratio(ECA,CAD)",
+    "mirror_similar_triangle_property_line_ratio(AEC,ADC)"
+  ]
+}

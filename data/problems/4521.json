@@ -1,0 +1,30 @@
+{
+  "problem_id": 4521,
+  "annotation": "XiaokaiZhang_2023-05-14",
+  "source": "GeoQA-3549",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是半圆O的直径,C、D是半圆弧上两点,∠D=115°,则∠CAB=()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of the semicircle O, C and D are two points on the semicircle, ∠D = N_0, then ∠CAB = ()",
+  "problem_img": "4521.png",
+  "construction_cdl": [
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AD)",
+    "Shape(DA,AC,CD)",
+    "Shape(CA,AB,BC)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(CDA),115)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(CAB))",
+  "problem_answer": "25",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_internal(OCA,D)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "triangle_property_angle_sum(ABC)"
+  ]
+}

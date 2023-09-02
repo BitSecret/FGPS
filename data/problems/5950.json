@@ -1,0 +1,30 @@
+{
+  "problem_id": 5950,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8331",
+  "problem_level": 1,
+  "problem_text_cn": "如图,海地地震后,抢险队派一架直升机去C,D两个村庄抢险,飞机在距地面450米上空的点A,测得D村的俯角为30°,测得C村的俯角为60°,则DC两村相距多少米？()",
+  "problem_text_en": "As shown in the figure, after the Haiti earthquake, the rescue team sent a helicopter to the two villages of C and D. The plane was at point A above the ground N_0. The measured depression angle of D village was N_1, and the measured depression angle of C village was N_2. How far is the distance between the two villages of DC? ()",
+  "problem_img": "5950.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(AC,CD,DA)",
+    "Collinear(BCD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AB),450)",
+    "Equal(MeasureOfAngle(BDA),30)",
+    "Equal(MeasureOfAngle(BCA),60)",
+    "Equal(MeasureOfAngle(ABC),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DC))",
+  "problem_answer": "300*sqrt(3)",
+  "theorem_seqs": [
+    "line_addition(BC,CD)",
+    "triangle_property_angle_sum(ABC)",
+    "triangle_property_angle_sum(ABD)",
+    "sine_theorem(BCA)",
+    "sine_theorem(BDA)"
+  ]
+}

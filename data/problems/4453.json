@@ -1,0 +1,44 @@
+{
+  "problem_id": 4453,
+  "annotation": "JiaZou_2023-05-14",
+  "source": "GeoQA-3423",
+  "problem_level": 1,
+  "problem_text_cn": "如图,量角器外沿上有A、B两点,它们的读数分别是70°、40°,则∠1的度数为()",
+  "problem_text_en": "As shown in the figure, there are two points A and B on the outer edge of the protractor, and their readings are N_0 and N_1 respectively, so the degree of ∠1 is ()",
+  "problem_img": "4453.png",
+  "construction_cdl": [
+    "Shape(AC,CE,EA)",
+    "Shape(EO,OB,BE)",
+    "Shape(CA,OAC)",
+    "Shape(OE,EC,CO)",
+    "Shape(BO,OD,ODB)",
+    "Shape(AE,EB,OBA)",
+    "Collinear(CEB)",
+    "Collinear(AEO)",
+    "Collinear(COD)",
+    "Cocircular(O,CDBA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(CD,O)",
+    "Equal(MeasureOfAngle(AOD),70)",
+    "Equal(MeasureOfAngle(BOD),40)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ACE))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(COA,AOD)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OAC)",
+    "isosceles_triangle_property_angle_equal(OAC)",
+    "triangle_property_angle_sum(OAC)",
+    "adjacent_complementary_angle(COB,BOD)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)",
+    "angle_addition(ACE,ECO)"
+  ]
+}

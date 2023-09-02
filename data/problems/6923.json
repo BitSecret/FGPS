@@ -1,0 +1,30 @@
+{
+  "problem_id": 6923,
+  "annotation": "ZheZhu_2023-06-04",
+  "source": "GeoQA-angle-10175",
+  "problem_level": 1,
+  "problem_text_cn": "如图，△ABC内接于⊙O，∠A＝74°，则∠OBC等于（）",
+  "problem_text_en": "",
+  "problem_img": "6923.png",
+  "construction_cdl": [
+    "Shape(AB,BO,OC,CA)",
+    "Shape(OB,BC,CO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),74)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(OBC))",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBC,O)",
+    "arc_property_circumference_angle_external(OBC,A)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "radius_of_circle_property_length_equal(OC,O)",
+    "isosceles_triangle_judgment_line_equal(OBC)",
+    "isosceles_triangle_property_angle_equal(OBC)",
+    "triangle_property_angle_sum(OBC)"
+  ]
+}

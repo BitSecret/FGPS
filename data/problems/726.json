@@ -1,0 +1,31 @@
+{
+  "problem_id": 726,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-751",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If G H \\cong H K, H J \\cong Y K, and m \\angle G J K = 100, what is the measure of \\angle H G K?",
+  "problem_img": "726.png",
+  "construction_cdl": [
+    "Shape(KG,GH,HK)",
+    "Shape(KH,HJ,JK)",
+    "Collinear(GHJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(GH),LengthOfLine(HK))",
+    "Equal(LengthOfLine(HJ),LengthOfLine(JK))",
+    "Equal(MeasureOfAngle(GJK),100)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(KGJ))",
+  "problem_answer": "20",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(HKG)",
+    "isosceles_triangle_property_angle_equal(HKG)",
+    "isosceles_triangle_judgment_line_equal(JKH)",
+    "isosceles_triangle_property_angle_equal(JKH)",
+    "triangle_property_angle_sum(KGH)",
+    "triangle_property_angle_sum(KHJ)",
+    "adjacent_complementary_angle(GHK,KHJ)"
+  ]
+}

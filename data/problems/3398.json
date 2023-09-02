@@ -1,0 +1,29 @@
+{
+  "problem_id": 3398,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-921",
+  "problem_level": 1,
+  "problem_text_cn": "如图,将△ABC沿直线DE折叠后,使得点B与点A重合．已知AC=4cm,△ADC的周长为15cm,则BC的长()",
+  "problem_text_en": "As shown in the figure, after folding △ABC along the straight line DE, point B and point A coincide. Given that AC = N_0, the perimeter of △ADC is N_1, then the length of BC is ()",
+  "problem_img": "3398.png",
+  "construction_cdl": [
+    "Shape(EB,BD,DE)",
+    "Shape(AE,ED,DA)",
+    "Shape(AD,DC,CA)",
+    "Collinear(BEA)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [
+    "MirrorCongruentBetweenTriangle(EDA,EBD)",
+    "Equal(LengthOfLine(AC),4)",
+    "Equal(PerimeterOfTriangle(ADC),15)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "11",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_property_line_equal(EDA,EBD)",
+    "triangle_perimeter_formula(ADC)",
+    "line_addition(BD,DC)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 1022,
+  "annotation": "YanjunGuo_2023-04-09",
+  "source": "Geometry3k-1055",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The two circles are congruent. Find x.",
+  "problem_img": "1022.png",
+  "construction_cdl": [
+    "Shape(EAB,BA)",
+    "Shape(AB,EBC,CE,ED,EDA)",
+    "Shape(EC,CD,DE)",
+    "Shape(ECD,DC)",
+    "Cocircular(E,BCDA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(E,E)",
+    "Equal(LengthOfLine(CD),3*x-7)",
+    "Equal(LengthOfLine(AB),2*x+9)",
+    "Equal(MeasureOfArc(EAB),76)",
+    "Equal(MeasureOfArc(EDC),284)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "16",
+  "theorem_seqs": [
+    "arc_property_center_angle(EDC,E)",
+    "arc_property_center_angle(ECD,E)",
+    "round_angle(CED,DEC)",
+    "congruent_arc_judgment_measure_equal(EAB,ECD)",
+    "congruent_arc_property_chord_equal(EAB,ECD)"
+  ]
+}

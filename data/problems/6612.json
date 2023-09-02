@@ -1,0 +1,37 @@
+{
+  "problem_id": 6612,
+  "annotation": "YanjunGuo_2023-06-04",
+  "source": "GeoQA-9603",
+  "problem_level": 1,
+  "problem_text_cn": "如图,D、C是⊙O上的两点,AB经过圆心O,若∠C=30°,AD=3,则⊙O的直径为()",
+  "problem_text_en": "As shown in the figure, D and C are two points on ⊙O, AB passes through the center O, if ∠C = N_0, AD = N_1, then the diameter of ⊙O is ()",
+  "problem_img": "6612.png",
+  "construction_cdl": [
+    "Shape(AD,ODA)",
+    "Shape(DB,OBD)",
+    "Shape(BC,OCB)",
+    "Shape(CE,EA,OAC)",
+    "Shape(DA,AE,ED)",
+    "Shape(DE,EB,BD)",
+    "Shape(BE,EC,CB)",
+    "Collinear(AOEB)",
+    "Collinear(DEC)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AD),3)",
+    "Equal(MeasureOfAngle(DCB),30)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "2*sqrt(3)",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(OBD,C)",
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "triangle_property_angle_sum(DAB)",
+    "sine_theorem(ABD)",
+    "diameter_of_circle_property_length_equal(AB,O)"
+  ]
+}

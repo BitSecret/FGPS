@@ -1,0 +1,26 @@
+{
+  "problem_id": 71,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-71",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Triangle EFG is equilateral, and EH bisects triangle EFG. Find x.",
+  "problem_img": "71.png",
+  "construction_cdl": [
+    "Shape(EF,FH,HE)",
+    "Shape(EH,HG,GE)",
+    "Collinear(FHG)"
+  ],
+  "text_cdl": [
+    "EquilateralTriangle(EFG)",
+    "IsBisectorOfAngle(EH,GEF)"
+  ],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(FHE),15*x)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "isosceles_triangle_property_line_coincidence(EFG,H)"
+  ]
+}

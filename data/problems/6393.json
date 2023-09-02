@@ -1,0 +1,46 @@
+{
+  "problem_id": 6393,
+  "annotation": "YimingHe_2023-06-04",
+  "source": "GeoQA-9250",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,以A为圆心,AB为半径画弧,交AD于F,再分别以B、F为圆心,大于\\frac{1}{2}BF的长为半径画弧,两弧相交于点G,若BF=6,AB=5,则AE的长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, draw an arc with A as the center, AB as the radius, and intersect AD at F, and then draw the arc with B and F as the center, and the length greater than \\frac{N_0}{N_1} BF as the radius, and the two arcs intersect at point G , If BF = N_2, AB = N_3, then the length of AE is ()",
+  "problem_img": "6393.png",
+  "construction_cdl": [
+    "Shape(AO,OF,FA)",
+    "Shape(AB,BO,OA)",
+    "Shape(OB,BE,EO)",
+    "Shape(OE,EF,FO)",
+    "Shape(FE,EC,CD,DF)",
+    "Collinear(AFD)",
+    "Collinear(BEC)",
+    "Collinear(AOE)",
+    "Collinear(BOF)"
+  ],
+  "text_cdl": [
+    "Parallelogram(ABCD)",
+    "IsBisectorOfAngle(AO,FAB)",
+    "Equal(LengthOfLine(AB),LengthOfLine(AF))",
+    "Equal(LengthOfLine(BF),6)",
+    "Equal(LengthOfLine(AB),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AE))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "line_addition(AO,OE)",
+    "line_addition(BO,OF)",
+    "parallel_property_collinear_extend(AD,BC,F)",
+    "parallel_property_collinear_extend(CB,DA,E)",
+    "parallel_property_collinear_extend(CB,FA,E)",
+    "isosceles_triangle_judgment_line_equal(ABF)",
+    "parallel_property_alternate_interior_angle(EB,DA)",
+    "isosceles_triangle_judgment_angle_equal(BEA)",
+    "parallelogram_judgment_parallel_and_equal(FABE)",
+    "parallelogram_property_diagonal_bisection(FABE,O)",
+    "parallelogram_property_diagonal_bisection(ABEF,O)",
+    "isosceles_triangle_property_line_coincidence(ABF,O)",
+    "right_triangle_judgment_angle(BOA)",
+    "right_triangle_property_pythagorean(BOA)"
+  ]
+}

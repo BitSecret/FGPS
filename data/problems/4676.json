@@ -1,0 +1,43 @@
+{
+  "problem_id": 4676,
+  "annotation": "YiwenHuang_2023-05-21",
+  "source": "GeoQA-3950",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB、CD分别与半圆OO切于点A,D,BC切⊙O于点E．若AB=4,CD=9,则⊙O的半径为()",
+  "problem_text_en": "As shown in the figure, AB and CD are respectively tangent to the semicircle OO at points A, D, and BC is tangent to the point E. If AB = N_0, CD = N_1, then the radius of ⊙O is ()",
+  "problem_img": "4676.png",
+  "construction_cdl": [
+    "Shape(EB,BA,OEA)",
+    "Shape(ODE,DC,CE)",
+    "Shape(BE,EC,CF,FB)",
+    "Shape(OD,ODE,OEA,AO)",
+    "Collinear(AOD)",
+    "Collinear(BEC)",
+    "Collinear(ABF)",
+    "Cocircular(O,DEA)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AD,O)",
+    "IsTangentOfCircle(BA,O)",
+    "IsTangentOfCircle(BE,O)",
+    "IsTangentOfCircle(CD,O)",
+    "IsTangentOfCircle(CE,O)",
+    "Equal(LengthOfLine(AB),4)",
+    "Equal(LengthOfLine(CD),9)",
+    "Equal(LengthOfLine(BF),5)",
+    "Equal(LengthOfLine(CF),LengthOfLine(AD))",
+    "Equal(MeasureOfAngle(CFB),90)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(RadiusOfCircle(O))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "tangent_of_circle_property_length_equal(BA,BE,O)",
+    "tangent_of_circle_property_length_equal(CD,CE,O)",
+    "line_addition(BE,EC)",
+    "right_triangle_judgment_angle(CFB)",
+    "right_triangle_property_pythagorean(CFB)",
+    "circle_property_length_of_radius_and_diameter(O)",
+    "diameter_of_circle_property_length_equal(AD,O)"
+  ]
+}

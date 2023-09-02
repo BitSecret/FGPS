@@ -1,0 +1,33 @@
+{
+  "problem_id": 3361,
+  "annotation": "JiaZou_2023-04-30",
+  "source": "GeoQA-835",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在平行四边形ABCD中,点E在AD上,连接CE并延长与BA的延长线交于点F,若AE:AD=2:3,CD=3cm,则AF的长为()",
+  "problem_text_en": "As shown in the figure, in the parallelogram ABCD, point E is on AD, connect CE and extend to intersect extended line BA at point F, if AE: AD = N_0:N_1, CD = N_2, then the length of AF is ()",
+  "problem_img": "3361.png",
+  "construction_cdl": [
+    "Shape(FA,AE,EF)",
+    "Shape(EC,CD,DE)",
+    "Shape(AB,BC,CE,EA)",
+    "Collinear(AED)",
+    "Collinear(FEC)",
+    "Collinear(FAB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(AE),Mul(LengthOfLine(ED),2))",
+    "Equal(LengthOfLine(CD),3)",
+    "Parallelogram(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AF))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "parallelogram_property_opposite_angle_equal(BCDA)",
+    "vertical_angle(AEF,DEC)",
+    "parallel_property_corresponding_angle(AD,BC,F)",
+    "similar_triangle_judgment_aa(FAE,CDE)",
+    "similar_triangle_property_line_ratio(FAE,CDE)",
+    "similar_triangle_property_line_ratio(EFA,ECD)"
+  ]
+}

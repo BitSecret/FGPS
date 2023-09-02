@@ -1,0 +1,26 @@
+{
+  "problem_id": 2483,
+  "annotation": "Yangli_2023-04-23",
+  "source": "Geometry3k-2605",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "m \\widehat A C = 160 and m \\angle B E C = 38. What is m \\angle A E B?",
+  "problem_img": "2483.png",
+  "construction_cdl": [
+    "Shape(EA,DAE)",
+    "Shape(AE,EB,DBA)",
+    "Shape(BE,EC,DCB)",
+    "Shape(CE,DEC)",
+    "Cocircular(D,ECBA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfArc(DCA),160)",
+    "Equal(MeasureOfAngle(BEC),38)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AEC))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(DCA,E)"
+  ]
+}

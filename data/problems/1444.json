@@ -1,0 +1,36 @@
+{
+  "problem_id": 1444,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1497",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In \\triangle C D F, K is the centroid and D K = 16. Find F G.",
+  "problem_img": "1444.png",
+  "construction_cdl": [
+    "Shape(CG,GK,KC)",
+    "Shape(GD,DK,KG)",
+    "Shape(KD,DJ,JK)",
+    "Shape(KJ,JF,FK)",
+    "Shape(KF,FH,HK)",
+    "Shape(KH,HC,CK)",
+    "Collinear(CGD)",
+    "Collinear(DJF)",
+    "Collinear(FHC)",
+    "Collinear(GKF)",
+    "Collinear(HKD)",
+    "Collinear(CKJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentroidOfTriangle(K,CDF)",
+    "Equal(LengthOfLine(DK),16)",
+    "Equal(LengthOfLine(FK),12)",
+    "Equal(LengthOfLine(DG),9)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(FG))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "centroid_of_triangle_property_line_ratio(K,FCD,G)",
+    "line_addition(FK,KG)"
+  ]
+}

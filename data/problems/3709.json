@@ -1,0 +1,30 @@
+{
+  "problem_id": 3709,
+  "annotation": "Yangli_2023-04-30",
+  "source": "GeoQA-1475",
+  "problem_level": 1,
+  "problem_text_cn": "如图,跷跷板AB的支柱OD经过它的中点O,且垂直于地面BC,垂足为D,OD=0.5m,当它的一端B着地时,另一端A离地面的高度AC为()",
+  "problem_text_en": "As shown in the figure, the pillar OD of the seesaw AB passes through its midpoint O and is perpendicular to the ground BC, the foot of perpendicular is D, OD = N_0, when one end B touches the ground, the height AC of the other end A from the ground is ()",
+  "problem_img": "3709.png",
+  "construction_cdl": [
+    "Shape(OD,DB,BO)",
+    "Shape(AC,CD,DO,OA)",
+    "Collinear(AOB)",
+    "Collinear(CDB)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(O,AB)",
+    "Equal(LengthOfLine(OD),0.5)",
+    "PerpendicularBetweenLine(OD,BD)",
+    "PerpendicularBetweenLine(AC,DC)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "1",
+  "theorem_seqs": [
+    "line_addition(AO,OB)",
+    "similar_triangle_judgment_aa(ODB,ACB)",
+    "similar_triangle_property_line_ratio(DBO,CBA)",
+    "similar_triangle_property_line_ratio(BOD,BAC)"
+  ]
+}

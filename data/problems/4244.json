@@ -1,0 +1,36 @@
+{
+  "problem_id": 4244,
+  "annotation": "ChenyangMao_2023-05-07",
+  "source": "GeoQA-3019",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,点C,D在⊙O上．若∠AOD=30°,则∠BCD等于()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, and points C and D are on ⊙O. If ∠AOD = N_0, then ∠BCD is equal to ()",
+  "problem_img": "4244.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(OAB,BO,BA)",
+    "Shape(OBC,CB)",
+    "Shape(OCD,DC)",
+    "Shape(BC,CD,DO,OB)",
+    "Shape(DA,AO,OD)",
+    "Collinear(AOB)",
+    "Cocircular(O,ABCD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(AOD),30)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCD))",
+  "problem_answer": "105",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OD,O)",
+    "isosceles_triangle_judgment_line_equal(ODA)",
+    "isosceles_triangle_property_angle_equal(ODA)",
+    "triangle_property_angle_sum(DAO)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_internal(OBD,C)"
+  ]
+}

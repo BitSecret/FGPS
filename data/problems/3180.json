@@ -1,0 +1,31 @@
+{
+  "problem_id": 3180,
+  "annotation": "JiaZou_2023-04-23",
+  "source": "GeoQA-462",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,∠C=90°,AD是∠BAC的平分线,DE⊥AB于E,若DE=8cm,DB=10cm则BC等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, ∠C = N_0, AD is the bisector of ∠BAC, DE ⊥ AB at E, if DE = N_1, DB = N_2, then BC is equal to ()",
+  "problem_img": "3180.png",
+  "construction_cdl": [
+    "Shape(CA,AD,DC)",
+    "Shape(DA,AE,ED)",
+    "Shape(DE,EB,BD)",
+    "Collinear(CDB)",
+    "Collinear(AEB)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(DE),8)",
+    "Equal(LengthOfLine(DB),10)",
+    "IsBisectorOfAngle(AD,CAB)",
+    "PerpendicularBetweenLine(DC,AC)",
+    "PerpendicularBetweenLine(AE,DE)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "18",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_judgment_aas(DCA,DAE)",
+    "mirror_congruent_triangle_property_line_equal(ADC,AED)",
+    "line_addition(CD,DB)"
+  ]
+}

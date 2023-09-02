@@ -1,0 +1,31 @@
+{
+  "problem_id": 3344,
+  "annotation": "YimingHe_2023-04-30",
+  "source": "GeoQA-777",
+  "problem_level": 1,
+  "problem_text_cn": "如图,DE为△ABC的边BC的垂直平分线,交BC于E,交AB于D,且∠B=40°,∠A=60°,则∠ACD的度数为()",
+  "problem_text_en": "As shown in the figure, DE is the perpendicular bisector of BC of △ABC, and it intersects BC at E as well as intersects AB at D, and ∠B = N_0, ∠A = N_1, then the degree of ∠ACD is ()",
+  "problem_img": "3344.png",
+  "construction_cdl": [
+    "Shape(BE,ED,DB)",
+    "Shape(DE,EC,CD)",
+    "Shape(DC,CA,AD)",
+    "Collinear(ADB)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "IsPerpendicularBisectorOfLine(DE,BC)",
+    "Equal(MeasureOfAngle(DBE),40)",
+    "Equal(MeasureOfAngle(CAD),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCA))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "perpendicular_bisector_property_distance_equal(DE,BC)",
+    "isosceles_triangle_judgment_line_equal(DBC)",
+    "isosceles_triangle_property_angle_equal(DBC)",
+    "triangle_property_angle_sum(ABC)",
+    "angle_addition(ECD,DCA)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "problem_id": 1513,
+  "annotation": "QikeHuang_2023-04-16",
+  "source": "Geometry3k-1571",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x. A = 78 cm^2.",
+  "problem_img": "1513.png",
+  "construction_cdl": [
+    "Shape(DB,BE,ED)",
+    "Shape(AD,DE,EC,CA)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Trapezoid(DBCA)",
+    "Equal(AreaOfQuadrilateral(DBCA),78)",
+    "Equal(LengthOfLine(AD),6.4)",
+    "Equal(LengthOfLine(CB),13)",
+    "Equal(LengthOfLine(DE),x)",
+    "PerpendicularBetweenLine(DE,CE)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "8.04",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(BED,DEC)",
+    "altitude_of_quadrilateral_judgment_left_vertex(DE,DBCA)",
+    "trapezoid_area_formula(DBCA)"
+  ]
+}

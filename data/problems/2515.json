@@ -1,0 +1,30 @@
+{
+  "problem_id": 2515,
+  "annotation": "YifanWang_2023-04-23",
+  "source": "Geometry3k-2639",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find Q M.",
+  "problem_img": "2515.png",
+  "construction_cdl": [
+    "Shape(MN,NQ,QM)",
+    "Shape(QN,NP,PQ)",
+    "Collinear(NMB)",
+    "Collinear(NQC)",
+    "Collinear(NPA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(PQ),4*x-8)",
+    "Equal(LengthOfLine(QM),2*x+2)",
+    "PerpendicularBetweenLine(NP,QP)",
+    "PerpendicularBetweenLine(QM,NM)",
+    "Equal(MeasureOfAngle(MNQ),MeasureOfAngle(QNP))"
+  ],
+  "goal_cdl": "Value(LengthOfLine(QM))",
+  "problem_answer": "12",
+  "theorem_seqs": [
+    "mirror_congruent_triangle_judgment_aas(QNP,QMN)",
+    "mirror_congruent_triangle_property_line_equal(NPQ,NQM)"
+  ]
+}

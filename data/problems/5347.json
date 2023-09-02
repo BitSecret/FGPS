@@ -1,0 +1,42 @@
+{
+  "problem_id": 5347,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5590",
+  "problem_level": 1,
+  "problem_text_cn": "如图,是用一把直尺、含60°角的直角三角板和光盘摆放而成,点A为60°角与直尺交点,点B为光盘与直尺唯一交点,若AB=3,则光盘的直径是()",
+  "problem_text_en": "As shown in the figure, it is made by placing a straightedge, a right triangle plate with angle N_0 and a compact disc. Point A is the intersection point of angle N_1 and the ruler, and point B is the only intersection point between the compact disc and the ruler. If AB = N_2, then the length of the diameter of the disc is ()",
+  "problem_img": "5347.png",
+  "construction_cdl": [
+    "Shape(DC,CA,AE,ED)",
+    "Shape(EA,AB,OEB)",
+    "Shape(OE,EB,BO)",
+    "Shape(EO,OB,OBE)",
+    "Shape(BE,OEB)",
+    "Collinear(CAB)",
+    "Collinear(DEA)",
+    "Cocircular(O,EB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "RightTriangle(DCA)",
+    "IsTangentOfCircle(AB,O)",
+    "IsTangentOfCircle(AE,O)",
+    "Equal(MeasureOfAngle(CAD),60)",
+    "Equal(LengthOfLine(AB),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(DiameterOfCircle(O))",
+  "problem_answer": "6*sqrt(3)",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CAD,DAB)",
+    "tangent_of_circle_property_perpendicular(AB,O,O)",
+    "tangent_of_circle_property_perpendicular(AE,O,O)",
+    "tangent_of_circle_property_length_equal(AB,AE,O)",
+    "quadrilateral_property_angle_sum(OEAB)",
+    "cosine_theorem(ABE)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "radius_of_circle_property_length_equal(OB,O)",
+    "cosine_theorem(OEB)",
+    "circle_property_length_of_radius_and_diameter(O)"
+  ]
+}

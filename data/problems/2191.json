@@ -1,0 +1,32 @@
+{
+  "problem_id": 2191,
+  "annotation": "XiaoxiaoJin_2023-04-23",
+  "source": "Geometry3k-2288",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "In the figure, m \\angle 8 = 96 and m \\angle 12 = 42. Find the measure of \\angle 11.",
+  "problem_img": "2191.png",
+  "construction_cdl": [
+    "Shape(KD,DL)",
+    "Shape(LD,DH)",
+    "Shape(HD,DA)",
+    "Shape(AD,DK)",
+    "Shape(AG,GH)",
+    "Shape(HG,GJ)",
+    "Shape(JG,GF)",
+    "Shape(FG,GA)",
+    "Collinear(KDH)",
+    "Collinear(AGJ)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(ADK),96)",
+    "Equal(MeasureOfAngle(HGJ),42)",
+    "ParallelBetweenLine(KH,AJ)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AGH))",
+  "problem_answer": "138",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(AGH,HGJ)"
+  ]
+}

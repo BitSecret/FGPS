@@ -1,0 +1,30 @@
+{
+  "problem_id": 1037,
+  "annotation": "NaZhu_2023-03-19",
+  "source": "Geometry3k-1070",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find y.",
+  "problem_img": "1037.png",
+  "construction_cdl": [
+    "Shape(BD,DA,AB)",
+    "Shape(AD,DC,CA)",
+    "Collinear(BDC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),x)",
+    "Equal(LengthOfLine(AD),y)",
+    "Equal(LengthOfLine(BD),z)",
+    "Equal(LengthOfLine(AC),12)",
+    "Equal(LengthOfLine(DC),4)",
+    "PerpendicularBetweenLine(AD,CD)",
+    "PerpendicularBetweenLine(CA,BA)"
+  ],
+  "goal_cdl": "Value(y)",
+  "problem_answer": "11.314",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(ADC)",
+    "right_triangle_property_pythagorean(ADC)"
+  ]
+}

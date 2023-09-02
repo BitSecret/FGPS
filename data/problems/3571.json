@@ -1,0 +1,23 @@
+{
+  "problem_id": 3571,
+  "annotation": "YanjunGuo_2023-04-30",
+  "source": "GeoQA-1206",
+  "problem_level": 1,
+  "problem_text_cn": "如图,射线OA的端点O在直线CD上,若∠COA=37°,则∠AOD的度数是()",
+  "problem_text_en": "As shown in the figure, the endpoint O of the ray OA is on the straight line CD, if ∠COA = N_0, then the degree of ∠AOD is ()",
+  "problem_img": "3571.png",
+  "construction_cdl": [
+    "Shape(CO,OA)",
+    "Shape(AO,OD)",
+    "Collinear(COD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(COA),37)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(AOD))",
+  "problem_answer": "143",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(COA,AOD)"
+  ]
+}

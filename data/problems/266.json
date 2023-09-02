@@ -1,0 +1,28 @@
+{
+  "problem_id": 266,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-269",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "If a=14, b=48, and c=50, find cos(ABC).",
+  "problem_img": "266.png",
+  "construction_cdl": [
+    "Shape(BC,CA,AB)"
+  ],
+  "text_cdl": [
+    "Equal(a,14)",
+    "Equal(b,48)",
+    "Equal(c,50)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),c)",
+    "Equal(LengthOfLine(CB),a)",
+    "Equal(LengthOfLine(AC),b)",
+    "PerpendicularBetweenLine(BC,AC)"
+  ],
+  "goal_cdl": "Value(Cos(MeasureOfAngle(ABC)))",
+  "problem_answer": "0.28",
+  "theorem_seqs": [
+    "cosine_theorem(BCA)"
+  ]
+}

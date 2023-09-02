@@ -1,0 +1,48 @@
+{
+  "problem_id": 5733,
+  "annotation": "XiaokaiZhang_2023-05-28",
+  "source": "GeoQA-7534",
+  "problem_level": 1,
+  "problem_text_cn": "如图,⊙O中,弦AB、CD相交于AB的中点E,连接AD并延长至点F,使DF=AD,连接BC、BF．若\\frac{BE}{FB}=\\frac{5}{8},则\\frac{CB}{AD}的值为()",
+  "problem_text_en": "As shown in the figure, in ⊙O, the strings AB and CD intersect at the midpoint E of AB, connect AD and extend to point F, make DF = AD, connect BC and BF. If \\frac{BE}{FB}=\\frac{N_0}{N_1}, then the value of \\frac{CB}{AD} is ()",
+  "problem_img": "5733.png",
+  "construction_cdl": [
+    "Shape(OAC,CE,EA)",
+    "Shape(AE,ED,DA)",
+    "Shape(CB,BE,EC)",
+    "Shape(OCB,BC)",
+    "Shape(OBG,GB)",
+    "Shape(ODA,AD)",
+    "Shape(DE,EB,BG,OGD)",
+    "Shape(FD,OGD,GF)",
+    "Collinear(AEB)",
+    "Collinear(CED)",
+    "Collinear(ADF)",
+    "Collinear(BGF)",
+    "Cocircular(O,CBGDA)"
+  ],
+  "text_cdl": [
+    "IsMidpointOfLine(E,AB)",
+    "Equal(LengthOfLine(AD),LengthOfLine(DF))",
+    "Equal(LengthOfLine(BE),5)",
+    "Equal(LengthOfLine(FB),8)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(CB),LengthOfLine(AD)))",
+  "problem_answer": "5/4",
+  "theorem_seqs": [
+    "midsegment_of_triangle_judgment_midpoint(ED,ABF)",
+    "midsegment_of_triangle_property_parallel(ED,ABF)",
+    "parallel_property_corresponding_angle(ED,BF,A)",
+    "similar_triangle_judgment_aa(DAE,FAB)",
+    "similar_triangle_property_line_ratio(DAE,FAB)",
+    "similar_triangle_property_line_ratio(AED,ABF)",
+    "line_addition(AE,EB)",
+    "vertical_angle(AED,BEC)",
+    "arc_property_circumference_angle_external(OAC,D)",
+    "arc_property_circumference_angle_external(OAC,B)",
+    "mirror_similar_triangle_judgment_aa(CBE,AED)",
+    "mirror_similar_triangle_property_line_ratio(CBE,AED)",
+    "mirror_similar_triangle_property_line_ratio(ECB,EDA)"
+  ]
+}

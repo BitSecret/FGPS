@@ -1,0 +1,28 @@
+{
+  "problem_id": 2885,
+  "annotation": "YimingHe_2023-04-16",
+  "source": "GeoQA-53",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在⊙O中,∠ABC=50°,则∠AOC等于()",
+  "problem_text_en": "As shown in the figure, in ⊙O, ∠ABC = N_0, then ∠AOC is equal to ()",
+  "problem_img": "2885.png",
+  "construction_cdl": [
+    "Shape(BA,OAB)",
+    "Shape(BC,CO,OA,AB)",
+    "Shape(AO,OC,OCA)",
+    "Shape(CB,OBC)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ABC),50)"
+  ],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(AOC))",
+  "problem_answer": "100",
+  "theorem_seqs": [
+    "arc_property_center_angle(OCA,O)",
+    "arc_property_circumference_angle_external(OCA,B)"
+  ]
+}

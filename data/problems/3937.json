@@ -1,0 +1,44 @@
+{
+  "problem_id": 3937,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1858",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知⊙O的半径为5,弦AB、CD所对的圆心角分别是∠AOB,∠COD,且∠AOB与∠COD互补,弦CD=8,则弦AB的长为()",
+  "problem_text_en": "As shown in the figure, it is known that the radius of ⊙O is N_0, the central angles of chords AB and CD are ∠AOB, ∠COD, and ∠AOB is complementary to ∠COD, chord CD = N_1, then the length of chord AB is ()",
+  "problem_img": "3937.png",
+  "construction_cdl": [
+    "Shape(OAB,BA)",
+    "Shape(OBC,CO,OB)",
+    "Shape(OCD,DC)",
+    "Shape(ODA,AO,OD)",
+    "Shape(OA,AB,BO)",
+    "Shape(OC,CD,DO)",
+    "Shape(OBE,EB)",
+    "Shape(OB,BE,EO)",
+    "Collinear(AOE)",
+    "Cocircular(O,ABCED)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(RadiusOfCircle(O),5)",
+    "Equal(Add(MeasureOfAngle(BOA),MeasureOfAngle(DOC)),180)",
+    "Equal(LengthOfLine(CD),8)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "diameter_of_circle_judgment_pass_centre(AOE,O)",
+    "diameter_of_circle_property_right_angle(ABE,O)",
+    "adjacent_complementary_angle(EOB,BOA)",
+    "arc_property_center_angle(OCD,O)",
+    "arc_property_center_angle(OBE,O)",
+    "radius_of_circle_property_length_equal(OA,O)",
+    "radius_of_circle_property_length_equal(OE,O)",
+    "line_addition(AO,OE)",
+    "congruent_arc_judgment_measure_equal(OCD,OBE)",
+    "congruent_arc_property_chord_equal(OCD,OBE)",
+    "right_triangle_judgment_angle(ABE)",
+    "right_triangle_property_pythagorean(ABE)"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "problem_id": 661,
+  "annotation": "YimingHe_2023-03-12",
+  "source": "Geometry3k-678",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "The orthocenter of \\triangle A B C is located 6.4 units from point D. Find B C.",
+  "problem_img": "661.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BC,CD)",
+    "Collinear(ADC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "PerpendicularBetweenLine(CD,BD)",
+    "PerpendicularBetweenLine(AB,CB)",
+    "Equal(LengthOfLine(BD),6.4)",
+    "Equal(LengthOfLine(AD),5.3)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "10.03",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CDB,BDA)",
+    "line_addition(AD,DC)",
+    "mirror_similar_triangle_judgment_aa(BDA,CAB)",
+    "right_triangle_judgment_angle(CDB)",
+    "right_triangle_property_pythagorean(CDB)",
+    "mirror_similar_triangle_property_line_ratio(BDA,CAB)",
+    "mirror_similar_triangle_property_line_ratio(DAB,BCA)",
+    "mirror_similar_triangle_property_line_ratio(ABD,ABC)"
+  ]
+}

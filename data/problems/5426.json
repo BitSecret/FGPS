@@ -1,0 +1,36 @@
+{
+  "problem_id": 5426,
+  "annotation": "XiaoxiaoJin_2023-05-21",
+  "source": "GeoQA-5743",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在▱ABCD中,点E、F分别在CD、BC的延长线上,AE∥BD,EF⊥BF,∠ABC=60°,EF=3,则AB的长是()",
+  "problem_text_en": "As shown in the figure, in ▱ABCD, points E and F are on the extended lines of CD and BC respectively, AE ∥ BD, EF ⊥ BF, ∠ABC = N_0, EF = N_1, then the length of AB is ()",
+  "problem_img": "5426.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CD)",
+    "Shape(ED,DC,CF,FE)",
+    "Collinear(BCF)",
+    "Collinear(EDC)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(EF),3)",
+    "Equal(MeasureOfAngle(ABC),60)",
+    "ParallelBetweenLine(AE,BD)",
+    "PerpendicularBetweenLine(CF,EF)",
+    "Parallelogram(ABCD)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "sqrt(3)",
+  "theorem_seqs": [
+    "line_addition(CD,DE)",
+    "parallel_property_collinear_extend(DC,AB,E)",
+    "parallelogram_judgment_parallel_and_parallel(ABDE)",
+    "parallelogram_property_opposite_line_equal(ABCD)",
+    "parallelogram_property_opposite_line_equal(ABDE)",
+    "parallel_property_corresponding_angle(BA,CD,F)",
+    "sine_theorem(ECF)"
+  ]
+}

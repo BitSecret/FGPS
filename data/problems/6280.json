@@ -1,0 +1,30 @@
+{
+  "problem_id": 6280,
+  "annotation": "ZheZhu_2023-05-28",
+  "source": "GeoQA-8960",
+  "problem_level": 1,
+  "problem_text_cn": "如图,直线CD与线段AB为直径的圆相切于点D,并交BA的延长线于点C,且AB=6,AD=3,P点在切线CD上移动．当∠APB的度数最大时,则∠ABP的度数为()",
+  "problem_text_en": "As shown in the figure, the straight line CD is tangent to the circle whose line segment AB is the diameter at point D, and intersects the extended line line of BA at point C, and AB = N_0, AD = N_1, point P moves on the tangent line CD. When the degree of ∠APB is the largest, then the degree of ∠ABP is ()",
+  "problem_img": "6280.png",
+  "construction_cdl": [
+    "Shape(OD,DA,AO)",
+    "Shape(DO,OB,BD)",
+    "Shape(ODA,AD)",
+    "Shape(OBD,DB)",
+    "Collinear(AOB)",
+    "Cocircular(O,BDA)"
+  ],
+  "text_cdl": [
+    "IsDiameterOfCircle(AB,O)",
+    "IsCentreOfCircle(O,O)",
+    "Equal(LengthOfLine(AB),6)",
+    "Equal(LengthOfLine(AD),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABD))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "sine_theorem(ABD)"
+  ]
+}

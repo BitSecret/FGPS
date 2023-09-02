@@ -1,0 +1,30 @@
+{
+  "problem_id": 303,
+  "annotation": "NaZhu_2023-04-02",
+  "source": "Geometry3k-307",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "For trapezoid Q R S T, M and P are midpoints of the legs. If T S = 2 x, P M = 20, and Q R = 6 x, find x.",
+  "problem_img": "303.png",
+  "construction_cdl": [
+    "Shape(QP,PM,MR,RQ)",
+    "Shape(PT,TS,SM,MP)",
+    "Collinear(QPT)",
+    "Collinear(RMS)"
+  ],
+  "text_cdl": [
+    "Trapezoid(QTSR)",
+    "IsMidpointOfLine(P,QT)",
+    "IsMidpointOfLine(M,RS)",
+    "Equal(LengthOfLine(TS),2*x)",
+    "Equal(LengthOfLine(PM),20)",
+    "Equal(LengthOfLine(QR),6*x)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "5",
+  "theorem_seqs": [
+    "midsegment_of_quadrilateral_judgment_midpoint(PM,QTSR)",
+    "midsegment_of_quadrilateral_property_length(PM,QTSR)"
+  ]
+}

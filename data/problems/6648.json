@@ -1,0 +1,28 @@
+{
+  "problem_id": 6648,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9665",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC是⊙O的内接三角形,∠AOB=135°,则∠ACB的度数为()",
+  "problem_text_en": "As shown in the figure, △ABC is the inscribed triangle of ⊙O, ∠AOB = N_0, then the degree of ∠ACB is ()",
+  "problem_img": "6648.png",
+  "construction_cdl": [
+    "Shape(OCA,AC)",
+    "Shape(CA,AO,OB,BC)",
+    "Shape(OA,AB,BO)",
+    "Shape(CB,OBC)",
+    "Shape(BA,OAB)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),135)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "67.5",
+  "theorem_seqs": [
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "problem_id": 5337,
+  "annotation": "QikeHuang_2023-05-21",
+  "source": "GeoQA-5569",
+  "problem_level": 1,
+  "problem_text_cn": "如图,已知线段AB,过点B作AB的垂线,并在垂线上取BC=\\frac{1}{2}AB；连接AC,以点C为圆心,CB为半径画弧,交AC于点D；再以点A为圆心,AD为半径画弧,交AB于点P,则\\frac{AP}{AB}的值是()",
+  "problem_text_en": "As shown in the figure, the line segment AB is known and crosses point B to draw a perpendicular to AB, and BC = BC=\\frac{N_0}{N_1} AB is taken on the perpendicular; connect AC, draw an arc with point C as the center and CB as the radius, and intersects AC at point D; Draw an arc with point A as the center and AD as the radius, and intersects AB at point P, then the value of \\frac{AP}{AB} is ()",
+  "problem_img": "5337.png",
+  "construction_cdl": [
+    "Shape(DA,AP,APD)",
+    "Shape(PA,AD,ADP)",
+    "Shape(CD,CDB,BC)",
+    "Shape(DC,CB,CBD)",
+    "Shape(APD,PB,CDB)",
+    "Collinear(APB)",
+    "Collinear(ADC)",
+    "Cocircular(A,PD)",
+    "Cocircular(C,DB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(A,A)",
+    "IsCentreOfCircle(C,C)",
+    "PerpendicularBetweenLine(AB,CB)",
+    "Equal(Div(LengthOfLine(BC),LengthOfLine(AB)),1/2)",
+    "Equal(LengthOfLine(BC),1)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(AP),LengthOfLine(AB)))",
+  "problem_answer": "sqrt(5)/2-1/2",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(AP,A)",
+    "radius_of_circle_property_length_equal(AD,A)",
+    "radius_of_circle_property_length_equal(CD,C)",
+    "radius_of_circle_property_length_equal(CB,C)",
+    "right_triangle_judgment_angle(ABC)",
+    "right_triangle_property_pythagorean(ABC)",
+    "line_addition(AD,DC)"
+  ]
+}

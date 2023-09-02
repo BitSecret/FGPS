@@ -1,0 +1,27 @@
+{
+  "problem_id": 32,
+  "annotation": "XiaokaiZhang_2023-04-02",
+  "source": "Geometry3k-32",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "m \\angle 11 = 4 x, m \\angle 12 = 2 x - 6. Find the measure of \\angle 11.",
+  "problem_img": "32.png",
+  "construction_cdl": [
+    "Shape(DF,FH)",
+    "Shape(HF,FA)",
+    "Shape(AF,FB)",
+    "Shape(BF,FD)",
+    "Collinear(DFA)",
+    "Collinear(BFH)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DFH),4*x)",
+    "Equal(MeasureOfAngle(HFA),2*x-6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DFH))",
+  "problem_answer": "124",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(DFH,HFA)"
+  ]
+}

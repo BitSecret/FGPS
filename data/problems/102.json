@@ -1,0 +1,26 @@
+{
+  "problem_id": 102,
+  "annotation": "XiaokaiZhang_2023-03-12",
+  "source": "Geometry3k-103",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find measure of angle LKJ.",
+  "problem_img": "102.png",
+  "construction_cdl": [
+    "Shape(KJ,JL,LK)",
+    "Shape(KL,LA)",
+    "Collinear(JLA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(MeasureOfAngle(LKJ),2*x-11)",
+    "Equal(MeasureOfAngle(KJL),2*x+27)",
+    "Equal(MeasureOfAngle(KLA),100)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(LKJ))",
+  "problem_answer": "31",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(JKL,KLA)",
+    "triangle_property_angle_sum(KJL)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "problem_id": 6231,
+  "annotation": "FangzhenZhu_2023-06-04",
+  "source": "GeoQA-8829",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,C、D为⊙O上的两点,∠BAC=50°,则∠ADC的度数是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, C and D are two points on ⊙O, ∠BAC = N_0, then the degree of ∠ADC is ()",
+  "problem_img": "6231.png",
+  "construction_cdl": [
+    "Shape(OBC,CB)",
+    "Shape(OCA,AC)",
+    "Shape(OAD,DA)",
+    "Shape(ODB,BO,OM,MD)",
+    "Shape(MC,CA,AM)",
+    "Shape(MA,AD,DM)",
+    "Shape(OB,BC,CM,MO)",
+    "Collinear(BOMA)",
+    "Collinear(CMD)",
+    "Cocircular(O,BCAD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(CAB),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ADC))",
+  "problem_answer": "40",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BCA)",
+    "diameter_of_circle_judgment_pass_centre(BOA,O)",
+    "diameter_of_circle_property_right_angle(BCA,O)",
+    "arc_property_circumference_angle_external(OCA,B)",
+    "arc_property_circumference_angle_external(OCA,D)"
+  ]
+}

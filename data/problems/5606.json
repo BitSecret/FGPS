@@ -1,0 +1,34 @@
+{
+  "problem_id": 5606,
+  "annotation": "YimingHe_2023-05-28",
+  "source": "GeoQA-7163",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC中,BD是∠ABC的平分线,DE∥AB交BC于E,EC=6,BE=4,则AB长为()",
+  "problem_text_en": "As shown in the figure, in △ABC, BD is the bisector of ∠ABC, DE ∥ AB intersects BC at E, EC = N_0, BE = N_1, then the length of AB is ()",
+  "problem_img": "5606.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DA)",
+    "Shape(DB,BE,ED)",
+    "Shape(DE,EC,CD)",
+    "Collinear(ADC)",
+    "Collinear(BEC)"
+  ],
+  "text_cdl": [
+    "IsBisectorOfAngle(BD,ABC)",
+    "ParallelBetweenLine(DE,AB)",
+    "Equal(LengthOfLine(EC),6)",
+    "Equal(LengthOfLine(BE),4)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AB))",
+  "problem_answer": "20/3",
+  "theorem_seqs": [
+    "line_addition(BE,EC)",
+    "parallel_property_alternate_interior_angle(DE,AB)",
+    "isosceles_triangle_judgment_angle_equal(EDB)",
+    "parallel_property_corresponding_angle(BA,ED,C)",
+    "similar_triangle_judgment_aa(DEC,ABC)",
+    "similar_triangle_property_line_ratio(DEC,ABC)",
+    "similar_triangle_property_line_ratio(CDE,CAB)"
+  ]
+}

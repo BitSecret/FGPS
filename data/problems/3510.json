@@ -1,0 +1,29 @@
+{
+  "problem_id": 3510,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1119",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠1=∠2,∠3=75°,则∠4的度数为()",
+  "problem_text_en": "As shown in the figure, ∠1 = ∠2, ∠3 = N_0, then the degree of ∠4 is ()",
+  "problem_img": "3510.png",
+  "construction_cdl": [
+    "Shape(AB,BC,CA)",
+    "Shape(DA,AE)",
+    "Shape(EA,AC)",
+    "Shape(AC,CF)",
+    "Collinear(DAB)",
+    "Collinear(BCF)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(DAE),MeasureOfAngle(ABC))",
+    "Equal(MeasureOfAngle(EAC),75)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(BCA))",
+  "problem_answer": "75",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(ABC)",
+    "adjacent_complementary_angle(DAC,CAB)",
+    "angle_addition(DAE,EAC)"
+  ]
+}

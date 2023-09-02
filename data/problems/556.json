@@ -1,0 +1,43 @@
+{
+  "problem_id": 556,
+  "annotation": "YimingHe_2023-04-02",
+  "source": "Geometry3k-569",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find the perimeter of the triangle at the right. Assume that segments that appear to be tangent are tangent.",
+  "problem_img": "556.png",
+  "construction_cdl": [
+    "Shape(BC,OAC,AB)",
+    "Shape(CE,EF,OCF)",
+    "Shape(FM,MA,OFA)",
+    "Shape(OAC,OCF,OFA)",
+    "Collinear(BCE)",
+    "Collinear(EFM)",
+    "Collinear(MAB)",
+    "Cocircular(O,ACF)"
+  ],
+  "text_cdl": [
+    "IsTangentOfCircle(BC,O)",
+    "IsTangentOfCircle(BA,O)",
+    "IsTangentOfCircle(EF,O)",
+    "IsTangentOfCircle(EC,O)",
+    "IsTangentOfCircle(MA,O)",
+    "IsTangentOfCircle(MF,O)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(BC),14)",
+    "Equal(LengthOfLine(AM),9)",
+    "Equal(LengthOfLine(ME),15)"
+  ],
+  "goal_cdl": "Value(PerimeterOfTriangle(BEM))",
+  "problem_answer": "58",
+  "theorem_seqs": [
+    "tangent_of_circle_property_length_equal(EF,EC,O)",
+    "tangent_of_circle_property_length_equal(BC,BA,O)",
+    "tangent_of_circle_property_length_equal(MA,MF,O)",
+    "line_addition(BC,CE)",
+    "line_addition(EF,FM)",
+    "line_addition(BA,AM)",
+    "triangle_perimeter_formula(BEM)"
+  ]
+}

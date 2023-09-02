@@ -1,0 +1,30 @@
+{
+  "problem_id": 5478,
+  "annotation": "ChenyangMao_2023-05-21",
+  "source": "GeoQA-5898",
+  "problem_level": 1,
+  "problem_text_cn": "如图在Rt△ABC中,∠C=90°,∠ABC=30°,AB=16．将△ABC沿CB向右平移得到△DEF,若四边形ABED的面积等于32,则平移距离等于()",
+  "problem_text_en": "As shown in Rt△ABC, ∠C = N_0, ∠ABC = N_1, AB = N_2. Shift △ABC to the right along CB to get △DEF. If the area of the quadrilateral ABED is equal to N_3, the translation distance is equal to ()",
+  "problem_img": "5478.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)",
+    "Shape(DF,FE,ED)",
+    "Shape(DA,AB,BE,ED)",
+    "Collinear(CFBE)"
+  ],
+  "text_cdl": [
+    "CongruentBetweenTriangle(ACB,DFE)",
+    "Parallelogram(DABE)",
+    "Equal(LengthOfLine(AB),16)",
+    "Equal(MeasureOfAngle(ACB),90)",
+    "Equal(MeasureOfAngle(CBA),30)",
+    "Equal(AreaOfQuadrilateral(DABE),32)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BE))",
+  "problem_answer": "4",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(CBA,ABE)",
+    "parallelogram_area_formula_sine(ABED)"
+  ]
+}

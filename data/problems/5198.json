@@ -1,0 +1,35 @@
+{
+  "problem_id": 5198,
+  "annotation": "NaZhu_2023-05-21",
+  "source": "GeoQA-5198",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,CD是弦,AB⊥CD于点E,若半径为5,OE=3,则CD的长是()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, CD is the chord, AB ⊥ CD at point E, if the radius is N_0, OE = N_1, then the length of CD is ()",
+  "problem_img": "5198.png",
+  "construction_cdl": [
+    "Shape(OAC,CO,OA)",
+    "Shape(OCB,BE,EC)",
+    "Shape(OC,CE,EO)",
+    "Shape(OBD,DE,EB)",
+    "Shape(ODA,AO,OE,ED)",
+    "Collinear(CED)",
+    "Collinear(AOEB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(CE,OE)",
+    "Equal(RadiusOfCircle(O),5)",
+    "Equal(LengthOfLine(OE),3)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(CD))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "radius_of_circle_property_length_equal(OC,O)",
+    "circle_property_chord_perpendicular_bisect_chord(O,OE,CD)",
+    "right_triangle_judgment_angle(CEO)",
+    "right_triangle_property_pythagorean(CEO)",
+    "line_addition(CE,ED)"
+  ]
+}

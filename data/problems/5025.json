@@ -1,0 +1,34 @@
+{
+  "problem_id": 5025,
+  "annotation": "ZheZhu_2023-05-14",
+  "source": "GeoQA-4753",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在△ABC中,点D、E分AB、AC边上,DE∥BC,若AD:AB=3:4,AE=6,则AC等于()",
+  "problem_text_en": "As shown in the figure, in △ABC, points D and E are on the edges AB and AC, DE ∥ BC, if AD:AB=N_0:N_1,AE=N_2, then AC is equal to ()",
+  "problem_img": "5025.png",
+  "construction_cdl": [
+    "Shape(EA,AD,DE)",
+    "Shape(CE,ED,DB,BC)",
+    "Collinear(AEC)",
+    "Collinear(ADB)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),3/4)",
+    "Equal(LengthOfLine(AE),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(AC))",
+  "problem_answer": "8",
+  "theorem_seqs": [
+    "line_addition(AE,EC)",
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(EAD,CAB)",
+    "similar_triangle_judgment_aa(ABC,ADE)",
+    "similar_triangle_property_line_ratio(EAD,CAB)",
+    "similar_triangle_property_line_ratio(DEA,BCA)",
+    "similar_triangle_property_line_ratio(BCA,DEA)",
+    "similar_triangle_property_line_ratio(CAB,EAD)"
+  ]
+}

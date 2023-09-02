@@ -1,0 +1,28 @@
+{
+  "problem_id": 2095,
+  "annotation": "QikeHuang_2023-04-23",
+  "source": "Geometry3k-2183",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Q R S T is a rectangle. If m \\angle Q T R = 2 x^ { 2 } - 7 and m \\angle S R T = x^ { 2 } + 18, find m \\angle Q T R.",
+  "problem_img": "2095.png",
+  "construction_cdl": [
+    "Shape(QT,TP,PQ)",
+    "Shape(PT,TS,SP)",
+    "Shape(QP,PR,RQ)",
+    "Shape(RP,PS,SR)",
+    "Collinear(QPS)",
+    "Collinear(TPR)"
+  ],
+  "text_cdl": [
+    "Rectangle(QTSR)",
+    "Equal(MeasureOfAngle(QTP),2*x^{2}-7)",
+    "Equal(MeasureOfAngle(SRP),x^{2}+18)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(QTP))",
+  "problem_answer": "43",
+  "theorem_seqs": [
+    "parallel_property_alternate_interior_angle(TQ,SR)"
+  ]
+}

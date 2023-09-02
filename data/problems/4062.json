@@ -1,0 +1,31 @@
+{
+  "problem_id": 4062,
+  "annotation": "XiaokaiZhang_2023-05-07",
+  "source": "GeoQA-2375",
+  "problem_level": 1,
+  "problem_text_cn": "如图,在一场羽毛球比赛中,站在场内M处的运动员林丹把求从N点击到了对方内的B点,已知网高OA=1.52m,OB=4m,OM=5m,则林丹起跳后击球点离地面的距离NM=()",
+  "problem_text_en": "As shown in the figure, in a badminton game, Lin Dan, the athlete standing at M in the field, clicks the request from N to point B in the opponent. It is known that the net height OA = N_0, OB = N_1, OM = N_2, then when Lin Dan takes off, the distance from the hitting point to the ground NM = ()",
+  "problem_img": "4062.png",
+  "construction_cdl": [
+    "Shape(BA,AO,OB)",
+    "Shape(NM,MO,OA,AN)",
+    "Collinear(NAB)",
+    "Collinear(MOB)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(NM,BM)",
+    "PerpendicularBetweenLine(AO,BO)",
+    "Equal(LengthOfLine(AO),1.52)",
+    "Equal(LengthOfLine(OB),4)",
+    "Equal(LengthOfLine(OM),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(NM))",
+  "problem_answer": "3.42",
+  "theorem_seqs": [
+    "similar_triangle_judgment_aa(AOB,NMB)",
+    "similar_triangle_property_line_ratio(AOB,NMB)",
+    "similar_triangle_property_line_ratio(BAO,BNM)",
+    "line_addition(MO,OB)"
+  ]
+}

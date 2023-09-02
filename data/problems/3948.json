@@ -1,0 +1,34 @@
+{
+  "problem_id": 3948,
+  "annotation": "FangzhenZhu_2023-05-07",
+  "source": "GeoQA-1872",
+  "problem_level": 1,
+  "problem_text_cn": "如图,∠AOB=50°,∠OBC=40°,则∠OAC=()",
+  "problem_text_en": "As shown in the figure, ∠AOB = N_0, ∠OBC = N_1, then ∠OAC = ()",
+  "problem_img": "3948.png",
+  "construction_cdl": [
+    "Shape(OBC,CB)",
+    "Shape(MB,BC,CM)",
+    "Shape(AM,MO,OA)",
+    "Shape(OCA,AO,OM,MC)",
+    "Shape(OAB,BM,MA)",
+    "Collinear(AMC)",
+    "Collinear(BMO)",
+    "Cocircular(O,ABC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "Equal(MeasureOfAngle(BOA),50)",
+    "Equal(MeasureOfAngle(OBC),40)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(OAC))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(MOA)",
+    "vertical_angle(AMO,CMB)",
+    "triangle_property_angle_sum(BCM)",
+    "arc_property_center_angle(OAB,O)",
+    "arc_property_circumference_angle_external(OAB,C)"
+  ]
+}

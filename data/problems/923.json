@@ -1,0 +1,30 @@
+{
+  "problem_id": 923,
+  "annotation": "XiaokaiZhang_2023-04-09",
+  "source": "Geometry3k-952",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Trapezoid M N P Q has an area of 360 square feet. Find the length of M N.",
+  "problem_img": "923.png",
+  "construction_cdl": [
+    "Shape(MQ,QE,EN,NM)",
+    "Shape(NE,EP,PN)",
+    "Collinear(QEP)"
+  ],
+  "text_cdl": [
+    "Trapezoid(MQPN)",
+    "Equal(AreaOfQuadrilateral(MQPN),360)"
+  ],
+  "image_cdl": [
+    "Equal(LengthOfLine(NE),18)",
+    "Equal(LengthOfLine(QP),26)",
+    "PerpendicularBetweenLine(NE,PE)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(MN))",
+  "problem_answer": "14",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(QEN,NEP)",
+    "altitude_of_quadrilateral_judgment_right_vertex(NE,MQPN)",
+    "trapezoid_area_formula(MQPN)"
+  ]
+}

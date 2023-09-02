@@ -1,0 +1,26 @@
+{
+  "problem_id": 856,
+  "annotation": "XiaokaiZhang_2023-03-19",
+  "source": "Geometry3k-885",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find h.",
+  "problem_img": "856.png",
+  "construction_cdl": [
+    "Shape(AC,CB,BA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AB),h)",
+    "Equal(LengthOfLine(AC),15)",
+    "Equal(MeasureOfAngle(ACB),60)",
+    "PerpendicularBetweenLine(BA,CA)"
+  ],
+  "goal_cdl": "Value(h)",
+  "problem_answer": "15*sqrt(3)",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(BAC)",
+    "sine_theorem(BAC)",
+    "sine_theorem(CBA)"
+  ]
+}

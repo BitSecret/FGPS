@@ -1,0 +1,30 @@
+{
+  "problem_id": 5621,
+  "annotation": "JiaZou_2023-05-28",
+  "source": "GeoQA-7205",
+  "problem_level": 1,
+  "problem_text_cn": "如图,D为△ABC边AB上一点,\\frac{AD}{AB}=\\frac{2}{3},DE∥BC交AC于E,DE=6,则BC=()",
+  "problem_text_en": "As shown in the figure, D is a point on AB of △ABC, \\frac {AD}{AB} = \\frac{N_0}{N_1}, DE ∥ BC crosses AC to E, DE = N_2, then BC = ()",
+  "problem_img": "5621.png",
+  "construction_cdl": [
+    "Shape(AD,DE,EA)",
+    "Shape(DB,BC,CE,ED)",
+    "Collinear(ADB)",
+    "Collinear(AEC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DE,BC)",
+    "Equal(Div(LengthOfLine(AD),LengthOfLine(AB)),2/3)",
+    "Equal(LengthOfLine(DE),6)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(BC))",
+  "problem_answer": "9",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DE,BC,A)",
+    "parallel_property_corresponding_angle(CB,ED,A)",
+    "similar_triangle_judgment_aa(ADE,ABC)",
+    "similar_triangle_property_line_ratio(ADE,ABC)",
+    "similar_triangle_property_line_ratio(EAD,CAB)"
+  ]
+}

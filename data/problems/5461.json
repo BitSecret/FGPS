@@ -1,0 +1,39 @@
+{
+  "problem_id": 5461,
+  "annotation": "Yangli_2023-05-21",
+  "source": "GeoQA-5872",
+  "problem_level": 1,
+  "problem_text_cn": "如图,△ABC是边长为5的等边三角形,点D,E分别在BC,AC上,DE∥AB,过点E作EF⊥DE,交BC的的延长线于点F,若BD=2,则DF等于()",
+  "problem_text_en": "As shown in the figure, △ABC is an equilateral triangle with edge length N_0. Points D and E are on BC and AC respectively. = N_1, then DF is equal to ()",
+  "problem_img": "5461.png",
+  "construction_cdl": [
+    "Shape(AB,BD,DE,EA)",
+    "Shape(ED,DC,CE)",
+    "Shape(EC,CF,FE)",
+    "Collinear(AEC)",
+    "Collinear(BDCF)"
+  ],
+  "text_cdl": [
+    "Equal(LengthOfLine(BD),2)",
+    "Equal(LengthOfLine(BC),5)",
+    "EquilateralTriangle(ABC)",
+    "PerpendicularBetweenLine(FE,DE)",
+    "ParallelBetweenLine(BA,DE)",
+    "ParallelBetweenLine(ED,AB)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(LengthOfLine(DF))",
+  "problem_answer": "6",
+  "theorem_seqs": [
+    "line_addition(BD,DC)",
+    "equilateral_triangle_property_angle(ABC)",
+    "equilateral_triangle_property_angle(BCA)",
+    "equilateral_triangle_property_angle(CAB)",
+    "parallel_property_corresponding_angle(ED,AB,C)",
+    "parallel_property_corresponding_angle(BA,DE,C)",
+    "isosceles_triangle_judgment_angle_equal(EDC)",
+    "isosceles_triangle_judgment_angle_equal(CED)",
+    "triangle_property_angle_sum(EDF)",
+    "sine_theorem(DFE)"
+  ]
+}

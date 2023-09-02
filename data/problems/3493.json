@@ -1,0 +1,27 @@
+{
+  "problem_id": 3493,
+  "annotation": "XiaokaiZhang_2023-04-30",
+  "source": "GeoQA-1097",
+  "problem_level": 1,
+  "problem_text_cn": "如图:过△ABC的边BC上一点D作DF//AC,若∠A=40°,∠B=60°,则∠DFB的度数为()",
+  "problem_text_en": "As shown in the figure: A point D on the edge BC of △ABC is used as DF // AC, if ∠A = N_0, ∠B = N_1, then the degree of ∠FDB is ()",
+  "problem_img": "3493.png",
+  "construction_cdl": [
+    "Shape(BD,DF,FB)",
+    "Shape(DA,AC,CF,FD)",
+    "Collinear(BDA)",
+    "Collinear(BFC)"
+  ],
+  "text_cdl": [
+    "ParallelBetweenLine(DF,AC)",
+    "Equal(MeasureOfAngle(BAC),40)",
+    "Equal(MeasureOfAngle(CBA),60)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DFB))",
+  "problem_answer": "80",
+  "theorem_seqs": [
+    "parallel_property_corresponding_angle(DF,AC,B)",
+    "triangle_property_angle_sum(BDF)"
+  ]
+}

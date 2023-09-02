@@ -1,0 +1,35 @@
+{
+  "problem_id": 6645,
+  "annotation": "QikeHuang_2023-06-04",
+  "source": "GeoQA-9661",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB是⊙O的直径,CD是⊙O的弦,连接AD、DB、BC,若∠ABD=55°,则∠BCD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, CD is the chord of ⊙O, connect AD, DB, BC, if ∠ABD = N_0, then the degree of ∠BCD is ()",
+  "problem_img": "6645.png",
+  "construction_cdl": [
+    "Shape(ODA,AD)",
+    "Shape(DA,AO,OM,MD)",
+    "Shape(DM,MB,BD)",
+    "Shape(DB,OBD)",
+    "Shape(MO,OA,OAC,CM)",
+    "Shape(BM,MC,CB)",
+    "Shape(BC,OCB)",
+    "Collinear(DMC)",
+    "Collinear(AOMB)",
+    "Cocircular(O,ACBD)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsDiameterOfCircle(AB,O)",
+    "Equal(MeasureOfAngle(ABD),55)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DCB))",
+  "problem_answer": "35",
+  "theorem_seqs": [
+    "diameter_of_circle_property_right_angle(BDA,O)",
+    "triangle_property_angle_sum(DAB)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "arc_property_circumference_angle_external(OBD,C)"
+  ]
+}

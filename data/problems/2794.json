@@ -1,0 +1,33 @@
+{
+  "problem_id": 2794,
+  "annotation": "RunanWang_2023-05-07",
+  "source": "Geometry3k-2943",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Use parallelogram A B C D to find m \\angle A F D.",
+  "problem_img": "2794.png",
+  "construction_cdl": [
+    "Shape(BA,AF,FB)",
+    "Shape(FA,AD,DF)",
+    "Shape(FD,DC,CF)",
+    "Shape(FC,CB,BF)",
+    "Collinear(BFD)",
+    "Collinear(AFC)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Parallelogram(BADC)",
+    "Equal(LengthOfLine(DA),29)",
+    "Equal(LengthOfLine(AB),5*x)",
+    "Equal(MeasureOfAngle(ADB),34)",
+    "Equal(MeasureOfAngle(DCA),54)",
+    "Equal(LengthOfLine(CB),3*y-4)",
+    "Equal(MeasureOfAngle(CAD),49)",
+    "Equal(LengthOfLine(DC),25)"
+  ],
+  "goal_cdl": "Value(MeasureOfAngle(DFA))",
+  "problem_answer": "97",
+  "theorem_seqs": [
+    "triangle_property_angle_sum(FAD)"
+  ]
+}

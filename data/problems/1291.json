@@ -1,0 +1,30 @@
+{
+  "problem_id": 1291,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1338",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find x.",
+  "problem_img": "1291.png",
+  "construction_cdl": [
+    "Shape(DB,BE,ED)",
+    "Shape(EB,BC,CE)",
+    "Shape(EC,CA,AE)",
+    "Shape(EA,AD,DE)",
+    "Collinear(DEC)",
+    "Collinear(BEA)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(AD),x)",
+    "Equal(LengthOfLine(DE),9)",
+    "Equal(LengthOfLine(AE),12)",
+    "PerpendicularBetweenLine(DE,AE)"
+  ],
+  "goal_cdl": "Value(x)",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(DEA)",
+    "right_triangle_property_pythagorean(DEA)"
+  ]
+}

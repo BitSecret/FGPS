@@ -1,0 +1,34 @@
+{
+  "problem_id": 3204,
+  "annotation": "NaZhu_2023-04-23",
+  "source": "GeoQA-495",
+  "problem_level": 1,
+  "problem_text_cn": "如图所示,直线AB⊥CD于点O,直线EF经过点O,若∠1=26°,则∠2的度数是()",
+  "problem_text_en": "As shown in the figure, the straight line AB ⊥ CD is at point O, and the straight line EF passes through point O. If ∠1 = N_0, then the degree of ∠2 is ()",
+  "problem_img": "3204.png",
+  "construction_cdl": [
+    "Shape(AO,OC)",
+    "Shape(CO,OE)",
+    "Shape(EO,OB)",
+    "Shape(BO,OD)",
+    "Shape(DO,OF)",
+    "Shape(FO,OA)",
+    "Shape(AO,OE)",
+    "Shape(FO,OC)",
+    "Collinear(AOB)",
+    "Collinear(COD)",
+    "Collinear(EOF)"
+  ],
+  "text_cdl": [
+    "PerpendicularBetweenLine(AO,CO)",
+    "Equal(MeasureOfAngle(COE),26)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(FOA))",
+  "problem_answer": "64",
+  "theorem_seqs": [
+    "angle_addition(AOC,COE)",
+    "flat_angle(FOE)",
+    "angle_addition(FOA,AOE)"
+  ]
+}

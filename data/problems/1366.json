@@ -1,0 +1,29 @@
+{
+  "problem_id": 1366,
+  "annotation": "YimingHe_2023-03-19",
+  "source": "Geometry3k-1414",
+  "problem_level": 1,
+  "problem_text_cn": "",
+  "problem_text_en": "Find R T.",
+  "problem_img": "1366.png",
+  "construction_cdl": [
+    "Shape(SR,RW,WS)",
+    "Shape(RW,WT,TR)",
+    "Collinear(SWT)"
+  ],
+  "text_cdl": [],
+  "image_cdl": [
+    "Equal(LengthOfLine(RS),6*x+2)",
+    "Equal(LengthOfLine(RT),4*x+3)",
+    "Equal(LengthOfLine(RW),12)",
+    "Equal(LengthOfLine(WS),16)",
+    "Equal(LengthOfLine(WT),9)",
+    "PerpendicularBetweenLine(RW,TW)"
+  ],
+  "goal_cdl": "Value(LengthOfLine(RT))",
+  "problem_answer": "15",
+  "theorem_seqs": [
+    "right_triangle_judgment_angle(RWT)",
+    "right_triangle_property_pythagorean(RWT)"
+  ]
+}

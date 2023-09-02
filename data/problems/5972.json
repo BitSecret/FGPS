@@ -1,0 +1,32 @@
+{
+  "problem_id": 5972,
+  "annotation": "XiaoxiaoJin_2023-05-28",
+  "source": "GeoQA-8415",
+  "problem_level": 1,
+  "problem_text_cn": "如图,AB为⊙O的直径,D为⊙O上一点,过点D的切线交AB的延长线于点C,若∠C=30°,则∠CAD的度数为()",
+  "problem_text_en": "As shown in the figure, AB is the diameter of ⊙O, D is the point on ⊙O, the tangent passing through point D intersects the extended line of AB at point C, if ∠C = N_0, then the degree of ∠CAD is ()",
+  "problem_img": "5972.png",
+  "construction_cdl": [
+    "Shape(AO,OD,DA)",
+    "Shape(AD,ODA)",
+    "Shape(DO,OB,OBD)",
+    "Shape(BC,CD,OBD)",
+    "Collinear(AOBC)",
+    "Cocircular(O,ABD)"
+  ],
+  "text_cdl": [
+    "Equal(MeasureOfAngle(ACD),30)",
+    "IsCentreOfCircle(O,O)",
+    "IsTangentOfCircle(CD,O)",
+    "IsDiameterOfCircle(AB,O)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(DAC))",
+  "problem_answer": "30",
+  "theorem_seqs": [
+    "arc_property_center_angle(OBD,O)",
+    "arc_property_circumference_angle_external(OBD,A)",
+    "tangent_of_circle_property_perpendicular(CD,O,O)",
+    "triangle_property_angle_sum(DOC)"
+  ]
+}

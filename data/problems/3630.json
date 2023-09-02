@@ -1,0 +1,33 @@
+{
+  "problem_id": 3630,
+  "annotation": "QikeHuang_2023-04-30",
+  "source": "GeoQA-1311",
+  "problem_level": 1,
+  "problem_text_cn": "如图,CD为⊙O的直径,且CD⊥弦AB,∠AOC=50°,则∠B大小为()",
+  "problem_text_en": "As shown in the figure, CD is the diameter of O, and CD ⊥ chord AB, ∠AOC = N_0, then the size of ∠B is ()",
+  "problem_img": "3630.png",
+  "construction_cdl": [
+    "Shape(ODA,AO,OD)",
+    "Shape(OA,AM,MO)",
+    "Shape(MA,OAC,CM)",
+    "Shape(DO,OM,MB,BD)",
+    "Shape(BM,MC,OCB)",
+    "Shape(DB,OBD)",
+    "Collinear(DOMC)",
+    "Collinear(AMB)",
+    "Cocircular(O,DACB)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "PerpendicularBetweenLine(DM,BM)",
+    "Equal(MeasureOfAngle(COA),50)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(MeasureOfAngle(ABD))",
+  "problem_answer": "65",
+  "theorem_seqs": [
+    "adjacent_complementary_angle(COA,AOD)",
+    "arc_property_center_angle(ODA,O)",
+    "arc_property_circumference_angle_external(ODA,B)"
+  ]
+}
