@@ -26,32 +26,9 @@
     "Equal(MeasureOfAngle(CBF),40)"
   ],
   "goal_cdl": "Value(LengthOfLine(DF))",
-  "problem_answer": "2.623",
+  "problem_answer": "sqrt(130-126*cos(pi/9))",
   "theorem_seqs": [
-    "angle_addition(1,BAF,FAD)",
-    "angle_addition(1,CBF,FBA)",
-    "parallel_property_ipsilateral_internal_angle(1,BC,AD)",
-    "triangle_property_angle_sum(1,AFB)",
-    "vertical_angle(1,CFD,AFB)",
-    "parallelogram_property_opposite_line_equal(1,DCBA)",
-    "cosine_theorem(1,FDC)"
-  ],
-  "theorem_seq_dag": {
-    "angle_addition(1,BAF,FAD)": [],
-    "angle_addition(1,CBF,FBA)": [],
-    "parallel_property_ipsilateral_internal_angle(1,BC,AD)": [],
-    "triangle_property_angle_sum(1,AFB)": [],
-    "vertical_angle(1,CFD,AFB)": [],
-    "parallelogram_property_opposite_line_equal(1,DCBA)": [],
-    "cosine_theorem(1,FDC)": [],
-    "START": [
-      "angle_addition(1,BAF,FAD)",
-      "angle_addition(1,CBF,FBA)",
-      "parallel_property_ipsilateral_internal_angle(1,BC,AD)",
-      "triangle_property_angle_sum(1,AFB)",
-      "vertical_angle(1,CFD,AFB)",
-      "parallelogram_property_opposite_line_equal(1,DCBA)",
-      "cosine_theorem(1,FDC)"
-    ]
-  }
+    "parallelogram_property_diagonal_bisection",
+    "cosine_theorem(1,ADF)"
+  ]
 }
