@@ -650,12 +650,13 @@ class CDLParser(Parser):
     def parse_expr(problem, expr):
         """Parse expression to symbolic form."""
         expr = parse_expr(expr)
-        valid = True
+
         for sym in expr.free_symbols:
             if "_" not in str(sym):
-                if problem.get_sym_of_attr("Free", str(sym)) is None:
-                    valid = False
-                    break
+                saved_sym = problem.get_sym_of_attr("Free", str(sym))
+                if saved_sym is None:
+                    return None
+                expr = expr.subs(sym, saved_sym)
             else:
                 sym, para = str(sym).split("_", 1)
                 para = tuple(para.upper())
@@ -664,16 +665,14 @@ class CDLParser(Parser):
                 for attr_name in attr_GDL:
                     if attr_GDL[attr_name]["sym"] == sym:
                         in_GDL = True
-                        if problem.get_sym_of_attr(attr_name, para) is None:
-                            valid = False
-                        break
+                        saved_sym = problem.get_sym_of_attr(attr_name, para)
+                        if saved_sym is None:
+                            return None
+                        expr = expr.subs(sym, saved_sym)
                 if not in_GDL:
-                    valid = False
-                    break
+                    return None
 
-        if valid:
-            return expr
-        return None
+        return expr
 
 
 class InverseParserM2F:

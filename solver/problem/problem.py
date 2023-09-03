@@ -426,7 +426,7 @@ class Problem:
         :param skip_check: <bool>, set to True when you are confident that the format of item must be legal.
         :return: True or False.
         """
-        if not skip_check and not self.can_add(predicate, item, premise, theorem):
+        if not skip_check and not self.check(predicate, item, premise, theorem):
             return False
 
         added, _id = self.condition.add(predicate, item, tuple(premise), theorem)
@@ -475,7 +475,7 @@ class Problem:
 
         return False
 
-    def can_add(self, predicate, item, premise=None, theorem=None):
+    def check(self, predicate, item, premise=None, theorem=None):
         """
         EE check and FV check.
         :param predicate: Construction, Entity, Relation or Equation.
@@ -496,7 +496,7 @@ class Problem:
             warnings.warn(w_msg)
             return False
 
-        return not self.condition.has(predicate, item)
+        return True
 
     def ee_check(self, predicate, item):
         """Entity Existence check."""

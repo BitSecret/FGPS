@@ -340,7 +340,8 @@ class EquationKiller:
             real_results = {}  # real_number
             for sym in solved:  # filter out real number solution
                 if len(solved[sym].free_symbols) == 0:
-                    real_results[sym] = number_round(solved[sym])
+                    # real_results[sym] = number_round(solved[sym])
+                    real_results[sym] = solved[sym]
             return real_results
 
     @staticmethod
