@@ -22,7 +22,16 @@
   "goal_cdl": "Value(LengthOfLine(XY))",
   "problem_answer": "21",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(YWX,YZW)",
-    "mirror_congruent_triangle_property_line_equal(WXY,WYZ)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(1,YWX,YZW)",
+    "mirror_congruent_triangle_property_line_equal(1,WXY,WYZ)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(1,YWX,YZW)": [
+      "mirror_congruent_triangle_property_line_equal(1,WXY,WYZ)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,WXY,WYZ)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(1,YWX,YZW)"
+    ]
+  }
 }

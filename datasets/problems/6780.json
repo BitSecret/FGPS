@@ -21,9 +21,22 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "0.8944271909999159",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(CAB)",
-    "right_triangle_property_pythagorean(CAB)",
-    "cosine_theorem(BCA)",
-    "sine_theorem(ABD)"
-  ]
+    "right_triangle_judgment_angle(1,CAB)",
+    "right_triangle_property_pythagorean(1,CAB)",
+    "cosine_theorem(1,BCA)",
+    "sine_theorem(1,ABD)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,CAB)": [
+      "right_triangle_property_pythagorean(1,CAB)"
+    ],
+    "right_triangle_property_pythagorean(1,CAB)": [],
+    "cosine_theorem(1,BCA)": [],
+    "sine_theorem(1,ABD)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,CAB)",
+      "cosine_theorem(1,BCA)",
+      "sine_theorem(1,ABD)"
+    ]
+  }
 }

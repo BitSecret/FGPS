@@ -21,8 +21,19 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(ABD)))",
   "problem_answer": "4/5",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BDA)",
-    "right_triangle_property_pythagorean(BDA)",
-    "sine_theorem(ABD)"
-  ]
+    "right_triangle_judgment_angle(1,BDA)",
+    "right_triangle_property_pythagorean(1,BDA)",
+    "sine_theorem(1,ABD)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BDA)": [
+      "right_triangle_property_pythagorean(1,BDA)"
+    ],
+    "right_triangle_property_pythagorean(1,BDA)": [],
+    "sine_theorem(1,ABD)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BDA)",
+      "sine_theorem(1,ABD)"
+    ]
+  }
 }

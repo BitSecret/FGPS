@@ -23,11 +23,28 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(BOA,O)",
-    "diameter_of_circle_property_right_angle(BDA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "line_addition(BO,OA)",
-    "sine_theorem(ABD)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,BOA,O)",
+    "diameter_of_circle_property_right_angle(1,BDA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "line_addition(1,BO,OA)",
+    "sine_theorem(1,ABD)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,BOA,O)": [
+      "diameter_of_circle_property_right_angle(1,BDA,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,BDA,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "line_addition(1,BO,OA)": [],
+    "sine_theorem(1,ABD)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,BOA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "line_addition(1,BO,OA)",
+      "sine_theorem(1,ABD)"
+    ]
+  }
 }

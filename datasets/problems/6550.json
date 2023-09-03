@@ -34,21 +34,66 @@
   "goal_cdl": "Value(RadiusOfCircle(O))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(BA,O,O)",
-    "tangent_of_circle_property_perpendicular(CD,O,O)",
-    "parallel_judgment_ipsilateral_internal_angle(AB,DH)",
-    "parallel_judgment_ipsilateral_internal_angle(DA,HB)",
-    "parallelogram_judgment_parallel_and_parallel(BADH)",
-    "parallelogram_property_opposite_line_equal(BADH)",
-    "line_addition(CH,HD)",
-    "tangent_of_circle_property_length_equal(BA,BE,O)",
-    "tangent_of_circle_property_length_equal(CE,CD,O)",
-    "line_addition(BE,EC)",
-    "adjacent_complementary_angle(DHB,BHC)",
-    "right_triangle_judgment_angle(BHC)",
-    "right_triangle_property_pythagorean(BHC)",
-    "parallelogram_property_opposite_line_equal(ADHB)",
-    "diameter_of_circle_property_length_equal(AD,O)",
-    "circle_property_length_of_radius_and_diameter(O)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,BA,O,O)",
+    "tangent_of_circle_property_perpendicular(1,CD,O,O)",
+    "parallel_judgment_ipsilateral_internal_angle(1,AB,DH)",
+    "parallel_judgment_ipsilateral_internal_angle(1,DA,HB)",
+    "parallelogram_judgment_parallel_and_parallel(1,BADH)",
+    "parallelogram_property_opposite_line_equal(1,BADH)",
+    "line_addition(1,CH,HD)",
+    "tangent_of_circle_property_length_equal(1,BA,BE,O)",
+    "tangent_of_circle_property_length_equal(1,CE,CD,O)",
+    "line_addition(1,BE,EC)",
+    "adjacent_complementary_angle(1,DHB,BHC)",
+    "right_triangle_judgment_angle(1,BHC)",
+    "right_triangle_property_pythagorean(1,BHC)",
+    "parallelogram_property_opposite_line_equal(1,ADHB)",
+    "diameter_of_circle_property_length_equal(1,AD,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,BA,O,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,AB,DH)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,CD,O,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,AB,DH)",
+      "parallel_judgment_ipsilateral_internal_angle(1,DA,HB)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,AB,DH)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BADH)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,DA,HB)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BADH)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,BADH)": [
+      "parallelogram_property_opposite_line_equal(1,BADH)",
+      "parallelogram_property_opposite_line_equal(1,ADHB)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BADH)": [],
+    "line_addition(1,CH,HD)": [],
+    "tangent_of_circle_property_length_equal(1,BA,BE,O)": [],
+    "tangent_of_circle_property_length_equal(1,CE,CD,O)": [],
+    "line_addition(1,BE,EC)": [],
+    "adjacent_complementary_angle(1,DHB,BHC)": [
+      "right_triangle_judgment_angle(1,BHC)"
+    ],
+    "right_triangle_judgment_angle(1,BHC)": [
+      "right_triangle_property_pythagorean(1,BHC)"
+    ],
+    "right_triangle_property_pythagorean(1,BHC)": [],
+    "parallelogram_property_opposite_line_equal(1,ADHB)": [],
+    "diameter_of_circle_property_length_equal(1,AD,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,BA,O,O)",
+      "tangent_of_circle_property_perpendicular(1,CD,O,O)",
+      "line_addition(1,CH,HD)",
+      "tangent_of_circle_property_length_equal(1,BA,BE,O)",
+      "tangent_of_circle_property_length_equal(1,CE,CD,O)",
+      "line_addition(1,BE,EC)",
+      "adjacent_complementary_angle(1,DHB,BHC)",
+      "diameter_of_circle_property_length_equal(1,AD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  }
 }

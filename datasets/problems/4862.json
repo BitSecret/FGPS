@@ -31,9 +31,23 @@
   "goal_cdl": "Value(LengthOfLine(OA))",
   "problem_answer": "sqrt(5)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AC,O,O)",
-    "line_addition(AC,CB)",
-    "right_triangle_judgment_angle(ACO)",
-    "right_triangle_property_pythagorean(ACO)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+    "line_addition(1,AC,CB)",
+    "right_triangle_judgment_angle(1,ACO)",
+    "right_triangle_property_pythagorean(1,ACO)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)": [
+      "right_triangle_judgment_angle(1,ACO)"
+    ],
+    "line_addition(1,AC,CB)": [],
+    "right_triangle_judgment_angle(1,ACO)": [
+      "right_triangle_property_pythagorean(1,ACO)"
+    ],
+    "right_triangle_property_pythagorean(1,ACO)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+      "line_addition(1,AC,CB)"
+    ]
+  }
 }

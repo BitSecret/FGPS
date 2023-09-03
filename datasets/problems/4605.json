@@ -42,22 +42,77 @@
   "goal_cdl": "Value(RadiusOfCircle(O))",
   "problem_answer": "2*sqrt(5)",
   "theorem_seqs": [
-    "altitude_of_triangle_judgment(BE,BAC)",
-    "altitude_of_triangle_judgment(AD,ACB)",
-    "orthocenter_of_triangle_judgment_intersection(M,CBA,D,E)",
-    "orthocenter_of_triangle_property_intersection(M,CBA,N)",
-    "diameter_of_circle_judgment_pass_centre(AOH,O)",
-    "diameter_of_circle_property_right_angle(HBA,O)",
-    "diameter_of_circle_property_right_angle(ACH,O)",
-    "parallel_judgment_ipsilateral_internal_angle(BH,NC)",
-    "parallel_judgment_ipsilateral_internal_angle(EB,CH)",
-    "parallel_property_collinear_extend(EB,CH,M)",
-    "parallel_property_collinear_extend(CN,HB,M)",
-    "parallelogram_judgment_parallel_and_parallel(BMCH)",
-    "parallelogram_property_opposite_line_equal(BMCH)",
-    "right_triangle_judgment_angle(ACH)",
-    "right_triangle_property_pythagorean(ACH)",
-    "diameter_of_circle_property_length_equal(AH,O)",
-    "circle_property_length_of_radius_and_diameter(O)"
-  ]
+    "altitude_of_triangle_judgment(1,BE,BAC)",
+    "altitude_of_triangle_judgment(1,AD,ACB)",
+    "orthocenter_of_triangle_judgment_intersection(1,M,CBA,D,E)",
+    "orthocenter_of_triangle_property_intersection(1,M,CBA,N)",
+    "diameter_of_circle_judgment_pass_centre(1,AOH,O)",
+    "diameter_of_circle_property_right_angle(1,HBA,O)",
+    "diameter_of_circle_property_right_angle(1,ACH,O)",
+    "parallel_judgment_ipsilateral_internal_angle(1,BH,NC)",
+    "parallel_judgment_ipsilateral_internal_angle(1,EB,CH)",
+    "parallel_property_collinear_extend(3,EB,CH,M)",
+    "parallel_property_collinear_extend(3,CN,HB,M)",
+    "parallelogram_judgment_parallel_and_parallel(1,BMCH)",
+    "parallelogram_property_opposite_line_equal(1,BMCH)",
+    "right_triangle_judgment_angle(1,ACH)",
+    "right_triangle_property_pythagorean(1,ACH)",
+    "diameter_of_circle_property_length_equal(1,AH,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)"
+  ],
+  "theorem_seq_dag": {
+    "altitude_of_triangle_judgment(1,BE,BAC)": [
+      "orthocenter_of_triangle_judgment_intersection(1,M,CBA,D,E)",
+      "parallel_judgment_ipsilateral_internal_angle(1,EB,CH)"
+    ],
+    "altitude_of_triangle_judgment(1,AD,ACB)": [
+      "orthocenter_of_triangle_judgment_intersection(1,M,CBA,D,E)"
+    ],
+    "orthocenter_of_triangle_judgment_intersection(1,M,CBA,D,E)": [
+      "orthocenter_of_triangle_property_intersection(1,M,CBA,N)"
+    ],
+    "orthocenter_of_triangle_property_intersection(1,M,CBA,N)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,BH,NC)"
+    ],
+    "diameter_of_circle_judgment_pass_centre(1,AOH,O)": [
+      "diameter_of_circle_property_right_angle(1,HBA,O)",
+      "diameter_of_circle_property_length_equal(1,AH,O)",
+      "diameter_of_circle_property_right_angle(1,ACH,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,HBA,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,BH,NC)"
+    ],
+    "diameter_of_circle_property_right_angle(1,ACH,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EB,CH)",
+      "right_triangle_judgment_angle(1,ACH)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,BH,NC)": [
+      "parallel_property_collinear_extend(3,CN,HB,M)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,EB,CH)": [
+      "parallel_property_collinear_extend(3,EB,CH,M)"
+    ],
+    "parallel_property_collinear_extend(3,EB,CH,M)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BMCH)"
+    ],
+    "parallel_property_collinear_extend(3,CN,HB,M)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BMCH)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,BMCH)": [
+      "parallelogram_property_opposite_line_equal(1,BMCH)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BMCH)": [],
+    "right_triangle_judgment_angle(1,ACH)": [
+      "right_triangle_property_pythagorean(1,ACH)"
+    ],
+    "right_triangle_property_pythagorean(1,ACH)": [],
+    "diameter_of_circle_property_length_equal(1,AH,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "START": [
+      "altitude_of_triangle_judgment(1,BE,BAC)",
+      "altitude_of_triangle_judgment(1,AD,ACB)",
+      "diameter_of_circle_judgment_pass_centre(1,AOH,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  }
 }

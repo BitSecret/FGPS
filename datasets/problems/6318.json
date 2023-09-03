@@ -26,15 +26,49 @@
   "goal_cdl": "Value(MeasureOfAngle(CED))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "line_addition(AO,OC)",
-    "line_addition(BO,OD)",
-    "vertical_angle(AOD,COB)",
-    "rectangle_property_diagonal_equal(ABCD)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "isosceles_triangle_judgment_line_equal(OBC)",
-    "isosceles_triangle_property_angle_equal(OBC)",
-    "triangle_property_angle_sum(BCO)",
-    "parallel_property_corresponding_angle(CA,ED,B)"
-  ]
+    "line_addition(1,AO,OC)",
+    "line_addition(1,BO,OD)",
+    "vertical_angle(1,AOD,COB)",
+    "rectangle_property_diagonal_equal(1,ABCD)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBC)",
+    "isosceles_triangle_property_angle_equal(1,OBC)",
+    "triangle_property_angle_sum(1,BCO)",
+    "parallel_property_corresponding_angle(1,CA,ED,B)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AO,OC)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "line_addition(1,BO,OD)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "vertical_angle(1,AOD,COB)": [],
+    "rectangle_property_diagonal_equal(1,ABCD)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBC)": [
+      "isosceles_triangle_property_angle_equal(1,OBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBC)": [],
+    "triangle_property_angle_sum(1,BCO)": [],
+    "parallel_property_corresponding_angle(1,CA,ED,B)": [],
+    "START": [
+      "line_addition(1,AO,OC)",
+      "line_addition(1,BO,OD)",
+      "vertical_angle(1,AOD,COB)",
+      "rectangle_property_diagonal_equal(1,ABCD)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "triangle_property_angle_sum(1,BCO)",
+      "parallel_property_corresponding_angle(1,CA,ED,B)"
+    ]
+  }
 }

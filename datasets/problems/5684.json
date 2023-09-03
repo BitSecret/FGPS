@@ -26,10 +26,27 @@
   "goal_cdl": "Value(Div(LengthOfLine(EN),LengthOfLine(BM)))",
   "problem_answer": "1/2",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_sas(ADE,ABC)",
-    "mirror_similar_triangle_property_angle_equal(EAD,BCA)",
-    "mirror_similar_triangle_judgment_aa(NEA,MAB)",
-    "mirror_similar_triangle_property_line_ratio(NEA,MAB)",
-    "mirror_similar_triangle_property_line_ratio(ANE,ABM)"
-  ]
+    "mirror_similar_triangle_judgment_sas(1,ADE,ABC)",
+    "mirror_similar_triangle_property_angle_equal(1,EAD,BCA)",
+    "mirror_similar_triangle_judgment_aa(1,NEA,MAB)",
+    "mirror_similar_triangle_property_line_ratio(1,NEA,MAB)",
+    "mirror_similar_triangle_property_line_ratio(1,ANE,ABM)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_sas(1,ADE,ABC)": [
+      "mirror_similar_triangle_property_angle_equal(1,EAD,BCA)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,EAD,BCA)": [
+      "mirror_similar_triangle_judgment_aa(1,NEA,MAB)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,NEA,MAB)": [
+      "mirror_similar_triangle_property_line_ratio(1,NEA,MAB)",
+      "mirror_similar_triangle_property_line_ratio(1,ANE,ABM)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,NEA,MAB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ANE,ABM)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_sas(1,ADE,ABC)"
+    ]
+  }
 }

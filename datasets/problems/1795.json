@@ -29,8 +29,20 @@
   "goal_cdl": "Value(MeasureOfAngle(REU))",
   "problem_answer": "124",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(VC,UD,T)",
-    "parallel_property_collinear_extend(DU,TV,E)",
-    "parallel_property_corresponding_angle(EU,TV,R)"
-  ]
+    "parallel_property_collinear_extend(3,VC,UD,T)",
+    "parallel_property_collinear_extend(3,DU,TV,E)",
+    "parallel_property_corresponding_angle(1,EU,TV,R)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,VC,UD,T)": [
+      "parallel_property_collinear_extend(3,DU,TV,E)"
+    ],
+    "parallel_property_collinear_extend(3,DU,TV,E)": [
+      "parallel_property_corresponding_angle(1,EU,TV,R)"
+    ],
+    "parallel_property_corresponding_angle(1,EU,TV,R)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,VC,UD,T)"
+    ]
+  }
 }

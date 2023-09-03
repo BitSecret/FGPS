@@ -25,13 +25,37 @@
   "goal_cdl": "Value(MeasureOfAngle(TCB))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AT,O,O)",
-    "triangle_property_angle_sum(TOA)",
-    "adjacent_complementary_angle(COT,TOA)",
-    "radius_of_circle_property_length_equal(OT,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(OTC)",
-    "isosceles_triangle_property_angle_equal(OTC)",
-    "triangle_property_angle_sum(OTC)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AT,O,O)",
+    "triangle_property_angle_sum(1,TOA)",
+    "adjacent_complementary_angle(1,COT,TOA)",
+    "radius_of_circle_property_length_equal(1,OT,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,OTC)",
+    "isosceles_triangle_property_angle_equal(1,OTC)",
+    "triangle_property_angle_sum(1,OTC)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AT,O,O)": [],
+    "triangle_property_angle_sum(1,TOA)": [],
+    "adjacent_complementary_angle(1,COT,TOA)": [],
+    "radius_of_circle_property_length_equal(1,OT,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OTC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OTC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OTC)": [
+      "isosceles_triangle_property_angle_equal(1,OTC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OTC)": [],
+    "triangle_property_angle_sum(1,OTC)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AT,O,O)",
+      "triangle_property_angle_sum(1,TOA)",
+      "adjacent_complementary_angle(1,COT,TOA)",
+      "radius_of_circle_property_length_equal(1,OT,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "triangle_property_angle_sum(1,OTC)"
+    ]
+  }
 }

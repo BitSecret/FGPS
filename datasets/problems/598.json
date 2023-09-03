@@ -23,8 +23,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "45",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(DBC)",
-    "isosceles_triangle_property_angle_equal(DBC)",
-    "triangle_property_angle_sum(DBC)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,DBC)",
+    "isosceles_triangle_property_angle_equal(1,DBC)",
+    "triangle_property_angle_sum(1,DBC)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,DBC)": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DBC)": [],
+    "triangle_property_angle_sum(1,DBC)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "triangle_property_angle_sum(1,DBC)"
+    ]
+  }
 }

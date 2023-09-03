@@ -26,16 +26,52 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "circle_property_length_of_radius_and_diameter(O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "adjacent_complementary_angle(ACO,OCB)",
-    "mirror_congruent_triangle_judgment_hl(ACO,BOC)",
-    "mirror_congruent_triangle_property_line_equal(OAC,OCB)",
-    "line_addition(AC,CB)",
-    "right_triangle_judgment_angle(OCB)",
-    "right_triangle_property_pythagorean(OCB)",
-    "line_addition(OC,CD)"
-  ]
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "adjacent_complementary_angle(1,ACO,OCB)",
+    "mirror_congruent_triangle_judgment_hl(1,ACO,BOC)",
+    "mirror_congruent_triangle_property_line_equal(1,OAC,OCB)",
+    "line_addition(1,AC,CB)",
+    "right_triangle_judgment_angle(1,OCB)",
+    "right_triangle_property_pythagorean(1,OCB)",
+    "line_addition(1,OC,CD)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_length_of_radius_and_diameter(1,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,ACO,BOC)",
+      "mirror_congruent_triangle_judgment_hl(1,ACO,BOC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,ACO,BOC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,ACO,BOC)"
+    ],
+    "adjacent_complementary_angle(1,ACO,OCB)": [
+      "mirror_congruent_triangle_judgment_hl(1,ACO,BOC)",
+      "right_triangle_judgment_angle(1,OCB)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,ACO,BOC)": [
+      "mirror_congruent_triangle_property_line_equal(1,OAC,OCB)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,OAC,OCB)": [],
+    "line_addition(1,AC,CB)": [],
+    "right_triangle_judgment_angle(1,OCB)": [
+      "right_triangle_property_pythagorean(1,OCB)"
+    ],
+    "right_triangle_property_pythagorean(1,OCB)": [],
+    "line_addition(1,OC,CD)": [],
+    "START": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "adjacent_complementary_angle(1,ACO,OCB)",
+      "line_addition(1,AC,CB)",
+      "line_addition(1,OC,CD)"
+    ]
+  }
 }

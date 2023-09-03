@@ -27,14 +27,38 @@
   "goal_cdl": "Value(Sub(AreaOfSector(XEA),AreaOfSector(YFC)))",
   "problem_answer": "50*pi/9",
   "theorem_seqs": [
-    "round_arc(XAE,XEA)",
-    "arc_property_center_angle(XEA,B)",
-    "arc_property_center_angle(YFC,B)",
-    "radius_of_circle_property_length_equal(BE,X)",
-    "circle_property_length_of_radius_and_diameter(X)",
-    "line_addition(EF,FB)",
-    "radius_of_circle_property_length_equal(BF,Y)",
-    "sector_area_formula(XEA)",
-    "sector_area_formula(YFC)"
-  ]
+    "round_arc(1,XAE,XEA)",
+    "arc_property_center_angle(1,XEA,B)",
+    "arc_property_center_angle(1,YFC,B)",
+    "radius_of_circle_property_length_equal(1,BE,X)",
+    "circle_property_length_of_radius_and_diameter(1,X)",
+    "line_addition(1,EF,FB)",
+    "radius_of_circle_property_length_equal(1,BF,Y)",
+    "sector_area_formula(1,XEA)",
+    "sector_area_formula(1,YFC)"
+  ],
+  "theorem_seq_dag": {
+    "round_arc(1,XAE,XEA)": [],
+    "arc_property_center_angle(1,XEA,B)": [],
+    "arc_property_center_angle(1,YFC,B)": [],
+    "radius_of_circle_property_length_equal(1,BE,X)": [],
+    "circle_property_length_of_radius_and_diameter(1,X)": [
+      "solve_eq_25)"
+    ],
+    "line_addition(1,EF,FB)": [],
+    "radius_of_circle_property_length_equal(1,BF,Y)": [],
+    "sector_area_formula(1,XEA)": [],
+    "sector_area_formula(1,YFC)": [],
+    "START": [
+      "round_arc(1,XAE,XEA)",
+      "arc_property_center_angle(1,XEA,B)",
+      "arc_property_center_angle(1,YFC,B)",
+      "radius_of_circle_property_length_equal(1,BE,X)",
+      "circle_property_length_of_radius_and_diameter(1,X)",
+      "line_addition(1,EF,FB)",
+      "radius_of_circle_property_length_equal(1,BF,Y)",
+      "sector_area_formula(1,XEA)",
+      "sector_area_formula(1,YFC)"
+    ]
+  }
 }

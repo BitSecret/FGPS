@@ -19,7 +19,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "2*sqrt(78)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BAC)",
-    "right_triangle_property_pythagorean(BAC)"
-  ]
+    "right_triangle_judgment_angle(1,BAC)",
+    "right_triangle_property_pythagorean(1,BAC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BAC)": [
+      "right_triangle_property_pythagorean(1,BAC)"
+    ],
+    "right_triangle_property_pythagorean(1,BAC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BAC)"
+    ]
+  }
 }

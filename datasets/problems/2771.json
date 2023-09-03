@@ -23,10 +23,28 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "14.5",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(GJ,FK,H)",
-    "parallel_property_corresponding_angle(KF,JG,H)",
-    "similar_triangle_judgment_aa(HGJ,HFK)",
-    "similar_triangle_property_line_ratio(JHG,KHF)",
-    "similar_triangle_property_line_ratio(GJH,FKH)"
-  ]
+    "parallel_property_corresponding_angle(1,GJ,FK,H)",
+    "parallel_property_corresponding_angle(2,KF,JG,H)",
+    "similar_triangle_judgment_aa(1,HGJ,HFK)",
+    "similar_triangle_property_line_ratio(1,JHG,KHF)",
+    "similar_triangle_property_line_ratio(1,GJH,FKH)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,GJ,FK,H)": [
+      "similar_triangle_judgment_aa(1,HGJ,HFK)"
+    ],
+    "parallel_property_corresponding_angle(2,KF,JG,H)": [
+      "similar_triangle_judgment_aa(1,HGJ,HFK)"
+    ],
+    "similar_triangle_judgment_aa(1,HGJ,HFK)": [
+      "similar_triangle_property_line_ratio(1,GJH,FKH)",
+      "similar_triangle_property_line_ratio(1,JHG,KHF)"
+    ],
+    "similar_triangle_property_line_ratio(1,JHG,KHF)": [],
+    "similar_triangle_property_line_ratio(1,GJH,FKH)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,GJ,FK,H)",
+      "parallel_property_corresponding_angle(2,KF,JG,H)"
+    ]
+  }
 }

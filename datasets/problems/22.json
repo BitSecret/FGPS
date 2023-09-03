@@ -28,8 +28,20 @@
   "goal_cdl": "Value(MeasureOfAngle(HNJ))",
   "problem_answer": "79",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(JA,NF,K)",
-    "parallel_property_collinear_extend(FN,JK,H)",
-    "parallel_property_ipsilateral_internal_angle(NH,JK)"
-  ]
+    "parallel_property_collinear_extend(1,JA,NF,K)",
+    "parallel_property_collinear_extend(2,FN,JK,H)",
+    "parallel_property_ipsilateral_internal_angle(1,NH,JK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,JA,NF,K)": [
+      "parallel_property_collinear_extend(2,FN,JK,H)"
+    ],
+    "parallel_property_collinear_extend(2,FN,JK,H)": [
+      "parallel_property_ipsilateral_internal_angle(1,NH,JK)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,NH,JK)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,JA,NF,K)"
+    ]
+  }
 }

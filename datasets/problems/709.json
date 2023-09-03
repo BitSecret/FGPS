@@ -27,13 +27,35 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "68",
   "theorem_seqs": [
-    "adjacent_complementary_angle(DFC,CFE)",
-    "right_triangle_judgment_angle(DFC)",
-    "circle_property_chord_perpendicular_bisect_chord(C,CF,DE)",
-    "line_addition(EF,FD)",
-    "right_triangle_property_pythagorean(DFC)",
-    "radius_of_circle_property_length_equal(CD,C)",
-    "circle_property_length_of_radius_and_diameter(C)",
-    "diameter_of_circle_property_length_equal(AB,C)"
-  ]
+    "adjacent_complementary_angle(1,DFC,CFE)",
+    "right_triangle_judgment_angle(1,DFC)",
+    "circle_property_chord_perpendicular_bisect_chord(1,C,CF,DE)",
+    "line_addition(1,EF,FD)",
+    "right_triangle_property_pythagorean(1,DFC)",
+    "radius_of_circle_property_length_equal(1,CD,C)",
+    "circle_property_length_of_radius_and_diameter(1,C)",
+    "diameter_of_circle_property_length_equal(1,AB,C)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,DFC,CFE)": [
+      "right_triangle_judgment_angle(1,DFC)",
+      "circle_property_chord_perpendicular_bisect_chord(1,C,CF,DE)"
+    ],
+    "right_triangle_judgment_angle(1,DFC)": [
+      "right_triangle_property_pythagorean(1,DFC)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,C,CF,DE)": [],
+    "line_addition(1,EF,FD)": [],
+    "right_triangle_property_pythagorean(1,DFC)": [],
+    "radius_of_circle_property_length_equal(1,CD,C)": [],
+    "circle_property_length_of_radius_and_diameter(1,C)": [],
+    "diameter_of_circle_property_length_equal(1,AB,C)": [],
+    "START": [
+      "adjacent_complementary_angle(1,DFC,CFE)",
+      "line_addition(1,EF,FD)",
+      "radius_of_circle_property_length_equal(1,CD,C)",
+      "circle_property_length_of_radius_and_diameter(1,C)",
+      "diameter_of_circle_property_length_equal(1,AB,C)"
+    ]
+  }
 }

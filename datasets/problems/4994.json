@@ -22,9 +22,28 @@
   "goal_cdl": "Value(LengthOfLine(BE))",
   "problem_answer": "3/2",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AD,EC)",
-    "similar_triangle_judgment_aa(BDA,BEC)",
-    "similar_triangle_property_line_ratio(DAB,ECB)",
-    "similar_triangle_property_line_ratio(ABD,CBE)"
-  ]
+    "parallel_property_alternate_interior_angle(1,AD,EC)",
+    "parallel_property_alternate_interior_angle(2,AD,EC)",
+    "similar_triangle_judgment_aa(1,BDA,BEC)",
+    "similar_triangle_property_line_ratio(1,DAB,ECB)",
+    "similar_triangle_property_line_ratio(1,ABD,CBE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,AD,EC)": [
+      "similar_triangle_judgment_aa(1,BDA,BEC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AD,EC)": [
+      "similar_triangle_judgment_aa(1,BDA,BEC)"
+    ],
+    "similar_triangle_judgment_aa(1,BDA,BEC)": [
+      "similar_triangle_property_line_ratio(1,DAB,ECB)",
+      "similar_triangle_property_line_ratio(1,ABD,CBE)"
+    ],
+    "similar_triangle_property_line_ratio(1,DAB,ECB)": [],
+    "similar_triangle_property_line_ratio(1,ABD,CBE)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,AD,EC)",
+      "parallel_property_alternate_interior_angle(2,AD,EC)"
+    ]
+  }
 }

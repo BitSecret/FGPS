@@ -21,11 +21,27 @@
   "goal_cdl": "Value(Sub(AreaOfSector(BAC),AreaOfTriangle(BAC)))",
   "problem_answer": "22.110654574957625",
   "theorem_seqs": [
-    "round_angle(CBA,ABC)",
-    "radius_of_circle_property_length_equal(BC,B)",
-    "radius_of_circle_property_length_equal(BA,B)",
-    "triangle_area_formula_sine(BAC)",
-    "arc_property_center_angle(BAC,B)",
-    "sector_area_formula(BAC)"
-  ]
+    "round_angle(1,CBA,ABC)",
+    "radius_of_circle_property_length_equal(1,BC,B)",
+    "radius_of_circle_property_length_equal(1,BA,B)",
+    "triangle_area_formula_sine(1,BAC)",
+    "arc_property_center_angle(1,BAC,B)",
+    "sector_area_formula(1,BAC)"
+  ],
+  "theorem_seq_dag": {
+    "round_angle(1,CBA,ABC)": [],
+    "radius_of_circle_property_length_equal(1,BC,B)": [],
+    "radius_of_circle_property_length_equal(1,BA,B)": [],
+    "triangle_area_formula_sine(1,BAC)": [],
+    "arc_property_center_angle(1,BAC,B)": [],
+    "sector_area_formula(1,BAC)": [],
+    "START": [
+      "round_angle(1,CBA,ABC)",
+      "radius_of_circle_property_length_equal(1,BC,B)",
+      "radius_of_circle_property_length_equal(1,BA,B)",
+      "triangle_area_formula_sine(1,BAC)",
+      "arc_property_center_angle(1,BAC,B)",
+      "sector_area_formula(1,BAC)"
+    ]
+  }
 }

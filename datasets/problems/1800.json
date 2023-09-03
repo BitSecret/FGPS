@@ -24,12 +24,32 @@
   "goal_cdl": "Value(Sub(AreaOfCircle(B),AreaOfQuadrilateral(DEAC)))",
   "problem_answer": "68.71",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(DEA)",
-    "right_triangle_property_pythagorean(DEA)",
-    "diameter_of_circle_judgment_right_angle(DEA,B)",
-    "diameter_of_circle_property_length_equal(DA,B)",
-    "circle_property_length_of_radius_and_diameter(B)",
-    "parallelogram_area_formula_sine(DEAC)",
-    "circle_area_formula(B)"
-  ]
+    "right_triangle_judgment_angle(1,DEA)",
+    "right_triangle_property_pythagorean(1,DEA)",
+    "diameter_of_circle_judgment_right_angle(1,DEA,B)",
+    "diameter_of_circle_property_length_equal(1,DA,B)",
+    "circle_property_length_of_radius_and_diameter(1,B)",
+    "parallelogram_area_formula_sine(1,DEAC)",
+    "circle_area_formula(1,B)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,DEA)": [
+      "right_triangle_property_pythagorean(1,DEA)"
+    ],
+    "right_triangle_property_pythagorean(1,DEA)": [],
+    "diameter_of_circle_judgment_right_angle(1,DEA,B)": [
+      "diameter_of_circle_property_length_equal(1,DA,B)"
+    ],
+    "diameter_of_circle_property_length_equal(1,DA,B)": [],
+    "circle_property_length_of_radius_and_diameter(1,B)": [],
+    "parallelogram_area_formula_sine(1,DEAC)": [],
+    "circle_area_formula(1,B)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,DEA)",
+      "diameter_of_circle_judgment_right_angle(1,DEA,B)",
+      "circle_property_length_of_radius_and_diameter(1,B)",
+      "parallelogram_area_formula_sine(1,DEAC)",
+      "circle_area_formula(1,B)"
+    ]
+  }
 }

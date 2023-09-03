@@ -25,9 +25,21 @@
   "goal_cdl": "Value(MeasureOfAngle(ECD))",
   "problem_answer": "46",
   "theorem_seqs": [
-    "adjacent_complementary_angle(HAB,BAE)",
-    "parallel_property_alternate_interior_angle(AB,ME)",
-    "parallel_property_alternate_interior_angle(ME,CD)",
-    "angle_addition(CEM,MEA)"
-  ]
+    "adjacent_complementary_angle(1,HAB,BAE)",
+    "parallel_property_alternate_interior_angle(1,AB,ME)",
+    "parallel_property_alternate_interior_angle(2,ME,CD)",
+    "angle_addition(1,CEM,MEA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,HAB,BAE)": [],
+    "parallel_property_alternate_interior_angle(1,AB,ME)": [],
+    "parallel_property_alternate_interior_angle(2,ME,CD)": [],
+    "angle_addition(1,CEM,MEA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,HAB,BAE)",
+      "parallel_property_alternate_interior_angle(1,AB,ME)",
+      "parallel_property_alternate_interior_angle(2,ME,CD)",
+      "angle_addition(1,CEM,MEA)"
+    ]
+  }
 }

@@ -24,16 +24,49 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "3*sqrt(13)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BDA,ADC)",
-    "line_addition(CD,DB)",
-    "angle_addition(CAD,DAB)",
-    "triangle_property_angle_sum(DAB)",
-    "mirror_similar_triangle_judgment_aa(ADC,BCA)",
-    "similar_triangle_judgment_aa(CAD,ABD)",
-    "mirror_similar_triangle_property_line_ratio(ADC,BCA)",
-    "mirror_similar_triangle_property_line_ratio(DCA,ABC)",
-    "mirror_similar_triangle_property_line_ratio(CAD,CAB)",
-    "similar_triangle_property_line_ratio(CAD,ABD)",
-    "similar_triangle_property_line_ratio(ADC,BDA)"
-  ]
+    "adjacent_complementary_angle(1,BDA,ADC)",
+    "line_addition(1,CD,DB)",
+    "angle_addition(1,CAD,DAB)",
+    "triangle_property_angle_sum(1,DAB)",
+    "mirror_similar_triangle_judgment_aa(1,ADC,BCA)",
+    "similar_triangle_judgment_aa(1,CAD,ABD)",
+    "mirror_similar_triangle_property_line_ratio(1,ADC,BCA)",
+    "mirror_similar_triangle_property_line_ratio(1,DCA,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,CAD,CAB)",
+    "similar_triangle_property_line_ratio(1,CAD,ABD)",
+    "similar_triangle_property_line_ratio(1,ADC,BDA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BDA,ADC)": [
+      "mirror_similar_triangle_judgment_aa(1,ADC,BCA)",
+      "similar_triangle_judgment_aa(1,CAD,ABD)"
+    ],
+    "line_addition(1,CD,DB)": [],
+    "angle_addition(1,CAD,DAB)": [
+      "similar_triangle_judgment_aa(1,CAD,ABD)"
+    ],
+    "triangle_property_angle_sum(1,DAB)": [
+      "similar_triangle_judgment_aa(1,CAD,ABD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ADC,BCA)": [
+      "mirror_similar_triangle_property_line_ratio(1,ADC,BCA)",
+      "mirror_similar_triangle_property_line_ratio(1,DCA,ABC)",
+      "mirror_similar_triangle_property_line_ratio(1,CAD,CAB)"
+    ],
+    "similar_triangle_judgment_aa(1,CAD,ABD)": [
+      "similar_triangle_property_line_ratio(1,CAD,ABD)",
+      "similar_triangle_property_line_ratio(1,ADC,BDA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ADC,BCA)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DCA,ABC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CAD,CAB)": [],
+    "similar_triangle_property_line_ratio(1,CAD,ABD)": [],
+    "similar_triangle_property_line_ratio(1,ADC,BDA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BDA,ADC)",
+      "line_addition(1,CD,DB)",
+      "angle_addition(1,CAD,DAB)",
+      "triangle_property_angle_sum(1,DAB)"
+    ]
+  }
 }

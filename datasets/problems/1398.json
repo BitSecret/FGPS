@@ -23,8 +23,20 @@
   "goal_cdl": "Value(LengthOfLine(RS))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "adjacent_complementary_angle(SWR,RWT)",
-    "right_triangle_judgment_angle(SWR)",
-    "right_triangle_property_pythagorean(SWR)"
-  ]
+    "adjacent_complementary_angle(1,SWR,RWT)",
+    "right_triangle_judgment_angle(1,SWR)",
+    "right_triangle_property_pythagorean(1,SWR)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,SWR,RWT)": [
+      "right_triangle_judgment_angle(1,SWR)"
+    ],
+    "right_triangle_judgment_angle(1,SWR)": [
+      "right_triangle_property_pythagorean(1,SWR)"
+    ],
+    "right_triangle_property_pythagorean(1,SWR)": [],
+    "START": [
+      "adjacent_complementary_angle(1,SWR,RWT)"
+    ]
+  }
 }

@@ -22,9 +22,23 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DEF))",
   "problem_answer": "10.8",
   "theorem_seqs": [
-    "triangle_perimeter_formula(DEF)",
-    "similar_triangle_property_line_ratio(ABC,DEF)",
-    "similar_triangle_property_line_ratio(CAB,FDE)",
-    "similar_triangle_property_line_ratio(BCA,EFD)"
-  ]
+    "triangle_perimeter_formula(1,DEF)",
+    "similar_triangle_property_line_ratio(1,ABC,DEF)",
+    "similar_triangle_property_line_ratio(1,CAB,FDE)",
+    "similar_triangle_property_line_ratio(1,BCA,EFD)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_perimeter_formula(1,DEF)": [],
+    "similar_triangle_property_line_ratio(1,ABC,DEF)": [],
+    "similar_triangle_property_line_ratio(1,CAB,FDE)": [
+      "solve_eq_8)"
+    ],
+    "similar_triangle_property_line_ratio(1,BCA,EFD)": [],
+    "START": [
+      "triangle_perimeter_formula(1,DEF)",
+      "similar_triangle_property_line_ratio(1,ABC,DEF)",
+      "similar_triangle_property_line_ratio(1,CAB,FDE)",
+      "similar_triangle_property_line_ratio(1,BCA,EFD)"
+    ]
+  }
 }

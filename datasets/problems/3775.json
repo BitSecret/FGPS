@@ -24,9 +24,23 @@
   "goal_cdl": "Value(MeasureOfAngle(BEF))",
   "problem_answer": "76",
   "theorem_seqs": [
-    "adjacent_complementary_angle(HDE,EDG)",
-    "adjacent_complementary_angle(DEB,BEF)",
-    "parallel_judgment_corresponding_angle(AB,DE,H)",
-    "parallel_property_corresponding_angle(ED,BA,C)"
-  ]
+    "adjacent_complementary_angle(1,HDE,EDG)",
+    "adjacent_complementary_angle(1,DEB,BEF)",
+    "parallel_judgment_corresponding_angle(1,AB,DE,H)",
+    "parallel_property_corresponding_angle(2,ED,BA,C)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,HDE,EDG)": [
+      "parallel_judgment_corresponding_angle(1,AB,DE,H)"
+    ],
+    "adjacent_complementary_angle(1,DEB,BEF)": [],
+    "parallel_judgment_corresponding_angle(1,AB,DE,H)": [
+      "parallel_property_corresponding_angle(2,ED,BA,C)"
+    ],
+    "parallel_property_corresponding_angle(2,ED,BA,C)": [],
+    "START": [
+      "adjacent_complementary_angle(1,HDE,EDG)",
+      "adjacent_complementary_angle(1,DEB,BEF)"
+    ]
+  }
 }

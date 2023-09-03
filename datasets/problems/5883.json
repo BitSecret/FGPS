@@ -20,9 +20,28 @@
   "goal_cdl": "Value(Div(PerimeterOfTriangle(AOB),PerimeterOfTriangle(DOC)))",
   "problem_answer": "2/3",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AB,CD)",
-    "similar_triangle_judgment_aa(OBA,OCD)",
-    "similar_triangle_property_line_ratio(BAO,CDO)",
-    "similar_triangle_property_perimeter_ratio(OBA,OCD)"
-  ]
+    "parallel_property_alternate_interior_angle(1,AB,CD)",
+    "parallel_property_alternate_interior_angle(2,AB,CD)",
+    "similar_triangle_judgment_aa(1,OBA,OCD)",
+    "similar_triangle_property_line_ratio(1,BAO,CDO)",
+    "similar_triangle_property_perimeter_ratio(1,OBA,OCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,AB,CD)": [
+      "similar_triangle_judgment_aa(1,OBA,OCD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AB,CD)": [
+      "similar_triangle_judgment_aa(1,OBA,OCD)"
+    ],
+    "similar_triangle_judgment_aa(1,OBA,OCD)": [
+      "similar_triangle_property_perimeter_ratio(1,OBA,OCD)",
+      "similar_triangle_property_line_ratio(1,BAO,CDO)"
+    ],
+    "similar_triangle_property_line_ratio(1,BAO,CDO)": [],
+    "similar_triangle_property_perimeter_ratio(1,OBA,OCD)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,AB,CD)",
+      "parallel_property_alternate_interior_angle(2,AB,CD)"
+    ]
+  }
 }

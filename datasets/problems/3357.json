@@ -21,11 +21,27 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(OAH),MeasureOfAngle(ICO),MeasureOfAngle(HBI),MeasureOfAngle(HDE),MeasureOfAngle(DEI)))",
   "problem_answer": "180",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AHO,OHB)",
-    "adjacent_complementary_angle(IOH,HOA)",
-    "triangle_property_angle_sum(AHO)",
-    "triangle_property_angle_sum(ABI)",
-    "triangle_property_angle_sum(ODE)",
-    "triangle_property_angle_sum(HBC)"
-  ]
+    "adjacent_complementary_angle(1,AHO,OHB)",
+    "adjacent_complementary_angle(1,IOH,HOA)",
+    "triangle_property_angle_sum(1,AHO)",
+    "triangle_property_angle_sum(1,ABI)",
+    "triangle_property_angle_sum(1,ODE)",
+    "triangle_property_angle_sum(1,HBC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AHO,OHB)": [],
+    "adjacent_complementary_angle(1,IOH,HOA)": [],
+    "triangle_property_angle_sum(1,AHO)": [],
+    "triangle_property_angle_sum(1,ABI)": [],
+    "triangle_property_angle_sum(1,ODE)": [],
+    "triangle_property_angle_sum(1,HBC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AHO,OHB)",
+      "adjacent_complementary_angle(1,IOH,HOA)",
+      "triangle_property_angle_sum(1,AHO)",
+      "triangle_property_angle_sum(1,ABI)",
+      "triangle_property_angle_sum(1,ODE)",
+      "triangle_property_angle_sum(1,HBC)"
+    ]
+  }
 }

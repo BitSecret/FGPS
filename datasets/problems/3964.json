@@ -29,12 +29,36 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "5*sqrt(2)",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(OCA,B)",
-    "arc_property_circumference_angle_external(OEC,A)",
-    "congruent_arc_judgment_measure_equal(OEC,OCA)",
-    "congruent_arc_property_chord_equal(OEC,OCA)",
-    "diameter_of_circle_property_right_angle(ECA,O)",
-    "right_triangle_judgment_angle(ECA)",
-    "right_triangle_property_pythagorean(ECA)"
-  ]
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "arc_property_circumference_angle_external(1,OEC,A)",
+    "congruent_arc_judgment_measure_equal(1,OEC,OCA)",
+    "congruent_arc_property_chord_equal(1,OEC,OCA)",
+    "diameter_of_circle_property_right_angle(1,ECA,O)",
+    "right_triangle_judgment_angle(1,ECA)",
+    "right_triangle_property_pythagorean(1,ECA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,OCA,B)": [
+      "congruent_arc_judgment_measure_equal(1,OEC,OCA)"
+    ],
+    "arc_property_circumference_angle_external(1,OEC,A)": [
+      "congruent_arc_judgment_measure_equal(1,OEC,OCA)"
+    ],
+    "congruent_arc_judgment_measure_equal(1,OEC,OCA)": [
+      "congruent_arc_property_chord_equal(1,OEC,OCA)"
+    ],
+    "congruent_arc_property_chord_equal(1,OEC,OCA)": [],
+    "diameter_of_circle_property_right_angle(1,ECA,O)": [
+      "right_triangle_judgment_angle(1,ECA)"
+    ],
+    "right_triangle_judgment_angle(1,ECA)": [
+      "right_triangle_property_pythagorean(1,ECA)"
+    ],
+    "right_triangle_property_pythagorean(1,ECA)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "arc_property_circumference_angle_external(1,OEC,A)",
+      "diameter_of_circle_property_right_angle(1,ECA,O)"
+    ]
+  }
 }

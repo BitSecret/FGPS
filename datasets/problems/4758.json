@@ -24,8 +24,20 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "5.196152422706632",
   "theorem_seqs": [
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)"
-  ]
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ],
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "START": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ]
+  }
 }

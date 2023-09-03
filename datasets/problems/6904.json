@@ -26,10 +26,26 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(ADC),MeasureOfAngle(CBQ)))",
   "problem_answer": "215",
   "theorem_seqs": [
-    "tangent_of_circle_property_length_equal(QA,QB,O)",
-    "isosceles_triangle_judgment_line_equal(QAB)",
-    "isosceles_triangle_property_angle_equal(QAB)",
-    "triangle_property_angle_sum(ABQ)",
-    "angle_addition(CBA,ABQ)"
-  ]
+    "tangent_of_circle_property_length_equal(1,QA,QB,O)",
+    "isosceles_triangle_judgment_line_equal(1,QAB)",
+    "isosceles_triangle_property_angle_equal(1,QAB)",
+    "triangle_property_angle_sum(1,ABQ)",
+    "angle_addition(1,CBA,ABQ)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_length_equal(1,QA,QB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,QAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,QAB)": [
+      "isosceles_triangle_property_angle_equal(1,QAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,QAB)": [],
+    "triangle_property_angle_sum(1,ABQ)": [],
+    "angle_addition(1,CBA,ABQ)": [],
+    "START": [
+      "tangent_of_circle_property_length_equal(1,QA,QB,O)",
+      "triangle_property_angle_sum(1,ABQ)",
+      "angle_addition(1,CBA,ABQ)"
+    ]
+  }
 }

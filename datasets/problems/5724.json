@@ -21,15 +21,42 @@
   "goal_cdl": "Value(AreaOfTriangle(OCD))",
   "problem_answer": "400",
   "theorem_seqs": [
-    "vertical_angle(AOB,DOC)",
-    "similar_triangle_judgment_sas(OBA,OCD)",
-    "similar_triangle_judgment_sas(OCD,OBA)",
-    "similar_triangle_property_line_ratio(OBA,OCD)",
-    "similar_triangle_property_line_ratio(BAO,CDO)",
-    "similar_triangle_property_line_ratio(AOB,DOC)",
-    "similar_triangle_property_line_ratio(OCD,OBA)",
-    "similar_triangle_property_line_ratio(CDO,BAO)",
-    "similar_triangle_property_line_ratio(DOC,AOB)",
-    "similar_triangle_property_area_square_ratio(OBA,OCD)"
-  ]
+    "vertical_angle(1,AOB,DOC)",
+    "similar_triangle_judgment_sas(1,OBA,OCD)",
+    "similar_triangle_judgment_sas(1,OCD,OBA)",
+    "similar_triangle_property_line_ratio(1,OBA,OCD)",
+    "similar_triangle_property_line_ratio(1,BAO,CDO)",
+    "similar_triangle_property_line_ratio(1,AOB,DOC)",
+    "similar_triangle_property_line_ratio(1,OCD,OBA)",
+    "similar_triangle_property_line_ratio(1,CDO,BAO)",
+    "similar_triangle_property_line_ratio(1,DOC,AOB)",
+    "similar_triangle_property_area_square_ratio(1,OBA,OCD)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,AOB,DOC)": [
+      "similar_triangle_judgment_sas(1,OBA,OCD)",
+      "similar_triangle_judgment_sas(1,OCD,OBA)"
+    ],
+    "similar_triangle_judgment_sas(1,OBA,OCD)": [
+      "similar_triangle_property_line_ratio(1,OBA,OCD)",
+      "similar_triangle_property_area_square_ratio(1,OBA,OCD)",
+      "similar_triangle_property_line_ratio(1,BAO,CDO)",
+      "similar_triangle_property_line_ratio(1,AOB,DOC)"
+    ],
+    "similar_triangle_judgment_sas(1,OCD,OBA)": [
+      "similar_triangle_property_line_ratio(1,OCD,OBA)",
+      "similar_triangle_property_line_ratio(1,CDO,BAO)",
+      "similar_triangle_property_line_ratio(1,DOC,AOB)"
+    ],
+    "similar_triangle_property_line_ratio(1,OBA,OCD)": [],
+    "similar_triangle_property_line_ratio(1,BAO,CDO)": [],
+    "similar_triangle_property_line_ratio(1,AOB,DOC)": [],
+    "similar_triangle_property_line_ratio(1,OCD,OBA)": [],
+    "similar_triangle_property_line_ratio(1,CDO,BAO)": [],
+    "similar_triangle_property_line_ratio(1,DOC,AOB)": [],
+    "similar_triangle_property_area_square_ratio(1,OBA,OCD)": [],
+    "START": [
+      "vertical_angle(1,AOB,DOC)"
+    ]
+  }
 }

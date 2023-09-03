@@ -18,8 +18,19 @@
   "goal_cdl": "Value(Tan(MeasureOfAngle(BXA)))",
   "problem_answer": "12/5",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(XAB)",
-    "right_triangle_property_pythagorean(XAB)",
-    "cosine_theorem(XAB)"
-  ]
+    "right_triangle_judgment_angle(1,XAB)",
+    "right_triangle_property_pythagorean(1,XAB)",
+    "cosine_theorem(1,XAB)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,XAB)": [
+      "right_triangle_property_pythagorean(1,XAB)"
+    ],
+    "right_triangle_property_pythagorean(1,XAB)": [],
+    "cosine_theorem(1,XAB)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,XAB)",
+      "cosine_theorem(1,XAB)"
+    ]
+  }
 }

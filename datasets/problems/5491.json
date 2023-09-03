@@ -34,16 +34,49 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGH))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(CDB)",
-    "right_triangle_property_pythagorean(CDB)",
-    "midsegment_of_triangle_judgment_midpoint(FE,BDA)",
-    "midsegment_of_triangle_judgment_midpoint(HG,CAD)",
-    "midsegment_of_triangle_judgment_midpoint(FG,DBC)",
-    "midsegment_of_triangle_judgment_midpoint(EH,ABC)",
-    "midsegment_of_triangle_property_length(FE,BDA)",
-    "midsegment_of_triangle_property_length(HG,CAD)",
-    "midsegment_of_triangle_property_length(FG,DBC)",
-    "midsegment_of_triangle_property_length(EH,ABC)",
-    "quadrilateral_perimeter_formula(EFGH)"
-  ]
+    "right_triangle_judgment_angle(1,CDB)",
+    "right_triangle_property_pythagorean(1,CDB)",
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BDA)",
+    "midsegment_of_triangle_judgment_midpoint(1,HG,CAD)",
+    "midsegment_of_triangle_judgment_midpoint(1,FG,DBC)",
+    "midsegment_of_triangle_judgment_midpoint(1,EH,ABC)",
+    "midsegment_of_triangle_property_length(1,FE,BDA)",
+    "midsegment_of_triangle_property_length(1,HG,CAD)",
+    "midsegment_of_triangle_property_length(1,FG,DBC)",
+    "midsegment_of_triangle_property_length(1,EH,ABC)",
+    "quadrilateral_perimeter_formula(1,EFGH)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,CDB)": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ],
+    "right_triangle_property_pythagorean(1,CDB)": [
+      "solve_eq_34)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BDA)": [
+      "midsegment_of_triangle_property_length(1,FE,BDA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,HG,CAD)": [
+      "midsegment_of_triangle_property_length(1,HG,CAD)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,FG,DBC)": [
+      "midsegment_of_triangle_property_length(1,FG,DBC)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EH,ABC)": [
+      "midsegment_of_triangle_property_length(1,EH,ABC)"
+    ],
+    "midsegment_of_triangle_property_length(1,FE,BDA)": [],
+    "midsegment_of_triangle_property_length(1,HG,CAD)": [],
+    "midsegment_of_triangle_property_length(1,FG,DBC)": [],
+    "midsegment_of_triangle_property_length(1,EH,ABC)": [],
+    "quadrilateral_perimeter_formula(1,EFGH)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BDA)",
+      "midsegment_of_triangle_judgment_midpoint(1,HG,CAD)",
+      "midsegment_of_triangle_judgment_midpoint(1,FG,DBC)",
+      "midsegment_of_triangle_judgment_midpoint(1,EH,ABC)",
+      "quadrilateral_perimeter_formula(1,EFGH)"
+    ]
+  }
 }

@@ -23,9 +23,23 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "10/3",
   "theorem_seqs": [
-    "vertical_angle(ADC,EDB)",
-    "mirror_similar_triangle_judgment_aa(ADC,BED)",
-    "mirror_similar_triangle_property_line_ratio(ADC,BED)",
-    "mirror_similar_triangle_property_line_ratio(CAD,EDB)"
-  ]
+    "vertical_angle(1,ADC,EDB)",
+    "mirror_similar_triangle_judgment_aa(1,ADC,BED)",
+    "mirror_similar_triangle_property_line_ratio(1,ADC,BED)",
+    "mirror_similar_triangle_property_line_ratio(1,CAD,EDB)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,ADC,EDB)": [
+      "mirror_similar_triangle_judgment_aa(1,ADC,BED)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ADC,BED)": [
+      "mirror_similar_triangle_property_line_ratio(1,ADC,BED)",
+      "mirror_similar_triangle_property_line_ratio(1,CAD,EDB)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ADC,BED)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CAD,EDB)": [],
+    "START": [
+      "vertical_angle(1,ADC,EDB)"
+    ]
+  }
 }

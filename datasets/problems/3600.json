@@ -20,8 +20,18 @@
   "goal_cdl": "Value(MeasureOfAngle(DOA))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "angle_addition(BOD,DOC)",
-    "angle_addition(BOD,DOA)",
-    "angle_addition(DOC,COA)"
-  ]
+    "angle_addition(1,BOD,DOC)",
+    "angle_addition(1,BOD,DOA)",
+    "angle_addition(1,DOC,COA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,BOD,DOC)": [],
+    "angle_addition(1,BOD,DOA)": [],
+    "angle_addition(1,DOC,COA)": [],
+    "START": [
+      "angle_addition(1,BOD,DOC)",
+      "angle_addition(1,BOD,DOA)",
+      "angle_addition(1,DOC,COA)"
+    ]
+  }
 }

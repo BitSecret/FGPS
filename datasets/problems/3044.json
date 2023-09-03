@@ -22,8 +22,20 @@
   "goal_cdl": "Value(MeasureOfAngle(EFC))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BA,DC,E)",
-    "parallel_property_collinear_extend(CD,AE,F)",
-    "parallel_property_ipsilateral_internal_angle(EA,FC)"
-  ]
+    "parallel_property_collinear_extend(3,BA,DC,E)",
+    "parallel_property_collinear_extend(3,CD,AE,F)",
+    "parallel_property_ipsilateral_internal_angle(1,EA,FC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BA,DC,E)": [
+      "parallel_property_collinear_extend(3,CD,AE,F)"
+    ],
+    "parallel_property_collinear_extend(3,CD,AE,F)": [
+      "parallel_property_ipsilateral_internal_angle(1,EA,FC)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,EA,FC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BA,DC,E)"
+    ]
+  }
 }

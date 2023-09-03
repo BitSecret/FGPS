@@ -26,10 +26,26 @@
   "goal_cdl": "Value(MeasureOfAngle(AHC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_sss(AEG,AGF)",
-    "mirror_congruent_triangle_property_angle_equal(AEG,AGF)",
-    "parallel_property_collinear_extend(CD,AB,H)",
-    "parallel_property_alternate_interior_angle(CH,AB)",
-    "triangle_property_angle_sum(CAH)"
-  ]
+    "mirror_congruent_triangle_judgment_sss(1,AEG,AGF)",
+    "mirror_congruent_triangle_property_angle_equal(1,AEG,AGF)",
+    "parallel_property_collinear_extend(3,CD,AB,H)",
+    "parallel_property_alternate_interior_angle(2,CH,AB)",
+    "triangle_property_angle_sum(1,CAH)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_sss(1,AEG,AGF)": [
+      "mirror_congruent_triangle_property_angle_equal(1,AEG,AGF)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,AEG,AGF)": [],
+    "parallel_property_collinear_extend(3,CD,AB,H)": [
+      "parallel_property_alternate_interior_angle(2,CH,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(2,CH,AB)": [],
+    "triangle_property_angle_sum(1,CAH)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_sss(1,AEG,AGF)",
+      "parallel_property_collinear_extend(3,CD,AB,H)",
+      "triangle_property_angle_sum(1,CAH)"
+    ]
+  }
 }

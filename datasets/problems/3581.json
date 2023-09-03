@@ -34,12 +34,34 @@
   "goal_cdl": "Value(MeasureOfAngle(EFB))",
   "problem_answer": "155",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,EH,B)",
-    "parallel_property_collinear_extend(AD,EH,C)",
-    "parallel_property_collinear_extend(HE,BA,F)",
-    "parallel_property_collinear_extend(HE,CA,G)",
-    "vertical_angle(HGQ,FGC)",
-    "parallel_property_ipsilateral_internal_angle(FE,BA)",
-    "parallel_property_ipsilateral_internal_angle(GE,CA)"
-  ]
+    "parallel_property_collinear_extend(3,AD,EH,B)",
+    "parallel_property_collinear_extend(3,AD,EH,C)",
+    "parallel_property_collinear_extend(3,HE,BA,F)",
+    "parallel_property_collinear_extend(3,HE,CA,G)",
+    "vertical_angle(1,HGQ,FGC)",
+    "parallel_property_ipsilateral_internal_angle(1,FE,BA)",
+    "parallel_property_ipsilateral_internal_angle(1,GE,CA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,EH,B)": [
+      "parallel_property_collinear_extend(3,HE,BA,F)"
+    ],
+    "parallel_property_collinear_extend(3,AD,EH,C)": [
+      "parallel_property_collinear_extend(3,HE,CA,G)"
+    ],
+    "parallel_property_collinear_extend(3,HE,BA,F)": [
+      "parallel_property_ipsilateral_internal_angle(1,FE,BA)"
+    ],
+    "parallel_property_collinear_extend(3,HE,CA,G)": [
+      "parallel_property_ipsilateral_internal_angle(1,GE,CA)"
+    ],
+    "vertical_angle(1,HGQ,FGC)": [],
+    "parallel_property_ipsilateral_internal_angle(1,FE,BA)": [],
+    "parallel_property_ipsilateral_internal_angle(1,GE,CA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,EH,B)",
+      "parallel_property_collinear_extend(3,AD,EH,C)",
+      "vertical_angle(1,HGQ,FGC)"
+    ]
+  }
 }

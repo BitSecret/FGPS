@@ -30,9 +30,26 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "7",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(DE,BC)",
-    "isosceles_triangle_judgment_angle_equal(ADC)",
-    "isosceles_triangle_judgment_angle_equal(ABE)",
-    "line_addition(DA,AE)"
-  ]
+    "parallel_property_alternate_interior_angle(1,DE,BC)",
+    "parallel_property_alternate_interior_angle(2,DE,BC)",
+    "isosceles_triangle_judgment_angle_equal(1,ADC)",
+    "isosceles_triangle_judgment_angle_equal(1,ABE)",
+    "line_addition(1,DA,AE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,DE,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,ADC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DE,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ADC)": [],
+    "isosceles_triangle_judgment_angle_equal(1,ABE)": [],
+    "line_addition(1,DA,AE)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,DE,BC)",
+      "parallel_property_alternate_interior_angle(2,DE,BC)",
+      "line_addition(1,DA,AE)"
+    ]
+  }
 }

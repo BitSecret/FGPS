@@ -20,9 +20,28 @@
   "goal_cdl": "Value(Div(AreaOfTriangle(AOB),AreaOfTriangle(OCD)))",
   "problem_answer": "4/9",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AB,CD)",
-    "similar_triangle_judgment_aa(OCD,OBA)",
-    "similar_triangle_property_line_ratio(CDO,BAO)",
-    "similar_triangle_property_area_square_ratio(OCD,OBA)"
-  ]
+    "parallel_property_alternate_interior_angle(1,AB,CD)",
+    "parallel_property_alternate_interior_angle(2,AB,CD)",
+    "similar_triangle_judgment_aa(1,OCD,OBA)",
+    "similar_triangle_property_line_ratio(1,CDO,BAO)",
+    "similar_triangle_property_area_square_ratio(1,OCD,OBA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,AB,CD)": [
+      "similar_triangle_judgment_aa(1,OCD,OBA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AB,CD)": [
+      "similar_triangle_judgment_aa(1,OCD,OBA)"
+    ],
+    "similar_triangle_judgment_aa(1,OCD,OBA)": [
+      "similar_triangle_property_area_square_ratio(1,OCD,OBA)",
+      "similar_triangle_property_line_ratio(1,CDO,BAO)"
+    ],
+    "similar_triangle_property_line_ratio(1,CDO,BAO)": [],
+    "similar_triangle_property_area_square_ratio(1,OCD,OBA)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,AB,CD)",
+      "parallel_property_alternate_interior_angle(2,AB,CD)"
+    ]
+  }
 }

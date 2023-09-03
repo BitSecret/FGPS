@@ -25,10 +25,24 @@
   "goal_cdl": "Value(MeasureOfAngle(CEB))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(OBC,A)",
-    "arc_property_center_angle(OBC,O)",
-    "parallel_property_alternate_interior_angle(OC,AB)",
-    "triangle_property_angle_sum(OEC)",
-    "adjacent_complementary_angle(OEC,CEB)"
-  ]
+    "arc_property_circumference_angle_external(1,OBC,A)",
+    "arc_property_center_angle(1,OBC,O)",
+    "parallel_property_alternate_interior_angle(2,OC,AB)",
+    "triangle_property_angle_sum(1,OEC)",
+    "adjacent_complementary_angle(1,OEC,CEB)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "parallel_property_alternate_interior_angle(2,OC,AB)": [],
+    "triangle_property_angle_sum(1,OEC)": [],
+    "adjacent_complementary_angle(1,OEC,CEB)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "arc_property_center_angle(1,OBC,O)",
+      "parallel_property_alternate_interior_angle(2,OC,AB)",
+      "triangle_property_angle_sum(1,OEC)",
+      "adjacent_complementary_angle(1,OEC,CEB)"
+    ]
+  }
 }

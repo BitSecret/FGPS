@@ -21,9 +21,21 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "angle_addition(ABC,CBD)",
-    "triangle_property_angle_sum(ABC)",
-    "triangle_property_angle_sum(ABD)",
-    "sine_theorem(BCA)"
-  ]
+    "angle_addition(1,ABC,CBD)",
+    "triangle_property_angle_sum(1,ABC)",
+    "triangle_property_angle_sum(1,ABD)",
+    "sine_theorem(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ABC,CBD)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "sine_theorem(1,BCA)": [],
+    "START": [
+      "angle_addition(1,ABC,CBD)",
+      "triangle_property_angle_sum(1,ABC)",
+      "triangle_property_angle_sum(1,ABD)",
+      "sine_theorem(1,BCA)"
+    ]
+  }
 }

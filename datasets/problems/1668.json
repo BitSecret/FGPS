@@ -25,11 +25,27 @@
   "goal_cdl": "Value(Sub(AreaOfQuadrilateral(BATC),AreaOfSector(DAB)))",
   "problem_answer": "25-25*pi/8",
   "theorem_seqs": [
-    "diameter_of_circle_property_length_equal(AB,D)",
-    "circle_property_length_of_radius_and_diameter(D)",
-    "parallelogram_area_formula_sine(ATCB)",
-    "flat_angle(BDA)",
-    "arc_property_center_angle(DAB,D)",
-    "sector_area_formula(DAB)"
-  ]
+    "diameter_of_circle_property_length_equal(1,AB,D)",
+    "circle_property_length_of_radius_and_diameter(1,D)",
+    "parallelogram_area_formula_sine(1,ATCB)",
+    "flat_angle(1,BDA)",
+    "arc_property_center_angle(1,DAB,D)",
+    "sector_area_formula(1,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_length_equal(1,AB,D)": [],
+    "circle_property_length_of_radius_and_diameter(1,D)": [],
+    "parallelogram_area_formula_sine(1,ATCB)": [],
+    "flat_angle(1,BDA)": [],
+    "arc_property_center_angle(1,DAB,D)": [],
+    "sector_area_formula(1,DAB)": [],
+    "START": [
+      "diameter_of_circle_property_length_equal(1,AB,D)",
+      "circle_property_length_of_radius_and_diameter(1,D)",
+      "parallelogram_area_formula_sine(1,ATCB)",
+      "flat_angle(1,BDA)",
+      "arc_property_center_angle(1,DAB,D)",
+      "sector_area_formula(1,DAB)"
+    ]
+  }
 }

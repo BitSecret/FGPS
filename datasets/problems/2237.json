@@ -22,7 +22,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "6",
   "theorem_seqs": [
-    "bisector_of_angle_judgment_angle_equal(AC,BAD)",
-    "bisector_of_angle_property_line_ratio(AC,BAD)"
-  ]
+    "bisector_of_angle_judgment_angle_equal(1,AC,BAD)",
+    "bisector_of_angle_property_line_ratio(1,AC,BAD)"
+  ],
+  "theorem_seq_dag": {
+    "bisector_of_angle_judgment_angle_equal(1,AC,BAD)": [
+      "bisector_of_angle_property_line_ratio(1,AC,BAD)"
+    ],
+    "bisector_of_angle_property_line_ratio(1,AC,BAD)": [],
+    "START": [
+      "bisector_of_angle_judgment_angle_equal(1,AC,BAD)"
+    ]
+  }
 }

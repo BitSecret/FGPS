@@ -27,15 +27,41 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "26",
   "theorem_seqs": [
-    "triangle_property_angle_sum(DAB)",
-    "isosceles_triangle_judgment_angle_equal(BDA)",
-    "isosceles_triangle_judgment_angle_equal(ABD)",
-    "line_addition(AO,OD)",
-    "triangle_property_angle_sum(DOH)",
-    "sine_theorem(DOH)",
-    "line_addition(DH,HB)",
-    "adjacent_complementary_angle(BHO,OHD)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OH,BC)",
-    "line_addition(BH,HC)"
-  ]
+    "triangle_property_angle_sum(1,DAB)",
+    "isosceles_triangle_judgment_angle_equal(1,BDA)",
+    "isosceles_triangle_judgment_angle_equal(1,ABD)",
+    "line_addition(1,AO,OD)",
+    "triangle_property_angle_sum(1,DOH)",
+    "sine_theorem(1,DOH)",
+    "line_addition(1,DH,HB)",
+    "adjacent_complementary_angle(1,BHO,OHD)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OH,BC)",
+    "line_addition(1,BH,HC)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,DAB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BDA)",
+      "isosceles_triangle_judgment_angle_equal(1,ABD)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BDA)": [],
+    "isosceles_triangle_judgment_angle_equal(1,ABD)": [],
+    "line_addition(1,AO,OD)": [],
+    "triangle_property_angle_sum(1,DOH)": [],
+    "sine_theorem(1,DOH)": [],
+    "line_addition(1,DH,HB)": [],
+    "adjacent_complementary_angle(1,BHO,OHD)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OH,BC)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OH,BC)": [],
+    "line_addition(1,BH,HC)": [],
+    "START": [
+      "triangle_property_angle_sum(1,DAB)",
+      "line_addition(1,AO,OD)",
+      "triangle_property_angle_sum(1,DOH)",
+      "sine_theorem(1,DOH)",
+      "line_addition(1,DH,HB)",
+      "adjacent_complementary_angle(1,BHO,OHD)",
+      "line_addition(1,BH,HC)"
+    ]
+  }
 }

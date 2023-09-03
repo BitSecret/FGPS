@@ -25,9 +25,23 @@
   "goal_cdl": "Value(LengthOfLine(OE))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "quadrilateral_perimeter_formula(ABCD)",
-    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
-    "midsegment_of_triangle_judgment_midpoint(EO,DAB)",
-    "midsegment_of_triangle_property_length(EO,DAB)"
-  ]
+    "quadrilateral_perimeter_formula(1,ABCD)",
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+    "midsegment_of_triangle_judgment_midpoint(1,EO,DAB)",
+    "midsegment_of_triangle_property_length(1,EO,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,EO,DAB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EO,DAB)": [
+      "midsegment_of_triangle_property_length(1,EO,DAB)"
+    ],
+    "midsegment_of_triangle_property_length(1,EO,DAB)": [],
+    "START": [
+      "quadrilateral_perimeter_formula(1,ABCD)",
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  }
 }

@@ -25,16 +25,54 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "midpoint_of_line_judgment(O,CA)",
-    "midpoint_of_line_judgment(O,BT)",
-    "parallelogram_judgment_diagonal_bisection(BCTA,O)",
-    "vertical_angle(COB,AOT)",
-    "perpendicular_bisector_judgment_per_and_mid(BO,CA)",
-    "perpendicular_bisector_judgment_per_and_mid(TO,AC)",
-    "perpendicular_bisector_property_distance_equal(BO,CA)",
-    "perpendicular_bisector_property_distance_equal(TO,AC)",
-    "kite_judgment_equal_and_equal(BCTA)",
-    "rhombus_judgment_parallelogram_and_kite(BCTA)",
-    "quadrilateral_perimeter_formula(BCTA)"
-  ]
+    "midpoint_of_line_judgment(1,O,CA)",
+    "midpoint_of_line_judgment(1,O,BT)",
+    "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+    "vertical_angle(1,COB,AOT)",
+    "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+    "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+    "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+    "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+    "kite_judgment_equal_and_equal(1,BCTA)",
+    "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+    "quadrilateral_perimeter_formula(1,BCTA)"
+  ],
+  "theorem_seq_dag": {
+    "midpoint_of_line_judgment(1,O,CA)": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ],
+    "midpoint_of_line_judgment(1,O,BT)": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ],
+    "parallelogram_judgment_diagonal_bisection(1,BCTA,O)": [
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ],
+    "vertical_angle(1,COB,AOT)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)": [
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)": [
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,BO,CA)": [
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,TO,AC)": [
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ],
+    "kite_judgment_equal_and_equal(1,BCTA)": [
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ],
+    "rhombus_judgment_parallelogram_and_kite(1,BCTA)": [],
+    "quadrilateral_perimeter_formula(1,BCTA)": [],
+    "START": [
+      "midpoint_of_line_judgment(1,O,CA)",
+      "midpoint_of_line_judgment(1,O,BT)",
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "quadrilateral_perimeter_formula(1,BCTA)"
+    ]
+  }
 }

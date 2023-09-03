@@ -23,10 +23,26 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(WZYX))",
   "problem_answer": "17",
   "theorem_seqs": [
-    "similar_quadrilateral_property_line_ratio(QPNM,WZYX)",
-    "similar_quadrilateral_property_line_ratio(PNMQ,ZYXW)",
-    "similar_quadrilateral_property_line_ratio(NMQP,YXWZ)",
-    "similar_quadrilateral_property_line_ratio(MQPN,XWZY)",
-    "quadrilateral_perimeter_formula(WZYX)"
-  ]
+    "similar_quadrilateral_property_line_ratio(1,QPNM,WZYX)",
+    "similar_quadrilateral_property_line_ratio(1,PNMQ,ZYXW)",
+    "similar_quadrilateral_property_line_ratio(1,NMQP,YXWZ)",
+    "similar_quadrilateral_property_line_ratio(1,MQPN,XWZY)",
+    "quadrilateral_perimeter_formula(1,WZYX)"
+  ],
+  "theorem_seq_dag": {
+    "similar_quadrilateral_property_line_ratio(1,QPNM,WZYX)": [],
+    "similar_quadrilateral_property_line_ratio(1,PNMQ,ZYXW)": [],
+    "similar_quadrilateral_property_line_ratio(1,NMQP,YXWZ)": [],
+    "similar_quadrilateral_property_line_ratio(1,MQPN,XWZY)": [
+      "solve_eq_8)"
+    ],
+    "quadrilateral_perimeter_formula(1,WZYX)": [],
+    "START": [
+      "similar_quadrilateral_property_line_ratio(1,QPNM,WZYX)",
+      "similar_quadrilateral_property_line_ratio(1,PNMQ,ZYXW)",
+      "similar_quadrilateral_property_line_ratio(1,NMQP,YXWZ)",
+      "similar_quadrilateral_property_line_ratio(1,MQPN,XWZY)",
+      "quadrilateral_perimeter_formula(1,WZYX)"
+    ]
+  }
 }

@@ -19,7 +19,16 @@
   "goal_cdl": "Value(MeasureOfAngle(ADE))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,AB,E)",
-    "parallel_property_alternate_interior_angle(ED,AB)"
-  ]
+    "parallel_property_collinear_extend(1,DC,AB,E)",
+    "parallel_property_alternate_interior_angle(2,ED,AB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,DC,AB,E)": [
+      "parallel_property_alternate_interior_angle(2,ED,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(2,ED,AB)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,DC,AB,E)"
+    ]
+  }
 }

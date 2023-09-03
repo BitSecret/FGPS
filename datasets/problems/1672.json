@@ -20,11 +20,28 @@
   "goal_cdl": "Value(MeasureOfAngle(ABD))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(DBC)",
-    "isosceles_triangle_property_angle_equal(DBC)",
-    "triangle_property_angle_sum(CDB)",
-    "flat_angle(CDA)",
-    "angle_addition(CDB,BDA)",
-    "triangle_property_angle_sum(BDA)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,DBC)",
+    "isosceles_triangle_property_angle_equal(1,DBC)",
+    "triangle_property_angle_sum(1,CDB)",
+    "flat_angle(1,CDA)",
+    "angle_addition(1,CDB,BDA)",
+    "triangle_property_angle_sum(1,BDA)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,DBC)": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DBC)": [],
+    "triangle_property_angle_sum(1,CDB)": [],
+    "flat_angle(1,CDA)": [],
+    "angle_addition(1,CDB,BDA)": [],
+    "triangle_property_angle_sum(1,BDA)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "flat_angle(1,CDA)",
+      "angle_addition(1,CDB,BDA)",
+      "triangle_property_angle_sum(1,BDA)"
+    ]
+  }
 }

@@ -27,7 +27,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "9",
   "theorem_seqs": [
-    "congruent_arc_judgment_chord_equal(MST,MVU)",
-    "congruent_arc_property_measure_equal(MST,MVU)"
-  ]
+    "congruent_arc_judgment_chord_equal(1,MST,MVU)",
+    "congruent_arc_property_measure_equal(1,MST,MVU)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_chord_equal(1,MST,MVU)": [
+      "congruent_arc_property_measure_equal(1,MST,MVU)"
+    ],
+    "congruent_arc_property_measure_equal(1,MST,MVU)": [],
+    "START": [
+      "congruent_arc_judgment_chord_equal(1,MST,MVU)"
+    ]
+  }
 }

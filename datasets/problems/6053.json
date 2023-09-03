@@ -28,18 +28,56 @@
   "goal_cdl": "Value(LengthOfLine(PC))",
   "problem_answer": "sqrt(3)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(PB,O,O)",
-    "tangent_of_circle_property_perpendicular(PC,O,O)",
-    "arc_property_center_angle(OCD,O)",
-    "arc_property_center_angle(OCB,O)",
-    "arc_property_center_angle(ODB,O)",
-    "arc_property_circumference_angle_external(OCB,A)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "mirror_congruent_triangle_judgment_hl(PBO,POC)",
-    "mirror_congruent_triangle_property_angle_equal(OPB,OCP)",
-    "angle_addition(BOP,POC)",
-    "triangle_property_angle_sum(CPO)",
-    "sine_theorem(CPO)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,PB,O,O)",
+    "tangent_of_circle_property_perpendicular(1,PC,O,O)",
+    "arc_property_center_angle(1,OCD,O)",
+    "arc_property_center_angle(1,OCB,O)",
+    "arc_property_center_angle(1,ODB,O)",
+    "arc_property_circumference_angle_external(1,OCB,A)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "mirror_congruent_triangle_judgment_hl(1,PBO,POC)",
+    "mirror_congruent_triangle_property_angle_equal(1,OPB,OCP)",
+    "angle_addition(1,BOP,POC)",
+    "triangle_property_angle_sum(1,CPO)",
+    "sine_theorem(1,CPO)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,PB,O,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PBO,POC)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,PC,O,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PBO,POC)"
+    ],
+    "arc_property_center_angle(1,OCD,O)": [],
+    "arc_property_center_angle(1,OCB,O)": [],
+    "arc_property_center_angle(1,ODB,O)": [],
+    "arc_property_circumference_angle_external(1,OCB,A)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PBO,POC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PBO,POC)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,PBO,POC)": [
+      "mirror_congruent_triangle_property_angle_equal(1,OPB,OCP)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,OPB,OCP)": [],
+    "angle_addition(1,BOP,POC)": [],
+    "triangle_property_angle_sum(1,CPO)": [],
+    "sine_theorem(1,CPO)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,PB,O,O)",
+      "tangent_of_circle_property_perpendicular(1,PC,O,O)",
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_property_center_angle(1,OCB,O)",
+      "arc_property_center_angle(1,ODB,O)",
+      "arc_property_circumference_angle_external(1,OCB,A)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "angle_addition(1,BOP,POC)",
+      "triangle_property_angle_sum(1,CPO)",
+      "sine_theorem(1,CPO)"
+    ]
+  }
 }

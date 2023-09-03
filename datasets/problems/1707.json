@@ -24,11 +24,29 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "15/14*sqrt(19)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(YNA,ANB)",
-    "right_triangle_judgment_angle(BAY)",
-    "right_triangle_property_pythagorean(BAY)",
-    "altitude_of_triangle_judgment(AN,AYB)",
-    "triangle_area_formula_sine(AYB)",
-    "triangle_area_formula_common(AYB)"
-  ]
+    "adjacent_complementary_angle(1,YNA,ANB)",
+    "right_triangle_judgment_angle(1,BAY)",
+    "right_triangle_property_pythagorean(1,BAY)",
+    "altitude_of_triangle_judgment(1,AN,AYB)",
+    "triangle_area_formula_sine(1,AYB)",
+    "triangle_area_formula_common(1,AYB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,YNA,ANB)": [
+      "altitude_of_triangle_judgment(1,AN,AYB)"
+    ],
+    "right_triangle_judgment_angle(1,BAY)": [
+      "right_triangle_property_pythagorean(1,BAY)"
+    ],
+    "right_triangle_property_pythagorean(1,BAY)": [],
+    "altitude_of_triangle_judgment(1,AN,AYB)": [],
+    "triangle_area_formula_sine(1,AYB)": [],
+    "triangle_area_formula_common(1,AYB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,YNA,ANB)",
+      "right_triangle_judgment_angle(1,BAY)",
+      "triangle_area_formula_sine(1,AYB)",
+      "triangle_area_formula_common(1,AYB)"
+    ]
+  }
 }

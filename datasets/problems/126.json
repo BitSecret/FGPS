@@ -20,8 +20,20 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "2.5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(DCA,ACB)",
-    "mirror_congruent_triangle_judgment_sas(CAD,CBA)",
-    "mirror_congruent_triangle_property_line_equal(CAD,CBA)"
-  ]
+    "adjacent_complementary_angle(1,DCA,ACB)",
+    "mirror_congruent_triangle_judgment_sas(1,CAD,CBA)",
+    "mirror_congruent_triangle_property_line_equal(1,CAD,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,DCA,ACB)": [
+      "mirror_congruent_triangle_judgment_sas(1,CAD,CBA)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,CAD,CBA)": [
+      "mirror_congruent_triangle_property_line_equal(1,CAD,CBA)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,CAD,CBA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,DCA,ACB)"
+    ]
+  }
 }

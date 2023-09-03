@@ -29,14 +29,47 @@
   "goal_cdl": "Value(MeasureOfAngle(CDB))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "circle_property_length_of_radius_and_diameter(O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(COB)",
-    "isosceles_triangle_judgment_line_equal(OBC)",
-    "equilateral_triangle_judgment_isosceles_and_isosceles(COB)",
-    "equilateral_triangle_property_angle(OBC)",
-    "arc_property_center_angle(OBC,O)",
-    "arc_property_circumference_angle_external(OBC,D)"
-  ]
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,COB)",
+    "isosceles_triangle_judgment_line_equal(1,OBC)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,COB)",
+    "equilateral_triangle_property_angle(1,OBC)",
+    "arc_property_center_angle(1,OBC,O)",
+    "arc_property_circumference_angle_external(1,OBC,D)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_length_of_radius_and_diameter(1,O)": [
+      "isosceles_triangle_judgment_line_equal(1,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OBC)",
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,COB)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,COB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBC)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,COB)"
+    ],
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,COB)": [
+      "equilateral_triangle_property_angle(1,OBC)"
+    ],
+    "equilateral_triangle_property_angle(1,OBC)": [],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "arc_property_circumference_angle_external(1,OBC,D)": [],
+    "START": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,D)"
+    ]
+  }
 }

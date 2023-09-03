@@ -23,14 +23,43 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "20/3",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AF,ED,C)",
-    "parallel_property_corresponding_angle(FD,AE,C)",
-    "parallel_property_corresponding_angle(DE,CA,B)",
-    "parallel_property_corresponding_angle(AF,ED,B)",
-    "line_addition(BE,EA)",
-    "line_addition(AF,FC)",
-    "similar_triangle_judgment_aa(BDE,DCF)",
-    "similar_triangle_property_line_ratio(BDE,DCF)",
-    "similar_triangle_property_line_ratio(DEB,CFD)"
-  ]
+    "parallel_property_collinear_extend(2,AF,ED,C)",
+    "parallel_property_corresponding_angle(1,FD,AE,C)",
+    "parallel_property_corresponding_angle(1,DE,CA,B)",
+    "parallel_property_corresponding_angle(2,AF,ED,B)",
+    "line_addition(1,BE,EA)",
+    "line_addition(1,AF,FC)",
+    "similar_triangle_judgment_aa(1,BDE,DCF)",
+    "similar_triangle_property_line_ratio(1,BDE,DCF)",
+    "similar_triangle_property_line_ratio(1,DEB,CFD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,AF,ED,C)": [
+      "parallel_property_corresponding_angle(1,DE,CA,B)"
+    ],
+    "parallel_property_corresponding_angle(1,FD,AE,C)": [
+      "similar_triangle_judgment_aa(1,BDE,DCF)"
+    ],
+    "parallel_property_corresponding_angle(1,DE,CA,B)": [
+      "similar_triangle_judgment_aa(1,BDE,DCF)"
+    ],
+    "parallel_property_corresponding_angle(2,AF,ED,B)": [
+      "similar_triangle_judgment_aa(1,BDE,DCF)"
+    ],
+    "line_addition(1,BE,EA)": [],
+    "line_addition(1,AF,FC)": [],
+    "similar_triangle_judgment_aa(1,BDE,DCF)": [
+      "similar_triangle_property_line_ratio(1,BDE,DCF)",
+      "similar_triangle_property_line_ratio(1,DEB,CFD)"
+    ],
+    "similar_triangle_property_line_ratio(1,BDE,DCF)": [],
+    "similar_triangle_property_line_ratio(1,DEB,CFD)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,AF,ED,C)",
+      "parallel_property_corresponding_angle(1,FD,AE,C)",
+      "parallel_property_corresponding_angle(2,AF,ED,B)",
+      "line_addition(1,BE,EA)",
+      "line_addition(1,AF,FC)"
+    ]
+  }
 }

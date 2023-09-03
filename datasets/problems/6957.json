@@ -29,9 +29,22 @@
   "goal_cdl": "Value(MeasureOfAngle(DEC))",
   "problem_answer": "21",
   "theorem_seqs": [
-    "congruent_arc_judgment_chord_equal(OAB,OCD)",
-    "congruent_arc_property_measure_equal(OAB,OCD)",
-    "arc_property_center_angle(OAB,O)",
-    "arc_property_circumference_angle_external(OCD,E)"
-  ]
+    "congruent_arc_judgment_chord_equal(1,OAB,OCD)",
+    "congruent_arc_property_measure_equal(1,OAB,OCD)",
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_circumference_angle_external(1,OCD,E)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_chord_equal(1,OAB,OCD)": [
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ],
+    "congruent_arc_property_measure_equal(1,OAB,OCD)": [],
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_circumference_angle_external(1,OCD,E)": [],
+    "START": [
+      "congruent_arc_judgment_chord_equal(1,OAB,OCD)",
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_circumference_angle_external(1,OCD,E)"
+    ]
+  }
 }

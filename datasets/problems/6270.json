@@ -33,16 +33,54 @@
   "goal_cdl": "Value(LengthOfLine(BP))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OP,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(OCP)",
-    "isosceles_triangle_property_angle_equal(OCP)",
-    "parallel_judgment_alternate_interior_angle(EP,CM)",
-    "parallel_property_collinear_extend(EP,CM,O)",
-    "parallel_property_corresponding_angle(MC,EO,B)",
-    "adjacent_complementary_angle(AEO,OEB)",
-    "circle_property_chord_perpendicular_bisect_arc(OAB,OEP)",
-    "congruent_arc_judgment_length_equal(OAP,OPB)",
-    "congruent_arc_property_chord_equal(OAP,OPB)"
-  ]
+    "radius_of_circle_property_length_equal(1,OP,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,OCP)",
+    "isosceles_triangle_property_angle_equal(1,OCP)",
+    "parallel_judgment_alternate_interior_angle(2,EP,CM)",
+    "parallel_property_collinear_extend(1,EP,CM,O)",
+    "parallel_property_corresponding_angle(2,MC,EO,B)",
+    "adjacent_complementary_angle(1,AEO,OEB)",
+    "circle_property_chord_perpendicular_bisect_arc(1,OAB,OEP)",
+    "congruent_arc_judgment_length_equal(1,OAP,OPB)",
+    "congruent_arc_property_chord_equal(1,OAP,OPB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OP,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCP)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCP)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OCP)": [
+      "isosceles_triangle_property_angle_equal(1,OCP)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OCP)": [
+      "parallel_judgment_alternate_interior_angle(2,EP,CM)"
+    ],
+    "parallel_judgment_alternate_interior_angle(2,EP,CM)": [
+      "parallel_property_collinear_extend(1,EP,CM,O)"
+    ],
+    "parallel_property_collinear_extend(1,EP,CM,O)": [
+      "parallel_property_corresponding_angle(2,MC,EO,B)"
+    ],
+    "parallel_property_corresponding_angle(2,MC,EO,B)": [
+      "circle_property_chord_perpendicular_bisect_arc(1,OAB,OEP)"
+    ],
+    "adjacent_complementary_angle(1,AEO,OEB)": [
+      "circle_property_chord_perpendicular_bisect_arc(1,OAB,OEP)"
+    ],
+    "circle_property_chord_perpendicular_bisect_arc(1,OAB,OEP)": [
+      "congruent_arc_judgment_length_equal(1,OAP,OPB)"
+    ],
+    "congruent_arc_judgment_length_equal(1,OAP,OPB)": [
+      "congruent_arc_property_chord_equal(1,OAP,OPB)"
+    ],
+    "congruent_arc_property_chord_equal(1,OAP,OPB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OP,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "adjacent_complementary_angle(1,AEO,OEB)"
+    ]
+  }
 }

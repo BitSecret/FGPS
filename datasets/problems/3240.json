@@ -26,17 +26,49 @@
   "goal_cdl": "Value(MeasureOfAngle(ADP))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "arc_property_circumference_angle_internal(ODB,A)",
-    "arc_property_circumference_angle_internal(OBD,C)",
-    "arc_property_center_angle(OBD,O)",
-    "flat_angle(AOB)",
-    "angle_addition(AOD,DOB)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(ODA)",
-    "tangent_of_circle_property_perpendicular(PD,O,O)",
-    "angle_addition(ODA,ADP)"
-  ]
+    "arc_property_circumference_angle_internal(1,ODB,A)",
+    "arc_property_circumference_angle_internal(1,OBD,C)",
+    "arc_property_center_angle(1,OBD,O)",
+    "flat_angle(1,AOB)",
+    "angle_addition(1,AOD,DOB)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,ODA)",
+    "tangent_of_circle_property_perpendicular(1,PD,O,O)",
+    "angle_addition(1,ODA,ADP)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_internal(1,ODB,A)": [],
+    "arc_property_circumference_angle_internal(1,OBD,C)": [],
+    "arc_property_center_angle(1,OBD,O)": [],
+    "flat_angle(1,AOB)": [],
+    "angle_addition(1,AOD,DOB)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "triangle_property_angle_sum(1,ODA)": [],
+    "tangent_of_circle_property_perpendicular(1,PD,O,O)": [],
+    "angle_addition(1,ODA,ADP)": [],
+    "START": [
+      "arc_property_circumference_angle_internal(1,ODB,A)",
+      "arc_property_circumference_angle_internal(1,OBD,C)",
+      "arc_property_center_angle(1,OBD,O)",
+      "flat_angle(1,AOB)",
+      "angle_addition(1,AOD,DOB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "triangle_property_angle_sum(1,ODA)",
+      "tangent_of_circle_property_perpendicular(1,PD,O,O)",
+      "angle_addition(1,ODA,ADP)"
+    ]
+  }
 }

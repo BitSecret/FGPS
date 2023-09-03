@@ -27,10 +27,25 @@
   "goal_cdl": "Value(MeasureOfAngle(ADB))",
   "problem_answer": "124",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
-    "perpendicular_bisector_property_bisector(OC,AB)",
-    "angle_addition(BOC,COA)",
-    "arc_property_center_angle(OAB,O)",
-    "arc_property_circumference_angle_internal(OAB,D)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(2,O,OC,AB)",
+    "perpendicular_bisector_property_bisector(1,OC,AB)",
+    "angle_addition(1,BOC,COA)",
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_circumference_angle_internal(1,OAB,D)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(2,O,OC,AB)": [
+      "perpendicular_bisector_property_bisector(1,OC,AB)"
+    ],
+    "perpendicular_bisector_property_bisector(1,OC,AB)": [],
+    "angle_addition(1,BOC,COA)": [],
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_circumference_angle_internal(1,OAB,D)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(2,O,OC,AB)",
+      "angle_addition(1,BOC,COA)",
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_circumference_angle_internal(1,OAB,D)"
+    ]
+  }
 }

@@ -22,8 +22,20 @@
   "goal_cdl": "Value(LengthOfLine(EH))",
   "problem_answer": "sqrt(2)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(HE,A,A)",
-    "right_triangle_judgment_angle(AEH)",
-    "right_triangle_property_pythagorean(AEH)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,HE,A,A)",
+    "right_triangle_judgment_angle(1,AEH)",
+    "right_triangle_property_pythagorean(1,AEH)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,HE,A,A)": [
+      "right_triangle_judgment_angle(1,AEH)"
+    ],
+    "right_triangle_judgment_angle(1,AEH)": [
+      "right_triangle_property_pythagorean(1,AEH)"
+    ],
+    "right_triangle_property_pythagorean(1,AEH)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,HE,A,A)"
+    ]
+  }
 }

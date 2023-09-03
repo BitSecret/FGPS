@@ -29,15 +29,45 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABFE))",
   "problem_answer": "13",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "vertical_angle(AOE,COF)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "congruent_triangle_judgment_aas(EAO,FCO)",
-    "congruent_triangle_property_line_equal(AOE,COF)",
-    "congruent_triangle_property_line_equal(OEA,OFC)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(EO,OF)",
-    "line_addition(BF,FC)",
-    "quadrilateral_perimeter_formula(ABFE)"
-  ]
+    "parallel_property_alternate_interior_angle(1,AD,BC)",
+    "vertical_angle(1,AOE,COF)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "congruent_triangle_judgment_aas(2,EAO,FCO)",
+    "congruent_triangle_property_line_equal(1,AOE,COF)",
+    "congruent_triangle_property_line_equal(1,OEA,OFC)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,EO,OF)",
+    "line_addition(1,BF,FC)",
+    "quadrilateral_perimeter_formula(1,ABFE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,AD,BC)": [
+      "congruent_triangle_judgment_aas(2,EAO,FCO)"
+    ],
+    "vertical_angle(1,AOE,COF)": [
+      "congruent_triangle_judgment_aas(2,EAO,FCO)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "congruent_triangle_judgment_aas(2,EAO,FCO)"
+    ],
+    "congruent_triangle_judgment_aas(2,EAO,FCO)": [
+      "congruent_triangle_property_line_equal(1,AOE,COF)",
+      "congruent_triangle_property_line_equal(1,OEA,OFC)"
+    ],
+    "congruent_triangle_property_line_equal(1,AOE,COF)": [],
+    "congruent_triangle_property_line_equal(1,OEA,OFC)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,EO,OF)": [],
+    "line_addition(1,BF,FC)": [],
+    "quadrilateral_perimeter_formula(1,ABFE)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,AD,BC)",
+      "vertical_angle(1,AOE,COF)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,EO,OF)",
+      "line_addition(1,BF,FC)",
+      "quadrilateral_perimeter_formula(1,ABFE)"
+    ]
+  }
 }

@@ -24,11 +24,33 @@
   "goal_cdl": "Value(LengthOfLine(DB))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BDE,EDA)",
-    "bisector_of_angle_judgment_angle_equal(AE,DAC)",
-    "bisector_of_angle_property_distance_equal(AE,DAC)",
-    "mirror_congruent_triangle_judgment_hl(ACE,AED)",
-    "mirror_congruent_triangle_property_line_equal(EAC,EDA)",
-    "line_addition(AD,DB)"
-  ]
+    "adjacent_complementary_angle(1,BDE,EDA)",
+    "bisector_of_angle_judgment_angle_equal(1,AE,DAC)",
+    "bisector_of_angle_property_distance_equal(1,AE,DAC)",
+    "mirror_congruent_triangle_judgment_hl(1,ACE,AED)",
+    "mirror_congruent_triangle_property_line_equal(1,EAC,EDA)",
+    "line_addition(1,AD,DB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BDE,EDA)": [
+      "bisector_of_angle_property_distance_equal(1,AE,DAC)",
+      "mirror_congruent_triangle_judgment_hl(1,ACE,AED)"
+    ],
+    "bisector_of_angle_judgment_angle_equal(1,AE,DAC)": [
+      "bisector_of_angle_property_distance_equal(1,AE,DAC)"
+    ],
+    "bisector_of_angle_property_distance_equal(1,AE,DAC)": [
+      "mirror_congruent_triangle_judgment_hl(1,ACE,AED)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,ACE,AED)": [
+      "mirror_congruent_triangle_property_line_equal(1,EAC,EDA)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,EAC,EDA)": [],
+    "line_addition(1,AD,DB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BDE,EDA)",
+      "bisector_of_angle_judgment_angle_equal(1,AE,DAC)",
+      "line_addition(1,AD,DB)"
+    ]
+  }
 }

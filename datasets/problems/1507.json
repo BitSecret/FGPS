@@ -25,12 +25,33 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "8",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(CAB)",
-    "right_triangle_judgment_angle(BDA)",
-    "right_triangle_judgment_angle(ADC)",
-    "line_addition(BD,DC)",
-    "right_triangle_property_pythagorean(CAB)",
-    "right_triangle_property_pythagorean(BDA)",
-    "right_triangle_property_pythagorean(ADC)"
-  ]
+    "right_triangle_judgment_angle(1,CAB)",
+    "right_triangle_judgment_angle(1,BDA)",
+    "right_triangle_judgment_angle(1,ADC)",
+    "line_addition(1,BD,DC)",
+    "right_triangle_property_pythagorean(1,CAB)",
+    "right_triangle_property_pythagorean(1,BDA)",
+    "right_triangle_property_pythagorean(1,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,CAB)": [
+      "right_triangle_property_pythagorean(1,CAB)"
+    ],
+    "right_triangle_judgment_angle(1,BDA)": [
+      "right_triangle_property_pythagorean(1,BDA)"
+    ],
+    "right_triangle_judgment_angle(1,ADC)": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ],
+    "line_addition(1,BD,DC)": [],
+    "right_triangle_property_pythagorean(1,CAB)": [],
+    "right_triangle_property_pythagorean(1,BDA)": [],
+    "right_triangle_property_pythagorean(1,ADC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,CAB)",
+      "right_triangle_judgment_angle(1,BDA)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "line_addition(1,BD,DC)"
+    ]
+  }
 }

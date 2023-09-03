@@ -21,11 +21,32 @@
   "goal_cdl": "Value(LengthOfLine(LM))",
   "problem_answer": "8*sqrt(2)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(KML,LMJ)",
-    "mirror_similar_triangle_judgment_aa(LKM,JLK)",
-    "mirror_similar_triangle_property_angle_equal(LKM,JLK)",
-    "similar_triangle_judgment_aa(LMJ,KML)",
-    "similar_triangle_property_line_ratio(LMJ,KML)",
-    "similar_triangle_property_line_ratio(JLM,LKM)"
-  ]
+    "adjacent_complementary_angle(1,KML,LMJ)",
+    "mirror_similar_triangle_judgment_aa(1,LKM,JLK)",
+    "mirror_similar_triangle_property_angle_equal(1,LKM,JLK)",
+    "similar_triangle_judgment_aa(1,LMJ,KML)",
+    "similar_triangle_property_line_ratio(1,LMJ,KML)",
+    "similar_triangle_property_line_ratio(1,JLM,LKM)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,KML,LMJ)": [
+      "similar_triangle_judgment_aa(1,LMJ,KML)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,LKM,JLK)": [
+      "mirror_similar_triangle_property_angle_equal(1,LKM,JLK)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,LKM,JLK)": [
+      "similar_triangle_judgment_aa(1,LMJ,KML)"
+    ],
+    "similar_triangle_judgment_aa(1,LMJ,KML)": [
+      "similar_triangle_property_line_ratio(1,LMJ,KML)",
+      "similar_triangle_property_line_ratio(1,JLM,LKM)"
+    ],
+    "similar_triangle_property_line_ratio(1,LMJ,KML)": [],
+    "similar_triangle_property_line_ratio(1,JLM,LKM)": [],
+    "START": [
+      "adjacent_complementary_angle(1,KML,LMJ)",
+      "mirror_similar_triangle_judgment_aa(1,LKM,JLK)"
+    ]
+  }
 }

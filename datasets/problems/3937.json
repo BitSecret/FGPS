@@ -28,17 +28,54 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(AOE,O)",
-    "diameter_of_circle_property_right_angle(ABE,O)",
-    "adjacent_complementary_angle(EOB,BOA)",
-    "arc_property_center_angle(OCD,O)",
-    "arc_property_center_angle(OBE,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "line_addition(AO,OE)",
-    "congruent_arc_judgment_measure_equal(OCD,OBE)",
-    "congruent_arc_property_chord_equal(OCD,OBE)",
-    "right_triangle_judgment_angle(ABE)",
-    "right_triangle_property_pythagorean(ABE)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,AOE,O)",
+    "diameter_of_circle_property_right_angle(1,ABE,O)",
+    "adjacent_complementary_angle(1,EOB,BOA)",
+    "arc_property_center_angle(1,OCD,O)",
+    "arc_property_center_angle(1,OBE,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "line_addition(1,AO,OE)",
+    "congruent_arc_judgment_measure_equal(1,OCD,OBE)",
+    "congruent_arc_property_chord_equal(1,OCD,OBE)",
+    "right_triangle_judgment_angle(1,ABE)",
+    "right_triangle_property_pythagorean(1,ABE)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,AOE,O)": [
+      "diameter_of_circle_property_right_angle(1,ABE,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,ABE,O)": [
+      "right_triangle_judgment_angle(1,ABE)"
+    ],
+    "adjacent_complementary_angle(1,EOB,BOA)": [
+      "congruent_arc_judgment_measure_equal(1,OCD,OBE)"
+    ],
+    "arc_property_center_angle(1,OCD,O)": [
+      "congruent_arc_judgment_measure_equal(1,OCD,OBE)"
+    ],
+    "arc_property_center_angle(1,OBE,O)": [
+      "congruent_arc_judgment_measure_equal(1,OCD,OBE)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,OE,O)": [],
+    "line_addition(1,AO,OE)": [],
+    "congruent_arc_judgment_measure_equal(1,OCD,OBE)": [
+      "congruent_arc_property_chord_equal(1,OCD,OBE)"
+    ],
+    "congruent_arc_property_chord_equal(1,OCD,OBE)": [],
+    "right_triangle_judgment_angle(1,ABE)": [
+      "right_triangle_property_pythagorean(1,ABE)"
+    ],
+    "right_triangle_property_pythagorean(1,ABE)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,AOE,O)",
+      "adjacent_complementary_angle(1,EOB,BOA)",
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_property_center_angle(1,OBE,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "line_addition(1,AO,OE)"
+    ]
+  }
 }

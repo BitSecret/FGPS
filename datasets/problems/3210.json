@@ -27,10 +27,26 @@
   "goal_cdl": "Value(MeasureOfAngle(CNM))",
   "problem_answer": "112",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,M)",
-    "parallel_property_collinear_extend(DC,BM,N)",
-    "parallel_property_corresponding_angle(MB,ND,E)",
-    "flat_angle(CND)",
-    "angle_addition(CNM,MND)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,M)",
+    "parallel_property_collinear_extend(3,DC,BM,N)",
+    "parallel_property_corresponding_angle(1,MB,ND,E)",
+    "flat_angle(1,CND)",
+    "angle_addition(1,CNM,MND)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,M)": [
+      "parallel_property_collinear_extend(3,DC,BM,N)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BM,N)": [
+      "parallel_property_corresponding_angle(1,MB,ND,E)"
+    ],
+    "parallel_property_corresponding_angle(1,MB,ND,E)": [],
+    "flat_angle(1,CND)": [],
+    "angle_addition(1,CNM,MND)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,M)",
+      "flat_angle(1,CND)",
+      "angle_addition(1,CNM,MND)"
+    ]
+  }
 }

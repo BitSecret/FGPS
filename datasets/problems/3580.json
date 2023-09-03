@@ -26,12 +26,34 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "14",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BNA,AND)",
-    "mirror_congruent_triangle_judgment_aas(BNA,DAN)",
-    "mirror_congruent_triangle_property_line_equal(NAB,NDA)",
-    "mirror_congruent_triangle_property_line_equal(ABN,AND)",
-    "midsegment_of_triangle_judgment_midpoint(MN,BCD)",
-    "midsegment_of_triangle_property_length(MN,BCD)",
-    "line_addition(AD,DC)"
-  ]
+    "adjacent_complementary_angle(1,BNA,AND)",
+    "mirror_congruent_triangle_judgment_aas(2,BNA,DAN)",
+    "mirror_congruent_triangle_property_line_equal(1,NAB,NDA)",
+    "mirror_congruent_triangle_property_line_equal(1,ABN,AND)",
+    "midsegment_of_triangle_judgment_midpoint(1,MN,BCD)",
+    "midsegment_of_triangle_property_length(1,MN,BCD)",
+    "line_addition(1,AD,DC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BNA,AND)": [
+      "mirror_congruent_triangle_judgment_aas(2,BNA,DAN)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(2,BNA,DAN)": [
+      "mirror_congruent_triangle_property_line_equal(1,NAB,NDA)",
+      "mirror_congruent_triangle_property_line_equal(1,ABN,AND)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,NAB,NDA)": [],
+    "mirror_congruent_triangle_property_line_equal(1,ABN,AND)": [
+      "midsegment_of_triangle_judgment_midpoint(1,MN,BCD)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,MN,BCD)": [
+      "midsegment_of_triangle_property_length(1,MN,BCD)"
+    ],
+    "midsegment_of_triangle_property_length(1,MN,BCD)": [],
+    "line_addition(1,AD,DC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BNA,AND)",
+      "line_addition(1,AD,DC)"
+    ]
+  }
 }

@@ -27,11 +27,30 @@
   "goal_cdl": "Value(LengthOfLine(BD))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AEO,OEC)",
-    "mirror_congruent_triangle_judgment_aas(OAE,OBA)",
-    "mirror_congruent_triangle_judgment_aas(OCD,OEC)",
-    "mirror_congruent_triangle_property_line_equal(AEO,AOB)",
-    "mirror_congruent_triangle_property_line_equal(CDO,COE)",
-    "line_addition(BO,OD)"
-  ]
+    "adjacent_complementary_angle(1,AEO,OEC)",
+    "mirror_congruent_triangle_judgment_aas(1,OAE,OBA)",
+    "mirror_congruent_triangle_judgment_aas(1,OCD,OEC)",
+    "mirror_congruent_triangle_property_line_equal(1,AEO,AOB)",
+    "mirror_congruent_triangle_property_line_equal(1,CDO,COE)",
+    "line_addition(1,BO,OD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AEO,OEC)": [
+      "mirror_congruent_triangle_judgment_aas(1,OCD,OEC)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,OAE,OBA)": [
+      "mirror_congruent_triangle_property_line_equal(1,AEO,AOB)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,OCD,OEC)": [
+      "mirror_congruent_triangle_property_line_equal(1,CDO,COE)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,AEO,AOB)": [],
+    "mirror_congruent_triangle_property_line_equal(1,CDO,COE)": [],
+    "line_addition(1,BO,OD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AEO,OEC)",
+      "mirror_congruent_triangle_judgment_aas(1,OAE,OBA)",
+      "line_addition(1,BO,OD)"
+    ]
+  }
 }

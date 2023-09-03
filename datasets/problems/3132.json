@@ -21,9 +21,21 @@
   "goal_cdl": "Value(MeasureOfAngle(BCF))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "congruent_triangle_property_angle_equal(ABC,FEC)",
-    "congruent_triangle_property_angle_equal(BCA,ECF)",
-    "triangle_property_angle_sum(ECF)",
-    "angle_addition(BCE,ECF)"
-  ]
+    "congruent_triangle_property_angle_equal(1,ABC,FEC)",
+    "congruent_triangle_property_angle_equal(1,BCA,ECF)",
+    "triangle_property_angle_sum(1,ECF)",
+    "angle_addition(1,BCE,ECF)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_triangle_property_angle_equal(1,ABC,FEC)": [],
+    "congruent_triangle_property_angle_equal(1,BCA,ECF)": [],
+    "triangle_property_angle_sum(1,ECF)": [],
+    "angle_addition(1,BCE,ECF)": [],
+    "START": [
+      "congruent_triangle_property_angle_equal(1,ABC,FEC)",
+      "congruent_triangle_property_angle_equal(1,BCA,ECF)",
+      "triangle_property_angle_sum(1,ECF)",
+      "angle_addition(1,BCE,ECF)"
+    ]
+  }
 }

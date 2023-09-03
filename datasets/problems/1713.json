@@ -33,16 +33,50 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(EBG),AreaOfTriangle(CGA),AreaOfQuadrilateral(BDFA)))",
   "problem_answer": "91.17691453623979",
   "theorem_seqs": [
-    "parallelogram_area_formula_sine(DFAB)",
-    "isosceles_triangle_judgment_line_equal(EBG)",
-    "isosceles_triangle_judgment_line_equal(BGE)",
-    "equilateral_triangle_judgment_isosceles_and_isosceles(EBG)",
-    "equilateral_triangle_property_angle(EBG)",
-    "triangle_area_formula_sine(EBG)",
-    "isosceles_triangle_judgment_line_equal(CGA)",
-    "isosceles_triangle_judgment_line_equal(GAC)",
-    "equilateral_triangle_judgment_isosceles_and_isosceles(CGA)",
-    "equilateral_triangle_property_angle(CGA)",
-    "triangle_area_formula_sine(CGA)"
-  ]
+    "parallelogram_area_formula_sine(1,DFAB)",
+    "isosceles_triangle_judgment_line_equal(1,EBG)",
+    "isosceles_triangle_judgment_line_equal(1,BGE)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,EBG)",
+    "equilateral_triangle_property_angle(1,EBG)",
+    "triangle_area_formula_sine(1,EBG)",
+    "isosceles_triangle_judgment_line_equal(1,CGA)",
+    "isosceles_triangle_judgment_line_equal(1,GAC)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,CGA)",
+    "equilateral_triangle_property_angle(1,CGA)",
+    "triangle_area_formula_sine(1,CGA)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_area_formula_sine(1,DFAB)": [],
+    "isosceles_triangle_judgment_line_equal(1,EBG)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,EBG)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,BGE)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,EBG)"
+    ],
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,EBG)": [
+      "equilateral_triangle_property_angle(1,EBG)"
+    ],
+    "equilateral_triangle_property_angle(1,EBG)": [],
+    "triangle_area_formula_sine(1,EBG)": [],
+    "isosceles_triangle_judgment_line_equal(1,CGA)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,CGA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,GAC)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,CGA)"
+    ],
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,CGA)": [
+      "equilateral_triangle_property_angle(1,CGA)"
+    ],
+    "equilateral_triangle_property_angle(1,CGA)": [],
+    "triangle_area_formula_sine(1,CGA)": [],
+    "START": [
+      "parallelogram_area_formula_sine(1,DFAB)",
+      "isosceles_triangle_judgment_line_equal(1,EBG)",
+      "isosceles_triangle_judgment_line_equal(1,BGE)",
+      "triangle_area_formula_sine(1,EBG)",
+      "isosceles_triangle_judgment_line_equal(1,CGA)",
+      "isosceles_triangle_judgment_line_equal(1,GAC)",
+      "triangle_area_formula_sine(1,CGA)"
+    ]
+  }
 }

@@ -28,8 +28,20 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "6",
   "theorem_seqs": [
-    "parallel_judgment_per_per(FD,EC)",
-    "parallelogram_judgment_parallel_and_parallel(DFEC)",
-    "parallelogram_property_opposite_line_equal(FECD)"
-  ]
+    "parallel_judgment_per_per(1,FD,EC)",
+    "parallelogram_judgment_parallel_and_parallel(1,DFEC)",
+    "parallelogram_property_opposite_line_equal(1,FECD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_per_per(1,FD,EC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DFEC)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,DFEC)": [
+      "parallelogram_property_opposite_line_equal(1,FECD)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,FECD)": [],
+    "START": [
+      "parallel_judgment_per_per(1,FD,EC)"
+    ]
+  }
 }

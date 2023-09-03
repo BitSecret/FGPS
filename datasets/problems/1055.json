@@ -21,7 +21,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "6",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_sss(MCA,MAD)",
-    "mirror_congruent_triangle_property_angle_equal(MCA,MAD)"
-  ]
+    "mirror_congruent_triangle_judgment_sss(1,MCA,MAD)",
+    "mirror_congruent_triangle_property_angle_equal(1,MCA,MAD)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_sss(1,MCA,MAD)": [
+      "mirror_congruent_triangle_property_angle_equal(1,MCA,MAD)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,MCA,MAD)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_sss(1,MCA,MAD)"
+    ]
+  }
 }

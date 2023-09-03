@@ -25,8 +25,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "26",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(QP,N,N)",
-    "right_triangle_judgment_angle(QPN)",
-    "right_triangle_property_pythagorean(QPN)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,QP,N,N)",
+    "right_triangle_judgment_angle(1,QPN)",
+    "right_triangle_property_pythagorean(1,QPN)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,QP,N,N)": [
+      "right_triangle_judgment_angle(1,QPN)"
+    ],
+    "right_triangle_judgment_angle(1,QPN)": [
+      "right_triangle_property_pythagorean(1,QPN)"
+    ],
+    "right_triangle_property_pythagorean(1,QPN)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,QP,N,N)"
+    ]
+  }
 }

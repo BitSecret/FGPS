@@ -27,9 +27,22 @@
   "goal_cdl": "Value(LengthOfLine(XY))",
   "problem_answer": "3*sqrt(2)",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(YZWX,T)",
-    "line_addition(YT,TW)",
-    "right_triangle_judgment_angle(WXY)",
-    "right_triangle_property_pythagorean(WXY)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+    "line_addition(1,YT,TW)",
+    "right_triangle_judgment_angle(1,WXY)",
+    "right_triangle_property_pythagorean(1,WXY)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,YZWX,T)": [],
+    "line_addition(1,YT,TW)": [],
+    "right_triangle_judgment_angle(1,WXY)": [
+      "right_triangle_property_pythagorean(1,WXY)"
+    ],
+    "right_triangle_property_pythagorean(1,WXY)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "right_triangle_judgment_angle(1,WXY)"
+    ]
+  }
 }

@@ -32,7 +32,16 @@
   "goal_cdl": "Value(LengthOfLine(PB))",
   "problem_answer": "7.08",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(PBA)",
-    "right_triangle_property_pythagorean(PBA)"
-  ]
+    "right_triangle_judgment_angle(1,PBA)",
+    "right_triangle_property_pythagorean(1,PBA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,PBA)": [
+      "right_triangle_property_pythagorean(1,PBA)"
+    ],
+    "right_triangle_property_pythagorean(1,PBA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,PBA)"
+    ]
+  }
 }

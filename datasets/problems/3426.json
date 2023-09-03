@@ -26,8 +26,19 @@
   "goal_cdl": "Value(MeasureOfAngle(DFB))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "parallel_property_ipsilateral_internal_angle(BA,ED)",
-    "mirror_congruent_triangle_judgment_sas(BDF,BED)",
-    "mirror_congruent_triangle_property_angle_equal(FBD,EDB)"
-  ]
+    "parallel_property_ipsilateral_internal_angle(1,BA,ED)",
+    "mirror_congruent_triangle_judgment_sas(1,BDF,BED)",
+    "mirror_congruent_triangle_property_angle_equal(1,FBD,EDB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_ipsilateral_internal_angle(1,BA,ED)": [],
+    "mirror_congruent_triangle_judgment_sas(1,BDF,BED)": [
+      "mirror_congruent_triangle_property_angle_equal(1,FBD,EDB)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,FBD,EDB)": [],
+    "START": [
+      "parallel_property_ipsilateral_internal_angle(1,BA,ED)",
+      "mirror_congruent_triangle_judgment_sas(1,BDF,BED)"
+    ]
+  }
 }

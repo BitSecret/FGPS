@@ -32,21 +32,70 @@
   "goal_cdl": "Value(Add(AreaOfQuadrilateral(BCPD),AreaOfTriangle(APE)))",
   "problem_answer": "474",
   "theorem_seqs": [
-    "line_addition(BF,FH)",
-    "line_addition(CP,PE)",
-    "parallel_property_collinear_extend(EC,DB,P)",
-    "parallel_property_collinear_extend(DA,BC,P)",
-    "parallel_property_collinear_extend(PH,AF,E)",
-    "adjacent_complementary_angle(CHF,FHP)",
-    "perpendicular_judgment_angle(HE,AE)",
-    "perpendicular_judgment_angle(FH,EH)",
-    "parallel_judgment_per_per(HF,EA)",
-    "parallelogram_judgment_parallel_and_parallel(BCPD)",
-    "parallelogram_judgment_parallel_and_parallel(AFHE)",
-    "parallelogram_property_opposite_line_equal(FHEA)",
-    "parallelogram_property_opposite_line_equal(DBCP)",
-    "altitude_of_quadrilateral_judgment_left_vertex(BH,BCPD)",
-    "parallelogram_area_formula_common(BCPD)",
-    "triangle_area_formula_sine(EAP)"
-  ]
+    "line_addition(1,BF,FH)",
+    "line_addition(1,CP,PE)",
+    "parallel_property_collinear_extend(3,EC,DB,P)",
+    "parallel_property_collinear_extend(2,DA,BC,P)",
+    "parallel_property_collinear_extend(1,PH,AF,E)",
+    "adjacent_complementary_angle(1,CHF,FHP)",
+    "perpendicular_judgment_angle(1,HE,AE)",
+    "perpendicular_judgment_angle(1,FH,EH)",
+    "parallel_judgment_per_per(1,HF,EA)",
+    "parallelogram_judgment_parallel_and_parallel(1,BCPD)",
+    "parallelogram_judgment_parallel_and_parallel(1,AFHE)",
+    "parallelogram_property_opposite_line_equal(1,FHEA)",
+    "parallelogram_property_opposite_line_equal(1,DBCP)",
+    "altitude_of_quadrilateral_judgment_left_vertex(1,BH,BCPD)",
+    "parallelogram_area_formula_common(1,BCPD)",
+    "triangle_area_formula_sine(1,EAP)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,BF,FH)": [],
+    "line_addition(1,CP,PE)": [],
+    "parallel_property_collinear_extend(3,EC,DB,P)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BCPD)"
+    ],
+    "parallel_property_collinear_extend(2,DA,BC,P)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BCPD)"
+    ],
+    "parallel_property_collinear_extend(1,PH,AF,E)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AFHE)"
+    ],
+    "adjacent_complementary_angle(1,CHF,FHP)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(1,BH,BCPD)"
+    ],
+    "perpendicular_judgment_angle(1,HE,AE)": [
+      "parallel_judgment_per_per(1,HF,EA)"
+    ],
+    "perpendicular_judgment_angle(1,FH,EH)": [
+      "parallel_judgment_per_per(1,HF,EA)"
+    ],
+    "parallel_judgment_per_per(1,HF,EA)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AFHE)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,BCPD)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(1,BH,BCPD)",
+      "parallelogram_area_formula_common(1,BCPD)",
+      "parallelogram_property_opposite_line_equal(1,DBCP)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,AFHE)": [
+      "parallelogram_property_opposite_line_equal(1,FHEA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,FHEA)": [],
+    "parallelogram_property_opposite_line_equal(1,DBCP)": [],
+    "altitude_of_quadrilateral_judgment_left_vertex(1,BH,BCPD)": [],
+    "parallelogram_area_formula_common(1,BCPD)": [],
+    "triangle_area_formula_sine(1,EAP)": [],
+    "START": [
+      "line_addition(1,BF,FH)",
+      "line_addition(1,CP,PE)",
+      "parallel_property_collinear_extend(3,EC,DB,P)",
+      "parallel_property_collinear_extend(2,DA,BC,P)",
+      "parallel_property_collinear_extend(1,PH,AF,E)",
+      "adjacent_complementary_angle(1,CHF,FHP)",
+      "perpendicular_judgment_angle(1,HE,AE)",
+      "perpendicular_judgment_angle(1,FH,EH)",
+      "triangle_area_formula_sine(1,EAP)"
+    ]
+  }
 }

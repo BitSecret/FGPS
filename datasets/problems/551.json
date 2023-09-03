@@ -27,8 +27,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "57",
   "theorem_seqs": [
-    "midsegment_of_triangle_property_parallel(PJ,KML)",
-    "parallel_property_collinear_extend(LM,JP,H)",
-    "parallel_property_alternate_interior_angle(LH,JP)"
-  ]
+    "midsegment_of_triangle_property_parallel(1,PJ,KML)",
+    "parallel_property_collinear_extend(3,LM,JP,H)",
+    "parallel_property_alternate_interior_angle(2,LH,JP)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_property_parallel(1,PJ,KML)": [
+      "parallel_property_collinear_extend(3,LM,JP,H)"
+    ],
+    "parallel_property_collinear_extend(3,LM,JP,H)": [
+      "parallel_property_alternate_interior_angle(2,LH,JP)"
+    ],
+    "parallel_property_alternate_interior_angle(2,LH,JP)": [],
+    "START": [
+      "midsegment_of_triangle_property_parallel(1,PJ,KML)"
+    ]
+  }
 }

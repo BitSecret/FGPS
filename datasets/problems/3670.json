@@ -22,8 +22,18 @@
   "goal_cdl": "Value(MeasureOfAngle(ECD))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "angle_addition(CEF,FEA)",
-    "parallel_property_ipsilateral_internal_angle(EF,AB)",
-    "parallel_property_alternate_interior_angle(FE,CD)"
-  ]
+    "angle_addition(1,CEF,FEA)",
+    "parallel_property_ipsilateral_internal_angle(1,EF,AB)",
+    "parallel_property_alternate_interior_angle(2,FE,CD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,CEF,FEA)": [],
+    "parallel_property_ipsilateral_internal_angle(1,EF,AB)": [],
+    "parallel_property_alternate_interior_angle(2,FE,CD)": [],
+    "START": [
+      "angle_addition(1,CEF,FEA)",
+      "parallel_property_ipsilateral_internal_angle(1,EF,AB)",
+      "parallel_property_alternate_interior_angle(2,FE,CD)"
+    ]
+  }
 }

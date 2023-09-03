@@ -18,7 +18,16 @@
   "goal_cdl": "Value(MeasureOfAngle(CDA))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "parallel_judgment_alternate_interior_angle(BA,CD)",
-    "parallel_property_ipsilateral_internal_angle(DC,AB)"
-  ]
+    "parallel_judgment_alternate_interior_angle(1,BA,CD)",
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_alternate_interior_angle(1,BA,CD)": [
+      "parallel_property_ipsilateral_internal_angle(1,DC,AB)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)": [],
+    "START": [
+      "parallel_judgment_alternate_interior_angle(1,BA,CD)"
+    ]
+  }
 }

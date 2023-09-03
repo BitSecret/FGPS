@@ -27,7 +27,15 @@
   "goal_cdl": "Value(Sub(AreaOfSector(ABD),AreaOfSector(OBA)))",
   "problem_answer": "6.28",
   "theorem_seqs": [
-    "sector_area_formula(ABD)",
-    "sector_area_formula(OBA)"
-  ]
+    "sector_area_formula(1,ABD)",
+    "sector_area_formula(1,OBA)"
+  ],
+  "theorem_seq_dag": {
+    "sector_area_formula(1,ABD)": [],
+    "sector_area_formula(1,OBA)": [],
+    "START": [
+      "sector_area_formula(1,ABD)",
+      "sector_area_formula(1,OBA)"
+    ]
+  }
 }

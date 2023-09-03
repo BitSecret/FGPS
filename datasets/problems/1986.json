@@ -20,9 +20,23 @@
   "goal_cdl": "Value(LengthOfLine(XT))",
   "problem_answer": "7",
   "theorem_seqs": [
-    "adjacent_complementary_angle(TXS,SXR)",
-    "mirror_congruent_triangle_judgment_hl(TXS,RSX)",
-    "mirror_congruent_triangle_property_line_equal(STX,SXR)",
-    "line_addition(RX,XT)"
-  ]
+    "adjacent_complementary_angle(1,TXS,SXR)",
+    "mirror_congruent_triangle_judgment_hl(1,TXS,RSX)",
+    "mirror_congruent_triangle_property_line_equal(1,STX,SXR)",
+    "line_addition(1,RX,XT)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,TXS,SXR)": [
+      "mirror_congruent_triangle_judgment_hl(1,TXS,RSX)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,TXS,RSX)": [
+      "mirror_congruent_triangle_property_line_equal(1,STX,SXR)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,STX,SXR)": [],
+    "line_addition(1,RX,XT)": [],
+    "START": [
+      "adjacent_complementary_angle(1,TXS,SXR)",
+      "line_addition(1,RX,XT)"
+    ]
+  }
 }

@@ -38,23 +38,83 @@
   "goal_cdl": "Value(LengthOfLine(MN))",
   "problem_answer": "3/2",
   "theorem_seqs": [
-    "triangle_perimeter_formula(ABC)",
-    "adjacent_complementary_angle(FNB,BNA)",
-    "adjacent_complementary_angle(AMC,CMG)",
-    "triangle_property_angle_sum(ABN)",
-    "triangle_property_angle_sum(FNB)",
-    "triangle_property_angle_sum(AMC)",
-    "triangle_property_angle_sum(CMG)",
-    "isosceles_triangle_judgment_angle_equal(BFA)",
-    "isosceles_triangle_judgment_angle_equal(CAG)",
-    "altitude_of_triangle_judgment(BN,BFA)",
-    "altitude_of_triangle_judgment(CM,CAG)",
-    "isosceles_triangle_property_line_coincidence(BFA,N)",
-    "isosceles_triangle_property_line_coincidence(CAG,M)",
-    "midsegment_of_triangle_judgment_midpoint(MN,AGF)",
-    "midsegment_of_triangle_property_length(MN,AGF)",
-    "line_addition(BG,GF)",
-    "line_addition(BF,FC)",
-    "line_addition(GF,FC)"
-  ]
+    "triangle_perimeter_formula(1,ABC)",
+    "adjacent_complementary_angle(1,FNB,BNA)",
+    "adjacent_complementary_angle(1,AMC,CMG)",
+    "triangle_property_angle_sum(1,ABN)",
+    "triangle_property_angle_sum(1,FNB)",
+    "triangle_property_angle_sum(1,AMC)",
+    "triangle_property_angle_sum(1,CMG)",
+    "isosceles_triangle_judgment_angle_equal(1,BFA)",
+    "isosceles_triangle_judgment_angle_equal(1,CAG)",
+    "altitude_of_triangle_judgment(1,BN,BFA)",
+    "altitude_of_triangle_judgment(1,CM,CAG)",
+    "isosceles_triangle_property_line_coincidence(1,BFA,N)",
+    "isosceles_triangle_property_line_coincidence(1,CAG,M)",
+    "midsegment_of_triangle_judgment_midpoint(1,MN,AGF)",
+    "midsegment_of_triangle_property_length(1,MN,AGF)",
+    "line_addition(1,BG,GF)",
+    "line_addition(1,BF,FC)",
+    "line_addition(1,GF,FC)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_perimeter_formula(1,ABC)": [],
+    "adjacent_complementary_angle(1,FNB,BNA)": [
+      "isosceles_triangle_judgment_angle_equal(1,BFA)",
+      "altitude_of_triangle_judgment(1,BN,BFA)"
+    ],
+    "adjacent_complementary_angle(1,AMC,CMG)": [
+      "isosceles_triangle_judgment_angle_equal(1,CAG)"
+    ],
+    "triangle_property_angle_sum(1,ABN)": [
+      "isosceles_triangle_judgment_angle_equal(1,BFA)"
+    ],
+    "triangle_property_angle_sum(1,FNB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BFA)"
+    ],
+    "triangle_property_angle_sum(1,AMC)": [
+      "isosceles_triangle_judgment_angle_equal(1,CAG)"
+    ],
+    "triangle_property_angle_sum(1,CMG)": [
+      "isosceles_triangle_judgment_angle_equal(1,CAG)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BFA)": [
+      "isosceles_triangle_property_line_coincidence(1,BFA,N)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,CAG)": [
+      "isosceles_triangle_property_line_coincidence(1,CAG,M)"
+    ],
+    "altitude_of_triangle_judgment(1,BN,BFA)": [
+      "isosceles_triangle_property_line_coincidence(1,BFA,N)"
+    ],
+    "altitude_of_triangle_judgment(1,CM,CAG)": [
+      "isosceles_triangle_property_line_coincidence(1,CAG,M)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,BFA,N)": [
+      "midsegment_of_triangle_judgment_midpoint(1,MN,AGF)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,CAG,M)": [
+      "midsegment_of_triangle_judgment_midpoint(1,MN,AGF)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,MN,AGF)": [
+      "midsegment_of_triangle_property_length(1,MN,AGF)"
+    ],
+    "midsegment_of_triangle_property_length(1,MN,AGF)": [],
+    "line_addition(1,BG,GF)": [],
+    "line_addition(1,BF,FC)": [],
+    "line_addition(1,GF,FC)": [],
+    "START": [
+      "triangle_perimeter_formula(1,ABC)",
+      "adjacent_complementary_angle(1,FNB,BNA)",
+      "adjacent_complementary_angle(1,AMC,CMG)",
+      "triangle_property_angle_sum(1,ABN)",
+      "triangle_property_angle_sum(1,FNB)",
+      "triangle_property_angle_sum(1,AMC)",
+      "triangle_property_angle_sum(1,CMG)",
+      "altitude_of_triangle_judgment(1,CM,CAG)",
+      "line_addition(1,BG,GF)",
+      "line_addition(1,BF,FC)",
+      "line_addition(1,GF,FC)"
+    ]
+  }
 }

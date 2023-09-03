@@ -23,7 +23,15 @@
   "goal_cdl": "Value(MeasureOfAngle(BOE))",
   "problem_answer": "145",
   "theorem_seqs": [
-    "angle_addition(EOA,AOC)",
-    "adjacent_complementary_angle(BOE,EOA)"
-  ]
+    "angle_addition(1,EOA,AOC)",
+    "adjacent_complementary_angle(1,BOE,EOA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,EOA,AOC)": [],
+    "adjacent_complementary_angle(1,BOE,EOA)": [],
+    "START": [
+      "angle_addition(1,EOA,AOC)",
+      "adjacent_complementary_angle(1,BOE,EOA)"
+    ]
+  }
 }

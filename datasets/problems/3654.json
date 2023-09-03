@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(FHC))",
   "problem_answer": "75",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,G)",
-    "parallel_property_collinear_extend(DC,BG,H)",
-    "parallel_property_ipsilateral_internal_angle(GB,HD)",
-    "vertical_angle(EHD,FHC)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,G)",
+    "parallel_property_collinear_extend(3,DC,BG,H)",
+    "parallel_property_ipsilateral_internal_angle(1,GB,HD)",
+    "vertical_angle(1,EHD,FHC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,G)": [
+      "parallel_property_collinear_extend(3,DC,BG,H)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BG,H)": [
+      "parallel_property_ipsilateral_internal_angle(1,GB,HD)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,GB,HD)": [],
+    "vertical_angle(1,EHD,FHC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,G)",
+      "vertical_angle(1,EHD,FHC)"
+    ]
+  }
 }

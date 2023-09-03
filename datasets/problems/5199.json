@@ -27,13 +27,40 @@
   "goal_cdl": "Value(MeasureOfAngle(MBD))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(EC,E)",
-    "radius_of_circle_property_length_equal(EB,E)",
-    "radius_of_circle_property_length_equal(ED,E)",
-    "mirror_congruent_triangle_judgment_sss(CME,DEM)",
-    "mirror_congruent_triangle_property_angle_equal(ECM,EMD)",
-    "isosceles_triangle_judgment_line_equal(EBD)",
-    "isosceles_triangle_property_angle_equal(EBD)",
-    "triangle_property_angle_sum(EBD)"
-  ]
+    "radius_of_circle_property_length_equal(1,EC,E)",
+    "radius_of_circle_property_length_equal(1,EB,E)",
+    "radius_of_circle_property_length_equal(1,ED,E)",
+    "mirror_congruent_triangle_judgment_sss(1,CME,DEM)",
+    "mirror_congruent_triangle_property_angle_equal(1,ECM,EMD)",
+    "isosceles_triangle_judgment_line_equal(1,EBD)",
+    "isosceles_triangle_property_angle_equal(1,EBD)",
+    "triangle_property_angle_sum(1,EBD)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,EC,E)": [
+      "mirror_congruent_triangle_judgment_sss(1,CME,DEM)"
+    ],
+    "radius_of_circle_property_length_equal(1,EB,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EBD)"
+    ],
+    "radius_of_circle_property_length_equal(1,ED,E)": [
+      "mirror_congruent_triangle_judgment_sss(1,CME,DEM)",
+      "isosceles_triangle_judgment_line_equal(1,EBD)"
+    ],
+    "mirror_congruent_triangle_judgment_sss(1,CME,DEM)": [
+      "mirror_congruent_triangle_property_angle_equal(1,ECM,EMD)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,ECM,EMD)": [],
+    "isosceles_triangle_judgment_line_equal(1,EBD)": [
+      "isosceles_triangle_property_angle_equal(1,EBD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EBD)": [],
+    "triangle_property_angle_sum(1,EBD)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "radius_of_circle_property_length_equal(1,EB,E)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "triangle_property_angle_sum(1,EBD)"
+    ]
+  }
 }

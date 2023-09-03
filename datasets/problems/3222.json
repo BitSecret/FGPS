@@ -27,10 +27,26 @@
   "goal_cdl": "Value(MeasureOfAngle(CHG))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,G)",
-    "parallel_property_collinear_extend(DC,BG,H)",
-    "parallel_property_corresponding_angle(GB,HD,E)",
-    "flat_angle(CHD)",
-    "angle_addition(CHG,GHD)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,G)",
+    "parallel_property_collinear_extend(3,DC,BG,H)",
+    "parallel_property_corresponding_angle(1,GB,HD,E)",
+    "flat_angle(1,CHD)",
+    "angle_addition(1,CHG,GHD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,G)": [
+      "parallel_property_collinear_extend(3,DC,BG,H)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BG,H)": [
+      "parallel_property_corresponding_angle(1,GB,HD,E)"
+    ],
+    "parallel_property_corresponding_angle(1,GB,HD,E)": [],
+    "flat_angle(1,CHD)": [],
+    "angle_addition(1,CHG,GHD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,G)",
+      "flat_angle(1,CHD)",
+      "angle_addition(1,CHG,GHD)"
+    ]
+  }
 }

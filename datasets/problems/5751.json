@@ -38,14 +38,42 @@
   "goal_cdl": "Value(LengthOfLine(GH))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OC,O)",
-    "parallel_judgment_ipsilateral_internal_angle(DC,OE)",
-    "parallel_judgment_ipsilateral_internal_angle(OD,EC)",
-    "parallelogram_judgment_parallel_and_parallel(CDOE)",
-    "rectangle_judgment_right_angle(CDOE)",
-    "rectangle_property_diagonal_equal(CDOE)",
-    "similar_triangle_judgment_sas(CHG,CDE)",
-    "similar_triangle_property_line_ratio(GCH,ECD)",
-    "similar_triangle_property_line_ratio(CHG,CDE)"
-  ]
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "parallel_judgment_ipsilateral_internal_angle(1,DC,OE)",
+    "parallel_judgment_ipsilateral_internal_angle(1,OD,EC)",
+    "parallelogram_judgment_parallel_and_parallel(1,CDOE)",
+    "rectangle_judgment_right_angle(1,CDOE)",
+    "rectangle_property_diagonal_equal(1,CDOE)",
+    "similar_triangle_judgment_sas(1,CHG,CDE)",
+    "similar_triangle_property_line_ratio(1,GCH,ECD)",
+    "similar_triangle_property_line_ratio(1,CHG,CDE)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OC,O)": [],
+    "parallel_judgment_ipsilateral_internal_angle(1,DC,OE)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CDOE)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,OD,EC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CDOE)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,CDOE)": [
+      "rectangle_judgment_right_angle(1,CDOE)"
+    ],
+    "rectangle_judgment_right_angle(1,CDOE)": [
+      "rectangle_property_diagonal_equal(1,CDOE)"
+    ],
+    "rectangle_property_diagonal_equal(1,CDOE)": [],
+    "similar_triangle_judgment_sas(1,CHG,CDE)": [
+      "similar_triangle_property_line_ratio(1,CHG,CDE)",
+      "similar_triangle_property_line_ratio(1,GCH,ECD)"
+    ],
+    "similar_triangle_property_line_ratio(1,GCH,ECD)": [],
+    "similar_triangle_property_line_ratio(1,CHG,CDE)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "parallel_judgment_ipsilateral_internal_angle(1,DC,OE)",
+      "parallel_judgment_ipsilateral_internal_angle(1,OD,EC)",
+      "similar_triangle_judgment_sas(1,CHG,CDE)"
+    ]
+  }
 }

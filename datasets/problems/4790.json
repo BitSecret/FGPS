@@ -23,9 +23,21 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "2*sqrt(3)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(BA,O,O)",
-    "triangle_property_angle_sum(OAB)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "sine_theorem(ABO)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,BA,O,O)",
+    "triangle_property_angle_sum(1,OAB)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "sine_theorem(1,ABO)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,BA,O,O)": [],
+    "triangle_property_angle_sum(1,OAB)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "sine_theorem(1,ABO)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,BA,O,O)",
+      "triangle_property_angle_sum(1,OAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "sine_theorem(1,ABO)"
+    ]
+  }
 }

@@ -26,10 +26,24 @@
   "goal_cdl": "Value(MeasureOfArc(OCB))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "circle_property_angle_of_osculation(OAC,P)",
-    "arc_property_circumference_angle_external(OAC,B)",
-    "arc_property_circumference_angle_external(OCB,A)",
-    "adjacent_complementary_angle(PCA,ACB)",
-    "triangle_property_angle_sum(BAC)"
-  ]
+    "circle_property_angle_of_osculation(1,OAC,P)",
+    "arc_property_circumference_angle_external(1,OAC,B)",
+    "arc_property_circumference_angle_external(1,OCB,A)",
+    "adjacent_complementary_angle(1,PCA,ACB)",
+    "triangle_property_angle_sum(1,BAC)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_angle_of_osculation(1,OAC,P)": [],
+    "arc_property_circumference_angle_external(1,OAC,B)": [],
+    "arc_property_circumference_angle_external(1,OCB,A)": [],
+    "adjacent_complementary_angle(1,PCA,ACB)": [],
+    "triangle_property_angle_sum(1,BAC)": [],
+    "START": [
+      "circle_property_angle_of_osculation(1,OAC,P)",
+      "arc_property_circumference_angle_external(1,OAC,B)",
+      "arc_property_circumference_angle_external(1,OCB,A)",
+      "adjacent_complementary_angle(1,PCA,ACB)",
+      "triangle_property_angle_sum(1,BAC)"
+    ]
+  }
 }

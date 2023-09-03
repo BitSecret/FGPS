@@ -23,11 +23,31 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "20*sqrt(3)",
   "theorem_seqs": [
-    "angle_addition(ABE,EBD)",
-    "triangle_property_angle_sum(EAB)",
-    "triangle_property_angle_sum(BDE)",
-    "sine_theorem(EAB)",
-    "sine_theorem(ABE)",
-    "sine_theorem(BDE)"
-  ]
+    "angle_addition(1,ABE,EBD)",
+    "triangle_property_angle_sum(1,EAB)",
+    "triangle_property_angle_sum(1,BDE)",
+    "sine_theorem(1,EAB)",
+    "sine_theorem(1,ABE)",
+    "sine_theorem(1,BDE)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ABE,EBD)": [],
+    "triangle_property_angle_sum(1,EAB)": [],
+    "triangle_property_angle_sum(1,BDE)": [
+      "solve_eq_13)"
+    ],
+    "sine_theorem(1,EAB)": [],
+    "sine_theorem(1,ABE)": [],
+    "sine_theorem(1,BDE)": [
+      "solve_eq_13)"
+    ],
+    "START": [
+      "angle_addition(1,ABE,EBD)",
+      "triangle_property_angle_sum(1,EAB)",
+      "triangle_property_angle_sum(1,BDE)",
+      "sine_theorem(1,EAB)",
+      "sine_theorem(1,ABE)",
+      "sine_theorem(1,BDE)"
+    ]
+  }
 }

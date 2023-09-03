@@ -22,8 +22,19 @@
   "goal_cdl": "Value(b)",
   "problem_answer": "18",
   "theorem_seqs": [
-    "line_addition(BA,AC)",
-    "bisector_of_angle_judgment_angle_equal(DA,CDB)",
-    "bisector_of_angle_property_line_ratio(DA,CDB)"
-  ]
+    "line_addition(1,BA,AC)",
+    "bisector_of_angle_judgment_angle_equal(1,DA,CDB)",
+    "bisector_of_angle_property_line_ratio(1,DA,CDB)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,BA,AC)": [],
+    "bisector_of_angle_judgment_angle_equal(1,DA,CDB)": [
+      "bisector_of_angle_property_line_ratio(1,DA,CDB)"
+    ],
+    "bisector_of_angle_property_line_ratio(1,DA,CDB)": [],
+    "START": [
+      "line_addition(1,BA,AC)",
+      "bisector_of_angle_judgment_angle_equal(1,DA,CDB)"
+    ]
+  }
 }

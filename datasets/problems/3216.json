@@ -27,10 +27,26 @@
   "goal_cdl": "Value(MeasureOfAngle(FEB))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BA,DC,E)",
-    "parallel_property_collinear_extend(CD,AE,F)",
-    "parallel_property_corresponding_angle(EA,FC,M)",
-    "flat_angle(AEB)",
-    "angle_addition(AEF,FEB)"
-  ]
+    "parallel_property_collinear_extend(3,BA,DC,E)",
+    "parallel_property_collinear_extend(3,CD,AE,F)",
+    "parallel_property_corresponding_angle(2,EA,FC,M)",
+    "flat_angle(1,AEB)",
+    "angle_addition(1,AEF,FEB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BA,DC,E)": [
+      "parallel_property_collinear_extend(3,CD,AE,F)"
+    ],
+    "parallel_property_collinear_extend(3,CD,AE,F)": [
+      "parallel_property_corresponding_angle(2,EA,FC,M)"
+    ],
+    "parallel_property_corresponding_angle(2,EA,FC,M)": [],
+    "flat_angle(1,AEB)": [],
+    "angle_addition(1,AEF,FEB)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BA,DC,E)",
+      "flat_angle(1,AEB)",
+      "angle_addition(1,AEF,FEB)"
+    ]
+  }
 }

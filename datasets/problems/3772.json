@@ -27,14 +27,40 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DEC))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "quadrilateral_perimeter_formula(ABCD)",
-    "adjacent_complementary_angle(AOE,EOC)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "perpendicular_bisector_judgment_per_and_mid(EO,AC)",
-    "perpendicular_bisector_property_distance_equal(EO,AC)",
-    "line_addition(AE,ED)",
-    "triangle_perimeter_formula(DEC)"
-  ]
+    "quadrilateral_perimeter_formula(1,ABCD)",
+    "adjacent_complementary_angle(1,AOE,EOC)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,AC)",
+    "perpendicular_bisector_property_distance_equal(1,EO,AC)",
+    "line_addition(1,AE,ED)",
+    "triangle_perimeter_formula(1,DEC)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "adjacent_complementary_angle(1,AOE,EOC)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,AC)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,AC)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,AC)": [
+      "perpendicular_bisector_property_distance_equal(1,EO,AC)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,EO,AC)": [],
+    "line_addition(1,AE,ED)": [],
+    "triangle_perimeter_formula(1,DEC)": [],
+    "START": [
+      "quadrilateral_perimeter_formula(1,ABCD)",
+      "adjacent_complementary_angle(1,AOE,EOC)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,AE,ED)",
+      "triangle_perimeter_formula(1,DEC)"
+    ]
+  }
 }

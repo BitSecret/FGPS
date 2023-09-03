@@ -27,12 +27,35 @@
   "goal_cdl": "Value(LengthOfLine(BD))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "flat_angle(BFD)",
-    "angle_addition(CFE,EFD)",
-    "parallel_judgment_corresponding_angle(CA,FE,B)",
-    "parallelogram_judgment_parallel_and_parallel(ACFE)",
-    "parallelogram_property_opposite_line_equal(CFEA)",
-    "line_addition(BC,CF)",
-    "line_addition(BF,FD)"
-  ]
+    "flat_angle(1,BFD)",
+    "angle_addition(1,CFE,EFD)",
+    "parallel_judgment_corresponding_angle(1,CA,FE,B)",
+    "parallelogram_judgment_parallel_and_parallel(1,ACFE)",
+    "parallelogram_property_opposite_line_equal(1,CFEA)",
+    "line_addition(1,BC,CF)",
+    "line_addition(1,BF,FD)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,BFD)": [
+      "parallel_judgment_corresponding_angle(1,CA,FE,B)"
+    ],
+    "angle_addition(1,CFE,EFD)": [
+      "parallel_judgment_corresponding_angle(1,CA,FE,B)"
+    ],
+    "parallel_judgment_corresponding_angle(1,CA,FE,B)": [
+      "parallelogram_judgment_parallel_and_parallel(1,ACFE)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,ACFE)": [
+      "parallelogram_property_opposite_line_equal(1,CFEA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,CFEA)": [],
+    "line_addition(1,BC,CF)": [],
+    "line_addition(1,BF,FD)": [],
+    "START": [
+      "flat_angle(1,BFD)",
+      "angle_addition(1,CFE,EFD)",
+      "line_addition(1,BC,CF)",
+      "line_addition(1,BF,FD)"
+    ]
+  }
 }

@@ -22,8 +22,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "44.0",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ACD)",
-    "isosceles_triangle_property_angle_equal(ACD)",
-    "sine_theorem(ABD)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ACD)",
+    "isosceles_triangle_property_angle_equal(1,ACD)",
+    "sine_theorem(1,ABD)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ACD)": [
+      "isosceles_triangle_property_angle_equal(1,ACD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ACD)": [],
+    "sine_theorem(1,ABD)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ACD)",
+      "sine_theorem(1,ABD)"
+    ]
+  }
 }

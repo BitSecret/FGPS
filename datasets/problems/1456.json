@@ -22,13 +22,37 @@
   "goal_cdl": "Value(MeasureOfAngle(ABD))",
   "problem_answer": "103",
   "theorem_seqs": [
-    "arc_property_center_angle(GBD,G)",
-    "tangent_of_circle_property_perpendicular(AB,G,G)",
-    "radius_of_circle_property_length_equal(GD,G)",
-    "radius_of_circle_property_length_equal(GB,G)",
-    "isosceles_triangle_judgment_line_equal(GBD)",
-    "isosceles_triangle_property_angle_equal(GBD)",
-    "triangle_property_angle_sum(GBD)",
-    "angle_addition(ABG,GBD)"
-  ]
+    "arc_property_center_angle(1,GBD,G)",
+    "tangent_of_circle_property_perpendicular(2,AB,G,G)",
+    "radius_of_circle_property_length_equal(1,GD,G)",
+    "radius_of_circle_property_length_equal(1,GB,G)",
+    "isosceles_triangle_judgment_line_equal(1,GBD)",
+    "isosceles_triangle_property_angle_equal(1,GBD)",
+    "triangle_property_angle_sum(1,GBD)",
+    "angle_addition(1,ABG,GBD)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,GBD,G)": [],
+    "tangent_of_circle_property_perpendicular(2,AB,G,G)": [],
+    "radius_of_circle_property_length_equal(1,GD,G)": [
+      "isosceles_triangle_judgment_line_equal(1,GBD)"
+    ],
+    "radius_of_circle_property_length_equal(1,GB,G)": [
+      "isosceles_triangle_judgment_line_equal(1,GBD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,GBD)": [
+      "isosceles_triangle_property_angle_equal(1,GBD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,GBD)": [],
+    "triangle_property_angle_sum(1,GBD)": [],
+    "angle_addition(1,ABG,GBD)": [],
+    "START": [
+      "arc_property_center_angle(1,GBD,G)",
+      "tangent_of_circle_property_perpendicular(2,AB,G,G)",
+      "radius_of_circle_property_length_equal(1,GD,G)",
+      "radius_of_circle_property_length_equal(1,GB,G)",
+      "triangle_property_angle_sum(1,GBD)",
+      "angle_addition(1,ABG,GBD)"
+    ]
+  }
 }

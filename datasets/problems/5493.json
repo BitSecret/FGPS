@@ -27,13 +27,36 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DEF))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "right_triangle_property_pythagorean(BCA)",
-    "midsegment_of_triangle_judgment_midpoint(DF,CAB)",
-    "midsegment_of_triangle_judgment_midpoint(ED,ABC)",
-    "midsegment_of_triangle_judgment_midpoint(FE,BCA)",
-    "midsegment_of_triangle_property_length(DF,CAB)",
-    "midsegment_of_triangle_property_length(ED,ABC)",
-    "midsegment_of_triangle_property_length(FE,BCA)",
-    "triangle_perimeter_formula(FDE)"
-  ]
+    "right_triangle_property_pythagorean(1,BCA)",
+    "midsegment_of_triangle_judgment_midpoint(1,DF,CAB)",
+    "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)",
+    "midsegment_of_triangle_property_length(1,DF,CAB)",
+    "midsegment_of_triangle_property_length(1,ED,ABC)",
+    "midsegment_of_triangle_property_length(1,FE,BCA)",
+    "triangle_perimeter_formula(1,FDE)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,DF,CAB)": [
+      "midsegment_of_triangle_property_length(1,DF,CAB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)": [
+      "midsegment_of_triangle_property_length(1,ED,ABC)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)": [
+      "midsegment_of_triangle_property_length(1,FE,BCA)"
+    ],
+    "midsegment_of_triangle_property_length(1,DF,CAB)": [],
+    "midsegment_of_triangle_property_length(1,ED,ABC)": [],
+    "midsegment_of_triangle_property_length(1,FE,BCA)": [],
+    "triangle_perimeter_formula(1,FDE)": [],
+    "START": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "midsegment_of_triangle_judgment_midpoint(1,DF,CAB)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)",
+      "triangle_perimeter_formula(1,FDE)"
+    ]
+  }
 }

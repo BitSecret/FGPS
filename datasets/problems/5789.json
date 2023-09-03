@@ -23,24 +23,82 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_collinear_extend(DC,AB,F)",
-    "parallel_property_alternate_interior_angle(EC,DA)",
-    "parallel_property_alternate_interior_angle(DF,AB)",
-    "similar_triangle_judgment_aa(FDA,FCE)",
-    "similar_triangle_judgment_aa(DAF,BEA)",
-    "similar_triangle_judgment_aa(FCE,FDA)",
-    "similar_triangle_judgment_aa(BEA,DAF)",
-    "similar_triangle_property_line_ratio(FDA,FCE)",
-    "similar_triangle_property_line_ratio(DAF,CEF)",
-    "similar_triangle_property_line_ratio(AFD,EFC)",
-    "similar_triangle_property_line_ratio(DAF,BEA)",
-    "similar_triangle_property_line_ratio(AFD,EAB)",
-    "similar_triangle_property_line_ratio(FDA,ABE)",
-    "similar_triangle_property_line_ratio(FCE,FDA)",
-    "similar_triangle_property_line_ratio(CEF,DAF)",
-    "similar_triangle_property_line_ratio(EFC,AFD)",
-    "similar_triangle_property_line_ratio(BEA,DAF)",
-    "similar_triangle_property_line_ratio(EAB,AFD)"
-  ]
+    "parallel_property_collinear_extend(1,CB,DA,E)",
+    "parallel_property_collinear_extend(3,DC,AB,F)",
+    "parallel_property_alternate_interior_angle(1,EC,DA)",
+    "parallel_property_alternate_interior_angle(2,EC,DA)",
+    "parallel_property_alternate_interior_angle(2,DF,AB)",
+    "similar_triangle_judgment_aa(1,FDA,FCE)",
+    "similar_triangle_judgment_aa(1,DAF,BEA)",
+    "similar_triangle_judgment_aa(1,FCE,FDA)",
+    "similar_triangle_judgment_aa(1,BEA,DAF)",
+    "similar_triangle_property_line_ratio(1,FDA,FCE)",
+    "similar_triangle_property_line_ratio(1,DAF,CEF)",
+    "similar_triangle_property_line_ratio(1,AFD,EFC)",
+    "similar_triangle_property_line_ratio(1,DAF,BEA)",
+    "similar_triangle_property_line_ratio(1,AFD,EAB)",
+    "similar_triangle_property_line_ratio(1,FDA,ABE)",
+    "similar_triangle_property_line_ratio(1,FCE,FDA)",
+    "similar_triangle_property_line_ratio(1,CEF,DAF)",
+    "similar_triangle_property_line_ratio(1,EFC,AFD)",
+    "similar_triangle_property_line_ratio(1,BEA,DAF)",
+    "similar_triangle_property_line_ratio(1,EAB,AFD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,EC,DA)",
+      "parallel_property_alternate_interior_angle(2,EC,DA)"
+    ],
+    "parallel_property_collinear_extend(3,DC,AB,F)": [
+      "parallel_property_alternate_interior_angle(2,DF,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EC,DA)": [
+      "similar_triangle_judgment_aa(1,FDA,FCE)",
+      "similar_triangle_judgment_aa(1,DAF,BEA)",
+      "similar_triangle_judgment_aa(1,FCE,FDA)",
+      "similar_triangle_judgment_aa(1,BEA,DAF)"
+    ],
+    "parallel_property_alternate_interior_angle(2,EC,DA)": [
+      "similar_triangle_judgment_aa(1,FDA,FCE)",
+      "similar_triangle_judgment_aa(1,FCE,FDA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DF,AB)": [
+      "similar_triangle_judgment_aa(1,DAF,BEA)",
+      "similar_triangle_judgment_aa(1,BEA,DAF)"
+    ],
+    "similar_triangle_judgment_aa(1,FDA,FCE)": [
+      "similar_triangle_property_line_ratio(1,FDA,FCE)",
+      "similar_triangle_property_line_ratio(1,DAF,CEF)",
+      "similar_triangle_property_line_ratio(1,AFD,EFC)"
+    ],
+    "similar_triangle_judgment_aa(1,DAF,BEA)": [
+      "similar_triangle_property_line_ratio(1,DAF,BEA)",
+      "similar_triangle_property_line_ratio(1,AFD,EAB)",
+      "similar_triangle_property_line_ratio(1,FDA,ABE)"
+    ],
+    "similar_triangle_judgment_aa(1,FCE,FDA)": [
+      "similar_triangle_property_line_ratio(1,FCE,FDA)",
+      "similar_triangle_property_line_ratio(1,CEF,DAF)",
+      "similar_triangle_property_line_ratio(1,EFC,AFD)"
+    ],
+    "similar_triangle_judgment_aa(1,BEA,DAF)": [
+      "similar_triangle_property_line_ratio(1,BEA,DAF)",
+      "similar_triangle_property_line_ratio(1,EAB,AFD)"
+    ],
+    "similar_triangle_property_line_ratio(1,FDA,FCE)": [],
+    "similar_triangle_property_line_ratio(1,DAF,CEF)": [],
+    "similar_triangle_property_line_ratio(1,AFD,EFC)": [],
+    "similar_triangle_property_line_ratio(1,DAF,BEA)": [],
+    "similar_triangle_property_line_ratio(1,AFD,EAB)": [],
+    "similar_triangle_property_line_ratio(1,FDA,ABE)": [],
+    "similar_triangle_property_line_ratio(1,FCE,FDA)": [],
+    "similar_triangle_property_line_ratio(1,CEF,DAF)": [],
+    "similar_triangle_property_line_ratio(1,EFC,AFD)": [],
+    "similar_triangle_property_line_ratio(1,BEA,DAF)": [],
+    "similar_triangle_property_line_ratio(1,EAB,AFD)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,CB,DA,E)",
+      "parallel_property_collinear_extend(3,DC,AB,F)"
+    ]
+  }
 }

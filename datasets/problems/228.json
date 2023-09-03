@@ -21,8 +21,19 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "38",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CDB,BDA)",
-    "perpendicular_bisector_judgment_distance_equal(BD,CA)",
-    "line_addition(AD,DC)"
-  ]
+    "adjacent_complementary_angle(1,CDB,BDA)",
+    "perpendicular_bisector_judgment_distance_equal(1,BD,CA)",
+    "line_addition(1,AD,DC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CDB,BDA)": [
+      "perpendicular_bisector_judgment_distance_equal(1,BD,CA)"
+    ],
+    "perpendicular_bisector_judgment_distance_equal(1,BD,CA)": [],
+    "line_addition(1,AD,DC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CDB,BDA)",
+      "line_addition(1,AD,DC)"
+    ]
+  }
 }

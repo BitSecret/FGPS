@@ -24,13 +24,37 @@
   "goal_cdl": "Value(MeasureOfAngle(AOD))",
   "problem_answer": "52",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "flat_angle(BOA)",
-    "angle_addition(BOC,COA)",
-    "parallel_property_alternate_interior_angle(AD,CO)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(ODA)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "flat_angle(1,BOA)",
+    "angle_addition(1,BOC,COA)",
+    "parallel_property_alternate_interior_angle(1,AD,CO)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,ODA)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "flat_angle(1,BOA)": [],
+    "angle_addition(1,BOC,COA)": [],
+    "parallel_property_alternate_interior_angle(1,AD,CO)": [],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "triangle_property_angle_sum(1,ODA)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "flat_angle(1,BOA)",
+      "angle_addition(1,BOC,COA)",
+      "parallel_property_alternate_interior_angle(1,AD,CO)",
+      "triangle_property_angle_sum(1,ODA)"
+    ]
+  }
 }

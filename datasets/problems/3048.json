@@ -25,10 +25,25 @@
   "goal_cdl": "Value(MeasureOfAngle(GFC))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "equilateral_triangle_property_angle(CAB)",
-    "adjacent_complementary_angle(DCB,BCF)",
-    "triangle_property_angle_sum(CBD)",
-    "parallel_property_collinear_extend(EG,BD,F)",
-    "parallel_property_alternate_interior_angle(FG,BD)"
-  ]
+    "equilateral_triangle_property_angle(1,CAB)",
+    "adjacent_complementary_angle(1,DCB,BCF)",
+    "triangle_property_angle_sum(1,CBD)",
+    "parallel_property_collinear_extend(3,EG,BD,F)",
+    "parallel_property_alternate_interior_angle(1,FG,BD)"
+  ],
+  "theorem_seq_dag": {
+    "equilateral_triangle_property_angle(1,CAB)": [],
+    "adjacent_complementary_angle(1,DCB,BCF)": [],
+    "triangle_property_angle_sum(1,CBD)": [],
+    "parallel_property_collinear_extend(3,EG,BD,F)": [
+      "parallel_property_alternate_interior_angle(1,FG,BD)"
+    ],
+    "parallel_property_alternate_interior_angle(1,FG,BD)": [],
+    "START": [
+      "equilateral_triangle_property_angle(1,CAB)",
+      "adjacent_complementary_angle(1,DCB,BCF)",
+      "triangle_property_angle_sum(1,CBD)",
+      "parallel_property_collinear_extend(3,EG,BD,F)"
+    ]
+  }
 }

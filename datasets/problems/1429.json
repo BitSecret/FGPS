@@ -25,14 +25,39 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ALBT))",
   "problem_answer": "9 + 9*sqrt(3)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(LCA)",
-    "right_triangle_property_pythagorean(LCA)",
-    "adjacent_complementary_angle(BCL,LCA)",
-    "right_triangle_judgment_angle(BCL)",
-    "right_triangle_property_pythagorean(BCL)",
-    "kite_property_diagonal_perpendicular_bisection(ALBT,C)",
-    "line_addition(BC,CA)",
-    "line_addition(LC,CT)",
-    "kite_area_formula_diagonal(ALBT)"
-  ]
+    "right_triangle_judgment_angle(1,LCA)",
+    "right_triangle_property_pythagorean(1,LCA)",
+    "adjacent_complementary_angle(1,BCL,LCA)",
+    "right_triangle_judgment_angle(1,BCL)",
+    "right_triangle_property_pythagorean(1,BCL)",
+    "kite_property_diagonal_perpendicular_bisection(1,ALBT,C)",
+    "line_addition(1,BC,CA)",
+    "line_addition(1,LC,CT)",
+    "kite_area_formula_diagonal(1,ALBT)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,LCA)": [
+      "right_triangle_property_pythagorean(1,LCA)"
+    ],
+    "right_triangle_property_pythagorean(1,LCA)": [],
+    "adjacent_complementary_angle(1,BCL,LCA)": [
+      "right_triangle_judgment_angle(1,BCL)"
+    ],
+    "right_triangle_judgment_angle(1,BCL)": [
+      "right_triangle_property_pythagorean(1,BCL)"
+    ],
+    "right_triangle_property_pythagorean(1,BCL)": [],
+    "kite_property_diagonal_perpendicular_bisection(1,ALBT,C)": [],
+    "line_addition(1,BC,CA)": [],
+    "line_addition(1,LC,CT)": [],
+    "kite_area_formula_diagonal(1,ALBT)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,LCA)",
+      "adjacent_complementary_angle(1,BCL,LCA)",
+      "kite_property_diagonal_perpendicular_bisection(1,ALBT,C)",
+      "line_addition(1,BC,CA)",
+      "line_addition(1,LC,CT)",
+      "kite_area_formula_diagonal(1,ALBT)"
+    ]
+  }
 }

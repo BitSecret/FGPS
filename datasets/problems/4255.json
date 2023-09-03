@@ -26,15 +26,44 @@
   "goal_cdl": "Value(LengthOfLine(OD))",
   "problem_answer": "3*sqrt(2)",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "arc_property_circumference_angle_external(OBA,C)",
-    "arc_property_center_angle(OBA,O)",
-    "right_triangle_judgment_angle(BDO)",
-    "right_triangle_judgment_angle(AOB)",
-    "right_triangle_property_pythagorean(BDO)",
-    "right_triangle_property_pythagorean(AOB)",
-    "line_addition(BD,DA)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OD,BA)"
-  ]
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "arc_property_circumference_angle_external(1,OBA,C)",
+    "arc_property_center_angle(1,OBA,O)",
+    "right_triangle_judgment_angle(1,BDO)",
+    "right_triangle_judgment_angle(1,AOB)",
+    "right_triangle_property_pythagorean(1,BDO)",
+    "right_triangle_property_pythagorean(1,AOB)",
+    "line_addition(1,BD,DA)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,BA)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "arc_property_circumference_angle_external(1,OBA,C)": [
+      "right_triangle_judgment_angle(1,AOB)"
+    ],
+    "arc_property_center_angle(1,OBA,O)": [
+      "right_triangle_judgment_angle(1,AOB)"
+    ],
+    "right_triangle_judgment_angle(1,BDO)": [
+      "right_triangle_property_pythagorean(1,BDO)"
+    ],
+    "right_triangle_judgment_angle(1,AOB)": [
+      "right_triangle_property_pythagorean(1,AOB)"
+    ],
+    "right_triangle_property_pythagorean(1,BDO)": [],
+    "right_triangle_property_pythagorean(1,AOB)": [],
+    "line_addition(1,BD,DA)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,BA)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "arc_property_circumference_angle_external(1,OBA,C)",
+      "arc_property_center_angle(1,OBA,O)",
+      "right_triangle_judgment_angle(1,BDO)",
+      "line_addition(1,BD,DA)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,BA)"
+    ]
+  }
 }

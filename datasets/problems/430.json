@@ -20,8 +20,18 @@
   "goal_cdl": "Value(MeasureOfAngle(BAC))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "flat_angle(DCB)",
-    "triangle_property_angle_sum(ACB)",
-    "angle_addition(DCA,ACB)"
-  ]
+    "flat_angle(1,DCB)",
+    "triangle_property_angle_sum(1,ACB)",
+    "angle_addition(1,DCA,ACB)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,DCB)": [],
+    "triangle_property_angle_sum(1,ACB)": [],
+    "angle_addition(1,DCA,ACB)": [],
+    "START": [
+      "flat_angle(1,DCB)",
+      "triangle_property_angle_sum(1,ACB)",
+      "angle_addition(1,DCA,ACB)"
+    ]
+  }
 }

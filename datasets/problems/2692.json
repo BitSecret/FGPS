@@ -28,11 +28,29 @@
   "goal_cdl": "Value(LengthOfLine(CE))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "circle_area_formula(O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "kite_property_diagonal_perpendicular_bisection(CEDB,O)",
-    "right_triangle_judgment_angle(EOC)",
-    "right_triangle_property_pythagorean(EOC)"
-  ]
+    "circle_area_formula(1,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "kite_property_diagonal_perpendicular_bisection(1,CEDB,O)",
+    "right_triangle_judgment_angle(1,EOC)",
+    "right_triangle_property_pythagorean(1,EOC)"
+  ],
+  "theorem_seq_dag": {
+    "circle_area_formula(1,O)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [],
+    "radius_of_circle_property_length_equal(1,OE,O)": [],
+    "kite_property_diagonal_perpendicular_bisection(1,CEDB,O)": [
+      "right_triangle_judgment_angle(1,EOC)"
+    ],
+    "right_triangle_judgment_angle(1,EOC)": [
+      "right_triangle_property_pythagorean(1,EOC)"
+    ],
+    "right_triangle_property_pythagorean(1,EOC)": [],
+    "START": [
+      "circle_area_formula(1,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "kite_property_diagonal_perpendicular_bisection(1,CEDB,O)"
+    ]
+  }
 }

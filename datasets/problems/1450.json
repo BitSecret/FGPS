@@ -25,8 +25,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "sqrt(193)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(WU,V,V)",
-    "right_triangle_judgment_angle(VUW)",
-    "right_triangle_property_pythagorean(VUW)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,WU,V,V)",
+    "right_triangle_judgment_angle(1,VUW)",
+    "right_triangle_property_pythagorean(1,VUW)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,WU,V,V)": [
+      "right_triangle_judgment_angle(1,VUW)"
+    ],
+    "right_triangle_judgment_angle(1,VUW)": [
+      "right_triangle_property_pythagorean(1,VUW)"
+    ],
+    "right_triangle_property_pythagorean(1,VUW)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,WU,V,V)"
+    ]
+  }
 }

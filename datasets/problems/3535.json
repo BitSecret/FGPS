@@ -23,7 +23,15 @@
   "goal_cdl": "Value(MeasureOfAngle(ACD))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "angle_addition(FCD,DCB)",
-    "angle_addition(ECF,FCD)"
-  ]
+    "angle_addition(1,FCD,DCB)",
+    "angle_addition(1,ECF,FCD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,FCD,DCB)": [],
+    "angle_addition(1,ECF,FCD)": [],
+    "START": [
+      "angle_addition(1,FCD,DCB)",
+      "angle_addition(1,ECF,FCD)"
+    ]
+  }
 }

@@ -24,18 +24,60 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(DAC),AreaOfTriangle(ABC)))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "line_addition(DO,OB)",
-    "line_addition(AO,OC)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "right_triangle_judgment_pythagorean_inverse(ODA)",
-    "right_triangle_judgment_pythagorean_inverse(OBC)",
-    "triangle_area_formula_sine(AOD)",
-    "triangle_area_formula_sine(DAO)",
-    "triangle_area_formula_sine(BCO)",
-    "triangle_area_formula_sine(COB)",
-    "triangle_area_formula_sine(ACD)",
-    "triangle_area_formula_sine(CAB)"
-  ]
+    "line_addition(1,DO,OB)",
+    "line_addition(1,AO,OC)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "right_triangle_judgment_pythagorean_inverse(1,ODA)",
+    "right_triangle_judgment_pythagorean_inverse(1,OBC)",
+    "triangle_area_formula_sine(1,AOD)",
+    "triangle_area_formula_sine(1,DAO)",
+    "triangle_area_formula_sine(1,BCO)",
+    "triangle_area_formula_sine(1,COB)",
+    "triangle_area_formula_sine(1,ACD)",
+    "triangle_area_formula_sine(1,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,DO,OB)": [
+      "right_triangle_judgment_pythagorean_inverse(1,ODA)",
+      "right_triangle_judgment_pythagorean_inverse(1,OBC)"
+    ],
+    "line_addition(1,AO,OC)": [
+      "right_triangle_judgment_pythagorean_inverse(1,ODA)",
+      "right_triangle_judgment_pythagorean_inverse(1,OBC)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "right_triangle_judgment_pythagorean_inverse(1,ODA)",
+      "right_triangle_judgment_pythagorean_inverse(1,OBC)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "right_triangle_judgment_pythagorean_inverse(1,ODA)",
+      "right_triangle_judgment_pythagorean_inverse(1,OBC)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [
+      "right_triangle_judgment_pythagorean_inverse(1,OBC)"
+    ],
+    "right_triangle_judgment_pythagorean_inverse(1,ODA)": [],
+    "right_triangle_judgment_pythagorean_inverse(1,OBC)": [],
+    "triangle_area_formula_sine(1,AOD)": [],
+    "triangle_area_formula_sine(1,DAO)": [],
+    "triangle_area_formula_sine(1,BCO)": [],
+    "triangle_area_formula_sine(1,COB)": [],
+    "triangle_area_formula_sine(1,ACD)": [],
+    "triangle_area_formula_sine(1,CAB)": [],
+    "START": [
+      "line_addition(1,DO,OB)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_area_formula_sine(1,AOD)",
+      "triangle_area_formula_sine(1,DAO)",
+      "triangle_area_formula_sine(1,BCO)",
+      "triangle_area_formula_sine(1,COB)",
+      "triangle_area_formula_sine(1,ACD)",
+      "triangle_area_formula_sine(1,CAB)"
+    ]
+  }
 }

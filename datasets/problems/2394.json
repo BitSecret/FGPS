@@ -30,12 +30,34 @@
   "goal_cdl": "Value(MeasureOfAngle(KAJ))",
   "problem_answer": "57",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(GM,NE,K)",
-    "parallel_property_collinear_extend(EN,KG,U)",
-    "parallel_property_collinear_extend(JI,FH,A)",
-    "parallel_property_collinear_extend(HF,AJ,K)",
-    "parallel_property_corresponding_angle(UN,KG,F)",
-    "parallel_property_corresponding_angle(KF,AJ,G)",
-    "adjacent_complementary_angle(HUN,NUK)"
-  ]
+    "parallel_property_collinear_extend(3,GM,NE,K)",
+    "parallel_property_collinear_extend(3,EN,KG,U)",
+    "parallel_property_collinear_extend(3,JI,FH,A)",
+    "parallel_property_collinear_extend(3,HF,AJ,K)",
+    "parallel_property_corresponding_angle(2,UN,KG,F)",
+    "parallel_property_corresponding_angle(1,KF,AJ,G)",
+    "adjacent_complementary_angle(1,HUN,NUK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,GM,NE,K)": [
+      "parallel_property_collinear_extend(3,EN,KG,U)"
+    ],
+    "parallel_property_collinear_extend(3,EN,KG,U)": [
+      "parallel_property_corresponding_angle(2,UN,KG,F)"
+    ],
+    "parallel_property_collinear_extend(3,JI,FH,A)": [
+      "parallel_property_collinear_extend(3,HF,AJ,K)"
+    ],
+    "parallel_property_collinear_extend(3,HF,AJ,K)": [
+      "parallel_property_corresponding_angle(1,KF,AJ,G)"
+    ],
+    "parallel_property_corresponding_angle(2,UN,KG,F)": [],
+    "parallel_property_corresponding_angle(1,KF,AJ,G)": [],
+    "adjacent_complementary_angle(1,HUN,NUK)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,GM,NE,K)",
+      "parallel_property_collinear_extend(3,JI,FH,A)",
+      "adjacent_complementary_angle(1,HUN,NUK)"
+    ]
+  }
 }

@@ -27,14 +27,39 @@
   "goal_cdl": "Value(LengthOfLine(DO))",
   "problem_answer": "1.5",
   "theorem_seqs": [
-    "diameter_of_circle_property_length_equal(AB,O)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)",
-    "similar_triangle_judgment_aa(ODA,BCA)",
-    "circle_property_length_of_radius_and_diameter(O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "similar_triangle_property_line_ratio(DAO,CAB)",
-    "similar_triangle_property_line_ratio(AOD,ABC)"
-  ]
+    "diameter_of_circle_property_length_equal(1,AB,O)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "similar_triangle_judgment_aa(1,ODA,BCA)",
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "similar_triangle_property_line_ratio(1,DAO,CAB)",
+    "similar_triangle_property_line_ratio(1,AOD,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_length_equal(1,AB,O)": [],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)"
+    ],
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "similar_triangle_judgment_aa(1,ODA,BCA)": [
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)"
+    ],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "similar_triangle_property_line_ratio(1,DAO,CAB)": [],
+    "similar_triangle_property_line_ratio(1,AOD,ABC)": [],
+    "START": [
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  }
 }

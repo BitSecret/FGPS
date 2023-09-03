@@ -24,7 +24,15 @@
   "goal_cdl": "Value(MeasureOfAngle(ANB))",
   "problem_answer": "75",
   "theorem_seqs": [
-    "angle_addition(ANB,BNC)",
-    "adjacent_complementary_angle(ANC,CND)"
-  ]
+    "angle_addition(1,ANB,BNC)",
+    "adjacent_complementary_angle(1,ANC,CND)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ANB,BNC)": [],
+    "adjacent_complementary_angle(1,ANC,CND)": [],
+    "START": [
+      "angle_addition(1,ANB,BNC)",
+      "adjacent_complementary_angle(1,ANC,CND)"
+    ]
+  }
 }

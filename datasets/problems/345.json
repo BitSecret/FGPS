@@ -23,14 +23,46 @@
   "goal_cdl": "Value(MeasureOfAngle(DEB))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "rectangle_property_diagonal_equal(ABDC)",
-    "parallelogram_property_diagonal_bisection(ABDC,E)",
-    "parallelogram_property_diagonal_bisection(BDCA,E)",
-    "line_addition(AE,ED)",
-    "line_addition(BE,EC)",
-    "isosceles_triangle_judgment_line_equal(EBD)",
-    "isosceles_triangle_property_angle_equal(EBD)",
-    "triangle_property_angle_sum(ABD)",
-    "triangle_property_angle_sum(EBD)"
-  ]
+    "rectangle_property_diagonal_equal(1,ABDC)",
+    "parallelogram_property_diagonal_bisection(1,ABDC,E)",
+    "parallelogram_property_diagonal_bisection(1,BDCA,E)",
+    "line_addition(1,AE,ED)",
+    "line_addition(1,BE,EC)",
+    "isosceles_triangle_judgment_line_equal(1,EBD)",
+    "isosceles_triangle_property_angle_equal(1,EBD)",
+    "triangle_property_angle_sum(1,ABD)",
+    "triangle_property_angle_sum(1,EBD)"
+  ],
+  "theorem_seq_dag": {
+    "rectangle_property_diagonal_equal(1,ABDC)": [
+      "isosceles_triangle_judgment_line_equal(1,EBD)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABDC,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EBD)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BDCA,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EBD)"
+    ],
+    "line_addition(1,AE,ED)": [
+      "isosceles_triangle_judgment_line_equal(1,EBD)"
+    ],
+    "line_addition(1,BE,EC)": [
+      "isosceles_triangle_judgment_line_equal(1,EBD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EBD)": [
+      "isosceles_triangle_property_angle_equal(1,EBD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EBD)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "triangle_property_angle_sum(1,EBD)": [],
+    "START": [
+      "rectangle_property_diagonal_equal(1,ABDC)",
+      "parallelogram_property_diagonal_bisection(1,ABDC,E)",
+      "parallelogram_property_diagonal_bisection(1,BDCA,E)",
+      "line_addition(1,AE,ED)",
+      "line_addition(1,BE,EC)",
+      "triangle_property_angle_sum(1,ABD)",
+      "triangle_property_angle_sum(1,EBD)"
+    ]
+  }
 }

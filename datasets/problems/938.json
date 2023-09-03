@@ -25,9 +25,23 @@
   "goal_cdl": "Value(LengthOfLine(PW))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "trapezoid_judgment_parallel(XWZY)",
-    "isosceles_trapezoid_judgment_line_equal(XWZY)",
-    "isosceles_trapezoid_property_diagonal_equal(XWZY)",
-    "line_addition(WP,PY)"
-  ]
+    "trapezoid_judgment_parallel(1,XWZY)",
+    "isosceles_trapezoid_judgment_line_equal(1,XWZY)",
+    "isosceles_trapezoid_property_diagonal_equal(1,XWZY)",
+    "line_addition(1,WP,PY)"
+  ],
+  "theorem_seq_dag": {
+    "trapezoid_judgment_parallel(1,XWZY)": [
+      "isosceles_trapezoid_judgment_line_equal(1,XWZY)"
+    ],
+    "isosceles_trapezoid_judgment_line_equal(1,XWZY)": [
+      "isosceles_trapezoid_property_diagonal_equal(1,XWZY)"
+    ],
+    "isosceles_trapezoid_property_diagonal_equal(1,XWZY)": [],
+    "line_addition(1,WP,PY)": [],
+    "START": [
+      "trapezoid_judgment_parallel(1,XWZY)",
+      "line_addition(1,WP,PY)"
+    ]
+  }
 }

@@ -23,9 +23,28 @@
   "goal_cdl": "Value(LengthOfLine(WX))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(YX,VZ)",
-    "similar_triangle_judgment_aa(WVZ,WXY)",
-    "similar_triangle_property_line_ratio(VZW,XYW)",
-    "similar_triangle_property_line_ratio(ZWV,YWX)"
-  ]
+    "parallel_property_alternate_interior_angle(1,YX,VZ)",
+    "parallel_property_alternate_interior_angle(2,YX,VZ)",
+    "similar_triangle_judgment_aa(1,WVZ,WXY)",
+    "similar_triangle_property_line_ratio(1,VZW,XYW)",
+    "similar_triangle_property_line_ratio(1,ZWV,YWX)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,YX,VZ)": [
+      "similar_triangle_judgment_aa(1,WVZ,WXY)"
+    ],
+    "parallel_property_alternate_interior_angle(2,YX,VZ)": [
+      "similar_triangle_judgment_aa(1,WVZ,WXY)"
+    ],
+    "similar_triangle_judgment_aa(1,WVZ,WXY)": [
+      "similar_triangle_property_line_ratio(1,VZW,XYW)",
+      "similar_triangle_property_line_ratio(1,ZWV,YWX)"
+    ],
+    "similar_triangle_property_line_ratio(1,VZW,XYW)": [],
+    "similar_triangle_property_line_ratio(1,ZWV,YWX)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,YX,VZ)",
+      "parallel_property_alternate_interior_angle(2,YX,VZ)"
+    ]
+  }
 }

@@ -24,12 +24,30 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
   "problem_answer": "sqrt(2)",
   "theorem_seqs": [
-    "line_addition(AE,ED)",
-    "line_addition(BF,FC)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "parallelogram_property_opposite_line_equal(EABF)",
-    "similar_quadrilateral_property_line_ratio(ABCD,EABF)",
-    "similar_quadrilateral_property_line_ratio(BCDA,ABFE)",
-    "parallelogram_area_formula_sine(ABCD)"
-  ]
+    "line_addition(1,AE,ED)",
+    "line_addition(1,BF,FC)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "parallelogram_property_opposite_line_equal(1,EABF)",
+    "similar_quadrilateral_property_line_ratio(1,ABCD,EABF)",
+    "similar_quadrilateral_property_line_ratio(1,BCDA,ABFE)",
+    "parallelogram_area_formula_sine(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AE,ED)": [],
+    "line_addition(1,BF,FC)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "parallelogram_property_opposite_line_equal(1,EABF)": [],
+    "similar_quadrilateral_property_line_ratio(1,ABCD,EABF)": [],
+    "similar_quadrilateral_property_line_ratio(1,BCDA,ABFE)": [],
+    "parallelogram_area_formula_sine(1,ABCD)": [],
+    "START": [
+      "line_addition(1,AE,ED)",
+      "line_addition(1,BF,FC)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "parallelogram_property_opposite_line_equal(1,EABF)",
+      "similar_quadrilateral_property_line_ratio(1,ABCD,EABF)",
+      "similar_quadrilateral_property_line_ratio(1,BCDA,ABFE)",
+      "parallelogram_area_formula_sine(1,ABCD)"
+    ]
+  }
 }

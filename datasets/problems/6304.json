@@ -20,8 +20,18 @@
   "goal_cdl": "Value(MeasureOfAngle(AED))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "flat_angle(CED)",
-    "angle_addition(CEF,FED)",
-    "angle_addition(FEA,AED)"
-  ]
+    "flat_angle(1,CED)",
+    "angle_addition(1,CEF,FED)",
+    "angle_addition(1,FEA,AED)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,CED)": [],
+    "angle_addition(1,CEF,FED)": [],
+    "angle_addition(1,FEA,AED)": [],
+    "START": [
+      "flat_angle(1,CED)",
+      "angle_addition(1,CEF,FED)",
+      "angle_addition(1,FEA,AED)"
+    ]
+  }
 }

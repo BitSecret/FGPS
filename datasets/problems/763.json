@@ -26,8 +26,19 @@
   "goal_cdl": "Value(LengthOfLine(JK))",
   "problem_answer": "7",
   "theorem_seqs": [
-    "adjacent_complementary_angle(HJK,KJF)",
-    "circle_property_chord_perpendicular_bisect_chord(F,FJ,KG)",
-    "line_addition(GJ,JK)"
-  ]
+    "adjacent_complementary_angle(1,HJK,KJF)",
+    "circle_property_chord_perpendicular_bisect_chord(1,F,FJ,KG)",
+    "line_addition(1,GJ,JK)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,HJK,KJF)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,F,FJ,KG)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,F,FJ,KG)": [],
+    "line_addition(1,GJ,JK)": [],
+    "START": [
+      "adjacent_complementary_angle(1,HJK,KJF)",
+      "line_addition(1,GJ,JK)"
+    ]
+  }
 }

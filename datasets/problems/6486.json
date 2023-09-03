@@ -24,9 +24,23 @@
   "goal_cdl": "Value(LengthOfLine(EC))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_alternate_interior_angle(EC,DA)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "line_addition(BC,CE)"
-  ]
+    "parallel_property_collinear_extend(1,CB,DA,E)",
+    "parallel_property_alternate_interior_angle(1,EC,DA)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "line_addition(1,BC,CE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,EC,DA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EC,DA)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [],
+    "line_addition(1,BC,CE)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,CB,DA,E)",
+      "line_addition(1,BC,CE)"
+    ]
+  }
 }

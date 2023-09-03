@@ -25,11 +25,31 @@
   "goal_cdl": "Value(MeasureOfArc(ODA))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(DAO)",
-    "arc_property_center_angle(ODA,O)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,DAO)",
+    "arc_property_center_angle(1,ODA,O)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "triangle_property_angle_sum(1,DAO)": [],
+    "arc_property_center_angle(1,ODA,O)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "triangle_property_angle_sum(1,DAO)",
+      "arc_property_center_angle(1,ODA,O)"
+    ]
+  }
 }

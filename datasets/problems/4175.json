@@ -21,11 +21,28 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(CAD)))",
   "problem_answer": "0.8",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(CAB)",
-    "right_triangle_property_pythagorean(CAB)",
-    "adjacent_complementary_angle(BDA,ADC)",
-    "triangle_property_angle_sum(ABD)",
-    "angle_addition(CAD,DAB)",
-    "cosine_theorem(BCA)"
-  ]
+    "right_triangle_judgment_angle(1,CAB)",
+    "right_triangle_property_pythagorean(1,CAB)",
+    "adjacent_complementary_angle(1,BDA,ADC)",
+    "triangle_property_angle_sum(1,ABD)",
+    "angle_addition(1,CAD,DAB)",
+    "cosine_theorem(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,CAB)": [
+      "right_triangle_property_pythagorean(1,CAB)"
+    ],
+    "right_triangle_property_pythagorean(1,CAB)": [],
+    "adjacent_complementary_angle(1,BDA,ADC)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "angle_addition(1,CAD,DAB)": [],
+    "cosine_theorem(1,BCA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,CAB)",
+      "adjacent_complementary_angle(1,BDA,ADC)",
+      "triangle_property_angle_sum(1,ABD)",
+      "angle_addition(1,CAD,DAB)",
+      "cosine_theorem(1,BCA)"
+    ]
+  }
 }

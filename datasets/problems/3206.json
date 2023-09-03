@@ -21,8 +21,18 @@
   "goal_cdl": "Value(MeasureOfAngle(AOD))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "vertical_angle(COA,DOB)",
-    "flat_angle(COD)",
-    "angle_addition(COA,AOD)"
-  ]
+    "vertical_angle(1,COA,DOB)",
+    "flat_angle(1,COD)",
+    "angle_addition(1,COA,AOD)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,COA,DOB)": [],
+    "flat_angle(1,COD)": [],
+    "angle_addition(1,COA,AOD)": [],
+    "START": [
+      "vertical_angle(1,COA,DOB)",
+      "flat_angle(1,COD)",
+      "angle_addition(1,COA,AOD)"
+    ]
+  }
 }

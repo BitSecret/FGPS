@@ -19,10 +19,31 @@
   "goal_cdl": "Value(LengthOfLine(BD))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "parallel_property_ipsilateral_internal_angle(DC,AB)",
-    "isosceles_triangle_judgment_line_equal(ABD)",
-    "isosceles_triangle_property_angle_equal(ABD)",
-    "triangle_property_angle_sum(ABD)",
-    "isosceles_triangle_judgment_angle_equal(BDA)"
-  ]
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)",
+    "isosceles_triangle_judgment_line_equal(1,ABD)",
+    "isosceles_triangle_property_angle_equal(1,ABD)",
+    "triangle_property_angle_sum(1,ABD)",
+    "isosceles_triangle_judgment_angle_equal(1,BDA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BDA)",
+      "isosceles_triangle_judgment_angle_equal(1,BDA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABD)": [
+      "isosceles_triangle_property_angle_equal(1,ABD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABD)": [
+      "isosceles_triangle_judgment_angle_equal(1,BDA)"
+    ],
+    "triangle_property_angle_sum(1,ABD)": [
+      "isosceles_triangle_judgment_angle_equal(1,BDA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BDA)": [],
+    "START": [
+      "parallel_property_ipsilateral_internal_angle(1,DC,AB)",
+      "isosceles_triangle_judgment_line_equal(1,ABD)",
+      "triangle_property_angle_sum(1,ABD)"
+    ]
+  }
 }

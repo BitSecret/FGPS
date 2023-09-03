@@ -22,8 +22,20 @@
   "goal_cdl": "Value(LengthOfLine(TQ))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "adjacent_complementary_angle(TSQ,QSR)",
-    "mirror_congruent_triangle_judgment_sas(SRQ,SQT)",
-    "mirror_congruent_triangle_property_line_equal(SRQ,SQT)"
-  ]
+    "adjacent_complementary_angle(1,TSQ,QSR)",
+    "mirror_congruent_triangle_judgment_sas(1,SRQ,SQT)",
+    "mirror_congruent_triangle_property_line_equal(1,SRQ,SQT)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,TSQ,QSR)": [
+      "mirror_congruent_triangle_judgment_sas(1,SRQ,SQT)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,SRQ,SQT)": [
+      "mirror_congruent_triangle_property_line_equal(1,SRQ,SQT)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,SRQ,SQT)": [],
+    "START": [
+      "adjacent_complementary_angle(1,TSQ,QSR)"
+    ]
+  }
 }

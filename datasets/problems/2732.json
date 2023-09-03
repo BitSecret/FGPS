@@ -18,7 +18,15 @@
   "goal_cdl": "Value(MeasureOfAngle(ACB))",
   "problem_answer": "113",
   "theorem_seqs": [
-    "flat_angle(ACD)",
-    "angle_addition(ACB,BCD)"
-  ]
+    "flat_angle(1,ACD)",
+    "angle_addition(1,ACB,BCD)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,ACD)": [],
+    "angle_addition(1,ACB,BCD)": [],
+    "START": [
+      "flat_angle(1,ACD)",
+      "angle_addition(1,ACB,BCD)"
+    ]
+  }
 }

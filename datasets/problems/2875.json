@@ -21,13 +21,37 @@
   "goal_cdl": "Value(MeasureOfAngle(CDE))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_alternate_interior_angle(AD,BE)",
-    "isosceles_triangle_judgment_angle_equal(ABE)",
-    "isosceles_triangle_judgment_line_equal(AED)",
-    "isosceles_triangle_property_angle_equal(AED)",
-    "parallelogram_property_opposite_angle_equal(DABC)",
-    "triangle_property_angle_sum(AED)",
-    "angle_addition(CDE,EDA)"
-  ]
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "parallel_property_alternate_interior_angle(1,AD,BE)",
+    "isosceles_triangle_judgment_angle_equal(1,ABE)",
+    "isosceles_triangle_judgment_line_equal(1,AED)",
+    "isosceles_triangle_property_angle_equal(1,AED)",
+    "parallelogram_property_opposite_angle_equal(1,DABC)",
+    "triangle_property_angle_sum(1,AED)",
+    "angle_addition(1,CDE,EDA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,AD,BE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AD,BE)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ABE)": [
+      "isosceles_triangle_judgment_line_equal(1,AED)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,AED)": [
+      "isosceles_triangle_property_angle_equal(1,AED)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,AED)": [],
+    "parallelogram_property_opposite_angle_equal(1,DABC)": [],
+    "triangle_property_angle_sum(1,AED)": [],
+    "angle_addition(1,CDE,EDA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CB,DA,E)",
+      "parallelogram_property_opposite_angle_equal(1,DABC)",
+      "triangle_property_angle_sum(1,AED)",
+      "angle_addition(1,CDE,EDA)"
+    ]
+  }
 }

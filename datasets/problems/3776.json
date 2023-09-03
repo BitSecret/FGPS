@@ -38,24 +38,83 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(EFGH))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(GF,CDB)",
-    "midsegment_of_triangle_judgment_midpoint(HG,DAC)",
-    "midsegment_of_triangle_judgment_midpoint(FE,BCA)",
-    "midsegment_of_triangle_judgment_midpoint(EH,ABD)",
-    "midsegment_of_triangle_property_parallel(GF,CDB)",
-    "midsegment_of_triangle_property_parallel(HG,DAC)",
-    "midsegment_of_triangle_property_parallel(FE,BCA)",
-    "midsegment_of_triangle_property_parallel(EH,ABD)",
-    "parallel_property_collinear_extend(AC,EF,I)",
-    "parallel_property_collinear_extend(EH,BD,I)",
-    "parallel_property_collinear_extend(DB,IE,O)",
-    "parallel_judgment_par_par(GF,DB,HE)",
-    "parallel_judgment_par_par(HG,AC,EF)",
-    "parallel_property_ipsilateral_internal_angle(IC,EF)",
-    "parallel_property_ipsilateral_internal_angle(OB,IE)",
-    "midsegment_of_triangle_property_length(FE,BCA)",
-    "midsegment_of_triangle_property_length(EH,ABD)",
-    "parallelogram_judgment_parallel_and_parallel(HEFG)",
-    "parallelogram_area_formula_sine(HEFG)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,GF,CDB)",
+    "midsegment_of_triangle_judgment_midpoint(1,HG,DAC)",
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)",
+    "midsegment_of_triangle_judgment_midpoint(1,EH,ABD)",
+    "midsegment_of_triangle_property_parallel(1,GF,CDB)",
+    "midsegment_of_triangle_property_parallel(1,HG,DAC)",
+    "midsegment_of_triangle_property_parallel(1,FE,BCA)",
+    "midsegment_of_triangle_property_parallel(1,EH,ABD)",
+    "parallel_property_collinear_extend(3,AC,EF,I)",
+    "parallel_property_collinear_extend(3,EH,BD,I)",
+    "parallel_property_collinear_extend(3,DB,IE,O)",
+    "parallel_judgment_par_par(1,GF,DB,HE)",
+    "parallel_judgment_par_par(1,HG,AC,EF)",
+    "parallel_property_ipsilateral_internal_angle(1,IC,EF)",
+    "parallel_property_ipsilateral_internal_angle(1,OB,IE)",
+    "midsegment_of_triangle_property_length(1,FE,BCA)",
+    "midsegment_of_triangle_property_length(1,EH,ABD)",
+    "parallelogram_judgment_parallel_and_parallel(1,HEFG)",
+    "parallelogram_area_formula_sine(1,HEFG)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,GF,CDB)": [
+      "midsegment_of_triangle_property_parallel(1,GF,CDB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,HG,DAC)": [
+      "midsegment_of_triangle_property_parallel(1,HG,DAC)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)": [
+      "midsegment_of_triangle_property_parallel(1,FE,BCA)",
+      "midsegment_of_triangle_property_length(1,FE,BCA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EH,ABD)": [
+      "midsegment_of_triangle_property_parallel(1,EH,ABD)",
+      "midsegment_of_triangle_property_length(1,EH,ABD)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,GF,CDB)": [
+      "parallel_judgment_par_par(1,GF,DB,HE)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,HG,DAC)": [
+      "parallel_judgment_par_par(1,HG,AC,EF)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,FE,BCA)": [
+      "parallel_property_collinear_extend(3,AC,EF,I)",
+      "parallel_judgment_par_par(1,HG,AC,EF)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,EH,ABD)": [
+      "parallel_property_collinear_extend(3,EH,BD,I)",
+      "parallel_judgment_par_par(1,GF,DB,HE)"
+    ],
+    "parallel_property_collinear_extend(3,AC,EF,I)": [
+      "parallel_property_ipsilateral_internal_angle(1,IC,EF)"
+    ],
+    "parallel_property_collinear_extend(3,EH,BD,I)": [
+      "parallel_property_collinear_extend(3,DB,IE,O)"
+    ],
+    "parallel_property_collinear_extend(3,DB,IE,O)": [
+      "parallel_property_ipsilateral_internal_angle(1,OB,IE)"
+    ],
+    "parallel_judgment_par_par(1,GF,DB,HE)": [
+      "parallelogram_judgment_parallel_and_parallel(1,HEFG)"
+    ],
+    "parallel_judgment_par_par(1,HG,AC,EF)": [
+      "parallelogram_judgment_parallel_and_parallel(1,HEFG)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,IC,EF)": [],
+    "parallel_property_ipsilateral_internal_angle(1,OB,IE)": [],
+    "midsegment_of_triangle_property_length(1,FE,BCA)": [],
+    "midsegment_of_triangle_property_length(1,EH,ABD)": [],
+    "parallelogram_judgment_parallel_and_parallel(1,HEFG)": [
+      "parallelogram_area_formula_sine(1,HEFG)"
+    ],
+    "parallelogram_area_formula_sine(1,HEFG)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,GF,CDB)",
+      "midsegment_of_triangle_judgment_midpoint(1,HG,DAC)",
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)",
+      "midsegment_of_triangle_judgment_midpoint(1,EH,ABD)"
+    ]
+  }
 }

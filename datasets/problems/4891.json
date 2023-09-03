@@ -31,16 +31,57 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AM,O,O)",
-    "tangent_of_circle_property_perpendicular(AN,O,O)",
-    "radius_of_circle_property_length_equal(OM,O)",
-    "radius_of_circle_property_length_equal(ON,O)",
-    "tangent_of_circle_property_length_equal(AM,AN,O)",
-    "tangent_of_circle_property_length_equal(DM,DE,O)",
-    "quadrilateral_property_angle_sum(ANOM)",
-    "parallelogram_judgment_angle_and_angle(ANOM)",
-    "kite_judgment_equal_and_equal(ANOM)",
-    "rhombus_judgment_parallelogram_and_kite(ANOM)",
-    "line_addition(DM,MA)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,AM,O,O)",
+    "tangent_of_circle_property_perpendicular(2,AN,O,O)",
+    "radius_of_circle_property_length_equal(1,OM,O)",
+    "radius_of_circle_property_length_equal(1,ON,O)",
+    "tangent_of_circle_property_length_equal(1,AM,AN,O)",
+    "tangent_of_circle_property_length_equal(1,DM,DE,O)",
+    "quadrilateral_property_angle_sum(1,ANOM)",
+    "parallelogram_judgment_angle_and_angle(1,ANOM)",
+    "kite_judgment_equal_and_equal(1,ANOM)",
+    "rhombus_judgment_parallelogram_and_kite(1,ANOM)",
+    "line_addition(1,DM,MA)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,AM,O,O)": [
+      "parallelogram_judgment_angle_and_angle(1,ANOM)",
+      "parallelogram_judgment_angle_and_angle(1,ANOM)"
+    ],
+    "tangent_of_circle_property_perpendicular(2,AN,O,O)": [
+      "parallelogram_judgment_angle_and_angle(1,ANOM)",
+      "parallelogram_judgment_angle_and_angle(1,ANOM)"
+    ],
+    "radius_of_circle_property_length_equal(1,OM,O)": [
+      "kite_judgment_equal_and_equal(1,ANOM)"
+    ],
+    "radius_of_circle_property_length_equal(1,ON,O)": [
+      "kite_judgment_equal_and_equal(1,ANOM)"
+    ],
+    "tangent_of_circle_property_length_equal(1,AM,AN,O)": [
+      "kite_judgment_equal_and_equal(1,ANOM)"
+    ],
+    "tangent_of_circle_property_length_equal(1,DM,DE,O)": [],
+    "quadrilateral_property_angle_sum(1,ANOM)": [
+      "parallelogram_judgment_angle_and_angle(1,ANOM)"
+    ],
+    "parallelogram_judgment_angle_and_angle(1,ANOM)": [
+      "rhombus_judgment_parallelogram_and_kite(1,ANOM)"
+    ],
+    "kite_judgment_equal_and_equal(1,ANOM)": [
+      "rhombus_judgment_parallelogram_and_kite(1,ANOM)"
+    ],
+    "rhombus_judgment_parallelogram_and_kite(1,ANOM)": [],
+    "line_addition(1,DM,MA)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,AM,O,O)",
+      "tangent_of_circle_property_perpendicular(2,AN,O,O)",
+      "radius_of_circle_property_length_equal(1,OM,O)",
+      "radius_of_circle_property_length_equal(1,ON,O)",
+      "tangent_of_circle_property_length_equal(1,AM,AN,O)",
+      "tangent_of_circle_property_length_equal(1,DM,DE,O)",
+      "quadrilateral_property_angle_sum(1,ANOM)",
+      "line_addition(1,DM,MA)"
+    ]
+  }
 }

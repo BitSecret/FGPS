@@ -21,12 +21,32 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(BCD)))",
   "problem_answer": "5/13",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(CDB)",
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(CDB)",
-    "right_triangle_property_pythagorean(BCA)",
-    "cosine_theorem(CDB)",
-    "cosine_theorem(BCA)",
-    "sine_theorem(CDB)"
-  ]
+    "right_triangle_judgment_angle(1,CDB)",
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,CDB)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "cosine_theorem(1,CDB)",
+    "cosine_theorem(1,BCA)",
+    "sine_theorem(1,CDB)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,CDB)": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ],
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,CDB)": [],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "cosine_theorem(1,CDB)": [],
+    "cosine_theorem(1,BCA)": [],
+    "sine_theorem(1,CDB)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "sine_theorem(1,CDB)"
+    ]
+  }
 }

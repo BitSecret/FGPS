@@ -29,13 +29,39 @@
   "goal_cdl": "Value(LengthOfLine(JQ))",
   "problem_answer": "18.79",
   "theorem_seqs": [
-    "adjacent_complementary_angle(LKQ,QKJ)",
-    "adjacent_complementary_angle(JPQ,QPN)",
-    "mirror_congruent_triangle_judgment_aas(QLK,QML)",
-    "mirror_congruent_triangle_judgment_aas(QJP,QKJ)",
-    "mirror_congruent_triangle_property_line_equal(LKQ,LQM)",
-    "mirror_congruent_triangle_property_line_equal(QJP,QKJ)",
-    "right_triangle_judgment_angle(QKJ)",
-    "right_triangle_property_pythagorean(QKJ)"
-  ]
+    "adjacent_complementary_angle(1,LKQ,QKJ)",
+    "adjacent_complementary_angle(1,JPQ,QPN)",
+    "mirror_congruent_triangle_judgment_aas(1,QLK,QML)",
+    "mirror_congruent_triangle_judgment_aas(1,QJP,QKJ)",
+    "mirror_congruent_triangle_property_line_equal(1,LKQ,LQM)",
+    "mirror_congruent_triangle_property_line_equal(1,QJP,QKJ)",
+    "right_triangle_judgment_angle(1,QKJ)",
+    "right_triangle_property_pythagorean(1,QKJ)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,LKQ,QKJ)": [
+      "mirror_congruent_triangle_judgment_aas(1,QJP,QKJ)",
+      "right_triangle_judgment_angle(1,QKJ)"
+    ],
+    "adjacent_complementary_angle(1,JPQ,QPN)": [
+      "mirror_congruent_triangle_judgment_aas(1,QJP,QKJ)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,QLK,QML)": [
+      "mirror_congruent_triangle_property_line_equal(1,LKQ,LQM)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,QJP,QKJ)": [
+      "mirror_congruent_triangle_property_line_equal(1,QJP,QKJ)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,LKQ,LQM)": [],
+    "mirror_congruent_triangle_property_line_equal(1,QJP,QKJ)": [],
+    "right_triangle_judgment_angle(1,QKJ)": [
+      "right_triangle_property_pythagorean(1,QKJ)"
+    ],
+    "right_triangle_property_pythagorean(1,QKJ)": [],
+    "START": [
+      "adjacent_complementary_angle(1,LKQ,QKJ)",
+      "adjacent_complementary_angle(1,JPQ,QPN)",
+      "mirror_congruent_triangle_judgment_aas(1,QLK,QML)"
+    ]
+  }
 }

@@ -28,15 +28,43 @@
   "goal_cdl": "Value(LengthOfLine(OX))",
   "problem_answer": "5*sqrt(3)",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "isosceles_triangle_judgment_line_equal(OBA)",
-    "isosceles_triangle_property_angle_equal(OBA)",
-    "arc_property_center_angle(OBA,O)",
-    "triangle_property_angle_sum(OBA)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OX,BA)",
-    "line_addition(AX,XB)",
-    "triangle_property_angle_sum(BXO)",
-    "sine_theorem(XOB)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBA)",
+    "isosceles_triangle_property_angle_equal(1,OBA)",
+    "arc_property_center_angle(1,OBA,O)",
+    "triangle_property_angle_sum(1,OBA)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OX,BA)",
+    "line_addition(1,AX,XB)",
+    "triangle_property_angle_sum(1,BXO)",
+    "sine_theorem(1,XOB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBA)": [
+      "isosceles_triangle_property_angle_equal(1,OBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBA)": [],
+    "arc_property_center_angle(1,OBA,O)": [],
+    "triangle_property_angle_sum(1,OBA)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OX,BA)": [],
+    "line_addition(1,AX,XB)": [],
+    "triangle_property_angle_sum(1,BXO)": [],
+    "sine_theorem(1,XOB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBA,O)",
+      "triangle_property_angle_sum(1,OBA)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OX,BA)",
+      "line_addition(1,AX,XB)",
+      "triangle_property_angle_sum(1,BXO)",
+      "sine_theorem(1,XOB)"
+    ]
+  }
 }

@@ -31,8 +31,19 @@
   "goal_cdl": "Value(LengthOfLine(UV))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "adjacent_complementary_angle(UVR,RVS)",
-    "circle_property_chord_perpendicular_bisect_chord(R,RV,US)",
-    "line_addition(SV,VU)"
-  ]
+    "adjacent_complementary_angle(1,UVR,RVS)",
+    "circle_property_chord_perpendicular_bisect_chord(1,R,RV,US)",
+    "line_addition(1,SV,VU)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,UVR,RVS)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,R,RV,US)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,R,RV,US)": [],
+    "line_addition(1,SV,VU)": [],
+    "START": [
+      "adjacent_complementary_angle(1,UVR,RVS)",
+      "line_addition(1,SV,VU)"
+    ]
+  }
 }

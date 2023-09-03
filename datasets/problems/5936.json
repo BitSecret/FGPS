@@ -21,9 +21,21 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "6*sqrt(3)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ABC,CBD)",
-    "triangle_property_angle_sum(CAB)",
-    "sine_theorem(ABC)",
-    "sine_theorem(CAD)"
-  ]
+    "adjacent_complementary_angle(1,ABC,CBD)",
+    "triangle_property_angle_sum(1,CAB)",
+    "sine_theorem(1,ABC)",
+    "sine_theorem(1,CAD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ABC,CBD)": [],
+    "triangle_property_angle_sum(1,CAB)": [],
+    "sine_theorem(1,ABC)": [],
+    "sine_theorem(1,CAD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ABC,CBD)",
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,ABC)",
+      "sine_theorem(1,CAD)"
+    ]
+  }
 }

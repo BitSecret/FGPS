@@ -25,12 +25,33 @@
   "goal_cdl": "Value(LengthOfLine(MI))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(MI,CA,D)",
-    "parallel_property_alternate_interior_angle(ID,CA)",
-    "isosceles_triangle_judgment_angle_equal(DIA)",
-    "midsegment_of_triangle_judgment_parallel(MD,BCA)",
-    "midsegment_of_triangle_property_length(MD,BCA)",
-    "line_addition(AD,DB)",
-    "line_addition(DI,IM)"
-  ]
+    "parallel_property_collinear_extend(2,MI,CA,D)",
+    "parallel_property_alternate_interior_angle(1,ID,CA)",
+    "isosceles_triangle_judgment_angle_equal(1,DIA)",
+    "midsegment_of_triangle_judgment_parallel(1,MD,BCA)",
+    "midsegment_of_triangle_property_length(1,MD,BCA)",
+    "line_addition(1,AD,DB)",
+    "line_addition(1,DI,IM)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,MI,CA,D)": [
+      "midsegment_of_triangle_judgment_parallel(1,MD,BCA)",
+      "parallel_property_alternate_interior_angle(1,ID,CA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,ID,CA)": [
+      "isosceles_triangle_judgment_angle_equal(1,DIA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,DIA)": [],
+    "midsegment_of_triangle_judgment_parallel(1,MD,BCA)": [
+      "midsegment_of_triangle_property_length(1,MD,BCA)"
+    ],
+    "midsegment_of_triangle_property_length(1,MD,BCA)": [],
+    "line_addition(1,AD,DB)": [],
+    "line_addition(1,DI,IM)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,MI,CA,D)",
+      "line_addition(1,AD,DB)",
+      "line_addition(1,DI,IM)"
+    ]
+  }
 }

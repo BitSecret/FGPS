@@ -23,7 +23,16 @@
   "goal_cdl": "Value(MeasureOfAngle(MNL))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(MNL)",
-    "isosceles_triangle_property_angle_equal(MNL)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,MNL)",
+    "isosceles_triangle_property_angle_equal(1,MNL)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,MNL)": [
+      "isosceles_triangle_property_angle_equal(1,MNL)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,MNL)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,MNL)"
+    ]
+  }
 }

@@ -25,8 +25,18 @@
   "goal_cdl": "Value(AreaOfSector(OAC))",
   "problem_answer": "6*pi",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "arc_property_circumference_angle_external(OAC,B)",
-    "sector_area_formula(OAC)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "arc_property_circumference_angle_external(1,OAC,B)",
+    "sector_area_formula(1,OAC)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "arc_property_circumference_angle_external(1,OAC,B)": [],
+    "sector_area_formula(1,OAC)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "arc_property_circumference_angle_external(1,OAC,B)",
+      "sector_area_formula(1,OAC)"
+    ]
+  }
 }

@@ -26,14 +26,41 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ACBN))",
   "problem_answer": "500",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(EA,FN)",
-    "parallel_property_collinear_extend(BC,NA,E)",
-    "parallel_property_collinear_extend(EC,NA,F)",
-    "parallelogram_judgment_parallel_and_parallel(AEFN)",
-    "parallelogram_property_opposite_line_equal(EFNA)",
-    "line_addition(CE,EF)",
-    "line_addition(CF,FB)",
-    "altitude_of_quadrilateral_judgment_right_vertex(NF,ACBN)",
-    "trapezoid_area_formula(ACBN)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,EA,FN)",
+    "parallel_property_collinear_extend(3,BC,NA,E)",
+    "parallel_property_collinear_extend(1,EC,NA,F)",
+    "parallelogram_judgment_parallel_and_parallel(1,AEFN)",
+    "parallelogram_property_opposite_line_equal(1,EFNA)",
+    "line_addition(1,CE,EF)",
+    "line_addition(1,CF,FB)",
+    "altitude_of_quadrilateral_judgment_right_vertex(2,NF,ACBN)",
+    "trapezoid_area_formula(1,ACBN)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,EA,FN)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AEFN)"
+    ],
+    "parallel_property_collinear_extend(3,BC,NA,E)": [
+      "parallel_property_collinear_extend(1,EC,NA,F)"
+    ],
+    "parallel_property_collinear_extend(1,EC,NA,F)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AEFN)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,AEFN)": [
+      "parallelogram_property_opposite_line_equal(1,EFNA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,EFNA)": [],
+    "line_addition(1,CE,EF)": [],
+    "line_addition(1,CF,FB)": [],
+    "altitude_of_quadrilateral_judgment_right_vertex(2,NF,ACBN)": [],
+    "trapezoid_area_formula(1,ACBN)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EA,FN)",
+      "parallel_property_collinear_extend(3,BC,NA,E)",
+      "line_addition(1,CE,EF)",
+      "line_addition(1,CF,FB)",
+      "altitude_of_quadrilateral_judgment_right_vertex(2,NF,ACBN)",
+      "trapezoid_area_formula(1,ACBN)"
+    ]
+  }
 }

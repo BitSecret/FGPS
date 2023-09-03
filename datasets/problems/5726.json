@@ -21,10 +21,26 @@
   "goal_cdl": "Value(LengthOfLine(DC))",
   "problem_answer": "16/5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CDA,ADB)",
-    "mirror_similar_triangle_judgment_aa(CBA,ADB)",
-    "mirror_similar_triangle_property_line_ratio(CBA,ADB)",
-    "mirror_similar_triangle_property_line_ratio(ACB,DBA)",
-    "line_addition(CD,DB)"
-  ]
+    "adjacent_complementary_angle(1,CDA,ADB)",
+    "mirror_similar_triangle_judgment_aa(1,CBA,ADB)",
+    "mirror_similar_triangle_property_line_ratio(1,CBA,ADB)",
+    "mirror_similar_triangle_property_line_ratio(1,ACB,DBA)",
+    "line_addition(1,CD,DB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CDA,ADB)": [
+      "mirror_similar_triangle_judgment_aa(1,CBA,ADB)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,CBA,ADB)": [
+      "mirror_similar_triangle_property_line_ratio(1,CBA,ADB)",
+      "mirror_similar_triangle_property_line_ratio(1,ACB,DBA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,CBA,ADB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ACB,DBA)": [],
+    "line_addition(1,CD,DB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CDA,ADB)",
+      "line_addition(1,CD,DB)"
+    ]
+  }
 }

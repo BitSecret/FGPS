@@ -32,9 +32,25 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(O,OE,AP)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OF,PB)",
-    "midsegment_of_triangle_judgment_midpoint(FE,PBA)",
-    "midsegment_of_triangle_property_length(FE,PBA)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AP)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OF,PB)",
+    "midsegment_of_triangle_judgment_midpoint(1,FE,PBA)",
+    "midsegment_of_triangle_property_length(1,FE,PBA)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AP)": [
+      "midsegment_of_triangle_judgment_midpoint(1,FE,PBA)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OF,PB)": [
+      "midsegment_of_triangle_judgment_midpoint(1,FE,PBA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,FE,PBA)": [
+      "midsegment_of_triangle_property_length(1,FE,PBA)"
+    ],
+    "midsegment_of_triangle_property_length(1,FE,PBA)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AP)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OF,PB)"
+    ]
+  }
 }

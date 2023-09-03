@@ -44,8 +44,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallel_judgment_par_par(MJ,PK,QL)",
-    "trapezoid_judgment_parallel(MQLJ)",
-    "midsegment_of_quadrilateral_judgment_parallel(PK,MQLJ)"
-  ]
+    "parallel_judgment_par_par(1,MJ,PK,QL)",
+    "trapezoid_judgment_parallel(1,MQLJ)",
+    "midsegment_of_quadrilateral_judgment_parallel(1,PK,MQLJ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_par_par(1,MJ,PK,QL)": [
+      "trapezoid_judgment_parallel(1,MQLJ)"
+    ],
+    "trapezoid_judgment_parallel(1,MQLJ)": [
+      "midsegment_of_quadrilateral_judgment_parallel(1,PK,MQLJ)"
+    ],
+    "midsegment_of_quadrilateral_judgment_parallel(1,PK,MQLJ)": [],
+    "START": [
+      "parallel_judgment_par_par(1,MJ,PK,QL)"
+    ]
+  }
 }

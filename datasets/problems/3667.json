@@ -23,10 +23,27 @@
   "goal_cdl": "Value(MeasureOfAngle(GFE))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "adjacent_complementary_angle(FCB,BCD)",
-    "adjacent_complementary_angle(ABC,CBE)",
-    "perpendicular_judgment_angle(CB,EB)",
-    "parallel_judgment_per_per(BC,EF)",
-    "parallel_property_corresponding_angle(FE,CB,G)"
-  ]
+    "adjacent_complementary_angle(1,FCB,BCD)",
+    "adjacent_complementary_angle(1,ABC,CBE)",
+    "perpendicular_judgment_angle(1,CB,EB)",
+    "parallel_judgment_per_per(1,BC,EF)",
+    "parallel_property_corresponding_angle(1,FE,CB,G)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,FCB,BCD)": [],
+    "adjacent_complementary_angle(1,ABC,CBE)": [
+      "perpendicular_judgment_angle(1,CB,EB)"
+    ],
+    "perpendicular_judgment_angle(1,CB,EB)": [
+      "parallel_judgment_per_per(1,BC,EF)"
+    ],
+    "parallel_judgment_per_per(1,BC,EF)": [
+      "parallel_property_corresponding_angle(1,FE,CB,G)"
+    ],
+    "parallel_property_corresponding_angle(1,FE,CB,G)": [],
+    "START": [
+      "adjacent_complementary_angle(1,FCB,BCD)",
+      "adjacent_complementary_angle(1,ABC,CBE)"
+    ]
+  }
 }

@@ -18,9 +18,22 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(BAC)))",
   "problem_answer": "3/5",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(ACB)",
-    "right_triangle_property_pythagorean(ACB)",
-    "sine_theorem(ACB)",
-    "sine_theorem(CBA)"
-  ]
+    "right_triangle_judgment_angle(1,ACB)",
+    "right_triangle_property_pythagorean(1,ACB)",
+    "sine_theorem(1,ACB)",
+    "sine_theorem(1,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,ACB)": [
+      "right_triangle_property_pythagorean(1,ACB)"
+    ],
+    "right_triangle_property_pythagorean(1,ACB)": [],
+    "sine_theorem(1,ACB)": [],
+    "sine_theorem(1,CBA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,ACB)",
+      "sine_theorem(1,ACB)",
+      "sine_theorem(1,CBA)"
+    ]
+  }
 }

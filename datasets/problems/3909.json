@@ -26,10 +26,30 @@
   "goal_cdl": "Value(LengthOfLine(OD))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(O,OD,AC)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "midsegment_of_triangle_judgment_midpoint(DO,ACB)",
-    "midsegment_of_triangle_property_length(DO,ACB)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AC)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "midsegment_of_triangle_judgment_midpoint(1,DO,ACB)",
+    "midsegment_of_triangle_property_length(1,DO,ACB)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AC)": [
+      "midsegment_of_triangle_judgment_midpoint(1,DO,ACB)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,DO,ACB)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,DO,ACB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,DO,ACB)": [
+      "midsegment_of_triangle_property_length(1,DO,ACB)"
+    ],
+    "midsegment_of_triangle_property_length(1,DO,ACB)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AC)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)"
+    ]
+  }
 }

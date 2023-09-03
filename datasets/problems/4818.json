@@ -32,15 +32,45 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OA,Z)",
-    "radius_of_circle_property_length_equal(OB,Z)",
-    "tangent_of_circle_property_perpendicular(AC,O,O)",
-    "tangent_of_circle_property_perpendicular(BC,O,O)",
-    "right_triangle_judgment_angle(ACO)",
-    "right_triangle_judgment_angle(OCB)",
-    "right_triangle_property_pythagorean(ACO)",
-    "right_triangle_property_pythagorean(OCB)",
-    "line_addition(AC,CB)"
-  ]
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OA,Z)",
+    "radius_of_circle_property_length_equal(1,OB,Z)",
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+    "tangent_of_circle_property_perpendicular(1,BC,O,O)",
+    "right_triangle_judgment_angle(1,ACO)",
+    "right_triangle_judgment_angle(1,OCB)",
+    "right_triangle_property_pythagorean(1,ACO)",
+    "right_triangle_property_pythagorean(1,OCB)",
+    "line_addition(1,AC,CB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "solve_eq_25)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,Z)": [],
+    "radius_of_circle_property_length_equal(1,OB,Z)": [],
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)": [
+      "right_triangle_judgment_angle(1,ACO)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,BC,O,O)": [
+      "right_triangle_judgment_angle(1,OCB)"
+    ],
+    "right_triangle_judgment_angle(1,ACO)": [
+      "right_triangle_property_pythagorean(1,ACO)"
+    ],
+    "right_triangle_judgment_angle(1,OCB)": [
+      "right_triangle_property_pythagorean(1,OCB)"
+    ],
+    "right_triangle_property_pythagorean(1,ACO)": [],
+    "right_triangle_property_pythagorean(1,OCB)": [],
+    "line_addition(1,AC,CB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,Z)",
+      "radius_of_circle_property_length_equal(1,OB,Z)",
+      "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+      "tangent_of_circle_property_perpendicular(1,BC,O,O)",
+      "line_addition(1,AC,CB)"
+    ]
+  }
 }

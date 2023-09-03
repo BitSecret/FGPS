@@ -20,7 +20,16 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CBDE))",
   "problem_answer": "29.16",
   "theorem_seqs": [
-    "kite_judgment_equal_and_equal(CBDE)",
-    "kite_area_formula_sine(CBDE)"
-  ]
+    "kite_judgment_equal_and_equal(1,CBDE)",
+    "kite_area_formula_sine(1,CBDE)"
+  ],
+  "theorem_seq_dag": {
+    "kite_judgment_equal_and_equal(1,CBDE)": [
+      "kite_area_formula_sine(1,CBDE)"
+    ],
+    "kite_area_formula_sine(1,CBDE)": [],
+    "START": [
+      "kite_judgment_equal_and_equal(1,CBDE)"
+    ]
+  }
 }

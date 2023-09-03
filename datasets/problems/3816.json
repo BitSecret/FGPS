@@ -20,10 +20,28 @@
   "goal_cdl": "Value(MeasureOfAngle(NOM))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OM,O)",
-    "radius_of_circle_property_length_equal(ON,O)",
-    "isosceles_triangle_judgment_line_equal(OMN)",
-    "isosceles_triangle_property_angle_equal(OMN)",
-    "triangle_property_angle_sum(OMN)"
-  ]
+    "radius_of_circle_property_length_equal(1,OM,O)",
+    "radius_of_circle_property_length_equal(1,ON,O)",
+    "isosceles_triangle_judgment_line_equal(1,OMN)",
+    "isosceles_triangle_property_angle_equal(1,OMN)",
+    "triangle_property_angle_sum(1,OMN)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OM,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OMN)"
+    ],
+    "radius_of_circle_property_length_equal(1,ON,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OMN)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OMN)": [
+      "isosceles_triangle_property_angle_equal(1,OMN)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OMN)": [],
+    "triangle_property_angle_sum(1,OMN)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OM,O)",
+      "radius_of_circle_property_length_equal(1,ON,O)",
+      "triangle_property_angle_sum(1,OMN)"
+    ]
+  }
 }

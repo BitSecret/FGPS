@@ -25,13 +25,36 @@
   "goal_cdl": "Value(LengthOfLine(QS))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(PQ,P)",
-    "radius_of_circle_property_length_equal(PS,P)",
-    "adjacent_complementary_angle(SRP,PRQ)",
-    "right_triangle_judgment_angle(PRQ)",
-    "right_triangle_property_pythagorean(PRQ)",
-    "right_triangle_judgment_angle(SRP)",
-    "right_triangle_property_pythagorean(SRP)",
-    "line_addition(QR,RS)"
-  ]
+    "radius_of_circle_property_length_equal(1,PQ,P)",
+    "radius_of_circle_property_length_equal(1,PS,P)",
+    "adjacent_complementary_angle(1,SRP,PRQ)",
+    "right_triangle_judgment_angle(1,PRQ)",
+    "right_triangle_property_pythagorean(1,PRQ)",
+    "right_triangle_judgment_angle(1,SRP)",
+    "right_triangle_property_pythagorean(1,SRP)",
+    "line_addition(1,QR,RS)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,PQ,P)": [],
+    "radius_of_circle_property_length_equal(1,PS,P)": [],
+    "adjacent_complementary_angle(1,SRP,PRQ)": [
+      "right_triangle_judgment_angle(1,SRP)"
+    ],
+    "right_triangle_judgment_angle(1,PRQ)": [
+      "right_triangle_property_pythagorean(1,PRQ)"
+    ],
+    "right_triangle_property_pythagorean(1,PRQ)": [],
+    "right_triangle_judgment_angle(1,SRP)": [
+      "right_triangle_property_pythagorean(1,SRP)"
+    ],
+    "right_triangle_property_pythagorean(1,SRP)": [],
+    "line_addition(1,QR,RS)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,PQ,P)",
+      "radius_of_circle_property_length_equal(1,PS,P)",
+      "adjacent_complementary_angle(1,SRP,PRQ)",
+      "right_triangle_judgment_angle(1,PRQ)",
+      "line_addition(1,QR,RS)"
+    ]
+  }
 }

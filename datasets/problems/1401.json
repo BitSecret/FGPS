@@ -20,9 +20,22 @@
   "goal_cdl": "Value(MeasureOfAngle(PZX))",
   "problem_answer": "13",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(YZP)",
-    "isosceles_triangle_property_angle_equal(YZP)",
-    "triangle_property_angle_sum(YZP)",
-    "angle_addition(YZP,PZX)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,YZP)",
+    "isosceles_triangle_property_angle_equal(1,YZP)",
+    "triangle_property_angle_sum(1,YZP)",
+    "angle_addition(1,YZP,PZX)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,YZP)": [
+      "isosceles_triangle_property_angle_equal(1,YZP)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,YZP)": [],
+    "triangle_property_angle_sum(1,YZP)": [],
+    "angle_addition(1,YZP,PZX)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,YZP)",
+      "triangle_property_angle_sum(1,YZP)",
+      "angle_addition(1,YZP,PZX)"
+    ]
+  }
 }

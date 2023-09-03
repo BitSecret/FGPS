@@ -29,11 +29,31 @@
   "goal_cdl": "Value(MeasureOfAngle(MNG))",
   "problem_answer": "44.5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(NPM,MPG)",
-    "triangle_property_angle_sum(PMN)",
-    "radius_of_circle_property_length_equal(PM,P)",
-    "radius_of_circle_property_length_equal(PN,P)",
-    "isosceles_triangle_judgment_line_equal(PMN)",
-    "isosceles_triangle_property_angle_equal(PMN)"
-  ]
+    "adjacent_complementary_angle(1,NPM,MPG)",
+    "triangle_property_angle_sum(1,PMN)",
+    "radius_of_circle_property_length_equal(1,PM,P)",
+    "radius_of_circle_property_length_equal(1,PN,P)",
+    "isosceles_triangle_judgment_line_equal(1,PMN)",
+    "isosceles_triangle_property_angle_equal(1,PMN)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,NPM,MPG)": [],
+    "triangle_property_angle_sum(1,PMN)": [],
+    "radius_of_circle_property_length_equal(1,PM,P)": [
+      "isosceles_triangle_judgment_line_equal(1,PMN)"
+    ],
+    "radius_of_circle_property_length_equal(1,PN,P)": [
+      "isosceles_triangle_judgment_line_equal(1,PMN)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,PMN)": [
+      "isosceles_triangle_property_angle_equal(1,PMN)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,PMN)": [],
+    "START": [
+      "adjacent_complementary_angle(1,NPM,MPG)",
+      "triangle_property_angle_sum(1,PMN)",
+      "radius_of_circle_property_length_equal(1,PM,P)",
+      "radius_of_circle_property_length_equal(1,PN,P)"
+    ]
+  }
 }

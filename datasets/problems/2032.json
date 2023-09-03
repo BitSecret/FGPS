@@ -21,10 +21,25 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ADCB))",
   "problem_answer": "97.51",
   "theorem_seqs": [
-    "sine_theorem(ADB)",
-    "parallelogram_judgment_equal_and_equal(ADCB)",
-    "parallel_property_alternate_interior_angle(AB,DC)",
-    "angle_addition(ADB,BDC)",
-    "parallelogram_area_formula_sine(ADCB)"
-  ]
+    "sine_theorem(1,ADB)",
+    "parallelogram_judgment_equal_and_equal(1,ADCB)",
+    "parallel_property_alternate_interior_angle(2,AB,DC)",
+    "angle_addition(1,ADB,BDC)",
+    "parallelogram_area_formula_sine(1,ADCB)"
+  ],
+  "theorem_seq_dag": {
+    "sine_theorem(1,ADB)": [],
+    "parallelogram_judgment_equal_and_equal(1,ADCB)": [
+      "parallelogram_area_formula_sine(1,ADCB)",
+      "parallel_property_alternate_interior_angle(2,AB,DC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AB,DC)": [],
+    "angle_addition(1,ADB,BDC)": [],
+    "parallelogram_area_formula_sine(1,ADCB)": [],
+    "START": [
+      "sine_theorem(1,ADB)",
+      "parallelogram_judgment_equal_and_equal(1,ADCB)",
+      "angle_addition(1,ADB,BDC)"
+    ]
+  }
 }

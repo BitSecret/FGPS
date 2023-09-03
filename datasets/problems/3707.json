@@ -21,9 +21,21 @@
   "goal_cdl": "Value(MeasureOfAngle(EBD))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "triangle_property_angle_sum(ACB)",
-    "angle_addition(CBA,ABE)",
-    "angle_addition(CBE,EBD)",
-    "flat_angle(CBD)"
-  ]
+    "triangle_property_angle_sum(1,ACB)",
+    "angle_addition(1,CBA,ABE)",
+    "angle_addition(1,CBE,EBD)",
+    "flat_angle(1,CBD)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,ACB)": [],
+    "angle_addition(1,CBA,ABE)": [],
+    "angle_addition(1,CBE,EBD)": [],
+    "flat_angle(1,CBD)": [],
+    "START": [
+      "triangle_property_angle_sum(1,ACB)",
+      "angle_addition(1,CBA,ABE)",
+      "angle_addition(1,CBE,EBD)",
+      "flat_angle(1,CBD)"
+    ]
+  }
 }

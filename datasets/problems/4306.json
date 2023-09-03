@@ -25,12 +25,38 @@
   "goal_cdl": "Value(LengthOfLine(OD))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(AOB,O)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "parallel_judgment_corresponding_angle(DO,CA,B)",
-    "midsegment_of_triangle_judgment_parallel(DO,BCA)",
-    "midsegment_of_triangle_property_length(DO,BCA)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "parallel_judgment_corresponding_angle(1,DO,CA,B)",
+    "midsegment_of_triangle_judgment_parallel(2,DO,BCA)",
+    "midsegment_of_triangle_property_length(1,DO,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [
+      "parallel_judgment_corresponding_angle(1,DO,CA,B)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "midsegment_of_triangle_judgment_parallel(2,DO,BCA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "midsegment_of_triangle_judgment_parallel(2,DO,BCA)"
+    ],
+    "parallel_judgment_corresponding_angle(1,DO,CA,B)": [
+      "midsegment_of_triangle_judgment_parallel(2,DO,BCA)"
+    ],
+    "midsegment_of_triangle_judgment_parallel(2,DO,BCA)": [
+      "midsegment_of_triangle_property_length(1,DO,BCA)"
+    ],
+    "midsegment_of_triangle_property_length(1,DO,BCA)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)"
+    ]
+  }
 }

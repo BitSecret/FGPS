@@ -35,12 +35,34 @@
   "goal_cdl": "Value(LengthOfLine(FE))",
   "problem_answer": "36/5",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AD,O,O)",
-    "right_triangle_judgment_pythagorean_inverse(BCA)",
-    "mirror_similar_triangle_judgment_aa(CAD,BCA)",
-    "mirror_similar_triangle_property_line_ratio(ADC,ABC)",
-    "mirror_similar_triangle_property_line_ratio(DCA,CAB)",
-    "diameter_of_circle_property_length_equal(FE,O)",
-    "diameter_of_circle_property_length_equal(DC,O)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AD,O,O)",
+    "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+    "mirror_similar_triangle_judgment_aa(1,CAD,BCA)",
+    "mirror_similar_triangle_property_line_ratio(1,ADC,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,DCA,CAB)",
+    "diameter_of_circle_property_length_equal(1,FE,O)",
+    "diameter_of_circle_property_length_equal(1,DC,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AD,O,O)": [
+      "mirror_similar_triangle_judgment_aa(1,CAD,BCA)"
+    ],
+    "right_triangle_judgment_pythagorean_inverse(1,BCA)": [
+      "mirror_similar_triangle_judgment_aa(1,CAD,BCA)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,CAD,BCA)": [
+      "mirror_similar_triangle_property_line_ratio(1,ADC,ABC)",
+      "mirror_similar_triangle_property_line_ratio(1,DCA,CAB)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ADC,ABC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DCA,CAB)": [],
+    "diameter_of_circle_property_length_equal(1,FE,O)": [],
+    "diameter_of_circle_property_length_equal(1,DC,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AD,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,FE,O)",
+      "diameter_of_circle_property_length_equal(1,DC,O)"
+    ]
+  }
 }

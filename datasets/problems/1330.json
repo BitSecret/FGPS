@@ -31,12 +31,34 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "39",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(AH,A)",
-    "radius_of_circle_property_length_equal(AG,A)",
-    "isosceles_triangle_judgment_line_equal(AHG)",
-    "isosceles_triangle_property_angle_equal(AHG)",
-    "arc_property_center_angle(AHG,A)",
-    "triangle_property_angle_sum(AHG)",
-    "triangle_property_angle_sum(GJH)"
-  ]
+    "radius_of_circle_property_length_equal(1,AH,A)",
+    "radius_of_circle_property_length_equal(1,AG,A)",
+    "isosceles_triangle_judgment_line_equal(1,AHG)",
+    "isosceles_triangle_property_angle_equal(1,AHG)",
+    "arc_property_center_angle(1,AHG,A)",
+    "triangle_property_angle_sum(1,AHG)",
+    "triangle_property_angle_sum(1,GJH)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,AH,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AHG)"
+    ],
+    "radius_of_circle_property_length_equal(1,AG,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AHG)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,AHG)": [
+      "isosceles_triangle_property_angle_equal(1,AHG)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,AHG)": [],
+    "arc_property_center_angle(1,AHG,A)": [],
+    "triangle_property_angle_sum(1,AHG)": [],
+    "triangle_property_angle_sum(1,GJH)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,AH,A)",
+      "radius_of_circle_property_length_equal(1,AG,A)",
+      "arc_property_center_angle(1,AHG,A)",
+      "triangle_property_angle_sum(1,AHG)",
+      "triangle_property_angle_sum(1,GJH)"
+    ]
+  }
 }

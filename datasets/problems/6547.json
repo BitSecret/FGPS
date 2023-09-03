@@ -20,9 +20,22 @@
   "goal_cdl": "Value(MeasureOfAngle(BEA))",
   "problem_answer": "36",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_alternate_interior_angle(AE,BC)",
-    "parallelogram_property_opposite_angle_equal(ABCD)",
-    "triangle_property_angle_sum(ABE)"
-  ]
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_alternate_interior_angle(2,AE,BC)",
+    "parallelogram_property_opposite_angle_equal(1,ABCD)",
+    "triangle_property_angle_sum(1,ABE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_alternate_interior_angle(2,AE,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,BC)": [],
+    "parallelogram_property_opposite_angle_equal(1,ABCD)": [],
+    "triangle_property_angle_sum(1,ABE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,BC,E)",
+      "parallelogram_property_opposite_angle_equal(1,ABCD)",
+      "triangle_property_angle_sum(1,ABE)"
+    ]
+  }
 }

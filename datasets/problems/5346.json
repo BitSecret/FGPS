@@ -23,8 +23,19 @@
   "goal_cdl": "Value(LengthOfLine(OC))",
   "problem_answer": "sqrt(5)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(OBA)",
-    "right_triangle_property_pythagorean(OBA)",
-    "similar_triangle_property_line_ratio(BAO,DCO)"
-  ]
+    "right_triangle_judgment_angle(1,OBA)",
+    "right_triangle_property_pythagorean(1,OBA)",
+    "similar_triangle_property_line_ratio(1,BAO,DCO)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,OBA)": [
+      "right_triangle_property_pythagorean(1,OBA)"
+    ],
+    "right_triangle_property_pythagorean(1,OBA)": [],
+    "similar_triangle_property_line_ratio(1,BAO,DCO)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,OBA)",
+      "similar_triangle_property_line_ratio(1,BAO,DCO)"
+    ]
+  }
 }

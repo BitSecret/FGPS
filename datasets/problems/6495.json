@@ -25,8 +25,20 @@
   "goal_cdl": "Value(LengthOfLine(OE))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "midsegment_of_triangle_judgment_midpoint(EO,DAB)",
-    "midsegment_of_triangle_property_length(EO,DAB)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "midsegment_of_triangle_judgment_midpoint(1,EO,DAB)",
+    "midsegment_of_triangle_property_length(1,EO,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,EO,DAB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EO,DAB)": [
+      "midsegment_of_triangle_property_length(1,EO,DAB)"
+    ],
+    "midsegment_of_triangle_property_length(1,EO,DAB)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  }
 }

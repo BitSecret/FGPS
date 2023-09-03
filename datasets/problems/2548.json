@@ -26,16 +26,47 @@
   "goal_cdl": "Value(LengthOfLine(TV))",
   "problem_answer": "18.44",
   "theorem_seqs": [
-    "line_addition(US,SR)",
-    "line_addition(TS,SV)",
-    "radius_of_circle_property_length_equal(RU,R)",
-    "radius_of_circle_property_length_equal(RT,R)",
-    "radius_of_circle_property_length_equal(RV,R)",
-    "vertical_angle(VSU,TSR)",
-    "adjacent_complementary_angle(TSR,RSV)",
-    "right_triangle_judgment_angle(TSR)",
-    "right_triangle_judgment_angle(RSV)",
-    "right_triangle_property_pythagorean(TSR)",
-    "right_triangle_property_pythagorean(RSV)"
-  ]
+    "line_addition(1,US,SR)",
+    "line_addition(1,TS,SV)",
+    "radius_of_circle_property_length_equal(1,RU,R)",
+    "radius_of_circle_property_length_equal(1,RT,R)",
+    "radius_of_circle_property_length_equal(1,RV,R)",
+    "vertical_angle(1,VSU,TSR)",
+    "adjacent_complementary_angle(1,TSR,RSV)",
+    "right_triangle_judgment_angle(1,TSR)",
+    "right_triangle_judgment_angle(1,RSV)",
+    "right_triangle_property_pythagorean(1,TSR)",
+    "right_triangle_property_pythagorean(1,RSV)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,US,SR)": [],
+    "line_addition(1,TS,SV)": [],
+    "radius_of_circle_property_length_equal(1,RU,R)": [],
+    "radius_of_circle_property_length_equal(1,RT,R)": [],
+    "radius_of_circle_property_length_equal(1,RV,R)": [],
+    "vertical_angle(1,VSU,TSR)": [
+      "right_triangle_judgment_angle(1,TSR)",
+      "right_triangle_judgment_angle(1,RSV)"
+    ],
+    "adjacent_complementary_angle(1,TSR,RSV)": [
+      "right_triangle_judgment_angle(1,RSV)"
+    ],
+    "right_triangle_judgment_angle(1,TSR)": [
+      "right_triangle_property_pythagorean(1,TSR)"
+    ],
+    "right_triangle_judgment_angle(1,RSV)": [
+      "right_triangle_property_pythagorean(1,RSV)"
+    ],
+    "right_triangle_property_pythagorean(1,TSR)": [],
+    "right_triangle_property_pythagorean(1,RSV)": [],
+    "START": [
+      "line_addition(1,US,SR)",
+      "line_addition(1,TS,SV)",
+      "radius_of_circle_property_length_equal(1,RU,R)",
+      "radius_of_circle_property_length_equal(1,RT,R)",
+      "radius_of_circle_property_length_equal(1,RV,R)",
+      "vertical_angle(1,VSU,TSR)",
+      "adjacent_complementary_angle(1,TSR,RSV)"
+    ]
+  }
 }

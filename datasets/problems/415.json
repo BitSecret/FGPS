@@ -24,10 +24,25 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(BCAD))",
   "problem_answer": "315",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(DEA)",
-    "right_triangle_property_pythagorean(DEA)",
-    "altitude_of_quadrilateral_judgment_left_vertex(AE,ADBC)",
-    "parallelogram_property_opposite_line_equal(DBCA)",
-    "parallelogram_area_formula_common(ADBC)"
-  ]
+    "right_triangle_judgment_angle(1,DEA)",
+    "right_triangle_property_pythagorean(1,DEA)",
+    "altitude_of_quadrilateral_judgment_left_vertex(1,AE,ADBC)",
+    "parallelogram_property_opposite_line_equal(1,DBCA)",
+    "parallelogram_area_formula_common(1,ADBC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,DEA)": [
+      "right_triangle_property_pythagorean(1,DEA)"
+    ],
+    "right_triangle_property_pythagorean(1,DEA)": [],
+    "altitude_of_quadrilateral_judgment_left_vertex(1,AE,ADBC)": [],
+    "parallelogram_property_opposite_line_equal(1,DBCA)": [],
+    "parallelogram_area_formula_common(1,ADBC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,DEA)",
+      "altitude_of_quadrilateral_judgment_left_vertex(1,AE,ADBC)",
+      "parallelogram_property_opposite_line_equal(1,DBCA)",
+      "parallelogram_area_formula_common(1,ADBC)"
+    ]
+  }
 }

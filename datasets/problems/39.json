@@ -16,15 +16,25 @@
   ],
   "image_cdl": [
     "Equal(LengthOfLine(EJ),6)",
-    "Equal(LengthOfLine(LK),7.2)",
+    "Equal(LengthOfLine(LK),7)",
     "Equal(LengthOfLine(ML),4)",
     "PerpendicularBetweenLine(JE,LE)"
   ],
   "goal_cdl": "Value(PerimeterOfQuadrilateral(JMLK))",
-  "problem_answer": "22.4",
+  "problem_answer": "22",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(JMLK)",
-    "parallelogram_property_opposite_line_equal(MLKJ)",
-    "quadrilateral_perimeter_formula(JMLK)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,JMLK)",
+    "parallelogram_property_opposite_line_equal(1,MLKJ)",
+    "quadrilateral_perimeter_formula(1,JMLK)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,JMLK)": [],
+    "parallelogram_property_opposite_line_equal(1,MLKJ)": [],
+    "quadrilateral_perimeter_formula(1,JMLK)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,JMLK)",
+      "parallelogram_property_opposite_line_equal(1,MLKJ)",
+      "quadrilateral_perimeter_formula(1,JMLK)"
+    ]
+  }
 }

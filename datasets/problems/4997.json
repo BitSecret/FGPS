@@ -21,13 +21,39 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(DE,BC,A)",
-    "parallel_property_corresponding_angle(CB,ED,A)",
-    "similar_triangle_judgment_aa(ADE,ABC)",
-    "similar_triangle_judgment_aa(ABC,ADE)",
-    "similar_triangle_property_line_ratio(DEA,BCA)",
-    "similar_triangle_property_line_ratio(EAD,CAB)",
-    "similar_triangle_property_line_ratio(BCA,DEA)",
-    "similar_triangle_property_line_ratio(CAB,EAD)"
-  ]
+    "parallel_property_corresponding_angle(1,DE,BC,A)",
+    "parallel_property_corresponding_angle(2,CB,ED,A)",
+    "similar_triangle_judgment_aa(1,ADE,ABC)",
+    "similar_triangle_judgment_aa(1,ABC,ADE)",
+    "similar_triangle_property_line_ratio(1,DEA,BCA)",
+    "similar_triangle_property_line_ratio(1,EAD,CAB)",
+    "similar_triangle_property_line_ratio(1,BCA,DEA)",
+    "similar_triangle_property_line_ratio(1,CAB,EAD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,DE,BC,A)": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_judgment_aa(1,ABC,ADE)"
+    ],
+    "parallel_property_corresponding_angle(2,CB,ED,A)": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_judgment_aa(1,ABC,ADE)"
+    ],
+    "similar_triangle_judgment_aa(1,ADE,ABC)": [
+      "similar_triangle_property_line_ratio(1,DEA,BCA)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)"
+    ],
+    "similar_triangle_judgment_aa(1,ABC,ADE)": [
+      "similar_triangle_property_line_ratio(1,BCA,DEA)",
+      "similar_triangle_property_line_ratio(1,CAB,EAD)"
+    ],
+    "similar_triangle_property_line_ratio(1,DEA,BCA)": [],
+    "similar_triangle_property_line_ratio(1,EAD,CAB)": [],
+    "similar_triangle_property_line_ratio(1,BCA,DEA)": [],
+    "similar_triangle_property_line_ratio(1,CAB,EAD)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)"
+    ]
+  }
 }

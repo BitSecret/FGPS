@@ -23,10 +23,28 @@
   "goal_cdl": "Value(MeasureOfAngle(WZX))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "rectangle_property_diagonal_equal(WYZX)",
-    "parallelogram_property_opposite_line_equal(YZXW)",
-    "mirror_congruent_triangle_judgment_sss(WYX,YZW)",
-    "mirror_congruent_triangle_property_angle_equal(XWY,ZWY)",
-    "angle_addition(YZA,AZX)"
-  ]
+    "rectangle_property_diagonal_equal(1,WYZX)",
+    "parallelogram_property_opposite_line_equal(1,YZXW)",
+    "mirror_congruent_triangle_judgment_sss(1,WYX,YZW)",
+    "mirror_congruent_triangle_property_angle_equal(1,XWY,ZWY)",
+    "angle_addition(1,YZA,AZX)"
+  ],
+  "theorem_seq_dag": {
+    "rectangle_property_diagonal_equal(1,WYZX)": [
+      "mirror_congruent_triangle_judgment_sss(1,WYX,YZW)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,YZXW)": [
+      "mirror_congruent_triangle_judgment_sss(1,WYX,YZW)"
+    ],
+    "mirror_congruent_triangle_judgment_sss(1,WYX,YZW)": [
+      "mirror_congruent_triangle_property_angle_equal(1,XWY,ZWY)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,XWY,ZWY)": [],
+    "angle_addition(1,YZA,AZX)": [],
+    "START": [
+      "rectangle_property_diagonal_equal(1,WYZX)",
+      "parallelogram_property_opposite_line_equal(1,YZXW)",
+      "angle_addition(1,YZA,AZX)"
+    ]
+  }
 }

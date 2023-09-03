@@ -28,16 +28,47 @@
   "goal_cdl": "Value(MeasureOfAngle(BCA))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(AM,BN)",
-    "perpendicular_bisector_property_bisector(AM,BN)",
-    "perpendicular_bisector_property_bisector(CM,NB)",
-    "isosceles_triangle_judgment_line_equal(AND)",
-    "adjacent_complementary_angle(CEA,AED)",
-    "altitude_of_triangle_judgment(AE,AND)",
-    "isosceles_triangle_property_line_coincidence(AND,E)",
-    "angle_addition(EAN,NAC)",
-    "angle_addition(DAE,EAC)",
-    "angle_addition(DAC,CAB)",
-    "triangle_property_angle_sum(ACE)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,AM,BN)",
+    "perpendicular_bisector_property_bisector(1,AM,BN)",
+    "perpendicular_bisector_property_bisector(1,CM,NB)",
+    "isosceles_triangle_judgment_line_equal(1,AND)",
+    "adjacent_complementary_angle(1,CEA,AED)",
+    "altitude_of_triangle_judgment(1,AE,AND)",
+    "isosceles_triangle_property_line_coincidence(1,AND,E)",
+    "angle_addition(1,EAN,NAC)",
+    "angle_addition(1,DAE,EAC)",
+    "angle_addition(1,DAC,CAB)",
+    "triangle_property_angle_sum(1,ACE)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,AM,BN)": [
+      "isosceles_triangle_judgment_line_equal(1,AND)"
+    ],
+    "perpendicular_bisector_property_bisector(1,AM,BN)": [],
+    "perpendicular_bisector_property_bisector(1,CM,NB)": [],
+    "isosceles_triangle_judgment_line_equal(1,AND)": [
+      "isosceles_triangle_property_line_coincidence(1,AND,E)"
+    ],
+    "adjacent_complementary_angle(1,CEA,AED)": [
+      "altitude_of_triangle_judgment(1,AE,AND)"
+    ],
+    "altitude_of_triangle_judgment(1,AE,AND)": [
+      "isosceles_triangle_property_line_coincidence(1,AND,E)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,AND,E)": [],
+    "angle_addition(1,EAN,NAC)": [],
+    "angle_addition(1,DAE,EAC)": [],
+    "angle_addition(1,DAC,CAB)": [],
+    "triangle_property_angle_sum(1,ACE)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,AM,BN)",
+      "perpendicular_bisector_property_bisector(1,AM,BN)",
+      "perpendicular_bisector_property_bisector(1,CM,NB)",
+      "adjacent_complementary_angle(1,CEA,AED)",
+      "angle_addition(1,EAN,NAC)",
+      "angle_addition(1,DAE,EAC)",
+      "angle_addition(1,DAC,CAB)",
+      "triangle_property_angle_sum(1,ACE)"
+    ]
+  }
 }

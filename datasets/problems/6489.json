@@ -28,18 +28,58 @@
   "goal_cdl": "Value(MeasureOfAngle(ADO))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BC,AD,F)",
-    "parallel_property_alternate_interior_angle(DA,CB)",
-    "parallel_property_alternate_interior_angle(BF,AD)",
-    "right_triangle_judgment_angle(EAD)",
-    "median_of_triangle_judgment(AO,ADE)",
-    "right_triangle_property_length_of_median(EAD,O)",
-    "line_addition(DO,OE)",
-    "isosceles_triangle_judgment_line_equal(OAD)",
-    "isosceles_triangle_judgment_line_equal(AOB)",
-    "isosceles_triangle_property_angle_equal(OAD)",
-    "isosceles_triangle_property_angle_equal(AOB)",
-    "adjacent_complementary_angle(DOA,AOE)",
-    "triangle_property_angle_sum(ADO)"
-  ]
+    "parallel_property_collinear_extend(3,BC,AD,F)",
+    "parallel_property_alternate_interior_angle(1,DA,CB)",
+    "parallel_property_alternate_interior_angle(2,BF,AD)",
+    "right_triangle_judgment_angle(1,EAD)",
+    "median_of_triangle_judgment(1,AO,ADE)",
+    "right_triangle_property_length_of_median(1,EAD,O)",
+    "line_addition(1,DO,OE)",
+    "isosceles_triangle_judgment_line_equal(1,OAD)",
+    "isosceles_triangle_judgment_line_equal(1,AOB)",
+    "isosceles_triangle_property_angle_equal(1,OAD)",
+    "isosceles_triangle_property_angle_equal(1,AOB)",
+    "adjacent_complementary_angle(1,DOA,AOE)",
+    "triangle_property_angle_sum(1,ADO)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BC,AD,F)": [
+      "parallel_property_alternate_interior_angle(2,BF,AD)"
+    ],
+    "parallel_property_alternate_interior_angle(1,DA,CB)": [],
+    "parallel_property_alternate_interior_angle(2,BF,AD)": [
+      "right_triangle_judgment_angle(1,EAD)"
+    ],
+    "right_triangle_judgment_angle(1,EAD)": [
+      "right_triangle_property_length_of_median(1,EAD,O)"
+    ],
+    "median_of_triangle_judgment(1,AO,ADE)": [
+      "right_triangle_property_length_of_median(1,EAD,O)"
+    ],
+    "right_triangle_property_length_of_median(1,EAD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAD)",
+      "isosceles_triangle_judgment_line_equal(1,AOB)"
+    ],
+    "line_addition(1,DO,OE)": [
+      "isosceles_triangle_judgment_line_equal(1,OAD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OAD)": [
+      "isosceles_triangle_property_angle_equal(1,OAD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,AOB)": [
+      "isosceles_triangle_property_angle_equal(1,AOB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OAD)": [],
+    "isosceles_triangle_property_angle_equal(1,AOB)": [],
+    "adjacent_complementary_angle(1,DOA,AOE)": [],
+    "triangle_property_angle_sum(1,ADO)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BC,AD,F)",
+      "parallel_property_alternate_interior_angle(1,DA,CB)",
+      "median_of_triangle_judgment(1,AO,ADE)",
+      "line_addition(1,DO,OE)",
+      "adjacent_complementary_angle(1,DOA,AOE)",
+      "triangle_property_angle_sum(1,ADO)"
+    ]
+  }
 }

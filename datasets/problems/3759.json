@@ -24,10 +24,26 @@
   "goal_cdl": "Value(MeasureOfAngle(ADE))",
   "problem_answer": "54",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CE,FH,D)",
-    "parallel_property_collinear_extend(HF,ED,B)",
-    "angle_addition(FBC,CBD)",
-    "adjacent_complementary_angle(FBD,DBH)",
-    "parallel_property_corresponding_angle(DE,BH,A)"
-  ]
+    "parallel_property_collinear_extend(3,CE,FH,D)",
+    "parallel_property_collinear_extend(3,HF,ED,B)",
+    "angle_addition(1,FBC,CBD)",
+    "adjacent_complementary_angle(1,FBD,DBH)",
+    "parallel_property_corresponding_angle(1,DE,BH,A)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CE,FH,D)": [
+      "parallel_property_collinear_extend(3,HF,ED,B)"
+    ],
+    "parallel_property_collinear_extend(3,HF,ED,B)": [
+      "parallel_property_corresponding_angle(1,DE,BH,A)"
+    ],
+    "angle_addition(1,FBC,CBD)": [],
+    "adjacent_complementary_angle(1,FBD,DBH)": [],
+    "parallel_property_corresponding_angle(1,DE,BH,A)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CE,FH,D)",
+      "angle_addition(1,FBC,CBD)",
+      "adjacent_complementary_angle(1,FBD,DBH)"
+    ]
+  }
 }

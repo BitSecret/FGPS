@@ -26,10 +26,27 @@
   "goal_cdl": "Value(MeasureOfArc(PJL))",
   "problem_answer": "67",
   "theorem_seqs": [
-    "adjacent_complementary_angle(JQP,PQK)",
-    "circle_property_chord_perpendicular_bisect_arc(PJK,PQL)",
-    "congruent_arc_judgment_length_equal(PJL,PLK)",
-    "congruent_arc_property_measure_equal(PJL,PLK)",
-    "arc_addition_measure(PJL,PLK)"
-  ]
+    "adjacent_complementary_angle(1,JQP,PQK)",
+    "circle_property_chord_perpendicular_bisect_arc(1,PJK,PQL)",
+    "congruent_arc_judgment_length_equal(1,PJL,PLK)",
+    "congruent_arc_property_measure_equal(1,PJL,PLK)",
+    "arc_addition_measure(1,PJL,PLK)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,JQP,PQK)": [
+      "circle_property_chord_perpendicular_bisect_arc(1,PJK,PQL)"
+    ],
+    "circle_property_chord_perpendicular_bisect_arc(1,PJK,PQL)": [
+      "congruent_arc_judgment_length_equal(1,PJL,PLK)"
+    ],
+    "congruent_arc_judgment_length_equal(1,PJL,PLK)": [
+      "congruent_arc_property_measure_equal(1,PJL,PLK)"
+    ],
+    "congruent_arc_property_measure_equal(1,PJL,PLK)": [],
+    "arc_addition_measure(1,PJL,PLK)": [],
+    "START": [
+      "adjacent_complementary_angle(1,JQP,PQK)",
+      "arc_addition_measure(1,PJL,PLK)"
+    ]
+  }
 }

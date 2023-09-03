@@ -22,8 +22,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "15",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DA,CV,E)",
-    "parallel_property_collinear_extend(VC,AE,T)",
-    "parallel_property_corresponding_angle(EA,TV,F)"
-  ]
+    "parallel_property_collinear_extend(3,DA,CV,E)",
+    "parallel_property_collinear_extend(3,VC,AE,T)",
+    "parallel_property_corresponding_angle(1,EA,TV,F)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DA,CV,E)": [
+      "parallel_property_collinear_extend(3,VC,AE,T)"
+    ],
+    "parallel_property_collinear_extend(3,VC,AE,T)": [
+      "parallel_property_corresponding_angle(1,EA,TV,F)"
+    ],
+    "parallel_property_corresponding_angle(1,EA,TV,F)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DA,CV,E)"
+    ]
+  }
 }

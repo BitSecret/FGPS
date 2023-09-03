@@ -24,19 +24,64 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DEB))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)",
-    "bisector_of_angle_judgment_angle_equal(AD,CAE)",
-    "bisector_of_angle_property_distance_equal(AD,CAE)",
-    "isosceles_triangle_judgment_line_equal(CAB)",
-    "isosceles_triangle_property_angle_equal(CAB)",
-    "triangle_property_angle_sum(CAB)",
-    "adjacent_complementary_angle(AED,DEB)",
-    "triangle_property_angle_sum(DEB)",
-    "isosceles_triangle_judgment_angle_equal(EBD)",
-    "right_triangle_judgment_angle(DEB)",
-    "right_triangle_property_pythagorean(DEB)",
-    "line_addition(CD,DB)",
-    "triangle_perimeter_formula(DEB)"
-  ]
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "bisector_of_angle_judgment_angle_equal(1,AD,CAE)",
+    "bisector_of_angle_property_distance_equal(1,AD,CAE)",
+    "isosceles_triangle_judgment_line_equal(1,CAB)",
+    "isosceles_triangle_property_angle_equal(1,CAB)",
+    "triangle_property_angle_sum(1,CAB)",
+    "adjacent_complementary_angle(1,AED,DEB)",
+    "triangle_property_angle_sum(1,DEB)",
+    "isosceles_triangle_judgment_angle_equal(1,EBD)",
+    "right_triangle_judgment_angle(1,DEB)",
+    "right_triangle_property_pythagorean(1,DEB)",
+    "line_addition(1,CD,DB)",
+    "triangle_perimeter_formula(1,DEB)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "bisector_of_angle_judgment_angle_equal(1,AD,CAE)": [
+      "bisector_of_angle_property_distance_equal(1,AD,CAE)"
+    ],
+    "bisector_of_angle_property_distance_equal(1,AD,CAE)": [],
+    "isosceles_triangle_judgment_line_equal(1,CAB)": [
+      "isosceles_triangle_property_angle_equal(1,CAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CAB)": [
+      "isosceles_triangle_judgment_angle_equal(1,EBD)",
+      "isosceles_triangle_judgment_angle_equal(1,EBD)"
+    ],
+    "triangle_property_angle_sum(1,CAB)": [
+      "isosceles_triangle_judgment_angle_equal(1,EBD)",
+      "isosceles_triangle_judgment_angle_equal(1,EBD)"
+    ],
+    "adjacent_complementary_angle(1,AED,DEB)": [
+      "right_triangle_judgment_angle(1,DEB)",
+      "isosceles_triangle_judgment_angle_equal(1,EBD)"
+    ],
+    "triangle_property_angle_sum(1,DEB)": [
+      "isosceles_triangle_judgment_angle_equal(1,EBD)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,EBD)": [],
+    "right_triangle_judgment_angle(1,DEB)": [
+      "right_triangle_property_pythagorean(1,DEB)"
+    ],
+    "right_triangle_property_pythagorean(1,DEB)": [],
+    "line_addition(1,CD,DB)": [],
+    "triangle_perimeter_formula(1,DEB)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "bisector_of_angle_judgment_angle_equal(1,AD,CAE)",
+      "isosceles_triangle_judgment_line_equal(1,CAB)",
+      "triangle_property_angle_sum(1,CAB)",
+      "adjacent_complementary_angle(1,AED,DEB)",
+      "triangle_property_angle_sum(1,DEB)",
+      "line_addition(1,CD,DB)",
+      "triangle_perimeter_formula(1,DEB)"
+    ]
+  }
 }

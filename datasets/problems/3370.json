@@ -22,9 +22,23 @@
   "goal_cdl": "Value(MeasureOfAngle(DOB))",
   "problem_answer": "115",
   "theorem_seqs": [
-    "angle_addition(COD,DOE)",
-    "angle_addition(AOD,DOE)",
-    "adjacent_complementary_angle(AOE,EOB)",
-    "angle_addition(DOE,EOB)"
-  ]
+    "angle_addition(1,COD,DOE)",
+    "angle_addition(1,AOD,DOE)",
+    "adjacent_complementary_angle(1,AOE,EOB)",
+    "angle_addition(1,DOE,EOB)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,COD,DOE)": [
+      "solve_eq_11)"
+    ],
+    "angle_addition(1,AOD,DOE)": [],
+    "adjacent_complementary_angle(1,AOE,EOB)": [],
+    "angle_addition(1,DOE,EOB)": [],
+    "START": [
+      "angle_addition(1,COD,DOE)",
+      "angle_addition(1,AOD,DOE)",
+      "adjacent_complementary_angle(1,AOE,EOB)",
+      "angle_addition(1,DOE,EOB)"
+    ]
+  }
 }

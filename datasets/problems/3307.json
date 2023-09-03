@@ -23,9 +23,21 @@
   "goal_cdl": "Value(MeasureOfAngle(DOA))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AOE,EOB)",
-    "angle_addition(EOC,COB)",
-    "angle_addition(AOE,EOC)",
-    "adjacent_complementary_angle(DOA,AOC)"
-  ]
+    "adjacent_complementary_angle(1,AOE,EOB)",
+    "angle_addition(1,EOC,COB)",
+    "angle_addition(1,AOE,EOC)",
+    "adjacent_complementary_angle(1,DOA,AOC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AOE,EOB)": [],
+    "angle_addition(1,EOC,COB)": [],
+    "angle_addition(1,AOE,EOC)": [],
+    "adjacent_complementary_angle(1,DOA,AOC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AOE,EOB)",
+      "angle_addition(1,EOC,COB)",
+      "angle_addition(1,AOE,EOC)",
+      "adjacent_complementary_angle(1,DOA,AOC)"
+    ]
+  }
 }

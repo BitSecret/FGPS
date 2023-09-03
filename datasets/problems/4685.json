@@ -21,11 +21,31 @@
   "goal_cdl": "Value(MeasureOfAngle(BAO))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(CB,O,O)",
-    "angle_addition(CBO,OBA)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "isosceles_triangle_judgment_line_equal(OBA)",
-    "isosceles_triangle_property_angle_equal(OBA)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,CB,O,O)",
+    "angle_addition(1,CBO,OBA)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBA)",
+    "isosceles_triangle_property_angle_equal(1,OBA)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,CB,O,O)": [],
+    "angle_addition(1,CBO,OBA)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBA)": [
+      "isosceles_triangle_property_angle_equal(1,OBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBA)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,CB,O,O)",
+      "angle_addition(1,CBO,OBA)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  }
 }

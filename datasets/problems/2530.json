@@ -23,11 +23,29 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "45",
   "theorem_seqs": [
-    "parallelogram_judgment_equal_and_equal(DBCA)",
-    "rectangle_judgment_right_angle(ADBC)",
-    "angle_addition(DBA,ABC)",
-    "isosceles_triangle_judgment_line_equal(CAB)",
-    "isosceles_triangle_property_angle_equal(CAB)",
-    "parallel_property_alternate_interior_angle(BD,CA)"
-  ]
+    "parallelogram_judgment_equal_and_equal(1,DBCA)",
+    "rectangle_judgment_right_angle(1,ADBC)",
+    "angle_addition(1,DBA,ABC)",
+    "isosceles_triangle_judgment_line_equal(1,CAB)",
+    "isosceles_triangle_property_angle_equal(1,CAB)",
+    "parallel_property_alternate_interior_angle(1,BD,CA)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_equal_and_equal(1,DBCA)": [
+      "rectangle_judgment_right_angle(1,ADBC)",
+      "parallel_property_alternate_interior_angle(1,BD,CA)"
+    ],
+    "rectangle_judgment_right_angle(1,ADBC)": [],
+    "angle_addition(1,DBA,ABC)": [],
+    "isosceles_triangle_judgment_line_equal(1,CAB)": [
+      "isosceles_triangle_property_angle_equal(1,CAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CAB)": [],
+    "parallel_property_alternate_interior_angle(1,BD,CA)": [],
+    "START": [
+      "parallelogram_judgment_equal_and_equal(1,DBCA)",
+      "angle_addition(1,DBA,ABC)",
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ]
+  }
 }

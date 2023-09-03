@@ -30,12 +30,34 @@
   "goal_cdl": "Value(MeasureOfAngle(ZAC))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(ZB,Z)",
-    "radius_of_circle_property_length_equal(ZA,Z)",
-    "isosceles_triangle_judgment_line_equal(ZBA)",
-    "isosceles_triangle_property_angle_equal(ZBA)",
-    "triangle_property_angle_sum(ZBA)",
-    "arc_property_circumference_angle_external(ZCB,A)",
-    "angle_addition(BAZ,ZAE)"
-  ]
+    "radius_of_circle_property_length_equal(1,ZB,Z)",
+    "radius_of_circle_property_length_equal(1,ZA,Z)",
+    "isosceles_triangle_judgment_line_equal(1,ZBA)",
+    "isosceles_triangle_property_angle_equal(1,ZBA)",
+    "triangle_property_angle_sum(1,ZBA)",
+    "arc_property_circumference_angle_external(1,ZCB,A)",
+    "angle_addition(1,BAZ,ZAE)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,ZB,Z)": [
+      "isosceles_triangle_judgment_line_equal(1,ZBA)"
+    ],
+    "radius_of_circle_property_length_equal(1,ZA,Z)": [
+      "isosceles_triangle_judgment_line_equal(1,ZBA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ZBA)": [
+      "isosceles_triangle_property_angle_equal(1,ZBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ZBA)": [],
+    "triangle_property_angle_sum(1,ZBA)": [],
+    "arc_property_circumference_angle_external(1,ZCB,A)": [],
+    "angle_addition(1,BAZ,ZAE)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,ZB,Z)",
+      "radius_of_circle_property_length_equal(1,ZA,Z)",
+      "triangle_property_angle_sum(1,ZBA)",
+      "arc_property_circumference_angle_external(1,ZCB,A)",
+      "angle_addition(1,BAZ,ZAE)"
+    ]
+  }
 }

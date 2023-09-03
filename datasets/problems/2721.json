@@ -24,12 +24,32 @@
   "goal_cdl": "Value(MeasureOfAngle(KAJ))",
   "problem_answer": "55",
   "theorem_seqs": [
-    "flat_angle(CAK)",
-    "flat_angle(LEJ)",
-    "angle_addition(CAK,KAJ)",
-    "angle_addition(FEL,LEJ)",
-    "parallel_property_collinear_extend(CK,FG,A)",
-    "parallel_property_collinear_extend(GF,AC,E)",
-    "parallel_property_corresponding_angle(EF,AC,J)"
-  ]
+    "flat_angle(1,CAK)",
+    "flat_angle(1,LEJ)",
+    "angle_addition(1,CAK,KAJ)",
+    "angle_addition(1,FEL,LEJ)",
+    "parallel_property_collinear_extend(3,CK,FG,A)",
+    "parallel_property_collinear_extend(3,GF,AC,E)",
+    "parallel_property_corresponding_angle(2,EF,AC,J)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,CAK)": [],
+    "flat_angle(1,LEJ)": [],
+    "angle_addition(1,CAK,KAJ)": [],
+    "angle_addition(1,FEL,LEJ)": [],
+    "parallel_property_collinear_extend(3,CK,FG,A)": [
+      "parallel_property_collinear_extend(3,GF,AC,E)"
+    ],
+    "parallel_property_collinear_extend(3,GF,AC,E)": [
+      "parallel_property_corresponding_angle(2,EF,AC,J)"
+    ],
+    "parallel_property_corresponding_angle(2,EF,AC,J)": [],
+    "START": [
+      "flat_angle(1,CAK)",
+      "flat_angle(1,LEJ)",
+      "angle_addition(1,CAK,KAJ)",
+      "angle_addition(1,FEL,LEJ)",
+      "parallel_property_collinear_extend(3,CK,FG,A)"
+    ]
+  }
 }

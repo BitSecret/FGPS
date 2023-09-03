@@ -24,9 +24,22 @@
   "goal_cdl": "Value(MeasureOfAngle(ABF))",
   "problem_answer": "61",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,BA,H)",
-    "angle_addition(BCE,ECD)",
-    "adjacent_complementary_angle(HCB,BCD)",
-    "parallel_property_corresponding_angle(CH,BA,F)"
-  ]
+    "parallel_property_collinear_extend(2,DC,BA,H)",
+    "angle_addition(1,BCE,ECD)",
+    "adjacent_complementary_angle(1,HCB,BCD)",
+    "parallel_property_corresponding_angle(2,CH,BA,F)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,DC,BA,H)": [
+      "parallel_property_corresponding_angle(2,CH,BA,F)"
+    ],
+    "angle_addition(1,BCE,ECD)": [],
+    "adjacent_complementary_angle(1,HCB,BCD)": [],
+    "parallel_property_corresponding_angle(2,CH,BA,F)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,DC,BA,H)",
+      "angle_addition(1,BCE,ECD)",
+      "adjacent_complementary_angle(1,HCB,BCD)"
+    ]
+  }
 }

@@ -23,13 +23,37 @@
   "goal_cdl": "Value(MeasureOfAngle(BAO))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(PA,O,O)",
-    "tangent_of_circle_property_perpendicular(PB,O,O)",
-    "quadrilateral_property_angle_sum(AOBP)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "isosceles_triangle_judgment_line_equal(OBA)",
-    "isosceles_triangle_property_angle_equal(OBA)",
-    "triangle_property_angle_sum(AOB)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+    "tangent_of_circle_property_perpendicular(1,PB,O,O)",
+    "quadrilateral_property_angle_sum(1,AOBP)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBA)",
+    "isosceles_triangle_property_angle_equal(1,OBA)",
+    "triangle_property_angle_sum(1,AOB)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)": [],
+    "tangent_of_circle_property_perpendicular(1,PB,O,O)": [],
+    "quadrilateral_property_angle_sum(1,AOBP)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBA)": [
+      "isosceles_triangle_property_angle_equal(1,OBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBA)": [],
+    "triangle_property_angle_sum(1,AOB)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+      "tangent_of_circle_property_perpendicular(1,PB,O,O)",
+      "quadrilateral_property_angle_sum(1,AOBP)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "triangle_property_angle_sum(1,AOB)"
+    ]
+  }
 }

@@ -17,8 +17,19 @@
   "goal_cdl": "Value(MeasureOfAngle(SRQ))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(RQS)",
-    "isosceles_triangle_property_angle_equal(RQS)",
-    "triangle_property_angle_sum(RQS)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,RQS)",
+    "isosceles_triangle_property_angle_equal(1,RQS)",
+    "triangle_property_angle_sum(1,RQS)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,RQS)": [
+      "isosceles_triangle_property_angle_equal(1,RQS)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,RQS)": [],
+    "triangle_property_angle_sum(1,RQS)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,RQS)"
+    ]
+  }
 }

@@ -24,10 +24,25 @@
   "goal_cdl": "Value(MeasureOfAngle(BDA))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(AOC,O)",
-    "diameter_of_circle_property_right_angle(ABC,O)",
-    "triangle_property_angle_sum(ABC)",
-    "arc_property_circumference_angle_external(OAB,C)",
-    "arc_property_circumference_angle_external(OAB,D)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,AOC,O)",
+    "diameter_of_circle_property_right_angle(1,ABC,O)",
+    "triangle_property_angle_sum(1,ABC)",
+    "arc_property_circumference_angle_external(1,OAB,C)",
+    "arc_property_circumference_angle_external(1,OAB,D)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,AOC,O)": [
+      "diameter_of_circle_property_right_angle(1,ABC,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,ABC,O)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "arc_property_circumference_angle_external(1,OAB,C)": [],
+    "arc_property_circumference_angle_external(1,OAB,D)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,AOC,O)",
+      "triangle_property_angle_sum(1,ABC)",
+      "arc_property_circumference_angle_external(1,OAB,C)",
+      "arc_property_circumference_angle_external(1,OAB,D)"
+    ]
+  }
 }

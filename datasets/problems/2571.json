@@ -33,12 +33,38 @@
   "goal_cdl": "Value(LengthOfLine(ND))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(XD,X)",
-    "radius_of_circle_property_length_equal(XC,X)",
-    "vertical_angle(CNX,DNZ)",
-    "adjacent_complementary_angle(XND,DNZ)",
-    "mirror_congruent_triangle_judgment_hl(CNX,DXN)",
-    "mirror_congruent_triangle_property_line_equal(XCN,XND)",
-    "line_addition(CN,ND)"
-  ]
+    "radius_of_circle_property_length_equal(1,XD,X)",
+    "radius_of_circle_property_length_equal(1,XC,X)",
+    "vertical_angle(1,CNX,DNZ)",
+    "adjacent_complementary_angle(1,XND,DNZ)",
+    "mirror_congruent_triangle_judgment_hl(1,CNX,DXN)",
+    "mirror_congruent_triangle_property_line_equal(1,XCN,XND)",
+    "line_addition(1,CN,ND)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,XD,X)": [
+      "mirror_congruent_triangle_judgment_hl(1,CNX,DXN)"
+    ],
+    "radius_of_circle_property_length_equal(1,XC,X)": [
+      "mirror_congruent_triangle_judgment_hl(1,CNX,DXN)"
+    ],
+    "vertical_angle(1,CNX,DNZ)": [
+      "mirror_congruent_triangle_judgment_hl(1,CNX,DXN)"
+    ],
+    "adjacent_complementary_angle(1,XND,DNZ)": [
+      "mirror_congruent_triangle_judgment_hl(1,CNX,DXN)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,CNX,DXN)": [
+      "mirror_congruent_triangle_property_line_equal(1,XCN,XND)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,XCN,XND)": [],
+    "line_addition(1,CN,ND)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,XD,X)",
+      "radius_of_circle_property_length_equal(1,XC,X)",
+      "vertical_angle(1,CNX,DNZ)",
+      "adjacent_complementary_angle(1,XND,DNZ)",
+      "line_addition(1,CN,ND)"
+    ]
+  }
 }

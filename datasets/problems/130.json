@@ -30,12 +30,39 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "adjacent_complementary_angle(WBA,ABX)",
-    "circle_property_chord_perpendicular_bisect_chord(A,AB,WX)",
-    "circle_property_chord_perpendicular_bisect_chord(A,AC,XY)",
-    "line_addition(WB,BX)",
-    "line_addition(XC,CY)",
-    "mirror_congruent_triangle_judgment_hl(ABX,AXC)",
-    "mirror_congruent_triangle_property_line_equal(XAB,XCA)"
-  ]
+    "adjacent_complementary_angle(1,WBA,ABX)",
+    "circle_property_chord_perpendicular_bisect_chord(1,A,AB,WX)",
+    "circle_property_chord_perpendicular_bisect_chord(1,A,AC,XY)",
+    "line_addition(1,WB,BX)",
+    "line_addition(1,XC,CY)",
+    "mirror_congruent_triangle_judgment_hl(1,ABX,AXC)",
+    "mirror_congruent_triangle_property_line_equal(1,XAB,XCA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,WBA,ABX)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,A,AB,WX)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,A,AB,WX)": [
+      "mirror_congruent_triangle_judgment_hl(1,ABX,AXC)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,A,AC,XY)": [
+      "mirror_congruent_triangle_judgment_hl(1,ABX,AXC)"
+    ],
+    "line_addition(1,WB,BX)": [
+      "mirror_congruent_triangle_judgment_hl(1,ABX,AXC)"
+    ],
+    "line_addition(1,XC,CY)": [
+      "mirror_congruent_triangle_judgment_hl(1,ABX,AXC)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,ABX,AXC)": [
+      "mirror_congruent_triangle_property_line_equal(1,XAB,XCA)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,XAB,XCA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,WBA,ABX)",
+      "circle_property_chord_perpendicular_bisect_chord(1,A,AC,XY)",
+      "line_addition(1,WB,BX)",
+      "line_addition(1,XC,CY)"
+    ]
+  }
 }

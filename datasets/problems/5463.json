@@ -20,8 +20,18 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "flat_angle(ABD)",
-    "angle_addition(ABC,CBD)",
-    "sine_theorem(CBD)"
-  ]
+    "flat_angle(1,ABD)",
+    "angle_addition(1,ABC,CBD)",
+    "sine_theorem(1,CBD)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,ABD)": [],
+    "angle_addition(1,ABC,CBD)": [],
+    "sine_theorem(1,CBD)": [],
+    "START": [
+      "flat_angle(1,ABD)",
+      "angle_addition(1,ABC,CBD)",
+      "sine_theorem(1,CBD)"
+    ]
+  }
 }

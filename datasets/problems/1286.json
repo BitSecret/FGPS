@@ -21,9 +21,22 @@
   "goal_cdl": "Value(AreaOfTriangle(CBA))",
   "problem_answer": "6.787",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BDC,CDA)",
-    "sine_theorem(CBD)",
-    "altitude_of_triangle_judgment(CD,CBA)",
-    "triangle_area_formula_common(CBA)"
-  ]
+    "adjacent_complementary_angle(1,BDC,CDA)",
+    "sine_theorem(1,CBD)",
+    "altitude_of_triangle_judgment(1,CD,CBA)",
+    "triangle_area_formula_common(1,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BDC,CDA)": [
+      "altitude_of_triangle_judgment(1,CD,CBA)"
+    ],
+    "sine_theorem(1,CBD)": [],
+    "altitude_of_triangle_judgment(1,CD,CBA)": [],
+    "triangle_area_formula_common(1,CBA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BDC,CDA)",
+      "sine_theorem(1,CBD)",
+      "triangle_area_formula_common(1,CBA)"
+    ]
+  }
 }

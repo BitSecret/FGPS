@@ -25,8 +25,20 @@
   "goal_cdl": "Value(LengthOfLine(OE))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
-    "midsegment_of_triangle_judgment_parallel(EO,BCD)",
-    "midsegment_of_triangle_property_length(EO,BCD)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+    "midsegment_of_triangle_judgment_parallel(2,EO,BCD)",
+    "midsegment_of_triangle_property_length(1,EO,BCD)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)": [
+      "midsegment_of_triangle_judgment_parallel(2,EO,BCD)"
+    ],
+    "midsegment_of_triangle_judgment_parallel(2,EO,BCD)": [
+      "midsegment_of_triangle_property_length(1,EO,BCD)"
+    ],
+    "midsegment_of_triangle_property_length(1,EO,BCD)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  }
 }

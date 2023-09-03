@@ -24,13 +24,39 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BED,DEC)",
-    "bisector_of_angle_judgment_angle_equal(BD,ABE)",
-    "bisector_of_angle_property_distance_equal(BD,ABE)",
-    "line_addition(AD,DC)",
-    "line_addition(BE,EC)",
-    "mirror_congruent_triangle_judgment_hl(BED,BDA)",
-    "mirror_congruent_triangle_property_line_equal(DBE,DAB)",
-    "triangle_perimeter_formula(DEC)"
-  ]
+    "adjacent_complementary_angle(1,BED,DEC)",
+    "bisector_of_angle_judgment_angle_equal(1,BD,ABE)",
+    "bisector_of_angle_property_distance_equal(1,BD,ABE)",
+    "line_addition(1,AD,DC)",
+    "line_addition(1,BE,EC)",
+    "mirror_congruent_triangle_judgment_hl(1,BED,BDA)",
+    "mirror_congruent_triangle_property_line_equal(1,DBE,DAB)",
+    "triangle_perimeter_formula(1,DEC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BED,DEC)": [
+      "bisector_of_angle_property_distance_equal(1,BD,ABE)",
+      "mirror_congruent_triangle_judgment_hl(1,BED,BDA)"
+    ],
+    "bisector_of_angle_judgment_angle_equal(1,BD,ABE)": [
+      "bisector_of_angle_property_distance_equal(1,BD,ABE)"
+    ],
+    "bisector_of_angle_property_distance_equal(1,BD,ABE)": [
+      "mirror_congruent_triangle_judgment_hl(1,BED,BDA)"
+    ],
+    "line_addition(1,AD,DC)": [],
+    "line_addition(1,BE,EC)": [],
+    "mirror_congruent_triangle_judgment_hl(1,BED,BDA)": [
+      "mirror_congruent_triangle_property_line_equal(1,DBE,DAB)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,DBE,DAB)": [],
+    "triangle_perimeter_formula(1,DEC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BED,DEC)",
+      "bisector_of_angle_judgment_angle_equal(1,BD,ABE)",
+      "line_addition(1,AD,DC)",
+      "line_addition(1,BE,EC)",
+      "triangle_perimeter_formula(1,DEC)"
+    ]
+  }
 }

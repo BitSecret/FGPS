@@ -26,9 +26,21 @@
   "goal_cdl": "Value(MeasureOfAngle(EDC))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "angle_addition(FBD,DBC)",
-    "angle_addition(BCD,DCE)",
-    "triangle_property_angle_sum(DBC)",
-    "adjacent_complementary_angle(EDC,CDB)"
-  ]
+    "angle_addition(1,FBD,DBC)",
+    "angle_addition(1,BCD,DCE)",
+    "triangle_property_angle_sum(1,DBC)",
+    "adjacent_complementary_angle(1,EDC,CDB)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,FBD,DBC)": [],
+    "angle_addition(1,BCD,DCE)": [],
+    "triangle_property_angle_sum(1,DBC)": [],
+    "adjacent_complementary_angle(1,EDC,CDB)": [],
+    "START": [
+      "angle_addition(1,FBD,DBC)",
+      "angle_addition(1,BCD,DCE)",
+      "triangle_property_angle_sum(1,DBC)",
+      "adjacent_complementary_angle(1,EDC,CDB)"
+    ]
+  }
 }

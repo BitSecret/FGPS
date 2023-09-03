@@ -20,9 +20,25 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallel_property_ipsilateral_internal_angle(AD,BC)",
-    "parallel_property_ipsilateral_internal_angle(CB,DA)",
-    "parallelogram_judgment_angle_and_angle(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)"
-  ]
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+    "parallel_property_ipsilateral_internal_angle(1,CB,DA)",
+    "parallelogram_judgment_angle_and_angle(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)": [
+      "parallelogram_judgment_angle_and_angle(1,ABCD)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,CB,DA)": [
+      "parallelogram_judgment_angle_and_angle(1,ABCD)"
+    ],
+    "parallelogram_judgment_angle_and_angle(1,ABCD)": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "START": [
+      "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+      "parallel_property_ipsilateral_internal_angle(1,CB,DA)"
+    ]
+  }
 }

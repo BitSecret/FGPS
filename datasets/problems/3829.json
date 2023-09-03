@@ -25,13 +25,38 @@
   "goal_cdl": "Value(MeasureOfArc(ODE))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DO,EA,C)",
-    "parallel_property_alternate_interior_angle(OC,EA)",
-    "parallel_property_alternate_interior_angle(AE,OD)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "isosceles_triangle_judgment_line_equal(OEA)",
-    "isosceles_triangle_property_angle_equal(OEA)",
-    "arc_property_center_angle(ODE,O)"
-  ]
+    "parallel_property_collinear_extend(2,DO,EA,C)",
+    "parallel_property_alternate_interior_angle(1,OC,EA)",
+    "parallel_property_alternate_interior_angle(2,AE,OD)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "isosceles_triangle_judgment_line_equal(1,OEA)",
+    "isosceles_triangle_property_angle_equal(1,OEA)",
+    "arc_property_center_angle(1,ODE,O)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,DO,EA,C)": [
+      "parallel_property_alternate_interior_angle(1,OC,EA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,OC,EA)": [],
+    "parallel_property_alternate_interior_angle(2,AE,OD)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OEA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OE,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OEA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OEA)": [
+      "isosceles_triangle_property_angle_equal(1,OEA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OEA)": [],
+    "arc_property_center_angle(1,ODE,O)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,DO,EA,C)",
+      "parallel_property_alternate_interior_angle(2,AE,OD)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "arc_property_center_angle(1,ODE,O)"
+    ]
+  }
 }

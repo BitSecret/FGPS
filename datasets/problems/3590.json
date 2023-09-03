@@ -30,17 +30,53 @@
   "goal_cdl": "Value(MeasureOfAngle(QMP))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(MP,DAB)",
-    "midsegment_of_triangle_judgment_midpoint(NP,BCD)",
-    "midsegment_of_triangle_property_parallel(MP,DAB)",
-    "midsegment_of_triangle_property_parallel(NP,BCD)",
-    "midsegment_of_triangle_property_length(MP,DAB)",
-    "midsegment_of_triangle_property_length(NP,BCD)",
-    "parallel_property_corresponding_angle(BA,PM,D)",
-    "parallel_property_ipsilateral_internal_angle(DC,PN)",
-    "isosceles_triangle_judgment_line_equal(PNM)",
-    "isosceles_triangle_property_angle_equal(PNM)",
-    "angle_addition(MPQ,QPN)",
-    "triangle_property_angle_sum(PNM)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,MP,DAB)",
+    "midsegment_of_triangle_judgment_midpoint(1,NP,BCD)",
+    "midsegment_of_triangle_property_parallel(1,MP,DAB)",
+    "midsegment_of_triangle_property_parallel(1,NP,BCD)",
+    "midsegment_of_triangle_property_length(1,MP,DAB)",
+    "midsegment_of_triangle_property_length(1,NP,BCD)",
+    "parallel_property_corresponding_angle(2,BA,PM,D)",
+    "parallel_property_ipsilateral_internal_angle(1,DC,PN)",
+    "isosceles_triangle_judgment_line_equal(1,PNM)",
+    "isosceles_triangle_property_angle_equal(1,PNM)",
+    "angle_addition(1,MPQ,QPN)",
+    "triangle_property_angle_sum(1,PNM)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,MP,DAB)": [
+      "midsegment_of_triangle_property_parallel(1,MP,DAB)",
+      "midsegment_of_triangle_property_length(1,MP,DAB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,NP,BCD)": [
+      "midsegment_of_triangle_property_parallel(1,NP,BCD)",
+      "midsegment_of_triangle_property_length(1,NP,BCD)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,MP,DAB)": [
+      "parallel_property_corresponding_angle(2,BA,PM,D)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,NP,BCD)": [
+      "parallel_property_ipsilateral_internal_angle(1,DC,PN)"
+    ],
+    "midsegment_of_triangle_property_length(1,MP,DAB)": [
+      "isosceles_triangle_judgment_line_equal(1,PNM)"
+    ],
+    "midsegment_of_triangle_property_length(1,NP,BCD)": [
+      "isosceles_triangle_judgment_line_equal(1,PNM)"
+    ],
+    "parallel_property_corresponding_angle(2,BA,PM,D)": [],
+    "parallel_property_ipsilateral_internal_angle(1,DC,PN)": [],
+    "isosceles_triangle_judgment_line_equal(1,PNM)": [
+      "isosceles_triangle_property_angle_equal(1,PNM)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,PNM)": [],
+    "angle_addition(1,MPQ,QPN)": [],
+    "triangle_property_angle_sum(1,PNM)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,MP,DAB)",
+      "midsegment_of_triangle_judgment_midpoint(1,NP,BCD)",
+      "angle_addition(1,MPQ,QPN)",
+      "triangle_property_angle_sum(1,PNM)"
+    ]
+  }
 }

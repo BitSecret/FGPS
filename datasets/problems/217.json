@@ -30,17 +30,46 @@
   "goal_cdl": "Value(Sub(AreaOfQuadrilateral(ACDB),Add(AreaOfSector(OCA),AreaOfSector(EBD))))",
   "problem_answer": "308-49*pi",
   "theorem_seqs": [
-    "parallelogram_judgment_equal_and_equal(ACDB)",
-    "parallelogram_area_formula_sine(ACDB)",
-    "diameter_of_circle_property_length_equal(AC,O)",
-    "diameter_of_circle_property_length_equal(BD,E)",
-    "circle_property_length_of_radius_and_diameter(O)",
-    "circle_property_length_of_radius_and_diameter(E)",
-    "flat_angle(AOC)",
-    "flat_angle(DEB)",
-    "arc_property_center_angle(OCA,O)",
-    "arc_property_center_angle(EBD,E)",
-    "sector_area_formula(OCA)",
-    "sector_area_formula(EBD)"
-  ]
+    "parallelogram_judgment_equal_and_equal(1,ACDB)",
+    "parallelogram_area_formula_sine(1,ACDB)",
+    "diameter_of_circle_property_length_equal(1,AC,O)",
+    "diameter_of_circle_property_length_equal(1,BD,E)",
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "circle_property_length_of_radius_and_diameter(1,E)",
+    "flat_angle(1,AOC)",
+    "flat_angle(1,DEB)",
+    "arc_property_center_angle(1,OCA,O)",
+    "arc_property_center_angle(1,EBD,E)",
+    "sector_area_formula(1,OCA)",
+    "sector_area_formula(1,EBD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_equal_and_equal(1,ACDB)": [
+      "parallelogram_area_formula_sine(1,ACDB)"
+    ],
+    "parallelogram_area_formula_sine(1,ACDB)": [],
+    "diameter_of_circle_property_length_equal(1,AC,O)": [],
+    "diameter_of_circle_property_length_equal(1,BD,E)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,E)": [],
+    "flat_angle(1,AOC)": [],
+    "flat_angle(1,DEB)": [],
+    "arc_property_center_angle(1,OCA,O)": [],
+    "arc_property_center_angle(1,EBD,E)": [],
+    "sector_area_formula(1,OCA)": [],
+    "sector_area_formula(1,EBD)": [],
+    "START": [
+      "parallelogram_judgment_equal_and_equal(1,ACDB)",
+      "diameter_of_circle_property_length_equal(1,AC,O)",
+      "diameter_of_circle_property_length_equal(1,BD,E)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "flat_angle(1,AOC)",
+      "flat_angle(1,DEB)",
+      "arc_property_center_angle(1,OCA,O)",
+      "arc_property_center_angle(1,EBD,E)",
+      "sector_area_formula(1,OCA)",
+      "sector_area_formula(1,EBD)"
+    ]
+  }
 }

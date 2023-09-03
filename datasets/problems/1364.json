@@ -24,11 +24,28 @@
   "goal_cdl": "Value(MeasureOfAngle(ADC))",
   "problem_answer": "136",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_sss(BAC,DCA)",
-    "mirror_congruent_triangle_property_angle_equal(CBA,CAD)",
-    "mirror_congruent_triangle_property_angle_equal(ACB,ADC)",
-    "angle_addition(BAT,TAD)",
-    "angle_addition(DCT,TCB)",
-    "triangle_property_angle_sum(ADC)"
-  ]
+    "mirror_congruent_triangle_judgment_sss(1,BAC,DCA)",
+    "mirror_congruent_triangle_property_angle_equal(1,CBA,CAD)",
+    "mirror_congruent_triangle_property_angle_equal(1,ACB,ADC)",
+    "angle_addition(1,BAT,TAD)",
+    "angle_addition(1,DCT,TCB)",
+    "triangle_property_angle_sum(1,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_sss(1,BAC,DCA)": [
+      "mirror_congruent_triangle_property_angle_equal(1,ACB,ADC)",
+      "mirror_congruent_triangle_property_angle_equal(1,CBA,CAD)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,CBA,CAD)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,ACB,ADC)": [],
+    "angle_addition(1,BAT,TAD)": [],
+    "angle_addition(1,DCT,TCB)": [],
+    "triangle_property_angle_sum(1,ADC)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_sss(1,BAC,DCA)",
+      "angle_addition(1,BAT,TAD)",
+      "angle_addition(1,DCT,TCB)",
+      "triangle_property_angle_sum(1,ADC)"
+    ]
+  }
 }

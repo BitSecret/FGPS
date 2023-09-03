@@ -28,7 +28,15 @@
   "goal_cdl": "Value(MeasureOfArc(OAB))",
   "problem_answer": "180",
   "theorem_seqs": [
-    "arc_property_center_angle(OAB,O)",
-    "flat_angle(BOA)"
-  ]
+    "arc_property_center_angle(1,OAB,O)",
+    "flat_angle(1,BOA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OAB,O)": [],
+    "flat_angle(1,BOA)": [],
+    "START": [
+      "arc_property_center_angle(1,OAB,O)",
+      "flat_angle(1,BOA)"
+    ]
+  }
 }

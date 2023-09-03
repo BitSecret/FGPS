@@ -24,7 +24,16 @@
   "goal_cdl": "Value(LengthOfLine(JM))",
   "problem_answer": "93",
   "theorem_seqs": [
-    "midsegment_of_quadrilateral_judgment_midpoint(AB,KJML)",
-    "midsegment_of_quadrilateral_property_length(AB,KJML)"
-  ]
+    "midsegment_of_quadrilateral_judgment_midpoint(1,AB,KJML)",
+    "midsegment_of_quadrilateral_property_length(1,AB,KJML)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_quadrilateral_judgment_midpoint(1,AB,KJML)": [
+      "midsegment_of_quadrilateral_property_length(1,AB,KJML)"
+    ],
+    "midsegment_of_quadrilateral_property_length(1,AB,KJML)": [],
+    "START": [
+      "midsegment_of_quadrilateral_judgment_midpoint(1,AB,KJML)"
+    ]
+  }
 }

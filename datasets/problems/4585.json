@@ -29,13 +29,34 @@
   "goal_cdl": "Value(LengthOfLine(BD))",
   "problem_answer": "5*sqrt(3)",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(BCA)",
-    "isosceles_triangle_property_angle_equal(BCA)",
-    "triangle_property_angle_sum(ABC)",
-    "arc_property_circumference_angle_external(OAB,C)",
-    "arc_property_circumference_angle_external(OAB,D)",
-    "diameter_of_circle_property_right_angle(ABD,O)",
-    "triangle_property_angle_sum(ABD)",
-    "sine_theorem(DAB)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,BCA)",
+    "isosceles_triangle_property_angle_equal(1,BCA)",
+    "triangle_property_angle_sum(1,ABC)",
+    "arc_property_circumference_angle_external(1,OAB,C)",
+    "arc_property_circumference_angle_external(1,OAB,D)",
+    "diameter_of_circle_property_right_angle(1,ABD,O)",
+    "triangle_property_angle_sum(1,ABD)",
+    "sine_theorem(1,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,BCA)": [
+      "isosceles_triangle_property_angle_equal(1,BCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BCA)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "arc_property_circumference_angle_external(1,OAB,C)": [],
+    "arc_property_circumference_angle_external(1,OAB,D)": [],
+    "diameter_of_circle_property_right_angle(1,ABD,O)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "sine_theorem(1,DAB)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,BCA)",
+      "triangle_property_angle_sum(1,ABC)",
+      "arc_property_circumference_angle_external(1,OAB,C)",
+      "arc_property_circumference_angle_external(1,OAB,D)",
+      "diameter_of_circle_property_right_angle(1,ABD,O)",
+      "triangle_property_angle_sum(1,ABD)",
+      "sine_theorem(1,DAB)"
+    ]
+  }
 }

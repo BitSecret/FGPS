@@ -23,8 +23,18 @@
   "goal_cdl": "Value(MeasureOfAngle(BHK))",
   "problem_answer": "66",
   "theorem_seqs": [
-    "flat_angle(EBH)",
-    "angle_addition(EBK,KBH)",
-    "triangle_property_angle_sum(KBH)"
-  ]
+    "flat_angle(1,EBH)",
+    "angle_addition(1,EBK,KBH)",
+    "triangle_property_angle_sum(1,KBH)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,EBH)": [],
+    "angle_addition(1,EBK,KBH)": [],
+    "triangle_property_angle_sum(1,KBH)": [],
+    "START": [
+      "flat_angle(1,EBH)",
+      "angle_addition(1,EBK,KBH)",
+      "triangle_property_angle_sum(1,KBH)"
+    ]
+  }
 }

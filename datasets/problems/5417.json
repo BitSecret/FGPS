@@ -24,8 +24,20 @@
   "goal_cdl": "Value(LengthOfLine(AF))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BA,CD,F)",
-    "parallel_property_alternate_interior_angle(BF,CD)",
-    "isosceles_triangle_judgment_angle_equal(BCF)"
-  ]
+    "parallel_property_collinear_extend(2,BA,CD,F)",
+    "parallel_property_alternate_interior_angle(2,BF,CD)",
+    "isosceles_triangle_judgment_angle_equal(1,BCF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,BA,CD,F)": [
+      "parallel_property_alternate_interior_angle(2,BF,CD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BF,CD)": [
+      "isosceles_triangle_judgment_angle_equal(1,BCF)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BCF)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,BA,CD,F)"
+    ]
+  }
 }

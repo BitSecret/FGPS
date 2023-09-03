@@ -28,8 +28,20 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "8",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FR,DS,G)",
-    "parallel_property_collinear_extend(SD,RG,A)",
-    "parallel_property_alternate_interior_angle(GR,DA)"
-  ]
+    "parallel_property_collinear_extend(3,FR,DS,G)",
+    "parallel_property_collinear_extend(3,SD,RG,A)",
+    "parallel_property_alternate_interior_angle(1,GR,DA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,FR,DS,G)": [
+      "parallel_property_collinear_extend(3,SD,RG,A)"
+    ],
+    "parallel_property_collinear_extend(3,SD,RG,A)": [
+      "parallel_property_alternate_interior_angle(1,GR,DA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,GR,DA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,FR,DS,G)"
+    ]
+  }
 }

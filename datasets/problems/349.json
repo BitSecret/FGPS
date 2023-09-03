@@ -34,12 +34,36 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
   "problem_answer": "36",
   "theorem_seqs": [
-    "tangent_of_circle_property_length_equal(AF,AD,G)",
-    "tangent_of_circle_property_length_equal(CE,CF,G)",
-    "tangent_of_circle_property_length_equal(BD,BE,G)",
-    "line_addition(AF,FC)",
-    "line_addition(AD,DB)",
-    "line_addition(BE,EC)",
-    "triangle_perimeter_formula(ABC)"
-  ]
+    "tangent_of_circle_property_length_equal(1,AF,AD,G)",
+    "tangent_of_circle_property_length_equal(1,CE,CF,G)",
+    "tangent_of_circle_property_length_equal(1,BD,BE,G)",
+    "line_addition(1,AF,FC)",
+    "line_addition(1,AD,DB)",
+    "line_addition(1,BE,EC)",
+    "triangle_perimeter_formula(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_length_equal(1,AF,AD,G)": [
+      "solve_eq_15)"
+    ],
+    "tangent_of_circle_property_length_equal(1,CE,CF,G)": [
+      "solve_eq_15)"
+    ],
+    "tangent_of_circle_property_length_equal(1,BD,BE,G)": [
+      "solve_eq_15)"
+    ],
+    "line_addition(1,AF,FC)": [],
+    "line_addition(1,AD,DB)": [],
+    "line_addition(1,BE,EC)": [],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "START": [
+      "tangent_of_circle_property_length_equal(1,AF,AD,G)",
+      "tangent_of_circle_property_length_equal(1,CE,CF,G)",
+      "tangent_of_circle_property_length_equal(1,BD,BE,G)",
+      "line_addition(1,AF,FC)",
+      "line_addition(1,AD,DB)",
+      "line_addition(1,BE,EC)",
+      "triangle_perimeter_formula(1,ABC)"
+    ]
+  }
 }

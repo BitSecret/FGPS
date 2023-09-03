@@ -23,12 +23,32 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
   "problem_answer": "18",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
-    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
-    "line_addition(AO,OC)",
-    "line_addition(BO,OD)",
-    "right_triangle_judgment_angle(BOA)",
-    "right_triangle_property_pythagorean(BOA)",
-    "triangle_perimeter_formula(ABC)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+    "kite_property_diagonal_perpendicular_bisection(1,BCDA,O)",
+    "line_addition(1,AO,OC)",
+    "line_addition(1,BO,OD)",
+    "right_triangle_judgment_angle(1,BOA)",
+    "right_triangle_property_pythagorean(1,BOA)",
+    "triangle_perimeter_formula(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)": [
+      "right_triangle_judgment_angle(1,BOA)"
+    ],
+    "kite_property_diagonal_perpendicular_bisection(1,BCDA,O)": [],
+    "line_addition(1,AO,OC)": [],
+    "line_addition(1,BO,OD)": [],
+    "right_triangle_judgment_angle(1,BOA)": [
+      "right_triangle_property_pythagorean(1,BOA)"
+    ],
+    "right_triangle_property_pythagorean(1,BOA)": [],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "kite_property_diagonal_perpendicular_bisection(1,BCDA,O)",
+      "line_addition(1,AO,OC)",
+      "line_addition(1,BO,OD)",
+      "triangle_perimeter_formula(1,ABC)"
+    ]
+  }
 }

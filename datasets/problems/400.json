@@ -23,7 +23,16 @@
   "goal_cdl": "Value(MeasureOfAngle(PUQ))",
   "problem_answer": "32",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(QPU)",
-    "isosceles_triangle_property_angle_equal(QPU)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,QPU)",
+    "isosceles_triangle_property_angle_equal(1,QPU)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,QPU)": [
+      "isosceles_triangle_property_angle_equal(1,QPU)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,QPU)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,QPU)"
+    ]
+  }
 }

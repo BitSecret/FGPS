@@ -24,10 +24,25 @@
   "goal_cdl": "Value(PerimeterOfTriangle(BCE))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_sas(FED,FBE)",
-    "mirror_congruent_triangle_property_line_equal(FED,FBE)",
-    "line_addition(DE,EC)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "triangle_perimeter_formula(CEB)"
-  ]
+    "mirror_congruent_triangle_judgment_sas(1,FED,FBE)",
+    "mirror_congruent_triangle_property_line_equal(1,FED,FBE)",
+    "line_addition(1,DE,EC)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "triangle_perimeter_formula(1,CEB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_sas(1,FED,FBE)": [
+      "mirror_congruent_triangle_property_line_equal(1,FED,FBE)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,FED,FBE)": [],
+    "line_addition(1,DE,EC)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "triangle_perimeter_formula(1,CEB)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_sas(1,FED,FBE)",
+      "line_addition(1,DE,EC)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_perimeter_formula(1,CEB)"
+    ]
+  }
 }

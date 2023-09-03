@@ -25,10 +25,25 @@
   "goal_cdl": "Value(MeasureOfAngle(MFE))",
   "problem_answer": "85",
   "theorem_seqs": [
-    "vertical_angle(DEB,CEA)",
-    "angle_addition(BEF,FEC)",
-    "adjacent_complementary_angle(BEC,CEA)",
-    "parallel_property_collinear_extend(AB,MF,E)",
-    "parallel_property_alternate_interior_angle(EB,MF)"
-  ]
+    "vertical_angle(1,DEB,CEA)",
+    "angle_addition(1,BEF,FEC)",
+    "adjacent_complementary_angle(1,BEC,CEA)",
+    "parallel_property_collinear_extend(3,AB,MF,E)",
+    "parallel_property_alternate_interior_angle(1,EB,MF)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,DEB,CEA)": [],
+    "angle_addition(1,BEF,FEC)": [],
+    "adjacent_complementary_angle(1,BEC,CEA)": [],
+    "parallel_property_collinear_extend(3,AB,MF,E)": [
+      "parallel_property_alternate_interior_angle(1,EB,MF)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EB,MF)": [],
+    "START": [
+      "vertical_angle(1,DEB,CEA)",
+      "angle_addition(1,BEF,FEC)",
+      "adjacent_complementary_angle(1,BEC,CEA)",
+      "parallel_property_collinear_extend(3,AB,MF,E)"
+    ]
+  }
 }

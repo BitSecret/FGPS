@@ -20,8 +20,18 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "100*sqrt(3)",
   "theorem_seqs": [
-    "angle_addition(DAB,BAC)",
-    "triangle_property_angle_sum(ACB)",
-    "sine_theorem(CBA)"
-  ]
+    "angle_addition(1,DAB,BAC)",
+    "triangle_property_angle_sum(1,ACB)",
+    "sine_theorem(1,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,DAB,BAC)": [],
+    "triangle_property_angle_sum(1,ACB)": [],
+    "sine_theorem(1,CBA)": [],
+    "START": [
+      "angle_addition(1,DAB,BAC)",
+      "triangle_property_angle_sum(1,ACB)",
+      "sine_theorem(1,CBA)"
+    ]
+  }
 }

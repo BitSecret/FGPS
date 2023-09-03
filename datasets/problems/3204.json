@@ -27,8 +27,18 @@
   "goal_cdl": "Value(MeasureOfAngle(FOA))",
   "problem_answer": "64",
   "theorem_seqs": [
-    "angle_addition(AOC,COE)",
-    "flat_angle(FOE)",
-    "angle_addition(FOA,AOE)"
-  ]
+    "angle_addition(1,AOC,COE)",
+    "flat_angle(1,FOE)",
+    "angle_addition(1,FOA,AOE)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,AOC,COE)": [],
+    "flat_angle(1,FOE)": [],
+    "angle_addition(1,FOA,AOE)": [],
+    "START": [
+      "angle_addition(1,AOC,COE)",
+      "flat_angle(1,FOE)",
+      "angle_addition(1,FOA,AOE)"
+    ]
+  }
 }

@@ -23,9 +23,25 @@
   "goal_cdl": "Value(LengthOfLine(DB))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CE,BA,D)",
-    "parallel_property_alternate_interior_angle(AB,ED)",
-    "parallel_property_alternate_interior_angle(AB,DC)",
-    "isosceles_triangle_judgment_angle_equal(DBA)"
-  ]
+    "parallel_property_collinear_extend(3,CE,BA,D)",
+    "parallel_property_alternate_interior_angle(1,AB,ED)",
+    "parallel_property_alternate_interior_angle(2,AB,DC)",
+    "isosceles_triangle_judgment_angle_equal(1,DBA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CE,BA,D)": [
+      "parallel_property_alternate_interior_angle(2,AB,DC)",
+      "parallel_property_alternate_interior_angle(1,AB,ED)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AB,ED)": [
+      "isosceles_triangle_judgment_angle_equal(1,DBA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AB,DC)": [
+      "isosceles_triangle_judgment_angle_equal(1,DBA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,DBA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CE,BA,D)"
+    ]
+  }
 }

@@ -21,7 +21,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8*sqrt(41)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(ADB)",
-    "right_triangle_property_pythagorean(ADB)"
-  ]
+    "right_triangle_judgment_angle(1,ADB)",
+    "right_triangle_property_pythagorean(1,ADB)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,ADB)": [
+      "right_triangle_property_pythagorean(1,ADB)"
+    ],
+    "right_triangle_property_pythagorean(1,ADB)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,ADB)"
+    ]
+  }
 }

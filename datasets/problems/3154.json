@@ -25,7 +25,15 @@
   "goal_cdl": "Value(MeasureOfAngle(DOB))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "angle_addition(AOD,DOE)",
-    "angle_addition(AOE,EOC)"
-  ]
+    "angle_addition(1,AOD,DOE)",
+    "angle_addition(1,AOE,EOC)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,AOD,DOE)": [],
+    "angle_addition(1,AOE,EOC)": [],
+    "START": [
+      "angle_addition(1,AOD,DOE)",
+      "angle_addition(1,AOE,EOC)"
+    ]
+  }
 }

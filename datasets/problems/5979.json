@@ -25,12 +25,34 @@
   "goal_cdl": "Value(AreaOfTriangle(CDF))",
   "problem_answer": "54",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "line_addition(AE,EB)",
-    "parallel_property_alternate_interior_angle(BA,CD)",
-    "vertical_angle(EFA,DFC)",
-    "similar_triangle_judgment_aa(EFA,DFC)",
-    "similar_triangle_property_line_ratio(FAE,FCD)",
-    "similar_triangle_property_area_square_ratio(EFA,DFC)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "line_addition(1,AE,EB)",
+    "parallel_property_alternate_interior_angle(2,BA,CD)",
+    "vertical_angle(1,EFA,DFC)",
+    "similar_triangle_judgment_aa(1,EFA,DFC)",
+    "similar_triangle_property_line_ratio(1,FAE,FCD)",
+    "similar_triangle_property_area_square_ratio(1,EFA,DFC)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "line_addition(1,AE,EB)": [],
+    "parallel_property_alternate_interior_angle(2,BA,CD)": [
+      "similar_triangle_judgment_aa(1,EFA,DFC)"
+    ],
+    "vertical_angle(1,EFA,DFC)": [
+      "similar_triangle_judgment_aa(1,EFA,DFC)"
+    ],
+    "similar_triangle_judgment_aa(1,EFA,DFC)": [
+      "similar_triangle_property_area_square_ratio(1,EFA,DFC)",
+      "similar_triangle_property_line_ratio(1,FAE,FCD)"
+    ],
+    "similar_triangle_property_line_ratio(1,FAE,FCD)": [],
+    "similar_triangle_property_area_square_ratio(1,EFA,DFC)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,AE,EB)",
+      "parallel_property_alternate_interior_angle(2,BA,CD)",
+      "vertical_angle(1,EFA,DFC)"
+    ]
+  }
 }

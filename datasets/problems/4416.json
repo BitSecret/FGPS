@@ -20,8 +20,18 @@
   "goal_cdl": "Value(Sub(MeasureOfAngle(BDE),MeasureOfAngle(BCD)))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ABD,DBC)",
-    "adjacent_complementary_angle(CDB,BDE)",
-    "triangle_property_angle_sum(BCD)"
-  ]
+    "adjacent_complementary_angle(1,ABD,DBC)",
+    "adjacent_complementary_angle(1,CDB,BDE)",
+    "triangle_property_angle_sum(1,BCD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ABD,DBC)": [],
+    "adjacent_complementary_angle(1,CDB,BDE)": [],
+    "triangle_property_angle_sum(1,BCD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ABD,DBC)",
+      "adjacent_complementary_angle(1,CDB,BDE)",
+      "triangle_property_angle_sum(1,BCD)"
+    ]
+  }
 }

@@ -22,9 +22,23 @@
   "goal_cdl": "Value(MeasureOfAngle(EFG))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,G)",
-    "parallel_property_collinear_extend(DC,BG,E)",
-    "parallel_property_alternate_interior_angle(GB,CE)",
-    "triangle_property_angle_sum(GEF)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,G)",
+    "parallel_property_collinear_extend(3,DC,BG,E)",
+    "parallel_property_alternate_interior_angle(1,GB,CE)",
+    "triangle_property_angle_sum(1,GEF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,G)": [
+      "parallel_property_collinear_extend(3,DC,BG,E)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BG,E)": [
+      "parallel_property_alternate_interior_angle(1,GB,CE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,GB,CE)": [],
+    "triangle_property_angle_sum(1,GEF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,G)",
+      "triangle_property_angle_sum(1,GEF)"
+    ]
+  }
 }

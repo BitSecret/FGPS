@@ -26,8 +26,20 @@
   "goal_cdl": "Value(MeasureOfAngle(TBG))",
   "problem_answer": "75",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(GD,CE,B)",
-    "parallel_property_collinear_extend(EC,BG,J)",
-    "parallel_property_alternate_interior_angle(GB,JE)"
-  ]
+    "parallel_property_collinear_extend(3,GD,CE,B)",
+    "parallel_property_collinear_extend(3,EC,BG,J)",
+    "parallel_property_alternate_interior_angle(2,GB,JE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,GD,CE,B)": [
+      "parallel_property_collinear_extend(3,EC,BG,J)"
+    ],
+    "parallel_property_collinear_extend(3,EC,BG,J)": [
+      "parallel_property_alternate_interior_angle(2,GB,JE)"
+    ],
+    "parallel_property_alternate_interior_angle(2,GB,JE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,GD,CE,B)"
+    ]
+  }
 }

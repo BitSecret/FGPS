@@ -24,9 +24,22 @@
   "goal_cdl": "Value(MeasureOfAngle(LPQ))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "angle_addition(MPR,RPQ)",
-    "parallelogram_property_opposite_angle_equal(LMPQ)",
-    "kite_property_diagonal_perpendicular_bisection(PQLM,R)",
-    "perpendicular_bisector_property_bisector(PR,QM)"
-  ]
+    "angle_addition(1,MPR,RPQ)",
+    "parallelogram_property_opposite_angle_equal(1,LMPQ)",
+    "kite_property_diagonal_perpendicular_bisection(1,PQLM,R)",
+    "perpendicular_bisector_property_bisector(1,PR,QM)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,MPR,RPQ)": [],
+    "parallelogram_property_opposite_angle_equal(1,LMPQ)": [],
+    "kite_property_diagonal_perpendicular_bisection(1,PQLM,R)": [
+      "perpendicular_bisector_property_bisector(1,PR,QM)"
+    ],
+    "perpendicular_bisector_property_bisector(1,PR,QM)": [],
+    "START": [
+      "angle_addition(1,MPR,RPQ)",
+      "parallelogram_property_opposite_angle_equal(1,LMPQ)",
+      "kite_property_diagonal_perpendicular_bisection(1,PQLM,R)"
+    ]
+  }
 }

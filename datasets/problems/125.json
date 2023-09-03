@@ -37,10 +37,26 @@
   "goal_cdl": "Value(r)",
   "problem_answer": "10",
   "theorem_seqs": [
-    "parallel_property_ipsilateral_internal_angle(AJ,BH)",
-    "adjacent_complementary_angle(DBA,ABH)",
-    "parallel_property_collinear_extend(LA,IC,B)",
-    "parallel_property_collinear_extend(CI,BA,D)",
-    "parallel_property_ipsilateral_internal_angle(DI,BA)"
-  ]
+    "parallel_property_ipsilateral_internal_angle(1,AJ,BH)",
+    "adjacent_complementary_angle(1,DBA,ABH)",
+    "parallel_property_collinear_extend(2,LA,IC,B)",
+    "parallel_property_collinear_extend(1,CI,BA,D)",
+    "parallel_property_ipsilateral_internal_angle(1,DI,BA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_ipsilateral_internal_angle(1,AJ,BH)": [],
+    "adjacent_complementary_angle(1,DBA,ABH)": [],
+    "parallel_property_collinear_extend(2,LA,IC,B)": [
+      "parallel_property_collinear_extend(1,CI,BA,D)"
+    ],
+    "parallel_property_collinear_extend(1,CI,BA,D)": [
+      "parallel_property_ipsilateral_internal_angle(1,DI,BA)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,DI,BA)": [],
+    "START": [
+      "parallel_property_ipsilateral_internal_angle(1,AJ,BH)",
+      "adjacent_complementary_angle(1,DBA,ABH)",
+      "parallel_property_collinear_extend(2,LA,IC,B)"
+    ]
+  }
 }

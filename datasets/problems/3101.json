@@ -30,13 +30,37 @@
   "goal_cdl": "Value(MeasureOfAngle(DFE))",
   "problem_answer": "159",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CD,AB,G)",
-    "parallel_property_collinear_extend(CD,AB,F)",
-    "parallel_property_collinear_extend(BA,DG,E)",
-    "parallel_property_collinear_extend(BA,DF,E)",
-    "angle_addition(GEF,FEB)",
-    "parallel_property_corresponding_angle(GD,EB,H)",
-    "parallel_property_corresponding_angle(FD,EB,I)",
-    "adjacent_complementary_angle(IFD,DFE)"
-  ]
+    "parallel_property_collinear_extend(3,CD,AB,G)",
+    "parallel_property_collinear_extend(3,CD,AB,F)",
+    "parallel_property_collinear_extend(3,BA,DG,E)",
+    "parallel_property_collinear_extend(3,BA,DF,E)",
+    "angle_addition(1,GEF,FEB)",
+    "parallel_property_corresponding_angle(1,GD,EB,H)",
+    "parallel_property_corresponding_angle(1,FD,EB,I)",
+    "adjacent_complementary_angle(1,IFD,DFE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CD,AB,G)": [
+      "parallel_property_collinear_extend(3,BA,DG,E)"
+    ],
+    "parallel_property_collinear_extend(3,CD,AB,F)": [
+      "parallel_property_collinear_extend(3,BA,DF,E)"
+    ],
+    "parallel_property_collinear_extend(3,BA,DG,E)": [
+      "parallel_property_corresponding_angle(1,GD,EB,H)"
+    ],
+    "parallel_property_collinear_extend(3,BA,DF,E)": [
+      "parallel_property_corresponding_angle(1,FD,EB,I)"
+    ],
+    "angle_addition(1,GEF,FEB)": [],
+    "parallel_property_corresponding_angle(1,GD,EB,H)": [],
+    "parallel_property_corresponding_angle(1,FD,EB,I)": [],
+    "adjacent_complementary_angle(1,IFD,DFE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CD,AB,G)",
+      "parallel_property_collinear_extend(3,CD,AB,F)",
+      "angle_addition(1,GEF,FEB)",
+      "adjacent_complementary_angle(1,IFD,DFE)"
+    ]
+  }
 }

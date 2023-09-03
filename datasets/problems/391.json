@@ -24,11 +24,29 @@
   "goal_cdl": "Value(MeasureOfAngle(SRQ))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(QPU)",
-    "isosceles_triangle_judgment_line_equal(RPT)",
-    "isosceles_triangle_property_angle_equal(QPU)",
-    "isosceles_triangle_property_angle_equal(RPT)",
-    "triangle_property_angle_sum(QPU)",
-    "triangle_property_angle_sum(TRP)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,QPU)",
+    "isosceles_triangle_judgment_line_equal(1,RPT)",
+    "isosceles_triangle_property_angle_equal(1,QPU)",
+    "isosceles_triangle_property_angle_equal(1,RPT)",
+    "triangle_property_angle_sum(1,QPU)",
+    "triangle_property_angle_sum(1,TRP)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,QPU)": [
+      "isosceles_triangle_property_angle_equal(1,QPU)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,RPT)": [
+      "isosceles_triangle_property_angle_equal(1,RPT)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,QPU)": [],
+    "isosceles_triangle_property_angle_equal(1,RPT)": [],
+    "triangle_property_angle_sum(1,QPU)": [],
+    "triangle_property_angle_sum(1,TRP)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,QPU)",
+      "isosceles_triangle_judgment_line_equal(1,RPT)",
+      "triangle_property_angle_sum(1,QPU)",
+      "triangle_property_angle_sum(1,TRP)"
+    ]
+  }
 }

@@ -24,16 +24,47 @@
   "goal_cdl": "Value(MeasureOfAngle(BNO))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "arc_property_center_angle(OAB,O)",
-    "arc_property_center_angle(OMB,O)",
-    "congruent_arc_judgment_length_equal(OAM,OMB)",
-    "congruent_arc_property_measure_equal(OAM,OMB)",
-    "arc_addition_measure(OAM,OMB)",
-    "adjacent_complementary_angle(NOB,BOM)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(ON,O)",
-    "isosceles_triangle_judgment_line_equal(OBN)",
-    "isosceles_triangle_property_angle_equal(OBN)",
-    "triangle_property_angle_sum(OBN)"
-  ]
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_center_angle(1,OMB,O)",
+    "congruent_arc_judgment_length_equal(1,OAM,OMB)",
+    "congruent_arc_property_measure_equal(1,OAM,OMB)",
+    "arc_addition_measure(1,OAM,OMB)",
+    "adjacent_complementary_angle(1,NOB,BOM)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,ON,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBN)",
+    "isosceles_triangle_property_angle_equal(1,OBN)",
+    "triangle_property_angle_sum(1,OBN)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_center_angle(1,OMB,O)": [],
+    "congruent_arc_judgment_length_equal(1,OAM,OMB)": [
+      "congruent_arc_property_measure_equal(1,OAM,OMB)"
+    ],
+    "congruent_arc_property_measure_equal(1,OAM,OMB)": [],
+    "arc_addition_measure(1,OAM,OMB)": [],
+    "adjacent_complementary_angle(1,NOB,BOM)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBN)"
+    ],
+    "radius_of_circle_property_length_equal(1,ON,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBN)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBN)": [
+      "isosceles_triangle_property_angle_equal(1,OBN)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBN)": [],
+    "triangle_property_angle_sum(1,OBN)": [],
+    "START": [
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_center_angle(1,OMB,O)",
+      "congruent_arc_judgment_length_equal(1,OAM,OMB)",
+      "arc_addition_measure(1,OAM,OMB)",
+      "adjacent_complementary_angle(1,NOB,BOM)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,ON,O)",
+      "triangle_property_angle_sum(1,OBN)"
+    ]
+  }
 }

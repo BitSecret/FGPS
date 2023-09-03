@@ -29,15 +29,47 @@
   "goal_cdl": "Value(MeasureOfAngle(BDA))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "median_of_triangle_judgment(AO,AED)",
-    "right_triangle_judgment_angle(DAE)",
-    "right_triangle_property_length_of_median(DAE,O)",
-    "isosceles_triangle_judgment_line_equal(ABO)",
-    "isosceles_triangle_property_angle_equal(ABO)",
-    "line_addition(EO,OD)",
-    "adjacent_complementary_angle(EOA,AOD)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(ODA)"
-  ]
+    "median_of_triangle_judgment(1,AO,AED)",
+    "right_triangle_judgment_angle(1,DAE)",
+    "right_triangle_property_length_of_median(1,DAE,O)",
+    "isosceles_triangle_judgment_line_equal(1,ABO)",
+    "isosceles_triangle_property_angle_equal(1,ABO)",
+    "line_addition(1,EO,OD)",
+    "adjacent_complementary_angle(1,EOA,AOD)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,ODA)"
+  ],
+  "theorem_seq_dag": {
+    "median_of_triangle_judgment(1,AO,AED)": [
+      "right_triangle_property_length_of_median(1,DAE,O)"
+    ],
+    "right_triangle_judgment_angle(1,DAE)": [
+      "right_triangle_property_length_of_median(1,DAE,O)"
+    ],
+    "right_triangle_property_length_of_median(1,DAE,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ABO)",
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABO)": [
+      "isosceles_triangle_property_angle_equal(1,ABO)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABO)": [],
+    "line_addition(1,EO,OD)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "adjacent_complementary_angle(1,EOA,AOD)": [],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "triangle_property_angle_sum(1,ODA)": [],
+    "START": [
+      "median_of_triangle_judgment(1,AO,AED)",
+      "right_triangle_judgment_angle(1,DAE)",
+      "line_addition(1,EO,OD)",
+      "adjacent_complementary_angle(1,EOA,AOD)",
+      "triangle_property_angle_sum(1,ODA)"
+    ]
+  }
 }

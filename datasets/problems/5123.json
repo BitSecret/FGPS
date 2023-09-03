@@ -29,15 +29,47 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "1.6",
   "theorem_seqs": [
-    "adjacent_complementary_angle(DNA,ANB)",
-    "mirror_congruent_triangle_judgment_aas(DNA,BAN)",
-    "mirror_congruent_triangle_property_line_equal(NAD,NBA)",
-    "mirror_congruent_triangle_property_line_equal(ADN,ANB)",
-    "line_addition(DN,NB)",
-    "line_addition(DA,AC)",
-    "line_addition(BM,MC)",
-    "similar_triangle_judgment_sas(BMN,BCD)",
-    "similar_triangle_property_line_ratio(BMN,BCD)",
-    "similar_triangle_property_line_ratio(NBM,DBC)"
-  ]
+    "adjacent_complementary_angle(1,DNA,ANB)",
+    "mirror_congruent_triangle_judgment_aas(2,DNA,BAN)",
+    "mirror_congruent_triangle_property_line_equal(1,NAD,NBA)",
+    "mirror_congruent_triangle_property_line_equal(1,ADN,ANB)",
+    "line_addition(1,DN,NB)",
+    "line_addition(1,DA,AC)",
+    "line_addition(1,BM,MC)",
+    "similar_triangle_judgment_sas(1,BMN,BCD)",
+    "similar_triangle_property_line_ratio(1,BMN,BCD)",
+    "similar_triangle_property_line_ratio(1,NBM,DBC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,DNA,ANB)": [
+      "mirror_congruent_triangle_judgment_aas(2,DNA,BAN)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(2,DNA,BAN)": [
+      "mirror_congruent_triangle_property_line_equal(1,NAD,NBA)",
+      "mirror_congruent_triangle_property_line_equal(1,ADN,ANB)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,NAD,NBA)": [],
+    "mirror_congruent_triangle_property_line_equal(1,ADN,ANB)": [
+      "similar_triangle_judgment_sas(1,BMN,BCD)"
+    ],
+    "line_addition(1,DN,NB)": [
+      "similar_triangle_judgment_sas(1,BMN,BCD)"
+    ],
+    "line_addition(1,DA,AC)": [],
+    "line_addition(1,BM,MC)": [
+      "similar_triangle_judgment_sas(1,BMN,BCD)"
+    ],
+    "similar_triangle_judgment_sas(1,BMN,BCD)": [
+      "similar_triangle_property_line_ratio(1,BMN,BCD)",
+      "similar_triangle_property_line_ratio(1,NBM,DBC)"
+    ],
+    "similar_triangle_property_line_ratio(1,BMN,BCD)": [],
+    "similar_triangle_property_line_ratio(1,NBM,DBC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,DNA,ANB)",
+      "line_addition(1,DN,NB)",
+      "line_addition(1,DA,AC)",
+      "line_addition(1,BM,MC)"
+    ]
+  }
 }

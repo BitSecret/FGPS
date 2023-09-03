@@ -26,15 +26,44 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "congruent_arc_judgment_length_equal(OBC,OCD)",
-    "congruent_arc_property_measure_equal(OBC,OCD)",
-    "arc_property_circumference_angle_external(OBD,A)",
-    "arc_addition_measure(OBC,OCD)",
-    "arc_property_center_angle(OBC,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(OBC)",
-    "isosceles_triangle_property_angle_equal(OBC)",
-    "triangle_property_angle_sum(OBC)"
-  ]
+    "congruent_arc_judgment_length_equal(1,OBC,OCD)",
+    "congruent_arc_property_measure_equal(1,OBC,OCD)",
+    "arc_property_circumference_angle_external(1,OBD,A)",
+    "arc_addition_measure(1,OBC,OCD)",
+    "arc_property_center_angle(1,OBC,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBC)",
+    "isosceles_triangle_property_angle_equal(1,OBC)",
+    "triangle_property_angle_sum(1,OBC)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_length_equal(1,OBC,OCD)": [
+      "congruent_arc_property_measure_equal(1,OBC,OCD)"
+    ],
+    "congruent_arc_property_measure_equal(1,OBC,OCD)": [],
+    "arc_property_circumference_angle_external(1,OBD,A)": [],
+    "arc_addition_measure(1,OBC,OCD)": [],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBC)": [
+      "isosceles_triangle_property_angle_equal(1,OBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBC)": [],
+    "triangle_property_angle_sum(1,OBC)": [],
+    "START": [
+      "congruent_arc_judgment_length_equal(1,OBC,OCD)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "arc_addition_measure(1,OBC,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "triangle_property_angle_sum(1,OBC)"
+    ]
+  }
 }

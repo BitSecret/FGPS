@@ -23,12 +23,32 @@
   "goal_cdl": "Value(DiameterOfCircle(O))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ACO,OCB)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
-    "line_addition(AC,CB)",
-    "right_triangle_judgment_angle(ACO)",
-    "right_triangle_property_pythagorean(ACO)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "circle_property_length_of_radius_and_diameter(O)"
-  ]
+    "adjacent_complementary_angle(1,ACO,OCB)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OC,AB)",
+    "line_addition(1,AC,CB)",
+    "right_triangle_judgment_angle(1,ACO)",
+    "right_triangle_property_pythagorean(1,ACO)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ACO,OCB)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OC,AB)",
+      "right_triangle_judgment_angle(1,ACO)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OC,AB)": [],
+    "line_addition(1,AC,CB)": [],
+    "right_triangle_judgment_angle(1,ACO)": [
+      "right_triangle_property_pythagorean(1,ACO)"
+    ],
+    "right_triangle_property_pythagorean(1,ACO)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ACO,OCB)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  }
 }

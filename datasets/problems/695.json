@@ -24,8 +24,19 @@
   "goal_cdl": "Value(MeasureOfAngle(TSR))",
   "problem_answer": "49",
   "theorem_seqs": [
-    "parallelogram_judgment_parallel_and_parallel(QTSR)",
-    "adjacent_complementary_angle(JQR,RQT)",
-    "parallelogram_property_opposite_angle_equal(QTSR)"
-  ]
+    "parallelogram_judgment_parallel_and_parallel(1,QTSR)",
+    "adjacent_complementary_angle(1,JQR,RQT)",
+    "parallelogram_property_opposite_angle_equal(1,QTSR)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_parallel_and_parallel(1,QTSR)": [
+      "parallelogram_property_opposite_angle_equal(1,QTSR)"
+    ],
+    "adjacent_complementary_angle(1,JQR,RQT)": [],
+    "parallelogram_property_opposite_angle_equal(1,QTSR)": [],
+    "START": [
+      "parallelogram_judgment_parallel_and_parallel(1,QTSR)",
+      "adjacent_complementary_angle(1,JQR,RQT)"
+    ]
+  }
 }

@@ -19,9 +19,22 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABDC))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "parallelogram_judgment_parallel_and_parallel(ABDC)",
-    "parallelogram_property_opposite_line_equal(ABDC)",
-    "parallelogram_property_opposite_line_equal(BDCA)",
-    "quadrilateral_perimeter_formula(ABDC)"
-  ]
+    "parallelogram_judgment_parallel_and_parallel(1,ABDC)",
+    "parallelogram_property_opposite_line_equal(1,ABDC)",
+    "parallelogram_property_opposite_line_equal(1,BDCA)",
+    "quadrilateral_perimeter_formula(1,ABDC)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_parallel_and_parallel(1,ABDC)": [
+      "parallelogram_property_opposite_line_equal(1,ABDC)",
+      "parallelogram_property_opposite_line_equal(1,BDCA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABDC)": [],
+    "parallelogram_property_opposite_line_equal(1,BDCA)": [],
+    "quadrilateral_perimeter_formula(1,ABDC)": [],
+    "START": [
+      "parallelogram_judgment_parallel_and_parallel(1,ABDC)",
+      "quadrilateral_perimeter_formula(1,ABDC)"
+    ]
+  }
 }

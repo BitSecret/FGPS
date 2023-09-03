@@ -24,9 +24,23 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "vertical_angle(DEA,BEC)",
-    "similar_triangle_judgment_aa(ADE,CBE)",
-    "similar_triangle_property_line_ratio(EAD,ECB)",
-    "similar_triangle_property_line_ratio(DEA,BEC)"
-  ]
+    "vertical_angle(1,DEA,BEC)",
+    "similar_triangle_judgment_aa(1,ADE,CBE)",
+    "similar_triangle_property_line_ratio(1,EAD,ECB)",
+    "similar_triangle_property_line_ratio(1,DEA,BEC)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,DEA,BEC)": [
+      "similar_triangle_judgment_aa(1,ADE,CBE)"
+    ],
+    "similar_triangle_judgment_aa(1,ADE,CBE)": [
+      "similar_triangle_property_line_ratio(1,DEA,BEC)",
+      "similar_triangle_property_line_ratio(1,EAD,ECB)"
+    ],
+    "similar_triangle_property_line_ratio(1,EAD,ECB)": [],
+    "similar_triangle_property_line_ratio(1,DEA,BEC)": [],
+    "START": [
+      "vertical_angle(1,DEA,BEC)"
+    ]
+  }
 }

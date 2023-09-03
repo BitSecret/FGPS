@@ -25,10 +25,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(JFK,HFG)",
-    "line_addition(FK,KG)",
-    "line_addition(FJ,JH)",
-    "similar_triangle_property_line_ratio(JFK,HFG)",
-    "similar_triangle_property_line_ratio(KJF,GHF)"
-  ]
+    "similar_triangle_judgment_aa(1,JFK,HFG)",
+    "line_addition(1,FK,KG)",
+    "line_addition(1,FJ,JH)",
+    "similar_triangle_property_line_ratio(1,JFK,HFG)",
+    "similar_triangle_property_line_ratio(1,KJF,GHF)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,JFK,HFG)": [
+      "similar_triangle_property_line_ratio(1,JFK,HFG)",
+      "similar_triangle_property_line_ratio(1,KJF,GHF)"
+    ],
+    "line_addition(1,FK,KG)": [],
+    "line_addition(1,FJ,JH)": [],
+    "similar_triangle_property_line_ratio(1,JFK,HFG)": [],
+    "similar_triangle_property_line_ratio(1,KJF,GHF)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,JFK,HFG)",
+      "line_addition(1,FK,KG)",
+      "line_addition(1,FJ,JH)"
+    ]
+  }
 }

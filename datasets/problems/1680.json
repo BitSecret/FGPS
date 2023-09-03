@@ -22,12 +22,32 @@
   "goal_cdl": "Value(PerimeterOfTriangle(RQP))",
   "problem_answer": "78",
   "theorem_seqs": [
-    "adjacent_complementary_angle(PMQ,QMR)",
-    "right_triangle_judgment_angle(PMQ)",
-    "right_triangle_property_pythagorean(PMQ)",
-    "mirror_similar_triangle_property_line_ratio(QPM,RQP)",
-    "mirror_similar_triangle_property_line_ratio(PMQ,PRQ)",
-    "mirror_similar_triangle_property_line_ratio(MQP,QPR)",
-    "triangle_perimeter_formula(PRQ)"
-  ]
+    "adjacent_complementary_angle(1,PMQ,QMR)",
+    "right_triangle_judgment_angle(1,PMQ)",
+    "right_triangle_property_pythagorean(1,PMQ)",
+    "mirror_similar_triangle_property_line_ratio(1,QPM,RQP)",
+    "mirror_similar_triangle_property_line_ratio(1,PMQ,PRQ)",
+    "mirror_similar_triangle_property_line_ratio(1,MQP,QPR)",
+    "triangle_perimeter_formula(1,PRQ)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,PMQ,QMR)": [
+      "right_triangle_judgment_angle(1,PMQ)"
+    ],
+    "right_triangle_judgment_angle(1,PMQ)": [
+      "right_triangle_property_pythagorean(1,PMQ)"
+    ],
+    "right_triangle_property_pythagorean(1,PMQ)": [],
+    "mirror_similar_triangle_property_line_ratio(1,QPM,RQP)": [],
+    "mirror_similar_triangle_property_line_ratio(1,PMQ,PRQ)": [],
+    "mirror_similar_triangle_property_line_ratio(1,MQP,QPR)": [],
+    "triangle_perimeter_formula(1,PRQ)": [],
+    "START": [
+      "adjacent_complementary_angle(1,PMQ,QMR)",
+      "mirror_similar_triangle_property_line_ratio(1,QPM,RQP)",
+      "mirror_similar_triangle_property_line_ratio(1,PMQ,PRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,MQP,QPR)",
+      "triangle_perimeter_formula(1,PRQ)"
+    ]
+  }
 }

@@ -27,13 +27,43 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "4",
   "theorem_seqs": [
-    "line_addition(PQ,QR)",
-    "line_addition(WX,XY)",
-    "similar_triangle_property_line_ratio(NPR,VWY)",
-    "similar_triangle_property_line_ratio(RNP,YVW)",
-    "similar_triangle_property_angle_equal(PRN,WYV)",
-    "similar_triangle_judgment_sas(PQN,WXV)",
-    "similar_triangle_property_line_ratio(PQN,WXV)",
-    "similar_triangle_property_line_ratio(NPQ,VWX)"
-  ]
+    "line_addition(1,PQ,QR)",
+    "line_addition(1,WX,XY)",
+    "similar_triangle_property_line_ratio(1,NPR,VWY)",
+    "similar_triangle_property_line_ratio(1,RNP,YVW)",
+    "similar_triangle_property_angle_equal(1,PRN,WYV)",
+    "similar_triangle_judgment_sas(1,PQN,WXV)",
+    "similar_triangle_property_line_ratio(1,PQN,WXV)",
+    "similar_triangle_property_line_ratio(1,NPQ,VWX)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,PQ,QR)": [
+      "similar_triangle_judgment_sas(1,PQN,WXV)"
+    ],
+    "line_addition(1,WX,XY)": [
+      "similar_triangle_judgment_sas(1,PQN,WXV)"
+    ],
+    "similar_triangle_property_line_ratio(1,NPR,VWY)": [
+      "similar_triangle_judgment_sas(1,PQN,WXV)"
+    ],
+    "similar_triangle_property_line_ratio(1,RNP,YVW)": [
+      "similar_triangle_judgment_sas(1,PQN,WXV)"
+    ],
+    "similar_triangle_property_angle_equal(1,PRN,WYV)": [
+      "similar_triangle_judgment_sas(1,PQN,WXV)"
+    ],
+    "similar_triangle_judgment_sas(1,PQN,WXV)": [
+      "similar_triangle_property_line_ratio(1,PQN,WXV)",
+      "similar_triangle_property_line_ratio(1,NPQ,VWX)"
+    ],
+    "similar_triangle_property_line_ratio(1,PQN,WXV)": [],
+    "similar_triangle_property_line_ratio(1,NPQ,VWX)": [],
+    "START": [
+      "line_addition(1,PQ,QR)",
+      "line_addition(1,WX,XY)",
+      "similar_triangle_property_line_ratio(1,NPR,VWY)",
+      "similar_triangle_property_line_ratio(1,RNP,YVW)",
+      "similar_triangle_property_angle_equal(1,PRN,WYV)"
+    ]
+  }
 }

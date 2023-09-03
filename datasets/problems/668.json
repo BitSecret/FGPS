@@ -20,13 +20,35 @@
   "goal_cdl": "Value(MeasureOfAngle(ACB))",
   "problem_answer": "136",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(DCA)",
-    "isosceles_triangle_property_angle_equal(DCA)",
-    "isosceles_triangle_judgment_line_equal(CBA)",
-    "isosceles_triangle_property_angle_equal(CBA)",
-    "angle_addition(BAC,CAD)",
-    "triangle_property_angle_sum(ADC)",
-    "triangle_property_angle_sum(ACB)",
-    "triangle_property_angle_sum(DBA)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,DCA)",
+    "isosceles_triangle_property_angle_equal(1,DCA)",
+    "isosceles_triangle_judgment_line_equal(1,CBA)",
+    "isosceles_triangle_property_angle_equal(1,CBA)",
+    "angle_addition(1,BAC,CAD)",
+    "triangle_property_angle_sum(1,ADC)",
+    "triangle_property_angle_sum(1,ACB)",
+    "triangle_property_angle_sum(1,DBA)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,DCA)": [
+      "isosceles_triangle_property_angle_equal(1,DCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DCA)": [],
+    "isosceles_triangle_judgment_line_equal(1,CBA)": [
+      "isosceles_triangle_property_angle_equal(1,CBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CBA)": [],
+    "angle_addition(1,BAC,CAD)": [],
+    "triangle_property_angle_sum(1,ADC)": [],
+    "triangle_property_angle_sum(1,ACB)": [],
+    "triangle_property_angle_sum(1,DBA)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,DCA)",
+      "isosceles_triangle_judgment_line_equal(1,CBA)",
+      "angle_addition(1,BAC,CAD)",
+      "triangle_property_angle_sum(1,ADC)",
+      "triangle_property_angle_sum(1,ACB)",
+      "triangle_property_angle_sum(1,DBA)"
+    ]
+  }
 }

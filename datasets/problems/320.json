@@ -23,7 +23,16 @@
   "goal_cdl": "Value(LengthOfLine(MN))",
   "problem_answer": "32.5",
   "theorem_seqs": [
-    "midsegment_of_quadrilateral_judgment_midpoint(MN,TVAR)",
-    "midsegment_of_quadrilateral_property_length(MN,TVAR)"
-  ]
+    "midsegment_of_quadrilateral_judgment_midpoint(1,MN,TVAR)",
+    "midsegment_of_quadrilateral_property_length(1,MN,TVAR)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_quadrilateral_judgment_midpoint(1,MN,TVAR)": [
+      "midsegment_of_quadrilateral_property_length(1,MN,TVAR)"
+    ],
+    "midsegment_of_quadrilateral_property_length(1,MN,TVAR)": [],
+    "START": [
+      "midsegment_of_quadrilateral_judgment_midpoint(1,MN,TVAR)"
+    ]
+  }
 }

@@ -28,10 +28,26 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ABEH))",
   "problem_answer": "26",
   "theorem_seqs": [
-    "congruent_triangle_property_line_equal(CAB,FDE)",
-    "line_addition(DH,HE)",
-    "trapezoid_judgment_parallel(BEHA)",
-    "right_trapezoid_judgment_right_angle(BEHA)",
-    "right_trapezoid_area_formular(BEHA)"
-  ]
+    "congruent_triangle_property_line_equal(1,CAB,FDE)",
+    "line_addition(1,DH,HE)",
+    "trapezoid_judgment_parallel(1,BEHA)",
+    "right_trapezoid_judgment_right_angle(1,BEHA)",
+    "right_trapezoid_area_formular(1,BEHA)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_triangle_property_line_equal(1,CAB,FDE)": [],
+    "line_addition(1,DH,HE)": [],
+    "trapezoid_judgment_parallel(1,BEHA)": [
+      "right_trapezoid_judgment_right_angle(1,BEHA)"
+    ],
+    "right_trapezoid_judgment_right_angle(1,BEHA)": [
+      "right_trapezoid_area_formular(1,BEHA)"
+    ],
+    "right_trapezoid_area_formular(1,BEHA)": [],
+    "START": [
+      "congruent_triangle_property_line_equal(1,CAB,FDE)",
+      "line_addition(1,DH,HE)",
+      "trapezoid_judgment_parallel(1,BEHA)"
+    ]
+  }
 }

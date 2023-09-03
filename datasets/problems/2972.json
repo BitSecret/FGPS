@@ -21,12 +21,34 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(DE,CAB)",
-    "midsegment_of_triangle_property_parallel(DE,CAB)",
-    "parallel_property_corresponding_angle(BA,ED,C)",
-    "similar_triangle_judgment_aa(DEC,ABC)",
-    "line_addition(CD,DA)",
-    "similar_triangle_property_line_ratio(ECD,BCA)",
-    "similar_triangle_property_line_ratio(CDE,CAB)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,DE,CAB)",
+    "midsegment_of_triangle_property_parallel(1,DE,CAB)",
+    "parallel_property_corresponding_angle(2,BA,ED,C)",
+    "similar_triangle_judgment_aa(1,DEC,ABC)",
+    "line_addition(1,CD,DA)",
+    "similar_triangle_property_line_ratio(1,ECD,BCA)",
+    "similar_triangle_property_line_ratio(1,CDE,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,DE,CAB)": [
+      "midsegment_of_triangle_property_parallel(1,DE,CAB)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,DE,CAB)": [
+      "parallel_property_corresponding_angle(2,BA,ED,C)"
+    ],
+    "parallel_property_corresponding_angle(2,BA,ED,C)": [
+      "similar_triangle_judgment_aa(1,DEC,ABC)"
+    ],
+    "similar_triangle_judgment_aa(1,DEC,ABC)": [
+      "similar_triangle_property_line_ratio(1,ECD,BCA)",
+      "similar_triangle_property_line_ratio(1,CDE,CAB)"
+    ],
+    "line_addition(1,CD,DA)": [],
+    "similar_triangle_property_line_ratio(1,ECD,BCA)": [],
+    "similar_triangle_property_line_ratio(1,CDE,CAB)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,DE,CAB)",
+      "line_addition(1,CD,DA)"
+    ]
+  }
 }

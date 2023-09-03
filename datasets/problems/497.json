@@ -19,7 +19,16 @@
   "goal_cdl": "Value(MeasureOfAngle(VUT))",
   "problem_answer": "134",
   "theorem_seqs": [
-    "parallelogram_judgment_angle_and_angle(UTWV)",
-    "parallel_property_ipsilateral_internal_angle(UV,TW)"
-  ]
+    "parallelogram_judgment_angle_and_angle(1,UTWV)",
+    "parallel_property_ipsilateral_internal_angle(1,UV,TW)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_angle_and_angle(1,UTWV)": [
+      "parallel_property_ipsilateral_internal_angle(1,UV,TW)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,UV,TW)": [],
+    "START": [
+      "parallelogram_judgment_angle_and_angle(1,UTWV)"
+    ]
+  }
 }

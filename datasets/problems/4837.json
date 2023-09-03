@@ -24,9 +24,23 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(OCD)))",
   "problem_answer": "3/5",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(CD,O,O)",
-    "right_triangle_judgment_angle(CDO)",
-    "right_triangle_property_pythagorean(CDO)",
-    "sine_theorem(OCD)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+    "right_triangle_judgment_angle(1,CDO)",
+    "right_triangle_property_pythagorean(1,CDO)",
+    "sine_theorem(1,OCD)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,CD,O,O)": [
+      "right_triangle_judgment_angle(1,CDO)"
+    ],
+    "right_triangle_judgment_angle(1,CDO)": [
+      "right_triangle_property_pythagorean(1,CDO)"
+    ],
+    "right_triangle_property_pythagorean(1,CDO)": [],
+    "sine_theorem(1,OCD)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "sine_theorem(1,OCD)"
+    ]
+  }
 }

@@ -20,9 +20,22 @@
   "goal_cdl": "Value(LengthOfLine(DB))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(DCA,CAB)",
-    "line_addition(AD,DB)",
-    "mirror_similar_triangle_property_line_ratio(DCA,CAB)",
-    "mirror_similar_triangle_property_line_ratio(CAD,BCA)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,DCA,CAB)",
+    "line_addition(1,AD,DB)",
+    "mirror_similar_triangle_property_line_ratio(1,DCA,CAB)",
+    "mirror_similar_triangle_property_line_ratio(1,CAD,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,DCA,CAB)": [
+      "mirror_similar_triangle_property_line_ratio(1,DCA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,CAD,BCA)"
+    ],
+    "line_addition(1,AD,DB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DCA,CAB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CAD,BCA)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,DCA,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  }
 }

@@ -22,7 +22,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "19/4",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(XBC,ECB)",
-    "mirror_congruent_triangle_property_line_equal(BCX,BEC)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(2,XBC,ECB)",
+    "mirror_congruent_triangle_property_line_equal(1,BCX,BEC)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(2,XBC,ECB)": [
+      "mirror_congruent_triangle_property_line_equal(1,BCX,BEC)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,BCX,BEC)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(2,XBC,ECB)"
+    ]
+  }
 }

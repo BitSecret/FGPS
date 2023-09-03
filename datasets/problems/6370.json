@@ -27,16 +27,49 @@
   "goal_cdl": "Value(MeasureOfAngle(DAE))",
   "problem_answer": "75",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(BCDA,O)",
-    "perpendicular_bisector_judgment_per_and_mid(EO,CA)",
-    "perpendicular_bisector_property_distance_equal(EO,CA)",
-    "perpendicular_bisector_property_distance_equal(EF,BC)",
-    "isosceles_triangle_judgment_line_equal(EAB)",
-    "isosceles_triangle_property_angle_equal(EAB)",
-    "parallel_property_ipsilateral_internal_angle(BA,CD)",
-    "perpendicular_bisector_property_bisector(BO,CA)",
-    "angle_addition(ABE,EBF)",
-    "parallelogram_property_opposite_angle_equal(ABCD)",
-    "angle_addition(DAE,EAB)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,BCDA,O)",
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,CA)",
+    "perpendicular_bisector_property_distance_equal(1,EO,CA)",
+    "perpendicular_bisector_property_distance_equal(1,EF,BC)",
+    "isosceles_triangle_judgment_line_equal(1,EAB)",
+    "isosceles_triangle_property_angle_equal(1,EAB)",
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)",
+    "perpendicular_bisector_property_bisector(1,BO,CA)",
+    "angle_addition(1,ABE,EBF)",
+    "parallelogram_property_opposite_angle_equal(1,ABCD)",
+    "angle_addition(1,DAE,EAB)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,BCDA,O)": [
+      "perpendicular_bisector_property_bisector(1,BO,CA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,CA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,CA)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,CA)": [
+      "perpendicular_bisector_property_distance_equal(1,EO,CA)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,EO,CA)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,EF,BC)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EAB)": [
+      "isosceles_triangle_property_angle_equal(1,EAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EAB)": [],
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)": [],
+    "perpendicular_bisector_property_bisector(1,BO,CA)": [],
+    "angle_addition(1,ABE,EBF)": [],
+    "parallelogram_property_opposite_angle_equal(1,ABCD)": [],
+    "angle_addition(1,DAE,EAB)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,BCDA,O)",
+      "perpendicular_bisector_property_distance_equal(1,EF,BC)",
+      "parallel_property_ipsilateral_internal_angle(1,BA,CD)",
+      "angle_addition(1,ABE,EBF)",
+      "parallelogram_property_opposite_angle_equal(1,ABCD)",
+      "angle_addition(1,DAE,EAB)"
+    ]
+  }
 }

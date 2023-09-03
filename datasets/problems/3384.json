@@ -35,12 +35,36 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DFE))",
   "problem_answer": "13",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(CDB)",
-    "right_triangle_judgment_angle(CEB)",
-    "median_of_triangle_judgment(DF,DBC)",
-    "median_of_triangle_judgment(EF,EBC)",
-    "right_triangle_property_length_of_median(CDB,F)",
-    "right_triangle_property_length_of_median(CEB,F)",
-    "triangle_perimeter_formula(DFE)"
-  ]
+    "right_triangle_judgment_angle(1,CDB)",
+    "right_triangle_judgment_angle(1,CEB)",
+    "median_of_triangle_judgment(1,DF,DBC)",
+    "median_of_triangle_judgment(1,EF,EBC)",
+    "right_triangle_property_length_of_median(1,CDB,F)",
+    "right_triangle_property_length_of_median(1,CEB,F)",
+    "triangle_perimeter_formula(1,DFE)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,CDB)": [
+      "right_triangle_property_length_of_median(1,CDB,F)"
+    ],
+    "right_triangle_judgment_angle(1,CEB)": [
+      "right_triangle_property_length_of_median(1,CEB,F)"
+    ],
+    "median_of_triangle_judgment(1,DF,DBC)": [
+      "right_triangle_property_length_of_median(1,CDB,F)"
+    ],
+    "median_of_triangle_judgment(1,EF,EBC)": [
+      "right_triangle_property_length_of_median(1,CEB,F)"
+    ],
+    "right_triangle_property_length_of_median(1,CDB,F)": [],
+    "right_triangle_property_length_of_median(1,CEB,F)": [],
+    "triangle_perimeter_formula(1,DFE)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,CEB)",
+      "median_of_triangle_judgment(1,DF,DBC)",
+      "median_of_triangle_judgment(1,EF,EBC)",
+      "triangle_perimeter_formula(1,DFE)"
+    ]
+  }
 }

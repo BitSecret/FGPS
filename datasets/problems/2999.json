@@ -24,8 +24,18 @@
   "goal_cdl": "Value(MeasureOfAngle(ECD))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(CD,AB)",
-    "angle_addition(ECD,DCB)",
-    "adjacent_complementary_angle(ECB,BCA)"
-  ]
+    "parallel_property_alternate_interior_angle(1,CD,AB)",
+    "angle_addition(1,ECD,DCB)",
+    "adjacent_complementary_angle(1,ECB,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,CD,AB)": [],
+    "angle_addition(1,ECD,DCB)": [],
+    "adjacent_complementary_angle(1,ECB,BCA)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,CD,AB)",
+      "angle_addition(1,ECD,DCB)",
+      "adjacent_complementary_angle(1,ECB,BCA)"
+    ]
+  }
 }

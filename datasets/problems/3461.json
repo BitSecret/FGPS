@@ -23,8 +23,18 @@
   "goal_cdl": "Value(PerimeterOfTriangle(BCD))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(DE,AB)",
-    "line_addition(AD,DC)",
-    "triangle_perimeter_formula(BCD)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,DE,AB)",
+    "line_addition(1,AD,DC)",
+    "triangle_perimeter_formula(1,BCD)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,DE,AB)": [],
+    "line_addition(1,AD,DC)": [],
+    "triangle_perimeter_formula(1,BCD)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,DE,AB)",
+      "line_addition(1,AD,DC)",
+      "triangle_perimeter_formula(1,BCD)"
+    ]
+  }
 }

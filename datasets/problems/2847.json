@@ -24,8 +24,20 @@
   "goal_cdl": "Value(MeasureOfAngle(ADB))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(DCBA,P)",
-    "mirror_similar_triangle_judgment_sss(ADP,APB)",
-    "mirror_similar_triangle_property_angle_equal(DPA,BAP)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,DCBA,P)",
+    "mirror_similar_triangle_judgment_sss(1,ADP,APB)",
+    "mirror_similar_triangle_property_angle_equal(1,DPA,BAP)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,DCBA,P)": [
+      "mirror_similar_triangle_judgment_sss(1,ADP,APB)"
+    ],
+    "mirror_similar_triangle_judgment_sss(1,ADP,APB)": [
+      "mirror_similar_triangle_property_angle_equal(1,DPA,BAP)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,DPA,BAP)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,DCBA,P)"
+    ]
+  }
 }

@@ -28,17 +28,57 @@
   "goal_cdl": "Value(Tan(MeasureOfAngle(OPA)))",
   "problem_answer": "1/2",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "adjacent_complementary_angle(PDO,ODA)",
-    "mirror_congruent_triangle_judgment_hl(BDO,AOD)",
-    "mirror_congruent_triangle_property_line_equal(OBD,ODA)",
-    "line_addition(AD,DB)",
-    "line_addition(DB,BP)",
-    "right_triangle_judgment_angle(BDO)",
-    "right_triangle_judgment_angle(PDO)",
-    "right_triangle_property_pythagorean(BDO)",
-    "right_triangle_property_pythagorean(PDO)",
-    "cosine_theorem(PDO)"
-  ]
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "adjacent_complementary_angle(1,PDO,ODA)",
+    "mirror_congruent_triangle_judgment_hl(1,BDO,AOD)",
+    "mirror_congruent_triangle_property_line_equal(1,OBD,ODA)",
+    "line_addition(1,AD,DB)",
+    "line_addition(1,DB,BP)",
+    "right_triangle_judgment_angle(1,BDO)",
+    "right_triangle_judgment_angle(1,PDO)",
+    "right_triangle_property_pythagorean(1,BDO)",
+    "right_triangle_property_pythagorean(1,PDO)",
+    "cosine_theorem(1,PDO)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,BDO,AOD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,BDO,AOD)"
+    ],
+    "adjacent_complementary_angle(1,PDO,ODA)": [
+      "mirror_congruent_triangle_judgment_hl(1,BDO,AOD)",
+      "right_triangle_judgment_angle(1,BDO)",
+      "right_triangle_judgment_angle(1,PDO)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,BDO,AOD)": [
+      "mirror_congruent_triangle_property_line_equal(1,OBD,ODA)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,OBD,ODA)": [
+      "solve_eq_28)"
+    ],
+    "line_addition(1,AD,DB)": [
+      "solve_eq_28)"
+    ],
+    "line_addition(1,DB,BP)": [],
+    "right_triangle_judgment_angle(1,BDO)": [
+      "right_triangle_property_pythagorean(1,BDO)"
+    ],
+    "right_triangle_judgment_angle(1,PDO)": [
+      "right_triangle_property_pythagorean(1,PDO)"
+    ],
+    "right_triangle_property_pythagorean(1,BDO)": [],
+    "right_triangle_property_pythagorean(1,PDO)": [],
+    "cosine_theorem(1,PDO)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "adjacent_complementary_angle(1,PDO,ODA)",
+      "line_addition(1,AD,DB)",
+      "line_addition(1,DB,BP)",
+      "cosine_theorem(1,PDO)"
+    ]
+  }
 }

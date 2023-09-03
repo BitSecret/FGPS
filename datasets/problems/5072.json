@@ -21,10 +21,27 @@
   "goal_cdl": "Value(LengthOfLine(BD))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(DCA,ABC)",
-    "mirror_similar_triangle_property_line_ratio(CAD,CAB)",
-    "mirror_similar_triangle_property_line_ratio(DCA,ABC)",
-    "mirror_similar_triangle_property_line_ratio(ADC,BCA)",
-    "line_addition(BD,DC)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,DCA,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,CAD,CAB)",
+    "mirror_similar_triangle_property_line_ratio(1,DCA,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,ADC,BCA)",
+    "line_addition(1,BD,DC)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,DCA,ABC)": [
+      "mirror_similar_triangle_property_line_ratio(1,DCA,ABC)",
+      "mirror_similar_triangle_property_line_ratio(1,CAD,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,ADC,BCA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,CAD,CAB)": [
+      "solve_eq_10)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,DCA,ABC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ADC,BCA)": [],
+    "line_addition(1,BD,DC)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,DCA,ABC)",
+      "line_addition(1,BD,DC)"
+    ]
+  }
 }

@@ -22,8 +22,20 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "29",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BCA,ACD)",
-    "perpendicular_bisector_judgment_per_and_mid(AC,BD)",
-    "perpendicular_bisector_property_distance_equal(AC,BD)"
-  ]
+    "adjacent_complementary_angle(1,BCA,ACD)",
+    "perpendicular_bisector_judgment_per_and_mid(1,AC,BD)",
+    "perpendicular_bisector_property_distance_equal(1,AC,BD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BCA,ACD)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,AC,BD)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,AC,BD)": [
+      "perpendicular_bisector_property_distance_equal(1,AC,BD)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,AC,BD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BCA,ACD)"
+    ]
+  }
 }

@@ -23,9 +23,23 @@
   "goal_cdl": "Value(MeasureOfAngle(BCD))",
   "problem_answer": "115",
   "theorem_seqs": [
-    "angle_addition(GDE,EDC)",
-    "parallel_property_collinear_extend(AG,BF,D)",
-    "parallel_property_collinear_extend(FB,GD,C)",
-    "parallel_property_alternate_interior_angle(CB,GD)"
-  ]
+    "angle_addition(1,GDE,EDC)",
+    "parallel_property_collinear_extend(3,AG,BF,D)",
+    "parallel_property_collinear_extend(3,FB,GD,C)",
+    "parallel_property_alternate_interior_angle(1,CB,GD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,GDE,EDC)": [],
+    "parallel_property_collinear_extend(3,AG,BF,D)": [
+      "parallel_property_collinear_extend(3,FB,GD,C)"
+    ],
+    "parallel_property_collinear_extend(3,FB,GD,C)": [
+      "parallel_property_alternate_interior_angle(1,CB,GD)"
+    ],
+    "parallel_property_alternate_interior_angle(1,CB,GD)": [],
+    "START": [
+      "angle_addition(1,GDE,EDC)",
+      "parallel_property_collinear_extend(3,AG,BF,D)"
+    ]
+  }
 }

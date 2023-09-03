@@ -29,15 +29,49 @@
   "goal_cdl": "Value(AreaOfTriangle(DCA))",
   "problem_answer": "1",
   "theorem_seqs": [
-    "diameter_of_circle_property_right_angle(BDA,O)",
-    "flat_angle(BDC)",
-    "angle_addition(BDA,ADC)",
-    "triangle_property_angle_sum(BDA)",
-    "triangle_property_angle_sum(DCA)",
-    "isosceles_triangle_judgment_angle_equal(DAB)",
-    "isosceles_triangle_judgment_angle_equal(DCA)",
-    "right_triangle_judgment_angle(BDA)",
-    "right_triangle_property_pythagorean(BDA)",
-    "triangle_area_formula_sine(ADC)"
-  ]
+    "diameter_of_circle_property_right_angle(1,BDA,O)",
+    "flat_angle(1,BDC)",
+    "angle_addition(1,BDA,ADC)",
+    "triangle_property_angle_sum(1,BDA)",
+    "triangle_property_angle_sum(1,DCA)",
+    "isosceles_triangle_judgment_angle_equal(1,DAB)",
+    "isosceles_triangle_judgment_angle_equal(1,DCA)",
+    "right_triangle_judgment_angle(1,BDA)",
+    "right_triangle_property_pythagorean(1,BDA)",
+    "triangle_area_formula_sine(1,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_right_angle(1,BDA,O)": [
+      "right_triangle_judgment_angle(1,BDA)",
+      "isosceles_triangle_judgment_angle_equal(1,DAB)",
+      "isosceles_triangle_judgment_angle_equal(1,DCA)"
+    ],
+    "flat_angle(1,BDC)": [
+      "isosceles_triangle_judgment_angle_equal(1,DCA)"
+    ],
+    "angle_addition(1,BDA,ADC)": [
+      "isosceles_triangle_judgment_angle_equal(1,DCA)"
+    ],
+    "triangle_property_angle_sum(1,BDA)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAB)"
+    ],
+    "triangle_property_angle_sum(1,DCA)": [
+      "isosceles_triangle_judgment_angle_equal(1,DCA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,DAB)": [],
+    "isosceles_triangle_judgment_angle_equal(1,DCA)": [],
+    "right_triangle_judgment_angle(1,BDA)": [
+      "right_triangle_property_pythagorean(1,BDA)"
+    ],
+    "right_triangle_property_pythagorean(1,BDA)": [],
+    "triangle_area_formula_sine(1,ADC)": [],
+    "START": [
+      "diameter_of_circle_property_right_angle(1,BDA,O)",
+      "flat_angle(1,BDC)",
+      "angle_addition(1,BDA,ADC)",
+      "triangle_property_angle_sum(1,BDA)",
+      "triangle_property_angle_sum(1,DCA)",
+      "triangle_area_formula_sine(1,ADC)"
+    ]
+  }
 }

@@ -22,9 +22,27 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CBNE))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(CBN)",
-    "right_triangle_property_pythagorean(CBN)",
-    "parallelogram_judgment_equal_and_equal(CBNE)",
-    "parallelogram_area_formula_sine(CBNE)"
-  ]
+    "right_triangle_judgment_angle(1,CBN)",
+    "right_triangle_property_pythagorean(1,CBN)",
+    "parallelogram_judgment_equal_and_equal(1,CBNE)",
+    "parallelogram_area_formula_sine(1,CBNE)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,CBN)": [
+      "right_triangle_property_pythagorean(1,CBN)"
+    ],
+    "right_triangle_property_pythagorean(1,CBN)": [
+      "parallelogram_judgment_equal_and_equal(1,CBNE)",
+      "parallelogram_judgment_equal_and_equal(1,CBNE)",
+      "parallelogram_judgment_equal_and_equal(1,CBNE)",
+      "parallelogram_judgment_equal_and_equal(1,CBNE)"
+    ],
+    "parallelogram_judgment_equal_and_equal(1,CBNE)": [
+      "parallelogram_area_formula_sine(1,CBNE)"
+    ],
+    "parallelogram_area_formula_sine(1,CBNE)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,CBN)"
+    ]
+  }
 }

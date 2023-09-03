@@ -24,13 +24,37 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "4*sqrt(6)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BPA,APC)",
-    "right_triangle_judgment_angle(APC)",
-    "right_triangle_judgment_angle(CAB)",
-    "right_triangle_judgment_angle(BPA)",
-    "line_addition(CP,PB)",
-    "right_triangle_property_pythagorean(APC)",
-    "right_triangle_property_pythagorean(CAB)",
-    "right_triangle_property_pythagorean(BPA)"
-  ]
+    "adjacent_complementary_angle(1,BPA,APC)",
+    "right_triangle_judgment_angle(1,APC)",
+    "right_triangle_judgment_angle(1,CAB)",
+    "right_triangle_judgment_angle(1,BPA)",
+    "line_addition(1,CP,PB)",
+    "right_triangle_property_pythagorean(1,APC)",
+    "right_triangle_property_pythagorean(1,CAB)",
+    "right_triangle_property_pythagorean(1,BPA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BPA,APC)": [
+      "right_triangle_judgment_angle(1,BPA)"
+    ],
+    "right_triangle_judgment_angle(1,APC)": [
+      "right_triangle_property_pythagorean(1,APC)"
+    ],
+    "right_triangle_judgment_angle(1,CAB)": [
+      "right_triangle_property_pythagorean(1,CAB)"
+    ],
+    "right_triangle_judgment_angle(1,BPA)": [
+      "right_triangle_property_pythagorean(1,BPA)"
+    ],
+    "line_addition(1,CP,PB)": [],
+    "right_triangle_property_pythagorean(1,APC)": [],
+    "right_triangle_property_pythagorean(1,CAB)": [],
+    "right_triangle_property_pythagorean(1,BPA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BPA,APC)",
+      "right_triangle_judgment_angle(1,APC)",
+      "right_triangle_judgment_angle(1,CAB)",
+      "line_addition(1,CP,PB)"
+    ]
+  }
 }

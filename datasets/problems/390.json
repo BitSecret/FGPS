@@ -25,8 +25,20 @@
   "goal_cdl": "Value(LengthOfLine(AP))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(BADC,P)",
-    "right_triangle_judgment_angle(APB)",
-    "right_triangle_property_pythagorean(APB)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,BADC,P)",
+    "right_triangle_judgment_angle(1,APB)",
+    "right_triangle_property_pythagorean(1,APB)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,BADC,P)": [
+      "right_triangle_judgment_angle(1,APB)"
+    ],
+    "right_triangle_judgment_angle(1,APB)": [
+      "right_triangle_property_pythagorean(1,APB)"
+    ],
+    "right_triangle_property_pythagorean(1,APB)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,BADC,P)"
+    ]
+  }
 }

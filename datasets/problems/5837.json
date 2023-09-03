@@ -22,11 +22,31 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "34",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(AB,EC)",
-    "parallel_property_collinear_extend(DA,CB,E)",
-    "parallelogram_judgment_parallel_and_parallel(BAEC)",
-    "parallelogram_property_opposite_line_equal(BAEC)",
-    "parallelogram_property_opposite_line_equal(AECB)",
-    "line_addition(AE,ED)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,AB,EC)",
+    "parallel_property_collinear_extend(3,DA,CB,E)",
+    "parallelogram_judgment_parallel_and_parallel(1,BAEC)",
+    "parallelogram_property_opposite_line_equal(1,BAEC)",
+    "parallelogram_property_opposite_line_equal(1,AECB)",
+    "line_addition(1,AE,ED)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,AB,EC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BAEC)"
+    ],
+    "parallel_property_collinear_extend(3,DA,CB,E)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BAEC)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,BAEC)": [
+      "parallelogram_property_opposite_line_equal(1,BAEC)",
+      "parallelogram_property_opposite_line_equal(1,AECB)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BAEC)": [],
+    "parallelogram_property_opposite_line_equal(1,AECB)": [],
+    "line_addition(1,AE,ED)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,AB,EC)",
+      "parallel_property_collinear_extend(3,DA,CB,E)",
+      "line_addition(1,AE,ED)"
+    ]
+  }
 }

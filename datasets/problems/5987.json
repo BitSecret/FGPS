@@ -26,12 +26,34 @@
   "goal_cdl": "Value(MeasureOfAngle(COD))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "arc_property_center_angle(OBC,O)",
-    "arc_property_circumference_angle_external(OBC,A)",
-    "mirror_congruent_triangle_judgment_sss(OBD,ODC)",
-    "mirror_congruent_triangle_property_angle_equal(OBD,ODC)",
-    "angle_addition(COD,DOB)"
-  ]
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "arc_property_center_angle(1,OBC,O)",
+    "arc_property_circumference_angle_external(1,OBC,A)",
+    "mirror_congruent_triangle_judgment_sss(1,OBD,ODC)",
+    "mirror_congruent_triangle_property_angle_equal(1,OBD,ODC)",
+    "angle_addition(1,COD,DOB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "mirror_congruent_triangle_judgment_sss(1,OBD,ODC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "mirror_congruent_triangle_judgment_sss(1,OBD,ODC)"
+    ],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "mirror_congruent_triangle_judgment_sss(1,OBD,ODC)": [
+      "mirror_congruent_triangle_property_angle_equal(1,OBD,ODC)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,OBD,ODC)": [],
+    "angle_addition(1,COD,DOB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "angle_addition(1,COD,DOB)"
+    ]
+  }
 }

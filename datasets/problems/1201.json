@@ -23,13 +23,43 @@
   "goal_cdl": "Value(MeasureOfAngle(EBD))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "rectangle_property_diagonal_equal(ABDC)",
-    "parallelogram_property_diagonal_bisection(ABDC,E)",
-    "parallelogram_property_diagonal_bisection(BDCA,E)",
-    "line_addition(BE,EC)",
-    "line_addition(AE,ED)",
-    "isosceles_triangle_judgment_line_equal(EAB)",
-    "isosceles_triangle_property_angle_equal(EAB)",
-    "angle_addition(ABE,EBD)"
-  ]
+    "rectangle_property_diagonal_equal(1,ABDC)",
+    "parallelogram_property_diagonal_bisection(1,ABDC,E)",
+    "parallelogram_property_diagonal_bisection(1,BDCA,E)",
+    "line_addition(1,BE,EC)",
+    "line_addition(1,AE,ED)",
+    "isosceles_triangle_judgment_line_equal(1,EAB)",
+    "isosceles_triangle_property_angle_equal(1,EAB)",
+    "angle_addition(1,ABE,EBD)"
+  ],
+  "theorem_seq_dag": {
+    "rectangle_property_diagonal_equal(1,ABDC)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABDC,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BDCA,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "line_addition(1,BE,EC)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "line_addition(1,AE,ED)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EAB)": [
+      "isosceles_triangle_property_angle_equal(1,EAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EAB)": [],
+    "angle_addition(1,ABE,EBD)": [],
+    "START": [
+      "rectangle_property_diagonal_equal(1,ABDC)",
+      "parallelogram_property_diagonal_bisection(1,ABDC,E)",
+      "parallelogram_property_diagonal_bisection(1,BDCA,E)",
+      "line_addition(1,BE,EC)",
+      "line_addition(1,AE,ED)",
+      "angle_addition(1,ABE,EBD)"
+    ]
+  }
 }

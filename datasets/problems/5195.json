@@ -31,17 +31,51 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "7",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CMN,NMA)",
-    "adjacent_complementary_angle(FNO,OND)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OM,CB)",
-    "circle_property_chord_perpendicular_bisect_chord(O,ON,FE)",
-    "line_addition(BM,MC)",
-    "parallel_judgment_ipsilateral_internal_angle(AM,DN)",
-    "parallel_judgment_ipsilateral_internal_angle(MN,AD)",
-    "parallelogram_judgment_parallel_and_parallel(NMAD)",
-    "parallelogram_property_opposite_line_equal(MADN)",
-    "line_addition(AB,BM)",
-    "line_addition(DE,EN)",
-    "line_addition(EN,NF)"
-  ]
+    "adjacent_complementary_angle(1,CMN,NMA)",
+    "adjacent_complementary_angle(1,FNO,OND)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OM,CB)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,ON,FE)",
+    "line_addition(1,BM,MC)",
+    "parallel_judgment_ipsilateral_internal_angle(1,AM,DN)",
+    "parallel_judgment_ipsilateral_internal_angle(1,MN,AD)",
+    "parallelogram_judgment_parallel_and_parallel(1,NMAD)",
+    "parallelogram_property_opposite_line_equal(1,MADN)",
+    "line_addition(1,AB,BM)",
+    "line_addition(1,DE,EN)",
+    "line_addition(1,EN,NF)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CMN,NMA)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OM,CB)"
+    ],
+    "adjacent_complementary_angle(1,FNO,OND)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,ON,FE)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OM,CB)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,ON,FE)": [],
+    "line_addition(1,BM,MC)": [],
+    "parallel_judgment_ipsilateral_internal_angle(1,AM,DN)": [
+      "parallelogram_judgment_parallel_and_parallel(1,NMAD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,MN,AD)": [
+      "parallelogram_judgment_parallel_and_parallel(1,NMAD)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,NMAD)": [
+      "parallelogram_property_opposite_line_equal(1,MADN)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,MADN)": [],
+    "line_addition(1,AB,BM)": [],
+    "line_addition(1,DE,EN)": [],
+    "line_addition(1,EN,NF)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CMN,NMA)",
+      "adjacent_complementary_angle(1,FNO,OND)",
+      "line_addition(1,BM,MC)",
+      "parallel_judgment_ipsilateral_internal_angle(1,AM,DN)",
+      "parallel_judgment_ipsilateral_internal_angle(1,MN,AD)",
+      "line_addition(1,AB,BM)",
+      "line_addition(1,DE,EN)",
+      "line_addition(1,EN,NF)"
+    ]
+  }
 }

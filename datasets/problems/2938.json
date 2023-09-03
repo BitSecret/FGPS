@@ -24,12 +24,32 @@
   "goal_cdl": "Value(PerimeterOfTriangle(EBD))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AED,DEB)",
-    "mirror_congruent_triangle_judgment_aas(DCA,DAE)",
-    "mirror_congruent_triangle_property_line_equal(ADC,AED)",
-    "mirror_congruent_triangle_property_line_equal(DCA,DAE)",
-    "line_addition(CD,DB)",
-    "line_addition(AE,EB)",
-    "triangle_perimeter_formula(DEB)"
-  ]
+    "adjacent_complementary_angle(1,AED,DEB)",
+    "mirror_congruent_triangle_judgment_aas(3,DCA,DAE)",
+    "mirror_congruent_triangle_property_line_equal(1,ADC,AED)",
+    "mirror_congruent_triangle_property_line_equal(1,DCA,DAE)",
+    "line_addition(1,CD,DB)",
+    "line_addition(1,AE,EB)",
+    "triangle_perimeter_formula(1,DEB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AED,DEB)": [
+      "mirror_congruent_triangle_judgment_aas(3,DCA,DAE)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(3,DCA,DAE)": [
+      "mirror_congruent_triangle_property_line_equal(1,DCA,DAE)",
+      "mirror_congruent_triangle_property_line_equal(1,ADC,AED)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,ADC,AED)": [],
+    "mirror_congruent_triangle_property_line_equal(1,DCA,DAE)": [],
+    "line_addition(1,CD,DB)": [],
+    "line_addition(1,AE,EB)": [],
+    "triangle_perimeter_formula(1,DEB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AED,DEB)",
+      "line_addition(1,CD,DB)",
+      "line_addition(1,AE,EB)",
+      "triangle_perimeter_formula(1,DEB)"
+    ]
+  }
 }

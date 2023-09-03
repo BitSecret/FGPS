@@ -24,8 +24,20 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "10*sqrt(5)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CAB,BAD)",
-    "right_triangle_judgment_angle(BAD)",
-    "right_triangle_property_pythagorean(BAD)"
-  ]
+    "adjacent_complementary_angle(1,CAB,BAD)",
+    "right_triangle_judgment_angle(1,BAD)",
+    "right_triangle_property_pythagorean(1,BAD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CAB,BAD)": [
+      "right_triangle_judgment_angle(1,BAD)"
+    ],
+    "right_triangle_judgment_angle(1,BAD)": [
+      "right_triangle_property_pythagorean(1,BAD)"
+    ],
+    "right_triangle_property_pythagorean(1,BAD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CAB,BAD)"
+    ]
+  }
 }

@@ -24,8 +24,20 @@
   "goal_cdl": "Value(LengthOfLine(ED))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "diameter_of_circle_property_right_angle(FED,A)",
-    "right_triangle_judgment_angle(FED)",
-    "right_triangle_property_pythagorean(FED)"
-  ]
+    "diameter_of_circle_property_right_angle(1,FED,A)",
+    "right_triangle_judgment_angle(1,FED)",
+    "right_triangle_property_pythagorean(1,FED)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_right_angle(1,FED,A)": [
+      "right_triangle_judgment_angle(1,FED)"
+    ],
+    "right_triangle_judgment_angle(1,FED)": [
+      "right_triangle_property_pythagorean(1,FED)"
+    ],
+    "right_triangle_property_pythagorean(1,FED)": [],
+    "START": [
+      "diameter_of_circle_property_right_angle(1,FED,A)"
+    ]
+  }
 }

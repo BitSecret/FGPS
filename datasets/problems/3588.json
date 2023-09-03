@@ -27,12 +27,37 @@
   "goal_cdl": "Value(Sub(Add(PerimeterOfTriangle(ABC),PerimeterOfTriangle(DFE)),LengthOfLine(FC)))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "line_addition(FC,CE)",
-    "line_addition(BC,CE)",
-    "line_addition(BF,FE)",
-    "mirror_congruent_triangle_judgment_sas(BCA,EDF)",
-    "mirror_congruent_triangle_property_line_equal(BCA,EDF)",
-    "triangle_perimeter_formula(ABC)",
-    "triangle_perimeter_formula(DFE)"
-  ]
+    "line_addition(1,FC,CE)",
+    "line_addition(1,BC,CE)",
+    "line_addition(1,BF,FE)",
+    "mirror_congruent_triangle_judgment_sas(1,BCA,EDF)",
+    "mirror_congruent_triangle_property_line_equal(1,BCA,EDF)",
+    "triangle_perimeter_formula(1,ABC)",
+    "triangle_perimeter_formula(1,DFE)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,FC,CE)": [
+      "mirror_congruent_triangle_judgment_sas(1,BCA,EDF)",
+      "mirror_congruent_triangle_judgment_sas(1,BCA,EDF)"
+    ],
+    "line_addition(1,BC,CE)": [
+      "mirror_congruent_triangle_judgment_sas(1,BCA,EDF)"
+    ],
+    "line_addition(1,BF,FE)": [
+      "mirror_congruent_triangle_judgment_sas(1,BCA,EDF)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,BCA,EDF)": [
+      "mirror_congruent_triangle_property_line_equal(1,BCA,EDF)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,BCA,EDF)": [],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "triangle_perimeter_formula(1,DFE)": [],
+    "START": [
+      "line_addition(1,FC,CE)",
+      "line_addition(1,BC,CE)",
+      "line_addition(1,BF,FE)",
+      "triangle_perimeter_formula(1,ABC)",
+      "triangle_perimeter_formula(1,DFE)"
+    ]
+  }
 }

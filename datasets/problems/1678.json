@@ -26,12 +26,30 @@
   "goal_cdl": "Value(MeasureOfArc(PBX))",
   "problem_answer": "117",
   "theorem_seqs": [
-    "vertical_angle(APX,BPY)",
-    "angle_addition(BPY,YPC)",
-    "angle_addition(BPC,CPA)",
-    "flat_angle(BPA)",
-    "angle_addition(BPA,APX)",
-    "round_angle(XPB,BPX)",
-    "arc_property_center_angle(PBX,P)"
-  ]
+    "vertical_angle(1,APX,BPY)",
+    "angle_addition(1,BPY,YPC)",
+    "angle_addition(1,BPC,CPA)",
+    "flat_angle(1,BPA)",
+    "angle_addition(1,BPA,APX)",
+    "round_angle(1,XPB,BPX)",
+    "arc_property_center_angle(1,PBX,P)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,APX,BPY)": [],
+    "angle_addition(1,BPY,YPC)": [],
+    "angle_addition(1,BPC,CPA)": [],
+    "flat_angle(1,BPA)": [],
+    "angle_addition(1,BPA,APX)": [],
+    "round_angle(1,XPB,BPX)": [],
+    "arc_property_center_angle(1,PBX,P)": [],
+    "START": [
+      "vertical_angle(1,APX,BPY)",
+      "angle_addition(1,BPY,YPC)",
+      "angle_addition(1,BPC,CPA)",
+      "flat_angle(1,BPA)",
+      "angle_addition(1,BPA,APX)",
+      "round_angle(1,XPB,BPX)",
+      "arc_property_center_angle(1,PBX,P)"
+    ]
+  }
 }

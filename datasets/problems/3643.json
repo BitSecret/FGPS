@@ -26,9 +26,22 @@
   "goal_cdl": "Value(MeasureOfAngle(GDF))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "angle_addition(ABC,CBD)",
-    "adjacent_complementary_angle(ABD,DBE)",
-    "parallel_property_collinear_extend(EA,FD,B)",
-    "parallel_property_corresponding_angle(DF,BE,G)"
-  ]
+    "angle_addition(1,ABC,CBD)",
+    "adjacent_complementary_angle(1,ABD,DBE)",
+    "parallel_property_collinear_extend(3,EA,FD,B)",
+    "parallel_property_corresponding_angle(1,DF,BE,G)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ABC,CBD)": [],
+    "adjacent_complementary_angle(1,ABD,DBE)": [],
+    "parallel_property_collinear_extend(3,EA,FD,B)": [
+      "parallel_property_corresponding_angle(1,DF,BE,G)"
+    ],
+    "parallel_property_corresponding_angle(1,DF,BE,G)": [],
+    "START": [
+      "angle_addition(1,ABC,CBD)",
+      "adjacent_complementary_angle(1,ABD,DBE)",
+      "parallel_property_collinear_extend(3,EA,FD,B)"
+    ]
+  }
 }

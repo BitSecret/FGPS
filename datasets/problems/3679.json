@@ -24,11 +24,29 @@
   "goal_cdl": "Value(MeasureOfAngle(BMA))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "angle_addition(MAB,BAC)",
-    "tangent_of_circle_property_perpendicular(MA,O,O)",
-    "tangent_of_circle_property_length_equal(MB,MA,O)",
-    "isosceles_triangle_judgment_line_equal(MAB)",
-    "isosceles_triangle_property_angle_equal(MAB)",
-    "triangle_property_angle_sum(BMA)"
-  ]
+    "angle_addition(1,MAB,BAC)",
+    "tangent_of_circle_property_perpendicular(2,MA,O,O)",
+    "tangent_of_circle_property_length_equal(1,MB,MA,O)",
+    "isosceles_triangle_judgment_line_equal(1,MAB)",
+    "isosceles_triangle_property_angle_equal(1,MAB)",
+    "triangle_property_angle_sum(1,BMA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,MAB,BAC)": [],
+    "tangent_of_circle_property_perpendicular(2,MA,O,O)": [],
+    "tangent_of_circle_property_length_equal(1,MB,MA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,MAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,MAB)": [
+      "isosceles_triangle_property_angle_equal(1,MAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,MAB)": [],
+    "triangle_property_angle_sum(1,BMA)": [],
+    "START": [
+      "angle_addition(1,MAB,BAC)",
+      "tangent_of_circle_property_perpendicular(2,MA,O,O)",
+      "tangent_of_circle_property_length_equal(1,MB,MA,O)",
+      "triangle_property_angle_sum(1,BMA)"
+    ]
+  }
 }

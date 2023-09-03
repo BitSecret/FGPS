@@ -24,7 +24,16 @@
   "goal_cdl": "Value(LengthOfLine(QM))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(QNP,QMN)",
-    "mirror_congruent_triangle_property_line_equal(NPQ,NQM)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(1,QNP,QMN)",
+    "mirror_congruent_triangle_property_line_equal(1,NPQ,NQM)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(1,QNP,QMN)": [
+      "mirror_congruent_triangle_property_line_equal(1,NPQ,NQM)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,NPQ,NQM)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(1,QNP,QMN)"
+    ]
+  }
 }

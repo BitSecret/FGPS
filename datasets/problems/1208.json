@@ -20,8 +20,19 @@
   "goal_cdl": "Value(LengthOfLine(WY))",
   "problem_answer": "31",
   "theorem_seqs": [
-    "adjacent_complementary_angle(WAX,XAY)",
-    "altitude_of_triangle_judgment(XA,XWY)",
-    "triangle_area_formula_common(XWY)"
-  ]
+    "adjacent_complementary_angle(1,WAX,XAY)",
+    "altitude_of_triangle_judgment(1,XA,XWY)",
+    "triangle_area_formula_common(1,XWY)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,WAX,XAY)": [
+      "altitude_of_triangle_judgment(1,XA,XWY)"
+    ],
+    "altitude_of_triangle_judgment(1,XA,XWY)": [],
+    "triangle_area_formula_common(1,XWY)": [],
+    "START": [
+      "adjacent_complementary_angle(1,WAX,XAY)",
+      "triangle_area_formula_common(1,XWY)"
+    ]
+  }
 }

@@ -25,13 +25,35 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(OBD),MeasureOfAngle(OEB)))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "congruent_triangle_property_line_equal(ABC,EDC)",
-    "isosceles_triangle_judgment_line_equal(CBD)",
-    "isosceles_triangle_property_angle_equal(CBD)",
-    "triangle_property_angle_sum(CBD)",
-    "congruent_triangle_property_angle_equal(ABC,EDC)",
-    "triangle_property_angle_sum(CAE)",
-    "angle_addition(AEC,CEO)",
-    "adjacent_complementary_angle(AEO,OEB)"
-  ]
+    "congruent_triangle_property_line_equal(1,ABC,EDC)",
+    "isosceles_triangle_judgment_line_equal(1,CBD)",
+    "isosceles_triangle_property_angle_equal(1,CBD)",
+    "triangle_property_angle_sum(1,CBD)",
+    "congruent_triangle_property_angle_equal(1,ABC,EDC)",
+    "triangle_property_angle_sum(1,CAE)",
+    "angle_addition(1,AEC,CEO)",
+    "adjacent_complementary_angle(1,AEO,OEB)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_triangle_property_line_equal(1,ABC,EDC)": [
+      "isosceles_triangle_judgment_line_equal(1,CBD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,CBD)": [
+      "isosceles_triangle_property_angle_equal(1,CBD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CBD)": [],
+    "triangle_property_angle_sum(1,CBD)": [],
+    "congruent_triangle_property_angle_equal(1,ABC,EDC)": [],
+    "triangle_property_angle_sum(1,CAE)": [],
+    "angle_addition(1,AEC,CEO)": [],
+    "adjacent_complementary_angle(1,AEO,OEB)": [],
+    "START": [
+      "congruent_triangle_property_line_equal(1,ABC,EDC)",
+      "triangle_property_angle_sum(1,CBD)",
+      "congruent_triangle_property_angle_equal(1,ABC,EDC)",
+      "triangle_property_angle_sum(1,CAE)",
+      "angle_addition(1,AEC,CEO)",
+      "adjacent_complementary_angle(1,AEO,OEB)"
+    ]
+  }
 }

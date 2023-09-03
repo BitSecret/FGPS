@@ -29,19 +29,57 @@
   "goal_cdl": "Value(Add(x,AreaOfSector(EBI)))",
   "problem_answer": "112.548",
   "theorem_seqs": [
-    "parallel_judgment_per_per(CI,NB)",
-    "parallelogram_judgment_parallel_and_equal(ICNB)",
-    "parallelogram_property_opposite_line_equal(CNBI)",
-    "parallelogram_area_formula_sine(CNBI)",
-    "isosceles_triangle_judgment_line_equal(CND)",
-    "isosceles_triangle_judgment_line_equal(NDC)",
-    "equilateral_triangle_judgment_isosceles_and_isosceles(CND)",
-    "triangle_area_formula_sine(DCN)",
-    "diameter_of_circle_property_length_equal(IB,E)",
-    "circle_property_length_of_radius_and_diameter(E)",
-    "sector_area_formula(EBI)",
-    "flat_angle(IEB)",
-    "arc_property_center_angle(EBI,E)",
-    "equilateral_triangle_property_angle(DCN)"
-  ]
+    "parallel_judgment_per_per(1,CI,NB)",
+    "parallelogram_judgment_parallel_and_equal(1,ICNB)",
+    "parallelogram_property_opposite_line_equal(1,CNBI)",
+    "parallelogram_area_formula_sine(1,CNBI)",
+    "isosceles_triangle_judgment_line_equal(1,CND)",
+    "isosceles_triangle_judgment_line_equal(1,NDC)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,CND)",
+    "triangle_area_formula_sine(1,DCN)",
+    "diameter_of_circle_property_length_equal(1,IB,E)",
+    "circle_property_length_of_radius_and_diameter(1,E)",
+    "sector_area_formula(1,EBI)",
+    "flat_angle(1,IEB)",
+    "arc_property_center_angle(1,EBI,E)",
+    "equilateral_triangle_property_angle(1,DCN)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_per_per(1,CI,NB)": [
+      "parallelogram_judgment_parallel_and_equal(1,ICNB)"
+    ],
+    "parallelogram_judgment_parallel_and_equal(1,ICNB)": [
+      "parallelogram_property_opposite_line_equal(1,CNBI)",
+      "parallelogram_area_formula_sine(1,CNBI)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,CNBI)": [],
+    "parallelogram_area_formula_sine(1,CNBI)": [],
+    "isosceles_triangle_judgment_line_equal(1,CND)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,CND)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,NDC)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,CND)"
+    ],
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,CND)": [
+      "equilateral_triangle_property_angle(1,DCN)"
+    ],
+    "triangle_area_formula_sine(1,DCN)": [],
+    "diameter_of_circle_property_length_equal(1,IB,E)": [],
+    "circle_property_length_of_radius_and_diameter(1,E)": [],
+    "sector_area_formula(1,EBI)": [],
+    "flat_angle(1,IEB)": [],
+    "arc_property_center_angle(1,EBI,E)": [],
+    "equilateral_triangle_property_angle(1,DCN)": [],
+    "START": [
+      "parallel_judgment_per_per(1,CI,NB)",
+      "isosceles_triangle_judgment_line_equal(1,CND)",
+      "isosceles_triangle_judgment_line_equal(1,NDC)",
+      "triangle_area_formula_sine(1,DCN)",
+      "diameter_of_circle_property_length_equal(1,IB,E)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "sector_area_formula(1,EBI)",
+      "flat_angle(1,IEB)",
+      "arc_property_center_angle(1,EBI,E)"
+    ]
+  }
 }

@@ -22,8 +22,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "56/5",
   "theorem_seqs": [
-    "bisector_of_angle_judgment_angle_equal(BD,ABC)",
-    "bisector_of_angle_property_line_ratio(BD,ABC)",
-    "line_addition(CD,DA)"
-  ]
+    "bisector_of_angle_judgment_angle_equal(1,BD,ABC)",
+    "bisector_of_angle_property_line_ratio(1,BD,ABC)",
+    "line_addition(1,CD,DA)"
+  ],
+  "theorem_seq_dag": {
+    "bisector_of_angle_judgment_angle_equal(1,BD,ABC)": [
+      "bisector_of_angle_property_line_ratio(1,BD,ABC)"
+    ],
+    "bisector_of_angle_property_line_ratio(1,BD,ABC)": [],
+    "line_addition(1,CD,DA)": [],
+    "START": [
+      "bisector_of_angle_judgment_angle_equal(1,BD,ABC)",
+      "line_addition(1,CD,DA)"
+    ]
+  }
 }

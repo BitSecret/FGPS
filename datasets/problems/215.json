@@ -25,8 +25,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallel_judgment_par_par(IF,PN,DA)",
-    "trapezoid_judgment_parallel(IDAF)",
-    "midsegment_of_quadrilateral_judgment_parallel(PN,IDAF)"
-  ]
+    "parallel_judgment_par_par(1,IF,PN,DA)",
+    "trapezoid_judgment_parallel(1,IDAF)",
+    "midsegment_of_quadrilateral_judgment_parallel(1,PN,IDAF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_par_par(1,IF,PN,DA)": [
+      "trapezoid_judgment_parallel(1,IDAF)"
+    ],
+    "trapezoid_judgment_parallel(1,IDAF)": [
+      "midsegment_of_quadrilateral_judgment_parallel(1,PN,IDAF)"
+    ],
+    "midsegment_of_quadrilateral_judgment_parallel(1,PN,IDAF)": [],
+    "START": [
+      "parallel_judgment_par_par(1,IF,PN,DA)"
+    ]
+  }
 }

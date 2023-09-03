@@ -23,8 +23,19 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "quadrilateral_perimeter_formula(ABCD)",
-    "midsegment_of_triangle_judgment_midpoint(EF,ABC)",
-    "midsegment_of_triangle_property_length(EF,ABC)"
-  ]
+    "quadrilateral_perimeter_formula(1,ABCD)",
+    "midsegment_of_triangle_judgment_midpoint(1,EF,ABC)",
+    "midsegment_of_triangle_property_length(1,EF,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,EF,ABC)": [
+      "midsegment_of_triangle_property_length(1,EF,ABC)"
+    ],
+    "midsegment_of_triangle_property_length(1,EF,ABC)": [],
+    "START": [
+      "quadrilateral_perimeter_formula(1,ABCD)",
+      "midsegment_of_triangle_judgment_midpoint(1,EF,ABC)"
+    ]
+  }
 }

@@ -25,10 +25,26 @@
   "goal_cdl": "Value(MeasureOfAngle(IFJ))",
   "problem_answer": "62",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(OD,FI,E)",
-    "parallel_property_collinear_extend(IF,OE,K)",
-    "parallel_property_corresponding_angle(FK,OE,J)",
-    "flat_angle(IFK)",
-    "angle_addition(IFJ,JFK)"
-  ]
+    "parallel_property_collinear_extend(1,OD,FI,E)",
+    "parallel_property_collinear_extend(2,IF,OE,K)",
+    "parallel_property_corresponding_angle(1,FK,OE,J)",
+    "flat_angle(1,IFK)",
+    "angle_addition(1,IFJ,JFK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,OD,FI,E)": [
+      "parallel_property_collinear_extend(2,IF,OE,K)"
+    ],
+    "parallel_property_collinear_extend(2,IF,OE,K)": [
+      "parallel_property_corresponding_angle(1,FK,OE,J)"
+    ],
+    "parallel_property_corresponding_angle(1,FK,OE,J)": [],
+    "flat_angle(1,IFK)": [],
+    "angle_addition(1,IFJ,JFK)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,OD,FI,E)",
+      "flat_angle(1,IFK)",
+      "angle_addition(1,IFJ,JFK)"
+    ]
+  }
 }

@@ -28,13 +28,34 @@
   "goal_cdl": "Value(MeasureOfAngle(FED))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "congruent_arc_judgment_length_equal(OBC,OFD)",
-    "congruent_arc_property_measure_equal(OBC,OFD)",
-    "arc_property_circumference_angle_external(OBC,A)",
-    "arc_property_circumference_angle_external(OCA,B)",
-    "arc_property_circumference_angle_external(OFD,C)",
-    "arc_property_circumference_angle_internal(OCA,D)",
-    "adjacent_complementary_angle(EDC,CDA)",
-    "triangle_property_angle_sum(DCE)"
-  ]
+    "congruent_arc_judgment_length_equal(1,OBC,OFD)",
+    "congruent_arc_property_measure_equal(1,OBC,OFD)",
+    "arc_property_circumference_angle_external(1,OBC,A)",
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "arc_property_circumference_angle_external(1,OFD,C)",
+    "arc_property_circumference_angle_internal(1,OCA,D)",
+    "adjacent_complementary_angle(1,EDC,CDA)",
+    "triangle_property_angle_sum(1,DCE)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_length_equal(1,OBC,OFD)": [
+      "congruent_arc_property_measure_equal(1,OBC,OFD)"
+    ],
+    "congruent_arc_property_measure_equal(1,OBC,OFD)": [],
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "arc_property_circumference_angle_external(1,OCA,B)": [],
+    "arc_property_circumference_angle_external(1,OFD,C)": [],
+    "arc_property_circumference_angle_internal(1,OCA,D)": [],
+    "adjacent_complementary_angle(1,EDC,CDA)": [],
+    "triangle_property_angle_sum(1,DCE)": [],
+    "START": [
+      "congruent_arc_judgment_length_equal(1,OBC,OFD)",
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "arc_property_circumference_angle_external(1,OFD,C)",
+      "arc_property_circumference_angle_internal(1,OCA,D)",
+      "adjacent_complementary_angle(1,EDC,CDA)",
+      "triangle_property_angle_sum(1,DCE)"
+    ]
+  }
 }

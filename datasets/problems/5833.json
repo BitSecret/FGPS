@@ -24,13 +24,41 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "vertical_angle(DPC,BPA)",
-    "vertical_angle(APD,CPB)",
-    "mirror_similar_triangle_judgment_aa(BCP,APD)",
-    "mirror_similar_triangle_property_line_ratio(BCP,APD)",
-    "mirror_similar_triangle_property_line_ratio(CPB,DAP)",
-    "mirror_similar_triangle_judgment_sas(PCD,PAB)",
-    "mirror_similar_triangle_property_line_ratio(PCD,PAB)",
-    "mirror_similar_triangle_property_line_ratio(CDP,BPA)"
-  ]
+    "vertical_angle(1,DPC,BPA)",
+    "vertical_angle(1,APD,CPB)",
+    "mirror_similar_triangle_judgment_aa(1,BCP,APD)",
+    "mirror_similar_triangle_property_line_ratio(1,BCP,APD)",
+    "mirror_similar_triangle_property_line_ratio(1,CPB,DAP)",
+    "mirror_similar_triangle_judgment_sas(1,PCD,PAB)",
+    "mirror_similar_triangle_property_line_ratio(1,PCD,PAB)",
+    "mirror_similar_triangle_property_line_ratio(1,CDP,BPA)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,DPC,BPA)": [
+      "mirror_similar_triangle_judgment_sas(1,PCD,PAB)"
+    ],
+    "vertical_angle(1,APD,CPB)": [
+      "mirror_similar_triangle_judgment_aa(1,BCP,APD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,BCP,APD)": [
+      "mirror_similar_triangle_property_line_ratio(1,BCP,APD)",
+      "mirror_similar_triangle_property_line_ratio(1,CPB,DAP)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,BCP,APD)": [
+      "mirror_similar_triangle_judgment_sas(1,PCD,PAB)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,CPB,DAP)": [
+      "mirror_similar_triangle_judgment_sas(1,PCD,PAB)"
+    ],
+    "mirror_similar_triangle_judgment_sas(1,PCD,PAB)": [
+      "mirror_similar_triangle_property_line_ratio(1,PCD,PAB)",
+      "mirror_similar_triangle_property_line_ratio(1,CDP,BPA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,PCD,PAB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CDP,BPA)": [],
+    "START": [
+      "vertical_angle(1,DPC,BPA)",
+      "vertical_angle(1,APD,CPB)"
+    ]
+  }
 }

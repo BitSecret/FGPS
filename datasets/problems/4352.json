@@ -28,21 +28,87 @@
   "goal_cdl": "Value(PerimeterOfCircle(O))",
   "problem_answer": "8*pi",
   "theorem_seqs": [
-    "congruent_arc_judgment_chord_equal(OCD,OBC)",
-    "congruent_arc_judgment_chord_equal(ODA,OBC)",
-    "congruent_arc_property_measure_equal(OCD,OBC)",
-    "congruent_arc_property_measure_equal(ODA,OBC)",
-    "arc_property_center_angle(ODA,O)",
-    "arc_property_center_angle(OCD,O)",
-    "arc_property_center_angle(OBC,O)",
-    "angle_addition(AOD,DOC)",
-    "adjacent_complementary_angle(AOC,COB)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(ODA)",
-    "isosceles_triangle_judgment_angle_equal(AOD)",
-    "circle_perimeter_formula(O)"
-  ]
+    "congruent_arc_judgment_chord_equal(1,OCD,OBC)",
+    "congruent_arc_judgment_chord_equal(1,ODA,OBC)",
+    "congruent_arc_property_measure_equal(1,OCD,OBC)",
+    "congruent_arc_property_measure_equal(1,ODA,OBC)",
+    "arc_property_center_angle(1,ODA,O)",
+    "arc_property_center_angle(1,OCD,O)",
+    "arc_property_center_angle(1,OBC,O)",
+    "angle_addition(1,AOD,DOC)",
+    "adjacent_complementary_angle(1,AOC,COB)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,ODA)",
+    "isosceles_triangle_judgment_angle_equal(1,AOD)",
+    "circle_perimeter_formula(1,O)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_chord_equal(1,OCD,OBC)": [
+      "congruent_arc_property_measure_equal(1,OCD,OBC)"
+    ],
+    "congruent_arc_judgment_chord_equal(1,ODA,OBC)": [
+      "congruent_arc_property_measure_equal(1,ODA,OBC)"
+    ],
+    "congruent_arc_property_measure_equal(1,OCD,OBC)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)",
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "congruent_arc_property_measure_equal(1,ODA,OBC)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)",
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "arc_property_center_angle(1,ODA,O)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)",
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "arc_property_center_angle(1,OCD,O)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)",
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "arc_property_center_angle(1,OBC,O)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)",
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "angle_addition(1,AOD,DOC)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)",
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "adjacent_complementary_angle(1,AOC,COB)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)",
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "triangle_property_angle_sum(1,ODA)": [
+      "isosceles_triangle_judgment_angle_equal(1,AOD)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,AOD)": [],
+    "circle_perimeter_formula(1,O)": [],
+    "START": [
+      "congruent_arc_judgment_chord_equal(1,OCD,OBC)",
+      "congruent_arc_judgment_chord_equal(1,ODA,OBC)",
+      "arc_property_center_angle(1,ODA,O)",
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "angle_addition(1,AOD,DOC)",
+      "adjacent_complementary_angle(1,AOC,COB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "triangle_property_angle_sum(1,ODA)",
+      "circle_perimeter_formula(1,O)"
+    ]
+  }
 }

@@ -21,9 +21,23 @@
   "goal_cdl": "Value(PerimeterOfTriangle(LMN))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "similar_triangle_property_line_ratio(LMN,QRS)",
-    "similar_triangle_property_line_ratio(MNL,RSQ)",
-    "similar_triangle_property_line_ratio(NLM,SQR)",
-    "triangle_perimeter_formula(LMN)"
-  ]
+    "similar_triangle_property_line_ratio(1,LMN,QRS)",
+    "similar_triangle_property_line_ratio(1,MNL,RSQ)",
+    "similar_triangle_property_line_ratio(1,NLM,SQR)",
+    "triangle_perimeter_formula(1,LMN)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_line_ratio(1,LMN,QRS)": [],
+    "similar_triangle_property_line_ratio(1,MNL,RSQ)": [
+      "solve_eq_9)"
+    ],
+    "similar_triangle_property_line_ratio(1,NLM,SQR)": [],
+    "triangle_perimeter_formula(1,LMN)": [],
+    "START": [
+      "similar_triangle_property_line_ratio(1,LMN,QRS)",
+      "similar_triangle_property_line_ratio(1,MNL,RSQ)",
+      "similar_triangle_property_line_ratio(1,NLM,SQR)",
+      "triangle_perimeter_formula(1,LMN)"
+    ]
+  }
 }

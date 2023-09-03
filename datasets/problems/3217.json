@@ -37,16 +37,48 @@
   "goal_cdl": "Value(MeasureOfAngle(NFD))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,GH,E)",
-    "parallel_property_collinear_extend(GH,PQ,M)",
-    "parallel_property_collinear_extend(PQ,CD,N)",
-    "parallel_property_collinear_extend(HG,EA,M)",
-    "parallel_property_collinear_extend(QP,HM,N)",
-    "parallel_property_collinear_extend(DC,NP,F)",
-    "parallel_property_alternate_interior_angle(NP,HM)",
-    "parallel_property_alternate_interior_angle(HM,EA)",
-    "parallel_property_alternate_interior_angle(DF,NP)",
-    "angle_addition(EMH,HMN)",
-    "angle_addition(FNP,PNM)"
-  ]
+    "parallel_property_collinear_extend(3,AB,GH,E)",
+    "parallel_property_collinear_extend(3,GH,PQ,M)",
+    "parallel_property_collinear_extend(3,PQ,CD,N)",
+    "parallel_property_collinear_extend(3,HG,EA,M)",
+    "parallel_property_collinear_extend(3,QP,HM,N)",
+    "parallel_property_collinear_extend(3,DC,NP,F)",
+    "parallel_property_alternate_interior_angle(1,NP,HM)",
+    "parallel_property_alternate_interior_angle(2,HM,EA)",
+    "parallel_property_alternate_interior_angle(2,DF,NP)",
+    "angle_addition(1,EMH,HMN)",
+    "angle_addition(1,FNP,PNM)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,GH,E)": [
+      "parallel_property_collinear_extend(3,HG,EA,M)"
+    ],
+    "parallel_property_collinear_extend(3,GH,PQ,M)": [
+      "parallel_property_collinear_extend(3,QP,HM,N)"
+    ],
+    "parallel_property_collinear_extend(3,PQ,CD,N)": [
+      "parallel_property_collinear_extend(3,DC,NP,F)"
+    ],
+    "parallel_property_collinear_extend(3,HG,EA,M)": [
+      "parallel_property_alternate_interior_angle(2,HM,EA)"
+    ],
+    "parallel_property_collinear_extend(3,QP,HM,N)": [
+      "parallel_property_alternate_interior_angle(1,NP,HM)"
+    ],
+    "parallel_property_collinear_extend(3,DC,NP,F)": [
+      "parallel_property_alternate_interior_angle(2,DF,NP)"
+    ],
+    "parallel_property_alternate_interior_angle(1,NP,HM)": [],
+    "parallel_property_alternate_interior_angle(2,HM,EA)": [],
+    "parallel_property_alternate_interior_angle(2,DF,NP)": [],
+    "angle_addition(1,EMH,HMN)": [],
+    "angle_addition(1,FNP,PNM)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,GH,E)",
+      "parallel_property_collinear_extend(3,GH,PQ,M)",
+      "parallel_property_collinear_extend(3,PQ,CD,N)",
+      "angle_addition(1,EMH,HMN)",
+      "angle_addition(1,FNP,PNM)"
+    ]
+  }
 }

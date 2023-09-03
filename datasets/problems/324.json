@@ -24,12 +24,32 @@
   "goal_cdl": "Value(PerimeterOfTriangle(MNC))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(NC,M,M)",
-    "line_addition(ND,DM)",
-    "radius_of_circle_property_length_equal(MD,M)",
-    "radius_of_circle_property_length_equal(MC,M)",
-    "right_triangle_judgment_angle(NCM)",
-    "right_triangle_property_pythagorean(NCM)",
-    "triangle_perimeter_formula(NCM)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,NC,M,M)",
+    "line_addition(1,ND,DM)",
+    "radius_of_circle_property_length_equal(1,MD,M)",
+    "radius_of_circle_property_length_equal(1,MC,M)",
+    "right_triangle_judgment_angle(1,NCM)",
+    "right_triangle_property_pythagorean(1,NCM)",
+    "triangle_perimeter_formula(1,NCM)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,NC,M,M)": [
+      "right_triangle_judgment_angle(1,NCM)"
+    ],
+    "line_addition(1,ND,DM)": [],
+    "radius_of_circle_property_length_equal(1,MD,M)": [],
+    "radius_of_circle_property_length_equal(1,MC,M)": [],
+    "right_triangle_judgment_angle(1,NCM)": [
+      "right_triangle_property_pythagorean(1,NCM)"
+    ],
+    "right_triangle_property_pythagorean(1,NCM)": [],
+    "triangle_perimeter_formula(1,NCM)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,NC,M,M)",
+      "line_addition(1,ND,DM)",
+      "radius_of_circle_property_length_equal(1,MD,M)",
+      "radius_of_circle_property_length_equal(1,MC,M)",
+      "triangle_perimeter_formula(1,NCM)"
+    ]
+  }
 }

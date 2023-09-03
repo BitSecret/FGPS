@@ -23,12 +23,34 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "mirror_congruent_triangle_property_line_equal(EDA,EMD)",
-    "line_addition(MD,DB)",
-    "parallel_property_corresponding_angle(DE,BC,M)",
-    "parallel_property_corresponding_angle(CB,ED,M)",
-    "similar_triangle_judgment_aa(MDE,MBC)",
-    "similar_triangle_property_line_ratio(MDE,MBC)",
-    "similar_triangle_property_line_ratio(EMD,CMB)"
-  ]
+    "mirror_congruent_triangle_property_line_equal(1,EDA,EMD)",
+    "line_addition(1,MD,DB)",
+    "parallel_property_corresponding_angle(1,DE,BC,M)",
+    "parallel_property_corresponding_angle(2,CB,ED,M)",
+    "similar_triangle_judgment_aa(1,MDE,MBC)",
+    "similar_triangle_property_line_ratio(1,MDE,MBC)",
+    "similar_triangle_property_line_ratio(1,EMD,CMB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_property_line_equal(1,EDA,EMD)": [],
+    "line_addition(1,MD,DB)": [],
+    "parallel_property_corresponding_angle(1,DE,BC,M)": [
+      "similar_triangle_judgment_aa(1,MDE,MBC)"
+    ],
+    "parallel_property_corresponding_angle(2,CB,ED,M)": [
+      "similar_triangle_judgment_aa(1,MDE,MBC)"
+    ],
+    "similar_triangle_judgment_aa(1,MDE,MBC)": [
+      "similar_triangle_property_line_ratio(1,MDE,MBC)",
+      "similar_triangle_property_line_ratio(1,EMD,CMB)"
+    ],
+    "similar_triangle_property_line_ratio(1,MDE,MBC)": [],
+    "similar_triangle_property_line_ratio(1,EMD,CMB)": [],
+    "START": [
+      "mirror_congruent_triangle_property_line_equal(1,EDA,EMD)",
+      "line_addition(1,MD,DB)",
+      "parallel_property_corresponding_angle(1,DE,BC,M)",
+      "parallel_property_corresponding_angle(2,CB,ED,M)"
+    ]
+  }
 }

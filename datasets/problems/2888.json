@@ -21,8 +21,19 @@
   "goal_cdl": "Value(MeasureOfAngle(CDE))",
   "problem_answer": "55",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,E)",
-    "parallel_property_ipsilateral_internal_angle(DC,EA)",
-    "angle_addition(DEC,CEA)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,E)",
+    "parallel_property_ipsilateral_internal_angle(1,DC,EA)",
+    "angle_addition(1,DEC,CEA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,E)": [
+      "parallel_property_ipsilateral_internal_angle(1,DC,EA)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,DC,EA)": [],
+    "angle_addition(1,DEC,CEA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,E)",
+      "angle_addition(1,DEC,CEA)"
+    ]
+  }
 }

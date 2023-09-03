@@ -24,9 +24,23 @@
   "goal_cdl": "Value(RadiusOfCircle(O))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AB,O,O)",
-    "right_triangle_judgment_angle(ABO)",
-    "right_triangle_property_pythagorean(ABO)",
-    "radius_of_circle_property_length_equal(OB,O)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AB,O,O)",
+    "right_triangle_judgment_angle(1,ABO)",
+    "right_triangle_property_pythagorean(1,ABO)",
+    "radius_of_circle_property_length_equal(1,OB,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AB,O,O)": [
+      "right_triangle_judgment_angle(1,ABO)"
+    ],
+    "right_triangle_judgment_angle(1,ABO)": [
+      "right_triangle_property_pythagorean(1,ABO)"
+    ],
+    "right_triangle_property_pythagorean(1,ABO)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AB,O,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)"
+    ]
+  }
 }

@@ -35,9 +35,23 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "45",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FC,EB,L)",
-    "parallel_property_collinear_extend(BE,CL,M)",
-    "parallel_property_corresponding_angle(LC,MB,N)",
-    "adjacent_complementary_angle(GLC,CLM)"
-  ]
+    "parallel_property_collinear_extend(3,FC,EB,L)",
+    "parallel_property_collinear_extend(3,BE,CL,M)",
+    "parallel_property_corresponding_angle(2,LC,MB,N)",
+    "adjacent_complementary_angle(1,GLC,CLM)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,FC,EB,L)": [
+      "parallel_property_collinear_extend(3,BE,CL,M)"
+    ],
+    "parallel_property_collinear_extend(3,BE,CL,M)": [
+      "parallel_property_corresponding_angle(2,LC,MB,N)"
+    ],
+    "parallel_property_corresponding_angle(2,LC,MB,N)": [],
+    "adjacent_complementary_angle(1,GLC,CLM)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,FC,EB,L)",
+      "adjacent_complementary_angle(1,GLC,CLM)"
+    ]
+  }
 }

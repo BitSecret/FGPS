@@ -25,10 +25,25 @@
   "goal_cdl": "Value(PerimeterOfTriangle(BED))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(DEC,DCA)",
-    "mirror_congruent_triangle_property_line_equal(CDE,CAD)",
-    "mirror_congruent_triangle_property_line_equal(DEC,DCA)",
-    "line_addition(BD,DA)",
-    "triangle_perimeter_formula(DBE)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(3,DEC,DCA)",
+    "mirror_congruent_triangle_property_line_equal(1,CDE,CAD)",
+    "mirror_congruent_triangle_property_line_equal(1,DEC,DCA)",
+    "line_addition(1,BD,DA)",
+    "triangle_perimeter_formula(1,DBE)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(3,DEC,DCA)": [
+      "mirror_congruent_triangle_property_line_equal(1,DEC,DCA)",
+      "mirror_congruent_triangle_property_line_equal(1,CDE,CAD)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,CDE,CAD)": [],
+    "mirror_congruent_triangle_property_line_equal(1,DEC,DCA)": [],
+    "line_addition(1,BD,DA)": [],
+    "triangle_perimeter_formula(1,DBE)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(3,DEC,DCA)",
+      "line_addition(1,BD,DA)",
+      "triangle_perimeter_formula(1,DBE)"
+    ]
+  }
 }

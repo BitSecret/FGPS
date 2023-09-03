@@ -25,7 +25,15 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(APD),AreaOfTriangle(PBC)))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "parallelogram_area_formula_common(DABC)",
-    "triangle_area_formula_common(PAB)"
-  ]
+    "parallelogram_area_formula_common(1,DABC)",
+    "triangle_area_formula_common(1,PAB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_area_formula_common(1,DABC)": [],
+    "triangle_area_formula_common(1,PAB)": [],
+    "START": [
+      "parallelogram_area_formula_common(1,DABC)",
+      "triangle_area_formula_common(1,PAB)"
+    ]
+  }
 }

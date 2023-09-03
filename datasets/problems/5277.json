@@ -19,8 +19,18 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(EDB),MeasureOfAngle(CED)))",
   "problem_answer": "260",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ADE,EDB)",
-    "adjacent_complementary_angle(CED,DEA)",
-    "triangle_property_angle_sum(ADE)"
-  ]
+    "adjacent_complementary_angle(1,ADE,EDB)",
+    "adjacent_complementary_angle(1,CED,DEA)",
+    "triangle_property_angle_sum(1,ADE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ADE,EDB)": [],
+    "adjacent_complementary_angle(1,CED,DEA)": [],
+    "triangle_property_angle_sum(1,ADE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ADE,EDB)",
+      "adjacent_complementary_angle(1,CED,DEA)",
+      "triangle_property_angle_sum(1,ADE)"
+    ]
+  }
 }

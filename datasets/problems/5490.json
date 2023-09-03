@@ -26,13 +26,41 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(DAC)",
-    "isosceles_triangle_property_angle_equal(DAC)",
-    "triangle_property_angle_sum(DAC)",
-    "angle_addition(EAC,CAB)",
-    "right_triangle_judgment_angle(CAB)",
-    "right_triangle_property_pythagorean(CAB)",
-    "midsegment_of_triangle_judgment_midpoint(EF,DAC)",
-    "midsegment_of_triangle_property_length(EF,DAC)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,DAC)",
+    "isosceles_triangle_property_angle_equal(1,DAC)",
+    "triangle_property_angle_sum(1,DAC)",
+    "angle_addition(1,EAC,CAB)",
+    "right_triangle_judgment_angle(1,CAB)",
+    "right_triangle_property_pythagorean(1,CAB)",
+    "midsegment_of_triangle_judgment_midpoint(1,EF,DAC)",
+    "midsegment_of_triangle_property_length(1,EF,DAC)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,DAC)": [
+      "isosceles_triangle_property_angle_equal(1,DAC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DAC)": [
+      "right_triangle_judgment_angle(1,CAB)"
+    ],
+    "triangle_property_angle_sum(1,DAC)": [
+      "right_triangle_judgment_angle(1,CAB)"
+    ],
+    "angle_addition(1,EAC,CAB)": [
+      "right_triangle_judgment_angle(1,CAB)"
+    ],
+    "right_triangle_judgment_angle(1,CAB)": [
+      "right_triangle_property_pythagorean(1,CAB)"
+    ],
+    "right_triangle_property_pythagorean(1,CAB)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,EF,DAC)": [
+      "midsegment_of_triangle_property_length(1,EF,DAC)"
+    ],
+    "midsegment_of_triangle_property_length(1,EF,DAC)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,DAC)",
+      "triangle_property_angle_sum(1,DAC)",
+      "angle_addition(1,EAC,CAB)",
+      "midsegment_of_triangle_judgment_midpoint(1,EF,DAC)"
+    ]
+  }
 }

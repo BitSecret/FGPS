@@ -23,7 +23,16 @@
   "goal_cdl": "Value(MeasureOfAngle(GFD))",
   "problem_answer": "28",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(GFD)",
-    "isosceles_triangle_property_angle_equal(GFD)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,GFD)",
+    "isosceles_triangle_property_angle_equal(1,GFD)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,GFD)": [
+      "isosceles_triangle_property_angle_equal(1,GFD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,GFD)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,GFD)"
+    ]
+  }
 }

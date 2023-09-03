@@ -29,16 +29,49 @@
   "goal_cdl": "Value(MeasureOfAngle(OAC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "diameter_of_circle_property_right_angle(ACB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "isosceles_triangle_judgment_line_equal(OAC)",
-    "isosceles_triangle_judgment_line_equal(OCD)",
-    "isosceles_triangle_property_angle_equal(OAC)",
-    "isosceles_triangle_property_angle_equal(OCD)",
-    "parallel_property_alternate_interior_angle(BC,DO)",
-    "angle_addition(ACO,OCB)",
-    "angle_addition(OCE,ECB)"
-  ]
+    "diameter_of_circle_property_right_angle(1,ACB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "isosceles_triangle_judgment_line_equal(1,OAC)",
+    "isosceles_triangle_judgment_line_equal(1,OCD)",
+    "isosceles_triangle_property_angle_equal(1,OAC)",
+    "isosceles_triangle_property_angle_equal(1,OCD)",
+    "parallel_property_alternate_interior_angle(2,BC,DO)",
+    "angle_addition(1,ACO,OCB)",
+    "angle_addition(1,OCE,ECB)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_right_angle(1,ACB,O)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAC)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OAC)": [
+      "isosceles_triangle_property_angle_equal(1,OAC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OCD)": [
+      "isosceles_triangle_property_angle_equal(1,OCD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OAC)": [],
+    "isosceles_triangle_property_angle_equal(1,OCD)": [],
+    "parallel_property_alternate_interior_angle(2,BC,DO)": [],
+    "angle_addition(1,ACO,OCB)": [],
+    "angle_addition(1,OCE,ECB)": [],
+    "START": [
+      "diameter_of_circle_property_right_angle(1,ACB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "parallel_property_alternate_interior_angle(2,BC,DO)",
+      "angle_addition(1,ACO,OCB)",
+      "angle_addition(1,OCE,ECB)"
+    ]
+  }
 }

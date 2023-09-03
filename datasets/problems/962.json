@@ -24,11 +24,30 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "85*sqrt(13)/6",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CYA,AYB)",
-    "mirror_similar_triangle_judgment_aa(ACY,BAC)",
-    "right_triangle_judgment_angle(CYA)",
-    "right_triangle_property_pythagorean(CYA)",
-    "mirror_similar_triangle_property_line_ratio(ACY,BAC)",
-    "mirror_similar_triangle_property_line_ratio(CYA,CBA)"
-  ]
+    "adjacent_complementary_angle(1,CYA,AYB)",
+    "mirror_similar_triangle_judgment_aa(1,ACY,BAC)",
+    "right_triangle_judgment_angle(1,CYA)",
+    "right_triangle_property_pythagorean(1,CYA)",
+    "mirror_similar_triangle_property_line_ratio(1,ACY,BAC)",
+    "mirror_similar_triangle_property_line_ratio(1,CYA,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CYA,AYB)": [
+      "mirror_similar_triangle_judgment_aa(1,ACY,BAC)",
+      "right_triangle_judgment_angle(1,CYA)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ACY,BAC)": [
+      "mirror_similar_triangle_property_line_ratio(1,ACY,BAC)",
+      "mirror_similar_triangle_property_line_ratio(1,CYA,CBA)"
+    ],
+    "right_triangle_judgment_angle(1,CYA)": [
+      "right_triangle_property_pythagorean(1,CYA)"
+    ],
+    "right_triangle_property_pythagorean(1,CYA)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ACY,BAC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CYA,CBA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CYA,AYB)"
+    ]
+  }
 }

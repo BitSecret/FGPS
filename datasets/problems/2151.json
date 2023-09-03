@@ -21,9 +21,23 @@
   "goal_cdl": "Value(LengthOfLine(LM))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "adjacent_complementary_angle(MFJ,JFL)",
-    "mirror_congruent_triangle_judgment_hl(MFJ,LJF)",
-    "mirror_congruent_triangle_property_line_equal(JMF,JFL)",
-    "line_addition(MF,FL)"
-  ]
+    "adjacent_complementary_angle(1,MFJ,JFL)",
+    "mirror_congruent_triangle_judgment_hl(1,MFJ,LJF)",
+    "mirror_congruent_triangle_property_line_equal(1,JMF,JFL)",
+    "line_addition(1,MF,FL)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,MFJ,JFL)": [
+      "mirror_congruent_triangle_judgment_hl(1,MFJ,LJF)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,MFJ,LJF)": [
+      "mirror_congruent_triangle_property_line_equal(1,JMF,JFL)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,JMF,JFL)": [],
+    "line_addition(1,MF,FL)": [],
+    "START": [
+      "adjacent_complementary_angle(1,MFJ,JFL)",
+      "line_addition(1,MF,FL)"
+    ]
+  }
 }

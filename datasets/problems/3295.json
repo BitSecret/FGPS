@@ -26,18 +26,53 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(EDOC))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(ABC)",
-    "right_triangle_property_pythagorean(ABC)",
-    "rectangle_property_diagonal_equal(DABC)",
-    "parallelogram_property_diagonal_bisection(DABC,O)",
-    "line_addition(DO,OB)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "line_addition(AO,OC)",
-    "parallel_property_collinear_extend(CA,ED,O)",
-    "parallel_property_collinear_extend(BD,CE,O)",
-    "parallelogram_judgment_parallel_and_parallel(EDOC)",
-    "parallelogram_property_opposite_line_equal(EDOC)",
-    "parallelogram_property_opposite_line_equal(DOCE)",
-    "quadrilateral_perimeter_formula(EDOC)"
-  ]
+    "right_triangle_judgment_angle(1,ABC)",
+    "right_triangle_property_pythagorean(1,ABC)",
+    "rectangle_property_diagonal_equal(1,DABC)",
+    "parallelogram_property_diagonal_bisection(1,DABC,O)",
+    "line_addition(1,DO,OB)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "line_addition(1,AO,OC)",
+    "parallel_property_collinear_extend(3,CA,ED,O)",
+    "parallel_property_collinear_extend(3,BD,CE,O)",
+    "parallelogram_judgment_parallel_and_parallel(1,EDOC)",
+    "parallelogram_property_opposite_line_equal(1,EDOC)",
+    "parallelogram_property_opposite_line_equal(1,DOCE)",
+    "quadrilateral_perimeter_formula(1,EDOC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,ABC)": [
+      "right_triangle_property_pythagorean(1,ABC)"
+    ],
+    "right_triangle_property_pythagorean(1,ABC)": [],
+    "rectangle_property_diagonal_equal(1,DABC)": [],
+    "parallelogram_property_diagonal_bisection(1,DABC,O)": [],
+    "line_addition(1,DO,OB)": [],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [],
+    "line_addition(1,AO,OC)": [],
+    "parallel_property_collinear_extend(3,CA,ED,O)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EDOC)"
+    ],
+    "parallel_property_collinear_extend(3,BD,CE,O)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EDOC)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,EDOC)": [
+      "parallelogram_property_opposite_line_equal(1,EDOC)",
+      "parallelogram_property_opposite_line_equal(1,DOCE)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,EDOC)": [],
+    "parallelogram_property_opposite_line_equal(1,DOCE)": [],
+    "quadrilateral_perimeter_formula(1,EDOC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,ABC)",
+      "rectangle_property_diagonal_equal(1,DABC)",
+      "parallelogram_property_diagonal_bisection(1,DABC,O)",
+      "line_addition(1,DO,OB)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "line_addition(1,AO,OC)",
+      "parallel_property_collinear_extend(3,CA,ED,O)",
+      "parallel_property_collinear_extend(3,BD,CE,O)",
+      "quadrilateral_perimeter_formula(1,EDOC)"
+    ]
+  }
 }

@@ -23,9 +23,22 @@
   "goal_cdl": "Value(LengthOfLine(NM))",
   "problem_answer": "3.42",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(AOB,NMB)",
-    "similar_triangle_property_line_ratio(AOB,NMB)",
-    "similar_triangle_property_line_ratio(BAO,BNM)",
-    "line_addition(MO,OB)"
-  ]
+    "similar_triangle_judgment_aa(1,AOB,NMB)",
+    "similar_triangle_property_line_ratio(1,AOB,NMB)",
+    "similar_triangle_property_line_ratio(1,BAO,BNM)",
+    "line_addition(1,MO,OB)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,AOB,NMB)": [
+      "similar_triangle_property_line_ratio(1,AOB,NMB)",
+      "similar_triangle_property_line_ratio(1,BAO,BNM)"
+    ],
+    "similar_triangle_property_line_ratio(1,AOB,NMB)": [],
+    "similar_triangle_property_line_ratio(1,BAO,BNM)": [],
+    "line_addition(1,MO,OB)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,AOB,NMB)",
+      "line_addition(1,MO,OB)"
+    ]
+  }
 }

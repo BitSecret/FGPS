@@ -22,10 +22,24 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "14",
   "theorem_seqs": [
-    "flat_angle(CED)",
-    "angle_addition(CEA,AED)",
-    "flat_angle(EDB)",
-    "angle_addition(EDA,ADB)",
-    "triangle_property_angle_sum(AED)"
-  ]
+    "flat_angle(1,CED)",
+    "angle_addition(1,CEA,AED)",
+    "flat_angle(1,EDB)",
+    "angle_addition(1,EDA,ADB)",
+    "triangle_property_angle_sum(1,AED)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,CED)": [],
+    "angle_addition(1,CEA,AED)": [],
+    "flat_angle(1,EDB)": [],
+    "angle_addition(1,EDA,ADB)": [],
+    "triangle_property_angle_sum(1,AED)": [],
+    "START": [
+      "flat_angle(1,CED)",
+      "angle_addition(1,CEA,AED)",
+      "flat_angle(1,EDB)",
+      "angle_addition(1,EDA,ADB)",
+      "triangle_property_angle_sum(1,AED)"
+    ]
+  }
 }

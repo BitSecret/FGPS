@@ -21,10 +21,26 @@
   "goal_cdl": "Value(LengthOfLine(OH))",
   "problem_answer": "39",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(EF,GH,O)",
-    "similar_triangle_judgment_aa(FOE,HOG)",
-    "line_addition(OE,EG)",
-    "similar_triangle_property_line_ratio(FOE,HOG)",
-    "similar_triangle_property_line_ratio(EFO,GHO)"
-  ]
+    "parallel_property_corresponding_angle(1,EF,GH,O)",
+    "similar_triangle_judgment_aa(1,FOE,HOG)",
+    "line_addition(1,OE,EG)",
+    "similar_triangle_property_line_ratio(1,FOE,HOG)",
+    "similar_triangle_property_line_ratio(1,EFO,GHO)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,EF,GH,O)": [
+      "similar_triangle_judgment_aa(1,FOE,HOG)"
+    ],
+    "similar_triangle_judgment_aa(1,FOE,HOG)": [
+      "similar_triangle_property_line_ratio(1,FOE,HOG)",
+      "similar_triangle_property_line_ratio(1,EFO,GHO)"
+    ],
+    "line_addition(1,OE,EG)": [],
+    "similar_triangle_property_line_ratio(1,FOE,HOG)": [],
+    "similar_triangle_property_line_ratio(1,EFO,GHO)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,EF,GH,O)",
+      "line_addition(1,OE,EG)"
+    ]
+  }
 }

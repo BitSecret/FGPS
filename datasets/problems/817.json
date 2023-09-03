@@ -23,11 +23,29 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8*sqrt(3)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CDB,BDA)",
-    "triangle_property_angle_sum(CDB)",
-    "sine_theorem(CDB)",
-    "sine_theorem(BCD)",
-    "perpendicular_bisector_judgment_distance_equal(BD,CA)",
-    "line_addition(CD,DA)"
-  ]
+    "adjacent_complementary_angle(1,CDB,BDA)",
+    "triangle_property_angle_sum(1,CDB)",
+    "sine_theorem(1,CDB)",
+    "sine_theorem(1,BCD)",
+    "perpendicular_bisector_judgment_distance_equal(1,BD,CA)",
+    "line_addition(1,CD,DA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CDB,BDA)": [
+      "perpendicular_bisector_judgment_distance_equal(1,BD,CA)",
+      "solve_eq_13)"
+    ],
+    "triangle_property_angle_sum(1,CDB)": [],
+    "sine_theorem(1,CDB)": [],
+    "sine_theorem(1,BCD)": [],
+    "perpendicular_bisector_judgment_distance_equal(1,BD,CA)": [],
+    "line_addition(1,CD,DA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CDB,BDA)",
+      "triangle_property_angle_sum(1,CDB)",
+      "sine_theorem(1,CDB)",
+      "sine_theorem(1,BCD)",
+      "line_addition(1,CD,DA)"
+    ]
+  }
 }

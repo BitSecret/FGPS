@@ -26,11 +26,30 @@
   "goal_cdl": "Value(LengthOfLine(OC))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(O,OC,AB)",
-    "right_triangle_judgment_angle(ACO)",
-    "right_triangle_judgment_angle(OCB)",
-    "right_triangle_property_pythagorean(ACO)",
-    "right_triangle_property_pythagorean(OCB)",
-    "line_addition(AC,CB)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OC,AB)",
+    "right_triangle_judgment_angle(1,ACO)",
+    "right_triangle_judgment_angle(1,OCB)",
+    "right_triangle_property_pythagorean(1,ACO)",
+    "right_triangle_property_pythagorean(1,OCB)",
+    "line_addition(1,AC,CB)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OC,AB)": [
+      "right_triangle_judgment_angle(1,OCB)"
+    ],
+    "right_triangle_judgment_angle(1,ACO)": [
+      "right_triangle_property_pythagorean(1,ACO)"
+    ],
+    "right_triangle_judgment_angle(1,OCB)": [
+      "right_triangle_property_pythagorean(1,OCB)"
+    ],
+    "right_triangle_property_pythagorean(1,ACO)": [],
+    "right_triangle_property_pythagorean(1,OCB)": [],
+    "line_addition(1,AC,CB)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OC,AB)",
+      "right_triangle_judgment_angle(1,ACO)",
+      "line_addition(1,AC,CB)"
+    ]
+  }
 }

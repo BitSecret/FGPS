@@ -24,14 +24,41 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "14",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,F)",
-    "parallel_property_alternate_interior_angle(AF,BC)",
-    "vertical_angle(DEF,CEB)",
-    "congruent_triangle_judgment_aas(DEF,CEB)",
-    "congruent_triangle_property_line_equal(EFD,EBC)",
-    "line_addition(DE,EC)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "parallel_property_collinear_extend(2,AD,BC,F)",
+    "parallel_property_alternate_interior_angle(2,AF,BC)",
+    "vertical_angle(1,DEF,CEB)",
+    "congruent_triangle_judgment_aas(1,DEF,CEB)",
+    "congruent_triangle_property_line_equal(1,EFD,EBC)",
+    "line_addition(1,DE,EC)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,AD,BC,F)": [
+      "parallel_property_alternate_interior_angle(2,AF,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AF,BC)": [
+      "congruent_triangle_judgment_aas(1,DEF,CEB)"
+    ],
+    "vertical_angle(1,DEF,CEB)": [
+      "congruent_triangle_judgment_aas(1,DEF,CEB)"
+    ],
+    "congruent_triangle_judgment_aas(1,DEF,CEB)": [
+      "congruent_triangle_property_line_equal(1,EFD,EBC)"
+    ],
+    "congruent_triangle_property_line_equal(1,EFD,EBC)": [],
+    "line_addition(1,DE,EC)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,AD,BC,F)",
+      "vertical_angle(1,DEF,CEB)",
+      "line_addition(1,DE,EC)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

@@ -36,8 +36,19 @@
   "goal_cdl": "Value(LengthOfLine(MN))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(FBC)",
-    "right_triangle_property_pythagorean(FBC)",
-    "right_triangle_property_length_of_median(CMF,N)"
-  ]
+    "right_triangle_judgment_angle(1,FBC)",
+    "right_triangle_property_pythagorean(1,FBC)",
+    "right_triangle_property_length_of_median(1,CMF,N)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,FBC)": [
+      "right_triangle_property_pythagorean(1,FBC)"
+    ],
+    "right_triangle_property_pythagorean(1,FBC)": [],
+    "right_triangle_property_length_of_median(1,CMF,N)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,FBC)",
+      "right_triangle_property_length_of_median(1,CMF,N)"
+    ]
+  }
 }

@@ -28,10 +28,25 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(AOB,O)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "arc_property_circumference_angle_external(OBD,A)",
-    "arc_property_circumference_angle_external(OBD,C)",
-    "angle_addition(DCE,ECA)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "arc_property_circumference_angle_external(1,OBD,A)",
+    "arc_property_circumference_angle_external(1,OBD,C)",
+    "angle_addition(1,DCE,ECA)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [],
+    "arc_property_circumference_angle_external(1,OBD,A)": [],
+    "arc_property_circumference_angle_external(1,OBD,C)": [],
+    "angle_addition(1,DCE,ECA)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "arc_property_circumference_angle_external(1,OBD,C)",
+      "angle_addition(1,DCE,ECA)"
+    ]
+  }
 }

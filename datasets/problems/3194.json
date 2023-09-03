@@ -21,9 +21,22 @@
   "goal_cdl": "Value(MeasureOfAngle(DEC))",
   "problem_answer": "64",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "angle_addition(EDB,BDA)",
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_alternate_interior_angle(AD,EC)"
-  ]
+    "parallel_property_alternate_interior_angle(2,AD,BC)",
+    "angle_addition(1,EDB,BDA)",
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "parallel_property_alternate_interior_angle(2,AD,EC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,AD,BC)": [],
+    "angle_addition(1,EDB,BDA)": [],
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(2,AD,EC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AD,EC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,AD,BC)",
+      "angle_addition(1,EDB,BDA)",
+      "parallel_property_collinear_extend(3,CB,DA,E)"
+    ]
+  }
 }

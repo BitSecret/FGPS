@@ -25,9 +25,23 @@
   "goal_cdl": "Value(LengthOfLine(DB))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CFA,AFB)",
-    "mirror_similar_triangle_judgment_aa(ACF,DFB)",
-    "mirror_similar_triangle_property_line_ratio(ACF,DFB)",
-    "mirror_similar_triangle_property_line_ratio(FAC,FBD)"
-  ]
+    "adjacent_complementary_angle(1,CFA,AFB)",
+    "mirror_similar_triangle_judgment_aa(1,ACF,DFB)",
+    "mirror_similar_triangle_property_line_ratio(1,ACF,DFB)",
+    "mirror_similar_triangle_property_line_ratio(1,FAC,FBD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CFA,AFB)": [
+      "mirror_similar_triangle_judgment_aa(1,ACF,DFB)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ACF,DFB)": [
+      "mirror_similar_triangle_property_line_ratio(1,ACF,DFB)",
+      "mirror_similar_triangle_property_line_ratio(1,FAC,FBD)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ACF,DFB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,FAC,FBD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CFA,AFB)"
+    ]
+  }
 }

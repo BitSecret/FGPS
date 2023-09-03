@@ -21,12 +21,32 @@
   "goal_cdl": "Value(LengthOfLine(EH))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(EGH,FEG)",
-    "line_addition(FH,HG)",
-    "right_triangle_judgment_angle(GHE)",
-    "right_triangle_property_pythagorean(GHE)",
-    "mirror_similar_triangle_property_line_ratio(EGH,FEG)",
-    "mirror_similar_triangle_property_line_ratio(GHE,GFE)",
-    "mirror_similar_triangle_property_line_ratio(HEG,EGF)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,EGH,FEG)",
+    "line_addition(1,FH,HG)",
+    "right_triangle_judgment_angle(1,GHE)",
+    "right_triangle_property_pythagorean(1,GHE)",
+    "mirror_similar_triangle_property_line_ratio(1,EGH,FEG)",
+    "mirror_similar_triangle_property_line_ratio(1,GHE,GFE)",
+    "mirror_similar_triangle_property_line_ratio(1,HEG,EGF)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,EGH,FEG)": [
+      "mirror_similar_triangle_property_line_ratio(1,EGH,FEG)",
+      "mirror_similar_triangle_property_line_ratio(1,GHE,GFE)",
+      "mirror_similar_triangle_property_line_ratio(1,HEG,EGF)"
+    ],
+    "line_addition(1,FH,HG)": [],
+    "right_triangle_judgment_angle(1,GHE)": [
+      "right_triangle_property_pythagorean(1,GHE)"
+    ],
+    "right_triangle_property_pythagorean(1,GHE)": [],
+    "mirror_similar_triangle_property_line_ratio(1,EGH,FEG)": [],
+    "mirror_similar_triangle_property_line_ratio(1,GHE,GFE)": [],
+    "mirror_similar_triangle_property_line_ratio(1,HEG,EGF)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,EGH,FEG)",
+      "line_addition(1,FH,HG)",
+      "right_triangle_judgment_angle(1,GHE)"
+    ]
+  }
 }

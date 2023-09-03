@@ -28,12 +28,32 @@
   "goal_cdl": "Value(LengthOfLine(PQ))",
   "problem_answer": "3.32",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(PJ,P)",
-    "radius_of_circle_property_length_equal(PM,P)",
-    "adjacent_complementary_angle(JQP,PQK)",
-    "circle_property_chord_perpendicular_bisect_chord(P,PQ,JK)",
-    "line_addition(JQ,QK)",
-    "right_triangle_judgment_angle(JQP)",
-    "right_triangle_property_pythagorean(JQP)"
-  ]
+    "radius_of_circle_property_length_equal(1,PJ,P)",
+    "radius_of_circle_property_length_equal(1,PM,P)",
+    "adjacent_complementary_angle(1,JQP,PQK)",
+    "circle_property_chord_perpendicular_bisect_chord(1,P,PQ,JK)",
+    "line_addition(1,JQ,QK)",
+    "right_triangle_judgment_angle(1,JQP)",
+    "right_triangle_property_pythagorean(1,JQP)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,PJ,P)": [],
+    "radius_of_circle_property_length_equal(1,PM,P)": [],
+    "adjacent_complementary_angle(1,JQP,PQK)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,P,PQ,JK)",
+      "right_triangle_judgment_angle(1,JQP)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,P,PQ,JK)": [],
+    "line_addition(1,JQ,QK)": [],
+    "right_triangle_judgment_angle(1,JQP)": [
+      "right_triangle_property_pythagorean(1,JQP)"
+    ],
+    "right_triangle_property_pythagorean(1,JQP)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,PJ,P)",
+      "radius_of_circle_property_length_equal(1,PM,P)",
+      "adjacent_complementary_angle(1,JQP,PQK)",
+      "line_addition(1,JQ,QK)"
+    ]
+  }
 }

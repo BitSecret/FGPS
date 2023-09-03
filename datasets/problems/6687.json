@@ -28,12 +28,36 @@
   "goal_cdl": "Value(MeasureOfAngle(BAD))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(ODC)",
-    "altitude_of_triangle_judgment(OM,ODC)",
-    "isosceles_triangle_property_line_coincidence(ODC,M)",
-    "arc_property_center_angle(ODB,O)",
-    "arc_property_circumference_angle_external(ODB,A)"
-  ]
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,ODC)",
+    "altitude_of_triangle_judgment(1,OM,ODC)",
+    "isosceles_triangle_property_line_coincidence(1,ODC,M)",
+    "arc_property_center_angle(1,ODB,O)",
+    "arc_property_circumference_angle_external(1,ODB,A)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODC)": [
+      "isosceles_triangle_property_line_coincidence(1,ODC,M)"
+    ],
+    "altitude_of_triangle_judgment(1,OM,ODC)": [
+      "isosceles_triangle_property_line_coincidence(1,ODC,M)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,ODC,M)": [],
+    "arc_property_center_angle(1,ODB,O)": [],
+    "arc_property_circumference_angle_external(1,ODB,A)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "altitude_of_triangle_judgment(1,OM,ODC)",
+      "arc_property_center_angle(1,ODB,O)",
+      "arc_property_circumference_angle_external(1,ODB,A)"
+    ]
+  }
 }

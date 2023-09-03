@@ -22,9 +22,23 @@
   "goal_cdl": "Value(MeasureOfAngle(BCE))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(ED,CA)",
-    "isosceles_triangle_judgment_line_equal(ECA)",
-    "isosceles_triangle_property_angle_equal(ECA)",
-    "angle_addition(BCE,ECA)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,ED,CA)",
+    "isosceles_triangle_judgment_line_equal(1,ECA)",
+    "isosceles_triangle_property_angle_equal(1,ECA)",
+    "angle_addition(1,BCE,ECA)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,ED,CA)": [
+      "isosceles_triangle_judgment_line_equal(1,ECA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ECA)": [
+      "isosceles_triangle_property_angle_equal(1,ECA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ECA)": [],
+    "angle_addition(1,BCE,ECA)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,ED,CA)",
+      "angle_addition(1,BCE,ECA)"
+    ]
+  }
 }

@@ -24,11 +24,30 @@
   "goal_cdl": "Value(MeasureOfAngle(BCF))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "parallelogram_judgment_equal_and_equal(ABCD)",
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "congruent_triangle_judgment_sas(DAE,BCF)",
-    "congruent_triangle_property_angle_equal(AED,CFB)",
-    "adjacent_complementary_angle(BEA,AEF)",
-    "triangle_property_angle_sum(AED)"
-  ]
+    "parallelogram_judgment_equal_and_equal(1,ABCD)",
+    "parallel_property_alternate_interior_angle(2,AD,BC)",
+    "congruent_triangle_judgment_sas(1,DAE,BCF)",
+    "congruent_triangle_property_angle_equal(1,AED,CFB)",
+    "adjacent_complementary_angle(1,BEA,AEF)",
+    "triangle_property_angle_sum(1,AED)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_equal_and_equal(1,ABCD)": [
+      "parallel_property_alternate_interior_angle(2,AD,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AD,BC)": [
+      "congruent_triangle_judgment_sas(1,DAE,BCF)"
+    ],
+    "congruent_triangle_judgment_sas(1,DAE,BCF)": [
+      "congruent_triangle_property_angle_equal(1,AED,CFB)"
+    ],
+    "congruent_triangle_property_angle_equal(1,AED,CFB)": [],
+    "adjacent_complementary_angle(1,BEA,AEF)": [],
+    "triangle_property_angle_sum(1,AED)": [],
+    "START": [
+      "parallelogram_judgment_equal_and_equal(1,ABCD)",
+      "adjacent_complementary_angle(1,BEA,AEF)",
+      "triangle_property_angle_sum(1,AED)"
+    ]
+  }
 }

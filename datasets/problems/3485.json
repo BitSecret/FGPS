@@ -20,7 +20,15 @@
   "goal_cdl": "Value(MeasureOfAngle(DBA))",
   "problem_answer": "72",
   "theorem_seqs": [
-    "angle_addition(DBA,ABC)",
-    "adjacent_complementary_angle(DBC,CBE)"
-  ]
+    "angle_addition(1,DBA,ABC)",
+    "adjacent_complementary_angle(1,DBC,CBE)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,DBA,ABC)": [],
+    "adjacent_complementary_angle(1,DBC,CBE)": [],
+    "START": [
+      "angle_addition(1,DBA,ABC)",
+      "adjacent_complementary_angle(1,DBC,CBE)"
+    ]
+  }
 }

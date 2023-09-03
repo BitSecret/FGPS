@@ -25,13 +25,35 @@
   "goal_cdl": "Value(MeasureOfAngle(OBC))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "congruent_arc_judgment_length_equal(OBC,OCD)",
-    "congruent_arc_property_measure_equal(OBC,OCD)",
-    "arc_property_circumference_angle_external(OBC,A)",
-    "arc_property_circumference_angle_external(OCD,A)",
-    "angle_addition(DAC,CAO)",
-    "diameter_of_circle_judgment_pass_centre(AOB,O)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "triangle_property_angle_sum(ABC)"
-  ]
+    "congruent_arc_judgment_length_equal(1,OBC,OCD)",
+    "congruent_arc_property_measure_equal(1,OBC,OCD)",
+    "arc_property_circumference_angle_external(1,OBC,A)",
+    "arc_property_circumference_angle_external(1,OCD,A)",
+    "angle_addition(1,DAC,CAO)",
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "triangle_property_angle_sum(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_length_equal(1,OBC,OCD)": [
+      "congruent_arc_property_measure_equal(1,OBC,OCD)"
+    ],
+    "congruent_arc_property_measure_equal(1,OBC,OCD)": [],
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "arc_property_circumference_angle_external(1,OCD,A)": [],
+    "angle_addition(1,DAC,CAO)": [],
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "congruent_arc_judgment_length_equal(1,OBC,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "arc_property_circumference_angle_external(1,OCD,A)",
+      "angle_addition(1,DAC,CAO)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  }
 }

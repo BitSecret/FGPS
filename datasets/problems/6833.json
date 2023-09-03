@@ -19,7 +19,15 @@
   "goal_cdl": "Value(MeasureOfAngle(DCE))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "parallelogram_property_opposite_angle_equal(ABCD)",
-    "adjacent_complementary_angle(BCD,DCE)"
-  ]
+    "parallelogram_property_opposite_angle_equal(1,ABCD)",
+    "adjacent_complementary_angle(1,BCD,DCE)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_angle_equal(1,ABCD)": [],
+    "adjacent_complementary_angle(1,BCD,DCE)": [],
+    "START": [
+      "parallelogram_property_opposite_angle_equal(1,ABCD)",
+      "adjacent_complementary_angle(1,BCD,DCE)"
+    ]
+  }
 }

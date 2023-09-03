@@ -22,11 +22,29 @@
   "goal_cdl": "Value(MeasureOfAngle(EBC))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "triangle_property_angle_sum(ABC)",
-    "mirror_congruent_triangle_judgment_sas(DEA,DBE)",
-    "mirror_congruent_triangle_property_angle_equal(ADE,BED)",
-    "angle_addition(DBE,EBC)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "triangle_property_angle_sum(1,ABC)",
+    "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+    "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+    "angle_addition(1,DBE,EBC)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)": [
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)": [],
+    "angle_addition(1,DBE,EBC)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "triangle_property_angle_sum(1,ABC)",
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  }
 }

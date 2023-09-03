@@ -19,8 +19,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "11",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(WYX)",
-    "isosceles_triangle_property_angle_equal(WYX)",
-    "triangle_property_angle_sum(WYX)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,WYX)",
+    "isosceles_triangle_property_angle_equal(1,WYX)",
+    "triangle_property_angle_sum(1,WYX)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,WYX)": [
+      "isosceles_triangle_property_angle_equal(1,WYX)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,WYX)": [],
+    "triangle_property_angle_sum(1,WYX)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,WYX)",
+      "triangle_property_angle_sum(1,WYX)"
+    ]
+  }
 }

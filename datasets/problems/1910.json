@@ -32,13 +32,37 @@
   "goal_cdl": "Value(Sub(Sub(AreaOfQuadrilateral(EADB),AreaOfTriangle(BFD)),AreaOfTriangle(EAC)))",
   "problem_answer": "45.710",
   "theorem_seqs": [
-    "parallel_judgment_per_per(EB,AD)",
-    "parallel_judgment_per_per(AE,DB)",
-    "parallelogram_judgment_parallel_and_parallel(EADB)",
-    "parallelogram_property_opposite_line_equal(EADB)",
-    "parallelogram_property_opposite_line_equal(ADBE)",
-    "triangle_area_formula_common(ACE)",
-    "triangle_area_formula_common(BFD)",
-    "parallelogram_area_formula_sine(EADB)"
-  ]
+    "parallel_judgment_per_per(1,EB,AD)",
+    "parallel_judgment_per_per(1,AE,DB)",
+    "parallelogram_judgment_parallel_and_parallel(1,EADB)",
+    "parallelogram_property_opposite_line_equal(1,EADB)",
+    "parallelogram_property_opposite_line_equal(1,ADBE)",
+    "triangle_area_formula_common(1,ACE)",
+    "triangle_area_formula_common(1,BFD)",
+    "parallelogram_area_formula_sine(1,EADB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_per_per(1,EB,AD)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EADB)"
+    ],
+    "parallel_judgment_per_per(1,AE,DB)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EADB)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,EADB)": [
+      "parallelogram_property_opposite_line_equal(1,EADB)",
+      "parallelogram_area_formula_sine(1,EADB)",
+      "parallelogram_property_opposite_line_equal(1,ADBE)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,EADB)": [],
+    "parallelogram_property_opposite_line_equal(1,ADBE)": [],
+    "triangle_area_formula_common(1,ACE)": [],
+    "triangle_area_formula_common(1,BFD)": [],
+    "parallelogram_area_formula_sine(1,EADB)": [],
+    "START": [
+      "parallel_judgment_per_per(1,EB,AD)",
+      "parallel_judgment_per_per(1,AE,DB)",
+      "triangle_area_formula_common(1,ACE)",
+      "triangle_area_formula_common(1,BFD)"
+    ]
+  }
 }

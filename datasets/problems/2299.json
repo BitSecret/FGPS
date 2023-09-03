@@ -28,8 +28,18 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "71",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(DA,BJ)",
-    "parallel_property_alternate_interior_angle(BJ,HC)",
-    "angle_addition(ABJ,JBC)"
-  ]
+    "parallel_property_alternate_interior_angle(2,DA,BJ)",
+    "parallel_property_alternate_interior_angle(1,BJ,HC)",
+    "angle_addition(1,ABJ,JBC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,DA,BJ)": [],
+    "parallel_property_alternate_interior_angle(1,BJ,HC)": [],
+    "angle_addition(1,ABJ,JBC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,DA,BJ)",
+      "parallel_property_alternate_interior_angle(1,BJ,HC)",
+      "angle_addition(1,ABJ,JBC)"
+    ]
+  }
 }

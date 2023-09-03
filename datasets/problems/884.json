@@ -21,7 +21,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "40",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(CBA,GHF)",
-    "similar_triangle_property_angle_equal(CBA,GHF)"
-  ]
+    "similar_triangle_judgment_aa(1,CBA,GHF)",
+    "similar_triangle_property_angle_equal(1,CBA,GHF)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,CBA,GHF)": [
+      "similar_triangle_property_angle_equal(1,CBA,GHF)"
+    ],
+    "similar_triangle_property_angle_equal(1,CBA,GHF)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,CBA,GHF)"
+    ]
+  }
 }

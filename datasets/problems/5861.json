@@ -29,18 +29,56 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "adjacent_complementary_angle(HBA,ABC)",
-    "vertical_angle(AEF,BEH)",
-    "congruent_triangle_judgment_aas(FAE,HBE)",
-    "congruent_triangle_property_line_equal(EFA,EHB)",
-    "line_addition(AG,GC)",
-    "line_addition(AF,FD)",
-    "line_addition(HB,BC)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "vertical_angle(AGF,CGH)",
-    "similar_triangle_judgment_aa(FAG,HCG)",
-    "similar_triangle_property_line_ratio(FAG,HCG)",
-    "similar_triangle_property_line_ratio(GFA,GHC)"
-  ]
+    "adjacent_complementary_angle(1,HBA,ABC)",
+    "vertical_angle(1,AEF,BEH)",
+    "congruent_triangle_judgment_aas(2,FAE,HBE)",
+    "congruent_triangle_property_line_equal(1,EFA,EHB)",
+    "line_addition(1,AG,GC)",
+    "line_addition(1,AF,FD)",
+    "line_addition(1,HB,BC)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "parallel_property_alternate_interior_angle(1,AD,BC)",
+    "vertical_angle(1,AGF,CGH)",
+    "similar_triangle_judgment_aa(1,FAG,HCG)",
+    "similar_triangle_property_line_ratio(1,FAG,HCG)",
+    "similar_triangle_property_line_ratio(1,GFA,GHC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,HBA,ABC)": [
+      "congruent_triangle_judgment_aas(2,FAE,HBE)"
+    ],
+    "vertical_angle(1,AEF,BEH)": [
+      "congruent_triangle_judgment_aas(2,FAE,HBE)"
+    ],
+    "congruent_triangle_judgment_aas(2,FAE,HBE)": [
+      "congruent_triangle_property_line_equal(1,EFA,EHB)"
+    ],
+    "congruent_triangle_property_line_equal(1,EFA,EHB)": [],
+    "line_addition(1,AG,GC)": [],
+    "line_addition(1,AF,FD)": [],
+    "line_addition(1,HB,BC)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "parallel_property_alternate_interior_angle(1,AD,BC)": [
+      "similar_triangle_judgment_aa(1,FAG,HCG)"
+    ],
+    "vertical_angle(1,AGF,CGH)": [
+      "similar_triangle_judgment_aa(1,FAG,HCG)"
+    ],
+    "similar_triangle_judgment_aa(1,FAG,HCG)": [
+      "similar_triangle_property_line_ratio(1,FAG,HCG)",
+      "similar_triangle_property_line_ratio(1,GFA,GHC)"
+    ],
+    "similar_triangle_property_line_ratio(1,FAG,HCG)": [],
+    "similar_triangle_property_line_ratio(1,GFA,GHC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,HBA,ABC)",
+      "vertical_angle(1,AEF,BEH)",
+      "line_addition(1,AG,GC)",
+      "line_addition(1,AF,FD)",
+      "line_addition(1,HB,BC)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "parallel_property_alternate_interior_angle(1,AD,BC)",
+      "vertical_angle(1,AGF,CGH)"
+    ]
+  }
 }

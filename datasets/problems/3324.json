@@ -23,8 +23,18 @@
   "goal_cdl": "Value(MeasureOfAngle(BPC))",
   "problem_answer": "57",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(PE,DC)",
-    "parallel_property_alternate_interior_angle(AB,PE)",
-    "angle_addition(BPE,EPC)"
-  ]
+    "parallel_property_alternate_interior_angle(1,PE,DC)",
+    "parallel_property_alternate_interior_angle(2,AB,PE)",
+    "angle_addition(1,BPE,EPC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,PE,DC)": [],
+    "parallel_property_alternate_interior_angle(2,AB,PE)": [],
+    "angle_addition(1,BPE,EPC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,PE,DC)",
+      "parallel_property_alternate_interior_angle(2,AB,PE)",
+      "angle_addition(1,BPE,EPC)"
+    ]
+  }
 }

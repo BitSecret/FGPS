@@ -18,8 +18,19 @@
   "goal_cdl": "Value(Tan(MeasureOfAngle(CBA)))",
   "problem_answer": "0.6666666666666666",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(ACB)",
-    "right_triangle_property_pythagorean(ACB)",
-    "cosine_theorem(BAC)"
-  ]
+    "right_triangle_judgment_angle(1,ACB)",
+    "right_triangle_property_pythagorean(1,ACB)",
+    "cosine_theorem(1,BAC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,ACB)": [
+      "right_triangle_property_pythagorean(1,ACB)"
+    ],
+    "right_triangle_property_pythagorean(1,ACB)": [],
+    "cosine_theorem(1,BAC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,ACB)",
+      "cosine_theorem(1,BAC)"
+    ]
+  }
 }

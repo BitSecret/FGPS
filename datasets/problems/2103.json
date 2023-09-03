@@ -25,15 +25,45 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CMAD))",
   "problem_answer": "814",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AM,DC,E)",
-    "parallel_property_collinear_extend(EM,DC,F)",
-    "parallel_judgment_per_per(FC,ED)",
-    "parallelogram_judgment_parallel_and_parallel(CFED)",
-    "parallelogram_property_opposite_line_equal(FEDC)",
-    "adjacent_complementary_angle(MFC,CFE)",
-    "altitude_of_quadrilateral_judgment_left_vertex(CF,CMAD)",
-    "line_addition(MF,FE)",
-    "line_addition(ME,EA)",
-    "trapezoid_area_formula(CMAD)"
-  ]
+    "parallel_property_collinear_extend(3,AM,DC,E)",
+    "parallel_property_collinear_extend(3,EM,DC,F)",
+    "parallel_judgment_per_per(1,FC,ED)",
+    "parallelogram_judgment_parallel_and_parallel(1,CFED)",
+    "parallelogram_property_opposite_line_equal(1,FEDC)",
+    "adjacent_complementary_angle(1,MFC,CFE)",
+    "altitude_of_quadrilateral_judgment_left_vertex(2,CF,CMAD)",
+    "line_addition(1,MF,FE)",
+    "line_addition(1,ME,EA)",
+    "trapezoid_area_formula(1,CMAD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AM,DC,E)": [
+      "parallel_property_collinear_extend(3,EM,DC,F)"
+    ],
+    "parallel_property_collinear_extend(3,EM,DC,F)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CFED)"
+    ],
+    "parallel_judgment_per_per(1,FC,ED)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CFED)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,CFED)": [
+      "parallelogram_property_opposite_line_equal(1,FEDC)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,FEDC)": [],
+    "adjacent_complementary_angle(1,MFC,CFE)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(2,CF,CMAD)"
+    ],
+    "altitude_of_quadrilateral_judgment_left_vertex(2,CF,CMAD)": [],
+    "line_addition(1,MF,FE)": [],
+    "line_addition(1,ME,EA)": [],
+    "trapezoid_area_formula(1,CMAD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AM,DC,E)",
+      "parallel_judgment_per_per(1,FC,ED)",
+      "adjacent_complementary_angle(1,MFC,CFE)",
+      "line_addition(1,MF,FE)",
+      "line_addition(1,ME,EA)",
+      "trapezoid_area_formula(1,CMAD)"
+    ]
+  }
 }

@@ -21,10 +21,29 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "30*sqrt(3)",
   "theorem_seqs": [
-    "flat_angle(CDB)",
-    "angle_addition(CDA,ADB)",
-    "triangle_property_angle_sum(ACD)",
-    "isosceles_triangle_judgment_angle_equal(DAC)",
-    "sine_theorem(ADB)"
-  ]
+    "flat_angle(1,CDB)",
+    "angle_addition(1,CDA,ADB)",
+    "triangle_property_angle_sum(1,ACD)",
+    "isosceles_triangle_judgment_angle_equal(1,DAC)",
+    "sine_theorem(1,ADB)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,CDB)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAC)"
+    ],
+    "angle_addition(1,CDA,ADB)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAC)"
+    ],
+    "triangle_property_angle_sum(1,ACD)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAC)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,DAC)": [],
+    "sine_theorem(1,ADB)": [],
+    "START": [
+      "flat_angle(1,CDB)",
+      "angle_addition(1,CDA,ADB)",
+      "triangle_property_angle_sum(1,ACD)",
+      "sine_theorem(1,ADB)"
+    ]
+  }
 }

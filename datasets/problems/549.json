@@ -21,8 +21,20 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "adjacent_complementary_angle(SCA,ACB)",
-    "right_triangle_judgment_angle(ACB)",
-    "right_triangle_property_pythagorean(ACB)"
-  ]
+    "adjacent_complementary_angle(1,SCA,ACB)",
+    "right_triangle_judgment_angle(1,ACB)",
+    "right_triangle_property_pythagorean(1,ACB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,SCA,ACB)": [
+      "right_triangle_judgment_angle(1,ACB)"
+    ],
+    "right_triangle_judgment_angle(1,ACB)": [
+      "right_triangle_property_pythagorean(1,ACB)"
+    ],
+    "right_triangle_property_pythagorean(1,ACB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,SCA,ACB)"
+    ]
+  }
 }

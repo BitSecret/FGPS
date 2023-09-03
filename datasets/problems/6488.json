@@ -28,18 +28,52 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "adjacent_complementary_angle(DOE,EOB)",
-    "mirror_congruent_triangle_judgment_sas(OBE,OED)",
-    "mirror_congruent_triangle_property_line_equal(OBE,OED)",
-    "line_addition(BE,EC)",
-    "triangle_perimeter_formula(ABD)",
-    "triangle_perimeter_formula(ECD)",
-    "triangle_perimeter_formula(DAC)",
-    "triangle_perimeter_formula(ABC)",
-    "triangle_perimeter_formula(BCD)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "adjacent_complementary_angle(1,DOE,EOB)",
+    "mirror_congruent_triangle_judgment_sas(1,OBE,OED)",
+    "mirror_congruent_triangle_property_line_equal(1,OBE,OED)",
+    "line_addition(1,BE,EC)",
+    "triangle_perimeter_formula(1,ABD)",
+    "triangle_perimeter_formula(1,ECD)",
+    "triangle_perimeter_formula(1,DAC)",
+    "triangle_perimeter_formula(1,ABC)",
+    "triangle_perimeter_formula(1,BCD)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "mirror_congruent_triangle_judgment_sas(1,OBE,OED)"
+    ],
+    "adjacent_complementary_angle(1,DOE,EOB)": [
+      "mirror_congruent_triangle_judgment_sas(1,OBE,OED)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,OBE,OED)": [
+      "mirror_congruent_triangle_property_line_equal(1,OBE,OED)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,OBE,OED)": [],
+    "line_addition(1,BE,EC)": [],
+    "triangle_perimeter_formula(1,ABD)": [],
+    "triangle_perimeter_formula(1,ECD)": [],
+    "triangle_perimeter_formula(1,DAC)": [],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "triangle_perimeter_formula(1,BCD)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "adjacent_complementary_angle(1,DOE,EOB)",
+      "line_addition(1,BE,EC)",
+      "triangle_perimeter_formula(1,ABD)",
+      "triangle_perimeter_formula(1,ECD)",
+      "triangle_perimeter_formula(1,DAC)",
+      "triangle_perimeter_formula(1,ABC)",
+      "triangle_perimeter_formula(1,BCD)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

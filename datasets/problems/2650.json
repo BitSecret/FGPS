@@ -21,7 +21,16 @@
   "goal_cdl": "Value(LengthOfLine(XW))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_sas(ZXW,ZYX)",
-    "mirror_congruent_triangle_property_line_equal(ZXW,ZYX)"
-  ]
+    "mirror_congruent_triangle_judgment_sas(1,ZXW,ZYX)",
+    "mirror_congruent_triangle_property_line_equal(1,ZXW,ZYX)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_sas(1,ZXW,ZYX)": [
+      "mirror_congruent_triangle_property_line_equal(1,ZXW,ZYX)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,ZXW,ZYX)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_sas(1,ZXW,ZYX)"
+    ]
+  }
 }

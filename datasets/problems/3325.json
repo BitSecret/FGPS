@@ -20,8 +20,19 @@
   "goal_cdl": "Value(MeasureOfAngle(DCB))",
   "problem_answer": "142",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BA,DC,E)",
-    "adjacent_complementary_angle(ABC,CBE)",
-    "parallel_property_ipsilateral_internal_angle(CD,BE)"
-  ]
+    "parallel_property_collinear_extend(1,BA,DC,E)",
+    "adjacent_complementary_angle(1,ABC,CBE)",
+    "parallel_property_ipsilateral_internal_angle(1,CD,BE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,BA,DC,E)": [
+      "parallel_property_ipsilateral_internal_angle(1,CD,BE)"
+    ],
+    "adjacent_complementary_angle(1,ABC,CBE)": [],
+    "parallel_property_ipsilateral_internal_angle(1,CD,BE)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,BA,DC,E)",
+      "adjacent_complementary_angle(1,ABC,CBE)"
+    ]
+  }
 }

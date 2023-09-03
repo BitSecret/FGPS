@@ -25,8 +25,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "9",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(BC,E,E)",
-    "right_triangle_judgment_angle(ECB)",
-    "right_triangle_property_pythagorean(ECB)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,BC,E,E)",
+    "right_triangle_judgment_angle(1,ECB)",
+    "right_triangle_property_pythagorean(1,ECB)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,BC,E,E)": [
+      "right_triangle_judgment_angle(1,ECB)"
+    ],
+    "right_triangle_judgment_angle(1,ECB)": [
+      "right_triangle_property_pythagorean(1,ECB)"
+    ],
+    "right_triangle_property_pythagorean(1,ECB)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,BC,E,E)"
+    ]
+  }
 }

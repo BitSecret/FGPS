@@ -24,7 +24,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "4*sqrt(29)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(DEC)",
-    "right_triangle_property_pythagorean(DEC)"
-  ]
+    "right_triangle_judgment_angle(1,DEC)",
+    "right_triangle_property_pythagorean(1,DEC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,DEC)": [
+      "right_triangle_property_pythagorean(1,DEC)"
+    ],
+    "right_triangle_property_pythagorean(1,DEC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,DEC)"
+    ]
+  }
 }

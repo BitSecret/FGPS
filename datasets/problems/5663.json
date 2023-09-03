@@ -21,16 +21,48 @@
   "goal_cdl": "Value(AreaOfTriangle(ABC))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "line_addition(AD,DB)",
-    "line_addition(AE,EC)",
-    "similar_triangle_judgment_sas(ADE,ABC)",
-    "similar_triangle_judgment_sas(ABC,ADE)",
-    "similar_triangle_property_line_ratio(ADE,ABC)",
-    "similar_triangle_property_line_ratio(DEA,BCA)",
-    "similar_triangle_property_line_ratio(EAD,CAB)",
-    "similar_triangle_property_line_ratio(ABC,ADE)",
-    "similar_triangle_property_line_ratio(BCA,DEA)",
-    "similar_triangle_property_line_ratio(CAB,EAD)",
-    "similar_triangle_property_area_square_ratio(ADE,ABC)"
-  ]
+    "line_addition(1,AD,DB)",
+    "line_addition(1,AE,EC)",
+    "similar_triangle_judgment_sas(1,ADE,ABC)",
+    "similar_triangle_judgment_sas(1,ABC,ADE)",
+    "similar_triangle_property_line_ratio(1,ADE,ABC)",
+    "similar_triangle_property_line_ratio(1,DEA,BCA)",
+    "similar_triangle_property_line_ratio(1,EAD,CAB)",
+    "similar_triangle_property_line_ratio(1,ABC,ADE)",
+    "similar_triangle_property_line_ratio(1,BCA,DEA)",
+    "similar_triangle_property_line_ratio(1,CAB,EAD)",
+    "similar_triangle_property_area_square_ratio(1,ADE,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AD,DB)": [
+      "similar_triangle_judgment_sas(1,ADE,ABC)",
+      "similar_triangle_judgment_sas(1,ABC,ADE)"
+    ],
+    "line_addition(1,AE,EC)": [
+      "similar_triangle_judgment_sas(1,ADE,ABC)",
+      "similar_triangle_judgment_sas(1,ABC,ADE)"
+    ],
+    "similar_triangle_judgment_sas(1,ADE,ABC)": [
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "similar_triangle_property_area_square_ratio(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,DEA,BCA)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)"
+    ],
+    "similar_triangle_judgment_sas(1,ABC,ADE)": [
+      "similar_triangle_property_line_ratio(1,ABC,ADE)",
+      "similar_triangle_property_line_ratio(1,BCA,DEA)",
+      "similar_triangle_property_line_ratio(1,CAB,EAD)"
+    ],
+    "similar_triangle_property_line_ratio(1,ADE,ABC)": [],
+    "similar_triangle_property_line_ratio(1,DEA,BCA)": [],
+    "similar_triangle_property_line_ratio(1,EAD,CAB)": [],
+    "similar_triangle_property_line_ratio(1,ABC,ADE)": [],
+    "similar_triangle_property_line_ratio(1,BCA,DEA)": [],
+    "similar_triangle_property_line_ratio(1,CAB,EAD)": [],
+    "similar_triangle_property_area_square_ratio(1,ADE,ABC)": [],
+    "START": [
+      "line_addition(1,AD,DB)",
+      "line_addition(1,AE,EC)"
+    ]
+  }
 }

@@ -32,13 +32,40 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "55",
   "theorem_seqs": [
-    "congruent_arc_judgment_chord_equal(LGH,LJK)",
-    "congruent_arc_property_length_equal(LGH,LJK)",
-    "arc_addition_length(LGJ,LJH)",
-    "arc_addition_length(LJH,LHK)",
-    "congruent_arc_judgment_length_equal(LHK,LGJ)",
-    "congruent_arc_property_measure_equal(LHK,LGJ)",
-    "arc_property_center_angle(LGJ,L)",
-    "arc_property_center_angle(LHK,L)"
-  ]
+    "congruent_arc_judgment_chord_equal(1,LGH,LJK)",
+    "congruent_arc_property_length_equal(1,LGH,LJK)",
+    "arc_addition_length(1,LGJ,LJH)",
+    "arc_addition_length(1,LJH,LHK)",
+    "congruent_arc_judgment_length_equal(1,LHK,LGJ)",
+    "congruent_arc_property_measure_equal(1,LHK,LGJ)",
+    "arc_property_center_angle(1,LGJ,L)",
+    "arc_property_center_angle(1,LHK,L)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_chord_equal(1,LGH,LJK)": [
+      "congruent_arc_property_length_equal(1,LGH,LJK)"
+    ],
+    "congruent_arc_property_length_equal(1,LGH,LJK)": [
+      "congruent_arc_judgment_length_equal(1,LHK,LGJ)"
+    ],
+    "arc_addition_length(1,LGJ,LJH)": [
+      "congruent_arc_judgment_length_equal(1,LHK,LGJ)"
+    ],
+    "arc_addition_length(1,LJH,LHK)": [
+      "congruent_arc_judgment_length_equal(1,LHK,LGJ)"
+    ],
+    "congruent_arc_judgment_length_equal(1,LHK,LGJ)": [
+      "congruent_arc_property_measure_equal(1,LHK,LGJ)"
+    ],
+    "congruent_arc_property_measure_equal(1,LHK,LGJ)": [],
+    "arc_property_center_angle(1,LGJ,L)": [],
+    "arc_property_center_angle(1,LHK,L)": [],
+    "START": [
+      "congruent_arc_judgment_chord_equal(1,LGH,LJK)",
+      "arc_addition_length(1,LGJ,LJH)",
+      "arc_addition_length(1,LJH,LHK)",
+      "arc_property_center_angle(1,LGJ,L)",
+      "arc_property_center_angle(1,LHK,L)"
+    ]
+  }
 }

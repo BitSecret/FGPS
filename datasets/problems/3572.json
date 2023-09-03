@@ -22,8 +22,18 @@
   "goal_cdl": "Value(MeasureOfAngle(ODC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(CD,OB,A)",
-    "angle_addition(COD,DOB)",
-    "parallel_property_alternate_interior_angle(CD,OB)"
-  ]
+    "parallel_property_corresponding_angle(1,CD,OB,A)",
+    "angle_addition(1,COD,DOB)",
+    "parallel_property_alternate_interior_angle(2,CD,OB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,CD,OB,A)": [],
+    "angle_addition(1,COD,DOB)": [],
+    "parallel_property_alternate_interior_angle(2,CD,OB)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,CD,OB,A)",
+      "angle_addition(1,COD,DOB)",
+      "parallel_property_alternate_interior_angle(2,CD,OB)"
+    ]
+  }
 }

@@ -23,8 +23,19 @@
   "goal_cdl": "Value(LengthOfLine(GK))",
   "problem_answer": "26.8",
   "theorem_seqs": [
-    "adjacent_complementary_angle(GIH,HIK)",
-    "altitude_of_quadrilateral_judgment_left_vertex(HI,HGKJ)",
-    "trapezoid_area_formula(HGKJ)"
-  ]
+    "adjacent_complementary_angle(1,GIH,HIK)",
+    "altitude_of_quadrilateral_judgment_left_vertex(2,HI,HGKJ)",
+    "trapezoid_area_formula(1,HGKJ)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,GIH,HIK)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(2,HI,HGKJ)"
+    ],
+    "altitude_of_quadrilateral_judgment_left_vertex(2,HI,HGKJ)": [],
+    "trapezoid_area_formula(1,HGKJ)": [],
+    "START": [
+      "adjacent_complementary_angle(1,GIH,HIK)",
+      "trapezoid_area_formula(1,HGKJ)"
+    ]
+  }
 }

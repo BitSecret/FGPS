@@ -25,14 +25,41 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CDO,ODA)",
-    "line_addition(AO,OB)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "diameter_of_circle_judgment_pass_centre(AOB,O)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "similar_triangle_judgment_aa(BCA,ODA)",
-    "similar_triangle_property_line_ratio(CAB,DAO)",
-    "similar_triangle_property_line_ratio(ABC,AOD)"
-  ]
+    "adjacent_complementary_angle(1,CDO,ODA)",
+    "line_addition(1,AO,OB)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "similar_triangle_judgment_aa(1,BCA,ODA)",
+    "similar_triangle_property_line_ratio(1,CAB,DAO)",
+    "similar_triangle_property_line_ratio(1,ABC,AOD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CDO,ODA)": [
+      "similar_triangle_judgment_aa(1,BCA,ODA)"
+    ],
+    "line_addition(1,AO,OB)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [
+      "similar_triangle_judgment_aa(1,BCA,ODA)"
+    ],
+    "similar_triangle_judgment_aa(1,BCA,ODA)": [
+      "similar_triangle_property_line_ratio(1,CAB,DAO)",
+      "similar_triangle_property_line_ratio(1,ABC,AOD)"
+    ],
+    "similar_triangle_property_line_ratio(1,CAB,DAO)": [],
+    "similar_triangle_property_line_ratio(1,ABC,AOD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CDO,ODA)",
+      "line_addition(1,AO,OB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)"
+    ]
+  }
 }

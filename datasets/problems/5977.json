@@ -25,8 +25,20 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "2*sqrt(2)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(CB,O,O)",
-    "right_triangle_judgment_angle(ABC)",
-    "right_triangle_property_pythagorean(ABC)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,CB,O,O)",
+    "right_triangle_judgment_angle(1,ABC)",
+    "right_triangle_property_pythagorean(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,CB,O,O)": [
+      "right_triangle_judgment_angle(1,ABC)"
+    ],
+    "right_triangle_judgment_angle(1,ABC)": [
+      "right_triangle_property_pythagorean(1,ABC)"
+    ],
+    "right_triangle_property_pythagorean(1,ABC)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,CB,O,O)"
+    ]
+  }
 }

@@ -18,10 +18,10 @@
     "Parallelogram(MRPN)"
   ],
   "image_cdl": [
-    "Equal(LengthOfLine(PQ),11.1)",
+    "Equal(LengthOfLine(PQ),12)",
     "Equal(LengthOfLine(RP),20)",
-    "Equal(LengthOfLine(RM),17.9)",
-    "Equal(LengthOfLine(NQ),15.4)",
+    "Equal(LengthOfLine(RM),18)",
+    "Equal(LengthOfLine(NQ),15)",
     "Equal(LengthOfLine(MN),3*x-4)",
     "Equal(LengthOfLine(PN),2*y+5)",
     "Equal(LengthOfLine(RQ),3*z-3)",
@@ -30,8 +30,14 @@
     "Equal(MeasureOfAngle(NQP),83)"
   ],
   "goal_cdl": "Value(y)",
-  "problem_answer": "6.45",
+  "problem_answer": "13/2",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(MRPN)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,MRPN)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,MRPN)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,MRPN)"
+    ]
+  }
 }

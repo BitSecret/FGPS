@@ -22,9 +22,23 @@
   "goal_cdl": "Value(LengthOfLine(SQ))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(PT,QR,S)",
-    "similar_triangle_judgment_aa(TSP,RSQ)",
-    "similar_triangle_property_line_ratio(TSP,RSQ)",
-    "similar_triangle_property_line_ratio(SPT,SQR)"
-  ]
+    "parallel_property_corresponding_angle(1,PT,QR,S)",
+    "similar_triangle_judgment_aa(1,TSP,RSQ)",
+    "similar_triangle_property_line_ratio(1,TSP,RSQ)",
+    "similar_triangle_property_line_ratio(1,SPT,SQR)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,PT,QR,S)": [
+      "similar_triangle_judgment_aa(1,TSP,RSQ)"
+    ],
+    "similar_triangle_judgment_aa(1,TSP,RSQ)": [
+      "similar_triangle_property_line_ratio(1,TSP,RSQ)",
+      "similar_triangle_property_line_ratio(1,SPT,SQR)"
+    ],
+    "similar_triangle_property_line_ratio(1,TSP,RSQ)": [],
+    "similar_triangle_property_line_ratio(1,SPT,SQR)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,PT,QR,S)"
+    ]
+  }
 }

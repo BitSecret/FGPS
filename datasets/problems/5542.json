@@ -19,7 +19,15 @@
   "goal_cdl": "Value(AreaOfSector(OBA))",
   "problem_answer": "1/3*pi",
   "theorem_seqs": [
-    "arc_property_center_angle(OBA,O)",
-    "sector_area_formula(OBA)"
-  ]
+    "arc_property_center_angle(1,OBA,O)",
+    "sector_area_formula(1,OBA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OBA,O)": [],
+    "sector_area_formula(1,OBA)": [],
+    "START": [
+      "arc_property_center_angle(1,OBA,O)",
+      "sector_area_formula(1,OBA)"
+    ]
+  }
 }

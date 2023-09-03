@@ -27,11 +27,33 @@
   "goal_cdl": "Value(LengthOfLine(CE))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallelogram_judgment_equal_and_equal(ABCD)",
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "isosceles_triangle_judgment_line_equal(BCA)",
-    "isosceles_triangle_property_angle_equal(BCA)",
-    "mirror_congruent_triangle_judgment_aas(CAE,CFA)",
-    "mirror_congruent_triangle_property_line_equal(AEC,ACF)"
-  ]
+    "parallelogram_judgment_equal_and_equal(1,ABCD)",
+    "parallel_property_alternate_interior_angle(1,AD,BC)",
+    "isosceles_triangle_judgment_line_equal(1,BCA)",
+    "isosceles_triangle_property_angle_equal(1,BCA)",
+    "mirror_congruent_triangle_judgment_aas(1,CAE,CFA)",
+    "mirror_congruent_triangle_property_line_equal(1,AEC,ACF)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_equal_and_equal(1,ABCD)": [
+      "parallel_property_alternate_interior_angle(1,AD,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AD,BC)": [
+      "mirror_congruent_triangle_judgment_aas(1,CAE,CFA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,BCA)": [
+      "isosceles_triangle_property_angle_equal(1,BCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BCA)": [
+      "mirror_congruent_triangle_judgment_aas(1,CAE,CFA)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,CAE,CFA)": [
+      "mirror_congruent_triangle_property_line_equal(1,AEC,ACF)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,AEC,ACF)": [],
+    "START": [
+      "parallelogram_judgment_equal_and_equal(1,ABCD)",
+      "isosceles_triangle_judgment_line_equal(1,BCA)"
+    ]
+  }
 }

@@ -21,8 +21,18 @@
   "goal_cdl": "Value(MeasureOfAngle(CEA))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AB,CD)",
-    "triangle_property_angle_sum(AEB)",
-    "adjacent_complementary_angle(CEA,AEB)"
-  ]
+    "parallel_property_alternate_interior_angle(2,AB,CD)",
+    "triangle_property_angle_sum(1,AEB)",
+    "adjacent_complementary_angle(1,CEA,AEB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,AB,CD)": [],
+    "triangle_property_angle_sum(1,AEB)": [],
+    "adjacent_complementary_angle(1,CEA,AEB)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,AB,CD)",
+      "triangle_property_angle_sum(1,AEB)",
+      "adjacent_complementary_angle(1,CEA,AEB)"
+    ]
+  }
 }

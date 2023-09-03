@@ -22,14 +22,39 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "6",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BDC,CDA)",
-    "mirror_similar_triangle_judgment_aa(CDA,BAC)",
-    "mirror_similar_triangle_judgment_aa(CBD,ACB)",
-    "mirror_similar_triangle_property_line_ratio(CDA,BAC)",
-    "mirror_similar_triangle_property_line_ratio(DAC,CBA)",
-    "mirror_similar_triangle_property_line_ratio(ACD,ACB)",
-    "mirror_similar_triangle_property_line_ratio(CBD,ACB)",
-    "mirror_similar_triangle_property_line_ratio(BDC,BAC)",
-    "mirror_similar_triangle_property_line_ratio(DCB,CBA)"
-  ]
+    "adjacent_complementary_angle(1,BDC,CDA)",
+    "mirror_similar_triangle_judgment_aa(1,CDA,BAC)",
+    "mirror_similar_triangle_judgment_aa(1,CBD,ACB)",
+    "mirror_similar_triangle_property_line_ratio(1,CDA,BAC)",
+    "mirror_similar_triangle_property_line_ratio(1,DAC,CBA)",
+    "mirror_similar_triangle_property_line_ratio(1,ACD,ACB)",
+    "mirror_similar_triangle_property_line_ratio(1,CBD,ACB)",
+    "mirror_similar_triangle_property_line_ratio(1,BDC,BAC)",
+    "mirror_similar_triangle_property_line_ratio(1,DCB,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BDC,CDA)": [
+      "mirror_similar_triangle_judgment_aa(1,CBD,ACB)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,CDA,BAC)": [
+      "mirror_similar_triangle_property_line_ratio(1,CDA,BAC)",
+      "mirror_similar_triangle_property_line_ratio(1,DAC,CBA)",
+      "mirror_similar_triangle_property_line_ratio(1,ACD,ACB)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,CBD,ACB)": [
+      "mirror_similar_triangle_property_line_ratio(1,CBD,ACB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDC,BAC)",
+      "mirror_similar_triangle_property_line_ratio(1,DCB,CBA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,CDA,BAC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DAC,CBA)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ACD,ACB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CBD,ACB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BDC,BAC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DCB,CBA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BDC,CDA)",
+      "mirror_similar_triangle_judgment_aa(1,CDA,BAC)"
+    ]
+  }
 }

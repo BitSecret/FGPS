@@ -28,18 +28,52 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(AMN),MeasureOfAngle(MNA)))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(MB,AP)",
-    "perpendicular_bisector_property_distance_equal(ND,QA)",
-    "isosceles_triangle_judgment_line_equal(MAP)",
-    "isosceles_triangle_judgment_line_equal(NQA)",
-    "isosceles_triangle_property_angle_equal(MAP)",
-    "isosceles_triangle_property_angle_equal(NQA)",
-    "triangle_property_angle_sum(APM)",
-    "adjacent_complementary_angle(PMA,AMN)",
-    "triangle_property_angle_sum(ANQ)",
-    "adjacent_complementary_angle(MNA,ANQ)",
-    "triangle_property_angle_sum(AMN)",
-    "angle_addition(DAN,NAM)",
-    "angle_addition(DAM,MAB)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,MB,AP)",
+    "perpendicular_bisector_property_distance_equal(1,ND,QA)",
+    "isosceles_triangle_judgment_line_equal(1,MAP)",
+    "isosceles_triangle_judgment_line_equal(1,NQA)",
+    "isosceles_triangle_property_angle_equal(1,MAP)",
+    "isosceles_triangle_property_angle_equal(1,NQA)",
+    "triangle_property_angle_sum(1,APM)",
+    "adjacent_complementary_angle(1,PMA,AMN)",
+    "triangle_property_angle_sum(1,ANQ)",
+    "adjacent_complementary_angle(1,MNA,ANQ)",
+    "triangle_property_angle_sum(1,AMN)",
+    "angle_addition(1,DAN,NAM)",
+    "angle_addition(1,DAM,MAB)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,MB,AP)": [
+      "isosceles_triangle_judgment_line_equal(1,MAP)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,ND,QA)": [
+      "isosceles_triangle_judgment_line_equal(1,NQA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,MAP)": [
+      "isosceles_triangle_property_angle_equal(1,MAP)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,NQA)": [
+      "isosceles_triangle_property_angle_equal(1,NQA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,MAP)": [],
+    "isosceles_triangle_property_angle_equal(1,NQA)": [],
+    "triangle_property_angle_sum(1,APM)": [],
+    "adjacent_complementary_angle(1,PMA,AMN)": [],
+    "triangle_property_angle_sum(1,ANQ)": [],
+    "adjacent_complementary_angle(1,MNA,ANQ)": [],
+    "triangle_property_angle_sum(1,AMN)": [],
+    "angle_addition(1,DAN,NAM)": [],
+    "angle_addition(1,DAM,MAB)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,MB,AP)",
+      "perpendicular_bisector_property_distance_equal(1,ND,QA)",
+      "triangle_property_angle_sum(1,APM)",
+      "adjacent_complementary_angle(1,PMA,AMN)",
+      "triangle_property_angle_sum(1,ANQ)",
+      "adjacent_complementary_angle(1,MNA,ANQ)",
+      "triangle_property_angle_sum(1,AMN)",
+      "angle_addition(1,DAN,NAM)",
+      "angle_addition(1,DAM,MAB)"
+    ]
+  }
 }

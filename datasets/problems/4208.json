@@ -25,15 +25,46 @@
   "goal_cdl": "Value(MeasureOfAngle(OCA))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "isosceles_triangle_judgment_line_equal(OBC)",
-    "isosceles_triangle_property_angle_equal(OBC)",
-    "triangle_property_angle_sum(OBC)",
-    "adjacent_complementary_angle(AOC,COB)",
-    "triangle_property_angle_sum(OCA)",
-    "isosceles_triangle_judgment_line_equal(OCA)",
-    "isosceles_triangle_property_angle_equal(OCA)"
-  ]
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBC)",
+    "isosceles_triangle_property_angle_equal(1,OBC)",
+    "triangle_property_angle_sum(1,OBC)",
+    "adjacent_complementary_angle(1,AOC,COB)",
+    "triangle_property_angle_sum(1,OCA)",
+    "isosceles_triangle_judgment_line_equal(1,OCA)",
+    "isosceles_triangle_property_angle_equal(1,OCA)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)",
+      "isosceles_triangle_judgment_line_equal(1,OCA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBC)": [
+      "isosceles_triangle_property_angle_equal(1,OBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBC)": [],
+    "triangle_property_angle_sum(1,OBC)": [],
+    "adjacent_complementary_angle(1,AOC,COB)": [],
+    "triangle_property_angle_sum(1,OCA)": [],
+    "isosceles_triangle_judgment_line_equal(1,OCA)": [
+      "isosceles_triangle_property_angle_equal(1,OCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OCA)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_property_angle_sum(1,OBC)",
+      "adjacent_complementary_angle(1,AOC,COB)",
+      "triangle_property_angle_sum(1,OCA)"
+    ]
+  }
 }

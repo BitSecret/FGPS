@@ -33,25 +33,81 @@
   "goal_cdl": "Value(Add(PerimeterOfQuadrilateral(BEPG),PerimeterOfQuadrilateral(PHDF)))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,GH,F)",
-    "parallel_property_collinear_extend(HG,FA,P)",
-    "parallel_property_collinear_extend(BA,EF,G)",
-    "parallel_property_collinear_extend(FE,AG,P)",
-    "parallelogram_judgment_parallel_and_parallel(GPFA)",
-    "parallel_property_collinear_extend(GH,BC,P)",
-    "parallel_property_collinear_extend(CB,HP,E)",
-    "parallel_property_collinear_extend(EF,CD,P)",
-    "parallel_property_collinear_extend(DC,PE,H)",
-    "parallelogram_judgment_parallel_and_parallel(ECHP)",
-    "parallelogram_property_opposite_line_equal(GPFA)",
-    "parallelogram_property_opposite_line_equal(AGPF)",
-    "parallelogram_property_opposite_line_equal(ECHP)",
-    "parallelogram_property_opposite_line_equal(PECH)",
-    "line_addition(BG,GA)",
-    "line_addition(AF,FD)",
-    "line_addition(BE,EC)",
-    "line_addition(CH,HD)",
-    "quadrilateral_perimeter_formula(BEPG)",
-    "quadrilateral_perimeter_formula(PHDF)"
-  ]
+    "parallel_property_collinear_extend(3,AD,GH,F)",
+    "parallel_property_collinear_extend(3,HG,FA,P)",
+    "parallel_property_collinear_extend(3,BA,EF,G)",
+    "parallel_property_collinear_extend(3,FE,AG,P)",
+    "parallelogram_judgment_parallel_and_parallel(1,GPFA)",
+    "parallel_property_collinear_extend(3,GH,BC,P)",
+    "parallel_property_collinear_extend(3,CB,HP,E)",
+    "parallel_property_collinear_extend(3,EF,CD,P)",
+    "parallel_property_collinear_extend(3,DC,PE,H)",
+    "parallelogram_judgment_parallel_and_parallel(1,ECHP)",
+    "parallelogram_property_opposite_line_equal(1,GPFA)",
+    "parallelogram_property_opposite_line_equal(1,AGPF)",
+    "parallelogram_property_opposite_line_equal(1,ECHP)",
+    "parallelogram_property_opposite_line_equal(1,PECH)",
+    "line_addition(1,BG,GA)",
+    "line_addition(1,AF,FD)",
+    "line_addition(1,BE,EC)",
+    "line_addition(1,CH,HD)",
+    "quadrilateral_perimeter_formula(1,BEPG)",
+    "quadrilateral_perimeter_formula(1,PHDF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,GH,F)": [
+      "parallel_property_collinear_extend(3,HG,FA,P)"
+    ],
+    "parallel_property_collinear_extend(3,HG,FA,P)": [
+      "parallelogram_judgment_parallel_and_parallel(1,GPFA)"
+    ],
+    "parallel_property_collinear_extend(3,BA,EF,G)": [
+      "parallel_property_collinear_extend(3,FE,AG,P)"
+    ],
+    "parallel_property_collinear_extend(3,FE,AG,P)": [
+      "parallelogram_judgment_parallel_and_parallel(1,GPFA)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,GPFA)": [
+      "parallelogram_property_opposite_line_equal(1,GPFA)",
+      "parallelogram_property_opposite_line_equal(1,AGPF)"
+    ],
+    "parallel_property_collinear_extend(3,GH,BC,P)": [
+      "parallel_property_collinear_extend(3,CB,HP,E)"
+    ],
+    "parallel_property_collinear_extend(3,CB,HP,E)": [
+      "parallelogram_judgment_parallel_and_parallel(1,ECHP)"
+    ],
+    "parallel_property_collinear_extend(3,EF,CD,P)": [
+      "parallel_property_collinear_extend(3,DC,PE,H)"
+    ],
+    "parallel_property_collinear_extend(3,DC,PE,H)": [
+      "parallelogram_judgment_parallel_and_parallel(1,ECHP)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,ECHP)": [
+      "parallelogram_property_opposite_line_equal(1,ECHP)",
+      "parallelogram_property_opposite_line_equal(1,PECH)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,GPFA)": [],
+    "parallelogram_property_opposite_line_equal(1,AGPF)": [],
+    "parallelogram_property_opposite_line_equal(1,ECHP)": [],
+    "parallelogram_property_opposite_line_equal(1,PECH)": [],
+    "line_addition(1,BG,GA)": [],
+    "line_addition(1,AF,FD)": [],
+    "line_addition(1,BE,EC)": [],
+    "line_addition(1,CH,HD)": [],
+    "quadrilateral_perimeter_formula(1,BEPG)": [],
+    "quadrilateral_perimeter_formula(1,PHDF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,GH,F)",
+      "parallel_property_collinear_extend(3,BA,EF,G)",
+      "parallel_property_collinear_extend(3,GH,BC,P)",
+      "parallel_property_collinear_extend(3,EF,CD,P)",
+      "line_addition(1,BG,GA)",
+      "line_addition(1,AF,FD)",
+      "line_addition(1,BE,EC)",
+      "line_addition(1,CH,HD)",
+      "quadrilateral_perimeter_formula(1,BEPG)",
+      "quadrilateral_perimeter_formula(1,PHDF)"
+    ]
+  }
 }

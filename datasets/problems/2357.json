@@ -22,8 +22,19 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(DBCA))",
   "problem_answer": "678.5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BEA,AEC)",
-    "altitude_of_quadrilateral_judgment_right_vertex(AE,DBCA)",
-    "trapezoid_area_formula(DBCA)"
-  ]
+    "adjacent_complementary_angle(1,BEA,AEC)",
+    "altitude_of_quadrilateral_judgment_right_vertex(2,AE,DBCA)",
+    "trapezoid_area_formula(1,DBCA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BEA,AEC)": [
+      "altitude_of_quadrilateral_judgment_right_vertex(2,AE,DBCA)"
+    ],
+    "altitude_of_quadrilateral_judgment_right_vertex(2,AE,DBCA)": [],
+    "trapezoid_area_formula(1,DBCA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BEA,AEC)",
+      "trapezoid_area_formula(1,DBCA)"
+    ]
+  }
 }

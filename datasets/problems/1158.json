@@ -26,7 +26,16 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(BADC))",
   "problem_answer": "240",
   "theorem_seqs": [
-    "kite_judgment_equal_and_equal(BADC)",
-    "kite_area_formula_diagonal(BADC)"
-  ]
+    "kite_judgment_equal_and_equal(1,BADC)",
+    "kite_area_formula_diagonal(1,BADC)"
+  ],
+  "theorem_seq_dag": {
+    "kite_judgment_equal_and_equal(1,BADC)": [
+      "kite_area_formula_diagonal(1,BADC)"
+    ],
+    "kite_area_formula_diagonal(1,BADC)": [],
+    "START": [
+      "kite_judgment_equal_and_equal(1,BADC)"
+    ]
+  }
 }

@@ -21,7 +21,15 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(ABC),MeasureOfAngle(DBE)))",
   "problem_answer": "100",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ABC,CBD)",
-    "adjacent_complementary_angle(CBD,DBE)"
-  ]
+    "adjacent_complementary_angle(1,ABC,CBD)",
+    "adjacent_complementary_angle(1,CBD,DBE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ABC,CBD)": [],
+    "adjacent_complementary_angle(1,CBD,DBE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ABC,CBD)",
+      "adjacent_complementary_angle(1,CBD,DBE)"
+    ]
+  }
 }

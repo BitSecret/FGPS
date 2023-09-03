@@ -27,10 +27,26 @@
   "goal_cdl": "Value(LengthOfLine(DP))",
   "problem_answer": "2*sqrt(2)+2",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(OAD)",
-    "right_triangle_judgment_angle(BPA)",
-    "right_triangle_property_pythagorean(OAD)",
-    "right_triangle_property_length_of_median(BPA,O)",
-    "line_addition(PO,OD)"
-  ]
+    "right_triangle_judgment_angle(1,OAD)",
+    "right_triangle_judgment_angle(1,BPA)",
+    "right_triangle_property_pythagorean(1,OAD)",
+    "right_triangle_property_length_of_median(1,BPA,O)",
+    "line_addition(1,PO,OD)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,OAD)": [
+      "right_triangle_property_pythagorean(1,OAD)"
+    ],
+    "right_triangle_judgment_angle(1,BPA)": [
+      "right_triangle_property_length_of_median(1,BPA,O)"
+    ],
+    "right_triangle_property_pythagorean(1,OAD)": [],
+    "right_triangle_property_length_of_median(1,BPA,O)": [],
+    "line_addition(1,PO,OD)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,OAD)",
+      "right_triangle_judgment_angle(1,BPA)",
+      "line_addition(1,PO,OD)"
+    ]
+  }
 }

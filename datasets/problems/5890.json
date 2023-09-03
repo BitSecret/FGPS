@@ -29,10 +29,25 @@
   "goal_cdl": "Value(LengthOfLine(FC))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(NE,CAB)",
-    "midsegment_of_triangle_property_length(NE,CAB)",
-    "line_addition(AF,FN)",
-    "line_addition(AF,FC)",
-    "line_addition(AN,NC)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,NE,CAB)",
+    "midsegment_of_triangle_property_length(1,NE,CAB)",
+    "line_addition(1,AF,FN)",
+    "line_addition(1,AF,FC)",
+    "line_addition(1,AN,NC)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,NE,CAB)": [
+      "midsegment_of_triangle_property_length(1,NE,CAB)"
+    ],
+    "midsegment_of_triangle_property_length(1,NE,CAB)": [],
+    "line_addition(1,AF,FN)": [],
+    "line_addition(1,AF,FC)": [],
+    "line_addition(1,AN,NC)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,NE,CAB)",
+      "line_addition(1,AF,FN)",
+      "line_addition(1,AF,FC)",
+      "line_addition(1,AN,NC)"
+    ]
+  }
 }

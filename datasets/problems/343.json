@@ -24,13 +24,40 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "6*sqrt(42)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BXC,CXA)",
-    "angle_addition(ACX,XCB)",
-    "triangle_property_angle_sum(CBX)",
-    "similar_triangle_judgment_aa(CBX,ACX)",
-    "similar_triangle_property_line_ratio(CBX,ACX)",
-    "similar_triangle_property_line_ratio(BXC,CXA)",
-    "right_triangle_judgment_angle(CXA)",
-    "right_triangle_property_pythagorean(CXA)"
-  ]
+    "adjacent_complementary_angle(1,BXC,CXA)",
+    "angle_addition(1,ACX,XCB)",
+    "triangle_property_angle_sum(1,CBX)",
+    "similar_triangle_judgment_aa(1,CBX,ACX)",
+    "similar_triangle_property_line_ratio(1,CBX,ACX)",
+    "similar_triangle_property_line_ratio(1,BXC,CXA)",
+    "right_triangle_judgment_angle(1,CXA)",
+    "right_triangle_property_pythagorean(1,CXA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BXC,CXA)": [
+      "similar_triangle_judgment_aa(1,CBX,ACX)",
+      "right_triangle_judgment_angle(1,CXA)"
+    ],
+    "angle_addition(1,ACX,XCB)": [
+      "similar_triangle_judgment_aa(1,CBX,ACX)"
+    ],
+    "triangle_property_angle_sum(1,CBX)": [
+      "similar_triangle_judgment_aa(1,CBX,ACX)"
+    ],
+    "similar_triangle_judgment_aa(1,CBX,ACX)": [
+      "similar_triangle_property_line_ratio(1,CBX,ACX)",
+      "similar_triangle_property_line_ratio(1,BXC,CXA)"
+    ],
+    "similar_triangle_property_line_ratio(1,CBX,ACX)": [],
+    "similar_triangle_property_line_ratio(1,BXC,CXA)": [],
+    "right_triangle_judgment_angle(1,CXA)": [
+      "right_triangle_property_pythagorean(1,CXA)"
+    ],
+    "right_triangle_property_pythagorean(1,CXA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BXC,CXA)",
+      "angle_addition(1,ACX,XCB)",
+      "triangle_property_angle_sum(1,CBX)"
+    ]
+  }
 }

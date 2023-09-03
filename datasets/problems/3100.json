@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(GHF))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CD,EF,G)",
-    "parallel_property_collinear_extend(FE,GC,H)",
-    "parallel_property_corresponding_angle(HE,GC,A)",
-    "adjacent_complementary_angle(EHG,GHF)"
-  ]
+    "parallel_property_collinear_extend(3,CD,EF,G)",
+    "parallel_property_collinear_extend(3,FE,GC,H)",
+    "parallel_property_corresponding_angle(2,HE,GC,A)",
+    "adjacent_complementary_angle(1,EHG,GHF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CD,EF,G)": [
+      "parallel_property_collinear_extend(3,FE,GC,H)"
+    ],
+    "parallel_property_collinear_extend(3,FE,GC,H)": [
+      "parallel_property_corresponding_angle(2,HE,GC,A)"
+    ],
+    "parallel_property_corresponding_angle(2,HE,GC,A)": [],
+    "adjacent_complementary_angle(1,EHG,GHF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CD,EF,G)",
+      "adjacent_complementary_angle(1,EHG,GHF)"
+    ]
+  }
 }

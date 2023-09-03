@@ -34,8 +34,20 @@
   "goal_cdl": "Value(MeasureOfAngle(MFJ))",
   "problem_answer": "105",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(IM,CE,F)",
-    "parallel_property_collinear_extend(EC,MF,J)",
-    "parallel_property_ipsilateral_internal_angle(FM,JE)"
-  ]
+    "parallel_property_collinear_extend(3,IM,CE,F)",
+    "parallel_property_collinear_extend(3,EC,MF,J)",
+    "parallel_property_ipsilateral_internal_angle(1,FM,JE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,IM,CE,F)": [
+      "parallel_property_collinear_extend(3,EC,MF,J)"
+    ],
+    "parallel_property_collinear_extend(3,EC,MF,J)": [
+      "parallel_property_ipsilateral_internal_angle(1,FM,JE)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,FM,JE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,IM,CE,F)"
+    ]
+  }
 }

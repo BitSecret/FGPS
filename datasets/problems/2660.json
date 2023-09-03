@@ -22,10 +22,26 @@
   "goal_cdl": "Value(LengthOfLine(RW))",
   "problem_answer": "7.5",
   "theorem_seqs": [
-    "line_addition(SW,WR)",
-    "parallel_property_corresponding_angle(TS,LW,R)",
-    "similar_triangle_judgment_aa(WLR,STR)",
-    "similar_triangle_property_line_ratio(WLR,STR)",
-    "similar_triangle_property_line_ratio(LRW,TRS)"
-  ]
+    "line_addition(1,SW,WR)",
+    "parallel_property_corresponding_angle(2,TS,LW,R)",
+    "similar_triangle_judgment_aa(1,WLR,STR)",
+    "similar_triangle_property_line_ratio(1,WLR,STR)",
+    "similar_triangle_property_line_ratio(1,LRW,TRS)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,SW,WR)": [],
+    "parallel_property_corresponding_angle(2,TS,LW,R)": [
+      "similar_triangle_judgment_aa(1,WLR,STR)"
+    ],
+    "similar_triangle_judgment_aa(1,WLR,STR)": [
+      "similar_triangle_property_line_ratio(1,WLR,STR)",
+      "similar_triangle_property_line_ratio(1,LRW,TRS)"
+    ],
+    "similar_triangle_property_line_ratio(1,WLR,STR)": [],
+    "similar_triangle_property_line_ratio(1,LRW,TRS)": [],
+    "START": [
+      "line_addition(1,SW,WR)",
+      "parallel_property_corresponding_angle(2,TS,LW,R)"
+    ]
+  }
 }

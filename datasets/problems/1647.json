@@ -31,8 +31,20 @@
   "goal_cdl": "Value(LengthOfLine(PE))",
   "problem_answer": "10*sqrt(5)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CQP,PQE)",
-    "right_triangle_judgment_angle(PQE)",
-    "right_triangle_property_pythagorean(PQE)"
-  ]
+    "adjacent_complementary_angle(1,CQP,PQE)",
+    "right_triangle_judgment_angle(1,PQE)",
+    "right_triangle_property_pythagorean(1,PQE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CQP,PQE)": [
+      "right_triangle_judgment_angle(1,PQE)"
+    ],
+    "right_triangle_judgment_angle(1,PQE)": [
+      "right_triangle_property_pythagorean(1,PQE)"
+    ],
+    "right_triangle_property_pythagorean(1,PQE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CQP,PQE)"
+    ]
+  }
 }

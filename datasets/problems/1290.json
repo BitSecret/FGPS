@@ -31,9 +31,24 @@
   "goal_cdl": "Value(LengthOfLine(MB))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AMY,YMB)",
-    "adjacent_complementary_angle(YMB,BMX)",
-    "line_addition(AM,MB)",
-    "circle_property_chord_perpendicular_bisect_chord(X,XM,BA)"
-  ]
+    "adjacent_complementary_angle(1,AMY,YMB)",
+    "adjacent_complementary_angle(1,YMB,BMX)",
+    "line_addition(1,AM,MB)",
+    "circle_property_chord_perpendicular_bisect_chord(1,X,XM,BA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AMY,YMB)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,X,XM,BA)"
+    ],
+    "adjacent_complementary_angle(1,YMB,BMX)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,X,XM,BA)"
+    ],
+    "line_addition(1,AM,MB)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,X,XM,BA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AMY,YMB)",
+      "adjacent_complementary_angle(1,YMB,BMX)",
+      "line_addition(1,AM,MB)"
+    ]
+  }
 }

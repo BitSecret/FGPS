@@ -21,7 +21,15 @@
   "goal_cdl": "Value(MeasureOfAngle(AED))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "angle_addition(FEA,AED)",
-    "adjacent_complementary_angle(CEF,FED)"
-  ]
+    "angle_addition(1,FEA,AED)",
+    "adjacent_complementary_angle(1,CEF,FED)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,FEA,AED)": [],
+    "adjacent_complementary_angle(1,CEF,FED)": [],
+    "START": [
+      "angle_addition(1,FEA,AED)",
+      "adjacent_complementary_angle(1,CEF,FED)"
+    ]
+  }
 }

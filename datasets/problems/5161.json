@@ -34,16 +34,51 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "sqrt(2)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BOA)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "right_triangle_property_pythagorean(BOA)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OD,CB)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OE,AC)",
-    "line_addition(BD,DC)",
-    "line_addition(CE,EA)",
-    "similar_triangle_judgment_sas(CDE,CBA)",
-    "similar_triangle_property_line_ratio(ECD,ACB)",
-    "similar_triangle_property_line_ratio(CDE,CBA)"
-  ]
+    "right_triangle_judgment_angle(1,BOA)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "right_triangle_property_pythagorean(1,BOA)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,CB)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AC)",
+    "line_addition(1,BD,DC)",
+    "line_addition(1,CE,EA)",
+    "similar_triangle_judgment_sas(1,CDE,CBA)",
+    "similar_triangle_property_line_ratio(1,ECD,ACB)",
+    "similar_triangle_property_line_ratio(1,CDE,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BOA)": [
+      "right_triangle_property_pythagorean(1,BOA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "right_triangle_property_pythagorean(1,BOA)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,CB)": [
+      "similar_triangle_judgment_sas(1,CDE,CBA)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AC)": [
+      "similar_triangle_judgment_sas(1,CDE,CBA)"
+    ],
+    "line_addition(1,BD,DC)": [
+      "similar_triangle_judgment_sas(1,CDE,CBA)"
+    ],
+    "line_addition(1,CE,EA)": [
+      "similar_triangle_judgment_sas(1,CDE,CBA)"
+    ],
+    "similar_triangle_judgment_sas(1,CDE,CBA)": [
+      "similar_triangle_property_line_ratio(1,CDE,CBA)",
+      "similar_triangle_property_line_ratio(1,ECD,ACB)"
+    ],
+    "similar_triangle_property_line_ratio(1,ECD,ACB)": [],
+    "similar_triangle_property_line_ratio(1,CDE,CBA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BOA)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,CB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AC)",
+      "line_addition(1,BD,DC)",
+      "line_addition(1,CE,EA)"
+    ]
+  }
 }

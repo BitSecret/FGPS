@@ -26,13 +26,40 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ATBL))",
   "problem_answer": "20.48",
   "theorem_seqs": [
-    "adjacent_complementary_angle(APL,LPB)",
-    "adjacent_complementary_angle(LPB,BPT)",
-    "adjacent_complementary_angle(TPA,APL)",
-    "mirror_congruent_triangle_judgment_sas(PBL,PTB)",
-    "mirror_congruent_triangle_judgment_sas(PLA,PAT)",
-    "mirror_congruent_triangle_property_line_equal(PBL,PTB)",
-    "mirror_congruent_triangle_property_line_equal(PLA,PAT)",
-    "quadrilateral_perimeter_formula(ATBL)"
-  ]
+    "adjacent_complementary_angle(1,APL,LPB)",
+    "adjacent_complementary_angle(1,LPB,BPT)",
+    "adjacent_complementary_angle(1,TPA,APL)",
+    "mirror_congruent_triangle_judgment_sas(1,PBL,PTB)",
+    "mirror_congruent_triangle_judgment_sas(1,PLA,PAT)",
+    "mirror_congruent_triangle_property_line_equal(1,PBL,PTB)",
+    "mirror_congruent_triangle_property_line_equal(1,PLA,PAT)",
+    "quadrilateral_perimeter_formula(1,ATBL)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,APL,LPB)": [
+      "mirror_congruent_triangle_judgment_sas(1,PLA,PAT)",
+      "mirror_congruent_triangle_judgment_sas(1,PLA,PAT)"
+    ],
+    "adjacent_complementary_angle(1,LPB,BPT)": [
+      "mirror_congruent_triangle_judgment_sas(1,PBL,PTB)"
+    ],
+    "adjacent_complementary_angle(1,TPA,APL)": [
+      "mirror_congruent_triangle_judgment_sas(1,PLA,PAT)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,PBL,PTB)": [
+      "mirror_congruent_triangle_property_line_equal(1,PBL,PTB)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,PLA,PAT)": [
+      "mirror_congruent_triangle_property_line_equal(1,PLA,PAT)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,PBL,PTB)": [],
+    "mirror_congruent_triangle_property_line_equal(1,PLA,PAT)": [],
+    "quadrilateral_perimeter_formula(1,ATBL)": [],
+    "START": [
+      "adjacent_complementary_angle(1,APL,LPB)",
+      "adjacent_complementary_angle(1,LPB,BPT)",
+      "adjacent_complementary_angle(1,TPA,APL)",
+      "quadrilateral_perimeter_formula(1,ATBL)"
+    ]
+  }
 }

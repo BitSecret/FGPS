@@ -26,14 +26,45 @@
   "goal_cdl": "Value(LengthOfLine(PE))",
   "problem_answer": "2.4",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(PEB,CDB)",
-    "parallel_judgment_ipsilateral_internal_angle(DC,BA)",
-    "parallel_property_alternate_interior_angle(DC,BA)",
-    "similar_triangle_judgment_aa(PCD,PBA)",
-    "similar_triangle_property_line_ratio(PCD,PBA)",
-    "similar_triangle_property_line_ratio(DPC,APB)",
-    "similar_triangle_property_line_ratio(EBP,DBC)",
-    "similar_triangle_property_line_ratio(BPE,BCD)",
-    "line_addition(CP,PB)"
-  ]
+    "similar_triangle_judgment_aa(1,PEB,CDB)",
+    "parallel_judgment_ipsilateral_internal_angle(1,DC,BA)",
+    "parallel_property_alternate_interior_angle(1,DC,BA)",
+    "parallel_property_alternate_interior_angle(2,DC,BA)",
+    "similar_triangle_judgment_aa(1,PCD,PBA)",
+    "similar_triangle_property_line_ratio(1,PCD,PBA)",
+    "similar_triangle_property_line_ratio(1,DPC,APB)",
+    "similar_triangle_property_line_ratio(1,EBP,DBC)",
+    "similar_triangle_property_line_ratio(1,BPE,BCD)",
+    "line_addition(1,CP,PB)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,PEB,CDB)": [
+      "similar_triangle_property_line_ratio(1,EBP,DBC)",
+      "similar_triangle_property_line_ratio(1,BPE,BCD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,DC,BA)": [
+      "parallel_property_alternate_interior_angle(1,DC,BA)",
+      "parallel_property_alternate_interior_angle(2,DC,BA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,DC,BA)": [
+      "similar_triangle_judgment_aa(1,PCD,PBA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DC,BA)": [
+      "similar_triangle_judgment_aa(1,PCD,PBA)"
+    ],
+    "similar_triangle_judgment_aa(1,PCD,PBA)": [
+      "similar_triangle_property_line_ratio(1,PCD,PBA)",
+      "similar_triangle_property_line_ratio(1,DPC,APB)"
+    ],
+    "similar_triangle_property_line_ratio(1,PCD,PBA)": [],
+    "similar_triangle_property_line_ratio(1,DPC,APB)": [],
+    "similar_triangle_property_line_ratio(1,EBP,DBC)": [],
+    "similar_triangle_property_line_ratio(1,BPE,BCD)": [],
+    "line_addition(1,CP,PB)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,PEB,CDB)",
+      "parallel_judgment_ipsilateral_internal_angle(1,DC,BA)",
+      "line_addition(1,CP,PB)"
+    ]
+  }
 }

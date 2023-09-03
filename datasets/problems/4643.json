@@ -25,11 +25,27 @@
   "goal_cdl": "Value(MeasureOfAngle(ADC))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "sine_theorem(OBC)",
-    "triangle_property_angle_sum(OBC)",
-    "tangent_of_circle_property_perpendicular(DC,O,O)",
-    "triangle_property_angle_sum(ODC)"
-  ]
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "sine_theorem(1,OBC)",
+    "triangle_property_angle_sum(1,OBC)",
+    "tangent_of_circle_property_perpendicular(2,DC,O,O)",
+    "triangle_property_angle_sum(1,ODC)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [],
+    "sine_theorem(1,OBC)": [],
+    "triangle_property_angle_sum(1,OBC)": [],
+    "tangent_of_circle_property_perpendicular(2,DC,O,O)": [],
+    "triangle_property_angle_sum(1,ODC)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "sine_theorem(1,OBC)",
+      "triangle_property_angle_sum(1,OBC)",
+      "tangent_of_circle_property_perpendicular(2,DC,O,O)",
+      "triangle_property_angle_sum(1,ODC)"
+    ]
+  }
 }

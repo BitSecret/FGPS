@@ -33,10 +33,27 @@
   "goal_cdl": "Value(MeasureOfAngle(HGL))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "parallel_judgment_alternate_interior_angle(AB,FG)",
-    "parallel_property_collinear_extend(GF,BA,H)",
-    "parallel_property_collinear_extend(AB,GH,C)",
-    "parallel_property_alternate_interior_angle(AC,GH)",
-    "adjacent_complementary_angle(JGH,HGL)"
-  ]
+    "parallel_judgment_alternate_interior_angle(2,AB,FG)",
+    "parallel_property_collinear_extend(1,GF,BA,H)",
+    "parallel_property_collinear_extend(2,AB,GH,C)",
+    "parallel_property_alternate_interior_angle(2,AC,GH)",
+    "adjacent_complementary_angle(1,JGH,HGL)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_alternate_interior_angle(2,AB,FG)": [
+      "parallel_property_collinear_extend(1,GF,BA,H)"
+    ],
+    "parallel_property_collinear_extend(1,GF,BA,H)": [
+      "parallel_property_collinear_extend(2,AB,GH,C)"
+    ],
+    "parallel_property_collinear_extend(2,AB,GH,C)": [
+      "parallel_property_alternate_interior_angle(2,AC,GH)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AC,GH)": [],
+    "adjacent_complementary_angle(1,JGH,HGL)": [],
+    "START": [
+      "parallel_judgment_alternate_interior_angle(2,AB,FG)",
+      "adjacent_complementary_angle(1,JGH,HGL)"
+    ]
+  }
 }

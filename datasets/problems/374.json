@@ -26,11 +26,29 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(NCB),AreaOfTriangle(BCD)))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CEN,NEB)",
-    "adjacent_complementary_angle(CAB,BAD)",
-    "altitude_of_triangle_judgment(NE,NCB)",
-    "altitude_of_triangle_judgment(BA,BCD)",
-    "triangle_area_formula_common(NCB)",
-    "triangle_area_formula_common(BCD)"
-  ]
+    "adjacent_complementary_angle(1,CEN,NEB)",
+    "adjacent_complementary_angle(1,CAB,BAD)",
+    "altitude_of_triangle_judgment(1,NE,NCB)",
+    "altitude_of_triangle_judgment(1,BA,BCD)",
+    "triangle_area_formula_common(1,NCB)",
+    "triangle_area_formula_common(1,BCD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CEN,NEB)": [
+      "altitude_of_triangle_judgment(1,NE,NCB)"
+    ],
+    "adjacent_complementary_angle(1,CAB,BAD)": [
+      "altitude_of_triangle_judgment(1,BA,BCD)"
+    ],
+    "altitude_of_triangle_judgment(1,NE,NCB)": [],
+    "altitude_of_triangle_judgment(1,BA,BCD)": [],
+    "triangle_area_formula_common(1,NCB)": [],
+    "triangle_area_formula_common(1,BCD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CEN,NEB)",
+      "adjacent_complementary_angle(1,CAB,BAD)",
+      "triangle_area_formula_common(1,NCB)",
+      "triangle_area_formula_common(1,BCD)"
+    ]
+  }
 }

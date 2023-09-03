@@ -25,11 +25,29 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(YXZ),AreaOfTriangle(WZX)))",
   "problem_answer": "799.5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(GHW,WHX)",
-    "adjacent_complementary_angle(XGY,YGZ)",
-    "altitude_of_triangle_judgment(YG,YXZ)",
-    "altitude_of_triangle_judgment(WH,WZX)",
-    "triangle_area_formula_common(YXZ)",
-    "triangle_area_formula_common(WZX)"
-  ]
+    "adjacent_complementary_angle(1,GHW,WHX)",
+    "adjacent_complementary_angle(1,XGY,YGZ)",
+    "altitude_of_triangle_judgment(1,YG,YXZ)",
+    "altitude_of_triangle_judgment(1,WH,WZX)",
+    "triangle_area_formula_common(1,YXZ)",
+    "triangle_area_formula_common(1,WZX)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,GHW,WHX)": [
+      "altitude_of_triangle_judgment(1,WH,WZX)"
+    ],
+    "adjacent_complementary_angle(1,XGY,YGZ)": [
+      "altitude_of_triangle_judgment(1,YG,YXZ)"
+    ],
+    "altitude_of_triangle_judgment(1,YG,YXZ)": [],
+    "altitude_of_triangle_judgment(1,WH,WZX)": [],
+    "triangle_area_formula_common(1,YXZ)": [],
+    "triangle_area_formula_common(1,WZX)": [],
+    "START": [
+      "adjacent_complementary_angle(1,GHW,WHX)",
+      "adjacent_complementary_angle(1,XGY,YGZ)",
+      "triangle_area_formula_common(1,YXZ)",
+      "triangle_area_formula_common(1,WZX)"
+    ]
+  }
 }

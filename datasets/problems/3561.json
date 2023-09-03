@@ -29,10 +29,26 @@
   "goal_cdl": "Value(MeasureOfAngle(GHB))",
   "problem_answer": "149",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BC,HD,A)",
-    "parallel_property_collinear_extend(DH,BA,G)",
-    "vertical_angle(GDC,EDF)",
-    "parallel_property_ipsilateral_internal_angle(DH,CB)",
-    "parallel_property_ipsilateral_internal_angle(HG,BA)"
-  ]
+    "parallel_property_collinear_extend(1,BC,HD,A)",
+    "parallel_property_collinear_extend(2,DH,BA,G)",
+    "vertical_angle(1,GDC,EDF)",
+    "parallel_property_ipsilateral_internal_angle(1,DH,CB)",
+    "parallel_property_ipsilateral_internal_angle(1,HG,BA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,BC,HD,A)": [
+      "parallel_property_collinear_extend(2,DH,BA,G)"
+    ],
+    "parallel_property_collinear_extend(2,DH,BA,G)": [
+      "parallel_property_ipsilateral_internal_angle(1,HG,BA)"
+    ],
+    "vertical_angle(1,GDC,EDF)": [],
+    "parallel_property_ipsilateral_internal_angle(1,DH,CB)": [],
+    "parallel_property_ipsilateral_internal_angle(1,HG,BA)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,BC,HD,A)",
+      "vertical_angle(1,GDC,EDF)",
+      "parallel_property_ipsilateral_internal_angle(1,DH,CB)"
+    ]
+  }
 }

@@ -24,11 +24,27 @@
   "goal_cdl": "Value(PerimeterOfTriangle(COB))",
   "problem_answer": "59",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(AO,OC)",
-    "line_addition(BO,OD)",
-    "triangle_perimeter_formula(COB)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,AO,OC)",
+    "line_addition(1,BO,OD)",
+    "triangle_perimeter_formula(1,COB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,AO,OC)": [],
+    "line_addition(1,BO,OD)": [],
+    "triangle_perimeter_formula(1,COB)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,AO,OC)",
+      "line_addition(1,BO,OD)",
+      "triangle_perimeter_formula(1,COB)"
+    ]
+  }
 }

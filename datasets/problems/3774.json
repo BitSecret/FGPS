@@ -27,10 +27,27 @@
   "goal_cdl": "Value(MeasureOfAngle(DCE))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(GF,BA)",
-    "parallel_property_collinear_extend(GF,BA,H)",
-    "parallel_property_collinear_extend(AB,GH,C)",
-    "parallel_property_corresponding_angle(HG,CA,I)",
-    "vertical_angle(ICA,DCE)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,GF,BA)",
+    "parallel_property_collinear_extend(1,GF,BA,H)",
+    "parallel_property_collinear_extend(2,AB,GH,C)",
+    "parallel_property_corresponding_angle(1,HG,CA,I)",
+    "vertical_angle(1,ICA,DCE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,GF,BA)": [
+      "parallel_property_collinear_extend(1,GF,BA,H)"
+    ],
+    "parallel_property_collinear_extend(1,GF,BA,H)": [
+      "parallel_property_collinear_extend(2,AB,GH,C)"
+    ],
+    "parallel_property_collinear_extend(2,AB,GH,C)": [
+      "parallel_property_corresponding_angle(1,HG,CA,I)"
+    ],
+    "parallel_property_corresponding_angle(1,HG,CA,I)": [],
+    "vertical_angle(1,ICA,DCE)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,GF,BA)",
+      "vertical_angle(1,ICA,DCE)"
+    ]
+  }
 }

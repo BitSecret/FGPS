@@ -24,8 +24,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8.485",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(VU,T,T)",
-    "right_triangle_judgment_angle(VUT)",
-    "right_triangle_property_pythagorean(VUT)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,VU,T,T)",
+    "right_triangle_judgment_angle(1,VUT)",
+    "right_triangle_property_pythagorean(1,VUT)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,VU,T,T)": [
+      "right_triangle_judgment_angle(1,VUT)"
+    ],
+    "right_triangle_judgment_angle(1,VUT)": [
+      "right_triangle_property_pythagorean(1,VUT)"
+    ],
+    "right_triangle_property_pythagorean(1,VUT)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,VU,T,T)"
+    ]
+  }
 }

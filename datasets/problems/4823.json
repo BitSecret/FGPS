@@ -26,12 +26,34 @@
   "goal_cdl": "Value(LengthOfLine(ED))",
   "problem_answer": "4*sqrt(2)",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(CDEO)",
-    "tangent_of_circle_property_perpendicular(CD,O,O)",
-    "parallel_property_alternate_interior_angle(OE,CD)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "right_triangle_judgment_angle(EOD)",
-    "right_triangle_property_pythagorean(EOD)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,CDEO)",
+    "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+    "parallel_property_alternate_interior_angle(1,OE,CD)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "right_triangle_judgment_angle(1,EOD)",
+    "right_triangle_property_pythagorean(1,EOD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,CDEO)": [],
+    "tangent_of_circle_property_perpendicular(2,CD,O,O)": [
+      "right_triangle_judgment_angle(1,EOD)"
+    ],
+    "parallel_property_alternate_interior_angle(1,OE,CD)": [
+      "right_triangle_judgment_angle(1,EOD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [],
+    "radius_of_circle_property_length_equal(1,OE,O)": [],
+    "right_triangle_judgment_angle(1,EOD)": [
+      "right_triangle_property_pythagorean(1,EOD)"
+    ],
+    "right_triangle_property_pythagorean(1,EOD)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,CDEO)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "parallel_property_alternate_interior_angle(1,OE,CD)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OE,O)"
+    ]
+  }
 }

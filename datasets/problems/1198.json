@@ -26,8 +26,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "70",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BC,HA,G)",
-    "parallel_property_collinear_extend(AH,GB,E)",
-    "parallel_property_alternate_interior_angle(AE,GB)"
-  ]
+    "parallel_property_collinear_extend(3,BC,HA,G)",
+    "parallel_property_collinear_extend(3,AH,GB,E)",
+    "parallel_property_alternate_interior_angle(2,AE,GB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BC,HA,G)": [
+      "parallel_property_collinear_extend(3,AH,GB,E)"
+    ],
+    "parallel_property_collinear_extend(3,AH,GB,E)": [
+      "parallel_property_alternate_interior_angle(2,AE,GB)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,GB)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BC,HA,G)"
+    ]
+  }
 }

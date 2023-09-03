@@ -24,11 +24,29 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(IHF),AreaOfTriangle(FHG)))",
   "problem_answer": "499.5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BAI,IAF)",
-    "adjacent_complementary_angle(FBG,GBH)",
-    "altitude_of_triangle_judgment(GB,GFH)",
-    "altitude_of_triangle_judgment(IA,IHF)",
-    "triangle_area_formula_common(GFH)",
-    "triangle_area_formula_common(IHF)"
-  ]
+    "adjacent_complementary_angle(1,BAI,IAF)",
+    "adjacent_complementary_angle(1,FBG,GBH)",
+    "altitude_of_triangle_judgment(1,GB,GFH)",
+    "altitude_of_triangle_judgment(1,IA,IHF)",
+    "triangle_area_formula_common(1,GFH)",
+    "triangle_area_formula_common(1,IHF)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BAI,IAF)": [
+      "altitude_of_triangle_judgment(1,IA,IHF)"
+    ],
+    "adjacent_complementary_angle(1,FBG,GBH)": [
+      "altitude_of_triangle_judgment(1,GB,GFH)"
+    ],
+    "altitude_of_triangle_judgment(1,GB,GFH)": [],
+    "altitude_of_triangle_judgment(1,IA,IHF)": [],
+    "triangle_area_formula_common(1,GFH)": [],
+    "triangle_area_formula_common(1,IHF)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BAI,IAF)",
+      "adjacent_complementary_angle(1,FBG,GBH)",
+      "triangle_area_formula_common(1,GFH)",
+      "triangle_area_formula_common(1,IHF)"
+    ]
+  }
 }

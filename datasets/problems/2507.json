@@ -29,8 +29,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "14",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(EC,DF,A)",
-    "parallel_property_collinear_extend(FD,CA,B)",
-    "parallel_property_ipsilateral_internal_angle(AC,BF)"
-  ]
+    "parallel_property_collinear_extend(3,EC,DF,A)",
+    "parallel_property_collinear_extend(3,FD,CA,B)",
+    "parallel_property_ipsilateral_internal_angle(1,AC,BF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,EC,DF,A)": [
+      "parallel_property_collinear_extend(3,FD,CA,B)"
+    ],
+    "parallel_property_collinear_extend(3,FD,CA,B)": [
+      "parallel_property_ipsilateral_internal_angle(1,AC,BF)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,AC,BF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,EC,DF,A)"
+    ]
+  }
 }

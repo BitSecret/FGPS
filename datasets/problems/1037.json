@@ -24,7 +24,16 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "11.314",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(ADC)",
-    "right_triangle_property_pythagorean(ADC)"
-  ]
+    "right_triangle_judgment_angle(1,ADC)",
+    "right_triangle_property_pythagorean(1,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,ADC)": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ],
+    "right_triangle_property_pythagorean(1,ADC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,ADC)"
+    ]
+  }
 }

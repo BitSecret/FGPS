@@ -24,15 +24,40 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "mirror_congruent_triangle_property_angle_equal(DME,DEA)",
-    "mirror_congruent_triangle_property_angle_equal(MED,ADE)",
-    "mirror_congruent_triangle_property_angle_equal(EDM,EAD)",
-    "angle_addition(MED,DEA)",
-    "adjacent_complementary_angle(CEM,MEA)",
-    "isosceles_triangle_judgment_line_equal(EMC)",
-    "isosceles_triangle_property_angle_equal(EMC)",
-    "triangle_property_angle_sum(DME)",
-    "triangle_property_angle_sum(EMC)",
-    "triangle_property_angle_sum(ABC)"
-  ]
+    "mirror_congruent_triangle_property_angle_equal(1,DME,DEA)",
+    "mirror_congruent_triangle_property_angle_equal(1,MED,ADE)",
+    "mirror_congruent_triangle_property_angle_equal(1,EDM,EAD)",
+    "angle_addition(1,MED,DEA)",
+    "adjacent_complementary_angle(1,CEM,MEA)",
+    "isosceles_triangle_judgment_line_equal(1,EMC)",
+    "isosceles_triangle_property_angle_equal(1,EMC)",
+    "triangle_property_angle_sum(1,DME)",
+    "triangle_property_angle_sum(1,EMC)",
+    "triangle_property_angle_sum(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_property_angle_equal(1,DME,DEA)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,MED,ADE)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,EDM,EAD)": [],
+    "angle_addition(1,MED,DEA)": [],
+    "adjacent_complementary_angle(1,CEM,MEA)": [],
+    "isosceles_triangle_judgment_line_equal(1,EMC)": [
+      "isosceles_triangle_property_angle_equal(1,EMC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EMC)": [],
+    "triangle_property_angle_sum(1,DME)": [],
+    "triangle_property_angle_sum(1,EMC)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "mirror_congruent_triangle_property_angle_equal(1,DME,DEA)",
+      "mirror_congruent_triangle_property_angle_equal(1,MED,ADE)",
+      "mirror_congruent_triangle_property_angle_equal(1,EDM,EAD)",
+      "angle_addition(1,MED,DEA)",
+      "adjacent_complementary_angle(1,CEM,MEA)",
+      "isosceles_triangle_judgment_line_equal(1,EMC)",
+      "triangle_property_angle_sum(1,DME)",
+      "triangle_property_angle_sum(1,EMC)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  }
 }

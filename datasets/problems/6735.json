@@ -25,12 +25,34 @@
   "goal_cdl": "Value(MeasureOfAngle(BCA))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "arc_property_center_angle(OAB,O)",
-    "arc_property_circumference_angle_external(OAB,C)",
-    "isosceles_triangle_judgment_line_equal(OAB)",
-    "isosceles_triangle_property_angle_equal(OAB)",
-    "triangle_property_angle_sum(OAB)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_circumference_angle_external(1,OAB,C)",
+    "isosceles_triangle_judgment_line_equal(1,OAB)",
+    "isosceles_triangle_property_angle_equal(1,OAB)",
+    "triangle_property_angle_sum(1,OAB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAB)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAB)"
+    ],
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_circumference_angle_external(1,OAB,C)": [],
+    "isosceles_triangle_judgment_line_equal(1,OAB)": [
+      "isosceles_triangle_property_angle_equal(1,OAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OAB)": [],
+    "triangle_property_angle_sum(1,OAB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_circumference_angle_external(1,OAB,C)",
+      "triangle_property_angle_sum(1,OAB)"
+    ]
+  }
 }

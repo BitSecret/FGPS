@@ -34,11 +34,30 @@
   "goal_cdl": "Value(MeasureOfAngle(HNQ))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "parallel_judgment_corresponding_angle(PM,QN,E)",
-    "parallel_property_collinear_extend(NQ,MP,D)",
-    "parallel_property_collinear_extend(PM,ND,B)",
-    "parallel_property_corresponding_angle(MB,ND,H)",
-    "flat_angle(DNQ)",
-    "angle_addition(DNH,HNQ)"
-  ]
+    "parallel_judgment_corresponding_angle(1,PM,QN,E)",
+    "parallel_property_collinear_extend(1,NQ,MP,D)",
+    "parallel_property_collinear_extend(2,PM,ND,B)",
+    "parallel_property_corresponding_angle(2,MB,ND,H)",
+    "flat_angle(1,DNQ)",
+    "angle_addition(1,DNH,HNQ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_corresponding_angle(1,PM,QN,E)": [
+      "parallel_property_collinear_extend(1,NQ,MP,D)"
+    ],
+    "parallel_property_collinear_extend(1,NQ,MP,D)": [
+      "parallel_property_collinear_extend(2,PM,ND,B)"
+    ],
+    "parallel_property_collinear_extend(2,PM,ND,B)": [
+      "parallel_property_corresponding_angle(2,MB,ND,H)"
+    ],
+    "parallel_property_corresponding_angle(2,MB,ND,H)": [],
+    "flat_angle(1,DNQ)": [],
+    "angle_addition(1,DNH,HNQ)": [],
+    "START": [
+      "parallel_judgment_corresponding_angle(1,PM,QN,E)",
+      "flat_angle(1,DNQ)",
+      "angle_addition(1,DNH,HNQ)"
+    ]
+  }
 }

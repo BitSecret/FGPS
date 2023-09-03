@@ -24,18 +24,58 @@
   "goal_cdl": "Value(MeasureOfAngle(DPO))",
   "problem_answer": "105",
   "theorem_seqs": [
-    "sine_theorem(POE)",
-    "isosceles_triangle_judgment_line_equal(PCD)",
-    "altitude_of_triangle_judgment(PE,PCD)",
-    "isosceles_triangle_property_line_coincidence(PCD,E)",
-    "line_addition(CE,ED)",
-    "adjacent_complementary_angle(OCP,PCE)",
-    "adjacent_complementary_angle(ODP,PDB)",
-    "isosceles_triangle_judgment_line_equal(EDP)",
-    "isosceles_triangle_property_angle_equal(PCD)",
-    "isosceles_triangle_property_angle_equal(EDP)",
-    "triangle_property_angle_sum(EDP)",
-    "triangle_property_angle_sum(POE)",
-    "angle_addition(DPE,EPO)"
-  ]
+    "sine_theorem(1,POE)",
+    "isosceles_triangle_judgment_line_equal(1,PCD)",
+    "altitude_of_triangle_judgment(1,PE,PCD)",
+    "isosceles_triangle_property_line_coincidence(1,PCD,E)",
+    "line_addition(1,CE,ED)",
+    "adjacent_complementary_angle(1,OCP,PCE)",
+    "adjacent_complementary_angle(1,ODP,PDB)",
+    "isosceles_triangle_judgment_line_equal(1,EDP)",
+    "isosceles_triangle_property_angle_equal(1,PCD)",
+    "isosceles_triangle_property_angle_equal(1,EDP)",
+    "triangle_property_angle_sum(1,EDP)",
+    "triangle_property_angle_sum(1,POE)",
+    "angle_addition(1,DPE,EPO)"
+  ],
+  "theorem_seq_dag": {
+    "sine_theorem(1,POE)": [
+      "isosceles_triangle_judgment_line_equal(1,EDP)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,PCD)": [
+      "isosceles_triangle_property_line_coincidence(1,PCD,E)",
+      "isosceles_triangle_property_angle_equal(1,PCD)"
+    ],
+    "altitude_of_triangle_judgment(1,PE,PCD)": [
+      "isosceles_triangle_property_line_coincidence(1,PCD,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDP)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,PCD,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EDP)"
+    ],
+    "line_addition(1,CE,ED)": [
+      "isosceles_triangle_judgment_line_equal(1,EDP)"
+    ],
+    "adjacent_complementary_angle(1,OCP,PCE)": [],
+    "adjacent_complementary_angle(1,ODP,PDB)": [],
+    "isosceles_triangle_judgment_line_equal(1,EDP)": [
+      "isosceles_triangle_property_angle_equal(1,EDP)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,PCD)": [],
+    "isosceles_triangle_property_angle_equal(1,EDP)": [],
+    "triangle_property_angle_sum(1,EDP)": [],
+    "triangle_property_angle_sum(1,POE)": [],
+    "angle_addition(1,DPE,EPO)": [],
+    "START": [
+      "sine_theorem(1,POE)",
+      "isosceles_triangle_judgment_line_equal(1,PCD)",
+      "altitude_of_triangle_judgment(1,PE,PCD)",
+      "line_addition(1,CE,ED)",
+      "adjacent_complementary_angle(1,OCP,PCE)",
+      "adjacent_complementary_angle(1,ODP,PDB)",
+      "triangle_property_angle_sum(1,EDP)",
+      "triangle_property_angle_sum(1,POE)",
+      "angle_addition(1,DPE,EPO)"
+    ]
+  }
 }

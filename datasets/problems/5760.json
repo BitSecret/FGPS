@@ -23,12 +23,33 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "10/3",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(DE,AB)",
-    "isosceles_triangle_judgment_angle_equal(EDB)",
-    "line_addition(BE,EC)",
-    "parallel_property_corresponding_angle(DE,AB,C)",
-    "similar_triangle_judgment_aa(ECD,BCA)",
-    "similar_triangle_property_line_ratio(CDE,CAB)",
-    "similar_triangle_property_line_ratio(DEC,ABC)"
-  ]
+    "parallel_property_alternate_interior_angle(1,DE,AB)",
+    "isosceles_triangle_judgment_angle_equal(1,EDB)",
+    "line_addition(1,BE,EC)",
+    "parallel_property_corresponding_angle(1,DE,AB,C)",
+    "similar_triangle_judgment_aa(1,ECD,BCA)",
+    "similar_triangle_property_line_ratio(1,CDE,CAB)",
+    "similar_triangle_property_line_ratio(1,DEC,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,DE,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,EDB)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,EDB)": [],
+    "line_addition(1,BE,EC)": [],
+    "parallel_property_corresponding_angle(1,DE,AB,C)": [
+      "similar_triangle_judgment_aa(1,ECD,BCA)"
+    ],
+    "similar_triangle_judgment_aa(1,ECD,BCA)": [
+      "similar_triangle_property_line_ratio(1,CDE,CAB)",
+      "similar_triangle_property_line_ratio(1,DEC,ABC)"
+    ],
+    "similar_triangle_property_line_ratio(1,CDE,CAB)": [],
+    "similar_triangle_property_line_ratio(1,DEC,ABC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,DE,AB)",
+      "line_addition(1,BE,EC)",
+      "parallel_property_corresponding_angle(1,DE,AB,C)"
+    ]
+  }
 }

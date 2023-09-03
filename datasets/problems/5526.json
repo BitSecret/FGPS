@@ -24,15 +24,47 @@
   "goal_cdl": "Value(AreaOfSector(CAB))",
   "problem_answer": "8/3*pi",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(CA,C)",
-    "radius_of_circle_property_length_equal(CB,C)",
-    "isosceles_triangle_judgment_line_equal(CAB)",
-    "altitude_of_triangle_judgment(CD,CAB)",
-    "isosceles_triangle_property_line_coincidence(CAB,D)",
-    "line_addition(AD,DB)",
-    "angle_addition(BCD,DCA)",
-    "sine_theorem(ADC)",
-    "arc_property_center_angle(CAB,C)",
-    "sector_area_formula(CAB)"
-  ]
+    "radius_of_circle_property_length_equal(1,CA,C)",
+    "radius_of_circle_property_length_equal(1,CB,C)",
+    "isosceles_triangle_judgment_line_equal(1,CAB)",
+    "altitude_of_triangle_judgment(1,CD,CAB)",
+    "isosceles_triangle_property_line_coincidence(1,CAB,D)",
+    "line_addition(1,AD,DB)",
+    "angle_addition(1,BCD,DCA)",
+    "sine_theorem(1,ADC)",
+    "arc_property_center_angle(1,CAB,C)",
+    "sector_area_formula(1,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,CA,C)": [
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ],
+    "radius_of_circle_property_length_equal(1,CB,C)": [
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,CAB)": [
+      "isosceles_triangle_property_line_coincidence(1,CAB,D)"
+    ],
+    "altitude_of_triangle_judgment(1,CD,CAB)": [
+      "isosceles_triangle_property_line_coincidence(1,CAB,D)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,CAB,D)": [
+      "solve_eq_25)"
+    ],
+    "line_addition(1,AD,DB)": [],
+    "angle_addition(1,BCD,DCA)": [],
+    "sine_theorem(1,ADC)": [],
+    "arc_property_center_angle(1,CAB,C)": [],
+    "sector_area_formula(1,CAB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,CA,C)",
+      "radius_of_circle_property_length_equal(1,CB,C)",
+      "altitude_of_triangle_judgment(1,CD,CAB)",
+      "line_addition(1,AD,DB)",
+      "angle_addition(1,BCD,DCA)",
+      "sine_theorem(1,ADC)",
+      "arc_property_center_angle(1,CAB,C)",
+      "sector_area_formula(1,CAB)"
+    ]
+  }
 }

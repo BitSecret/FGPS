@@ -35,12 +35,34 @@
   "goal_cdl": "Value(MeasureOfAngle(EHF))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(YX,BA,H)",
-    "parallel_property_collinear_extend(DC,YX,F)",
-    "parallel_property_collinear_extend(AB,HY,E)",
-    "parallel_property_collinear_extend(XY,CF,H)",
-    "parallel_property_alternate_interior_angle(HY,CF)",
-    "parallel_property_alternate_interior_angle(AE,HY)",
-    "angle_addition(EHY,YHF)"
-  ]
+    "parallel_property_collinear_extend(3,YX,BA,H)",
+    "parallel_property_collinear_extend(3,DC,YX,F)",
+    "parallel_property_collinear_extend(3,AB,HY,E)",
+    "parallel_property_collinear_extend(3,XY,CF,H)",
+    "parallel_property_alternate_interior_angle(1,HY,CF)",
+    "parallel_property_alternate_interior_angle(2,AE,HY)",
+    "angle_addition(1,EHY,YHF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,YX,BA,H)": [
+      "parallel_property_collinear_extend(3,AB,HY,E)"
+    ],
+    "parallel_property_collinear_extend(3,DC,YX,F)": [
+      "parallel_property_collinear_extend(3,XY,CF,H)"
+    ],
+    "parallel_property_collinear_extend(3,AB,HY,E)": [
+      "parallel_property_alternate_interior_angle(2,AE,HY)"
+    ],
+    "parallel_property_collinear_extend(3,XY,CF,H)": [
+      "parallel_property_alternate_interior_angle(1,HY,CF)"
+    ],
+    "parallel_property_alternate_interior_angle(1,HY,CF)": [],
+    "parallel_property_alternate_interior_angle(2,AE,HY)": [],
+    "angle_addition(1,EHY,YHF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,YX,BA,H)",
+      "parallel_property_collinear_extend(3,DC,YX,F)",
+      "angle_addition(1,EHY,YHF)"
+    ]
+  }
 }

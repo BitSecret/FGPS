@@ -25,8 +25,18 @@
   "goal_cdl": "Value(MeasureOfAngle(DOA))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "arc_property_center_angle(OAD,O)",
-    "arc_property_circumference_angle_external(OAD,B)",
-    "triangle_property_angle_sum(BAC)"
-  ]
+    "arc_property_center_angle(1,OAD,O)",
+    "arc_property_circumference_angle_external(1,OAD,B)",
+    "triangle_property_angle_sum(1,BAC)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OAD,O)": [],
+    "arc_property_circumference_angle_external(1,OAD,B)": [],
+    "triangle_property_angle_sum(1,BAC)": [],
+    "START": [
+      "arc_property_center_angle(1,OAD,O)",
+      "arc_property_circumference_angle_external(1,OAD,B)",
+      "triangle_property_angle_sum(1,BAC)"
+    ]
+  }
 }

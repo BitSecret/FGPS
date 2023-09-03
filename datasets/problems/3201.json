@@ -28,10 +28,25 @@
   "goal_cdl": "Value(MeasureOfAngle(GDF))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "adjacent_complementary_angle(COF,FOG)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OG,EF)",
-    "perpendicular_bisector_property_bisector(OG,EF)",
-    "arc_property_center_angle(OFC,O)",
-    "arc_property_circumference_angle_external(OFC,D)"
-  ]
+    "adjacent_complementary_angle(1,COF,FOG)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OG,EF)",
+    "perpendicular_bisector_property_bisector(1,OG,EF)",
+    "arc_property_center_angle(1,OFC,O)",
+    "arc_property_circumference_angle_external(1,OFC,D)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,COF,FOG)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OG,EF)": [
+      "perpendicular_bisector_property_bisector(1,OG,EF)"
+    ],
+    "perpendicular_bisector_property_bisector(1,OG,EF)": [],
+    "arc_property_center_angle(1,OFC,O)": [],
+    "arc_property_circumference_angle_external(1,OFC,D)": [],
+    "START": [
+      "adjacent_complementary_angle(1,COF,FOG)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OG,EF)",
+      "arc_property_center_angle(1,OFC,O)",
+      "arc_property_circumference_angle_external(1,OFC,D)"
+    ]
+  }
 }

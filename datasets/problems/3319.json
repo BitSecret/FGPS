@@ -25,8 +25,19 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(DAC,DEA)",
-    "mirror_congruent_triangle_property_line_equal(ACD,ADE)",
-    "line_addition(CD,DB)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(1,DAC,DEA)",
+    "mirror_congruent_triangle_property_line_equal(1,ACD,ADE)",
+    "line_addition(1,CD,DB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(1,DAC,DEA)": [
+      "mirror_congruent_triangle_property_line_equal(1,ACD,ADE)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,ACD,ADE)": [],
+    "line_addition(1,CD,DB)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(1,DAC,DEA)",
+      "line_addition(1,CD,DB)"
+    ]
+  }
 }

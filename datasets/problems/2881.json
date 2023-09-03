@@ -32,10 +32,27 @@
   "goal_cdl": "Value(RadiusOfCircle(O))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AD,O,O)",
-    "parallel_judgment_ipsilateral_internal_angle(AC,DO)",
-    "midsegment_of_triangle_judgment_parallel(OD,BCA)",
-    "midsegment_of_triangle_property_length(OD,BCA)",
-    "radius_of_circle_property_length_equal(OD,O)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AD,O,O)",
+    "parallel_judgment_ipsilateral_internal_angle(1,AC,DO)",
+    "midsegment_of_triangle_judgment_parallel(1,OD,BCA)",
+    "midsegment_of_triangle_property_length(1,OD,BCA)",
+    "radius_of_circle_property_length_equal(1,OD,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AD,O,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,AC,DO)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,AC,DO)": [
+      "midsegment_of_triangle_judgment_parallel(1,OD,BCA)"
+    ],
+    "midsegment_of_triangle_judgment_parallel(1,OD,BCA)": [
+      "midsegment_of_triangle_property_length(1,OD,BCA)"
+    ],
+    "midsegment_of_triangle_property_length(1,OD,BCA)": [],
+    "radius_of_circle_property_length_equal(1,OD,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AD,O,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  }
 }

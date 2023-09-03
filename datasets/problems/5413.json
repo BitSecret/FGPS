@@ -28,14 +28,40 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,F)",
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_ipsilateral_internal_angle(AD,BC)",
-    "parallel_property_alternate_interior_angle(EB,DA)",
-    "parallel_property_alternate_interior_angle(AF,BC)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "isosceles_triangle_judgment_angle_equal(ABF)",
-    "cosine_theorem(BEA)",
-    "cosine_theorem(ABF)"
-  ]
+    "parallel_property_collinear_extend(3,AD,BC,F)",
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+    "parallel_property_alternate_interior_angle(1,EB,DA)",
+    "parallel_property_alternate_interior_angle(2,AF,BC)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "isosceles_triangle_judgment_angle_equal(1,ABF)",
+    "cosine_theorem(1,BEA)",
+    "cosine_theorem(1,ABF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,BC,F)": [
+      "parallel_property_alternate_interior_angle(2,AF,BC)"
+    ],
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,EB,DA)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)": [],
+    "parallel_property_alternate_interior_angle(1,EB,DA)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AF,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABF)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [],
+    "isosceles_triangle_judgment_angle_equal(1,ABF)": [],
+    "cosine_theorem(1,BEA)": [],
+    "cosine_theorem(1,ABF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,BC,F)",
+      "parallel_property_collinear_extend(3,CB,DA,E)",
+      "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+      "cosine_theorem(1,BEA)",
+      "cosine_theorem(1,ABF)"
+    ]
+  }
 }

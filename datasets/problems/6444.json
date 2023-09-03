@@ -28,18 +28,59 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ABF)",
-    "isosceles_triangle_property_line_coincidence(ABF,O)",
-    "line_addition(BO,OF)",
-    "parallel_property_collinear_extend(AD,BC,F)",
-    "parallel_property_collinear_extend(CB,FA,E)",
-    "parallel_property_alternate_interior_angle(AF,BE)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "adjacent_complementary_angle(EOB,BOA)",
-    "altitude_of_triangle_judgment(BO,BEA)",
-    "isosceles_triangle_property_line_coincidence(BEA,O)",
-    "right_triangle_judgment_angle(BOA)",
-    "right_triangle_property_pythagorean(BOA)",
-    "line_addition(AO,OE)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ABF)",
+    "isosceles_triangle_property_line_coincidence(3,ABF,O)",
+    "line_addition(1,BO,OF)",
+    "parallel_property_collinear_extend(3,AD,BC,F)",
+    "parallel_property_collinear_extend(3,CB,FA,E)",
+    "parallel_property_alternate_interior_angle(1,AF,BE)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "adjacent_complementary_angle(1,EOB,BOA)",
+    "altitude_of_triangle_judgment(1,BO,BEA)",
+    "isosceles_triangle_property_line_coincidence(1,BEA,O)",
+    "right_triangle_judgment_angle(1,BOA)",
+    "right_triangle_property_pythagorean(1,BOA)",
+    "line_addition(1,AO,OE)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ABF)": [
+      "isosceles_triangle_property_line_coincidence(3,ABF,O)"
+    ],
+    "isosceles_triangle_property_line_coincidence(3,ABF,O)": [
+      "right_triangle_judgment_angle(1,BOA)",
+      "altitude_of_triangle_judgment(1,BO,BEA)"
+    ],
+    "line_addition(1,BO,OF)": [],
+    "parallel_property_collinear_extend(3,AD,BC,F)": [
+      "parallel_property_collinear_extend(3,CB,FA,E)"
+    ],
+    "parallel_property_collinear_extend(3,CB,FA,E)": [
+      "parallel_property_alternate_interior_angle(1,AF,BE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AF,BE)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [
+      "isosceles_triangle_property_line_coincidence(1,BEA,O)"
+    ],
+    "adjacent_complementary_angle(1,EOB,BOA)": [
+      "altitude_of_triangle_judgment(1,BO,BEA)"
+    ],
+    "altitude_of_triangle_judgment(1,BO,BEA)": [
+      "isosceles_triangle_property_line_coincidence(1,BEA,O)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,BEA,O)": [],
+    "right_triangle_judgment_angle(1,BOA)": [
+      "right_triangle_property_pythagorean(1,BOA)"
+    ],
+    "right_triangle_property_pythagorean(1,BOA)": [],
+    "line_addition(1,AO,OE)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ABF)",
+      "line_addition(1,BO,OF)",
+      "parallel_property_collinear_extend(3,AD,BC,F)",
+      "adjacent_complementary_angle(1,EOB,BOA)",
+      "line_addition(1,AO,OE)"
+    ]
+  }
 }

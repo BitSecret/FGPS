@@ -21,9 +21,25 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CADB))",
   "problem_answer": "374",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(DA,BC)",
-    "parallel_judgment_ipsilateral_internal_angle(BD,CA)",
-    "parallelogram_judgment_parallel_and_parallel(CADB)",
-    "parallelogram_area_formula_sine(CADB)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,DA,BC)",
+    "parallel_judgment_ipsilateral_internal_angle(1,BD,CA)",
+    "parallelogram_judgment_parallel_and_parallel(1,CADB)",
+    "parallelogram_area_formula_sine(1,CADB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,DA,BC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CADB)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,BD,CA)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CADB)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,CADB)": [
+      "parallelogram_area_formula_sine(1,CADB)"
+    ],
+    "parallelogram_area_formula_sine(1,CADB)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,DA,BC)",
+      "parallel_judgment_ipsilateral_internal_angle(1,BD,CA)"
+    ]
+  }
 }

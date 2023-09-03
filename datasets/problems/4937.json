@@ -22,12 +22,39 @@
   "goal_cdl": "Value(AreaOfTriangle(DEC))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(BA,CD)",
-    "similar_triangle_judgment_aa(EAB,ECD)",
-    "similar_triangle_judgment_aa(ECD,EAB)",
-    "similar_triangle_property_line_ratio(BEA,DEC)",
-    "similar_triangle_property_line_ratio(DEC,BEA)",
-    "similar_triangle_property_area_square_ratio(EAB,ECD)",
-    "similar_triangle_property_area_square_ratio(ECD,EAB)"
-  ]
+    "parallel_property_alternate_interior_angle(1,BA,CD)",
+    "parallel_property_alternate_interior_angle(2,BA,CD)",
+    "similar_triangle_judgment_aa(1,EAB,ECD)",
+    "similar_triangle_judgment_aa(1,ECD,EAB)",
+    "similar_triangle_property_line_ratio(1,BEA,DEC)",
+    "similar_triangle_property_line_ratio(1,DEC,BEA)",
+    "similar_triangle_property_area_square_ratio(1,EAB,ECD)",
+    "similar_triangle_property_area_square_ratio(1,ECD,EAB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,BA,CD)": [
+      "similar_triangle_judgment_aa(1,EAB,ECD)",
+      "similar_triangle_judgment_aa(1,ECD,EAB)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BA,CD)": [
+      "similar_triangle_judgment_aa(1,EAB,ECD)",
+      "similar_triangle_judgment_aa(1,ECD,EAB)"
+    ],
+    "similar_triangle_judgment_aa(1,EAB,ECD)": [
+      "similar_triangle_property_area_square_ratio(1,EAB,ECD)",
+      "similar_triangle_property_line_ratio(1,BEA,DEC)"
+    ],
+    "similar_triangle_judgment_aa(1,ECD,EAB)": [
+      "similar_triangle_property_area_square_ratio(1,ECD,EAB)",
+      "similar_triangle_property_line_ratio(1,DEC,BEA)"
+    ],
+    "similar_triangle_property_line_ratio(1,BEA,DEC)": [],
+    "similar_triangle_property_line_ratio(1,DEC,BEA)": [],
+    "similar_triangle_property_area_square_ratio(1,EAB,ECD)": [],
+    "similar_triangle_property_area_square_ratio(1,ECD,EAB)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,BA,CD)",
+      "parallel_property_alternate_interior_angle(2,BA,CD)"
+    ]
+  }
 }

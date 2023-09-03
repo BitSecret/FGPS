@@ -31,10 +31,26 @@
   "goal_cdl": "Value(MeasureOfAngle(DMB))",
   "problem_answer": "75",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(ED,AB)",
-    "parallel_property_collinear_extend(BA,DE,N)",
-    "parallel_property_alternate_interior_angle(BN,DE)",
-    "triangle_property_angle_sum(NBM)",
-    "adjacent_complementary_angle(DMB,BMN)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,ED,AB)",
+    "parallel_property_collinear_extend(3,BA,DE,N)",
+    "parallel_property_alternate_interior_angle(2,BN,DE)",
+    "triangle_property_angle_sum(1,NBM)",
+    "adjacent_complementary_angle(1,DMB,BMN)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,ED,AB)": [
+      "parallel_property_collinear_extend(3,BA,DE,N)"
+    ],
+    "parallel_property_collinear_extend(3,BA,DE,N)": [
+      "parallel_property_alternate_interior_angle(2,BN,DE)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BN,DE)": [],
+    "triangle_property_angle_sum(1,NBM)": [],
+    "adjacent_complementary_angle(1,DMB,BMN)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,ED,AB)",
+      "triangle_property_angle_sum(1,NBM)",
+      "adjacent_complementary_angle(1,DMB,BMN)"
+    ]
+  }
 }

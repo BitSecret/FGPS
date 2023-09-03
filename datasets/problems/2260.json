@@ -28,16 +28,48 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "5.42",
   "theorem_seqs": [
-    "line_addition(DF,FB)",
-    "adjacent_complementary_angle(BFA,AFD)",
-    "adjacent_complementary_angle(CED,DEB)",
-    "right_triangle_judgment_angle(CED)",
-    "right_triangle_judgment_angle(DEB)",
-    "right_triangle_judgment_angle(AFD)",
-    "right_triangle_judgment_angle(BFA)",
-    "right_triangle_property_pythagorean(CED)",
-    "right_triangle_property_pythagorean(DEB)",
-    "right_triangle_property_pythagorean(BFA)",
-    "right_triangle_property_pythagorean(AFD)"
-  ]
+    "line_addition(1,DF,FB)",
+    "adjacent_complementary_angle(1,BFA,AFD)",
+    "adjacent_complementary_angle(1,CED,DEB)",
+    "right_triangle_judgment_angle(1,CED)",
+    "right_triangle_judgment_angle(1,DEB)",
+    "right_triangle_judgment_angle(1,AFD)",
+    "right_triangle_judgment_angle(1,BFA)",
+    "right_triangle_property_pythagorean(1,CED)",
+    "right_triangle_property_pythagorean(1,DEB)",
+    "right_triangle_property_pythagorean(1,BFA)",
+    "right_triangle_property_pythagorean(1,AFD)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,DF,FB)": [],
+    "adjacent_complementary_angle(1,BFA,AFD)": [
+      "right_triangle_judgment_angle(1,AFD)"
+    ],
+    "adjacent_complementary_angle(1,CED,DEB)": [
+      "right_triangle_judgment_angle(1,CED)"
+    ],
+    "right_triangle_judgment_angle(1,CED)": [
+      "right_triangle_property_pythagorean(1,CED)"
+    ],
+    "right_triangle_judgment_angle(1,DEB)": [
+      "right_triangle_property_pythagorean(1,DEB)"
+    ],
+    "right_triangle_judgment_angle(1,AFD)": [
+      "right_triangle_property_pythagorean(1,AFD)"
+    ],
+    "right_triangle_judgment_angle(1,BFA)": [
+      "right_triangle_property_pythagorean(1,BFA)"
+    ],
+    "right_triangle_property_pythagorean(1,CED)": [],
+    "right_triangle_property_pythagorean(1,DEB)": [],
+    "right_triangle_property_pythagorean(1,BFA)": [],
+    "right_triangle_property_pythagorean(1,AFD)": [],
+    "START": [
+      "line_addition(1,DF,FB)",
+      "adjacent_complementary_angle(1,BFA,AFD)",
+      "adjacent_complementary_angle(1,CED,DEB)",
+      "right_triangle_judgment_angle(1,DEB)",
+      "right_triangle_judgment_angle(1,BFA)"
+    ]
+  }
 }

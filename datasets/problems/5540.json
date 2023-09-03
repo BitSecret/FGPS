@@ -29,9 +29,21 @@
   "goal_cdl": "Value(Sub(AreaOfQuadrilateral(ABCD),AreaOfCircle(O)))",
   "problem_answer": "36-9*pi",
   "theorem_seqs": [
-    "diameter_of_circle_property_length_equal(HF,O)",
-    "circle_property_length_of_radius_and_diameter(O)",
-    "circle_area_formula(O)",
-    "parallelogram_area_formula_sine(ABCD)"
-  ]
+    "diameter_of_circle_property_length_equal(1,HF,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "circle_area_formula(1,O)",
+    "parallelogram_area_formula_sine(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_length_equal(1,HF,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "circle_area_formula(1,O)": [],
+    "parallelogram_area_formula_sine(1,ABCD)": [],
+    "START": [
+      "diameter_of_circle_property_length_equal(1,HF,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "circle_area_formula(1,O)",
+      "parallelogram_area_formula_sine(1,ABCD)"
+    ]
+  }
 }

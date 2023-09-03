@@ -26,11 +26,27 @@
   "goal_cdl": "Value(Sub(AreaOfSector(OBA),AreaOfSector(QDC)))",
   "problem_answer": "2*pi",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(QC,Q)",
-    "arc_property_center_angle(OBA,O)",
-    "arc_property_center_angle(QDC,Q)",
-    "sector_area_formula(OBA)",
-    "sector_area_formula(QDC)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,QC,Q)",
+    "arc_property_center_angle(1,OBA,O)",
+    "arc_property_center_angle(1,QDC,Q)",
+    "sector_area_formula(1,OBA)",
+    "sector_area_formula(1,QDC)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,QC,Q)": [],
+    "arc_property_center_angle(1,OBA,O)": [],
+    "arc_property_center_angle(1,QDC,Q)": [],
+    "sector_area_formula(1,OBA)": [],
+    "sector_area_formula(1,QDC)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,QC,Q)",
+      "arc_property_center_angle(1,OBA,O)",
+      "arc_property_center_angle(1,QDC,Q)",
+      "sector_area_formula(1,OBA)",
+      "sector_area_formula(1,QDC)"
+    ]
+  }
 }

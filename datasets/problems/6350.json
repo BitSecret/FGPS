@@ -25,9 +25,23 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
-    "midsegment_of_triangle_judgment_midpoint(OE,BDA)",
-    "midsegment_of_triangle_property_length(OE,BDA)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+    "midsegment_of_triangle_judgment_midpoint(1,OE,BDA)",
+    "midsegment_of_triangle_property_length(1,OE,BDA)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,OE,BDA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,OE,BDA)": [
+      "midsegment_of_triangle_property_length(1,OE,BDA)"
+    ],
+    "midsegment_of_triangle_property_length(1,OE,BDA)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

@@ -23,13 +23,37 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "5/3",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AYC,CYB)",
-    "right_triangle_judgment_angle(AYC)",
-    "right_triangle_judgment_angle(CYB)",
-    "right_triangle_judgment_angle(BCA)",
-    "line_addition(AY,YB)",
-    "right_triangle_property_pythagorean(AYC)",
-    "right_triangle_property_pythagorean(CYB)",
-    "right_triangle_property_pythagorean(BCA)"
-  ]
+    "adjacent_complementary_angle(1,AYC,CYB)",
+    "right_triangle_judgment_angle(1,AYC)",
+    "right_triangle_judgment_angle(1,CYB)",
+    "right_triangle_judgment_angle(1,BCA)",
+    "line_addition(1,AY,YB)",
+    "right_triangle_property_pythagorean(1,AYC)",
+    "right_triangle_property_pythagorean(1,CYB)",
+    "right_triangle_property_pythagorean(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AYC,CYB)": [
+      "right_triangle_judgment_angle(1,AYC)"
+    ],
+    "right_triangle_judgment_angle(1,AYC)": [
+      "right_triangle_property_pythagorean(1,AYC)"
+    ],
+    "right_triangle_judgment_angle(1,CYB)": [
+      "right_triangle_property_pythagorean(1,CYB)"
+    ],
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "line_addition(1,AY,YB)": [],
+    "right_triangle_property_pythagorean(1,AYC)": [],
+    "right_triangle_property_pythagorean(1,CYB)": [],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AYC,CYB)",
+      "right_triangle_judgment_angle(1,CYB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "line_addition(1,AY,YB)"
+    ]
+  }
 }

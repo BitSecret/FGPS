@@ -30,12 +30,32 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(FEA),MeasureOfAngle(ACH)))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DF,PA,E)",
-    "parallel_property_alternate_interior_angle(EF,PA)",
-    "parallel_property_collinear_extend(HG,AP,C)",
-    "parallel_property_alternate_interior_angle(PA,CH)",
-    "angle_addition(CAP,PAE)",
-    "isosceles_triangle_property_angle_equal(CAB)",
-    "triangle_property_angle_sum(BCA)"
-  ]
+    "parallel_property_collinear_extend(3,DF,PA,E)",
+    "parallel_property_alternate_interior_angle(1,EF,PA)",
+    "parallel_property_collinear_extend(3,HG,AP,C)",
+    "parallel_property_alternate_interior_angle(2,PA,CH)",
+    "angle_addition(1,CAP,PAE)",
+    "isosceles_triangle_property_angle_equal(1,CAB)",
+    "triangle_property_angle_sum(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DF,PA,E)": [
+      "parallel_property_alternate_interior_angle(1,EF,PA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EF,PA)": [],
+    "parallel_property_collinear_extend(3,HG,AP,C)": [
+      "parallel_property_alternate_interior_angle(2,PA,CH)"
+    ],
+    "parallel_property_alternate_interior_angle(2,PA,CH)": [],
+    "angle_addition(1,CAP,PAE)": [],
+    "isosceles_triangle_property_angle_equal(1,CAB)": [],
+    "triangle_property_angle_sum(1,BCA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DF,PA,E)",
+      "parallel_property_collinear_extend(3,HG,AP,C)",
+      "angle_addition(1,CAP,PAE)",
+      "isosceles_triangle_property_angle_equal(1,CAB)",
+      "triangle_property_angle_sum(1,BCA)"
+    ]
+  }
 }

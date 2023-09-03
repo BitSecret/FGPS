@@ -29,25 +29,84 @@
   "goal_cdl": "Value(PerimeterOfTriangle(AEF))",
   "problem_answer": "3*sqrt(3)",
   "theorem_seqs": [
-    "parallelogram_property_opposite_angle_equal(BCDA)",
-    "line_addition(BE,EC)",
-    "line_addition(CF,FD)",
-    "mirror_congruent_triangle_judgment_sas(BEA,DAF)",
-    "isosceles_triangle_judgment_line_equal(BCA)",
-    "isosceles_triangle_property_angle_equal(BCA)",
-    "triangle_property_angle_sum(BCA)",
-    "isosceles_triangle_judgment_angle_equal(ABC)",
-    "median_of_triangle_judgment(AE,ABC)",
-    "isosceles_triangle_property_line_coincidence(ABC,E)",
-    "right_triangle_judgment_angle(BEA)",
-    "right_triangle_property_pythagorean(BEA)",
-    "triangle_property_angle_sum(ABE)",
-    "parallel_property_ipsilateral_internal_angle(AD,BC)",
-    "mirror_congruent_triangle_property_angle_equal(ABE,AFD)",
-    "angle_addition(DAE,EAB)",
-    "angle_addition(DAF,FAE)",
-    "mirror_congruent_triangle_property_line_equal(BEA,DAF)",
-    "cosine_theorem(AEF)",
-    "triangle_perimeter_formula(AEF)"
-  ]
+    "parallelogram_property_opposite_angle_equal(1,BCDA)",
+    "line_addition(1,BE,EC)",
+    "line_addition(1,CF,FD)",
+    "mirror_congruent_triangle_judgment_sas(1,BEA,DAF)",
+    "isosceles_triangle_judgment_line_equal(1,BCA)",
+    "isosceles_triangle_property_angle_equal(1,BCA)",
+    "triangle_property_angle_sum(1,BCA)",
+    "isosceles_triangle_judgment_angle_equal(1,ABC)",
+    "median_of_triangle_judgment(1,AE,ABC)",
+    "isosceles_triangle_property_line_coincidence(2,ABC,E)",
+    "right_triangle_judgment_angle(1,BEA)",
+    "right_triangle_property_pythagorean(1,BEA)",
+    "triangle_property_angle_sum(1,ABE)",
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+    "mirror_congruent_triangle_property_angle_equal(1,ABE,AFD)",
+    "angle_addition(1,DAE,EAB)",
+    "angle_addition(1,DAF,FAE)",
+    "mirror_congruent_triangle_property_line_equal(1,BEA,DAF)",
+    "cosine_theorem(1,AEF)",
+    "triangle_perimeter_formula(1,AEF)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_angle_equal(1,BCDA)": [
+      "mirror_congruent_triangle_judgment_sas(1,BEA,DAF)"
+    ],
+    "line_addition(1,BE,EC)": [
+      "mirror_congruent_triangle_judgment_sas(1,BEA,DAF)"
+    ],
+    "line_addition(1,CF,FD)": [
+      "mirror_congruent_triangle_judgment_sas(1,BEA,DAF)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,BEA,DAF)": [
+      "mirror_congruent_triangle_property_line_equal(1,BEA,DAF)",
+      "mirror_congruent_triangle_property_angle_equal(1,ABE,AFD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,BCA)": [
+      "isosceles_triangle_property_angle_equal(1,BCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BCA)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABC)"
+    ],
+    "triangle_property_angle_sum(1,BCA)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABC)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ABC)": [
+      "isosceles_triangle_property_line_coincidence(2,ABC,E)"
+    ],
+    "median_of_triangle_judgment(1,AE,ABC)": [
+      "isosceles_triangle_property_line_coincidence(2,ABC,E)"
+    ],
+    "isosceles_triangle_property_line_coincidence(2,ABC,E)": [
+      "right_triangle_judgment_angle(1,BEA)"
+    ],
+    "right_triangle_judgment_angle(1,BEA)": [
+      "right_triangle_property_pythagorean(1,BEA)"
+    ],
+    "right_triangle_property_pythagorean(1,BEA)": [],
+    "triangle_property_angle_sum(1,ABE)": [],
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,ABE,AFD)": [],
+    "angle_addition(1,DAE,EAB)": [],
+    "angle_addition(1,DAF,FAE)": [],
+    "mirror_congruent_triangle_property_line_equal(1,BEA,DAF)": [],
+    "cosine_theorem(1,AEF)": [],
+    "triangle_perimeter_formula(1,AEF)": [],
+    "START": [
+      "parallelogram_property_opposite_angle_equal(1,BCDA)",
+      "line_addition(1,BE,EC)",
+      "line_addition(1,CF,FD)",
+      "isosceles_triangle_judgment_line_equal(1,BCA)",
+      "triangle_property_angle_sum(1,BCA)",
+      "median_of_triangle_judgment(1,AE,ABC)",
+      "triangle_property_angle_sum(1,ABE)",
+      "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+      "angle_addition(1,DAE,EAB)",
+      "angle_addition(1,DAF,FAE)",
+      "cosine_theorem(1,AEF)",
+      "triangle_perimeter_formula(1,AEF)"
+    ]
+  }
 }

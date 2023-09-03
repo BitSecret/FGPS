@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(EFB))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,F)",
-    "parallel_property_collinear_extend(DC,BF,G)",
-    "adjacent_complementary_angle(CGF,FGD)",
-    "parallel_property_corresponding_angle(FB,GD,E)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,F)",
+    "parallel_property_collinear_extend(3,DC,BF,G)",
+    "adjacent_complementary_angle(1,CGF,FGD)",
+    "parallel_property_corresponding_angle(1,FB,GD,E)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,F)": [
+      "parallel_property_collinear_extend(3,DC,BF,G)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BF,G)": [
+      "parallel_property_corresponding_angle(1,FB,GD,E)"
+    ],
+    "adjacent_complementary_angle(1,CGF,FGD)": [],
+    "parallel_property_corresponding_angle(1,FB,GD,E)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,F)",
+      "adjacent_complementary_angle(1,CGF,FGD)"
+    ]
+  }
 }

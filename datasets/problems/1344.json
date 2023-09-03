@@ -32,7 +32,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "90",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CM,DE,B)",
-    "parallel_property_corresponding_angle(ED,BC,L)"
-  ]
+    "parallel_property_collinear_extend(3,CM,DE,B)",
+    "parallel_property_corresponding_angle(2,ED,BC,L)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CM,DE,B)": [
+      "parallel_property_corresponding_angle(2,ED,BC,L)"
+    ],
+    "parallel_property_corresponding_angle(2,ED,BC,L)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CM,DE,B)"
+    ]
+  }
 }

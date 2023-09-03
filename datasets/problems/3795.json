@@ -22,7 +22,16 @@
   "goal_cdl": "Value(LengthOfLine(ED))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(BAC,EDA)",
-    "mirror_congruent_triangle_property_line_equal(ACB,AED)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(2,BAC,EDA)",
+    "mirror_congruent_triangle_property_line_equal(1,ACB,AED)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(2,BAC,EDA)": [
+      "mirror_congruent_triangle_property_line_equal(1,ACB,AED)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,ACB,AED)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(2,BAC,EDA)"
+    ]
+  }
 }

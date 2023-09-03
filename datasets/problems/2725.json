@@ -23,7 +23,15 @@
   "goal_cdl": "Value(MeasureOfAngle(DAE))",
   "problem_answer": "28",
   "theorem_seqs": [
-    "angle_addition(DAE,EAB)",
-    "triangle_property_angle_sum(DAB)"
-  ]
+    "angle_addition(1,DAE,EAB)",
+    "triangle_property_angle_sum(1,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,DAE,EAB)": [],
+    "triangle_property_angle_sum(1,DAB)": [],
+    "START": [
+      "angle_addition(1,DAE,EAB)",
+      "triangle_property_angle_sum(1,DAB)"
+    ]
+  }
 }

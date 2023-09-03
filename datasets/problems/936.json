@@ -18,8 +18,19 @@
   "goal_cdl": "Value(PerimeterOfTriangle(CBA))",
   "problem_answer": "48",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BAC)",
-    "right_triangle_property_pythagorean(BAC)",
-    "triangle_perimeter_formula(CBA)"
-  ]
+    "right_triangle_judgment_angle(1,BAC)",
+    "right_triangle_property_pythagorean(1,BAC)",
+    "triangle_perimeter_formula(1,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BAC)": [
+      "right_triangle_property_pythagorean(1,BAC)"
+    ],
+    "right_triangle_property_pythagorean(1,BAC)": [],
+    "triangle_perimeter_formula(1,CBA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BAC)",
+      "triangle_perimeter_formula(1,CBA)"
+    ]
+  }
 }

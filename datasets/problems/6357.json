@@ -27,17 +27,53 @@
   "goal_cdl": "Value(MeasureOfAngle(CDF))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(DC,AB)",
-    "isosceles_triangle_judgment_line_equal(DAC)",
-    "isosceles_triangle_property_angle_equal(DAC)",
-    "angle_addition(DAF,FAE)",
-    "perpendicular_bisector_property_distance_equal(FE,AB)",
-    "kite_property_diagonal_perpendicular_bisection(ABCD,G)",
-    "perpendicular_bisector_judgment_per_and_mid(FG,BD)",
-    "perpendicular_bisector_property_distance_equal(FG,BD)",
-    "isosceles_triangle_judgment_line_equal(FDA)",
-    "isosceles_triangle_property_angle_equal(FDA)",
-    "parallel_property_ipsilateral_internal_angle(DC,AB)",
-    "angle_addition(CDF,FDA)"
-  ]
+    "parallel_property_alternate_interior_angle(2,DC,AB)",
+    "isosceles_triangle_judgment_line_equal(1,DAC)",
+    "isosceles_triangle_property_angle_equal(1,DAC)",
+    "angle_addition(1,DAF,FAE)",
+    "perpendicular_bisector_property_distance_equal(1,FE,AB)",
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,G)",
+    "perpendicular_bisector_judgment_per_and_mid(1,FG,BD)",
+    "perpendicular_bisector_property_distance_equal(1,FG,BD)",
+    "isosceles_triangle_judgment_line_equal(1,FDA)",
+    "isosceles_triangle_property_angle_equal(1,FDA)",
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)",
+    "angle_addition(1,CDF,FDA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,DC,AB)": [],
+    "isosceles_triangle_judgment_line_equal(1,DAC)": [
+      "isosceles_triangle_property_angle_equal(1,DAC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DAC)": [],
+    "angle_addition(1,DAF,FAE)": [],
+    "perpendicular_bisector_property_distance_equal(1,FE,AB)": [
+      "isosceles_triangle_judgment_line_equal(1,FDA)"
+    ],
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,G)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,FG,BD)",
+      "perpendicular_bisector_judgment_per_and_mid(1,FG,BD)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,FG,BD)": [
+      "perpendicular_bisector_property_distance_equal(1,FG,BD)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,FG,BD)": [
+      "isosceles_triangle_judgment_line_equal(1,FDA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,FDA)": [
+      "isosceles_triangle_property_angle_equal(1,FDA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,FDA)": [],
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)": [],
+    "angle_addition(1,CDF,FDA)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,DC,AB)",
+      "isosceles_triangle_judgment_line_equal(1,DAC)",
+      "angle_addition(1,DAF,FAE)",
+      "perpendicular_bisector_property_distance_equal(1,FE,AB)",
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,G)",
+      "parallel_property_ipsilateral_internal_angle(1,DC,AB)",
+      "angle_addition(1,CDF,FDA)"
+    ]
+  }
 }

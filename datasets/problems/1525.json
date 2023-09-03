@@ -28,18 +28,52 @@
   "goal_cdl": "Value(MeasureOfAngle(DAB))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "arc_property_center_angle(ODE,O)",
-    "arc_property_center_angle(OEC,O)",
-    "arc_property_center_angle(OCB,O)",
-    "arc_property_center_angle(OBD,O)",
-    "angle_addition(COE,EOD)",
-    "angle_addition(COD,DOB)",
-    "round_angle(COB,BOC)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "isosceles_triangle_judgment_line_equal(ODC)",
-    "isosceles_triangle_property_angle_equal(ODC)",
-    "triangle_property_angle_sum(ODA)",
-    "triangle_property_angle_sum(COD)"
-  ]
+    "arc_property_center_angle(1,ODE,O)",
+    "arc_property_center_angle(1,OEC,O)",
+    "arc_property_center_angle(1,OCB,O)",
+    "arc_property_center_angle(1,OBD,O)",
+    "angle_addition(1,COE,EOD)",
+    "angle_addition(1,COD,DOB)",
+    "round_angle(1,COB,BOC)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "isosceles_triangle_judgment_line_equal(1,ODC)",
+    "isosceles_triangle_property_angle_equal(1,ODC)",
+    "triangle_property_angle_sum(1,ODA)",
+    "triangle_property_angle_sum(1,COD)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,ODE,O)": [],
+    "arc_property_center_angle(1,OEC,O)": [],
+    "arc_property_center_angle(1,OCB,O)": [],
+    "arc_property_center_angle(1,OBD,O)": [],
+    "angle_addition(1,COE,EOD)": [],
+    "angle_addition(1,COD,DOB)": [],
+    "round_angle(1,COB,BOC)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODC)": [
+      "isosceles_triangle_property_angle_equal(1,ODC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODC)": [],
+    "triangle_property_angle_sum(1,ODA)": [],
+    "triangle_property_angle_sum(1,COD)": [],
+    "START": [
+      "arc_property_center_angle(1,ODE,O)",
+      "arc_property_center_angle(1,OEC,O)",
+      "arc_property_center_angle(1,OCB,O)",
+      "arc_property_center_angle(1,OBD,O)",
+      "angle_addition(1,COE,EOD)",
+      "angle_addition(1,COD,DOB)",
+      "round_angle(1,COB,BOC)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "triangle_property_angle_sum(1,ODA)",
+      "triangle_property_angle_sum(1,COD)"
+    ]
+  }
 }

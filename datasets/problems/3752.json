@@ -22,8 +22,19 @@
   "goal_cdl": "Value(MeasureOfAngle(AEF))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,E)",
-    "parallel_property_alternate_interior_angle(AE,CD)",
-    "angle_addition(CEA,AEF)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,E)",
+    "parallel_property_alternate_interior_angle(2,AE,CD)",
+    "angle_addition(1,CEA,AEF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,E)": [
+      "parallel_property_alternate_interior_angle(2,AE,CD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,CD)": [],
+    "angle_addition(1,CEA,AEF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,E)",
+      "angle_addition(1,CEA,AEF)"
+    ]
+  }
 }

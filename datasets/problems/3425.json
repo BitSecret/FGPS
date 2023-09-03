@@ -25,14 +25,40 @@
   "goal_cdl": "Value(MeasureOfAngle(FBE))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(ED,BA)",
-    "perpendicular_bisector_property_distance_equal(FG,CB)",
-    "isosceles_triangle_judgment_line_equal(EBA)",
-    "isosceles_triangle_judgment_line_equal(FCB)",
-    "isosceles_triangle_property_angle_equal(EBA)",
-    "isosceles_triangle_property_angle_equal(FCB)",
-    "triangle_property_angle_sum(BAC)",
-    "angle_addition(FBE,EBD)",
-    "angle_addition(GBF,FBD)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,ED,BA)",
+    "perpendicular_bisector_property_distance_equal(1,FG,CB)",
+    "isosceles_triangle_judgment_line_equal(1,EBA)",
+    "isosceles_triangle_judgment_line_equal(1,FCB)",
+    "isosceles_triangle_property_angle_equal(1,EBA)",
+    "isosceles_triangle_property_angle_equal(1,FCB)",
+    "triangle_property_angle_sum(1,BAC)",
+    "angle_addition(1,FBE,EBD)",
+    "angle_addition(1,GBF,FBD)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,ED,BA)": [
+      "isosceles_triangle_judgment_line_equal(1,EBA)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,FG,CB)": [
+      "isosceles_triangle_judgment_line_equal(1,FCB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EBA)": [
+      "isosceles_triangle_property_angle_equal(1,EBA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,FCB)": [
+      "isosceles_triangle_property_angle_equal(1,FCB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EBA)": [],
+    "isosceles_triangle_property_angle_equal(1,FCB)": [],
+    "triangle_property_angle_sum(1,BAC)": [],
+    "angle_addition(1,FBE,EBD)": [],
+    "angle_addition(1,GBF,FBD)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,ED,BA)",
+      "perpendicular_bisector_property_distance_equal(1,FG,CB)",
+      "triangle_property_angle_sum(1,BAC)",
+      "angle_addition(1,FBE,EBD)",
+      "angle_addition(1,GBF,FBD)"
+    ]
+  }
 }

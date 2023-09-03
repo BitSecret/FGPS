@@ -21,12 +21,32 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(DCA)))",
   "problem_answer": "2*sqrt(5)/5",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(ADC)",
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(ADC)",
-    "right_triangle_property_pythagorean(BCA)",
-    "cosine_theorem(CAD)",
-    "cosine_theorem(ABC)",
-    "sine_theorem(CAD)"
-  ]
+    "right_triangle_judgment_angle(1,ADC)",
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,ADC)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "cosine_theorem(1,CAD)",
+    "cosine_theorem(1,ABC)",
+    "sine_theorem(1,CAD)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,ADC)": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ],
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,ADC)": [],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "cosine_theorem(1,CAD)": [],
+    "cosine_theorem(1,ABC)": [],
+    "sine_theorem(1,CAD)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "cosine_theorem(1,ABC)",
+      "sine_theorem(1,CAD)"
+    ]
+  }
 }

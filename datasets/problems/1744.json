@@ -21,11 +21,31 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(LPAK))",
   "problem_answer": "44",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(LK,PA)",
-    "parallel_judgment_ipsilateral_internal_angle(PL,AK)",
-    "parallelogram_judgment_parallel_and_parallel(LPAK)",
-    "parallelogram_property_opposite_line_equal(LPAK)",
-    "parallelogram_property_opposite_line_equal(PAKL)",
-    "quadrilateral_perimeter_formula(LPAK)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,LK,PA)",
+    "parallel_judgment_ipsilateral_internal_angle(1,PL,AK)",
+    "parallelogram_judgment_parallel_and_parallel(1,LPAK)",
+    "parallelogram_property_opposite_line_equal(1,LPAK)",
+    "parallelogram_property_opposite_line_equal(1,PAKL)",
+    "quadrilateral_perimeter_formula(1,LPAK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,LK,PA)": [
+      "parallelogram_judgment_parallel_and_parallel(1,LPAK)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,PL,AK)": [
+      "parallelogram_judgment_parallel_and_parallel(1,LPAK)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,LPAK)": [
+      "parallelogram_property_opposite_line_equal(1,LPAK)",
+      "parallelogram_property_opposite_line_equal(1,PAKL)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,LPAK)": [],
+    "parallelogram_property_opposite_line_equal(1,PAKL)": [],
+    "quadrilateral_perimeter_formula(1,LPAK)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,LK,PA)",
+      "parallel_judgment_ipsilateral_internal_angle(1,PL,AK)",
+      "quadrilateral_perimeter_formula(1,LPAK)"
+    ]
+  }
 }

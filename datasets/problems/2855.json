@@ -42,15 +42,45 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGH))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "quadrilateral_perimeter_formula(EFGH)",
-    "isosceles_trapezoid_property_diagonal_equal(ABCD)",
-    "midsegment_of_triangle_judgment_midpoint(EH,ABD)",
-    "midsegment_of_triangle_judgment_midpoint(HG,DAC)",
-    "midsegment_of_triangle_judgment_midpoint(FE,BCA)",
-    "midsegment_of_triangle_judgment_midpoint(GF,CDB)",
-    "midsegment_of_triangle_property_length(EH,ABD)",
-    "midsegment_of_triangle_property_length(HG,DAC)",
-    "midsegment_of_triangle_property_length(FE,BCA)",
-    "midsegment_of_triangle_property_length(GF,CDB)"
-  ]
+    "quadrilateral_perimeter_formula(1,EFGH)",
+    "isosceles_trapezoid_property_diagonal_equal(1,ABCD)",
+    "midsegment_of_triangle_judgment_midpoint(1,EH,ABD)",
+    "midsegment_of_triangle_judgment_midpoint(1,HG,DAC)",
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)",
+    "midsegment_of_triangle_judgment_midpoint(1,GF,CDB)",
+    "midsegment_of_triangle_property_length(1,EH,ABD)",
+    "midsegment_of_triangle_property_length(1,HG,DAC)",
+    "midsegment_of_triangle_property_length(1,FE,BCA)",
+    "midsegment_of_triangle_property_length(1,GF,CDB)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_perimeter_formula(1,EFGH)": [],
+    "isosceles_trapezoid_property_diagonal_equal(1,ABCD)": [
+      "solve_eq_33)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EH,ABD)": [
+      "midsegment_of_triangle_property_length(1,EH,ABD)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,HG,DAC)": [
+      "midsegment_of_triangle_property_length(1,HG,DAC)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)": [
+      "midsegment_of_triangle_property_length(1,FE,BCA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,GF,CDB)": [
+      "midsegment_of_triangle_property_length(1,GF,CDB)"
+    ],
+    "midsegment_of_triangle_property_length(1,EH,ABD)": [],
+    "midsegment_of_triangle_property_length(1,HG,DAC)": [],
+    "midsegment_of_triangle_property_length(1,FE,BCA)": [],
+    "midsegment_of_triangle_property_length(1,GF,CDB)": [],
+    "START": [
+      "quadrilateral_perimeter_formula(1,EFGH)",
+      "isosceles_trapezoid_property_diagonal_equal(1,ABCD)",
+      "midsegment_of_triangle_judgment_midpoint(1,EH,ABD)",
+      "midsegment_of_triangle_judgment_midpoint(1,HG,DAC)",
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BCA)",
+      "midsegment_of_triangle_judgment_midpoint(1,GF,CDB)"
+    ]
+  }
 }

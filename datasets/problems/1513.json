@@ -23,8 +23,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8.04",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BED,DEC)",
-    "altitude_of_quadrilateral_judgment_left_vertex(DE,DBCA)",
-    "trapezoid_area_formula(DBCA)"
-  ]
+    "adjacent_complementary_angle(1,BED,DEC)",
+    "altitude_of_quadrilateral_judgment_left_vertex(2,DE,DBCA)",
+    "trapezoid_area_formula(1,DBCA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BED,DEC)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(2,DE,DBCA)"
+    ],
+    "altitude_of_quadrilateral_judgment_left_vertex(2,DE,DBCA)": [],
+    "trapezoid_area_formula(1,DBCA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BED,DEC)",
+      "trapezoid_area_formula(1,DBCA)"
+    ]
+  }
 }

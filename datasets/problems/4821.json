@@ -29,11 +29,27 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "angle_addition(CAF,FAE)",
-    "tangent_of_circle_property_perpendicular(EA,O,O)",
-    "diameter_of_circle_property_right_angle(DCA,O)",
-    "triangle_property_angle_sum(DCA)",
-    "arc_property_circumference_angle_external(OCA,B)",
-    "arc_property_circumference_angle_external(OCA,D)"
-  ]
+    "angle_addition(1,CAF,FAE)",
+    "tangent_of_circle_property_perpendicular(1,EA,O,O)",
+    "diameter_of_circle_property_right_angle(1,DCA,O)",
+    "triangle_property_angle_sum(1,DCA)",
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "arc_property_circumference_angle_external(1,OCA,D)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,CAF,FAE)": [],
+    "tangent_of_circle_property_perpendicular(1,EA,O,O)": [],
+    "diameter_of_circle_property_right_angle(1,DCA,O)": [],
+    "triangle_property_angle_sum(1,DCA)": [],
+    "arc_property_circumference_angle_external(1,OCA,B)": [],
+    "arc_property_circumference_angle_external(1,OCA,D)": [],
+    "START": [
+      "angle_addition(1,CAF,FAE)",
+      "tangent_of_circle_property_perpendicular(1,EA,O,O)",
+      "diameter_of_circle_property_right_angle(1,DCA,O)",
+      "triangle_property_angle_sum(1,DCA)",
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "arc_property_circumference_angle_external(1,OCA,D)"
+    ]
+  }
 }

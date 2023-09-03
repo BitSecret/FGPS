@@ -30,12 +30,30 @@
   "goal_cdl": "Value(PerimeterOfTriangle(PCD))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "tangent_of_circle_property_length_equal(PA,PB,O)",
-    "tangent_of_circle_property_length_equal(DQ,DB,O)",
-    "tangent_of_circle_property_length_equal(CA,CQ,O)",
-    "line_addition(AC,CP)",
-    "line_addition(BD,DP)",
-    "line_addition(CQ,QD)",
-    "triangle_perimeter_formula(PCD)"
-  ]
+    "tangent_of_circle_property_length_equal(1,PA,PB,O)",
+    "tangent_of_circle_property_length_equal(1,DQ,DB,O)",
+    "tangent_of_circle_property_length_equal(1,CA,CQ,O)",
+    "line_addition(1,AC,CP)",
+    "line_addition(1,BD,DP)",
+    "line_addition(1,CQ,QD)",
+    "triangle_perimeter_formula(1,PCD)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_length_equal(1,PA,PB,O)": [],
+    "tangent_of_circle_property_length_equal(1,DQ,DB,O)": [],
+    "tangent_of_circle_property_length_equal(1,CA,CQ,O)": [],
+    "line_addition(1,AC,CP)": [],
+    "line_addition(1,BD,DP)": [],
+    "line_addition(1,CQ,QD)": [],
+    "triangle_perimeter_formula(1,PCD)": [],
+    "START": [
+      "tangent_of_circle_property_length_equal(1,PA,PB,O)",
+      "tangent_of_circle_property_length_equal(1,DQ,DB,O)",
+      "tangent_of_circle_property_length_equal(1,CA,CQ,O)",
+      "line_addition(1,AC,CP)",
+      "line_addition(1,BD,DP)",
+      "line_addition(1,CQ,QD)",
+      "triangle_perimeter_formula(1,PCD)"
+    ]
+  }
 }

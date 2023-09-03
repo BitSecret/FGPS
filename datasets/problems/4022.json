@@ -19,7 +19,15 @@
   "goal_cdl": "Value(LengthOfArc(ABC))",
   "problem_answer": "3/2*pi",
   "theorem_seqs": [
-    "arc_property_center_angle(ABC,A)",
-    "arc_length_formula(ABC)"
-  ]
+    "arc_property_center_angle(1,ABC,A)",
+    "arc_length_formula(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,ABC,A)": [],
+    "arc_length_formula(1,ABC)": [],
+    "START": [
+      "arc_property_center_angle(1,ABC,A)",
+      "arc_length_formula(1,ABC)"
+    ]
+  }
 }

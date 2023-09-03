@@ -24,8 +24,18 @@
   "goal_cdl": "Value(MeasureOfAngle(FCA))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "similar_triangle_property_angle_equal(CAB,CFD)",
-    "angle_addition(DCE,ECF)",
-    "angle_addition(ECF,FCA)"
-  ]
+    "similar_triangle_property_angle_equal(1,CAB,CFD)",
+    "angle_addition(1,DCE,ECF)",
+    "angle_addition(1,ECF,FCA)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_angle_equal(1,CAB,CFD)": [],
+    "angle_addition(1,DCE,ECF)": [],
+    "angle_addition(1,ECF,FCA)": [],
+    "START": [
+      "similar_triangle_property_angle_equal(1,CAB,CFD)",
+      "angle_addition(1,DCE,ECF)",
+      "angle_addition(1,ECF,FCA)"
+    ]
+  }
 }

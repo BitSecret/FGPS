@@ -26,8 +26,19 @@
   "goal_cdl": "Value(MeasureOfAngle(BCA))",
   "problem_answer": "48",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(EF,BG,A)",
-    "parallel_property_corresponding_angle(AF,BG,D)",
-    "triangle_property_angle_sum(ABC)"
-  ]
+    "parallel_property_collinear_extend(3,EF,BG,A)",
+    "parallel_property_corresponding_angle(1,AF,BG,D)",
+    "triangle_property_angle_sum(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,EF,BG,A)": [
+      "parallel_property_corresponding_angle(1,AF,BG,D)"
+    ],
+    "parallel_property_corresponding_angle(1,AF,BG,D)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,EF,BG,A)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  }
 }

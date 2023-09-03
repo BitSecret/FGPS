@@ -19,9 +19,22 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ACB)",
-    "isosceles_triangle_property_angle_equal(ACB)",
-    "triangle_property_angle_sum(CBA)",
-    "parallel_property_alternate_interior_angle(CD,BA)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ACB)",
+    "isosceles_triangle_property_angle_equal(1,ACB)",
+    "triangle_property_angle_sum(1,CBA)",
+    "parallel_property_alternate_interior_angle(1,CD,BA)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ACB)": [
+      "isosceles_triangle_property_angle_equal(1,ACB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ACB)": [],
+    "triangle_property_angle_sum(1,CBA)": [],
+    "parallel_property_alternate_interior_angle(1,CD,BA)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ACB)",
+      "triangle_property_angle_sum(1,CBA)",
+      "parallel_property_alternate_interior_angle(1,CD,BA)"
+    ]
+  }
 }

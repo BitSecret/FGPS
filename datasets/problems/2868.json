@@ -30,10 +30,26 @@
   "goal_cdl": "Value(MeasureOfAngle(HBE))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DG,HI,F)",
-    "parallel_property_collinear_extend(IH,GF,B)",
-    "parallel_property_corresponding_angle(FG,BI,C)",
-    "angle_addition(EBF,FBI)",
-    "adjacent_complementary_angle(HBE,EBI)"
-  ]
+    "parallel_property_collinear_extend(3,DG,HI,F)",
+    "parallel_property_collinear_extend(3,IH,GF,B)",
+    "parallel_property_corresponding_angle(1,FG,BI,C)",
+    "angle_addition(1,EBF,FBI)",
+    "adjacent_complementary_angle(1,HBE,EBI)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DG,HI,F)": [
+      "parallel_property_collinear_extend(3,IH,GF,B)"
+    ],
+    "parallel_property_collinear_extend(3,IH,GF,B)": [
+      "parallel_property_corresponding_angle(1,FG,BI,C)"
+    ],
+    "parallel_property_corresponding_angle(1,FG,BI,C)": [],
+    "angle_addition(1,EBF,FBI)": [],
+    "adjacent_complementary_angle(1,HBE,EBI)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DG,HI,F)",
+      "angle_addition(1,EBF,FBI)",
+      "adjacent_complementary_angle(1,HBE,EBI)"
+    ]
+  }
 }

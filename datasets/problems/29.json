@@ -11,14 +11,20 @@
   ],
   "text_cdl": [],
   "image_cdl": [
-    "Equal(LengthOfLine(RS),4.5)",
+    "Equal(LengthOfLine(RS),5)",
     "Equal(MeasureOfAngle(SRT),x)",
     "Equal(LengthOfLine(TS),3)",
-    "Equal(LengthOfLine(TR),6.1)"
+    "Equal(LengthOfLine(TR),6)"
   ],
   "goal_cdl": "Value(x)",
-  "problem_answer": "28.031",
+  "problem_answer": "180*acos(13/15)/pi",
   "theorem_seqs": [
-    "cosine_theorem(RTS)"
-  ]
+    "cosine_theorem(1,RTS)"
+  ],
+  "theorem_seq_dag": {
+    "cosine_theorem(1,RTS)": [],
+    "START": [
+      "cosine_theorem(1,RTS)"
+    ]
+  }
 }

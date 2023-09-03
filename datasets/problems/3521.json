@@ -23,10 +23,26 @@
   "goal_cdl": "Value(MeasureOfAngle(DAC))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "congruent_triangle_property_line_equal(BCA,EDA)",
-    "congruent_triangle_property_angle_equal(ABC,AED)",
-    "mirror_congruent_triangle_judgment_hl(AFD,ACF)",
-    "mirror_congruent_triangle_property_angle_equal(AFD,ACF)",
-    "angle_addition(DAF,FAC)"
-  ]
+    "congruent_triangle_property_line_equal(1,BCA,EDA)",
+    "congruent_triangle_property_angle_equal(1,ABC,AED)",
+    "mirror_congruent_triangle_judgment_hl(1,AFD,ACF)",
+    "mirror_congruent_triangle_property_angle_equal(1,AFD,ACF)",
+    "angle_addition(1,DAF,FAC)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_triangle_property_line_equal(1,BCA,EDA)": [
+      "mirror_congruent_triangle_judgment_hl(1,AFD,ACF)"
+    ],
+    "congruent_triangle_property_angle_equal(1,ABC,AED)": [],
+    "mirror_congruent_triangle_judgment_hl(1,AFD,ACF)": [
+      "mirror_congruent_triangle_property_angle_equal(1,AFD,ACF)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,AFD,ACF)": [],
+    "angle_addition(1,DAF,FAC)": [],
+    "START": [
+      "congruent_triangle_property_line_equal(1,BCA,EDA)",
+      "congruent_triangle_property_angle_equal(1,ABC,AED)",
+      "angle_addition(1,DAF,FAC)"
+    ]
+  }
 }

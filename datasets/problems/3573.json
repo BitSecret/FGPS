@@ -31,17 +31,52 @@
   "goal_cdl": "Value(Add(Sub(AreaOfQuadrilateral(ABFE),AreaOfSector(FEB)),AreaOfSector(CDF)))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "line_addition(AE,ED)",
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_collinear_extend(CB,EA,F)",
-    "radius_of_circle_property_length_equal(FE,F)",
-    "radius_of_circle_property_length_equal(FB,F)",
-    "parallelogram_judgment_parallel_and_equal(EABF)",
-    "parallelogram_area_formula_sine(EABF)",
-    "parallelogram_area_formula_sine(BFEA)",
-    "sector_area_formula(FEB)",
-    "sector_area_formula(CDF)",
-    "arc_property_center_angle(FEB,F)",
-    "arc_property_center_angle(CDF,C)"
-  ]
+    "line_addition(1,AE,ED)",
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_collinear_extend(3,CB,EA,F)",
+    "radius_of_circle_property_length_equal(1,FE,F)",
+    "radius_of_circle_property_length_equal(1,FB,F)",
+    "parallelogram_judgment_parallel_and_equal(1,EABF)",
+    "parallelogram_area_formula_sine(1,EABF)",
+    "parallelogram_area_formula_sine(1,BFEA)",
+    "sector_area_formula(1,FEB)",
+    "sector_area_formula(1,CDF)",
+    "arc_property_center_angle(1,FEB,F)",
+    "arc_property_center_angle(1,CDF,C)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AE,ED)": [
+      "parallelogram_judgment_parallel_and_equal(1,EABF)"
+    ],
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_collinear_extend(3,CB,EA,F)"
+    ],
+    "parallel_property_collinear_extend(3,CB,EA,F)": [
+      "parallelogram_judgment_parallel_and_equal(1,EABF)"
+    ],
+    "radius_of_circle_property_length_equal(1,FE,F)": [],
+    "radius_of_circle_property_length_equal(1,FB,F)": [
+      "parallelogram_judgment_parallel_and_equal(1,EABF)"
+    ],
+    "parallelogram_judgment_parallel_and_equal(1,EABF)": [
+      "parallelogram_area_formula_sine(1,EABF)",
+      "parallelogram_area_formula_sine(1,BFEA)"
+    ],
+    "parallelogram_area_formula_sine(1,EABF)": [],
+    "parallelogram_area_formula_sine(1,BFEA)": [],
+    "sector_area_formula(1,FEB)": [],
+    "sector_area_formula(1,CDF)": [],
+    "arc_property_center_angle(1,FEB,F)": [],
+    "arc_property_center_angle(1,CDF,C)": [],
+    "START": [
+      "line_addition(1,AE,ED)",
+      "parallel_property_collinear_extend(3,AD,BC,E)",
+      "radius_of_circle_property_length_equal(1,FE,F)",
+      "radius_of_circle_property_length_equal(1,FB,F)",
+      "sector_area_formula(1,FEB)",
+      "sector_area_formula(1,CDF)",
+      "arc_property_center_angle(1,FEB,F)",
+      "arc_property_center_angle(1,CDF,C)"
+    ]
+  }
 }

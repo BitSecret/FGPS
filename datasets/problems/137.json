@@ -20,8 +20,18 @@
   "goal_cdl": "Value(AreaOfSector(BAC))",
   "problem_answer": "pi/4",
   "theorem_seqs": [
-    "arc_property_center_angle(BAC,B)",
-    "radius_of_circle_property_length_equal(BC,B)",
-    "sector_area_formula(BAC)"
-  ]
+    "arc_property_center_angle(1,BAC,B)",
+    "radius_of_circle_property_length_equal(1,BC,B)",
+    "sector_area_formula(1,BAC)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,BAC,B)": [],
+    "radius_of_circle_property_length_equal(1,BC,B)": [],
+    "sector_area_formula(1,BAC)": [],
+    "START": [
+      "arc_property_center_angle(1,BAC,B)",
+      "radius_of_circle_property_length_equal(1,BC,B)",
+      "sector_area_formula(1,BAC)"
+    ]
+  }
 }

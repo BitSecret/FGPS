@@ -28,7 +28,15 @@
   "goal_cdl": "Value(MeasureOfAngle(FNA))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "angle_addition(ANE,ENI)",
-    "adjacent_complementary_angle(FNA,ANI)"
-  ]
+    "angle_addition(1,ANE,ENI)",
+    "adjacent_complementary_angle(1,FNA,ANI)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ANE,ENI)": [],
+    "adjacent_complementary_angle(1,FNA,ANI)": [],
+    "START": [
+      "angle_addition(1,ANE,ENI)",
+      "adjacent_complementary_angle(1,FNA,ANI)"
+    ]
+  }
 }

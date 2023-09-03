@@ -41,24 +41,99 @@
   "goal_cdl": "Value(PerimeterOfCircle(O))",
   "problem_answer": "32*pi",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AE,O,O)",
-    "tangent_of_circle_property_perpendicular(AG,O,O)",
-    "tangent_of_circle_property_length_equal(AE,AG,O)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "radius_of_circle_property_length_equal(OG,O)",
-    "quadrilateral_property_angle_sum(OGAE)",
-    "parallelogram_judgment_angle_and_angle(OGAE)",
-    "kite_judgment_equal_and_equal(OGAE)",
-    "rhombus_judgment_parallelogram_and_kite(OGAE)",
-    "tangent_of_circle_property_perpendicular(CF,O,O)",
-    "tangent_of_circle_property_perpendicular(CE,O,O)",
-    "tangent_of_circle_property_length_equal(CF,CE,O)",
-    "radius_of_circle_property_length_equal(OF,O)",
-    "quadrilateral_property_angle_sum(OECF)",
-    "parallelogram_judgment_angle_and_angle(OECF)",
-    "kite_judgment_equal_and_equal(OECF)",
-    "rhombus_judgment_parallelogram_and_kite(OECF)",
-    "line_addition(CE,EA)",
-    "circle_perimeter_formula(O)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AE,O,O)",
+    "tangent_of_circle_property_perpendicular(1,AG,O,O)",
+    "tangent_of_circle_property_length_equal(1,AE,AG,O)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "radius_of_circle_property_length_equal(1,OG,O)",
+    "quadrilateral_property_angle_sum(1,OGAE)",
+    "parallelogram_judgment_angle_and_angle(1,OGAE)",
+    "kite_judgment_equal_and_equal(1,OGAE)",
+    "rhombus_judgment_parallelogram_and_kite(1,OGAE)",
+    "tangent_of_circle_property_perpendicular(2,CF,O,O)",
+    "tangent_of_circle_property_perpendicular(1,CE,O,O)",
+    "tangent_of_circle_property_length_equal(1,CF,CE,O)",
+    "radius_of_circle_property_length_equal(1,OF,O)",
+    "quadrilateral_property_angle_sum(1,OECF)",
+    "parallelogram_judgment_angle_and_angle(1,OECF)",
+    "kite_judgment_equal_and_equal(1,OECF)",
+    "rhombus_judgment_parallelogram_and_kite(1,OECF)",
+    "line_addition(1,CE,EA)",
+    "circle_perimeter_formula(1,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AE,O,O)": [
+      "parallelogram_judgment_angle_and_angle(1,OGAE)",
+      "parallelogram_judgment_angle_and_angle(1,OGAE)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,AG,O,O)": [
+      "parallelogram_judgment_angle_and_angle(1,OGAE)",
+      "parallelogram_judgment_angle_and_angle(1,OGAE)"
+    ],
+    "tangent_of_circle_property_length_equal(1,AE,AG,O)": [
+      "kite_judgment_equal_and_equal(1,OGAE)",
+      "kite_judgment_equal_and_equal(1,OECF)"
+    ],
+    "radius_of_circle_property_length_equal(1,OE,O)": [
+      "kite_judgment_equal_and_equal(1,OGAE)",
+      "kite_judgment_equal_and_equal(1,OECF)"
+    ],
+    "radius_of_circle_property_length_equal(1,OG,O)": [
+      "kite_judgment_equal_and_equal(1,OGAE)"
+    ],
+    "quadrilateral_property_angle_sum(1,OGAE)": [
+      "parallelogram_judgment_angle_and_angle(1,OGAE)"
+    ],
+    "parallelogram_judgment_angle_and_angle(1,OGAE)": [
+      "rhombus_judgment_parallelogram_and_kite(1,OGAE)"
+    ],
+    "kite_judgment_equal_and_equal(1,OGAE)": [
+      "rhombus_judgment_parallelogram_and_kite(1,OGAE)"
+    ],
+    "rhombus_judgment_parallelogram_and_kite(1,OGAE)": [
+      "kite_judgment_equal_and_equal(1,OECF)",
+      "kite_judgment_equal_and_equal(1,OECF)"
+    ],
+    "tangent_of_circle_property_perpendicular(2,CF,O,O)": [
+      "parallelogram_judgment_angle_and_angle(1,OECF)",
+      "parallelogram_judgment_angle_and_angle(1,OECF)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,CE,O,O)": [
+      "parallelogram_judgment_angle_and_angle(1,OECF)",
+      "parallelogram_judgment_angle_and_angle(1,OECF)"
+    ],
+    "tangent_of_circle_property_length_equal(1,CF,CE,O)": [
+      "kite_judgment_equal_and_equal(1,OECF)"
+    ],
+    "radius_of_circle_property_length_equal(1,OF,O)": [
+      "kite_judgment_equal_and_equal(1,OECF)"
+    ],
+    "quadrilateral_property_angle_sum(1,OECF)": [
+      "parallelogram_judgment_angle_and_angle(1,OECF)"
+    ],
+    "parallelogram_judgment_angle_and_angle(1,OECF)": [
+      "rhombus_judgment_parallelogram_and_kite(1,OECF)"
+    ],
+    "kite_judgment_equal_and_equal(1,OECF)": [
+      "rhombus_judgment_parallelogram_and_kite(1,OECF)"
+    ],
+    "rhombus_judgment_parallelogram_and_kite(1,OECF)": [],
+    "line_addition(1,CE,EA)": [],
+    "circle_perimeter_formula(1,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AE,O,O)",
+      "tangent_of_circle_property_perpendicular(1,AG,O,O)",
+      "tangent_of_circle_property_length_equal(1,AE,AG,O)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "radius_of_circle_property_length_equal(1,OG,O)",
+      "quadrilateral_property_angle_sum(1,OGAE)",
+      "tangent_of_circle_property_perpendicular(2,CF,O,O)",
+      "tangent_of_circle_property_perpendicular(1,CE,O,O)",
+      "tangent_of_circle_property_length_equal(1,CF,CE,O)",
+      "radius_of_circle_property_length_equal(1,OF,O)",
+      "quadrilateral_property_angle_sum(1,OECF)",
+      "line_addition(1,CE,EA)",
+      "circle_perimeter_formula(1,O)"
+    ]
+  }
 }

@@ -25,7 +25,15 @@
   "goal_cdl": "Value(MeasureOfAngle(PCB))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "vertical_angle(APD,BPC)",
-    "triangle_property_angle_sum(PCB)"
-  ]
+    "vertical_angle(1,APD,BPC)",
+    "triangle_property_angle_sum(1,PCB)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,APD,BPC)": [],
+    "triangle_property_angle_sum(1,PCB)": [],
+    "START": [
+      "vertical_angle(1,APD,BPC)",
+      "triangle_property_angle_sum(1,PCB)"
+    ]
+  }
 }

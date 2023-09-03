@@ -24,8 +24,19 @@
   "goal_cdl": "Value(MeasureOfAngle(DBA))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FE,BA,D)",
-    "vertical_angle(EDC,FDG)",
-    "parallel_property_ipsilateral_internal_angle(DE,BA)"
-  ]
+    "parallel_property_collinear_extend(3,FE,BA,D)",
+    "vertical_angle(1,EDC,FDG)",
+    "parallel_property_ipsilateral_internal_angle(1,DE,BA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,FE,BA,D)": [
+      "parallel_property_ipsilateral_internal_angle(1,DE,BA)"
+    ],
+    "vertical_angle(1,EDC,FDG)": [],
+    "parallel_property_ipsilateral_internal_angle(1,DE,BA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,FE,BA,D)",
+      "vertical_angle(1,EDC,FDG)"
+    ]
+  }
 }

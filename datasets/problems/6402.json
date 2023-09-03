@@ -21,10 +21,26 @@
   "goal_cdl": "Value(LengthOfLine(EC))",
   "problem_answer": "1",
   "theorem_seqs": [
-    "line_addition(DE,EC)",
-    "parallel_property_collinear_extend(DC,AB,E)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallel_property_alternate_interior_angle(DE,AB)",
-    "isosceles_triangle_judgment_angle_equal(DAE)"
-  ]
+    "line_addition(1,DE,EC)",
+    "parallel_property_collinear_extend(3,DC,AB,E)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallel_property_alternate_interior_angle(2,DE,AB)",
+    "isosceles_triangle_judgment_angle_equal(1,DAE)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,DE,EC)": [],
+    "parallel_property_collinear_extend(3,DC,AB,E)": [
+      "parallel_property_alternate_interior_angle(2,DE,AB)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallel_property_alternate_interior_angle(2,DE,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,DAE)": [],
+    "START": [
+      "line_addition(1,DE,EC)",
+      "parallel_property_collinear_extend(3,DC,AB,E)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)"
+    ]
+  }
 }

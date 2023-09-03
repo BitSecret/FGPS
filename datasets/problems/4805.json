@@ -31,15 +31,44 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "2*sqrt(3)",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OE,O)",
-    "arc_property_circumference_angle_external(OEC,D)",
-    "arc_property_center_angle(OEC,O)",
-    "tangent_of_circle_property_perpendicular(AC,O,O)",
-    "parallel_property_collinear_extend(EF,AB,M)",
-    "parallel_property_collinear_extend(BA,ME,C)",
-    "parallel_property_corresponding_angle(CA,ME,O)",
-    "sine_theorem(EMO)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OM,EF)",
-    "line_addition(EM,MF)"
-  ]
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "arc_property_circumference_angle_external(1,OEC,D)",
+    "arc_property_center_angle(1,OEC,O)",
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+    "parallel_property_collinear_extend(3,EF,AB,M)",
+    "parallel_property_collinear_extend(3,BA,ME,C)",
+    "parallel_property_corresponding_angle(2,CA,ME,O)",
+    "sine_theorem(1,EMO)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OM,EF)",
+    "line_addition(1,EM,MF)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OE,O)": [],
+    "arc_property_circumference_angle_external(1,OEC,D)": [],
+    "arc_property_center_angle(1,OEC,O)": [],
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OM,EF)"
+    ],
+    "parallel_property_collinear_extend(3,EF,AB,M)": [
+      "parallel_property_collinear_extend(3,BA,ME,C)"
+    ],
+    "parallel_property_collinear_extend(3,BA,ME,C)": [
+      "parallel_property_corresponding_angle(2,CA,ME,O)"
+    ],
+    "parallel_property_corresponding_angle(2,CA,ME,O)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OM,EF)"
+    ],
+    "sine_theorem(1,EMO)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OM,EF)": [],
+    "line_addition(1,EM,MF)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "arc_property_circumference_angle_external(1,OEC,D)",
+      "arc_property_center_angle(1,OEC,O)",
+      "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+      "parallel_property_collinear_extend(3,EF,AB,M)",
+      "sine_theorem(1,EMO)",
+      "line_addition(1,EM,MF)"
+    ]
+  }
 }

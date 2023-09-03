@@ -28,9 +28,21 @@
   "goal_cdl": "Value(Add(LengthOfLine(DN),LengthOfLine(DM)))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "altitude_of_triangle_judgment(DN,DAB)",
-    "altitude_of_triangle_judgment(DM,DCA)",
-    "triangle_area_formula_common(DCA)",
-    "triangle_area_formula_common(DAB)"
-  ]
+    "altitude_of_triangle_judgment(1,DN,DAB)",
+    "altitude_of_triangle_judgment(1,DM,DCA)",
+    "triangle_area_formula_common(1,DCA)",
+    "triangle_area_formula_common(1,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "altitude_of_triangle_judgment(1,DN,DAB)": [],
+    "altitude_of_triangle_judgment(1,DM,DCA)": [],
+    "triangle_area_formula_common(1,DCA)": [],
+    "triangle_area_formula_common(1,DAB)": [],
+    "START": [
+      "altitude_of_triangle_judgment(1,DN,DAB)",
+      "altitude_of_triangle_judgment(1,DM,DCA)",
+      "triangle_area_formula_common(1,DCA)",
+      "triangle_area_formula_common(1,DAB)"
+    ]
+  }
 }

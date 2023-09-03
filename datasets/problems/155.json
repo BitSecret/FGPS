@@ -25,21 +25,69 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "40+14*sqrt(2)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(HIB,BIA)",
-    "adjacent_complementary_angle(DHC,CHA)",
-    "parallel_judgment_ipsilateral_internal_angle(HC,IB)",
-    "parallelogram_judgment_parallel_and_parallel(IBCH)",
-    "parallelogram_property_opposite_line_equal(IBCH)",
-    "parallel_property_ipsilateral_internal_angle(IH,BC)",
-    "angle_addition(ABI,IBC)",
-    "triangle_property_angle_sum(ABI)",
-    "sine_theorem(IAB)",
-    "sine_theorem(BIA)",
-    "mirror_congruent_triangle_judgment_hl(BIA,CDH)",
-    "mirror_congruent_triangle_property_line_equal(BIA,CDH)",
-    "line_addition(AI,IH)",
-    "line_addition(AH,HD)",
-    "parallelogram_property_opposite_line_equal(BCHI)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "adjacent_complementary_angle(1,HIB,BIA)",
+    "adjacent_complementary_angle(1,DHC,CHA)",
+    "parallel_judgment_ipsilateral_internal_angle(1,HC,IB)",
+    "parallelogram_judgment_parallel_and_parallel(1,IBCH)",
+    "parallelogram_property_opposite_line_equal(1,IBCH)",
+    "parallel_property_ipsilateral_internal_angle(1,IH,BC)",
+    "angle_addition(1,ABI,IBC)",
+    "triangle_property_angle_sum(1,ABI)",
+    "sine_theorem(1,IAB)",
+    "sine_theorem(1,BIA)",
+    "mirror_congruent_triangle_judgment_hl(2,BIA,CDH)",
+    "mirror_congruent_triangle_property_line_equal(1,BIA,CDH)",
+    "line_addition(1,AI,IH)",
+    "line_addition(1,AH,HD)",
+    "parallelogram_property_opposite_line_equal(1,BCHI)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,HIB,BIA)": [
+      "mirror_congruent_triangle_judgment_hl(2,BIA,CDH)"
+    ],
+    "adjacent_complementary_angle(1,DHC,CHA)": [
+      "mirror_congruent_triangle_judgment_hl(2,BIA,CDH)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,HC,IB)": [
+      "parallelogram_judgment_parallel_and_parallel(1,IBCH)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,IBCH)": [
+      "parallelogram_property_opposite_line_equal(1,IBCH)",
+      "parallelogram_property_opposite_line_equal(1,BCHI)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,IBCH)": [
+      "mirror_congruent_triangle_judgment_hl(2,BIA,CDH)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,IH,BC)": [
+      "solve_eq_35)"
+    ],
+    "angle_addition(1,ABI,IBC)": [
+      "solve_eq_39)"
+    ],
+    "triangle_property_angle_sum(1,ABI)": [],
+    "sine_theorem(1,IAB)": [],
+    "sine_theorem(1,BIA)": [],
+    "mirror_congruent_triangle_judgment_hl(2,BIA,CDH)": [
+      "mirror_congruent_triangle_property_line_equal(1,BIA,CDH)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,BIA,CDH)": [],
+    "line_addition(1,AI,IH)": [],
+    "line_addition(1,AH,HD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCHI)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,HIB,BIA)",
+      "adjacent_complementary_angle(1,DHC,CHA)",
+      "parallel_judgment_ipsilateral_internal_angle(1,HC,IB)",
+      "parallel_property_ipsilateral_internal_angle(1,IH,BC)",
+      "angle_addition(1,ABI,IBC)",
+      "triangle_property_angle_sum(1,ABI)",
+      "sine_theorem(1,IAB)",
+      "sine_theorem(1,BIA)",
+      "line_addition(1,AI,IH)",
+      "line_addition(1,AH,HD)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

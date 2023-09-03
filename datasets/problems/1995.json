@@ -34,20 +34,75 @@
   "goal_cdl": "Value(MeasureOfArc(RUS))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(RS,R)",
-    "radius_of_circle_property_length_equal(RY,R)",
-    "radius_of_circle_property_length_equal(RU,R)",
-    "arc_property_center_angle(RYX,R)",
-    "adjacent_complementary_angle(UVR,RVS)",
-    "circle_property_chord_perpendicular_bisect_chord(R,RV,US)",
-    "circle_property_chord_perpendicular_bisect_chord(R,RZ,YW)",
-    "line_addition(SV,VU)",
-    "line_addition(YZ,ZW)",
-    "mirror_congruent_triangle_judgment_hl(YZR,SRV)",
-    "congruent_triangle_judgment_hl(YZR,UVR)",
-    "mirror_congruent_triangle_property_angle_equal(RYZ,RVS)",
-    "congruent_triangle_property_angle_equal(RYZ,RUV)",
-    "angle_addition(SRV,VRU)",
-    "arc_property_center_angle(RUS,R)"
-  ]
+    "radius_of_circle_property_length_equal(1,RS,R)",
+    "radius_of_circle_property_length_equal(1,RY,R)",
+    "radius_of_circle_property_length_equal(1,RU,R)",
+    "arc_property_center_angle(1,RYX,R)",
+    "adjacent_complementary_angle(1,UVR,RVS)",
+    "circle_property_chord_perpendicular_bisect_chord(1,R,RV,US)",
+    "circle_property_chord_perpendicular_bisect_chord(1,R,RZ,YW)",
+    "line_addition(1,SV,VU)",
+    "line_addition(1,YZ,ZW)",
+    "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)",
+    "congruent_triangle_judgment_hl(1,YZR,UVR)",
+    "mirror_congruent_triangle_property_angle_equal(1,RYZ,RVS)",
+    "congruent_triangle_property_angle_equal(1,RYZ,RUV)",
+    "angle_addition(1,SRV,VRU)",
+    "arc_property_center_angle(1,RUS,R)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,RS,R)": [
+      "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)"
+    ],
+    "radius_of_circle_property_length_equal(1,RY,R)": [
+      "congruent_triangle_judgment_hl(1,YZR,UVR)",
+      "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)"
+    ],
+    "radius_of_circle_property_length_equal(1,RU,R)": [
+      "congruent_triangle_judgment_hl(1,YZR,UVR)"
+    ],
+    "arc_property_center_angle(1,RYX,R)": [],
+    "adjacent_complementary_angle(1,UVR,RVS)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,R,RV,US)",
+      "congruent_triangle_judgment_hl(1,YZR,UVR)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,R,RV,US)": [
+      "congruent_triangle_judgment_hl(1,YZR,UVR)",
+      "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,R,RZ,YW)": [
+      "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)",
+      "congruent_triangle_judgment_hl(1,YZR,UVR)"
+    ],
+    "line_addition(1,SV,VU)": [
+      "congruent_triangle_judgment_hl(1,YZR,UVR)",
+      "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)"
+    ],
+    "line_addition(1,YZ,ZW)": [
+      "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)",
+      "congruent_triangle_judgment_hl(1,YZR,UVR)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(2,YZR,SRV)": [
+      "mirror_congruent_triangle_property_angle_equal(1,RYZ,RVS)"
+    ],
+    "congruent_triangle_judgment_hl(1,YZR,UVR)": [
+      "congruent_triangle_property_angle_equal(1,RYZ,RUV)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,RYZ,RVS)": [],
+    "congruent_triangle_property_angle_equal(1,RYZ,RUV)": [],
+    "angle_addition(1,SRV,VRU)": [],
+    "arc_property_center_angle(1,RUS,R)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,RS,R)",
+      "radius_of_circle_property_length_equal(1,RY,R)",
+      "radius_of_circle_property_length_equal(1,RU,R)",
+      "arc_property_center_angle(1,RYX,R)",
+      "adjacent_complementary_angle(1,UVR,RVS)",
+      "circle_property_chord_perpendicular_bisect_chord(1,R,RZ,YW)",
+      "line_addition(1,SV,VU)",
+      "line_addition(1,YZ,ZW)",
+      "angle_addition(1,SRV,VRU)",
+      "arc_property_center_angle(1,RUS,R)"
+    ]
+  }
 }

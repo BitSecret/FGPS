@@ -26,14 +26,45 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "6.341",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CEA,AET)",
-    "adjacent_complementary_angle(AET,TEB)",
-    "perpendicular_bisector_judgment_per_and_mid(BE,TC)",
-    "perpendicular_bisector_judgment_per_and_mid(AE,CT)",
-    "perpendicular_bisector_property_distance_equal(BE,TC)",
-    "perpendicular_bisector_property_distance_equal(AE,CT)",
-    "kite_judgment_equal_and_equal(BTAC)",
-    "kite_area_formula_diagonal(BTAC)",
-    "line_addition(CE,ET)"
-  ]
+    "adjacent_complementary_angle(1,CEA,AET)",
+    "adjacent_complementary_angle(1,AET,TEB)",
+    "perpendicular_bisector_judgment_per_and_mid(1,BE,TC)",
+    "perpendicular_bisector_judgment_per_and_mid(1,AE,CT)",
+    "perpendicular_bisector_property_distance_equal(1,BE,TC)",
+    "perpendicular_bisector_property_distance_equal(1,AE,CT)",
+    "kite_judgment_equal_and_equal(1,BTAC)",
+    "kite_area_formula_diagonal(1,BTAC)",
+    "line_addition(1,CE,ET)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CEA,AET)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,BE,TC)"
+    ],
+    "adjacent_complementary_angle(1,AET,TEB)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,BE,TC)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,BE,TC)": [
+      "perpendicular_bisector_property_distance_equal(1,BE,TC)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,AE,CT)": [
+      "perpendicular_bisector_property_distance_equal(1,AE,CT)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,BE,TC)": [
+      "kite_judgment_equal_and_equal(1,BTAC)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,AE,CT)": [
+      "kite_judgment_equal_and_equal(1,BTAC)"
+    ],
+    "kite_judgment_equal_and_equal(1,BTAC)": [
+      "kite_area_formula_diagonal(1,BTAC)"
+    ],
+    "kite_area_formula_diagonal(1,BTAC)": [],
+    "line_addition(1,CE,ET)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CEA,AET)",
+      "adjacent_complementary_angle(1,AET,TEB)",
+      "perpendicular_bisector_judgment_per_and_mid(1,AE,CT)",
+      "line_addition(1,CE,ET)"
+    ]
+  }
 }

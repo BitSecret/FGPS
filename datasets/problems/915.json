@@ -25,8 +25,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "5*sqrt(10)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(BF,D,D)",
-    "right_triangle_judgment_angle(BFD)",
-    "right_triangle_property_pythagorean(BFD)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,BF,D,D)",
+    "right_triangle_judgment_angle(1,BFD)",
+    "right_triangle_property_pythagorean(1,BFD)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,BF,D,D)": [
+      "right_triangle_judgment_angle(1,BFD)"
+    ],
+    "right_triangle_judgment_angle(1,BFD)": [
+      "right_triangle_property_pythagorean(1,BFD)"
+    ],
+    "right_triangle_property_pythagorean(1,BFD)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,BF,D,D)"
+    ]
+  }
 }

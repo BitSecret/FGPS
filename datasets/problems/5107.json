@@ -20,8 +20,18 @@
   "goal_cdl": "Value(MeasureOfAngle(ADC))",
   "problem_answer": "58",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BDA,ADC)",
-    "triangle_property_angle_sum(ADC)",
-    "triangle_property_angle_sum(ABD)"
-  ]
+    "adjacent_complementary_angle(1,BDA,ADC)",
+    "triangle_property_angle_sum(1,ADC)",
+    "triangle_property_angle_sum(1,ABD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BDA,ADC)": [],
+    "triangle_property_angle_sum(1,ADC)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BDA,ADC)",
+      "triangle_property_angle_sum(1,ADC)",
+      "triangle_property_angle_sum(1,ABD)"
+    ]
+  }
 }

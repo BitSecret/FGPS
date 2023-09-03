@@ -21,8 +21,18 @@
   "goal_cdl": "Value(MeasureOfAngle(BOA))",
   "problem_answer": "141",
   "theorem_seqs": [
-    "angle_addition(AOC,COD)",
-    "angle_addition(AOD,DOB)",
-    "round_angle(AOB,BOA)"
-  ]
+    "angle_addition(1,AOC,COD)",
+    "angle_addition(1,AOD,DOB)",
+    "round_angle(1,AOB,BOA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,AOC,COD)": [],
+    "angle_addition(1,AOD,DOB)": [],
+    "round_angle(1,AOB,BOA)": [],
+    "START": [
+      "angle_addition(1,AOC,COD)",
+      "angle_addition(1,AOD,DOB)",
+      "round_angle(1,AOB,BOA)"
+    ]
+  }
 }

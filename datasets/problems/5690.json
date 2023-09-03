@@ -25,16 +25,48 @@
   "goal_cdl": "Value(LengthOfLine(CF))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "right_triangle_judgment_angle(BCD)",
-    "right_triangle_property_pythagorean(BCD)",
-    "line_addition(BE,ED)",
-    "parallel_property_collinear_extend(DC,AB,F)",
-    "parallel_property_alternate_interior_angle(BA,CD)",
-    "parallel_property_alternate_interior_angle(DF,AB)",
-    "similar_triangle_judgment_aa(EAB,EFD)",
-    "similar_triangle_property_line_ratio(EAB,EFD)",
-    "similar_triangle_property_line_ratio(ABE,FDE)",
-    "line_addition(DF,FC)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "right_triangle_judgment_angle(1,BCD)",
+    "right_triangle_property_pythagorean(1,BCD)",
+    "line_addition(1,BE,ED)",
+    "parallel_property_collinear_extend(3,DC,AB,F)",
+    "parallel_property_alternate_interior_angle(1,BA,CD)",
+    "parallel_property_alternate_interior_angle(2,DF,AB)",
+    "similar_triangle_judgment_aa(1,EAB,EFD)",
+    "similar_triangle_property_line_ratio(1,EAB,EFD)",
+    "similar_triangle_property_line_ratio(1,ABE,FDE)",
+    "line_addition(1,DF,FC)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "right_triangle_judgment_angle(1,BCD)": [
+      "right_triangle_property_pythagorean(1,BCD)"
+    ],
+    "right_triangle_property_pythagorean(1,BCD)": [],
+    "line_addition(1,BE,ED)": [],
+    "parallel_property_collinear_extend(3,DC,AB,F)": [
+      "parallel_property_alternate_interior_angle(2,DF,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(1,BA,CD)": [
+      "similar_triangle_judgment_aa(1,EAB,EFD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DF,AB)": [
+      "similar_triangle_judgment_aa(1,EAB,EFD)"
+    ],
+    "similar_triangle_judgment_aa(1,EAB,EFD)": [
+      "similar_triangle_property_line_ratio(1,EAB,EFD)",
+      "similar_triangle_property_line_ratio(1,ABE,FDE)"
+    ],
+    "similar_triangle_property_line_ratio(1,EAB,EFD)": [],
+    "similar_triangle_property_line_ratio(1,ABE,FDE)": [],
+    "line_addition(1,DF,FC)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "right_triangle_judgment_angle(1,BCD)",
+      "line_addition(1,BE,ED)",
+      "parallel_property_collinear_extend(3,DC,AB,F)",
+      "parallel_property_alternate_interior_angle(1,BA,CD)",
+      "line_addition(1,DF,FC)"
+    ]
+  }
 }

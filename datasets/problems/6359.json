@@ -24,16 +24,54 @@
   "goal_cdl": "Value(MeasureOfAngle(CDF))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "isosceles_triangle_judgment_line_equal(BCA)",
-    "isosceles_triangle_property_angle_equal(BCA)",
-    "angle_addition(DAF,FAB)",
-    "perpendicular_bisector_property_distance_equal(FE,AB)",
-    "isosceles_triangle_judgment_line_equal(FAB)",
-    "isosceles_triangle_property_angle_equal(FAB)",
-    "mirror_congruent_triangle_judgment_sas(ABF,AFD)",
-    "mirror_congruent_triangle_property_angle_equal(BFA,DAF)",
-    "parallel_property_ipsilateral_internal_angle(DC,AB)",
-    "angle_addition(CDF,FDA)"
-  ]
+    "parallel_property_alternate_interior_angle(1,AD,BC)",
+    "isosceles_triangle_judgment_line_equal(1,BCA)",
+    "isosceles_triangle_property_angle_equal(1,BCA)",
+    "angle_addition(1,DAF,FAB)",
+    "perpendicular_bisector_property_distance_equal(1,FE,AB)",
+    "isosceles_triangle_judgment_line_equal(1,FAB)",
+    "isosceles_triangle_property_angle_equal(1,FAB)",
+    "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)",
+    "mirror_congruent_triangle_property_angle_equal(1,BFA,DAF)",
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)",
+    "angle_addition(1,CDF,FDA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,AD,BC)": [
+      "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)",
+      "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,BCA)": [
+      "isosceles_triangle_property_angle_equal(1,BCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BCA)": [
+      "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)",
+      "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)"
+    ],
+    "angle_addition(1,DAF,FAB)": [
+      "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)",
+      "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,FE,AB)": [
+      "isosceles_triangle_judgment_line_equal(1,FAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,FAB)": [
+      "isosceles_triangle_property_angle_equal(1,FAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,FAB)": [],
+    "mirror_congruent_triangle_judgment_sas(1,ABF,AFD)": [
+      "mirror_congruent_triangle_property_angle_equal(1,BFA,DAF)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,BFA,DAF)": [],
+    "parallel_property_ipsilateral_internal_angle(1,DC,AB)": [],
+    "angle_addition(1,CDF,FDA)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,AD,BC)",
+      "isosceles_triangle_judgment_line_equal(1,BCA)",
+      "angle_addition(1,DAF,FAB)",
+      "perpendicular_bisector_property_distance_equal(1,FE,AB)",
+      "parallel_property_ipsilateral_internal_angle(1,DC,AB)",
+      "angle_addition(1,CDF,FDA)"
+    ]
+  }
 }

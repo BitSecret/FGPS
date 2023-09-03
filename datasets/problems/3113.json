@@ -21,9 +21,22 @@
   "goal_cdl": "Value(MeasureOfAngle(BAE))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CEB,BED)",
-    "angle_addition(CEA,AEB)",
-    "parallel_property_collinear_extend(DC,BA,E)",
-    "parallel_property_alternate_interior_angle(EC,BA)"
-  ]
+    "adjacent_complementary_angle(1,CEB,BED)",
+    "angle_addition(1,CEA,AEB)",
+    "parallel_property_collinear_extend(3,DC,BA,E)",
+    "parallel_property_alternate_interior_angle(1,EC,BA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CEB,BED)": [],
+    "angle_addition(1,CEA,AEB)": [],
+    "parallel_property_collinear_extend(3,DC,BA,E)": [
+      "parallel_property_alternate_interior_angle(1,EC,BA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EC,BA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CEB,BED)",
+      "angle_addition(1,CEA,AEB)",
+      "parallel_property_collinear_extend(3,DC,BA,E)"
+    ]
+  }
 }

@@ -29,12 +29,32 @@
   "goal_cdl": "Value(MeasureOfAngle(BGF))",
   "problem_answer": "151",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,E)",
-    "parallel_property_collinear_extend(DC,BE,F)",
-    "parallel_property_corresponding_angle(EB,FD,I)",
-    "angle_addition(EFG,GFD)",
-    "adjacent_complementary_angle(IEG,GEF)",
-    "triangle_property_angle_sum(EFG)",
-    "adjacent_complementary_angle(BGF,FGE)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,E)",
+    "parallel_property_collinear_extend(3,DC,BE,F)",
+    "parallel_property_corresponding_angle(1,EB,FD,I)",
+    "angle_addition(1,EFG,GFD)",
+    "adjacent_complementary_angle(1,IEG,GEF)",
+    "triangle_property_angle_sum(1,EFG)",
+    "adjacent_complementary_angle(1,BGF,FGE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,E)": [
+      "parallel_property_collinear_extend(3,DC,BE,F)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BE,F)": [
+      "parallel_property_corresponding_angle(1,EB,FD,I)"
+    ],
+    "parallel_property_corresponding_angle(1,EB,FD,I)": [],
+    "angle_addition(1,EFG,GFD)": [],
+    "adjacent_complementary_angle(1,IEG,GEF)": [],
+    "triangle_property_angle_sum(1,EFG)": [],
+    "adjacent_complementary_angle(1,BGF,FGE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,E)",
+      "angle_addition(1,EFG,GFD)",
+      "adjacent_complementary_angle(1,IEG,GEF)",
+      "triangle_property_angle_sum(1,EFG)",
+      "adjacent_complementary_angle(1,BGF,FGE)"
+    ]
+  }
 }

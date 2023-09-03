@@ -24,8 +24,18 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DNB))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "line_addition(CD,DB)",
-    "line_addition(AN,NB)",
-    "triangle_perimeter_formula(DNB)"
-  ]
+    "line_addition(1,CD,DB)",
+    "line_addition(1,AN,NB)",
+    "triangle_perimeter_formula(1,DNB)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,CD,DB)": [],
+    "line_addition(1,AN,NB)": [],
+    "triangle_perimeter_formula(1,DNB)": [],
+    "START": [
+      "line_addition(1,CD,DB)",
+      "line_addition(1,AN,NB)",
+      "triangle_perimeter_formula(1,DNB)"
+    ]
+  }
 }

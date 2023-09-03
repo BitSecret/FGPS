@@ -23,8 +23,19 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "140",
   "theorem_seqs": [
-    "adjacent_complementary_angle(FAE,EAB)",
-    "parallel_property_collinear_extend(AB,DC,F)",
-    "parallel_property_corresponding_angle(CD,AF,E)"
-  ]
+    "adjacent_complementary_angle(1,FAE,EAB)",
+    "parallel_property_collinear_extend(1,AB,DC,F)",
+    "parallel_property_corresponding_angle(2,CD,AF,E)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,FAE,EAB)": [],
+    "parallel_property_collinear_extend(1,AB,DC,F)": [
+      "parallel_property_corresponding_angle(2,CD,AF,E)"
+    ],
+    "parallel_property_corresponding_angle(2,CD,AF,E)": [],
+    "START": [
+      "adjacent_complementary_angle(1,FAE,EAB)",
+      "parallel_property_collinear_extend(1,AB,DC,F)"
+    ]
+  }
 }

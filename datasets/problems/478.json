@@ -22,7 +22,16 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CEDB))",
   "problem_answer": "273",
   "theorem_seqs": [
-    "right_trapezoid_judgment_right_angle(CEDB)",
-    "right_trapezoid_area_formular(CEDB)"
-  ]
+    "right_trapezoid_judgment_right_angle(1,CEDB)",
+    "right_trapezoid_area_formular(1,CEDB)"
+  ],
+  "theorem_seq_dag": {
+    "right_trapezoid_judgment_right_angle(1,CEDB)": [
+      "right_trapezoid_area_formular(1,CEDB)"
+    ],
+    "right_trapezoid_area_formular(1,CEDB)": [],
+    "START": [
+      "right_trapezoid_judgment_right_angle(1,CEDB)"
+    ]
+  }
 }

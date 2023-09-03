@@ -28,17 +28,50 @@
   "goal_cdl": "Value(MeasureOfAngle(CFO))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "congruent_arc_judgment_length_equal(OEF,OBE)",
-    "congruent_arc_property_measure_equal(OEF,OBE)",
-    "arc_property_center_angle(OEF,O)",
-    "arc_property_center_angle(OBE,O)",
-    "flat_angle(AOB)",
-    "angle_addition(AOE,EOB)",
-    "angle_addition(FOA,AOE)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "radius_of_circle_property_length_equal(OF,O)",
-    "isosceles_triangle_judgment_line_equal(OEF)",
-    "isosceles_triangle_property_angle_equal(OEF)",
-    "triangle_property_angle_sum(OEF)"
-  ]
+    "congruent_arc_judgment_length_equal(1,OEF,OBE)",
+    "congruent_arc_property_measure_equal(1,OEF,OBE)",
+    "arc_property_center_angle(1,OEF,O)",
+    "arc_property_center_angle(1,OBE,O)",
+    "flat_angle(1,AOB)",
+    "angle_addition(1,AOE,EOB)",
+    "angle_addition(1,FOA,AOE)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "radius_of_circle_property_length_equal(1,OF,O)",
+    "isosceles_triangle_judgment_line_equal(1,OEF)",
+    "isosceles_triangle_property_angle_equal(1,OEF)",
+    "triangle_property_angle_sum(1,OEF)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_length_equal(1,OEF,OBE)": [
+      "congruent_arc_property_measure_equal(1,OEF,OBE)"
+    ],
+    "congruent_arc_property_measure_equal(1,OEF,OBE)": [],
+    "arc_property_center_angle(1,OEF,O)": [],
+    "arc_property_center_angle(1,OBE,O)": [],
+    "flat_angle(1,AOB)": [],
+    "angle_addition(1,AOE,EOB)": [],
+    "angle_addition(1,FOA,AOE)": [],
+    "radius_of_circle_property_length_equal(1,OE,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OEF)"
+    ],
+    "radius_of_circle_property_length_equal(1,OF,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OEF)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OEF)": [
+      "isosceles_triangle_property_angle_equal(1,OEF)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OEF)": [],
+    "triangle_property_angle_sum(1,OEF)": [],
+    "START": [
+      "congruent_arc_judgment_length_equal(1,OEF,OBE)",
+      "arc_property_center_angle(1,OEF,O)",
+      "arc_property_center_angle(1,OBE,O)",
+      "flat_angle(1,AOB)",
+      "angle_addition(1,AOE,EOB)",
+      "angle_addition(1,FOA,AOE)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "radius_of_circle_property_length_equal(1,OF,O)",
+      "triangle_property_angle_sum(1,OEF)"
+    ]
+  }
 }

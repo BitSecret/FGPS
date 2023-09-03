@@ -29,13 +29,37 @@
   "goal_cdl": "Value(LengthOfLine(MN))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "line_addition(LN,NK)",
-    "adjacent_complementary_angle(KNQ,QNL)",
-    "right_triangle_judgment_angle(KNM)",
-    "right_triangle_judgment_angle(MNL)",
-    "right_triangle_judgment_angle(LMK)",
-    "right_triangle_property_pythagorean(KNM)",
-    "right_triangle_property_pythagorean(MNL)",
-    "right_triangle_property_pythagorean(LMK)"
-  ]
+    "line_addition(1,LN,NK)",
+    "adjacent_complementary_angle(1,KNQ,QNL)",
+    "right_triangle_judgment_angle(1,KNM)",
+    "right_triangle_judgment_angle(1,MNL)",
+    "right_triangle_judgment_angle(1,LMK)",
+    "right_triangle_property_pythagorean(1,KNM)",
+    "right_triangle_property_pythagorean(1,MNL)",
+    "right_triangle_property_pythagorean(1,LMK)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,LN,NK)": [],
+    "adjacent_complementary_angle(1,KNQ,QNL)": [
+      "right_triangle_judgment_angle(1,MNL)"
+    ],
+    "right_triangle_judgment_angle(1,KNM)": [
+      "right_triangle_property_pythagorean(1,KNM)"
+    ],
+    "right_triangle_judgment_angle(1,MNL)": [
+      "right_triangle_property_pythagorean(1,MNL)"
+    ],
+    "right_triangle_judgment_angle(1,LMK)": [
+      "right_triangle_property_pythagorean(1,LMK)"
+    ],
+    "right_triangle_property_pythagorean(1,KNM)": [],
+    "right_triangle_property_pythagorean(1,MNL)": [],
+    "right_triangle_property_pythagorean(1,LMK)": [],
+    "START": [
+      "line_addition(1,LN,NK)",
+      "adjacent_complementary_angle(1,KNQ,QNL)",
+      "right_triangle_judgment_angle(1,KNM)",
+      "right_triangle_judgment_angle(1,LMK)"
+    ]
+  }
 }

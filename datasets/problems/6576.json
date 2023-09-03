@@ -27,12 +27,33 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ANEM))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "parallel_property_corresponding_angle(EN,CA,B)",
-    "isosceles_triangle_judgment_angle_equal(NBE)",
-    "quadrilateral_perimeter_formula(ANEM)",
-    "parallelogram_property_opposite_line_equal(ANEM)",
-    "parallelogram_property_opposite_line_equal(NEMA)",
-    "line_addition(AN,NB)"
-  ]
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "parallel_property_corresponding_angle(1,EN,CA,B)",
+    "isosceles_triangle_judgment_angle_equal(1,NBE)",
+    "quadrilateral_perimeter_formula(1,ANEM)",
+    "parallelogram_property_opposite_line_equal(1,ANEM)",
+    "parallelogram_property_opposite_line_equal(1,NEMA)",
+    "line_addition(1,AN,NB)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_property_angle_equal(1,ABC)": [
+      "isosceles_triangle_judgment_angle_equal(1,NBE)"
+    ],
+    "parallel_property_corresponding_angle(1,EN,CA,B)": [
+      "isosceles_triangle_judgment_angle_equal(1,NBE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,NBE)": [],
+    "quadrilateral_perimeter_formula(1,ANEM)": [],
+    "parallelogram_property_opposite_line_equal(1,ANEM)": [],
+    "parallelogram_property_opposite_line_equal(1,NEMA)": [],
+    "line_addition(1,AN,NB)": [],
+    "START": [
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "parallel_property_corresponding_angle(1,EN,CA,B)",
+      "quadrilateral_perimeter_formula(1,ANEM)",
+      "parallelogram_property_opposite_line_equal(1,ANEM)",
+      "parallelogram_property_opposite_line_equal(1,NEMA)",
+      "line_addition(1,AN,NB)"
+    ]
+  }
 }

@@ -29,14 +29,42 @@
   "goal_cdl": "Value(LengthOfLine(KM))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(MKN,LMK)",
-    "mirror_similar_triangle_property_angle_equal(MKN,LMK)",
-    "adjacent_complementary_angle(KNQ,QNL)",
-    "similar_triangle_judgment_aa(KNM,MNL)",
-    "similar_triangle_property_line_ratio(KNM,MNL)",
-    "similar_triangle_property_line_ratio(NMK,NLM)",
-    "similar_triangle_property_line_ratio(MKN,LMN)",
-    "right_triangle_judgment_angle(KNM)",
-    "right_triangle_property_pythagorean(KNM)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,MKN,LMK)",
+    "mirror_similar_triangle_property_angle_equal(1,MKN,LMK)",
+    "adjacent_complementary_angle(1,KNQ,QNL)",
+    "similar_triangle_judgment_aa(1,KNM,MNL)",
+    "similar_triangle_property_line_ratio(1,KNM,MNL)",
+    "similar_triangle_property_line_ratio(1,NMK,NLM)",
+    "similar_triangle_property_line_ratio(1,MKN,LMN)",
+    "right_triangle_judgment_angle(1,KNM)",
+    "right_triangle_property_pythagorean(1,KNM)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,MKN,LMK)": [
+      "mirror_similar_triangle_property_angle_equal(1,MKN,LMK)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,MKN,LMK)": [
+      "similar_triangle_judgment_aa(1,KNM,MNL)"
+    ],
+    "adjacent_complementary_angle(1,KNQ,QNL)": [
+      "similar_triangle_judgment_aa(1,KNM,MNL)"
+    ],
+    "similar_triangle_judgment_aa(1,KNM,MNL)": [
+      "similar_triangle_property_line_ratio(1,KNM,MNL)",
+      "similar_triangle_property_line_ratio(1,NMK,NLM)",
+      "similar_triangle_property_line_ratio(1,MKN,LMN)"
+    ],
+    "similar_triangle_property_line_ratio(1,KNM,MNL)": [],
+    "similar_triangle_property_line_ratio(1,NMK,NLM)": [],
+    "similar_triangle_property_line_ratio(1,MKN,LMN)": [],
+    "right_triangle_judgment_angle(1,KNM)": [
+      "right_triangle_property_pythagorean(1,KNM)"
+    ],
+    "right_triangle_property_pythagorean(1,KNM)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,MKN,LMK)",
+      "adjacent_complementary_angle(1,KNQ,QNL)",
+      "right_triangle_judgment_angle(1,KNM)"
+    ]
+  }
 }

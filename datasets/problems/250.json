@@ -24,14 +24,38 @@
   "goal_cdl": "Value(Sub(AreaOfCircle(A),AreaOfTriangle(DBC)))",
   "problem_answer": "10.613",
   "theorem_seqs": [
-    "equilateral_triangle_property_angle(CDB)",
-    "equilateral_triangle_property_angle(DBC)",
-    "arc_property_center_angle(ADB,A)",
-    "arc_property_circumference_angle_external(ADB,C)",
-    "radius_of_circle_property_length_equal(AB,A)",
-    "radius_of_circle_property_length_equal(AD,A)",
-    "cosine_theorem(ADB)",
-    "triangle_area_formula_sine(DBC)",
-    "circle_area_formula(A)"
-  ]
+    "equilateral_triangle_property_angle(1,CDB)",
+    "equilateral_triangle_property_angle(1,DBC)",
+    "arc_property_center_angle(1,ADB,A)",
+    "arc_property_circumference_angle_external(1,ADB,C)",
+    "radius_of_circle_property_length_equal(1,AB,A)",
+    "radius_of_circle_property_length_equal(1,AD,A)",
+    "cosine_theorem(1,ADB)",
+    "triangle_area_formula_sine(1,DBC)",
+    "circle_area_formula(1,A)"
+  ],
+  "theorem_seq_dag": {
+    "equilateral_triangle_property_angle(1,CDB)": [],
+    "equilateral_triangle_property_angle(1,DBC)": [],
+    "arc_property_center_angle(1,ADB,A)": [],
+    "arc_property_circumference_angle_external(1,ADB,C)": [],
+    "radius_of_circle_property_length_equal(1,AB,A)": [
+      "solve_eq_24)"
+    ],
+    "radius_of_circle_property_length_equal(1,AD,A)": [],
+    "cosine_theorem(1,ADB)": [],
+    "triangle_area_formula_sine(1,DBC)": [],
+    "circle_area_formula(1,A)": [],
+    "START": [
+      "equilateral_triangle_property_angle(1,CDB)",
+      "equilateral_triangle_property_angle(1,DBC)",
+      "arc_property_center_angle(1,ADB,A)",
+      "arc_property_circumference_angle_external(1,ADB,C)",
+      "radius_of_circle_property_length_equal(1,AB,A)",
+      "radius_of_circle_property_length_equal(1,AD,A)",
+      "cosine_theorem(1,ADB)",
+      "triangle_area_formula_sine(1,DBC)",
+      "circle_area_formula(1,A)"
+    ]
+  }
 }

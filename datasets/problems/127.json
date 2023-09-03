@@ -35,7 +35,16 @@
   "goal_cdl": "Value(MeasureOfAngle(GHD))",
   "problem_answer": "42",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(GA,HD,J)",
-    "parallel_property_alternate_interior_angle(DH,GJ)"
-  ]
+    "parallel_property_collinear_extend(1,GA,HD,J)",
+    "parallel_property_alternate_interior_angle(2,DH,GJ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,GA,HD,J)": [
+      "parallel_property_alternate_interior_angle(2,DH,GJ)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DH,GJ)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,GA,HD,J)"
+    ]
+  }
 }

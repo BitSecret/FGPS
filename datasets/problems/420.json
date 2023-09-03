@@ -26,23 +26,73 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ADCB))",
   "problem_answer": "52+4*sqrt(3)+4*sqrt(6)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BFC,CFA)",
-    "adjacent_complementary_angle(DEA,AEC)",
-    "parallel_property_collinear_extend(AB,DC,F)",
-    "parallel_property_collinear_extend(CD,FA,E)",
-    "parallel_property_ipsilateral_internal_angle(CE,FA)",
-    "parallel_judgment_ipsilateral_internal_angle(EA,CF)",
-    "parallelogram_judgment_parallel_and_parallel(AECF)",
-    "parallelogram_property_opposite_line_equal(AECF)",
-    "parallelogram_property_opposite_line_equal(ECFA)",
-    "triangle_property_angle_sum(ADE)",
-    "triangle_property_angle_sum(BFC)",
-    "sine_theorem(CBF)",
-    "sine_theorem(BFC)",
-    "sine_theorem(ADE)",
-    "sine_theorem(EAD)",
-    "line_addition(AF,FB)",
-    "line_addition(DE,EC)",
-    "quadrilateral_perimeter_formula(ADCB)"
-  ]
+    "adjacent_complementary_angle(1,BFC,CFA)",
+    "adjacent_complementary_angle(1,DEA,AEC)",
+    "parallel_property_collinear_extend(3,AB,DC,F)",
+    "parallel_property_collinear_extend(3,CD,FA,E)",
+    "parallel_property_ipsilateral_internal_angle(1,CE,FA)",
+    "parallel_judgment_ipsilateral_internal_angle(1,EA,CF)",
+    "parallelogram_judgment_parallel_and_parallel(1,AECF)",
+    "parallelogram_property_opposite_line_equal(1,AECF)",
+    "parallelogram_property_opposite_line_equal(1,ECFA)",
+    "triangle_property_angle_sum(1,ADE)",
+    "triangle_property_angle_sum(1,BFC)",
+    "sine_theorem(1,CBF)",
+    "sine_theorem(1,BFC)",
+    "sine_theorem(1,ADE)",
+    "sine_theorem(1,EAD)",
+    "line_addition(1,AF,FB)",
+    "line_addition(1,DE,EC)",
+    "quadrilateral_perimeter_formula(1,ADCB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BFC,CFA)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EA,CF)"
+    ],
+    "adjacent_complementary_angle(1,DEA,AEC)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EA,CF)"
+    ],
+    "parallel_property_collinear_extend(3,AB,DC,F)": [
+      "parallel_property_collinear_extend(3,CD,FA,E)"
+    ],
+    "parallel_property_collinear_extend(3,CD,FA,E)": [
+      "parallel_property_ipsilateral_internal_angle(1,CE,FA)",
+      "parallelogram_judgment_parallel_and_parallel(1,AECF)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,CE,FA)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EA,CF)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,EA,CF)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AECF)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,AECF)": [
+      "parallelogram_property_opposite_line_equal(1,AECF)",
+      "parallelogram_property_opposite_line_equal(1,ECFA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,AECF)": [],
+    "parallelogram_property_opposite_line_equal(1,ECFA)": [],
+    "triangle_property_angle_sum(1,ADE)": [],
+    "triangle_property_angle_sum(1,BFC)": [],
+    "sine_theorem(1,CBF)": [],
+    "sine_theorem(1,BFC)": [],
+    "sine_theorem(1,ADE)": [],
+    "sine_theorem(1,EAD)": [],
+    "line_addition(1,AF,FB)": [],
+    "line_addition(1,DE,EC)": [],
+    "quadrilateral_perimeter_formula(1,ADCB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BFC,CFA)",
+      "adjacent_complementary_angle(1,DEA,AEC)",
+      "parallel_property_collinear_extend(3,AB,DC,F)",
+      "triangle_property_angle_sum(1,ADE)",
+      "triangle_property_angle_sum(1,BFC)",
+      "sine_theorem(1,CBF)",
+      "sine_theorem(1,BFC)",
+      "sine_theorem(1,ADE)",
+      "sine_theorem(1,EAD)",
+      "line_addition(1,AF,FB)",
+      "line_addition(1,DE,EC)",
+      "quadrilateral_perimeter_formula(1,ADCB)"
+    ]
+  }
 }

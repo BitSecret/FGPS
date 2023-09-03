@@ -23,9 +23,23 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "12.5",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(ZT,XY,W)",
-    "similar_triangle_judgment_aa(TWZ,YWX)",
-    "similar_triangle_property_line_ratio(WZT,WXY)",
-    "similar_triangle_property_line_ratio(ZTW,XYW)"
-  ]
+    "parallel_property_corresponding_angle(1,ZT,XY,W)",
+    "similar_triangle_judgment_aa(1,TWZ,YWX)",
+    "similar_triangle_property_line_ratio(1,WZT,WXY)",
+    "similar_triangle_property_line_ratio(1,ZTW,XYW)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,ZT,XY,W)": [
+      "similar_triangle_judgment_aa(1,TWZ,YWX)"
+    ],
+    "similar_triangle_judgment_aa(1,TWZ,YWX)": [
+      "similar_triangle_property_line_ratio(1,WZT,WXY)",
+      "similar_triangle_property_line_ratio(1,ZTW,XYW)"
+    ],
+    "similar_triangle_property_line_ratio(1,WZT,WXY)": [],
+    "similar_triangle_property_line_ratio(1,ZTW,XYW)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,ZT,XY,W)"
+    ]
+  }
 }

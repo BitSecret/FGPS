@@ -21,12 +21,33 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(BCD)))",
   "problem_answer": "3/5",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)",
-    "sine_theorem(CAD)",
-    "sine_theorem(CDB)",
-    "sine_theorem(ABC)",
-    "sine_theorem(BCA)",
-    "triangle_property_angle_sum(CDB)"
-  ]
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "sine_theorem(1,CAD)",
+    "sine_theorem(1,CDB)",
+    "sine_theorem(1,ABC)",
+    "sine_theorem(1,BCA)",
+    "triangle_property_angle_sum(1,CDB)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [
+      "solve_eq_15)"
+    ],
+    "sine_theorem(1,CAD)": [],
+    "sine_theorem(1,CDB)": [],
+    "sine_theorem(1,ABC)": [],
+    "sine_theorem(1,BCA)": [],
+    "triangle_property_angle_sum(1,CDB)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "sine_theorem(1,CAD)",
+      "sine_theorem(1,CDB)",
+      "sine_theorem(1,ABC)",
+      "sine_theorem(1,BCA)",
+      "triangle_property_angle_sum(1,CDB)"
+    ]
+  }
 }

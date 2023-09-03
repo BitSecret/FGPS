@@ -27,11 +27,33 @@
   "goal_cdl": "Value(MeasureOfAngle(CAB))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "tangent_of_circle_property_length_equal(PA,PB,O)",
-    "parallelogram_property_opposite_line_equal(APBC)",
-    "parallelogram_property_opposite_line_equal(PBCA)",
-    "isosceles_triangle_judgment_line_equal(CAB)",
-    "isosceles_triangle_property_angle_equal(CAB)",
-    "triangle_property_angle_sum(CAB)"
-  ]
+    "tangent_of_circle_property_length_equal(1,PA,PB,O)",
+    "parallelogram_property_opposite_line_equal(1,APBC)",
+    "parallelogram_property_opposite_line_equal(1,PBCA)",
+    "isosceles_triangle_judgment_line_equal(1,CAB)",
+    "isosceles_triangle_property_angle_equal(1,CAB)",
+    "triangle_property_angle_sum(1,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_length_equal(1,PA,PB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,APBC)": [
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,PBCA)": [
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,CAB)": [
+      "isosceles_triangle_property_angle_equal(1,CAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CAB)": [],
+    "triangle_property_angle_sum(1,CAB)": [],
+    "START": [
+      "tangent_of_circle_property_length_equal(1,PA,PB,O)",
+      "parallelogram_property_opposite_line_equal(1,APBC)",
+      "parallelogram_property_opposite_line_equal(1,PBCA)",
+      "triangle_property_angle_sum(1,CAB)"
+    ]
+  }
 }

@@ -24,10 +24,28 @@
   "goal_cdl": "Value(LengthOfLine(DB))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "vertical_angle(DEA,FEC)",
-    "parallel_property_alternate_interior_angle(BA,CF)",
-    "congruent_triangle_judgment_aas(DEA,FEC)",
-    "congruent_triangle_property_line_equal(EAD,ECF)",
-    "line_addition(AD,DB)"
-  ]
+    "vertical_angle(1,DEA,FEC)",
+    "parallel_property_alternate_interior_angle(2,BA,CF)",
+    "congruent_triangle_judgment_aas(1,DEA,FEC)",
+    "congruent_triangle_property_line_equal(1,EAD,ECF)",
+    "line_addition(1,AD,DB)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,DEA,FEC)": [
+      "congruent_triangle_judgment_aas(1,DEA,FEC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BA,CF)": [
+      "congruent_triangle_judgment_aas(1,DEA,FEC)"
+    ],
+    "congruent_triangle_judgment_aas(1,DEA,FEC)": [
+      "congruent_triangle_property_line_equal(1,EAD,ECF)"
+    ],
+    "congruent_triangle_property_line_equal(1,EAD,ECF)": [],
+    "line_addition(1,AD,DB)": [],
+    "START": [
+      "vertical_angle(1,DEA,FEC)",
+      "parallel_property_alternate_interior_angle(2,BA,CF)",
+      "line_addition(1,AD,DB)"
+    ]
+  }
 }

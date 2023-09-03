@@ -27,11 +27,28 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "1.732",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(AOB,O)",
-    "arc_property_circumference_angle_external(OCA,D)",
-    "arc_property_circumference_angle_external(OCA,B)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "triangle_property_angle_sum(ABC)",
-    "sine_theorem(BCA)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+    "arc_property_circumference_angle_external(1,OCA,D)",
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "triangle_property_angle_sum(1,ABC)",
+    "sine_theorem(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ],
+    "arc_property_circumference_angle_external(1,OCA,D)": [],
+    "arc_property_circumference_angle_external(1,OCA,B)": [],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "sine_theorem(1,BCA)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "arc_property_circumference_angle_external(1,OCA,D)",
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "triangle_property_angle_sum(1,ABC)",
+      "sine_theorem(1,BCA)"
+    ]
+  }
 }

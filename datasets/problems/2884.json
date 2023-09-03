@@ -19,7 +19,15 @@
   "goal_cdl": "Value(MeasureOfAngle(CAB))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "adjacent_complementary_angle(DBA,ABC)",
-    "triangle_property_angle_sum(ABC)"
-  ]
+    "adjacent_complementary_angle(1,DBA,ABC)",
+    "triangle_property_angle_sum(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,DBA,ABC)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,DBA,ABC)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  }
 }

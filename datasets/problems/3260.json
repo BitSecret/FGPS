@@ -27,10 +27,26 @@
   "goal_cdl": "Value(MeasureOfAngle(HFC))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,E)",
-    "parallel_property_collinear_extend(DC,BE,F)",
-    "adjacent_complementary_angle(GEB,BEF)",
-    "parallel_property_ipsilateral_internal_angle(EB,FD)",
-    "vertical_angle(EFD,HFC)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,E)",
+    "parallel_property_collinear_extend(3,DC,BE,F)",
+    "adjacent_complementary_angle(1,GEB,BEF)",
+    "parallel_property_ipsilateral_internal_angle(1,EB,FD)",
+    "vertical_angle(1,EFD,HFC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,E)": [
+      "parallel_property_collinear_extend(3,DC,BE,F)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BE,F)": [
+      "parallel_property_ipsilateral_internal_angle(1,EB,FD)"
+    ],
+    "adjacent_complementary_angle(1,GEB,BEF)": [],
+    "parallel_property_ipsilateral_internal_angle(1,EB,FD)": [],
+    "vertical_angle(1,EFD,HFC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,E)",
+      "adjacent_complementary_angle(1,GEB,BEF)",
+      "vertical_angle(1,EFD,HFC)"
+    ]
+  }
 }

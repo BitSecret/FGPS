@@ -29,16 +29,45 @@
   "goal_cdl": "Value(LengthOfLine(LN))",
   "problem_answer": "4*sqrt(5)",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(K,KP,MN)",
-    "line_addition(MP,PN)",
-    "radius_of_circle_property_length_equal(KJ,K)",
-    "radius_of_circle_property_length_equal(KM,K)",
-    "radius_of_circle_property_length_equal(KL,K)",
-    "right_triangle_judgment_angle(MPK)",
-    "right_triangle_property_pythagorean(MPK)",
-    "line_addition(LP,PK)",
-    "vertical_angle(MPK,NPL)",
-    "right_triangle_judgment_angle(NPL)",
-    "right_triangle_property_pythagorean(NPL)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(1,K,KP,MN)",
+    "line_addition(1,MP,PN)",
+    "radius_of_circle_property_length_equal(1,KJ,K)",
+    "radius_of_circle_property_length_equal(1,KM,K)",
+    "radius_of_circle_property_length_equal(1,KL,K)",
+    "right_triangle_judgment_angle(1,MPK)",
+    "right_triangle_property_pythagorean(1,MPK)",
+    "line_addition(1,LP,PK)",
+    "vertical_angle(1,MPK,NPL)",
+    "right_triangle_judgment_angle(1,NPL)",
+    "right_triangle_property_pythagorean(1,NPL)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(1,K,KP,MN)": [],
+    "line_addition(1,MP,PN)": [],
+    "radius_of_circle_property_length_equal(1,KJ,K)": [],
+    "radius_of_circle_property_length_equal(1,KM,K)": [],
+    "radius_of_circle_property_length_equal(1,KL,K)": [],
+    "right_triangle_judgment_angle(1,MPK)": [
+      "right_triangle_property_pythagorean(1,MPK)"
+    ],
+    "right_triangle_property_pythagorean(1,MPK)": [],
+    "line_addition(1,LP,PK)": [],
+    "vertical_angle(1,MPK,NPL)": [
+      "right_triangle_judgment_angle(1,NPL)"
+    ],
+    "right_triangle_judgment_angle(1,NPL)": [
+      "right_triangle_property_pythagorean(1,NPL)"
+    ],
+    "right_triangle_property_pythagorean(1,NPL)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(1,K,KP,MN)",
+      "line_addition(1,MP,PN)",
+      "radius_of_circle_property_length_equal(1,KJ,K)",
+      "radius_of_circle_property_length_equal(1,KM,K)",
+      "radius_of_circle_property_length_equal(1,KL,K)",
+      "right_triangle_judgment_angle(1,MPK)",
+      "line_addition(1,LP,PK)",
+      "vertical_angle(1,MPK,NPL)"
+    ]
+  }
 }

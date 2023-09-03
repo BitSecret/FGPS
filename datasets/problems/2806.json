@@ -20,8 +20,18 @@
   "goal_cdl": "Value(MeasureOfAngle(ABE))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "flat_angle(DBC)",
-    "angle_addition(DBA,ABC)",
-    "angle_addition(ABE,EBC)"
-  ]
+    "flat_angle(1,DBC)",
+    "angle_addition(1,DBA,ABC)",
+    "angle_addition(1,ABE,EBC)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,DBC)": [],
+    "angle_addition(1,DBA,ABC)": [],
+    "angle_addition(1,ABE,EBC)": [],
+    "START": [
+      "flat_angle(1,DBC)",
+      "angle_addition(1,DBA,ABC)",
+      "angle_addition(1,ABE,EBC)"
+    ]
+  }
 }

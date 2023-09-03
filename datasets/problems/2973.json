@@ -24,9 +24,23 @@
   "goal_cdl": "Value(LengthOfLine(DB))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "vertical_angle(COA,DOB)",
-    "similar_triangle_judgment_aa(COA,DOB)",
-    "similar_triangle_property_line_ratio(COA,DOB)",
-    "similar_triangle_property_line_ratio(OAC,OBD)"
-  ]
+    "vertical_angle(1,COA,DOB)",
+    "similar_triangle_judgment_aa(1,COA,DOB)",
+    "similar_triangle_property_line_ratio(1,COA,DOB)",
+    "similar_triangle_property_line_ratio(1,OAC,OBD)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,COA,DOB)": [
+      "similar_triangle_judgment_aa(1,COA,DOB)"
+    ],
+    "similar_triangle_judgment_aa(1,COA,DOB)": [
+      "similar_triangle_property_line_ratio(1,COA,DOB)",
+      "similar_triangle_property_line_ratio(1,OAC,OBD)"
+    ],
+    "similar_triangle_property_line_ratio(1,COA,DOB)": [],
+    "similar_triangle_property_line_ratio(1,OAC,OBD)": [],
+    "START": [
+      "vertical_angle(1,COA,DOB)"
+    ]
+  }
 }

@@ -28,22 +28,67 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "24+4*sqrt(2)+4*sqrt(3)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AFD,DFE)",
-    "adjacent_complementary_angle(AEC,CEB)",
-    "perpendicular_judgment_angle(DF,EF)",
-    "perpendicular_judgment_angle(FE,CE)",
-    "parallel_judgment_per_per(FD,EC)",
-    "parallelogram_judgment_parallel_and_parallel(DFEC)",
-    "parallelogram_property_opposite_line_equal(DFEC)",
-    "parallelogram_property_opposite_line_equal(FECD)",
-    "triangle_property_angle_sum(DAF)",
-    "triangle_property_angle_sum(CEB)",
-    "sine_theorem(DAF)",
-    "sine_theorem(AFD)",
-    "sine_theorem(CEB)",
-    "sine_theorem(EBC)",
-    "line_addition(AF,FE)",
-    "line_addition(AE,EB)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "adjacent_complementary_angle(1,AFD,DFE)",
+    "adjacent_complementary_angle(1,AEC,CEB)",
+    "perpendicular_judgment_angle(1,DF,EF)",
+    "perpendicular_judgment_angle(1,FE,CE)",
+    "parallel_judgment_per_per(1,FD,EC)",
+    "parallelogram_judgment_parallel_and_parallel(1,DFEC)",
+    "parallelogram_property_opposite_line_equal(1,DFEC)",
+    "parallelogram_property_opposite_line_equal(1,FECD)",
+    "triangle_property_angle_sum(1,DAF)",
+    "triangle_property_angle_sum(1,CEB)",
+    "sine_theorem(1,DAF)",
+    "sine_theorem(1,AFD)",
+    "sine_theorem(1,CEB)",
+    "sine_theorem(1,EBC)",
+    "line_addition(1,AF,FE)",
+    "line_addition(1,AE,EB)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AFD,DFE)": [
+      "perpendicular_judgment_angle(1,DF,EF)"
+    ],
+    "adjacent_complementary_angle(1,AEC,CEB)": [
+      "perpendicular_judgment_angle(1,FE,CE)"
+    ],
+    "perpendicular_judgment_angle(1,DF,EF)": [
+      "parallel_judgment_per_per(1,FD,EC)"
+    ],
+    "perpendicular_judgment_angle(1,FE,CE)": [
+      "parallel_judgment_per_per(1,FD,EC)"
+    ],
+    "parallel_judgment_per_per(1,FD,EC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DFEC)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,DFEC)": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,FECD)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,DFEC)": [],
+    "parallelogram_property_opposite_line_equal(1,FECD)": [],
+    "triangle_property_angle_sum(1,DAF)": [],
+    "triangle_property_angle_sum(1,CEB)": [],
+    "sine_theorem(1,DAF)": [],
+    "sine_theorem(1,AFD)": [],
+    "sine_theorem(1,CEB)": [],
+    "sine_theorem(1,EBC)": [],
+    "line_addition(1,AF,FE)": [],
+    "line_addition(1,AE,EB)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AFD,DFE)",
+      "adjacent_complementary_angle(1,AEC,CEB)",
+      "triangle_property_angle_sum(1,DAF)",
+      "triangle_property_angle_sum(1,CEB)",
+      "sine_theorem(1,DAF)",
+      "sine_theorem(1,AFD)",
+      "sine_theorem(1,CEB)",
+      "sine_theorem(1,EBC)",
+      "line_addition(1,AF,FE)",
+      "line_addition(1,AE,EB)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

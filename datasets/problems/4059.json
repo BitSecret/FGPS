@@ -23,8 +23,19 @@
   "goal_cdl": "Value(LengthOfLine(EB))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(DAC,EAB)",
-    "similar_triangle_property_line_ratio(DAC,EAB)",
-    "similar_triangle_property_line_ratio(ACD,ABE)"
-  ]
+    "similar_triangle_judgment_aa(1,DAC,EAB)",
+    "similar_triangle_property_line_ratio(1,DAC,EAB)",
+    "similar_triangle_property_line_ratio(1,ACD,ABE)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,DAC,EAB)": [
+      "similar_triangle_property_line_ratio(1,DAC,EAB)",
+      "similar_triangle_property_line_ratio(1,ACD,ABE)"
+    ],
+    "similar_triangle_property_line_ratio(1,DAC,EAB)": [],
+    "similar_triangle_property_line_ratio(1,ACD,ABE)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,DAC,EAB)"
+    ]
+  }
 }

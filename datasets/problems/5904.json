@@ -23,7 +23,16 @@
   "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(ADE,ABC))",
   "problem_answer": "1/3",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(DEA,CAB)",
-    "mirror_similar_triangle_property_line_ratio(DEA,CAB)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,DEA,CAB)",
+    "mirror_similar_triangle_property_line_ratio(1,DEA,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,DEA,CAB)": [
+      "mirror_similar_triangle_property_line_ratio(1,DEA,CAB)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,DEA,CAB)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,DEA,CAB)"
+    ]
+  }
 }

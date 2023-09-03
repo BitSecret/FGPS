@@ -24,14 +24,38 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "28",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(CBE)",
-    "isosceles_triangle_property_angle_equal(CBE)",
-    "triangle_property_angle_sum(CBE)",
-    "flat_angle(BEA)",
-    "angle_addition(BEC,CED)",
-    "angle_addition(BED,DEA)",
-    "isosceles_triangle_judgment_line_equal(DEA)",
-    "isosceles_triangle_property_angle_equal(DEA)",
-    "triangle_property_angle_sum(DEA)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,CBE)",
+    "isosceles_triangle_property_angle_equal(1,CBE)",
+    "triangle_property_angle_sum(1,CBE)",
+    "flat_angle(1,BEA)",
+    "angle_addition(1,BEC,CED)",
+    "angle_addition(1,BED,DEA)",
+    "isosceles_triangle_judgment_line_equal(1,DEA)",
+    "isosceles_triangle_property_angle_equal(1,DEA)",
+    "triangle_property_angle_sum(1,DEA)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,CBE)": [
+      "isosceles_triangle_property_angle_equal(1,CBE)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CBE)": [],
+    "triangle_property_angle_sum(1,CBE)": [],
+    "flat_angle(1,BEA)": [],
+    "angle_addition(1,BEC,CED)": [],
+    "angle_addition(1,BED,DEA)": [],
+    "isosceles_triangle_judgment_line_equal(1,DEA)": [
+      "isosceles_triangle_property_angle_equal(1,DEA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DEA)": [],
+    "triangle_property_angle_sum(1,DEA)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,CBE)",
+      "triangle_property_angle_sum(1,CBE)",
+      "flat_angle(1,BEA)",
+      "angle_addition(1,BEC,CED)",
+      "angle_addition(1,BED,DEA)",
+      "isosceles_triangle_judgment_line_equal(1,DEA)",
+      "triangle_property_angle_sum(1,DEA)"
+    ]
+  }
 }

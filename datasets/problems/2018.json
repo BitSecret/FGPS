@@ -34,9 +34,23 @@
   "goal_cdl": "Value(MeasureOfAngle(ICO))",
   "problem_answer": "62",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(NO,MH,C)",
-    "parallel_property_collinear_extend(HM,CN,K)",
-    "parallel_property_corresponding_angle(KM,CN,G)",
-    "vertical_angle(ICO,KCN)"
-  ]
+    "parallel_property_collinear_extend(3,NO,MH,C)",
+    "parallel_property_collinear_extend(3,HM,CN,K)",
+    "parallel_property_corresponding_angle(1,KM,CN,G)",
+    "vertical_angle(1,ICO,KCN)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,NO,MH,C)": [
+      "parallel_property_collinear_extend(3,HM,CN,K)"
+    ],
+    "parallel_property_collinear_extend(3,HM,CN,K)": [
+      "parallel_property_corresponding_angle(1,KM,CN,G)"
+    ],
+    "parallel_property_corresponding_angle(1,KM,CN,G)": [],
+    "vertical_angle(1,ICO,KCN)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,NO,MH,C)",
+      "vertical_angle(1,ICO,KCN)"
+    ]
+  }
 }

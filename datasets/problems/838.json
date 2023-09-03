@@ -17,9 +17,25 @@
   "goal_cdl": "Value(MeasureOfAngle(MRP))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(MRP)",
-    "isosceles_triangle_judgment_line_equal(RPM)",
-    "equilateral_triangle_judgment_isosceles_and_isosceles(MRP)",
-    "equilateral_triangle_property_angle(RPM)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,MRP)",
+    "isosceles_triangle_judgment_line_equal(1,RPM)",
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,MRP)",
+    "equilateral_triangle_property_angle(1,RPM)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,MRP)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,MRP)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,RPM)": [
+      "equilateral_triangle_judgment_isosceles_and_isosceles(1,MRP)"
+    ],
+    "equilateral_triangle_judgment_isosceles_and_isosceles(1,MRP)": [
+      "equilateral_triangle_property_angle(1,RPM)"
+    ],
+    "equilateral_triangle_property_angle(1,RPM)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,MRP)",
+      "isosceles_triangle_judgment_line_equal(1,RPM)"
+    ]
+  }
 }

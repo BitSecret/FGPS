@@ -24,10 +24,26 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "4*sqrt(2)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(NCA)",
-    "mirror_similar_triangle_judgment_aa(ANC,BAN)",
-    "mirror_similar_triangle_property_line_ratio(CAN,ANB)",
-    "mirror_similar_triangle_property_line_ratio(ANC,BAN)",
-    "right_triangle_property_pythagorean(NCA)"
-  ]
+    "right_triangle_judgment_angle(1,NCA)",
+    "mirror_similar_triangle_judgment_aa(1,ANC,BAN)",
+    "mirror_similar_triangle_property_line_ratio(1,CAN,ANB)",
+    "mirror_similar_triangle_property_line_ratio(1,ANC,BAN)",
+    "right_triangle_property_pythagorean(1,NCA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,NCA)": [
+      "right_triangle_property_pythagorean(1,NCA)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ANC,BAN)": [
+      "mirror_similar_triangle_property_line_ratio(1,ANC,BAN)",
+      "mirror_similar_triangle_property_line_ratio(1,CAN,ANB)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,CAN,ANB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ANC,BAN)": [],
+    "right_triangle_property_pythagorean(1,NCA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,NCA)",
+      "mirror_similar_triangle_judgment_aa(1,ANC,BAN)"
+    ]
+  }
 }

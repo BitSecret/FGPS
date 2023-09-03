@@ -21,10 +21,27 @@
   "goal_cdl": "Value(LengthOfLine(WC))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "adjacent_complementary_angle(WCX,XCZ)",
-    "right_triangle_judgment_angle(XCZ)",
-    "right_triangle_judgment_angle(WCX)",
-    "right_triangle_property_pythagorean(XCZ)",
-    "right_triangle_property_pythagorean(WCX)"
-  ]
+    "adjacent_complementary_angle(1,WCX,XCZ)",
+    "right_triangle_judgment_angle(1,XCZ)",
+    "right_triangle_judgment_angle(1,WCX)",
+    "right_triangle_property_pythagorean(1,XCZ)",
+    "right_triangle_property_pythagorean(1,WCX)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,WCX,XCZ)": [
+      "right_triangle_judgment_angle(1,WCX)"
+    ],
+    "right_triangle_judgment_angle(1,XCZ)": [
+      "right_triangle_property_pythagorean(1,XCZ)"
+    ],
+    "right_triangle_judgment_angle(1,WCX)": [
+      "right_triangle_property_pythagorean(1,WCX)"
+    ],
+    "right_triangle_property_pythagorean(1,XCZ)": [],
+    "right_triangle_property_pythagorean(1,WCX)": [],
+    "START": [
+      "adjacent_complementary_angle(1,WCX,XCZ)",
+      "right_triangle_judgment_angle(1,XCZ)"
+    ]
+  }
 }

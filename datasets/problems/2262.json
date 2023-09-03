@@ -21,10 +21,24 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ADCB))",
   "problem_answer": "12+12*cos(pi/90)/sin(8*pi/45)",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(BC,AD)",
-    "sine_theorem(DCA)",
-    "parallelogram_property_opposite_line_equal(ADCB)",
-    "parallelogram_property_opposite_line_equal(BADC)",
-    "quadrilateral_perimeter_formula(ADCB)"
-  ]
+    "parallel_property_alternate_interior_angle(2,BC,AD)",
+    "sine_theorem(1,DCA)",
+    "parallelogram_property_opposite_line_equal(1,ADCB)",
+    "parallelogram_property_opposite_line_equal(1,BADC)",
+    "quadrilateral_perimeter_formula(1,ADCB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,BC,AD)": [],
+    "sine_theorem(1,DCA)": [],
+    "parallelogram_property_opposite_line_equal(1,ADCB)": [],
+    "parallelogram_property_opposite_line_equal(1,BADC)": [],
+    "quadrilateral_perimeter_formula(1,ADCB)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,BC,AD)",
+      "sine_theorem(1,DCA)",
+      "parallelogram_property_opposite_line_equal(1,ADCB)",
+      "parallelogram_property_opposite_line_equal(1,BADC)",
+      "quadrilateral_perimeter_formula(1,ADCB)"
+    ]
+  }
 }

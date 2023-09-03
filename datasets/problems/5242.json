@@ -21,7 +21,15 @@
   "goal_cdl": "Value(MeasureOfAngle(DOC))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "angle_addition(COB,BOA)",
-    "adjacent_complementary_angle(DOC,COB)"
-  ]
+    "angle_addition(1,COB,BOA)",
+    "adjacent_complementary_angle(1,DOC,COB)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,COB,BOA)": [],
+    "adjacent_complementary_angle(1,DOC,COB)": [],
+    "START": [
+      "angle_addition(1,COB,BOA)",
+      "adjacent_complementary_angle(1,DOC,COB)"
+    ]
+  }
 }

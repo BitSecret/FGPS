@@ -22,14 +22,46 @@
   "goal_cdl": "Value(MeasureOfAngle(AOD))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "angle_addition(DAO,OAB)",
-    "line_addition(AO,OC)",
-    "line_addition(BO,OD)",
-    "rectangle_property_diagonal_equal(ABCD)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(ODA)"
-  ]
+    "angle_addition(1,DAO,OAB)",
+    "line_addition(1,AO,OC)",
+    "line_addition(1,BO,OD)",
+    "rectangle_property_diagonal_equal(1,ABCD)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,ODA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,DAO,OAB)": [],
+    "line_addition(1,AO,OC)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "line_addition(1,BO,OD)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "rectangle_property_diagonal_equal(1,ABCD)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "triangle_property_angle_sum(1,ODA)": [],
+    "START": [
+      "angle_addition(1,DAO,OAB)",
+      "line_addition(1,AO,OC)",
+      "line_addition(1,BO,OD)",
+      "rectangle_property_diagonal_equal(1,ABCD)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "triangle_property_angle_sum(1,ODA)"
+    ]
+  }
 }

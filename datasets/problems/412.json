@@ -34,8 +34,20 @@
   "goal_cdl": "Value(MeasureOfAngle(BPO))",
   "problem_answer": "137",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FB,QM,P)",
-    "parallel_property_collinear_extend(MQ,BP,O)",
-    "parallel_property_ipsilateral_internal_angle(PB,OM)"
-  ]
+    "parallel_property_collinear_extend(3,FB,QM,P)",
+    "parallel_property_collinear_extend(3,MQ,BP,O)",
+    "parallel_property_ipsilateral_internal_angle(1,PB,OM)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,FB,QM,P)": [
+      "parallel_property_collinear_extend(3,MQ,BP,O)"
+    ],
+    "parallel_property_collinear_extend(3,MQ,BP,O)": [
+      "parallel_property_ipsilateral_internal_angle(1,PB,OM)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,PB,OM)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,FB,QM,P)"
+    ]
+  }
 }

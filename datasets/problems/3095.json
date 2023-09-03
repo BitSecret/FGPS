@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(CHF))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BA,DC,G)",
-    "parallel_property_collinear_extend(CD,GB,H)",
-    "parallel_property_corresponding_angle(HD,GB,F)",
-    "adjacent_complementary_angle(CHF,FHD)"
-  ]
+    "parallel_property_collinear_extend(3,BA,DC,G)",
+    "parallel_property_collinear_extend(3,CD,GB,H)",
+    "parallel_property_corresponding_angle(1,HD,GB,F)",
+    "adjacent_complementary_angle(1,CHF,FHD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BA,DC,G)": [
+      "parallel_property_collinear_extend(3,CD,GB,H)"
+    ],
+    "parallel_property_collinear_extend(3,CD,GB,H)": [
+      "parallel_property_corresponding_angle(1,HD,GB,F)"
+    ],
+    "parallel_property_corresponding_angle(1,HD,GB,F)": [],
+    "adjacent_complementary_angle(1,CHF,FHD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BA,DC,G)",
+      "adjacent_complementary_angle(1,CHF,FHD)"
+    ]
+  }
 }

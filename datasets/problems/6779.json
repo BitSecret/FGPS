@@ -23,8 +23,20 @@
   "goal_cdl": "Value(LengthOfLine(OB))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AB,O,O)",
-    "right_triangle_judgment_angle(ABO)",
-    "right_triangle_property_pythagorean(ABO)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AB,O,O)",
+    "right_triangle_judgment_angle(1,ABO)",
+    "right_triangle_property_pythagorean(1,ABO)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AB,O,O)": [
+      "right_triangle_judgment_angle(1,ABO)"
+    ],
+    "right_triangle_judgment_angle(1,ABO)": [
+      "right_triangle_property_pythagorean(1,ABO)"
+    ],
+    "right_triangle_property_pythagorean(1,ABO)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AB,O,O)"
+    ]
+  }
 }

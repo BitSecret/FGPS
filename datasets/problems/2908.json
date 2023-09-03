@@ -24,10 +24,26 @@
   "goal_cdl": "Value(MeasureOfAngle(CAB))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DE,FG,A)",
-    "parallel_property_collinear_extend(GF,EA,C)",
-    "parallel_property_ipsilateral_internal_angle(AE,CG)",
-    "angle_addition(CAB,BAD)",
-    "adjacent_complementary_angle(EAC,CAD)"
-  ]
+    "parallel_property_collinear_extend(3,DE,FG,A)",
+    "parallel_property_collinear_extend(3,GF,EA,C)",
+    "parallel_property_ipsilateral_internal_angle(1,AE,CG)",
+    "angle_addition(1,CAB,BAD)",
+    "adjacent_complementary_angle(1,EAC,CAD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DE,FG,A)": [
+      "parallel_property_collinear_extend(3,GF,EA,C)"
+    ],
+    "parallel_property_collinear_extend(3,GF,EA,C)": [
+      "parallel_property_ipsilateral_internal_angle(1,AE,CG)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,AE,CG)": [],
+    "angle_addition(1,CAB,BAD)": [],
+    "adjacent_complementary_angle(1,EAC,CAD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DE,FG,A)",
+      "angle_addition(1,CAB,BAD)",
+      "adjacent_complementary_angle(1,EAC,CAD)"
+    ]
+  }
 }

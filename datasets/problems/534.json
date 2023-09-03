@@ -24,15 +24,49 @@
   "goal_cdl": "Value(MeasureOfAngle(PJL))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "angle_addition(NMJ,JML)",
-    "rectangle_property_diagonal_equal(LPNM)",
-    "parallelogram_property_diagonal_bisection(LPNM,J)",
-    "parallelogram_property_diagonal_bisection(PNML,J)",
-    "line_addition(PJ,JM)",
-    "line_addition(LJ,JN)",
-    "isosceles_triangle_judgment_line_equal(JML)",
-    "isosceles_triangle_property_angle_equal(JML)",
-    "triangle_property_angle_sum(JML)",
-    "adjacent_complementary_angle(PJL,LJM)"
-  ]
+    "angle_addition(1,NMJ,JML)",
+    "rectangle_property_diagonal_equal(1,LPNM)",
+    "parallelogram_property_diagonal_bisection(1,LPNM,J)",
+    "parallelogram_property_diagonal_bisection(1,PNML,J)",
+    "line_addition(1,PJ,JM)",
+    "line_addition(1,LJ,JN)",
+    "isosceles_triangle_judgment_line_equal(1,JML)",
+    "isosceles_triangle_property_angle_equal(1,JML)",
+    "triangle_property_angle_sum(1,JML)",
+    "adjacent_complementary_angle(1,PJL,LJM)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,NMJ,JML)": [],
+    "rectangle_property_diagonal_equal(1,LPNM)": [
+      "isosceles_triangle_judgment_line_equal(1,JML)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,LPNM,J)": [
+      "isosceles_triangle_judgment_line_equal(1,JML)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,PNML,J)": [
+      "isosceles_triangle_judgment_line_equal(1,JML)"
+    ],
+    "line_addition(1,PJ,JM)": [
+      "isosceles_triangle_judgment_line_equal(1,JML)"
+    ],
+    "line_addition(1,LJ,JN)": [
+      "isosceles_triangle_judgment_line_equal(1,JML)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,JML)": [
+      "isosceles_triangle_property_angle_equal(1,JML)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,JML)": [],
+    "triangle_property_angle_sum(1,JML)": [],
+    "adjacent_complementary_angle(1,PJL,LJM)": [],
+    "START": [
+      "angle_addition(1,NMJ,JML)",
+      "rectangle_property_diagonal_equal(1,LPNM)",
+      "parallelogram_property_diagonal_bisection(1,LPNM,J)",
+      "parallelogram_property_diagonal_bisection(1,PNML,J)",
+      "line_addition(1,PJ,JM)",
+      "line_addition(1,LJ,JN)",
+      "triangle_property_angle_sum(1,JML)",
+      "adjacent_complementary_angle(1,PJL,LJM)"
+    ]
+  }
 }

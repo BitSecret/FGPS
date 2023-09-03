@@ -27,8 +27,19 @@
   "goal_cdl": "Value(LengthOfLine(DF))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(DE,ABC)",
-    "midsegment_of_triangle_property_length(DE,ABC)",
-    "line_addition(DE,EF)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
+    "midsegment_of_triangle_property_length(1,DE,ABC)",
+    "line_addition(1,DE,EF)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)": [
+      "midsegment_of_triangle_property_length(1,DE,ABC)"
+    ],
+    "midsegment_of_triangle_property_length(1,DE,ABC)": [],
+    "line_addition(1,DE,EF)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
+      "line_addition(1,DE,EF)"
+    ]
+  }
 }

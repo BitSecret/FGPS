@@ -29,9 +29,22 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "10.2",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(ACG,FGE)",
-    "mirror_similar_triangle_property_line_ratio(ACG,FGE)",
-    "mirror_similar_triangle_property_line_ratio(GAC,GEF)",
-    "line_addition(AC,CB)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,ACG,FGE)",
+    "mirror_similar_triangle_property_line_ratio(1,ACG,FGE)",
+    "mirror_similar_triangle_property_line_ratio(1,GAC,GEF)",
+    "line_addition(1,AC,CB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,ACG,FGE)": [
+      "mirror_similar_triangle_property_line_ratio(1,ACG,FGE)",
+      "mirror_similar_triangle_property_line_ratio(1,GAC,GEF)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ACG,FGE)": [],
+    "mirror_similar_triangle_property_line_ratio(1,GAC,GEF)": [],
+    "line_addition(1,AC,CB)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,ACG,FGE)",
+      "line_addition(1,AC,CB)"
+    ]
+  }
 }

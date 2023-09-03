@@ -29,11 +29,33 @@
   "goal_cdl": "Value(MeasureOfAngle(PFE))",
   "problem_answer": "18",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(PE,BDA)",
-    "midsegment_of_triangle_judgment_midpoint(PF,DBC)",
-    "midsegment_of_triangle_property_length(PE,BDA)",
-    "midsegment_of_triangle_property_length(PF,DBC)",
-    "isosceles_triangle_judgment_line_equal(PFE)",
-    "isosceles_triangle_property_angle_equal(PFE)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,PE,BDA)",
+    "midsegment_of_triangle_judgment_midpoint(1,PF,DBC)",
+    "midsegment_of_triangle_property_length(1,PE,BDA)",
+    "midsegment_of_triangle_property_length(1,PF,DBC)",
+    "isosceles_triangle_judgment_line_equal(1,PFE)",
+    "isosceles_triangle_property_angle_equal(1,PFE)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,PE,BDA)": [
+      "midsegment_of_triangle_property_length(1,PE,BDA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,PF,DBC)": [
+      "midsegment_of_triangle_property_length(1,PF,DBC)"
+    ],
+    "midsegment_of_triangle_property_length(1,PE,BDA)": [
+      "isosceles_triangle_judgment_line_equal(1,PFE)"
+    ],
+    "midsegment_of_triangle_property_length(1,PF,DBC)": [
+      "isosceles_triangle_judgment_line_equal(1,PFE)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,PFE)": [
+      "isosceles_triangle_property_angle_equal(1,PFE)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,PFE)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,PE,BDA)",
+      "midsegment_of_triangle_judgment_midpoint(1,PF,DBC)"
+    ]
+  }
 }

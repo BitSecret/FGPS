@@ -29,11 +29,30 @@
   "goal_cdl": "Value(MeasureOfAngle(OAC))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CEO,OED)",
-    "circle_property_chord_perpendicular_bisect_arc(OCD,OEB)",
-    "congruent_arc_judgment_length_equal(OCB,OBD)",
-    "congruent_arc_property_measure_equal(OCB,OBD)",
-    "arc_property_center_angle(OBD,O)",
-    "arc_property_circumference_angle_external(OCB,A)"
-  ]
+    "adjacent_complementary_angle(1,CEO,OED)",
+    "circle_property_chord_perpendicular_bisect_arc(1,OCD,OEB)",
+    "congruent_arc_judgment_length_equal(1,OCB,OBD)",
+    "congruent_arc_property_measure_equal(1,OCB,OBD)",
+    "arc_property_center_angle(1,OBD,O)",
+    "arc_property_circumference_angle_external(1,OCB,A)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CEO,OED)": [
+      "circle_property_chord_perpendicular_bisect_arc(1,OCD,OEB)"
+    ],
+    "circle_property_chord_perpendicular_bisect_arc(1,OCD,OEB)": [
+      "congruent_arc_judgment_length_equal(1,OCB,OBD)"
+    ],
+    "congruent_arc_judgment_length_equal(1,OCB,OBD)": [
+      "congruent_arc_property_measure_equal(1,OCB,OBD)"
+    ],
+    "congruent_arc_property_measure_equal(1,OCB,OBD)": [],
+    "arc_property_center_angle(1,OBD,O)": [],
+    "arc_property_circumference_angle_external(1,OCB,A)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CEO,OED)",
+      "arc_property_center_angle(1,OBD,O)",
+      "arc_property_circumference_angle_external(1,OCB,A)"
+    ]
+  }
 }

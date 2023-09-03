@@ -21,8 +21,19 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BEA,AEC)",
-    "altitude_of_quadrilateral_judgment_left_vertex(AE,ABCD)",
-    "parallelogram_area_formula_common(ABCD)"
-  ]
+    "adjacent_complementary_angle(1,BEA,AEC)",
+    "altitude_of_quadrilateral_judgment_left_vertex(1,AE,ABCD)",
+    "parallelogram_area_formula_common(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BEA,AEC)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(1,AE,ABCD)"
+    ],
+    "altitude_of_quadrilateral_judgment_left_vertex(1,AE,ABCD)": [],
+    "parallelogram_area_formula_common(1,ABCD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BEA,AEC)",
+      "parallelogram_area_formula_common(1,ABCD)"
+    ]
+  }
 }

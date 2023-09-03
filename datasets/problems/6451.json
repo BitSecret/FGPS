@@ -25,15 +25,46 @@
   "goal_cdl": "Value(PerimeterOfTriangle(CEF))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_alternate_interior_angle(AD,BE)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(BE,EC)",
-    "parallel_property_collinear_extend(DC,AB,F)",
-    "parallel_property_alternate_interior_angle(BA,FD)",
-    "vertical_angle(BEA,CEF)",
-    "isosceles_triangle_judgment_angle_equal(CEF)",
-    "triangle_perimeter_formula(CEF)"
-  ]
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "parallel_property_alternate_interior_angle(1,AD,BE)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,BE,EC)",
+    "parallel_property_collinear_extend(2,DC,AB,F)",
+    "parallel_property_alternate_interior_angle(2,BA,FD)",
+    "vertical_angle(1,BEA,CEF)",
+    "isosceles_triangle_judgment_angle_equal(1,CEF)",
+    "triangle_perimeter_formula(1,CEF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,AD,BE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AD,BE)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)",
+      "isosceles_triangle_judgment_angle_equal(1,CEF)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,BE,EC)": [],
+    "parallel_property_collinear_extend(2,DC,AB,F)": [
+      "parallel_property_alternate_interior_angle(2,BA,FD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BA,FD)": [
+      "isosceles_triangle_judgment_angle_equal(1,CEF)"
+    ],
+    "vertical_angle(1,BEA,CEF)": [
+      "isosceles_triangle_judgment_angle_equal(1,CEF)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,CEF)": [],
+    "triangle_perimeter_formula(1,CEF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CB,DA,E)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,BE,EC)",
+      "parallel_property_collinear_extend(2,DC,AB,F)",
+      "vertical_angle(1,BEA,CEF)",
+      "triangle_perimeter_formula(1,CEF)"
+    ]
+  }
 }

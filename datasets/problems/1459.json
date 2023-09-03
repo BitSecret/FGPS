@@ -23,10 +23,24 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(DEBF))",
   "problem_answer": "3108",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(DEBF,H)",
-    "parallelogram_property_diagonal_bisection(EBFD,H)",
-    "line_addition(FH,HE)",
-    "line_addition(DH,HB)",
-    "kite_area_formula_diagonal(DEBF)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,DEBF,H)",
+    "parallelogram_property_diagonal_bisection(1,EBFD,H)",
+    "line_addition(1,FH,HE)",
+    "line_addition(1,DH,HB)",
+    "kite_area_formula_diagonal(1,DEBF)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,DEBF,H)": [],
+    "parallelogram_property_diagonal_bisection(1,EBFD,H)": [],
+    "line_addition(1,FH,HE)": [],
+    "line_addition(1,DH,HB)": [],
+    "kite_area_formula_diagonal(1,DEBF)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,DEBF,H)",
+      "parallelogram_property_diagonal_bisection(1,EBFD,H)",
+      "line_addition(1,FH,HE)",
+      "line_addition(1,DH,HB)",
+      "kite_area_formula_diagonal(1,DEBF)"
+    ]
+  }
 }

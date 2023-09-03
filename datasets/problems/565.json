@@ -21,11 +21,30 @@
   "goal_cdl": "Value(PerimeterOfTriangle(CBA))",
   "problem_answer": "48",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BAC,CAD)",
-    "right_triangle_judgment_angle(BAC)",
-    "right_triangle_judgment_angle(CAD)",
-    "right_triangle_property_pythagorean(BAC)",
-    "right_triangle_property_pythagorean(CAD)",
-    "triangle_perimeter_formula(CBA)"
-  ]
+    "adjacent_complementary_angle(1,BAC,CAD)",
+    "right_triangle_judgment_angle(1,BAC)",
+    "right_triangle_judgment_angle(1,CAD)",
+    "right_triangle_property_pythagorean(1,BAC)",
+    "right_triangle_property_pythagorean(1,CAD)",
+    "triangle_perimeter_formula(1,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BAC,CAD)": [
+      "right_triangle_judgment_angle(1,BAC)"
+    ],
+    "right_triangle_judgment_angle(1,BAC)": [
+      "right_triangle_property_pythagorean(1,BAC)"
+    ],
+    "right_triangle_judgment_angle(1,CAD)": [
+      "right_triangle_property_pythagorean(1,CAD)"
+    ],
+    "right_triangle_property_pythagorean(1,BAC)": [],
+    "right_triangle_property_pythagorean(1,CAD)": [],
+    "triangle_perimeter_formula(1,CBA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BAC,CAD)",
+      "right_triangle_judgment_angle(1,CAD)",
+      "triangle_perimeter_formula(1,CBA)"
+    ]
+  }
 }

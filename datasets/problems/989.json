@@ -22,11 +22,31 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ADC,CDB)",
-    "mirror_similar_triangle_judgment_aa(CDB,ABC)",
-    "triangle_perimeter_formula(ABC)",
-    "mirror_similar_triangle_property_line_ratio(CDB,ABC)",
-    "mirror_similar_triangle_property_line_ratio(DBC,CAB)",
-    "mirror_similar_triangle_property_line_ratio(BCD,BCA)"
-  ]
+    "adjacent_complementary_angle(1,ADC,CDB)",
+    "mirror_similar_triangle_judgment_aa(1,CDB,ABC)",
+    "triangle_perimeter_formula(1,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,CDB,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,DBC,CAB)",
+    "mirror_similar_triangle_property_line_ratio(1,BCD,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ADC,CDB)": [
+      "mirror_similar_triangle_judgment_aa(1,CDB,ABC)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,CDB,ABC)": [
+      "mirror_similar_triangle_property_line_ratio(1,CDB,ABC)",
+      "mirror_similar_triangle_property_line_ratio(1,DBC,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BCD,BCA)"
+    ],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CDB,ABC)": [
+      "solve_eq_14)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,DBC,CAB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BCD,BCA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "triangle_perimeter_formula(1,ABC)"
+    ]
+  }
 }

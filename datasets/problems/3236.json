@@ -25,11 +25,29 @@
   "goal_cdl": "Value(MeasureOfAngle(HOE))",
   "problem_answer": "100",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,G)",
-    "parallel_property_collinear_extend(DC,GA,H)",
-    "parallel_property_alternate_interior_angle(DH,GA)",
-    "triangle_property_angle_sum(OHF)",
-    "flat_angle(FOE)",
-    "angle_addition(FOH,HOE)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,G)",
+    "parallel_property_collinear_extend(3,DC,GA,H)",
+    "parallel_property_alternate_interior_angle(2,DH,GA)",
+    "triangle_property_angle_sum(1,OHF)",
+    "flat_angle(1,FOE)",
+    "angle_addition(1,FOH,HOE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,G)": [
+      "parallel_property_collinear_extend(3,DC,GA,H)"
+    ],
+    "parallel_property_collinear_extend(3,DC,GA,H)": [
+      "parallel_property_alternate_interior_angle(2,DH,GA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DH,GA)": [],
+    "triangle_property_angle_sum(1,OHF)": [],
+    "flat_angle(1,FOE)": [],
+    "angle_addition(1,FOH,HOE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,G)",
+      "triangle_property_angle_sum(1,OHF)",
+      "flat_angle(1,FOE)",
+      "angle_addition(1,FOH,HOE)"
+    ]
+  }
 }

@@ -32,11 +32,30 @@
   "goal_cdl": "Value(MeasureOfAngle(GMH))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,G)",
-    "parallel_property_collinear_extend(DC,GA,M)",
-    "parallel_property_collinear_extend(DC,GA,H)",
-    "parallel_property_alternate_interior_angle(AG,HD)",
-    "angle_addition(HGM,MGA)",
-    "parallel_property_alternate_interior_angle(AG,MD)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,G)",
+    "parallel_property_collinear_extend(3,DC,GA,M)",
+    "parallel_property_collinear_extend(3,DC,GA,H)",
+    "parallel_property_alternate_interior_angle(2,AG,HD)",
+    "angle_addition(1,HGM,MGA)",
+    "parallel_property_alternate_interior_angle(2,AG,MD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,G)": [
+      "parallel_property_collinear_extend(3,DC,GA,M)",
+      "parallel_property_collinear_extend(3,DC,GA,H)"
+    ],
+    "parallel_property_collinear_extend(3,DC,GA,M)": [
+      "parallel_property_alternate_interior_angle(2,AG,MD)"
+    ],
+    "parallel_property_collinear_extend(3,DC,GA,H)": [
+      "parallel_property_alternate_interior_angle(2,AG,HD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AG,HD)": [],
+    "angle_addition(1,HGM,MGA)": [],
+    "parallel_property_alternate_interior_angle(2,AG,MD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,G)",
+      "angle_addition(1,HGM,MGA)"
+    ]
+  }
 }

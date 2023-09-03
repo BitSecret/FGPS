@@ -21,9 +21,22 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(EBA),MeasureOfAngle(FCE)))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CD,BA,F)",
-    "parallel_property_alternate_interior_angle(AB,FC)",
-    "adjacent_complementary_angle(BEC,CEF)",
-    "triangle_property_angle_sum(EFC)"
-  ]
+    "parallel_property_collinear_extend(3,CD,BA,F)",
+    "parallel_property_alternate_interior_angle(2,AB,FC)",
+    "adjacent_complementary_angle(1,BEC,CEF)",
+    "triangle_property_angle_sum(1,EFC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CD,BA,F)": [
+      "parallel_property_alternate_interior_angle(2,AB,FC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AB,FC)": [],
+    "adjacent_complementary_angle(1,BEC,CEF)": [],
+    "triangle_property_angle_sum(1,EFC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CD,BA,F)",
+      "adjacent_complementary_angle(1,BEC,CEF)",
+      "triangle_property_angle_sum(1,EFC)"
+    ]
+  }
 }

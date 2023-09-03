@@ -24,14 +24,40 @@
   "goal_cdl": "Value(Add(AreaOfQuadrilateral(HADB),Mul(0.5,AreaOfCircle(K))))",
   "problem_answer": "938.42",
   "theorem_seqs": [
-    "line_addition(HK,KB)",
-    "perpendicular_judgment_angle(BH,AH)",
-    "parallel_judgment_per_per(HB,AD)",
-    "trapezoid_judgment_parallel(HADB)",
-    "right_trapezoid_judgment_right_angle(HADB)",
-    "right_trapezoid_area_formular(HADB)",
-    "radius_of_circle_property_length_equal(KH,K)",
-    "radius_of_circle_property_length_equal(KB,K)",
-    "circle_area_formula(K)"
-  ]
+    "line_addition(1,HK,KB)",
+    "perpendicular_judgment_angle(1,BH,AH)",
+    "parallel_judgment_per_per(1,HB,AD)",
+    "trapezoid_judgment_parallel(1,HADB)",
+    "right_trapezoid_judgment_right_angle(1,HADB)",
+    "right_trapezoid_area_formular(1,HADB)",
+    "radius_of_circle_property_length_equal(1,KH,K)",
+    "radius_of_circle_property_length_equal(1,KB,K)",
+    "circle_area_formula(1,K)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,HK,KB)": [],
+    "perpendicular_judgment_angle(1,BH,AH)": [
+      "parallel_judgment_per_per(1,HB,AD)"
+    ],
+    "parallel_judgment_per_per(1,HB,AD)": [
+      "trapezoid_judgment_parallel(1,HADB)"
+    ],
+    "trapezoid_judgment_parallel(1,HADB)": [
+      "right_trapezoid_judgment_right_angle(1,HADB)"
+    ],
+    "right_trapezoid_judgment_right_angle(1,HADB)": [
+      "right_trapezoid_area_formular(1,HADB)"
+    ],
+    "right_trapezoid_area_formular(1,HADB)": [],
+    "radius_of_circle_property_length_equal(1,KH,K)": [],
+    "radius_of_circle_property_length_equal(1,KB,K)": [],
+    "circle_area_formula(1,K)": [],
+    "START": [
+      "line_addition(1,HK,KB)",
+      "perpendicular_judgment_angle(1,BH,AH)",
+      "radius_of_circle_property_length_equal(1,KH,K)",
+      "radius_of_circle_property_length_equal(1,KB,K)",
+      "circle_area_formula(1,K)"
+    ]
+  }
 }

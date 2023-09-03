@@ -30,7 +30,16 @@
   "goal_cdl": "Value(LengthOfLine(OE))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BEO)",
-    "right_triangle_property_pythagorean(BEO)"
-  ]
+    "right_triangle_judgment_angle(1,BEO)",
+    "right_triangle_property_pythagorean(1,BEO)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BEO)": [
+      "right_triangle_property_pythagorean(1,BEO)"
+    ],
+    "right_triangle_property_pythagorean(1,BEO)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BEO)"
+    ]
+  }
 }

@@ -25,13 +25,37 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "2+sqrt(2)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AB,O,O)",
-    "triangle_property_angle_sum(ABO)",
-    "isosceles_triangle_judgment_angle_equal(BOA)",
-    "right_triangle_judgment_angle(ABO)",
-    "right_triangle_property_pythagorean(ABO)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "line_addition(CO,OA)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AB,O,O)",
+    "triangle_property_angle_sum(1,ABO)",
+    "isosceles_triangle_judgment_angle_equal(1,BOA)",
+    "right_triangle_judgment_angle(1,ABO)",
+    "right_triangle_property_pythagorean(1,ABO)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "line_addition(1,CO,OA)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AB,O,O)": [
+      "right_triangle_judgment_angle(1,ABO)",
+      "isosceles_triangle_judgment_angle_equal(1,BOA)"
+    ],
+    "triangle_property_angle_sum(1,ABO)": [
+      "isosceles_triangle_judgment_angle_equal(1,BOA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BOA)": [],
+    "right_triangle_judgment_angle(1,ABO)": [
+      "right_triangle_property_pythagorean(1,ABO)"
+    ],
+    "right_triangle_property_pythagorean(1,ABO)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [],
+    "line_addition(1,CO,OA)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AB,O,O)",
+      "triangle_property_angle_sum(1,ABO)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "line_addition(1,CO,OA)"
+    ]
+  }
 }

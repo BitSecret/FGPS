@@ -24,8 +24,19 @@
   "goal_cdl": "Value(LengthOfLine(QR))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(PQ,P)",
-    "right_triangle_judgment_angle(PRQ)",
-    "right_triangle_property_pythagorean(PRQ)"
-  ]
+    "radius_of_circle_property_length_equal(1,PQ,P)",
+    "right_triangle_judgment_angle(1,PRQ)",
+    "right_triangle_property_pythagorean(1,PRQ)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,PQ,P)": [],
+    "right_triangle_judgment_angle(1,PRQ)": [
+      "right_triangle_property_pythagorean(1,PRQ)"
+    ],
+    "right_triangle_property_pythagorean(1,PRQ)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,PQ,P)",
+      "right_triangle_judgment_angle(1,PRQ)"
+    ]
+  }
 }

@@ -20,7 +20,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "4*sqrt(6)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCD)",
-    "right_triangle_property_pythagorean(BCD)"
-  ]
+    "right_triangle_judgment_angle(1,BCD)",
+    "right_triangle_property_pythagorean(1,BCD)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCD)": [
+      "right_triangle_property_pythagorean(1,BCD)"
+    ],
+    "right_triangle_property_pythagorean(1,BCD)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCD)"
+    ]
+  }
 }

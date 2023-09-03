@@ -46,25 +46,91 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(EHGF))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(GH,CBD)",
-    "midsegment_of_triangle_judgment_midpoint(HE,DCA)",
-    "midsegment_of_triangle_judgment_midpoint(EF,ADB)",
-    "midsegment_of_triangle_judgment_midpoint(FG,BAC)",
-    "midsegment_of_triangle_property_parallel(GH,CBD)",
-    "midsegment_of_triangle_property_parallel(HE,DCA)",
-    "midsegment_of_triangle_property_length(GH,CBD)",
-    "midsegment_of_triangle_property_length(HE,DCA)",
-    "midsegment_of_triangle_property_length(EF,ADB)",
-    "midsegment_of_triangle_property_length(FG,BAC)",
-    "parallelogram_judgment_equal_and_equal(HGFE)",
-    "parallel_property_collinear_extend(HE,CA,Q)",
-    "parallel_property_collinear_extend(AC,QH,O)",
-    "parallel_property_collinear_extend(OC,QH,M)",
-    "parallel_property_collinear_extend(GH,BD,M)",
-    "parallel_property_collinear_extend(DB,HM,O)",
-    "parallel_property_collinear_extend(DO,HM,Q)",
-    "parallelogram_judgment_parallel_and_parallel(HMOQ)",
-    "parallelogram_property_opposite_angle_equal(HMOQ)",
-    "parallelogram_area_formula_sine(EHGF)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,GH,CBD)",
+    "midsegment_of_triangle_judgment_midpoint(1,HE,DCA)",
+    "midsegment_of_triangle_judgment_midpoint(1,EF,ADB)",
+    "midsegment_of_triangle_judgment_midpoint(1,FG,BAC)",
+    "midsegment_of_triangle_property_parallel(1,GH,CBD)",
+    "midsegment_of_triangle_property_parallel(1,HE,DCA)",
+    "midsegment_of_triangle_property_length(1,GH,CBD)",
+    "midsegment_of_triangle_property_length(1,HE,DCA)",
+    "midsegment_of_triangle_property_length(1,EF,ADB)",
+    "midsegment_of_triangle_property_length(1,FG,BAC)",
+    "parallelogram_judgment_equal_and_equal(1,HGFE)",
+    "parallel_property_collinear_extend(3,HE,CA,Q)",
+    "parallel_property_collinear_extend(3,AC,QH,O)",
+    "parallel_property_collinear_extend(3,OC,QH,M)",
+    "parallel_property_collinear_extend(3,GH,BD,M)",
+    "parallel_property_collinear_extend(3,DB,HM,O)",
+    "parallel_property_collinear_extend(3,DO,HM,Q)",
+    "parallelogram_judgment_parallel_and_parallel(1,HMOQ)",
+    "parallelogram_property_opposite_angle_equal(1,HMOQ)",
+    "parallelogram_area_formula_sine(1,EHGF)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,GH,CBD)": [
+      "midsegment_of_triangle_property_parallel(1,GH,CBD)",
+      "midsegment_of_triangle_property_length(1,GH,CBD)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,HE,DCA)": [
+      "midsegment_of_triangle_property_parallel(1,HE,DCA)",
+      "midsegment_of_triangle_property_length(1,HE,DCA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EF,ADB)": [
+      "midsegment_of_triangle_property_length(1,EF,ADB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,FG,BAC)": [
+      "midsegment_of_triangle_property_length(1,FG,BAC)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,GH,CBD)": [
+      "parallel_property_collinear_extend(3,GH,BD,M)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,HE,DCA)": [
+      "parallel_property_collinear_extend(3,HE,CA,Q)"
+    ],
+    "midsegment_of_triangle_property_length(1,GH,CBD)": [
+      "parallelogram_judgment_equal_and_equal(1,HGFE)"
+    ],
+    "midsegment_of_triangle_property_length(1,HE,DCA)": [
+      "parallelogram_judgment_equal_and_equal(1,HGFE)"
+    ],
+    "midsegment_of_triangle_property_length(1,EF,ADB)": [
+      "parallelogram_judgment_equal_and_equal(1,HGFE)"
+    ],
+    "midsegment_of_triangle_property_length(1,FG,BAC)": [
+      "parallelogram_judgment_equal_and_equal(1,HGFE)"
+    ],
+    "parallelogram_judgment_equal_and_equal(1,HGFE)": [
+      "parallelogram_area_formula_sine(1,EHGF)"
+    ],
+    "parallel_property_collinear_extend(3,HE,CA,Q)": [
+      "parallel_property_collinear_extend(3,AC,QH,O)"
+    ],
+    "parallel_property_collinear_extend(3,AC,QH,O)": [
+      "parallel_property_collinear_extend(3,OC,QH,M)"
+    ],
+    "parallel_property_collinear_extend(3,OC,QH,M)": [
+      "parallelogram_judgment_parallel_and_parallel(1,HMOQ)"
+    ],
+    "parallel_property_collinear_extend(3,GH,BD,M)": [
+      "parallel_property_collinear_extend(3,DB,HM,O)"
+    ],
+    "parallel_property_collinear_extend(3,DB,HM,O)": [
+      "parallel_property_collinear_extend(3,DO,HM,Q)"
+    ],
+    "parallel_property_collinear_extend(3,DO,HM,Q)": [
+      "parallelogram_judgment_parallel_and_parallel(1,HMOQ)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,HMOQ)": [
+      "parallelogram_property_opposite_angle_equal(1,HMOQ)"
+    ],
+    "parallelogram_property_opposite_angle_equal(1,HMOQ)": [],
+    "parallelogram_area_formula_sine(1,EHGF)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,GH,CBD)",
+      "midsegment_of_triangle_judgment_midpoint(1,HE,DCA)",
+      "midsegment_of_triangle_judgment_midpoint(1,EF,ADB)",
+      "midsegment_of_triangle_judgment_midpoint(1,FG,BAC)"
+    ]
+  }
 }

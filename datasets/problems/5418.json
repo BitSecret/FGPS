@@ -26,13 +26,37 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "18",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "midsegment_of_triangle_judgment_midpoint(OE,CAB)",
-    "midsegment_of_triangle_judgment_midpoint(EO,BCD)",
-    "midsegment_of_triangle_property_length(OE,CAB)",
-    "midsegment_of_triangle_property_length(EO,BCD)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "midsegment_of_triangle_judgment_midpoint(1,OE,CAB)",
+    "midsegment_of_triangle_judgment_midpoint(1,EO,BCD)",
+    "midsegment_of_triangle_property_length(1,OE,CAB)",
+    "midsegment_of_triangle_property_length(1,EO,BCD)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,OE,CAB)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,EO,BCD)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,OE,CAB)": [
+      "midsegment_of_triangle_property_length(1,OE,CAB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EO,BCD)": [
+      "midsegment_of_triangle_property_length(1,EO,BCD)"
+    ],
+    "midsegment_of_triangle_property_length(1,OE,CAB)": [],
+    "midsegment_of_triangle_property_length(1,EO,BCD)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

@@ -30,19 +30,59 @@
   "goal_cdl": "Value(MeasureOfAngle(GEF))",
   "problem_answer": "36",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(FG,CDA)",
-    "midsegment_of_triangle_judgment_midpoint(EG,ABC)",
-    "midsegment_of_triangle_property_parallel(FG,CDA)",
-    "midsegment_of_triangle_property_parallel(EG,ABC)",
-    "midsegment_of_triangle_property_length(FG,CDA)",
-    "midsegment_of_triangle_property_length(EG,ABC)",
-    "parallel_property_corresponding_angle(AD,GF,H)",
-    "parallel_property_ipsilateral_internal_angle(CB,GE)",
-    "angle_addition(FGC,CGE)",
-    "isosceles_triangle_judgment_line_equal(GEF)",
-    "isosceles_triangle_property_angle_equal(GEF)",
-    "triangle_property_angle_sum(FGH)",
-    "triangle_property_angle_sum(HGE)",
-    "triangle_property_angle_sum(FGE)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,FG,CDA)",
+    "midsegment_of_triangle_judgment_midpoint(1,EG,ABC)",
+    "midsegment_of_triangle_property_parallel(1,FG,CDA)",
+    "midsegment_of_triangle_property_parallel(1,EG,ABC)",
+    "midsegment_of_triangle_property_length(1,FG,CDA)",
+    "midsegment_of_triangle_property_length(1,EG,ABC)",
+    "parallel_property_corresponding_angle(2,AD,GF,H)",
+    "parallel_property_ipsilateral_internal_angle(1,CB,GE)",
+    "angle_addition(1,FGC,CGE)",
+    "isosceles_triangle_judgment_line_equal(1,GEF)",
+    "isosceles_triangle_property_angle_equal(1,GEF)",
+    "triangle_property_angle_sum(1,FGH)",
+    "triangle_property_angle_sum(1,HGE)",
+    "triangle_property_angle_sum(1,FGE)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,FG,CDA)": [
+      "midsegment_of_triangle_property_parallel(1,FG,CDA)",
+      "midsegment_of_triangle_property_length(1,FG,CDA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EG,ABC)": [
+      "midsegment_of_triangle_property_parallel(1,EG,ABC)",
+      "midsegment_of_triangle_property_length(1,EG,ABC)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,FG,CDA)": [
+      "parallel_property_corresponding_angle(2,AD,GF,H)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,EG,ABC)": [
+      "parallel_property_ipsilateral_internal_angle(1,CB,GE)"
+    ],
+    "midsegment_of_triangle_property_length(1,FG,CDA)": [
+      "isosceles_triangle_judgment_line_equal(1,GEF)"
+    ],
+    "midsegment_of_triangle_property_length(1,EG,ABC)": [
+      "isosceles_triangle_judgment_line_equal(1,GEF)"
+    ],
+    "parallel_property_corresponding_angle(2,AD,GF,H)": [],
+    "parallel_property_ipsilateral_internal_angle(1,CB,GE)": [],
+    "angle_addition(1,FGC,CGE)": [],
+    "isosceles_triangle_judgment_line_equal(1,GEF)": [
+      "isosceles_triangle_property_angle_equal(1,GEF)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,GEF)": [],
+    "triangle_property_angle_sum(1,FGH)": [],
+    "triangle_property_angle_sum(1,HGE)": [],
+    "triangle_property_angle_sum(1,FGE)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,FG,CDA)",
+      "midsegment_of_triangle_judgment_midpoint(1,EG,ABC)",
+      "angle_addition(1,FGC,CGE)",
+      "triangle_property_angle_sum(1,FGH)",
+      "triangle_property_angle_sum(1,HGE)",
+      "triangle_property_angle_sum(1,FGE)"
+    ]
+  }
 }

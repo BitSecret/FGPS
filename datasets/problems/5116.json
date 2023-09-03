@@ -30,14 +30,43 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,H)",
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "parallel_property_alternate_interior_angle(CH,DA)",
-    "congruent_triangle_judgment_aas(FHC,FDA)",
-    "congruent_triangle_property_line_equal(FHC,FDA)",
-    "congruent_triangle_property_line_equal(CFH,AFD)",
-    "midsegment_of_triangle_judgment_midpoint(EF,DBH)",
-    "midsegment_of_triangle_property_length(EF,DBH)",
-    "line_addition(BH,HC)"
-  ]
+    "parallel_property_collinear_extend(3,CB,DA,H)",
+    "parallel_property_alternate_interior_angle(1,AD,BC)",
+    "parallel_property_alternate_interior_angle(2,CH,DA)",
+    "congruent_triangle_judgment_aas(3,FHC,FDA)",
+    "congruent_triangle_property_line_equal(1,FHC,FDA)",
+    "congruent_triangle_property_line_equal(1,CFH,AFD)",
+    "midsegment_of_triangle_judgment_midpoint(1,EF,DBH)",
+    "midsegment_of_triangle_property_length(1,EF,DBH)",
+    "line_addition(1,BH,HC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CB,DA,H)": [
+      "parallel_property_alternate_interior_angle(2,CH,DA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AD,BC)": [
+      "congruent_triangle_judgment_aas(3,FHC,FDA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,CH,DA)": [
+      "congruent_triangle_judgment_aas(3,FHC,FDA)"
+    ],
+    "congruent_triangle_judgment_aas(3,FHC,FDA)": [
+      "congruent_triangle_property_line_equal(1,FHC,FDA)",
+      "congruent_triangle_property_line_equal(1,CFH,AFD)"
+    ],
+    "congruent_triangle_property_line_equal(1,FHC,FDA)": [],
+    "congruent_triangle_property_line_equal(1,CFH,AFD)": [
+      "midsegment_of_triangle_judgment_midpoint(1,EF,DBH)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EF,DBH)": [
+      "midsegment_of_triangle_property_length(1,EF,DBH)"
+    ],
+    "midsegment_of_triangle_property_length(1,EF,DBH)": [],
+    "line_addition(1,BH,HC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CB,DA,H)",
+      "parallel_property_alternate_interior_angle(1,AD,BC)",
+      "line_addition(1,BH,HC)"
+    ]
+  }
 }

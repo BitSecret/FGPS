@@ -22,11 +22,28 @@
   "goal_cdl": "Value(MeasureOfAngle(EAB))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(BCD)",
-    "isosceles_triangle_property_angle_equal(BCD)",
-    "triangle_property_angle_sum(EAB)",
-    "triangle_property_angle_sum(CDB)",
-    "angle_addition(ABE,EBC)",
-    "parallel_property_ipsilateral_internal_angle(BA,CD)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,BCD)",
+    "isosceles_triangle_property_angle_equal(1,BCD)",
+    "triangle_property_angle_sum(1,EAB)",
+    "triangle_property_angle_sum(1,CDB)",
+    "angle_addition(1,ABE,EBC)",
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,BCD)": [
+      "isosceles_triangle_property_angle_equal(1,BCD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BCD)": [],
+    "triangle_property_angle_sum(1,EAB)": [],
+    "triangle_property_angle_sum(1,CDB)": [],
+    "angle_addition(1,ABE,EBC)": [],
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,BCD)",
+      "triangle_property_angle_sum(1,EAB)",
+      "triangle_property_angle_sum(1,CDB)",
+      "angle_addition(1,ABE,EBC)",
+      "parallel_property_ipsilateral_internal_angle(1,BA,CD)"
+    ]
+  }
 }

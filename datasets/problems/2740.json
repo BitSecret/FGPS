@@ -25,13 +25,36 @@
   "goal_cdl": "Value(LengthOfLine(JG))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "adjacent_complementary_angle(JHF,FHG)",
-    "right_triangle_judgment_angle(JHF)",
-    "right_triangle_judgment_angle(FHG)",
-    "radius_of_circle_property_length_equal(FJ,F)",
-    "radius_of_circle_property_length_equal(FG,F)",
-    "right_triangle_property_pythagorean(JHF)",
-    "right_triangle_property_pythagorean(FHG)",
-    "line_addition(JH,HG)"
-  ]
+    "adjacent_complementary_angle(1,JHF,FHG)",
+    "right_triangle_judgment_angle(1,JHF)",
+    "right_triangle_judgment_angle(1,FHG)",
+    "radius_of_circle_property_length_equal(1,FJ,F)",
+    "radius_of_circle_property_length_equal(1,FG,F)",
+    "right_triangle_property_pythagorean(1,JHF)",
+    "right_triangle_property_pythagorean(1,FHG)",
+    "line_addition(1,JH,HG)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,JHF,FHG)": [
+      "right_triangle_judgment_angle(1,FHG)"
+    ],
+    "right_triangle_judgment_angle(1,JHF)": [
+      "right_triangle_property_pythagorean(1,JHF)"
+    ],
+    "right_triangle_judgment_angle(1,FHG)": [
+      "right_triangle_property_pythagorean(1,FHG)"
+    ],
+    "radius_of_circle_property_length_equal(1,FJ,F)": [],
+    "radius_of_circle_property_length_equal(1,FG,F)": [],
+    "right_triangle_property_pythagorean(1,JHF)": [],
+    "right_triangle_property_pythagorean(1,FHG)": [],
+    "line_addition(1,JH,HG)": [],
+    "START": [
+      "adjacent_complementary_angle(1,JHF,FHG)",
+      "right_triangle_judgment_angle(1,JHF)",
+      "radius_of_circle_property_length_equal(1,FJ,F)",
+      "radius_of_circle_property_length_equal(1,FG,F)",
+      "line_addition(1,JH,HG)"
+    ]
+  }
 }

@@ -23,7 +23,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "30",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(IHF)",
-    "isosceles_triangle_property_angle_equal(IHF)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,IHF)",
+    "isosceles_triangle_property_angle_equal(1,IHF)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,IHF)": [
+      "isosceles_triangle_property_angle_equal(1,IHF)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,IHF)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,IHF)"
+    ]
+  }
 }

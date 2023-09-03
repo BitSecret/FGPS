@@ -22,9 +22,23 @@
   "goal_cdl": "Value(MeasureOfAngle(DEA))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "triangle_property_angle_sum(ABC)",
-    "midsegment_of_triangle_judgment_midpoint(DE,ABC)",
-    "midsegment_of_triangle_property_parallel(DE,ABC)",
-    "parallel_property_corresponding_angle(CB,ED,A)"
-  ]
+    "triangle_property_angle_sum(1,ABC)",
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
+    "midsegment_of_triangle_property_parallel(1,DE,ABC)",
+    "parallel_property_corresponding_angle(2,CB,ED,A)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,ABC)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)": [
+      "midsegment_of_triangle_property_parallel(1,DE,ABC)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,DE,ABC)": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)"
+    ],
+    "parallel_property_corresponding_angle(2,CB,ED,A)": [],
+    "START": [
+      "triangle_property_angle_sum(1,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)"
+    ]
+  }
 }

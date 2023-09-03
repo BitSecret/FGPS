@@ -23,8 +23,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "93",
   "theorem_seqs": [
-    "congruent_arc_judgment_chord_equal(ARS,AST)",
-    "congruent_arc_property_measure_equal(ARS,AST)",
-    "arc_property_center_angle(AST,A)"
-  ]
+    "congruent_arc_judgment_chord_equal(1,ARS,AST)",
+    "congruent_arc_property_measure_equal(1,ARS,AST)",
+    "arc_property_center_angle(1,AST,A)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_chord_equal(1,ARS,AST)": [
+      "congruent_arc_property_measure_equal(1,ARS,AST)"
+    ],
+    "congruent_arc_property_measure_equal(1,ARS,AST)": [],
+    "arc_property_center_angle(1,AST,A)": [],
+    "START": [
+      "congruent_arc_judgment_chord_equal(1,ARS,AST)",
+      "arc_property_center_angle(1,AST,A)"
+    ]
+  }
 }

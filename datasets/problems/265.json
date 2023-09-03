@@ -27,18 +27,52 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "20",
   "theorem_seqs": [
-    "arc_property_center_angle(EDC,E)",
-    "arc_property_center_angle(ECG,E)",
-    "radius_of_circle_property_length_equal(EC,E)",
-    "radius_of_circle_property_length_equal(ED,E)",
-    "isosceles_triangle_judgment_line_equal(EDC)",
-    "isosceles_triangle_property_angle_equal(EDC)",
-    "triangle_property_angle_sum(DCE)",
-    "flat_angle(FDC)",
-    "angle_addition(FDE,EDC)",
-    "flat_angle(GEK)",
-    "angle_addition(GEC,CED)",
-    "angle_addition(GED,DEF)",
-    "triangle_property_angle_sum(DEF)"
-  ]
+    "arc_property_center_angle(1,EDC,E)",
+    "arc_property_center_angle(1,ECG,E)",
+    "radius_of_circle_property_length_equal(1,EC,E)",
+    "radius_of_circle_property_length_equal(1,ED,E)",
+    "isosceles_triangle_judgment_line_equal(1,EDC)",
+    "isosceles_triangle_property_angle_equal(1,EDC)",
+    "triangle_property_angle_sum(1,DCE)",
+    "flat_angle(1,FDC)",
+    "angle_addition(1,FDE,EDC)",
+    "flat_angle(1,GEK)",
+    "angle_addition(1,GEC,CED)",
+    "angle_addition(1,GED,DEF)",
+    "triangle_property_angle_sum(1,DEF)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,EDC,E)": [],
+    "arc_property_center_angle(1,ECG,E)": [],
+    "radius_of_circle_property_length_equal(1,EC,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ],
+    "radius_of_circle_property_length_equal(1,ED,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EDC)": [
+      "isosceles_triangle_property_angle_equal(1,EDC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EDC)": [],
+    "triangle_property_angle_sum(1,DCE)": [],
+    "flat_angle(1,FDC)": [],
+    "angle_addition(1,FDE,EDC)": [],
+    "flat_angle(1,GEK)": [],
+    "angle_addition(1,GEC,CED)": [],
+    "angle_addition(1,GED,DEF)": [],
+    "triangle_property_angle_sum(1,DEF)": [],
+    "START": [
+      "arc_property_center_angle(1,EDC,E)",
+      "arc_property_center_angle(1,ECG,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "triangle_property_angle_sum(1,DCE)",
+      "flat_angle(1,FDC)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,GEK)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,GED,DEF)",
+      "triangle_property_angle_sum(1,DEF)"
+    ]
+  }
 }

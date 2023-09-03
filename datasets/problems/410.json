@@ -24,10 +24,26 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "3/2*sqrt(3)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(FBA,ABL)",
-    "mirror_similar_triangle_judgment_aa(ABL,FLA)",
-    "mirror_similar_triangle_property_line_ratio(ABL,FLA)",
-    "mirror_similar_triangle_property_line_ratio(BLA,AFL)",
-    "line_addition(LB,BF)"
-  ]
+    "adjacent_complementary_angle(1,FBA,ABL)",
+    "mirror_similar_triangle_judgment_aa(1,ABL,FLA)",
+    "mirror_similar_triangle_property_line_ratio(1,ABL,FLA)",
+    "mirror_similar_triangle_property_line_ratio(1,BLA,AFL)",
+    "line_addition(1,LB,BF)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,FBA,ABL)": [
+      "mirror_similar_triangle_judgment_aa(1,ABL,FLA)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ABL,FLA)": [
+      "mirror_similar_triangle_property_line_ratio(1,ABL,FLA)",
+      "mirror_similar_triangle_property_line_ratio(1,BLA,AFL)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ABL,FLA)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BLA,AFL)": [],
+    "line_addition(1,LB,BF)": [],
+    "START": [
+      "adjacent_complementary_angle(1,FBA,ABL)",
+      "line_addition(1,LB,BF)"
+    ]
+  }
 }

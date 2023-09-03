@@ -33,10 +33,26 @@
   "goal_cdl": "Value(MeasureOfAngle(CAP))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FE,QP,B)",
-    "parallel_property_collinear_extend(PQ,EB,A)",
-    "parallel_property_corresponding_angle(BE,AP,M)",
-    "adjacent_complementary_angle(BAC,CAM)",
-    "angle_addition(CAP,PAM)"
-  ]
+    "parallel_property_collinear_extend(3,FE,QP,B)",
+    "parallel_property_collinear_extend(3,PQ,EB,A)",
+    "parallel_property_corresponding_angle(2,BE,AP,M)",
+    "adjacent_complementary_angle(1,BAC,CAM)",
+    "angle_addition(1,CAP,PAM)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,FE,QP,B)": [
+      "parallel_property_collinear_extend(3,PQ,EB,A)"
+    ],
+    "parallel_property_collinear_extend(3,PQ,EB,A)": [
+      "parallel_property_corresponding_angle(2,BE,AP,M)"
+    ],
+    "parallel_property_corresponding_angle(2,BE,AP,M)": [],
+    "adjacent_complementary_angle(1,BAC,CAM)": [],
+    "angle_addition(1,CAP,PAM)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,FE,QP,B)",
+      "adjacent_complementary_angle(1,BAC,CAM)",
+      "angle_addition(1,CAP,PAM)"
+    ]
+  }
 }

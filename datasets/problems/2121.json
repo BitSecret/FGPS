@@ -30,17 +30,56 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "39.3",
   "theorem_seqs": [
-    "circle_property_length_of_radius_and_diameter(B)",
-    "radius_of_circle_property_length_equal(BH,B)",
-    "radius_of_circle_property_length_equal(BI,B)",
-    "equilateral_triangle_property_angle(HIA)",
-    "isosceles_triangle_judgment_line_equal(BHI)",
-    "isosceles_triangle_property_angle_equal(BHI)",
-    "triangle_property_angle_sum(IBH)",
-    "triangle_property_angle_sum(CHI)",
-    "sine_theorem(IBH)",
-    "triangle_area_formula_sine(IBH)",
-    "arc_property_center_angle(BHI,B)",
-    "sector_area_formula(BHI)"
-  ]
+    "circle_property_length_of_radius_and_diameter(1,B)",
+    "radius_of_circle_property_length_equal(1,BH,B)",
+    "radius_of_circle_property_length_equal(1,BI,B)",
+    "equilateral_triangle_property_angle(1,HIA)",
+    "isosceles_triangle_judgment_line_equal(1,BHI)",
+    "isosceles_triangle_property_angle_equal(1,BHI)",
+    "triangle_property_angle_sum(1,IBH)",
+    "triangle_property_angle_sum(1,CHI)",
+    "sine_theorem(1,IBH)",
+    "triangle_area_formula_sine(1,IBH)",
+    "arc_property_center_angle(1,BHI,B)",
+    "sector_area_formula(1,BHI)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_length_of_radius_and_diameter(1,B)": [
+      "isosceles_triangle_judgment_line_equal(1,BHI)",
+      "isosceles_triangle_judgment_line_equal(1,BHI)"
+    ],
+    "radius_of_circle_property_length_equal(1,BH,B)": [
+      "isosceles_triangle_judgment_line_equal(1,BHI)"
+    ],
+    "radius_of_circle_property_length_equal(1,BI,B)": [
+      "isosceles_triangle_judgment_line_equal(1,BHI)"
+    ],
+    "equilateral_triangle_property_angle(1,HIA)": [
+      "solve_eq_31)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,BHI)": [
+      "isosceles_triangle_property_angle_equal(1,BHI)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BHI)": [],
+    "triangle_property_angle_sum(1,IBH)": [],
+    "triangle_property_angle_sum(1,CHI)": [
+      "solve_eq_31)"
+    ],
+    "sine_theorem(1,IBH)": [],
+    "triangle_area_formula_sine(1,IBH)": [],
+    "arc_property_center_angle(1,BHI,B)": [],
+    "sector_area_formula(1,BHI)": [],
+    "START": [
+      "circle_property_length_of_radius_and_diameter(1,B)",
+      "radius_of_circle_property_length_equal(1,BH,B)",
+      "radius_of_circle_property_length_equal(1,BI,B)",
+      "equilateral_triangle_property_angle(1,HIA)",
+      "triangle_property_angle_sum(1,IBH)",
+      "triangle_property_angle_sum(1,CHI)",
+      "sine_theorem(1,IBH)",
+      "triangle_area_formula_sine(1,IBH)",
+      "arc_property_center_angle(1,BHI,B)",
+      "sector_area_formula(1,BHI)"
+    ]
+  }
 }

@@ -29,11 +29,29 @@
   "goal_cdl": "Value(Sub(AreaOfCircle(C),AreaOfQuadrilateral(ABFD)))",
   "problem_answer": "114.159",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(CA,C)",
-    "radius_of_circle_property_length_equal(CF,C)",
-    "line_addition(FC,CA)",
-    "rectangle_property_diagonal_equal(ABFD)",
-    "kite_area_formula_diagonal(ABFD)",
-    "circle_area_formula(C)"
-  ]
+    "radius_of_circle_property_length_equal(1,CA,C)",
+    "radius_of_circle_property_length_equal(1,CF,C)",
+    "line_addition(1,FC,CA)",
+    "rectangle_property_diagonal_equal(1,ABFD)",
+    "kite_area_formula_diagonal(1,ABFD)",
+    "circle_area_formula(1,C)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,CA,C)": [
+      "solve_eq_21)"
+    ],
+    "radius_of_circle_property_length_equal(1,CF,C)": [],
+    "line_addition(1,FC,CA)": [],
+    "rectangle_property_diagonal_equal(1,ABFD)": [],
+    "kite_area_formula_diagonal(1,ABFD)": [],
+    "circle_area_formula(1,C)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,CA,C)",
+      "radius_of_circle_property_length_equal(1,CF,C)",
+      "line_addition(1,FC,CA)",
+      "rectangle_property_diagonal_equal(1,ABFD)",
+      "kite_area_formula_diagonal(1,ABFD)",
+      "circle_area_formula(1,C)"
+    ]
+  }
 }

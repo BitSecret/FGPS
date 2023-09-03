@@ -25,15 +25,43 @@
   "goal_cdl": "Value(MeasureOfAngle(RST))",
   "problem_answer": "55",
   "theorem_seqs": [
-    "angle_addition(UOT,TOR)",
-    "radius_of_circle_property_length_equal(OU,O)",
-    "radius_of_circle_property_length_equal(OT,O)",
-    "isosceles_triangle_judgment_line_equal(OTU)",
-    "isosceles_triangle_property_angle_equal(OTU)",
-    "triangle_property_angle_sum(UOT)",
-    "flat_angle(STU)",
-    "angle_addition(STO,OTU)",
-    "tangent_of_circle_property_perpendicular(SR,O,O)",
-    "quadrilateral_property_angle_sum(ORST)"
-  ]
+    "angle_addition(1,UOT,TOR)",
+    "radius_of_circle_property_length_equal(1,OU,O)",
+    "radius_of_circle_property_length_equal(1,OT,O)",
+    "isosceles_triangle_judgment_line_equal(1,OTU)",
+    "isosceles_triangle_property_angle_equal(1,OTU)",
+    "triangle_property_angle_sum(1,UOT)",
+    "flat_angle(1,STU)",
+    "angle_addition(1,STO,OTU)",
+    "tangent_of_circle_property_perpendicular(1,SR,O,O)",
+    "quadrilateral_property_angle_sum(1,ORST)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,UOT,TOR)": [],
+    "radius_of_circle_property_length_equal(1,OU,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OTU)"
+    ],
+    "radius_of_circle_property_length_equal(1,OT,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OTU)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OTU)": [
+      "isosceles_triangle_property_angle_equal(1,OTU)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OTU)": [],
+    "triangle_property_angle_sum(1,UOT)": [],
+    "flat_angle(1,STU)": [],
+    "angle_addition(1,STO,OTU)": [],
+    "tangent_of_circle_property_perpendicular(1,SR,O,O)": [],
+    "quadrilateral_property_angle_sum(1,ORST)": [],
+    "START": [
+      "angle_addition(1,UOT,TOR)",
+      "radius_of_circle_property_length_equal(1,OU,O)",
+      "radius_of_circle_property_length_equal(1,OT,O)",
+      "triangle_property_angle_sum(1,UOT)",
+      "flat_angle(1,STU)",
+      "angle_addition(1,STO,OTU)",
+      "tangent_of_circle_property_perpendicular(1,SR,O,O)",
+      "quadrilateral_property_angle_sum(1,ORST)"
+    ]
+  }
 }

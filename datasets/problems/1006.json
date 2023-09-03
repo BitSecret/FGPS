@@ -28,8 +28,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(ACD,EGH)",
-    "similar_triangle_property_line_ratio(DAC,HEG)",
-    "similar_triangle_property_line_ratio(CDA,GHE)"
-  ]
+    "similar_triangle_judgment_aa(1,ACD,EGH)",
+    "similar_triangle_property_line_ratio(1,DAC,HEG)",
+    "similar_triangle_property_line_ratio(1,CDA,GHE)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,ACD,EGH)": [
+      "similar_triangle_property_line_ratio(1,CDA,GHE)",
+      "similar_triangle_property_line_ratio(1,DAC,HEG)"
+    ],
+    "similar_triangle_property_line_ratio(1,DAC,HEG)": [],
+    "similar_triangle_property_line_ratio(1,CDA,GHE)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,ACD,EGH)"
+    ]
+  }
 }

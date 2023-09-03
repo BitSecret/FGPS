@@ -23,8 +23,19 @@
   "goal_cdl": "Value(LengthOfLine(SR))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(LJK,TRS)",
-    "similar_triangle_property_line_ratio(LJK,TRS)",
-    "similar_triangle_property_line_ratio(JKL,RST)"
-  ]
+    "similar_triangle_judgment_aa(1,LJK,TRS)",
+    "similar_triangle_property_line_ratio(1,LJK,TRS)",
+    "similar_triangle_property_line_ratio(1,JKL,RST)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,LJK,TRS)": [
+      "similar_triangle_property_line_ratio(1,LJK,TRS)",
+      "similar_triangle_property_line_ratio(1,JKL,RST)"
+    ],
+    "similar_triangle_property_line_ratio(1,LJK,TRS)": [],
+    "similar_triangle_property_line_ratio(1,JKL,RST)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,LJK,TRS)"
+    ]
+  }
 }

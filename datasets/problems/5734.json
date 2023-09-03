@@ -33,14 +33,44 @@
   "goal_cdl": "Equal(MeasureOfAngle(NMD),MeasureOfAngle(BCA))",
   "problem_answer": "4/5",
   "theorem_seqs": [
-    "diameter_of_circle_property_right_angle(NAM,O)",
-    "right_triangle_judgment_angle(CAB)",
-    "median_of_triangle_judgment(AD,ABC)",
-    "right_triangle_property_length_of_median(CAB,D)",
-    "line_addition(BD,DC)",
-    "isosceles_triangle_judgment_line_equal(DCA)",
-    "isosceles_triangle_property_angle_equal(DCA)",
-    "arc_property_circumference_angle_external(ODN,M)",
-    "arc_property_circumference_angle_external(ODN,A)"
-  ]
+    "diameter_of_circle_property_right_angle(1,NAM,O)",
+    "right_triangle_judgment_angle(1,CAB)",
+    "median_of_triangle_judgment(1,AD,ABC)",
+    "right_triangle_property_length_of_median(1,CAB,D)",
+    "line_addition(1,BD,DC)",
+    "isosceles_triangle_judgment_line_equal(1,DCA)",
+    "isosceles_triangle_property_angle_equal(1,DCA)",
+    "arc_property_circumference_angle_external(1,ODN,M)",
+    "arc_property_circumference_angle_external(1,ODN,A)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_right_angle(1,NAM,O)": [
+      "right_triangle_judgment_angle(1,CAB)"
+    ],
+    "right_triangle_judgment_angle(1,CAB)": [
+      "right_triangle_property_length_of_median(1,CAB,D)"
+    ],
+    "median_of_triangle_judgment(1,AD,ABC)": [
+      "right_triangle_property_length_of_median(1,CAB,D)"
+    ],
+    "right_triangle_property_length_of_median(1,CAB,D)": [
+      "isosceles_triangle_judgment_line_equal(1,DCA)"
+    ],
+    "line_addition(1,BD,DC)": [
+      "isosceles_triangle_judgment_line_equal(1,DCA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,DCA)": [
+      "isosceles_triangle_property_angle_equal(1,DCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DCA)": [],
+    "arc_property_circumference_angle_external(1,ODN,M)": [],
+    "arc_property_circumference_angle_external(1,ODN,A)": [],
+    "START": [
+      "diameter_of_circle_property_right_angle(1,NAM,O)",
+      "median_of_triangle_judgment(1,AD,ABC)",
+      "line_addition(1,BD,DC)",
+      "arc_property_circumference_angle_external(1,ODN,M)",
+      "arc_property_circumference_angle_external(1,ODN,A)"
+    ]
+  }
 }

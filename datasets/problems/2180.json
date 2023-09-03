@@ -22,9 +22,23 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(BCDA))",
   "problem_answer": "165",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BA,CD,E)",
-    "parallel_property_ipsilateral_internal_angle(EA,CD)",
-    "altitude_of_quadrilateral_judgment_right_vertex(CE,DABC)",
-    "trapezoid_area_formula(DABC)"
-  ]
+    "parallel_property_collinear_extend(3,BA,CD,E)",
+    "parallel_property_ipsilateral_internal_angle(1,EA,CD)",
+    "altitude_of_quadrilateral_judgment_right_vertex(2,CE,DABC)",
+    "trapezoid_area_formula(1,DABC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BA,CD,E)": [
+      "parallel_property_ipsilateral_internal_angle(1,EA,CD)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,EA,CD)": [
+      "altitude_of_quadrilateral_judgment_right_vertex(2,CE,DABC)"
+    ],
+    "altitude_of_quadrilateral_judgment_right_vertex(2,CE,DABC)": [],
+    "trapezoid_area_formula(1,DABC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BA,CD,E)",
+      "trapezoid_area_formula(1,DABC)"
+    ]
+  }
 }

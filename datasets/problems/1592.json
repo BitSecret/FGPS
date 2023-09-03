@@ -28,10 +28,28 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "12",
   "theorem_seqs": [
-    "adjacent_complementary_angle(LPM,MPK)",
-    "adjacent_complementary_angle(ZQY,YQX)",
-    "similar_triangle_judgment_aa(MPK,YQX)",
-    "similar_triangle_property_line_ratio(PKM,QXY)",
-    "similar_triangle_property_line_ratio(KMP,XYQ)"
-  ]
+    "adjacent_complementary_angle(1,LPM,MPK)",
+    "adjacent_complementary_angle(1,ZQY,YQX)",
+    "similar_triangle_judgment_aa(1,MPK,YQX)",
+    "similar_triangle_property_line_ratio(1,PKM,QXY)",
+    "similar_triangle_property_line_ratio(1,KMP,XYQ)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,LPM,MPK)": [
+      "similar_triangle_judgment_aa(1,MPK,YQX)"
+    ],
+    "adjacent_complementary_angle(1,ZQY,YQX)": [
+      "similar_triangle_judgment_aa(1,MPK,YQX)"
+    ],
+    "similar_triangle_judgment_aa(1,MPK,YQX)": [
+      "similar_triangle_property_line_ratio(1,PKM,QXY)",
+      "similar_triangle_property_line_ratio(1,KMP,XYQ)"
+    ],
+    "similar_triangle_property_line_ratio(1,PKM,QXY)": [],
+    "similar_triangle_property_line_ratio(1,KMP,XYQ)": [],
+    "START": [
+      "adjacent_complementary_angle(1,LPM,MPK)",
+      "adjacent_complementary_angle(1,ZQY,YQX)"
+    ]
+  }
 }

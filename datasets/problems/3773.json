@@ -28,22 +28,79 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,F)",
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_collinear_extend(CB,FA,E)",
-    "line_addition(BO,OF)",
-    "parallel_property_alternate_interior_angle(EB,DA)",
-    "parallel_property_alternate_interior_angle(AF,BC)",
-    "isosceles_triangle_judgment_angle_equal(ABF)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "parallelogram_judgment_parallel_and_equal(FABE)",
-    "parallelogram_property_opposite_line_equal(ABEF)",
-    "kite_judgment_equal_and_equal(FABE)",
-    "kite_judgment_equal_and_equal(ABEF)",
-    "kite_property_diagonal_perpendicular_bisection(FABE,O)",
-    "kite_property_diagonal_perpendicular_bisection(ABEF,O)",
-    "right_triangle_judgment_angle(AOF)",
-    "right_triangle_property_pythagorean(AOF)",
-    "line_addition(AO,OE)"
-  ]
+    "parallel_property_collinear_extend(3,AD,BC,F)",
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "parallel_property_collinear_extend(3,CB,FA,E)",
+    "line_addition(1,BO,OF)",
+    "parallel_property_alternate_interior_angle(1,EB,DA)",
+    "parallel_property_alternate_interior_angle(2,AF,BC)",
+    "isosceles_triangle_judgment_angle_equal(1,ABF)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "parallelogram_judgment_parallel_and_equal(1,FABE)",
+    "parallelogram_property_opposite_line_equal(1,ABEF)",
+    "kite_judgment_equal_and_equal(1,FABE)",
+    "kite_judgment_equal_and_equal(1,ABEF)",
+    "kite_property_diagonal_perpendicular_bisection(1,FABE,O)",
+    "kite_property_diagonal_perpendicular_bisection(1,ABEF,O)",
+    "right_triangle_judgment_angle(1,AOF)",
+    "right_triangle_property_pythagorean(1,AOF)",
+    "line_addition(1,AO,OE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,BC,F)": [
+      "parallel_property_alternate_interior_angle(2,AF,BC)",
+      "parallel_property_collinear_extend(3,CB,FA,E)"
+    ],
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,EB,DA)"
+    ],
+    "parallel_property_collinear_extend(3,CB,FA,E)": [
+      "parallelogram_judgment_parallel_and_equal(1,FABE)"
+    ],
+    "line_addition(1,BO,OF)": [],
+    "parallel_property_alternate_interior_angle(1,EB,DA)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AF,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABF)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ABF)": [
+      "kite_judgment_equal_and_equal(1,ABEF)",
+      "parallelogram_judgment_parallel_and_equal(1,FABE)",
+      "kite_judgment_equal_and_equal(1,FABE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [
+      "kite_judgment_equal_and_equal(1,FABE)",
+      "parallelogram_judgment_parallel_and_equal(1,FABE)",
+      "kite_judgment_equal_and_equal(1,ABEF)"
+    ],
+    "parallelogram_judgment_parallel_and_equal(1,FABE)": [
+      "parallelogram_property_opposite_line_equal(1,ABEF)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABEF)": [
+      "kite_judgment_equal_and_equal(1,FABE)",
+      "kite_judgment_equal_and_equal(1,ABEF)"
+    ],
+    "kite_judgment_equal_and_equal(1,FABE)": [
+      "kite_property_diagonal_perpendicular_bisection(1,FABE,O)"
+    ],
+    "kite_judgment_equal_and_equal(1,ABEF)": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABEF,O)"
+    ],
+    "kite_property_diagonal_perpendicular_bisection(1,FABE,O)": [
+      "right_triangle_judgment_angle(1,AOF)"
+    ],
+    "kite_property_diagonal_perpendicular_bisection(1,ABEF,O)": [],
+    "right_triangle_judgment_angle(1,AOF)": [
+      "right_triangle_property_pythagorean(1,AOF)"
+    ],
+    "right_triangle_property_pythagorean(1,AOF)": [],
+    "line_addition(1,AO,OE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,BC,F)",
+      "parallel_property_collinear_extend(3,CB,DA,E)",
+      "line_addition(1,BO,OF)",
+      "line_addition(1,AO,OE)"
+    ]
+  }
 }

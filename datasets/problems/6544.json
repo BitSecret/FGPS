@@ -26,15 +26,43 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_collinear_extend(CB,DA,F)",
-    "parallel_property_alternate_interior_angle(AD,EC)",
-    "parallel_property_alternate_interior_angle(AD,BF)",
-    "isosceles_triangle_judgment_angle_equal(BFA)",
-    "isosceles_triangle_judgment_angle_equal(CDE)",
-    "line_addition(EF,FC)",
-    "line_addition(BF,FC)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "parallel_property_collinear_extend(3,CB,DA,F)",
+    "parallel_property_alternate_interior_angle(2,AD,EC)",
+    "parallel_property_alternate_interior_angle(1,AD,BF)",
+    "isosceles_triangle_judgment_angle_equal(1,BFA)",
+    "isosceles_triangle_judgment_angle_equal(1,CDE)",
+    "line_addition(1,EF,FC)",
+    "line_addition(1,BF,FC)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(2,AD,EC)"
+    ],
+    "parallel_property_collinear_extend(3,CB,DA,F)": [
+      "parallel_property_alternate_interior_angle(1,AD,BF)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AD,EC)": [
+      "isosceles_triangle_judgment_angle_equal(1,CDE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AD,BF)": [
+      "isosceles_triangle_judgment_angle_equal(1,BFA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BFA)": [],
+    "isosceles_triangle_judgment_angle_equal(1,CDE)": [],
+    "line_addition(1,EF,FC)": [],
+    "line_addition(1,BF,FC)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "parallel_property_collinear_extend(3,CB,DA,E)",
+      "parallel_property_collinear_extend(3,CB,DA,F)",
+      "line_addition(1,EF,FC)",
+      "line_addition(1,BF,FC)"
+    ]
+  }
 }

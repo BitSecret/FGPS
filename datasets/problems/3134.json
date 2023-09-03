@@ -27,12 +27,36 @@
   "goal_cdl": "Value(MeasureOfAngle(BDE))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AEO,OEB)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "mirror_congruent_triangle_judgment_hl(AEO,BOE)",
-    "mirror_congruent_triangle_property_angle_equal(OAE,OEB)",
-    "arc_property_center_angle(OCB,O)",
-    "arc_property_circumference_angle_external(OCB,D)"
-  ]
+    "adjacent_complementary_angle(1,AEO,OEB)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "mirror_congruent_triangle_judgment_hl(1,AEO,BOE)",
+    "mirror_congruent_triangle_property_angle_equal(1,OAE,OEB)",
+    "arc_property_center_angle(1,OCB,O)",
+    "arc_property_circumference_angle_external(1,OCB,D)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AEO,OEB)": [
+      "mirror_congruent_triangle_judgment_hl(1,AEO,BOE)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,AEO,BOE)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,AEO,BOE)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,AEO,BOE)": [
+      "mirror_congruent_triangle_property_angle_equal(1,OAE,OEB)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,OAE,OEB)": [],
+    "arc_property_center_angle(1,OCB,O)": [],
+    "arc_property_circumference_angle_external(1,OCB,D)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AEO,OEB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OCB,O)",
+      "arc_property_circumference_angle_external(1,OCB,D)"
+    ]
+  }
 }

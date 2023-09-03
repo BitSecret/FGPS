@@ -21,8 +21,18 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CEDB))",
   "problem_answer": "2829.016",
   "theorem_seqs": [
-    "triangle_property_angle_sum(CED)",
-    "sine_theorem(EDC)",
-    "parallelogram_area_formula_sine(CEDB)"
-  ]
+    "triangle_property_angle_sum(1,CED)",
+    "sine_theorem(1,EDC)",
+    "parallelogram_area_formula_sine(1,CEDB)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,CED)": [],
+    "sine_theorem(1,EDC)": [],
+    "parallelogram_area_formula_sine(1,CEDB)": [],
+    "START": [
+      "triangle_property_angle_sum(1,CED)",
+      "sine_theorem(1,EDC)",
+      "parallelogram_area_formula_sine(1,CEDB)"
+    ]
+  }
 }

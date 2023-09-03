@@ -29,18 +29,57 @@
   "goal_cdl": "Value(LengthOfLine(EC))",
   "problem_answer": "24/5",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "line_addition(AO,OD)",
-    "diameter_of_circle_property_right_angle(DCA,O)",
-    "right_triangle_judgment_angle(DCA)",
-    "right_triangle_property_pythagorean(DCA)",
-    "congruent_arc_judgment_chord_equal(OAB,OCA)",
-    "congruent_arc_property_measure_equal(OAB,OCA)",
-    "arc_property_circumference_angle_external(OCA,D)",
-    "arc_property_circumference_angle_external(OAB,C)",
-    "mirror_similar_triangle_judgment_aa(ECA,CAD)",
-    "mirror_similar_triangle_property_line_ratio(ECA,CAD)",
-    "mirror_similar_triangle_property_line_ratio(AEC,ADC)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "line_addition(1,AO,OD)",
+    "diameter_of_circle_property_right_angle(1,DCA,O)",
+    "right_triangle_judgment_angle(1,DCA)",
+    "right_triangle_property_pythagorean(1,DCA)",
+    "congruent_arc_judgment_chord_equal(1,OAB,OCA)",
+    "congruent_arc_property_measure_equal(1,OAB,OCA)",
+    "arc_property_circumference_angle_external(1,OCA,D)",
+    "arc_property_circumference_angle_external(1,OAB,C)",
+    "mirror_similar_triangle_judgment_aa(1,ECA,CAD)",
+    "mirror_similar_triangle_property_line_ratio(1,ECA,CAD)",
+    "mirror_similar_triangle_property_line_ratio(1,AEC,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,OD,O)": [],
+    "line_addition(1,AO,OD)": [],
+    "diameter_of_circle_property_right_angle(1,DCA,O)": [
+      "right_triangle_judgment_angle(1,DCA)"
+    ],
+    "right_triangle_judgment_angle(1,DCA)": [
+      "right_triangle_property_pythagorean(1,DCA)"
+    ],
+    "right_triangle_property_pythagorean(1,DCA)": [],
+    "congruent_arc_judgment_chord_equal(1,OAB,OCA)": [
+      "congruent_arc_property_measure_equal(1,OAB,OCA)"
+    ],
+    "congruent_arc_property_measure_equal(1,OAB,OCA)": [
+      "mirror_similar_triangle_judgment_aa(1,ECA,CAD)"
+    ],
+    "arc_property_circumference_angle_external(1,OCA,D)": [
+      "mirror_similar_triangle_judgment_aa(1,ECA,CAD)"
+    ],
+    "arc_property_circumference_angle_external(1,OAB,C)": [
+      "mirror_similar_triangle_judgment_aa(1,ECA,CAD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ECA,CAD)": [
+      "mirror_similar_triangle_property_line_ratio(1,ECA,CAD)",
+      "mirror_similar_triangle_property_line_ratio(1,AEC,ADC)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ECA,CAD)": [],
+    "mirror_similar_triangle_property_line_ratio(1,AEC,ADC)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "line_addition(1,AO,OD)",
+      "diameter_of_circle_property_right_angle(1,DCA,O)",
+      "congruent_arc_judgment_chord_equal(1,OAB,OCA)",
+      "arc_property_circumference_angle_external(1,OCA,D)",
+      "arc_property_circumference_angle_external(1,OAB,C)"
+    ]
+  }
 }

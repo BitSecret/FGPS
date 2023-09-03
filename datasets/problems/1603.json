@@ -29,23 +29,75 @@
   "goal_cdl": "Value(Add(AreaOfSector(GFJ),AreaOfQuadrilateral(DIFG),AreaOfQuadrilateral(NGJE)))",
   "problem_answer": "39.37",
   "theorem_seqs": [
-    "adjacent_complementary_angle(JGF,FGD)",
-    "adjacent_complementary_angle(NGJ,JGF)",
-    "perpendicular_judgment_angle(FG,DG)",
-    "perpendicular_judgment_angle(NG,JG)",
-    "parallel_judgment_per_per(DG,IF)",
-    "parallel_judgment_per_per(GF,DI)",
-    "parallel_judgment_per_per(EJ,NG)",
-    "parallel_judgment_per_per(NE,GJ)",
-    "parallelogram_judgment_parallel_and_parallel(IFGD)",
-    "parallelogram_judgment_parallel_and_parallel(NGJE)",
-    "parallelogram_property_opposite_line_equal(DIFG)",
-    "parallelogram_property_opposite_line_equal(GJEN)",
-    "parallelogram_area_formula_sine(DIFG)",
-    "parallelogram_area_formula_sine(ENGJ)",
-    "radius_of_circle_property_length_equal(GF,G)",
-    "radius_of_circle_property_length_equal(GJ,G)",
-    "arc_property_center_angle(GFJ,G)",
-    "sector_area_formula(GFJ)"
-  ]
+    "adjacent_complementary_angle(1,JGF,FGD)",
+    "adjacent_complementary_angle(1,NGJ,JGF)",
+    "perpendicular_judgment_angle(1,FG,DG)",
+    "perpendicular_judgment_angle(1,NG,JG)",
+    "parallel_judgment_per_per(1,DG,IF)",
+    "parallel_judgment_per_per(1,GF,DI)",
+    "parallel_judgment_per_per(1,EJ,NG)",
+    "parallel_judgment_per_per(1,NE,GJ)",
+    "parallelogram_judgment_parallel_and_parallel(1,IFGD)",
+    "parallelogram_judgment_parallel_and_parallel(1,NGJE)",
+    "parallelogram_property_opposite_line_equal(1,DIFG)",
+    "parallelogram_property_opposite_line_equal(1,GJEN)",
+    "parallelogram_area_formula_sine(1,DIFG)",
+    "parallelogram_area_formula_sine(1,ENGJ)",
+    "radius_of_circle_property_length_equal(1,GF,G)",
+    "radius_of_circle_property_length_equal(1,GJ,G)",
+    "arc_property_center_angle(1,GFJ,G)",
+    "sector_area_formula(1,GFJ)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,JGF,FGD)": [
+      "perpendicular_judgment_angle(1,FG,DG)"
+    ],
+    "adjacent_complementary_angle(1,NGJ,JGF)": [
+      "perpendicular_judgment_angle(1,NG,JG)"
+    ],
+    "perpendicular_judgment_angle(1,FG,DG)": [
+      "parallel_judgment_per_per(1,GF,DI)"
+    ],
+    "perpendicular_judgment_angle(1,NG,JG)": [
+      "parallel_judgment_per_per(1,NE,GJ)"
+    ],
+    "parallel_judgment_per_per(1,DG,IF)": [
+      "parallelogram_judgment_parallel_and_parallel(1,IFGD)"
+    ],
+    "parallel_judgment_per_per(1,GF,DI)": [
+      "parallelogram_judgment_parallel_and_parallel(1,IFGD)"
+    ],
+    "parallel_judgment_per_per(1,EJ,NG)": [
+      "parallelogram_judgment_parallel_and_parallel(1,NGJE)"
+    ],
+    "parallel_judgment_per_per(1,NE,GJ)": [
+      "parallelogram_judgment_parallel_and_parallel(1,NGJE)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,IFGD)": [
+      "parallelogram_property_opposite_line_equal(1,DIFG)",
+      "parallelogram_area_formula_sine(1,DIFG)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,NGJE)": [
+      "parallelogram_property_opposite_line_equal(1,GJEN)",
+      "parallelogram_area_formula_sine(1,ENGJ)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,DIFG)": [],
+    "parallelogram_property_opposite_line_equal(1,GJEN)": [],
+    "parallelogram_area_formula_sine(1,DIFG)": [],
+    "parallelogram_area_formula_sine(1,ENGJ)": [],
+    "radius_of_circle_property_length_equal(1,GF,G)": [],
+    "radius_of_circle_property_length_equal(1,GJ,G)": [],
+    "arc_property_center_angle(1,GFJ,G)": [],
+    "sector_area_formula(1,GFJ)": [],
+    "START": [
+      "adjacent_complementary_angle(1,JGF,FGD)",
+      "adjacent_complementary_angle(1,NGJ,JGF)",
+      "parallel_judgment_per_per(1,DG,IF)",
+      "parallel_judgment_per_per(1,EJ,NG)",
+      "radius_of_circle_property_length_equal(1,GF,G)",
+      "radius_of_circle_property_length_equal(1,GJ,G)",
+      "arc_property_center_angle(1,GFJ,G)",
+      "sector_area_formula(1,GFJ)"
+    ]
+  }
 }

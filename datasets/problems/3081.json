@@ -32,22 +32,83 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "line_addition(BH,HF)",
-    "line_addition(AH,HE)",
-    "radius_of_circle_property_length_equal(AB,A)",
-    "radius_of_circle_property_length_equal(AF,A)",
-    "parallel_property_collinear_extend(AD,BC,F)",
-    "parallel_property_collinear_extend(CB,FA,E)",
-    "parallel_property_alternate_interior_angle(AF,BE)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "parallelogram_judgment_parallel_and_equal(BEFA)",
-    "parallel_property_alternate_interior_angle(BA,EF)",
-    "isosceles_triangle_judgment_angle_equal(FAE)",
-    "kite_judgment_equal_and_equal(BEFA)",
-    "kite_judgment_equal_and_equal(ABEF)",
-    "kite_property_diagonal_perpendicular_bisection(ABEF,H)",
-    "kite_property_diagonal_perpendicular_bisection(BEFA,H)",
-    "right_triangle_judgment_angle(BHA)",
-    "right_triangle_property_pythagorean(BHA)"
-  ]
+    "line_addition(1,BH,HF)",
+    "line_addition(1,AH,HE)",
+    "radius_of_circle_property_length_equal(1,AB,A)",
+    "radius_of_circle_property_length_equal(1,AF,A)",
+    "parallel_property_collinear_extend(3,AD,BC,F)",
+    "parallel_property_collinear_extend(3,CB,FA,E)",
+    "parallel_property_alternate_interior_angle(1,AF,BE)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "parallelogram_judgment_parallel_and_equal(1,BEFA)",
+    "parallel_property_alternate_interior_angle(2,BA,EF)",
+    "isosceles_triangle_judgment_angle_equal(1,FAE)",
+    "kite_judgment_equal_and_equal(1,BEFA)",
+    "kite_judgment_equal_and_equal(1,ABEF)",
+    "kite_property_diagonal_perpendicular_bisection(1,ABEF,H)",
+    "kite_property_diagonal_perpendicular_bisection(1,BEFA,H)",
+    "right_triangle_judgment_angle(1,BHA)",
+    "right_triangle_property_pythagorean(1,BHA)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,BH,HF)": [],
+    "line_addition(1,AH,HE)": [],
+    "radius_of_circle_property_length_equal(1,AB,A)": [
+      "parallelogram_judgment_parallel_and_equal(1,BEFA)",
+      "kite_judgment_equal_and_equal(1,ABEF)",
+      "kite_judgment_equal_and_equal(1,ABEF)"
+    ],
+    "radius_of_circle_property_length_equal(1,AF,A)": [
+      "parallelogram_judgment_parallel_and_equal(1,BEFA)",
+      "kite_judgment_equal_and_equal(1,ABEF)",
+      "kite_judgment_equal_and_equal(1,ABEF)"
+    ],
+    "parallel_property_collinear_extend(3,AD,BC,F)": [
+      "parallel_property_collinear_extend(3,CB,FA,E)"
+    ],
+    "parallel_property_collinear_extend(3,CB,FA,E)": [
+      "parallelogram_judgment_parallel_and_equal(1,BEFA)",
+      "parallel_property_alternate_interior_angle(1,AF,BE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AF,BE)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)",
+      "isosceles_triangle_judgment_angle_equal(1,FAE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [
+      "kite_judgment_equal_and_equal(1,BEFA)",
+      "parallelogram_judgment_parallel_and_equal(1,BEFA)",
+      "kite_judgment_equal_and_equal(1,ABEF)"
+    ],
+    "parallelogram_judgment_parallel_and_equal(1,BEFA)": [
+      "parallel_property_alternate_interior_angle(2,BA,EF)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BA,EF)": [
+      "isosceles_triangle_judgment_angle_equal(1,FAE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,FAE)": [
+      "kite_judgment_equal_and_equal(1,BEFA)",
+      "kite_judgment_equal_and_equal(1,ABEF)"
+    ],
+    "kite_judgment_equal_and_equal(1,BEFA)": [
+      "kite_property_diagonal_perpendicular_bisection(1,BEFA,H)"
+    ],
+    "kite_judgment_equal_and_equal(1,ABEF)": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABEF,H)"
+    ],
+    "kite_property_diagonal_perpendicular_bisection(1,ABEF,H)": [
+      "right_triangle_judgment_angle(1,BHA)"
+    ],
+    "kite_property_diagonal_perpendicular_bisection(1,BEFA,H)": [],
+    "right_triangle_judgment_angle(1,BHA)": [
+      "right_triangle_property_pythagorean(1,BHA)"
+    ],
+    "right_triangle_property_pythagorean(1,BHA)": [],
+    "START": [
+      "line_addition(1,BH,HF)",
+      "line_addition(1,AH,HE)",
+      "radius_of_circle_property_length_equal(1,AB,A)",
+      "radius_of_circle_property_length_equal(1,AF,A)",
+      "parallel_property_collinear_extend(3,AD,BC,F)"
+    ]
+  }
 }

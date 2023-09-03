@@ -23,13 +23,38 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "18.8000",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(BDC)",
-    "isosceles_triangle_property_angle_equal(BDC)",
-    "adjacent_complementary_angle(DAB,BAC)",
-    "mirror_congruent_triangle_judgment_aas(BDA,BAC)",
-    "mirror_congruent_triangle_property_line_equal(BDA,BAC)",
-    "triangle_property_angle_sum(ACB)",
-    "sine_theorem(BAC)",
-    "sine_theorem(ACB)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,BDC)",
+    "isosceles_triangle_property_angle_equal(1,BDC)",
+    "adjacent_complementary_angle(1,DAB,BAC)",
+    "mirror_congruent_triangle_judgment_aas(1,BDA,BAC)",
+    "mirror_congruent_triangle_property_line_equal(1,BDA,BAC)",
+    "triangle_property_angle_sum(1,ACB)",
+    "sine_theorem(1,BAC)",
+    "sine_theorem(1,ACB)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,BDC)": [
+      "isosceles_triangle_property_angle_equal(1,BDC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BDC)": [
+      "mirror_congruent_triangle_judgment_aas(1,BDA,BAC)"
+    ],
+    "adjacent_complementary_angle(1,DAB,BAC)": [
+      "mirror_congruent_triangle_judgment_aas(1,BDA,BAC)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,BDA,BAC)": [
+      "mirror_congruent_triangle_property_line_equal(1,BDA,BAC)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,BDA,BAC)": [],
+    "triangle_property_angle_sum(1,ACB)": [],
+    "sine_theorem(1,BAC)": [],
+    "sine_theorem(1,ACB)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,BDC)",
+      "adjacent_complementary_angle(1,DAB,BAC)",
+      "triangle_property_angle_sum(1,ACB)",
+      "sine_theorem(1,BAC)",
+      "sine_theorem(1,ACB)"
+    ]
+  }
 }

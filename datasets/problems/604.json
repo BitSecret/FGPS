@@ -35,8 +35,20 @@
   "goal_cdl": "Value(MeasureOfAngle(AUL))",
   "problem_answer": "64",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(JL,BN,U)",
-    "parallel_property_collinear_extend(NB,LU,E)",
-    "parallel_property_corresponding_angle(UL,EN,A)"
-  ]
+    "parallel_property_collinear_extend(3,JL,BN,U)",
+    "parallel_property_collinear_extend(3,NB,LU,E)",
+    "parallel_property_corresponding_angle(1,UL,EN,A)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,JL,BN,U)": [
+      "parallel_property_collinear_extend(3,NB,LU,E)"
+    ],
+    "parallel_property_collinear_extend(3,NB,LU,E)": [
+      "parallel_property_corresponding_angle(1,UL,EN,A)"
+    ],
+    "parallel_property_corresponding_angle(1,UL,EN,A)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,JL,BN,U)"
+    ]
+  }
 }

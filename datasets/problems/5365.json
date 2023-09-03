@@ -36,19 +36,53 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "19",
   "theorem_seqs": [
-    "angle_addition(AMC,CMD)",
-    "adjacent_complementary_angle(AMD,DMB)",
-    "kite_property_diagonal_perpendicular_bisection(MHCA,P)",
-    "kite_property_diagonal_perpendicular_bisection(MBDN,Q)",
-    "perpendicular_bisector_property_bisector(MP,HA)",
-    "perpendicular_bisector_property_bisector(MQ,BN)",
-    "angle_addition(AMC,CMH)",
-    "angle_addition(NMD,DMB)",
-    "angle_addition(AMH,HMN)",
-    "adjacent_complementary_angle(AMN,NMB)",
-    "cosine_theorem(MNH)",
-    "line_addition(CH,HN)",
-    "line_addition(CN,ND)",
-    "line_addition(AM,MB)"
-  ]
+    "angle_addition(1,AMC,CMD)",
+    "adjacent_complementary_angle(1,AMD,DMB)",
+    "kite_property_diagonal_perpendicular_bisection(1,MHCA,P)",
+    "kite_property_diagonal_perpendicular_bisection(1,MBDN,Q)",
+    "perpendicular_bisector_property_bisector(1,MP,HA)",
+    "perpendicular_bisector_property_bisector(1,MQ,BN)",
+    "angle_addition(1,AMC,CMH)",
+    "angle_addition(1,NMD,DMB)",
+    "angle_addition(1,AMH,HMN)",
+    "adjacent_complementary_angle(1,AMN,NMB)",
+    "cosine_theorem(1,MNH)",
+    "line_addition(1,CH,HN)",
+    "line_addition(1,CN,ND)",
+    "line_addition(1,AM,MB)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,AMC,CMD)": [],
+    "adjacent_complementary_angle(1,AMD,DMB)": [],
+    "kite_property_diagonal_perpendicular_bisection(1,MHCA,P)": [
+      "perpendicular_bisector_property_bisector(1,MP,HA)"
+    ],
+    "kite_property_diagonal_perpendicular_bisection(1,MBDN,Q)": [
+      "perpendicular_bisector_property_bisector(1,MQ,BN)"
+    ],
+    "perpendicular_bisector_property_bisector(1,MP,HA)": [],
+    "perpendicular_bisector_property_bisector(1,MQ,BN)": [],
+    "angle_addition(1,AMC,CMH)": [],
+    "angle_addition(1,NMD,DMB)": [],
+    "angle_addition(1,AMH,HMN)": [],
+    "adjacent_complementary_angle(1,AMN,NMB)": [],
+    "cosine_theorem(1,MNH)": [],
+    "line_addition(1,CH,HN)": [],
+    "line_addition(1,CN,ND)": [],
+    "line_addition(1,AM,MB)": [],
+    "START": [
+      "angle_addition(1,AMC,CMD)",
+      "adjacent_complementary_angle(1,AMD,DMB)",
+      "kite_property_diagonal_perpendicular_bisection(1,MHCA,P)",
+      "kite_property_diagonal_perpendicular_bisection(1,MBDN,Q)",
+      "angle_addition(1,AMC,CMH)",
+      "angle_addition(1,NMD,DMB)",
+      "angle_addition(1,AMH,HMN)",
+      "adjacent_complementary_angle(1,AMN,NMB)",
+      "cosine_theorem(1,MNH)",
+      "line_addition(1,CH,HN)",
+      "line_addition(1,CN,ND)",
+      "line_addition(1,AM,MB)"
+    ]
+  }
 }

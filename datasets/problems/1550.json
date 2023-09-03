@@ -28,18 +28,54 @@
   "goal_cdl": "Value(Sub(AreaOfCircle(D),AreaOfTriangle(CBA)))",
   "problem_answer": "4.14",
   "theorem_seqs": [
-    "line_addition(BD,DE)",
-    "line_addition(AE,EC)",
-    "radius_of_circle_property_length_equal(DB,D)",
-    "radius_of_circle_property_length_equal(DA,D)",
-    "equilateral_triangle_property_angle(CBA)",
-    "median_of_triangle_judgment(BE,BAC)",
-    "isosceles_triangle_property_line_coincidence(BAC,E)",
-    "right_triangle_judgment_angle(AEB)",
-    "right_triangle_judgment_angle(AED)",
-    "right_triangle_property_pythagorean(AEB)",
-    "right_triangle_property_pythagorean(AED)",
-    "triangle_area_formula_sine(CBA)",
-    "circle_area_formula(D)"
-  ]
+    "line_addition(1,BD,DE)",
+    "line_addition(1,AE,EC)",
+    "radius_of_circle_property_length_equal(1,DB,D)",
+    "radius_of_circle_property_length_equal(1,DA,D)",
+    "equilateral_triangle_property_angle(1,CBA)",
+    "median_of_triangle_judgment(1,BE,BAC)",
+    "isosceles_triangle_property_line_coincidence(2,BAC,E)",
+    "right_triangle_judgment_angle(1,AEB)",
+    "right_triangle_judgment_angle(1,AED)",
+    "right_triangle_property_pythagorean(1,AEB)",
+    "right_triangle_property_pythagorean(1,AED)",
+    "triangle_area_formula_sine(1,CBA)",
+    "circle_area_formula(1,D)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,BD,DE)": [],
+    "line_addition(1,AE,EC)": [],
+    "radius_of_circle_property_length_equal(1,DB,D)": [
+      "solve_eq_33)"
+    ],
+    "radius_of_circle_property_length_equal(1,DA,D)": [],
+    "equilateral_triangle_property_angle(1,CBA)": [],
+    "median_of_triangle_judgment(1,BE,BAC)": [
+      "isosceles_triangle_property_line_coincidence(2,BAC,E)"
+    ],
+    "isosceles_triangle_property_line_coincidence(2,BAC,E)": [
+      "right_triangle_judgment_angle(1,AEB)",
+      "right_triangle_judgment_angle(1,AED)"
+    ],
+    "right_triangle_judgment_angle(1,AEB)": [
+      "right_triangle_property_pythagorean(1,AEB)"
+    ],
+    "right_triangle_judgment_angle(1,AED)": [
+      "right_triangle_property_pythagorean(1,AED)"
+    ],
+    "right_triangle_property_pythagorean(1,AEB)": [],
+    "right_triangle_property_pythagorean(1,AED)": [],
+    "triangle_area_formula_sine(1,CBA)": [],
+    "circle_area_formula(1,D)": [],
+    "START": [
+      "line_addition(1,BD,DE)",
+      "line_addition(1,AE,EC)",
+      "radius_of_circle_property_length_equal(1,DB,D)",
+      "radius_of_circle_property_length_equal(1,DA,D)",
+      "equilateral_triangle_property_angle(1,CBA)",
+      "median_of_triangle_judgment(1,BE,BAC)",
+      "triangle_area_formula_sine(1,CBA)",
+      "circle_area_formula(1,D)"
+    ]
+  }
 }

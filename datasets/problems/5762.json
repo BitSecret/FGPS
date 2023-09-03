@@ -30,13 +30,36 @@
   "goal_cdl": "Value(LengthOfLine(BN))",
   "problem_answer": "12/7",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AED,DEF)",
-    "similar_triangle_judgment_aa(DAE,CAB)",
-    "similar_triangle_property_line_ratio(DAE,CAB)",
-    "similar_triangle_property_line_ratio(AED,ABC)",
-    "line_addition(AE,EF)",
-    "similar_triangle_judgment_aa(GAF,NAB)",
-    "similar_triangle_property_line_ratio(GAF,NAB)",
-    "similar_triangle_property_line_ratio(AFG,ABN)"
-  ]
+    "adjacent_complementary_angle(1,AED,DEF)",
+    "similar_triangle_judgment_aa(1,DAE,CAB)",
+    "similar_triangle_property_line_ratio(1,DAE,CAB)",
+    "similar_triangle_property_line_ratio(1,AED,ABC)",
+    "line_addition(1,AE,EF)",
+    "similar_triangle_judgment_aa(1,GAF,NAB)",
+    "similar_triangle_property_line_ratio(1,GAF,NAB)",
+    "similar_triangle_property_line_ratio(1,AFG,ABN)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AED,DEF)": [
+      "similar_triangle_judgment_aa(1,DAE,CAB)"
+    ],
+    "similar_triangle_judgment_aa(1,DAE,CAB)": [
+      "similar_triangle_property_line_ratio(1,DAE,CAB)",
+      "similar_triangle_property_line_ratio(1,AED,ABC)"
+    ],
+    "similar_triangle_property_line_ratio(1,DAE,CAB)": [],
+    "similar_triangle_property_line_ratio(1,AED,ABC)": [],
+    "line_addition(1,AE,EF)": [],
+    "similar_triangle_judgment_aa(1,GAF,NAB)": [
+      "similar_triangle_property_line_ratio(1,GAF,NAB)",
+      "similar_triangle_property_line_ratio(1,AFG,ABN)"
+    ],
+    "similar_triangle_property_line_ratio(1,GAF,NAB)": [],
+    "similar_triangle_property_line_ratio(1,AFG,ABN)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AED,DEF)",
+      "line_addition(1,AE,EF)",
+      "similar_triangle_judgment_aa(1,GAF,NAB)"
+    ]
+  }
 }

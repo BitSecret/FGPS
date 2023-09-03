@@ -27,8 +27,20 @@
   "goal_cdl": "Value(MeasureOfAngle(CFG))",
   "problem_answer": "62",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BD,EG,C)",
-    "parallel_property_collinear_extend(GE,DC,F)",
-    "parallel_property_corresponding_angle(CD,FG,A)"
-  ]
+    "parallel_property_collinear_extend(3,BD,EG,C)",
+    "parallel_property_collinear_extend(3,GE,DC,F)",
+    "parallel_property_corresponding_angle(1,CD,FG,A)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BD,EG,C)": [
+      "parallel_property_collinear_extend(3,GE,DC,F)"
+    ],
+    "parallel_property_collinear_extend(3,GE,DC,F)": [
+      "parallel_property_corresponding_angle(1,CD,FG,A)"
+    ],
+    "parallel_property_corresponding_angle(1,CD,FG,A)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BD,EG,C)"
+    ]
+  }
 }

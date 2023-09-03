@@ -31,9 +31,22 @@
   "goal_cdl": "Value(LengthOfLine(JH))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(FK,F)",
-    "radius_of_circle_property_length_equal(FJ,F)",
-    "right_triangle_judgment_angle(JHF)",
-    "right_triangle_property_pythagorean(JHF)"
-  ]
+    "radius_of_circle_property_length_equal(1,FK,F)",
+    "radius_of_circle_property_length_equal(1,FJ,F)",
+    "right_triangle_judgment_angle(1,JHF)",
+    "right_triangle_property_pythagorean(1,JHF)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,FK,F)": [],
+    "radius_of_circle_property_length_equal(1,FJ,F)": [],
+    "right_triangle_judgment_angle(1,JHF)": [
+      "right_triangle_property_pythagorean(1,JHF)"
+    ],
+    "right_triangle_property_pythagorean(1,JHF)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,FK,F)",
+      "radius_of_circle_property_length_equal(1,FJ,F)",
+      "right_triangle_judgment_angle(1,JHF)"
+    ]
+  }
 }

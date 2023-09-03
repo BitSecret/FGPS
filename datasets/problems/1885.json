@@ -22,13 +22,37 @@
   "goal_cdl": "Value(MeasureOfArc(OMP))",
   "problem_answer": "144",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(QM,O,O)",
-    "angle_addition(OMP,PMQ)",
-    "radius_of_circle_property_length_equal(OP,O)",
-    "radius_of_circle_property_length_equal(OM,O)",
-    "isosceles_triangle_judgment_line_equal(OMP)",
-    "isosceles_triangle_property_angle_equal(OMP)",
-    "triangle_property_angle_sum(OMP)",
-    "arc_property_center_angle(OMP,O)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,QM,O,O)",
+    "angle_addition(1,OMP,PMQ)",
+    "radius_of_circle_property_length_equal(1,OP,O)",
+    "radius_of_circle_property_length_equal(1,OM,O)",
+    "isosceles_triangle_judgment_line_equal(1,OMP)",
+    "isosceles_triangle_property_angle_equal(1,OMP)",
+    "triangle_property_angle_sum(1,OMP)",
+    "arc_property_center_angle(1,OMP,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,QM,O,O)": [],
+    "angle_addition(1,OMP,PMQ)": [],
+    "radius_of_circle_property_length_equal(1,OP,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OMP)"
+    ],
+    "radius_of_circle_property_length_equal(1,OM,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OMP)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OMP)": [
+      "isosceles_triangle_property_angle_equal(1,OMP)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OMP)": [],
+    "triangle_property_angle_sum(1,OMP)": [],
+    "arc_property_center_angle(1,OMP,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,QM,O,O)",
+      "angle_addition(1,OMP,PMQ)",
+      "radius_of_circle_property_length_equal(1,OP,O)",
+      "radius_of_circle_property_length_equal(1,OM,O)",
+      "triangle_property_angle_sum(1,OMP)",
+      "arc_property_center_angle(1,OMP,O)"
+    ]
+  }
 }

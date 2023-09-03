@@ -26,16 +26,46 @@
   "goal_cdl": "Value(LengthOfLine(WV))",
   "problem_answer": "15/2",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(XR,WS,Q)",
-    "parallel_property_corresponding_angle(WS,VT,X)",
-    "similar_triangle_judgment_aa(RQX,SQW)",
-    "line_addition(QX,XW)",
-    "similar_triangle_property_line_ratio(RQX,SQW)",
-    "similar_triangle_property_line_ratio(XRQ,WSQ)",
-    "similar_triangle_judgment_aa(SQW,TQV)",
-    "line_addition(QS,ST)",
-    "line_addition(QW,WV)",
-    "similar_triangle_property_line_ratio(SQW,TQV)",
-    "similar_triangle_property_line_ratio(WSQ,VTQ)"
-  ]
+    "parallel_property_corresponding_angle(1,XR,WS,Q)",
+    "parallel_property_corresponding_angle(1,WS,VT,X)",
+    "similar_triangle_judgment_aa(1,RQX,SQW)",
+    "line_addition(1,QX,XW)",
+    "similar_triangle_property_line_ratio(1,RQX,SQW)",
+    "similar_triangle_property_line_ratio(1,XRQ,WSQ)",
+    "similar_triangle_judgment_aa(1,SQW,TQV)",
+    "line_addition(1,QS,ST)",
+    "line_addition(1,QW,WV)",
+    "similar_triangle_property_line_ratio(1,SQW,TQV)",
+    "similar_triangle_property_line_ratio(1,WSQ,VTQ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,XR,WS,Q)": [
+      "similar_triangle_judgment_aa(1,RQX,SQW)"
+    ],
+    "parallel_property_corresponding_angle(1,WS,VT,X)": [
+      "similar_triangle_judgment_aa(1,SQW,TQV)"
+    ],
+    "similar_triangle_judgment_aa(1,RQX,SQW)": [
+      "similar_triangle_property_line_ratio(1,RQX,SQW)",
+      "similar_triangle_property_line_ratio(1,XRQ,WSQ)"
+    ],
+    "line_addition(1,QX,XW)": [],
+    "similar_triangle_property_line_ratio(1,RQX,SQW)": [],
+    "similar_triangle_property_line_ratio(1,XRQ,WSQ)": [],
+    "similar_triangle_judgment_aa(1,SQW,TQV)": [
+      "similar_triangle_property_line_ratio(1,SQW,TQV)",
+      "similar_triangle_property_line_ratio(1,WSQ,VTQ)"
+    ],
+    "line_addition(1,QS,ST)": [],
+    "line_addition(1,QW,WV)": [],
+    "similar_triangle_property_line_ratio(1,SQW,TQV)": [],
+    "similar_triangle_property_line_ratio(1,WSQ,VTQ)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,XR,WS,Q)",
+      "parallel_property_corresponding_angle(1,WS,VT,X)",
+      "line_addition(1,QX,XW)",
+      "line_addition(1,QS,ST)",
+      "line_addition(1,QW,WV)"
+    ]
+  }
 }

@@ -29,26 +29,81 @@
   "goal_cdl": "Value(RadiusOfCircle(O))",
   "problem_answer": "12.5",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(AOM,O)",
-    "diameter_of_circle_property_right_angle(MCA,O)",
-    "line_addition(AO,OM)",
-    "line_addition(BK,KO)",
-    "line_addition(AK,KE)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OK,EA)",
-    "right_triangle_judgment_angle(OKA)",
-    "right_triangle_judgment_angle(MCA)",
-    "right_triangle_property_pythagorean(OKA)",
-    "right_triangle_property_pythagorean(MCA)",
-    "mirror_similar_triangle_judgment_aa(AOK,MCA)",
-    "mirror_similar_triangle_judgment_aa(MCA,AOK)",
-    "mirror_similar_triangle_property_line_ratio(AOK,MCA)",
-    "mirror_similar_triangle_property_line_ratio(OKA,AMC)",
-    "mirror_similar_triangle_property_line_ratio(KAO,CAM)",
-    "mirror_similar_triangle_property_line_ratio(MCA,AOK)",
-    "mirror_similar_triangle_property_line_ratio(CAM,KAO)",
-    "mirror_similar_triangle_property_line_ratio(AMC,OKA)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OM,O)",
-    "radius_of_circle_property_length_equal(OB,O)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,AOM,O)",
+    "diameter_of_circle_property_right_angle(1,MCA,O)",
+    "line_addition(1,AO,OM)",
+    "line_addition(1,BK,KO)",
+    "line_addition(1,AK,KE)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OK,EA)",
+    "right_triangle_judgment_angle(1,OKA)",
+    "right_triangle_judgment_angle(1,MCA)",
+    "right_triangle_property_pythagorean(1,OKA)",
+    "right_triangle_property_pythagorean(1,MCA)",
+    "mirror_similar_triangle_judgment_aa(1,AOK,MCA)",
+    "mirror_similar_triangle_judgment_aa(1,MCA,AOK)",
+    "mirror_similar_triangle_property_line_ratio(1,AOK,MCA)",
+    "mirror_similar_triangle_property_line_ratio(1,OKA,AMC)",
+    "mirror_similar_triangle_property_line_ratio(1,KAO,CAM)",
+    "mirror_similar_triangle_property_line_ratio(1,MCA,AOK)",
+    "mirror_similar_triangle_property_line_ratio(1,CAM,KAO)",
+    "mirror_similar_triangle_property_line_ratio(1,AMC,OKA)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OM,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,AOM,O)": [
+      "diameter_of_circle_property_right_angle(1,MCA,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,MCA,O)": [
+      "right_triangle_judgment_angle(1,MCA)",
+      "mirror_similar_triangle_judgment_aa(1,AOK,MCA)",
+      "mirror_similar_triangle_judgment_aa(1,MCA,AOK)"
+    ],
+    "line_addition(1,AO,OM)": [],
+    "line_addition(1,BK,KO)": [],
+    "line_addition(1,AK,KE)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OK,EA)": [
+      "right_triangle_judgment_angle(1,OKA)",
+      "mirror_similar_triangle_judgment_aa(1,AOK,MCA)",
+      "mirror_similar_triangle_judgment_aa(1,MCA,AOK)"
+    ],
+    "right_triangle_judgment_angle(1,OKA)": [
+      "right_triangle_property_pythagorean(1,OKA)"
+    ],
+    "right_triangle_judgment_angle(1,MCA)": [
+      "right_triangle_property_pythagorean(1,MCA)"
+    ],
+    "right_triangle_property_pythagorean(1,OKA)": [],
+    "right_triangle_property_pythagorean(1,MCA)": [],
+    "mirror_similar_triangle_judgment_aa(1,AOK,MCA)": [
+      "mirror_similar_triangle_property_line_ratio(1,AOK,MCA)",
+      "mirror_similar_triangle_property_line_ratio(1,OKA,AMC)",
+      "mirror_similar_triangle_property_line_ratio(1,KAO,CAM)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,MCA,AOK)": [
+      "mirror_similar_triangle_property_line_ratio(1,MCA,AOK)",
+      "mirror_similar_triangle_property_line_ratio(1,CAM,KAO)",
+      "mirror_similar_triangle_property_line_ratio(1,AMC,OKA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,AOK,MCA)": [],
+    "mirror_similar_triangle_property_line_ratio(1,OKA,AMC)": [],
+    "mirror_similar_triangle_property_line_ratio(1,KAO,CAM)": [],
+    "mirror_similar_triangle_property_line_ratio(1,MCA,AOK)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CAM,KAO)": [],
+    "mirror_similar_triangle_property_line_ratio(1,AMC,OKA)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,OM,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,AOM,O)",
+      "line_addition(1,AO,OM)",
+      "line_addition(1,BK,KO)",
+      "line_addition(1,AK,KE)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OK,EA)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OM,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)"
+    ]
+  }
 }

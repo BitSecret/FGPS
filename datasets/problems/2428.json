@@ -37,11 +37,35 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "7",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(QU,W,W)",
-    "tangent_of_circle_property_perpendicular(QT,W,W)",
-    "radius_of_circle_property_length_equal(WU,W)",
-    "radius_of_circle_property_length_equal(WT,W)",
-    "mirror_congruent_triangle_judgment_hl(WUQ,WQT)",
-    "mirror_congruent_triangle_property_line_equal(WUQ,WQT)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,QU,W,W)",
+    "tangent_of_circle_property_perpendicular(2,QT,W,W)",
+    "radius_of_circle_property_length_equal(1,WU,W)",
+    "radius_of_circle_property_length_equal(1,WT,W)",
+    "mirror_congruent_triangle_judgment_hl(2,WUQ,WQT)",
+    "mirror_congruent_triangle_property_line_equal(1,WUQ,WQT)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,QU,W,W)": [
+      "mirror_congruent_triangle_judgment_hl(2,WUQ,WQT)"
+    ],
+    "tangent_of_circle_property_perpendicular(2,QT,W,W)": [
+      "mirror_congruent_triangle_judgment_hl(2,WUQ,WQT)"
+    ],
+    "radius_of_circle_property_length_equal(1,WU,W)": [
+      "mirror_congruent_triangle_judgment_hl(2,WUQ,WQT)"
+    ],
+    "radius_of_circle_property_length_equal(1,WT,W)": [
+      "mirror_congruent_triangle_judgment_hl(2,WUQ,WQT)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(2,WUQ,WQT)": [
+      "mirror_congruent_triangle_property_line_equal(1,WUQ,WQT)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,WUQ,WQT)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,QU,W,W)",
+      "tangent_of_circle_property_perpendicular(2,QT,W,W)",
+      "radius_of_circle_property_length_equal(1,WU,W)",
+      "radius_of_circle_property_length_equal(1,WT,W)"
+    ]
+  }
 }

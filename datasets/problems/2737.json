@@ -24,7 +24,16 @@
   "goal_cdl": "Value(MeasureOfAngle(YWT))",
   "problem_answer": "38",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(XY,WT)",
-    "parallel_property_alternate_interior_angle(XY,WT)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,XY,WT)",
+    "parallel_property_alternate_interior_angle(2,XY,WT)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,XY,WT)": [
+      "parallel_property_alternate_interior_angle(2,XY,WT)"
+    ],
+    "parallel_property_alternate_interior_angle(2,XY,WT)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,XY,WT)"
+    ]
+  }
 }

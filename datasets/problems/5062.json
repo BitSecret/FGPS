@@ -23,8 +23,18 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "mirror_similar_triangle_property_line_ratio(EDA,ABF)",
-    "mirror_similar_triangle_property_line_ratio(DAE,FAB)",
-    "parallelogram_area_formula_sine(ABCD)"
-  ]
+    "mirror_similar_triangle_property_line_ratio(1,EDA,ABF)",
+    "mirror_similar_triangle_property_line_ratio(1,DAE,FAB)",
+    "parallelogram_area_formula_sine(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_property_line_ratio(1,EDA,ABF)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DAE,FAB)": [],
+    "parallelogram_area_formula_sine(1,ABCD)": [],
+    "START": [
+      "mirror_similar_triangle_property_line_ratio(1,EDA,ABF)",
+      "mirror_similar_triangle_property_line_ratio(1,DAE,FAB)",
+      "parallelogram_area_formula_sine(1,ABCD)"
+    ]
+  }
 }

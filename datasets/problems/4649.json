@@ -32,13 +32,40 @@
   "goal_cdl": "Value(LengthOfLine(OC))",
   "problem_answer": "sqrt(3)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(PA,O,O)",
-    "angle_addition(APO,OPB)",
-    "triangle_property_angle_sum(OAC)",
-    "triangle_property_angle_sum(OAP)",
-    "sine_theorem(ACO)",
-    "sine_theorem(COA)",
-    "sine_theorem(APC)",
-    "sine_theorem(APO)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,PA,O,O)",
+    "angle_addition(1,APO,OPB)",
+    "triangle_property_angle_sum(1,OAC)",
+    "triangle_property_angle_sum(1,OAP)",
+    "sine_theorem(1,ACO)",
+    "sine_theorem(1,COA)",
+    "sine_theorem(1,APC)",
+    "sine_theorem(1,APO)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,PA,O,O)": [
+      "solve_eq_19)"
+    ],
+    "angle_addition(1,APO,OPB)": [
+      "solve_eq_17)",
+      "solve_eq_19)"
+    ],
+    "triangle_property_angle_sum(1,OAC)": [],
+    "triangle_property_angle_sum(1,OAP)": [
+      "solve_eq_18)"
+    ],
+    "sine_theorem(1,ACO)": [],
+    "sine_theorem(1,COA)": [],
+    "sine_theorem(1,APC)": [],
+    "sine_theorem(1,APO)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,PA,O,O)",
+      "angle_addition(1,APO,OPB)",
+      "triangle_property_angle_sum(1,OAC)",
+      "triangle_property_angle_sum(1,OAP)",
+      "sine_theorem(1,ACO)",
+      "sine_theorem(1,COA)",
+      "sine_theorem(1,APC)",
+      "sine_theorem(1,APO)"
+    ]
+  }
 }

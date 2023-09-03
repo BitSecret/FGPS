@@ -31,20 +31,61 @@
   "goal_cdl": "Value(Sub(AreaOfQuadrilateral(EBDA),AreaOfTriangle(CFG)))",
   "problem_answer": "63.244",
   "theorem_seqs": [
-    "adjacent_complementary_angle(GHF,FHE)",
-    "trapezoid_judgment_parallel(EBDA)",
-    "altitude_of_triangle_judgment(FH,FGC)",
-    "triangle_area_formula_common(FGC)",
-    "line_addition(EC,CH)",
-    "line_addition(HG,GA)",
-    "line_addition(EH,HA)",
-    "altitude_of_quadrilateral_judgment(MH,DAEB)",
-    "trapezoid_area_formula(DAEB)",
-    "isosceles_triangle_judgment_line_equal(FGC)",
-    "isosceles_triangle_property_line_coincidence(FGC,H)",
-    "right_triangle_judgment_angle(FHC)",
-    "line_addition(CH,HG)",
-    "line_addition(HF,FM)",
-    "right_triangle_property_pythagorean(FHC)"
-  ]
+    "adjacent_complementary_angle(1,GHF,FHE)",
+    "trapezoid_judgment_parallel(1,EBDA)",
+    "altitude_of_triangle_judgment(1,FH,FGC)",
+    "triangle_area_formula_common(1,FGC)",
+    "line_addition(1,EC,CH)",
+    "line_addition(1,HG,GA)",
+    "line_addition(1,EH,HA)",
+    "altitude_of_quadrilateral_judgment(2,MH,DAEB)",
+    "trapezoid_area_formula(1,DAEB)",
+    "isosceles_triangle_judgment_line_equal(1,FGC)",
+    "isosceles_triangle_property_line_coincidence(1,FGC,H)",
+    "right_triangle_judgment_angle(1,FHC)",
+    "line_addition(1,CH,HG)",
+    "line_addition(1,HF,FM)",
+    "right_triangle_property_pythagorean(1,FHC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,GHF,FHE)": [
+      "altitude_of_triangle_judgment(1,FH,FGC)",
+      "altitude_of_quadrilateral_judgment(2,MH,DAEB)"
+    ],
+    "trapezoid_judgment_parallel(1,EBDA)": [
+      "altitude_of_quadrilateral_judgment(2,MH,DAEB)",
+      "trapezoid_area_formula(1,DAEB)"
+    ],
+    "altitude_of_triangle_judgment(1,FH,FGC)": [
+      "isosceles_triangle_property_line_coincidence(1,FGC,H)"
+    ],
+    "triangle_area_formula_common(1,FGC)": [],
+    "line_addition(1,EC,CH)": [],
+    "line_addition(1,HG,GA)": [],
+    "line_addition(1,EH,HA)": [],
+    "altitude_of_quadrilateral_judgment(2,MH,DAEB)": [],
+    "trapezoid_area_formula(1,DAEB)": [],
+    "isosceles_triangle_judgment_line_equal(1,FGC)": [
+      "isosceles_triangle_property_line_coincidence(1,FGC,H)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,FGC,H)": [],
+    "right_triangle_judgment_angle(1,FHC)": [
+      "right_triangle_property_pythagorean(1,FHC)"
+    ],
+    "line_addition(1,CH,HG)": [],
+    "line_addition(1,HF,FM)": [],
+    "right_triangle_property_pythagorean(1,FHC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,GHF,FHE)",
+      "trapezoid_judgment_parallel(1,EBDA)",
+      "triangle_area_formula_common(1,FGC)",
+      "line_addition(1,EC,CH)",
+      "line_addition(1,HG,GA)",
+      "line_addition(1,EH,HA)",
+      "isosceles_triangle_judgment_line_equal(1,FGC)",
+      "right_triangle_judgment_angle(1,FHC)",
+      "line_addition(1,CH,HG)",
+      "line_addition(1,HF,FM)"
+    ]
+  }
 }

@@ -25,7 +25,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "2",
   "theorem_seqs": [
-    "midsegment_of_quadrilateral_judgment_midpoint(PM,QTSR)",
-    "midsegment_of_quadrilateral_property_length(PM,QTSR)"
-  ]
+    "midsegment_of_quadrilateral_judgment_midpoint(1,PM,QTSR)",
+    "midsegment_of_quadrilateral_property_length(1,PM,QTSR)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_quadrilateral_judgment_midpoint(1,PM,QTSR)": [
+      "midsegment_of_quadrilateral_property_length(1,PM,QTSR)"
+    ],
+    "midsegment_of_quadrilateral_property_length(1,PM,QTSR)": [],
+    "START": [
+      "midsegment_of_quadrilateral_judgment_midpoint(1,PM,QTSR)"
+    ]
+  }
 }

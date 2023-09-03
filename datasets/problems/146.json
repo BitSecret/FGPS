@@ -20,8 +20,18 @@
   "goal_cdl": "Value(AreaOfSector(BCA))",
   "problem_answer": "115*pi/36",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(BA,B)",
-    "arc_property_center_angle(BCA,B)",
-    "sector_area_formula(BCA)"
-  ]
+    "radius_of_circle_property_length_equal(1,BA,B)",
+    "arc_property_center_angle(1,BCA,B)",
+    "sector_area_formula(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,BA,B)": [],
+    "arc_property_center_angle(1,BCA,B)": [],
+    "sector_area_formula(1,BCA)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,BA,B)",
+      "arc_property_center_angle(1,BCA,B)",
+      "sector_area_formula(1,BCA)"
+    ]
+  }
 }

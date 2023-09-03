@@ -24,9 +24,28 @@
   "goal_cdl": "Value(LengthOfLine(PQ))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(SR,PT)",
-    "similar_triangle_judgment_aa(QPT,QRS)",
-    "similar_triangle_property_line_ratio(PTQ,RSQ)",
-    "similar_triangle_property_line_ratio(TQP,SQR)"
-  ]
+    "parallel_property_alternate_interior_angle(1,SR,PT)",
+    "parallel_property_alternate_interior_angle(2,SR,PT)",
+    "similar_triangle_judgment_aa(1,QPT,QRS)",
+    "similar_triangle_property_line_ratio(1,PTQ,RSQ)",
+    "similar_triangle_property_line_ratio(1,TQP,SQR)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,SR,PT)": [
+      "similar_triangle_judgment_aa(1,QPT,QRS)"
+    ],
+    "parallel_property_alternate_interior_angle(2,SR,PT)": [
+      "similar_triangle_judgment_aa(1,QPT,QRS)"
+    ],
+    "similar_triangle_judgment_aa(1,QPT,QRS)": [
+      "similar_triangle_property_line_ratio(1,PTQ,RSQ)",
+      "similar_triangle_property_line_ratio(1,TQP,SQR)"
+    ],
+    "similar_triangle_property_line_ratio(1,PTQ,RSQ)": [],
+    "similar_triangle_property_line_ratio(1,TQP,SQR)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,SR,PT)",
+      "parallel_property_alternate_interior_angle(2,SR,PT)"
+    ]
+  }
 }

@@ -25,14 +25,40 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(AB,A)",
-    "radius_of_circle_property_length_equal(AE,A)",
-    "radius_of_circle_property_length_equal(AD,A)",
-    "radius_of_circle_property_length_equal(AC,A)",
-    "cosine_theorem(AED)",
-    "isosceles_triangle_judgment_line_equal(ACB)",
-    "isosceles_triangle_property_angle_equal(ACB)",
-    "triangle_property_angle_sum(ACB)",
-    "sine_theorem(CBA)"
-  ]
+    "radius_of_circle_property_length_equal(1,AB,A)",
+    "radius_of_circle_property_length_equal(1,AE,A)",
+    "radius_of_circle_property_length_equal(1,AD,A)",
+    "radius_of_circle_property_length_equal(1,AC,A)",
+    "cosine_theorem(1,AED)",
+    "isosceles_triangle_judgment_line_equal(1,ACB)",
+    "isosceles_triangle_property_angle_equal(1,ACB)",
+    "triangle_property_angle_sum(1,ACB)",
+    "sine_theorem(1,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,AB,A)": [
+      "isosceles_triangle_judgment_line_equal(1,ACB)"
+    ],
+    "radius_of_circle_property_length_equal(1,AE,A)": [],
+    "radius_of_circle_property_length_equal(1,AD,A)": [],
+    "radius_of_circle_property_length_equal(1,AC,A)": [
+      "isosceles_triangle_judgment_line_equal(1,ACB)"
+    ],
+    "cosine_theorem(1,AED)": [],
+    "isosceles_triangle_judgment_line_equal(1,ACB)": [
+      "isosceles_triangle_property_angle_equal(1,ACB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ACB)": [],
+    "triangle_property_angle_sum(1,ACB)": [],
+    "sine_theorem(1,CBA)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,AB,A)",
+      "radius_of_circle_property_length_equal(1,AE,A)",
+      "radius_of_circle_property_length_equal(1,AD,A)",
+      "radius_of_circle_property_length_equal(1,AC,A)",
+      "cosine_theorem(1,AED)",
+      "triangle_property_angle_sum(1,ACB)",
+      "sine_theorem(1,CBA)"
+    ]
+  }
 }

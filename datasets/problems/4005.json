@@ -29,10 +29,25 @@
   "goal_cdl": "Value(AreaOfSector(OBA))",
   "problem_answer": "3*pi/2",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(COD,O)",
-    "diameter_of_circle_property_length_equal(CD,O)",
-    "circle_property_length_of_radius_and_diameter(O)",
-    "arc_property_circumference_angle_external(OBA,D)",
-    "sector_area_formula(OBA)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,COD,O)",
+    "diameter_of_circle_property_length_equal(1,CD,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "arc_property_circumference_angle_external(1,OBA,D)",
+    "sector_area_formula(1,OBA)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,COD,O)": [
+      "diameter_of_circle_property_length_equal(1,CD,O)"
+    ],
+    "diameter_of_circle_property_length_equal(1,CD,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "arc_property_circumference_angle_external(1,OBA,D)": [],
+    "sector_area_formula(1,OBA)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,COD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "arc_property_circumference_angle_external(1,OBA,D)",
+      "sector_area_formula(1,OBA)"
+    ]
+  }
 }

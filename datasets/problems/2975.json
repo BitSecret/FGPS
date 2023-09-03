@@ -25,12 +25,32 @@
   "goal_cdl": "Value(MeasureOfAngle(QDB))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(DE,ABC)",
-    "midsegment_of_triangle_property_parallel(DE,ABC)",
-    "parallel_property_corresponding_angle(DE,BC,A)",
-    "mirror_congruent_triangle_property_angle_equal(DEA,DPE)",
-    "angle_addition(ADE,EDQ)",
-    "flat_angle(ADB)",
-    "angle_addition(ADQ,QDB)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
+    "midsegment_of_triangle_property_parallel(1,DE,ABC)",
+    "parallel_property_corresponding_angle(1,DE,BC,A)",
+    "mirror_congruent_triangle_property_angle_equal(1,DEA,DPE)",
+    "angle_addition(1,ADE,EDQ)",
+    "flat_angle(1,ADB)",
+    "angle_addition(1,ADQ,QDB)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)": [
+      "midsegment_of_triangle_property_parallel(1,DE,ABC)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,DE,ABC)": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)"
+    ],
+    "parallel_property_corresponding_angle(1,DE,BC,A)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,DEA,DPE)": [],
+    "angle_addition(1,ADE,EDQ)": [],
+    "flat_angle(1,ADB)": [],
+    "angle_addition(1,ADQ,QDB)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
+      "mirror_congruent_triangle_property_angle_equal(1,DEA,DPE)",
+      "angle_addition(1,ADE,EDQ)",
+      "flat_angle(1,ADB)",
+      "angle_addition(1,ADQ,QDB)"
+    ]
+  }
 }

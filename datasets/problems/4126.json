@@ -35,13 +35,42 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(BOE,O)",
-    "diameter_of_circle_property_right_angle(EAB,O)",
-    "parallel_judgment_ipsilateral_internal_angle(AE,PD)",
-    "parallel_property_alternate_interior_angle(AE,PD)",
-    "arc_property_circumference_angle_external(OAC,D)",
-    "arc_property_circumference_angle_external(ODE,A)",
-    "congruent_arc_judgment_measure_equal(OAC,ODE)",
-    "congruent_arc_property_chord_equal(OAC,ODE)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,BOE,O)",
+    "diameter_of_circle_property_right_angle(1,EAB,O)",
+    "parallel_judgment_ipsilateral_internal_angle(1,AE,PD)",
+    "parallel_property_alternate_interior_angle(1,AE,PD)",
+    "arc_property_circumference_angle_external(1,OAC,D)",
+    "arc_property_circumference_angle_external(1,ODE,A)",
+    "congruent_arc_judgment_measure_equal(1,OAC,ODE)",
+    "congruent_arc_property_chord_equal(1,OAC,ODE)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,BOE,O)": [
+      "diameter_of_circle_property_right_angle(1,EAB,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,EAB,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,AE,PD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,AE,PD)": [
+      "parallel_property_alternate_interior_angle(1,AE,PD)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AE,PD)": [
+      "congruent_arc_judgment_measure_equal(1,OAC,ODE)"
+    ],
+    "arc_property_circumference_angle_external(1,OAC,D)": [
+      "congruent_arc_judgment_measure_equal(1,OAC,ODE)"
+    ],
+    "arc_property_circumference_angle_external(1,ODE,A)": [
+      "congruent_arc_judgment_measure_equal(1,OAC,ODE)"
+    ],
+    "congruent_arc_judgment_measure_equal(1,OAC,ODE)": [
+      "congruent_arc_property_chord_equal(1,OAC,ODE)"
+    ],
+    "congruent_arc_property_chord_equal(1,OAC,ODE)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,BOE,O)",
+      "arc_property_circumference_angle_external(1,OAC,D)",
+      "arc_property_circumference_angle_external(1,ODE,A)"
+    ]
+  }
 }

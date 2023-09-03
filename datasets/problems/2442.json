@@ -23,13 +23,38 @@
   "goal_cdl": "Value(Sub(AreaOfQuadrilateral(BADE),AreaOfTriangle(BAC)))",
   "problem_answer": "22.062746066806227",
   "theorem_seqs": [
-    "quadrilateral_property_angle_sum(BADE)",
-    "parallel_judgment_ipsilateral_internal_angle(BE,AD)",
-    "parallel_judgment_ipsilateral_internal_angle(ED,BA)",
-    "parallelogram_judgment_parallel_and_parallel(BADE)",
-    "parallelogram_area_formula_sine(ADEB)",
-    "parallelogram_property_opposite_line_equal(DEBA)",
-    "cosine_theorem(CBA)",
-    "triangle_area_formula_sine(CBA)"
-  ]
+    "quadrilateral_property_angle_sum(1,BADE)",
+    "parallel_judgment_ipsilateral_internal_angle(1,BE,AD)",
+    "parallel_judgment_ipsilateral_internal_angle(1,ED,BA)",
+    "parallelogram_judgment_parallel_and_parallel(1,BADE)",
+    "parallelogram_area_formula_sine(1,ADEB)",
+    "parallelogram_property_opposite_line_equal(1,DEBA)",
+    "cosine_theorem(1,CBA)",
+    "triangle_area_formula_sine(1,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_property_angle_sum(1,BADE)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,BE,AD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,BE,AD)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BADE)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,ED,BA)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BADE)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,BADE)": [
+      "parallelogram_area_formula_sine(1,ADEB)",
+      "parallelogram_property_opposite_line_equal(1,DEBA)"
+    ],
+    "parallelogram_area_formula_sine(1,ADEB)": [],
+    "parallelogram_property_opposite_line_equal(1,DEBA)": [],
+    "cosine_theorem(1,CBA)": [],
+    "triangle_area_formula_sine(1,CBA)": [],
+    "START": [
+      "quadrilateral_property_angle_sum(1,BADE)",
+      "parallel_judgment_ipsilateral_internal_angle(1,ED,BA)",
+      "cosine_theorem(1,CBA)",
+      "triangle_area_formula_sine(1,CBA)"
+    ]
+  }
 }

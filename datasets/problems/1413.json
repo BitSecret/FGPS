@@ -25,19 +25,60 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ADCB))",
   "problem_answer": "28",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,DC,E)",
-    "parallel_property_collinear_extend(EB,DC,F)",
-    "adjacent_complementary_angle(BFC,CFA)",
-    "parallel_judgment_corresponding_angle(FC,ED,A)",
-    "parallelogram_judgment_parallel_and_parallel(DCFE)",
-    "parallelogram_property_opposite_line_equal(FEDC)",
-    "isosceles_trapezoid_judgment_line_equal(CBAD)",
-    "isosceles_trapezoid_property_angle_equal(CBAD)",
-    "mirror_congruent_triangle_judgment_aas(DEA,CBF)",
-    "mirror_congruent_triangle_property_line_equal(DEA,CBF)",
-    "line_addition(AE,EF)",
-    "line_addition(AF,FB)",
-    "sine_theorem(ADE)",
-    "quadrilateral_perimeter_formula(ADCB)"
-  ]
+    "parallel_property_collinear_extend(3,AB,DC,E)",
+    "parallel_property_collinear_extend(3,EB,DC,F)",
+    "adjacent_complementary_angle(1,BFC,CFA)",
+    "parallel_judgment_corresponding_angle(2,FC,ED,A)",
+    "parallelogram_judgment_parallel_and_parallel(1,DCFE)",
+    "parallelogram_property_opposite_line_equal(1,FEDC)",
+    "isosceles_trapezoid_judgment_line_equal(1,CBAD)",
+    "isosceles_trapezoid_property_angle_equal(1,CBAD)",
+    "mirror_congruent_triangle_judgment_aas(3,DEA,CBF)",
+    "mirror_congruent_triangle_property_line_equal(1,DEA,CBF)",
+    "line_addition(1,AE,EF)",
+    "line_addition(1,AF,FB)",
+    "sine_theorem(1,ADE)",
+    "quadrilateral_perimeter_formula(1,ADCB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,DC,E)": [
+      "parallel_property_collinear_extend(3,EB,DC,F)"
+    ],
+    "parallel_property_collinear_extend(3,EB,DC,F)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DCFE)"
+    ],
+    "adjacent_complementary_angle(1,BFC,CFA)": [
+      "parallel_judgment_corresponding_angle(2,FC,ED,A)"
+    ],
+    "parallel_judgment_corresponding_angle(2,FC,ED,A)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DCFE)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,DCFE)": [
+      "parallelogram_property_opposite_line_equal(1,FEDC)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,FEDC)": [],
+    "isosceles_trapezoid_judgment_line_equal(1,CBAD)": [
+      "isosceles_trapezoid_property_angle_equal(1,CBAD)"
+    ],
+    "isosceles_trapezoid_property_angle_equal(1,CBAD)": [
+      "mirror_congruent_triangle_judgment_aas(3,DEA,CBF)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(3,DEA,CBF)": [
+      "mirror_congruent_triangle_property_line_equal(1,DEA,CBF)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,DEA,CBF)": [],
+    "line_addition(1,AE,EF)": [],
+    "line_addition(1,AF,FB)": [],
+    "sine_theorem(1,ADE)": [],
+    "quadrilateral_perimeter_formula(1,ADCB)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,DC,E)",
+      "adjacent_complementary_angle(1,BFC,CFA)",
+      "isosceles_trapezoid_judgment_line_equal(1,CBAD)",
+      "line_addition(1,AE,EF)",
+      "line_addition(1,AF,FB)",
+      "sine_theorem(1,ADE)",
+      "quadrilateral_perimeter_formula(1,ADCB)"
+    ]
+  }
 }

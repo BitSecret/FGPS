@@ -30,7 +30,15 @@
   "goal_cdl": "Value(MeasureOfAngle(CON))",
   "problem_answer": "55",
   "theorem_seqs": [
-    "angle_addition(AOM,MOC)",
-    "angle_addition(MOC,CON)"
-  ]
+    "angle_addition(1,AOM,MOC)",
+    "angle_addition(1,MOC,CON)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,AOM,MOC)": [],
+    "angle_addition(1,MOC,CON)": [],
+    "START": [
+      "angle_addition(1,AOM,MOC)",
+      "angle_addition(1,MOC,CON)"
+    ]
+  }
 }

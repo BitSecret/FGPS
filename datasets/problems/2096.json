@@ -22,8 +22,19 @@
   "goal_cdl": "Value(MeasureOfAngle(XWY))",
   "problem_answer": "52",
   "theorem_seqs": [
-    "adjacent_complementary_angle(WYX,XYZ)",
-    "isosceles_triangle_judgment_line_equal(XWY)",
-    "isosceles_triangle_property_angle_equal(XWY)"
-  ]
+    "adjacent_complementary_angle(1,WYX,XYZ)",
+    "isosceles_triangle_judgment_line_equal(1,XWY)",
+    "isosceles_triangle_property_angle_equal(1,XWY)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,WYX,XYZ)": [],
+    "isosceles_triangle_judgment_line_equal(1,XWY)": [
+      "isosceles_triangle_property_angle_equal(1,XWY)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,XWY)": [],
+    "START": [
+      "adjacent_complementary_angle(1,WYX,XYZ)",
+      "isosceles_triangle_judgment_line_equal(1,XWY)"
+    ]
+  }
 }

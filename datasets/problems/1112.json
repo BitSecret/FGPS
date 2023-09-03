@@ -26,16 +26,43 @@
   "goal_cdl": "Value(MeasureOfAngle(GHJ))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "flat_angle(WXY)",
-    "angle_addition(WXH,HXY)",
-    "mirror_similar_triangle_judgment_sas(JHI,JXY)",
-    "mirror_similar_triangle_property_angle_equal(HIJ,YJX)",
-    "mirror_similar_triangle_property_angle_equal(IJH,XYJ)",
-    "vertical_angle(HIJ,ZIY)",
-    "triangle_property_angle_sum(IYZ)",
-    "flat_angle(XYZ)",
-    "angle_addition(XYI,IYZ)",
-    "flat_angle(GHI)",
-    "angle_addition(GHJ,JHI)"
-  ]
+    "flat_angle(1,WXY)",
+    "angle_addition(1,WXH,HXY)",
+    "mirror_similar_triangle_judgment_sas(1,JHI,JXY)",
+    "mirror_similar_triangle_property_angle_equal(1,HIJ,YJX)",
+    "mirror_similar_triangle_property_angle_equal(1,IJH,XYJ)",
+    "vertical_angle(1,HIJ,ZIY)",
+    "triangle_property_angle_sum(1,IYZ)",
+    "flat_angle(1,XYZ)",
+    "angle_addition(1,XYI,IYZ)",
+    "flat_angle(1,GHI)",
+    "angle_addition(1,GHJ,JHI)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,WXY)": [],
+    "angle_addition(1,WXH,HXY)": [],
+    "mirror_similar_triangle_judgment_sas(1,JHI,JXY)": [
+      "mirror_similar_triangle_property_angle_equal(1,HIJ,YJX)",
+      "mirror_similar_triangle_property_angle_equal(1,IJH,XYJ)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,HIJ,YJX)": [],
+    "mirror_similar_triangle_property_angle_equal(1,IJH,XYJ)": [],
+    "vertical_angle(1,HIJ,ZIY)": [],
+    "triangle_property_angle_sum(1,IYZ)": [],
+    "flat_angle(1,XYZ)": [],
+    "angle_addition(1,XYI,IYZ)": [],
+    "flat_angle(1,GHI)": [],
+    "angle_addition(1,GHJ,JHI)": [],
+    "START": [
+      "flat_angle(1,WXY)",
+      "angle_addition(1,WXH,HXY)",
+      "mirror_similar_triangle_judgment_sas(1,JHI,JXY)",
+      "vertical_angle(1,HIJ,ZIY)",
+      "triangle_property_angle_sum(1,IYZ)",
+      "flat_angle(1,XYZ)",
+      "angle_addition(1,XYI,IYZ)",
+      "flat_angle(1,GHI)",
+      "angle_addition(1,GHJ,JHI)"
+    ]
+  }
 }

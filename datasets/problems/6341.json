@@ -26,14 +26,50 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ABCD))",
   "problem_answer": "2*sqrt(3)/3",
   "theorem_seqs": [
-    "parallelogram_judgment_parallel_and_parallel(ABCD)",
-    "parallelogram_property_opposite_angle_equal(ABCD)",
-    "sine_theorem(BEA)",
-    "sine_theorem(BCF)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "kite_judgment_equal_and_equal(ABCD)",
-    "parallel_property_ipsilateral_internal_angle(BA,CD)",
-    "kite_area_formula_sine(ABCD)"
-  ]
+    "parallelogram_judgment_parallel_and_parallel(1,ABCD)",
+    "parallelogram_property_opposite_angle_equal(1,ABCD)",
+    "sine_theorem(1,BEA)",
+    "sine_theorem(1,BCF)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "kite_judgment_equal_and_equal(1,ABCD)",
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)",
+    "kite_area_formula_sine(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_parallel_and_parallel(1,ABCD)": [
+      "parallelogram_property_opposite_angle_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)"
+    ],
+    "parallelogram_property_opposite_angle_equal(1,ABCD)": [
+      "kite_judgment_equal_and_equal(1,ABCD)",
+      "kite_judgment_equal_and_equal(1,ABCD)"
+    ],
+    "sine_theorem(1,BEA)": [
+      "kite_judgment_equal_and_equal(1,ABCD)",
+      "kite_judgment_equal_and_equal(1,ABCD)"
+    ],
+    "sine_theorem(1,BCF)": [
+      "kite_judgment_equal_and_equal(1,ABCD)",
+      "kite_judgment_equal_and_equal(1,ABCD)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [
+      "kite_judgment_equal_and_equal(1,ABCD)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [
+      "kite_judgment_equal_and_equal(1,ABCD)"
+    ],
+    "kite_judgment_equal_and_equal(1,ABCD)": [
+      "kite_area_formula_sine(1,ABCD)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)": [],
+    "kite_area_formula_sine(1,ABCD)": [],
+    "START": [
+      "parallelogram_judgment_parallel_and_parallel(1,ABCD)",
+      "sine_theorem(1,BEA)",
+      "sine_theorem(1,BCF)",
+      "parallel_property_ipsilateral_internal_angle(1,BA,CD)"
+    ]
+  }
 }

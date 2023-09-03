@@ -26,15 +26,50 @@
   "goal_cdl": "Value(LengthOfLine(EB))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(ED,BC)",
-    "similar_triangle_judgment_aa(ODE,OBC)",
-    "similar_triangle_property_line_ratio(ODE,OBC)",
-    "similar_triangle_property_line_ratio(DEO,BCO)",
-    "parallel_property_corresponding_angle(ED,BC,A)",
-    "parallel_property_corresponding_angle(CB,DE,A)",
-    "similar_triangle_judgment_aa(AED,ABC)",
-    "similar_triangle_property_line_ratio(AED,ABC)",
-    "similar_triangle_property_line_ratio(DAE,CAB)",
-    "line_addition(AE,EB)"
-  ]
+    "parallel_property_alternate_interior_angle(1,ED,BC)",
+    "parallel_property_alternate_interior_angle(2,ED,BC)",
+    "similar_triangle_judgment_aa(1,ODE,OBC)",
+    "similar_triangle_property_line_ratio(1,ODE,OBC)",
+    "similar_triangle_property_line_ratio(1,DEO,BCO)",
+    "parallel_property_corresponding_angle(1,ED,BC,A)",
+    "parallel_property_corresponding_angle(2,CB,DE,A)",
+    "similar_triangle_judgment_aa(1,AED,ABC)",
+    "similar_triangle_property_line_ratio(1,AED,ABC)",
+    "similar_triangle_property_line_ratio(1,DAE,CAB)",
+    "line_addition(1,AE,EB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,ED,BC)": [
+      "similar_triangle_judgment_aa(1,ODE,OBC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,ED,BC)": [
+      "similar_triangle_judgment_aa(1,ODE,OBC)"
+    ],
+    "similar_triangle_judgment_aa(1,ODE,OBC)": [
+      "similar_triangle_property_line_ratio(1,ODE,OBC)",
+      "similar_triangle_property_line_ratio(1,DEO,BCO)"
+    ],
+    "similar_triangle_property_line_ratio(1,ODE,OBC)": [],
+    "similar_triangle_property_line_ratio(1,DEO,BCO)": [],
+    "parallel_property_corresponding_angle(1,ED,BC,A)": [
+      "similar_triangle_judgment_aa(1,AED,ABC)"
+    ],
+    "parallel_property_corresponding_angle(2,CB,DE,A)": [
+      "similar_triangle_judgment_aa(1,AED,ABC)"
+    ],
+    "similar_triangle_judgment_aa(1,AED,ABC)": [
+      "similar_triangle_property_line_ratio(1,AED,ABC)",
+      "similar_triangle_property_line_ratio(1,DAE,CAB)"
+    ],
+    "similar_triangle_property_line_ratio(1,AED,ABC)": [],
+    "similar_triangle_property_line_ratio(1,DAE,CAB)": [],
+    "line_addition(1,AE,EB)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,ED,BC)",
+      "parallel_property_alternate_interior_angle(2,ED,BC)",
+      "parallel_property_corresponding_angle(1,ED,BC,A)",
+      "parallel_property_corresponding_angle(2,CB,DE,A)",
+      "line_addition(1,AE,EB)"
+    ]
+  }
 }

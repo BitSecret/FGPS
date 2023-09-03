@@ -24,21 +24,66 @@
   "goal_cdl": "Value(Tan(MeasureOfAngle(BAC)))",
   "problem_answer": "3/2",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ACB,BCE)",
-    "parallel_judgment_ipsilateral_internal_angle(CB,ED)",
-    "parallel_property_corresponding_angle(CB,ED,A)",
-    "parallel_property_corresponding_angle(DE,BC,A)",
-    "parallel_property_alternate_interior_angle(CB,ED)",
-    "line_addition(AB,BD)",
-    "line_addition(AC,CE)",
-    "similar_triangle_judgment_aa(ACB,AED)",
-    "similar_triangle_property_line_ratio(ACB,AED)",
-    "similar_triangle_property_line_ratio(CBA,EDA)",
-    "similar_triangle_property_line_ratio(BAC,DAE)",
-    "triangle_property_angle_sum(CED)",
-    "sine_theorem(EDC)",
-    "right_triangle_judgment_angle(AED)",
-    "right_triangle_property_pythagorean(AED)",
-    "sine_theorem(DAE)"
-  ]
+    "adjacent_complementary_angle(1,ACB,BCE)",
+    "parallel_judgment_ipsilateral_internal_angle(1,CB,ED)",
+    "parallel_property_corresponding_angle(1,CB,ED,A)",
+    "parallel_property_corresponding_angle(2,DE,BC,A)",
+    "parallel_property_alternate_interior_angle(1,CB,ED)",
+    "line_addition(1,AB,BD)",
+    "line_addition(1,AC,CE)",
+    "similar_triangle_judgment_aa(1,ACB,AED)",
+    "similar_triangle_property_line_ratio(1,ACB,AED)",
+    "similar_triangle_property_line_ratio(1,CBA,EDA)",
+    "similar_triangle_property_line_ratio(1,BAC,DAE)",
+    "triangle_property_angle_sum(1,CED)",
+    "sine_theorem(1,EDC)",
+    "right_triangle_judgment_angle(1,AED)",
+    "right_triangle_property_pythagorean(1,AED)",
+    "sine_theorem(1,DAE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ACB,BCE)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,CB,ED)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,CB,ED)": [
+      "parallel_property_corresponding_angle(1,CB,ED,A)",
+      "parallel_property_alternate_interior_angle(1,CB,ED)",
+      "parallel_property_corresponding_angle(2,DE,BC,A)"
+    ],
+    "parallel_property_corresponding_angle(1,CB,ED,A)": [
+      "similar_triangle_judgment_aa(1,ACB,AED)"
+    ],
+    "parallel_property_corresponding_angle(2,DE,BC,A)": [
+      "similar_triangle_judgment_aa(1,ACB,AED)"
+    ],
+    "parallel_property_alternate_interior_angle(1,CB,ED)": [
+      "solve_eq_26)"
+    ],
+    "line_addition(1,AB,BD)": [],
+    "line_addition(1,AC,CE)": [],
+    "similar_triangle_judgment_aa(1,ACB,AED)": [
+      "similar_triangle_property_line_ratio(1,ACB,AED)",
+      "similar_triangle_property_line_ratio(1,CBA,EDA)",
+      "similar_triangle_property_line_ratio(1,BAC,DAE)"
+    ],
+    "similar_triangle_property_line_ratio(1,ACB,AED)": [],
+    "similar_triangle_property_line_ratio(1,CBA,EDA)": [],
+    "similar_triangle_property_line_ratio(1,BAC,DAE)": [],
+    "triangle_property_angle_sum(1,CED)": [],
+    "sine_theorem(1,EDC)": [],
+    "right_triangle_judgment_angle(1,AED)": [
+      "right_triangle_property_pythagorean(1,AED)"
+    ],
+    "right_triangle_property_pythagorean(1,AED)": [],
+    "sine_theorem(1,DAE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ACB,BCE)",
+      "line_addition(1,AB,BD)",
+      "line_addition(1,AC,CE)",
+      "triangle_property_angle_sum(1,CED)",
+      "sine_theorem(1,EDC)",
+      "right_triangle_judgment_angle(1,AED)",
+      "sine_theorem(1,DAE)"
+    ]
+  }
 }

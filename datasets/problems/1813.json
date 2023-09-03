@@ -25,10 +25,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "5*sqrt(3)",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(JL,J)",
-    "circle_property_chord_perpendicular_bisect_chord(J,JA,LK)",
-    "right_triangle_judgment_angle(LAJ)",
-    "line_addition(LA,AK)",
-    "right_triangle_property_pythagorean(LAJ)"
-  ]
+    "radius_of_circle_property_length_equal(1,JL,J)",
+    "circle_property_chord_perpendicular_bisect_chord(1,J,JA,LK)",
+    "right_triangle_judgment_angle(1,LAJ)",
+    "line_addition(1,LA,AK)",
+    "right_triangle_property_pythagorean(1,LAJ)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,JL,J)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,J,JA,LK)": [],
+    "right_triangle_judgment_angle(1,LAJ)": [
+      "right_triangle_property_pythagorean(1,LAJ)"
+    ],
+    "line_addition(1,LA,AK)": [],
+    "right_triangle_property_pythagorean(1,LAJ)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,JL,J)",
+      "circle_property_chord_perpendicular_bisect_chord(1,J,JA,LK)",
+      "right_triangle_judgment_angle(1,LAJ)",
+      "line_addition(1,LA,AK)"
+    ]
+  }
 }

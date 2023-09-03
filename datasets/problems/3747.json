@@ -24,10 +24,26 @@
   "goal_cdl": "Value(MeasureOfAngle(EAD))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BCE,ECF)",
-    "midsegment_of_triangle_judgment_midpoint(DE,ABC)",
-    "midsegment_of_triangle_property_parallel(DE,ABC)",
-    "parallel_property_corresponding_angle(CB,ED,A)",
-    "triangle_property_angle_sum(ADE)"
-  ]
+    "adjacent_complementary_angle(1,BCE,ECF)",
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
+    "midsegment_of_triangle_property_parallel(1,DE,ABC)",
+    "parallel_property_corresponding_angle(2,CB,ED,A)",
+    "triangle_property_angle_sum(1,ADE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BCE,ECF)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)": [
+      "midsegment_of_triangle_property_parallel(1,DE,ABC)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,DE,ABC)": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)"
+    ],
+    "parallel_property_corresponding_angle(2,CB,ED,A)": [],
+    "triangle_property_angle_sum(1,ADE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BCE,ECF)",
+      "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
+      "triangle_property_angle_sum(1,ADE)"
+    ]
+  }
 }

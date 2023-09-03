@@ -27,21 +27,74 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "line_addition(DF,FC)",
-    "line_addition(AF,FE)",
-    "line_addition(AG,GF)",
-    "adjacent_complementary_angle(AGD,DGF)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_collinear_extend(DC,AB,F)",
-    "parallel_property_alternate_interior_angle(EC,DA)",
-    "parallel_property_alternate_interior_angle(DF,AB)",
-    "isosceles_triangle_judgment_angle_equal(DAF)",
-    "right_triangle_judgment_angle(AGD)",
-    "right_triangle_judgment_angle(DGF)",
-    "right_triangle_property_pythagorean(AGD)",
-    "right_triangle_property_pythagorean(DGF)",
-    "congruent_triangle_judgment_aas(FCE,FDA)",
-    "congruent_triangle_property_line_equal(CEF,DAF)"
-  ]
+    "line_addition(1,DF,FC)",
+    "line_addition(1,AF,FE)",
+    "line_addition(1,AG,GF)",
+    "adjacent_complementary_angle(1,AGD,DGF)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallel_property_collinear_extend(1,CB,DA,E)",
+    "parallel_property_collinear_extend(3,DC,AB,F)",
+    "parallel_property_alternate_interior_angle(1,EC,DA)",
+    "parallel_property_alternate_interior_angle(2,EC,DA)",
+    "parallel_property_alternate_interior_angle(2,DF,AB)",
+    "isosceles_triangle_judgment_angle_equal(1,DAF)",
+    "right_triangle_judgment_angle(1,AGD)",
+    "right_triangle_judgment_angle(1,DGF)",
+    "right_triangle_property_pythagorean(1,AGD)",
+    "right_triangle_property_pythagorean(1,DGF)",
+    "congruent_triangle_judgment_aas(1,FCE,FDA)",
+    "congruent_triangle_property_line_equal(1,CEF,DAF)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,DF,FC)": [
+      "solve_eq_41)"
+    ],
+    "line_addition(1,AF,FE)": [],
+    "line_addition(1,AG,GF)": [],
+    "adjacent_complementary_angle(1,AGD,DGF)": [
+      "right_triangle_judgment_angle(1,AGD)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [
+      "solve_eq_41)"
+    ],
+    "parallel_property_collinear_extend(1,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,EC,DA)",
+      "parallel_property_alternate_interior_angle(2,EC,DA)"
+    ],
+    "parallel_property_collinear_extend(3,DC,AB,F)": [
+      "parallel_property_alternate_interior_angle(2,DF,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EC,DA)": [
+      "congruent_triangle_judgment_aas(1,FCE,FDA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,EC,DA)": [
+      "congruent_triangle_judgment_aas(1,FCE,FDA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DF,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAF)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,DAF)": [],
+    "right_triangle_judgment_angle(1,AGD)": [
+      "right_triangle_property_pythagorean(1,AGD)"
+    ],
+    "right_triangle_judgment_angle(1,DGF)": [
+      "right_triangle_property_pythagorean(1,DGF)"
+    ],
+    "right_triangle_property_pythagorean(1,AGD)": [],
+    "right_triangle_property_pythagorean(1,DGF)": [],
+    "congruent_triangle_judgment_aas(1,FCE,FDA)": [
+      "congruent_triangle_property_line_equal(1,CEF,DAF)"
+    ],
+    "congruent_triangle_property_line_equal(1,CEF,DAF)": [],
+    "START": [
+      "line_addition(1,DF,FC)",
+      "line_addition(1,AF,FE)",
+      "line_addition(1,AG,GF)",
+      "adjacent_complementary_angle(1,AGD,DGF)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallel_property_collinear_extend(1,CB,DA,E)",
+      "parallel_property_collinear_extend(3,DC,AB,F)",
+      "right_triangle_judgment_angle(1,DGF)"
+    ]
+  }
 }

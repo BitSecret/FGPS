@@ -36,13 +36,37 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "142",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ELR,RLP)",
-    "parallel_property_collinear_extend(HK,BR,I)",
-    "parallel_property_collinear_extend(RB,KI,L)",
-    "parallel_property_collinear_extend(JN,HK,M)",
-    "parallel_property_collinear_extend(KH,NM,I)",
-    "parallel_property_corresponding_angle(IK,LR,E)",
-    "parallel_property_corresponding_angle(MN,IK,E)",
-    "adjacent_complementary_angle(JME,EMN)"
-  ]
+    "adjacent_complementary_angle(1,ELR,RLP)",
+    "parallel_property_collinear_extend(3,HK,BR,I)",
+    "parallel_property_collinear_extend(3,RB,KI,L)",
+    "parallel_property_collinear_extend(3,JN,HK,M)",
+    "parallel_property_collinear_extend(3,KH,NM,I)",
+    "parallel_property_corresponding_angle(1,IK,LR,E)",
+    "parallel_property_corresponding_angle(1,MN,IK,E)",
+    "adjacent_complementary_angle(1,JME,EMN)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ELR,RLP)": [],
+    "parallel_property_collinear_extend(3,HK,BR,I)": [
+      "parallel_property_collinear_extend(3,RB,KI,L)"
+    ],
+    "parallel_property_collinear_extend(3,RB,KI,L)": [
+      "parallel_property_corresponding_angle(1,IK,LR,E)"
+    ],
+    "parallel_property_collinear_extend(3,JN,HK,M)": [
+      "parallel_property_collinear_extend(3,KH,NM,I)"
+    ],
+    "parallel_property_collinear_extend(3,KH,NM,I)": [
+      "parallel_property_corresponding_angle(1,MN,IK,E)"
+    ],
+    "parallel_property_corresponding_angle(1,IK,LR,E)": [],
+    "parallel_property_corresponding_angle(1,MN,IK,E)": [],
+    "adjacent_complementary_angle(1,JME,EMN)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ELR,RLP)",
+      "parallel_property_collinear_extend(3,HK,BR,I)",
+      "parallel_property_collinear_extend(3,JN,HK,M)",
+      "adjacent_complementary_angle(1,JME,EMN)"
+    ]
+  }
 }

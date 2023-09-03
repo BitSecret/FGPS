@@ -24,13 +24,37 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "sqrt(2)/3",
   "theorem_seqs": [
-    "line_addition(AD,DC)",
-    "adjacent_complementary_angle(CDB,BDA)",
-    "right_triangle_judgment_angle(ABC)",
-    "right_triangle_judgment_angle(CDB)",
-    "right_triangle_judgment_angle(BDA)",
-    "right_triangle_property_pythagorean(ABC)",
-    "right_triangle_property_pythagorean(BDA)",
-    "right_triangle_property_pythagorean(CDB)"
-  ]
+    "line_addition(1,AD,DC)",
+    "adjacent_complementary_angle(1,CDB,BDA)",
+    "right_triangle_judgment_angle(1,ABC)",
+    "right_triangle_judgment_angle(1,CDB)",
+    "right_triangle_judgment_angle(1,BDA)",
+    "right_triangle_property_pythagorean(1,ABC)",
+    "right_triangle_property_pythagorean(1,BDA)",
+    "right_triangle_property_pythagorean(1,CDB)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AD,DC)": [],
+    "adjacent_complementary_angle(1,CDB,BDA)": [
+      "right_triangle_judgment_angle(1,BDA)"
+    ],
+    "right_triangle_judgment_angle(1,ABC)": [
+      "right_triangle_property_pythagorean(1,ABC)"
+    ],
+    "right_triangle_judgment_angle(1,CDB)": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ],
+    "right_triangle_judgment_angle(1,BDA)": [
+      "right_triangle_property_pythagorean(1,BDA)"
+    ],
+    "right_triangle_property_pythagorean(1,ABC)": [],
+    "right_triangle_property_pythagorean(1,BDA)": [],
+    "right_triangle_property_pythagorean(1,CDB)": [],
+    "START": [
+      "line_addition(1,AD,DC)",
+      "adjacent_complementary_angle(1,CDB,BDA)",
+      "right_triangle_judgment_angle(1,ABC)",
+      "right_triangle_judgment_angle(1,CDB)"
+    ]
+  }
 }

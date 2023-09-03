@@ -21,8 +21,19 @@
   "goal_cdl": "Value(Sub(AreaOfTriangle(ABC),AreaOfTriangle(AED)))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_sas(AED,ABC)",
-    "mirror_similar_triangle_property_line_ratio(EDA,CAB)",
-    "mirror_similar_triangle_property_area_square_ratio(AED,ABC)"
-  ]
+    "mirror_similar_triangle_judgment_sas(1,AED,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,EDA,CAB)",
+    "mirror_similar_triangle_property_area_square_ratio(1,AED,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_sas(1,AED,ABC)": [
+      "mirror_similar_triangle_property_area_square_ratio(1,AED,ABC)",
+      "mirror_similar_triangle_property_line_ratio(1,EDA,CAB)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,EDA,CAB)": [],
+    "mirror_similar_triangle_property_area_square_ratio(1,AED,ABC)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_sas(1,AED,ABC)"
+    ]
+  }
 }

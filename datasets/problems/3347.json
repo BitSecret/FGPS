@@ -20,8 +20,19 @@
   "goal_cdl": "Value(MeasureOfAngle(DAB))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_hl(ABD,ADC)",
-    "mirror_congruent_triangle_property_angle_equal(ABD,ADC)",
-    "angle_addition(CAD,DAB)"
-  ]
+    "mirror_congruent_triangle_judgment_hl(1,ABD,ADC)",
+    "mirror_congruent_triangle_property_angle_equal(1,ABD,ADC)",
+    "angle_addition(1,CAD,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_hl(1,ABD,ADC)": [
+      "mirror_congruent_triangle_property_angle_equal(1,ABD,ADC)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,ABD,ADC)": [],
+    "angle_addition(1,CAD,DAB)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_hl(1,ABD,ADC)",
+      "angle_addition(1,CAD,DAB)"
+    ]
+  }
 }

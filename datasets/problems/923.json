@@ -23,8 +23,19 @@
   "goal_cdl": "Value(LengthOfLine(MN))",
   "problem_answer": "14",
   "theorem_seqs": [
-    "adjacent_complementary_angle(QEN,NEP)",
-    "altitude_of_quadrilateral_judgment_right_vertex(NE,MQPN)",
-    "trapezoid_area_formula(MQPN)"
-  ]
+    "adjacent_complementary_angle(1,QEN,NEP)",
+    "altitude_of_quadrilateral_judgment_right_vertex(2,NE,MQPN)",
+    "trapezoid_area_formula(1,MQPN)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,QEN,NEP)": [
+      "altitude_of_quadrilateral_judgment_right_vertex(2,NE,MQPN)"
+    ],
+    "altitude_of_quadrilateral_judgment_right_vertex(2,NE,MQPN)": [],
+    "trapezoid_area_formula(1,MQPN)": [],
+    "START": [
+      "adjacent_complementary_angle(1,QEN,NEP)",
+      "trapezoid_area_formula(1,MQPN)"
+    ]
+  }
 }

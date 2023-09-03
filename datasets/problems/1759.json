@@ -26,17 +26,52 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "54.86",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(DM,O,O)",
-    "tangent_of_circle_property_perpendicular(CH,O,O)",
-    "parallel_judgment_ipsilateral_internal_angle(MD,HC)",
-    "circle_property_length_of_radius_and_diameter(O)",
-    "flat_angle(MOH)",
-    "diameter_of_circle_property_length_equal(MH,O)",
-    "arc_property_center_angle(OHM,O)",
-    "trapezoid_judgment_parallel(MHCD)",
-    "radius_of_circle_property_length_equal(OH,O)",
-    "sector_area_formula(OHM)",
-    "right_trapezoid_judgment_right_angle(MHCD)",
-    "right_trapezoid_area_formular(MHCD)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,DM,O,O)",
+    "tangent_of_circle_property_perpendicular(1,CH,O,O)",
+    "parallel_judgment_ipsilateral_internal_angle(1,MD,HC)",
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "flat_angle(1,MOH)",
+    "diameter_of_circle_property_length_equal(1,MH,O)",
+    "arc_property_center_angle(1,OHM,O)",
+    "trapezoid_judgment_parallel(1,MHCD)",
+    "radius_of_circle_property_length_equal(1,OH,O)",
+    "sector_area_formula(1,OHM)",
+    "right_trapezoid_judgment_right_angle(1,MHCD)",
+    "right_trapezoid_area_formular(1,MHCD)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,DM,O,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,MD,HC)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,CH,O,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,MD,HC)",
+      "right_trapezoid_judgment_right_angle(1,MHCD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,MD,HC)": [
+      "trapezoid_judgment_parallel(1,MHCD)"
+    ],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "flat_angle(1,MOH)": [],
+    "diameter_of_circle_property_length_equal(1,MH,O)": [],
+    "arc_property_center_angle(1,OHM,O)": [],
+    "trapezoid_judgment_parallel(1,MHCD)": [
+      "right_trapezoid_judgment_right_angle(1,MHCD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OH,O)": [],
+    "sector_area_formula(1,OHM)": [],
+    "right_trapezoid_judgment_right_angle(1,MHCD)": [
+      "right_trapezoid_area_formular(1,MHCD)"
+    ],
+    "right_trapezoid_area_formular(1,MHCD)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,DM,O,O)",
+      "tangent_of_circle_property_perpendicular(1,CH,O,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "flat_angle(1,MOH)",
+      "diameter_of_circle_property_length_equal(1,MH,O)",
+      "arc_property_center_angle(1,OHM,O)",
+      "radius_of_circle_property_length_equal(1,OH,O)",
+      "sector_area_formula(1,OHM)"
+    ]
+  }
 }

@@ -24,15 +24,42 @@
   "goal_cdl": "Value(LengthOfLine(DF))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(BA,ED,C)",
-    "triangle_area_formula_sine(BCA)",
-    "triangle_area_formula_sine(ECD)",
-    "similar_triangle_judgment_aa(FEC,ABC)",
-    "similar_triangle_judgment_aa(ABC,FEC)",
-    "similar_triangle_property_line_ratio(FEC,ABC)",
-    "similar_triangle_property_line_ratio(CFE,CAB)",
-    "similar_triangle_property_line_ratio(ABC,FEC)",
-    "similar_triangle_property_line_ratio(CAB,CFE)",
-    "line_addition(EF,FD)"
-  ]
+    "parallel_property_corresponding_angle(2,BA,ED,C)",
+    "triangle_area_formula_sine(1,BCA)",
+    "triangle_area_formula_sine(1,ECD)",
+    "similar_triangle_judgment_aa(1,FEC,ABC)",
+    "similar_triangle_judgment_aa(1,ABC,FEC)",
+    "similar_triangle_property_line_ratio(1,FEC,ABC)",
+    "similar_triangle_property_line_ratio(1,CFE,CAB)",
+    "similar_triangle_property_line_ratio(1,ABC,FEC)",
+    "similar_triangle_property_line_ratio(1,CAB,CFE)",
+    "line_addition(1,EF,FD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(2,BA,ED,C)": [
+      "similar_triangle_judgment_aa(1,FEC,ABC)",
+      "similar_triangle_judgment_aa(1,ABC,FEC)"
+    ],
+    "triangle_area_formula_sine(1,BCA)": [],
+    "triangle_area_formula_sine(1,ECD)": [],
+    "similar_triangle_judgment_aa(1,FEC,ABC)": [
+      "similar_triangle_property_line_ratio(1,FEC,ABC)",
+      "similar_triangle_property_line_ratio(1,CFE,CAB)"
+    ],
+    "similar_triangle_judgment_aa(1,ABC,FEC)": [
+      "similar_triangle_property_line_ratio(1,ABC,FEC)",
+      "similar_triangle_property_line_ratio(1,CAB,CFE)"
+    ],
+    "similar_triangle_property_line_ratio(1,FEC,ABC)": [],
+    "similar_triangle_property_line_ratio(1,CFE,CAB)": [],
+    "similar_triangle_property_line_ratio(1,ABC,FEC)": [],
+    "similar_triangle_property_line_ratio(1,CAB,CFE)": [],
+    "line_addition(1,EF,FD)": [],
+    "START": [
+      "parallel_property_corresponding_angle(2,BA,ED,C)",
+      "triangle_area_formula_sine(1,BCA)",
+      "triangle_area_formula_sine(1,ECD)",
+      "line_addition(1,EF,FD)"
+    ]
+  }
 }

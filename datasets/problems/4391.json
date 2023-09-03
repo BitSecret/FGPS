@@ -26,11 +26,29 @@
   "goal_cdl": "Value(MeasureOfAngle(DAE))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(COB,O)",
-    "diameter_of_circle_property_right_angle(CDB,O)",
-    "triangle_property_angle_sum(BCD)",
-    "triangle_property_angle_sum(ABC)",
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "isosceles_triangle_property_angle_equal(ABC)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,COB,O)",
+    "diameter_of_circle_property_right_angle(1,CDB,O)",
+    "triangle_property_angle_sum(1,BCD)",
+    "triangle_property_angle_sum(1,ABC)",
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,COB,O)": [
+      "diameter_of_circle_property_right_angle(1,CDB,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,CDB,O)": [],
+    "triangle_property_angle_sum(1,BCD)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,COB,O)",
+      "triangle_property_angle_sum(1,BCD)",
+      "triangle_property_angle_sum(1,ABC)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)"
+    ]
+  }
 }

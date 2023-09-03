@@ -23,8 +23,18 @@
   "goal_cdl": "Value(LengthOfLine(EC))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "line_addition(BC,CF)",
-    "congruent_triangle_property_line_equal(ABC,DEF)",
-    "line_addition(EC,CF)"
-  ]
+    "line_addition(1,BC,CF)",
+    "congruent_triangle_property_line_equal(1,ABC,DEF)",
+    "line_addition(1,EC,CF)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,BC,CF)": [],
+    "congruent_triangle_property_line_equal(1,ABC,DEF)": [],
+    "line_addition(1,EC,CF)": [],
+    "START": [
+      "line_addition(1,BC,CF)",
+      "congruent_triangle_property_line_equal(1,ABC,DEF)",
+      "line_addition(1,EC,CF)"
+    ]
+  }
 }

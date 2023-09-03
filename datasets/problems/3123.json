@@ -30,10 +30,26 @@
   "goal_cdl": "Value(MeasureOfAngle(CHF))",
   "problem_answer": "52",
   "theorem_seqs": [
-    "angle_addition(EBI,IBH)",
-    "parallel_property_collinear_extend(DE,FG,B)",
-    "parallel_property_collinear_extend(GF,EB,H)",
-    "parallel_property_ipsilateral_internal_angle(BE,HG)",
-    "vertical_angle(BHI,CHF)"
-  ]
+    "angle_addition(1,EBI,IBH)",
+    "parallel_property_collinear_extend(3,DE,FG,B)",
+    "parallel_property_collinear_extend(3,GF,EB,H)",
+    "parallel_property_ipsilateral_internal_angle(1,BE,HG)",
+    "vertical_angle(1,BHI,CHF)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,EBI,IBH)": [],
+    "parallel_property_collinear_extend(3,DE,FG,B)": [
+      "parallel_property_collinear_extend(3,GF,EB,H)"
+    ],
+    "parallel_property_collinear_extend(3,GF,EB,H)": [
+      "parallel_property_ipsilateral_internal_angle(1,BE,HG)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,BE,HG)": [],
+    "vertical_angle(1,BHI,CHF)": [],
+    "START": [
+      "angle_addition(1,EBI,IBH)",
+      "parallel_property_collinear_extend(3,DE,FG,B)",
+      "vertical_angle(1,BHI,CHF)"
+    ]
+  }
 }

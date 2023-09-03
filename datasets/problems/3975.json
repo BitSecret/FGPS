@@ -25,12 +25,34 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "4.8",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(BOA,O)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)",
-    "mirror_similar_triangle_judgment_aa(CDB,ABC)",
-    "mirror_similar_triangle_property_line_ratio(DBC,CAB)",
-    "mirror_similar_triangle_property_line_ratio(BCD,BCA)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,BOA,O)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "mirror_similar_triangle_judgment_aa(1,CDB,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,DBC,CAB)",
+    "mirror_similar_triangle_property_line_ratio(1,BCD,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,BOA,O)": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "mirror_similar_triangle_judgment_aa(1,CDB,ABC)"
+    ],
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "mirror_similar_triangle_judgment_aa(1,CDB,ABC)": [
+      "mirror_similar_triangle_property_line_ratio(1,DBC,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BCD,BCA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,DBC,CAB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BCD,BCA)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,BOA,O)"
+    ]
+  }
 }

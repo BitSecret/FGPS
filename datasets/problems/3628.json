@@ -28,10 +28,26 @@
   "goal_cdl": "Value(MeasureOfAngle(PCA))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DG,EF,P)",
-    "parallel_property_collinear_extend(FE,PD,M)",
-    "parallel_property_corresponding_angle(ME,PD,A)",
-    "adjacent_complementary_angle(DPA,APC)",
-    "triangle_property_angle_sum(APC)"
-  ]
+    "parallel_property_collinear_extend(3,DG,EF,P)",
+    "parallel_property_collinear_extend(3,FE,PD,M)",
+    "parallel_property_corresponding_angle(2,ME,PD,A)",
+    "adjacent_complementary_angle(1,DPA,APC)",
+    "triangle_property_angle_sum(1,APC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DG,EF,P)": [
+      "parallel_property_collinear_extend(3,FE,PD,M)"
+    ],
+    "parallel_property_collinear_extend(3,FE,PD,M)": [
+      "parallel_property_corresponding_angle(2,ME,PD,A)"
+    ],
+    "parallel_property_corresponding_angle(2,ME,PD,A)": [],
+    "adjacent_complementary_angle(1,DPA,APC)": [],
+    "triangle_property_angle_sum(1,APC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DG,EF,P)",
+      "adjacent_complementary_angle(1,DPA,APC)",
+      "triangle_property_angle_sum(1,APC)"
+    ]
+  }
 }

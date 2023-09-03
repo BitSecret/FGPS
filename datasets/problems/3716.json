@@ -23,7 +23,15 @@
   "goal_cdl": "Value(MeasureOfAngle(BOD))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "angle_addition(AOE,EOC)",
-    "vertical_angle(AOC,BOD)"
-  ]
+    "angle_addition(1,AOE,EOC)",
+    "vertical_angle(1,AOC,BOD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,AOE,EOC)": [],
+    "vertical_angle(1,AOC,BOD)": [],
+    "START": [
+      "angle_addition(1,AOE,EOC)",
+      "vertical_angle(1,AOC,BOD)"
+    ]
+  }
 }

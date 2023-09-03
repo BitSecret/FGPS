@@ -26,8 +26,20 @@
   "goal_cdl": "Value(LengthOfLine(ZY))",
   "problem_answer": "8*sqrt(10)",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(YXWZ,P)",
-    "right_triangle_judgment_angle(YPZ)",
-    "right_triangle_property_pythagorean(YPZ)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,YXWZ,P)",
+    "right_triangle_judgment_angle(1,YPZ)",
+    "right_triangle_property_pythagorean(1,YPZ)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,YXWZ,P)": [
+      "right_triangle_judgment_angle(1,YPZ)"
+    ],
+    "right_triangle_judgment_angle(1,YPZ)": [
+      "right_triangle_property_pythagorean(1,YPZ)"
+    ],
+    "right_triangle_property_pythagorean(1,YPZ)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,YXWZ,P)"
+    ]
+  }
 }

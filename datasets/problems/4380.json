@@ -34,16 +34,48 @@
   "goal_cdl": "Value(MeasureOfAngle(DBC))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(ABC,F)",
-    "arc_property_center_angle(ABC,A)",
-    "perpendicular_bisector_property_distance_equal(DG,AB)",
-    "radius_of_circle_property_length_equal(AB,A)",
-    "radius_of_circle_property_length_equal(AC,A)",
-    "isosceles_triangle_judgment_line_equal(DAB)",
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "isosceles_triangle_property_angle_equal(DAB)",
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "triangle_property_angle_sum(ABC)",
-    "angle_addition(ABD,DBC)"
-  ]
+    "arc_property_circumference_angle_external(1,ABC,F)",
+    "arc_property_center_angle(1,ABC,A)",
+    "perpendicular_bisector_property_distance_equal(1,DG,AB)",
+    "radius_of_circle_property_length_equal(1,AB,A)",
+    "radius_of_circle_property_length_equal(1,AC,A)",
+    "isosceles_triangle_judgment_line_equal(1,DAB)",
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,DAB)",
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "triangle_property_angle_sum(1,ABC)",
+    "angle_addition(1,ABD,DBC)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,ABC,F)": [],
+    "arc_property_center_angle(1,ABC,A)": [],
+    "perpendicular_bisector_property_distance_equal(1,DG,AB)": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)"
+    ],
+    "radius_of_circle_property_length_equal(1,AB,A)": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)"
+    ],
+    "radius_of_circle_property_length_equal(1,AC,A)": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,DAB)": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DAB)": [],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "angle_addition(1,ABD,DBC)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,ABC,F)",
+      "arc_property_center_angle(1,ABC,A)",
+      "perpendicular_bisector_property_distance_equal(1,DG,AB)",
+      "radius_of_circle_property_length_equal(1,AB,A)",
+      "radius_of_circle_property_length_equal(1,AC,A)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,ABD,DBC)"
+    ]
+  }
 }

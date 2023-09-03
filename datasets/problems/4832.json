@@ -27,12 +27,31 @@
   "goal_cdl": "Value(MeasureOfAngle(COD))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AC,O,O)",
-    "triangle_property_angle_sum(OBD)",
-    "triangle_property_angle_sum(BAC)",
-    "isosceles_triangle_judgment_line_equal(OBD)",
-    "isosceles_triangle_property_angle_equal(OBD)",
-    "flat_angle(COB)",
-    "angle_addition(COD,DOB)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+    "triangle_property_angle_sum(1,OBD)",
+    "triangle_property_angle_sum(1,BAC)",
+    "isosceles_triangle_judgment_line_equal(1,OBD)",
+    "isosceles_triangle_property_angle_equal(1,OBD)",
+    "flat_angle(1,COB)",
+    "angle_addition(1,COD,DOB)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)": [],
+    "triangle_property_angle_sum(1,OBD)": [],
+    "triangle_property_angle_sum(1,BAC)": [],
+    "isosceles_triangle_judgment_line_equal(1,OBD)": [
+      "isosceles_triangle_property_angle_equal(1,OBD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBD)": [],
+    "flat_angle(1,COB)": [],
+    "angle_addition(1,COD,DOB)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+      "triangle_property_angle_sum(1,OBD)",
+      "triangle_property_angle_sum(1,BAC)",
+      "isosceles_triangle_judgment_line_equal(1,OBD)",
+      "flat_angle(1,COB)",
+      "angle_addition(1,COD,DOB)"
+    ]
+  }
 }

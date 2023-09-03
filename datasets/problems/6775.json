@@ -28,20 +28,61 @@
   "goal_cdl": "Value(MeasureOfAngle(APB))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(PA,O,O)",
-    "tangent_of_circle_property_perpendicular(PB,O,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "line_addition(AC,CB)",
-    "adjacent_complementary_angle(ACO,OCB)",
-    "isosceles_triangle_judgment_line_equal(COA)",
-    "isosceles_triangle_judgment_line_equal(CBO)",
-    "isosceles_triangle_judgment_line_equal(OAB)",
-    "isosceles_triangle_property_angle_equal(COA)",
-    "isosceles_triangle_property_angle_equal(CBO)",
-    "isosceles_triangle_property_angle_equal(OAB)",
-    "triangle_property_angle_sum(OAC)",
-    "triangle_property_angle_sum(OAB)",
-    "quadrilateral_property_angle_sum(OAPB)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,PA,O,O)",
+    "tangent_of_circle_property_perpendicular(2,PB,O,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "line_addition(1,AC,CB)",
+    "adjacent_complementary_angle(1,ACO,OCB)",
+    "isosceles_triangle_judgment_line_equal(1,COA)",
+    "isosceles_triangle_judgment_line_equal(1,CBO)",
+    "isosceles_triangle_judgment_line_equal(1,OAB)",
+    "isosceles_triangle_property_angle_equal(1,COA)",
+    "isosceles_triangle_property_angle_equal(1,CBO)",
+    "isosceles_triangle_property_angle_equal(1,OAB)",
+    "triangle_property_angle_sum(1,OAC)",
+    "triangle_property_angle_sum(1,OAB)",
+    "quadrilateral_property_angle_sum(1,OAPB)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,PA,O,O)": [],
+    "tangent_of_circle_property_perpendicular(2,PB,O,O)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAB)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAB)"
+    ],
+    "line_addition(1,AC,CB)": [
+      "isosceles_triangle_judgment_line_equal(1,COA)",
+      "isosceles_triangle_judgment_line_equal(1,CBO)"
+    ],
+    "adjacent_complementary_angle(1,ACO,OCB)": [],
+    "isosceles_triangle_judgment_line_equal(1,COA)": [
+      "isosceles_triangle_property_angle_equal(1,COA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,CBO)": [
+      "isosceles_triangle_property_angle_equal(1,CBO)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OAB)": [
+      "isosceles_triangle_property_angle_equal(1,OAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,COA)": [],
+    "isosceles_triangle_property_angle_equal(1,CBO)": [],
+    "isosceles_triangle_property_angle_equal(1,OAB)": [],
+    "triangle_property_angle_sum(1,OAC)": [],
+    "triangle_property_angle_sum(1,OAB)": [],
+    "quadrilateral_property_angle_sum(1,OAPB)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,PA,O,O)",
+      "tangent_of_circle_property_perpendicular(2,PB,O,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "line_addition(1,AC,CB)",
+      "adjacent_complementary_angle(1,ACO,OCB)",
+      "triangle_property_angle_sum(1,OAC)",
+      "triangle_property_angle_sum(1,OAB)",
+      "quadrilateral_property_angle_sum(1,OAPB)"
+    ]
+  }
 }

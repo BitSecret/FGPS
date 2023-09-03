@@ -33,11 +33,29 @@
   "goal_cdl": "Value(MeasureOfAngle(NQD))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "flat_angle(NMA)",
-    "angle_addition(NMP,PMA)",
-    "triangle_property_angle_sum(MFN)",
-    "parallel_property_collinear_extend(AB,CD,N)",
-    "parallel_property_collinear_extend(DC,NA,Q)",
-    "parallel_property_alternate_interior_angle(DQ,NA)"
-  ]
+    "flat_angle(1,NMA)",
+    "angle_addition(1,NMP,PMA)",
+    "triangle_property_angle_sum(1,MFN)",
+    "parallel_property_collinear_extend(3,AB,CD,N)",
+    "parallel_property_collinear_extend(3,DC,NA,Q)",
+    "parallel_property_alternate_interior_angle(2,DQ,NA)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,NMA)": [],
+    "angle_addition(1,NMP,PMA)": [],
+    "triangle_property_angle_sum(1,MFN)": [],
+    "parallel_property_collinear_extend(3,AB,CD,N)": [
+      "parallel_property_collinear_extend(3,DC,NA,Q)"
+    ],
+    "parallel_property_collinear_extend(3,DC,NA,Q)": [
+      "parallel_property_alternate_interior_angle(2,DQ,NA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DQ,NA)": [],
+    "START": [
+      "flat_angle(1,NMA)",
+      "angle_addition(1,NMP,PMA)",
+      "triangle_property_angle_sum(1,MFN)",
+      "parallel_property_collinear_extend(3,AB,CD,N)"
+    ]
+  }
 }

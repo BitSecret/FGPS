@@ -29,20 +29,64 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "24/5",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FG,ED,C)",
-    "parallel_property_collinear_extend(CG,ED,B)",
-    "parallel_property_corresponding_angle(DE,BC,A)",
-    "similar_triangle_judgment_aa(EAD,CAB)",
-    "similar_triangle_judgment_aa(MAD,HAB)",
-    "parallel_property_collinear_extend(DE,GF,M)",
-    "parallel_property_collinear_extend(FG,MD,H)",
-    "parallel_judgment_ipsilateral_internal_angle(GD,HM)",
-    "parallelogram_judgment_parallel_and_parallel(DGHM)",
-    "parallelogram_property_opposite_line_equal(DGHM)",
-    "similar_triangle_property_line_ratio(EAD,CAB)",
-    "similar_triangle_property_line_ratio(ADE,ABC)",
-    "similar_triangle_property_line_ratio(MAD,HAB)",
-    "similar_triangle_property_line_ratio(DMA,BHA)",
-    "line_addition(AM,MH)"
-  ]
+    "parallel_property_collinear_extend(1,FG,ED,C)",
+    "parallel_property_collinear_extend(2,CG,ED,B)",
+    "parallel_property_corresponding_angle(1,DE,BC,A)",
+    "similar_triangle_judgment_aa(1,EAD,CAB)",
+    "similar_triangle_judgment_aa(1,MAD,HAB)",
+    "parallel_property_collinear_extend(3,DE,GF,M)",
+    "parallel_property_collinear_extend(3,FG,MD,H)",
+    "parallel_judgment_ipsilateral_internal_angle(1,GD,HM)",
+    "parallelogram_judgment_parallel_and_parallel(1,DGHM)",
+    "parallelogram_property_opposite_line_equal(1,DGHM)",
+    "similar_triangle_property_line_ratio(1,EAD,CAB)",
+    "similar_triangle_property_line_ratio(1,ADE,ABC)",
+    "similar_triangle_property_line_ratio(1,MAD,HAB)",
+    "similar_triangle_property_line_ratio(1,DMA,BHA)",
+    "line_addition(1,AM,MH)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,FG,ED,C)": [
+      "parallel_property_collinear_extend(2,CG,ED,B)"
+    ],
+    "parallel_property_collinear_extend(2,CG,ED,B)": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)"
+    ],
+    "parallel_property_corresponding_angle(1,DE,BC,A)": [
+      "similar_triangle_judgment_aa(1,EAD,CAB)",
+      "similar_triangle_judgment_aa(1,MAD,HAB)"
+    ],
+    "similar_triangle_judgment_aa(1,EAD,CAB)": [
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)"
+    ],
+    "similar_triangle_judgment_aa(1,MAD,HAB)": [
+      "similar_triangle_property_line_ratio(1,MAD,HAB)",
+      "similar_triangle_property_line_ratio(1,DMA,BHA)"
+    ],
+    "parallel_property_collinear_extend(3,DE,GF,M)": [
+      "parallel_property_collinear_extend(3,FG,MD,H)"
+    ],
+    "parallel_property_collinear_extend(3,FG,MD,H)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DGHM)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,GD,HM)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DGHM)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,DGHM)": [
+      "parallelogram_property_opposite_line_equal(1,DGHM)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,DGHM)": [],
+    "similar_triangle_property_line_ratio(1,EAD,CAB)": [],
+    "similar_triangle_property_line_ratio(1,ADE,ABC)": [],
+    "similar_triangle_property_line_ratio(1,MAD,HAB)": [],
+    "similar_triangle_property_line_ratio(1,DMA,BHA)": [],
+    "line_addition(1,AM,MH)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,FG,ED,C)",
+      "parallel_property_collinear_extend(3,DE,GF,M)",
+      "parallel_judgment_ipsilateral_internal_angle(1,GD,HM)",
+      "line_addition(1,AM,MH)"
+    ]
+  }
 }

@@ -23,15 +23,46 @@
   "goal_cdl": "Value(MeasureOfAngle(COB))",
   "problem_answer": "100",
   "theorem_seqs": [
-    "angle_addition(CAO,OAB)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(OAB)",
-    "isosceles_triangle_judgment_line_equal(OCA)",
-    "isosceles_triangle_property_angle_equal(OAB)",
-    "isosceles_triangle_property_angle_equal(OCA)",
-    "arc_property_circumference_angle_external(OBC,A)",
-    "arc_property_center_angle(OBC,O)"
-  ]
+    "angle_addition(1,CAO,OAB)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,OAB)",
+    "isosceles_triangle_judgment_line_equal(1,OCA)",
+    "isosceles_triangle_property_angle_equal(1,OAB)",
+    "isosceles_triangle_property_angle_equal(1,OCA)",
+    "arc_property_circumference_angle_external(1,OBC,A)",
+    "arc_property_center_angle(1,OBC,O)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,CAO,OAB)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAB)",
+      "isosceles_triangle_judgment_line_equal(1,OCA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAB)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OAB)": [
+      "isosceles_triangle_property_angle_equal(1,OAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OCA)": [
+      "isosceles_triangle_property_angle_equal(1,OCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OAB)": [],
+    "isosceles_triangle_property_angle_equal(1,OCA)": [],
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "START": [
+      "angle_addition(1,CAO,OAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "arc_property_center_angle(1,OBC,O)"
+    ]
+  }
 }

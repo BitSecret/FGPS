@@ -21,11 +21,30 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ADB))",
   "problem_answer": "71.741",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CDA,ADB)",
-    "right_triangle_judgment_angle(CDA)",
-    "right_triangle_judgment_angle(ADB)",
-    "right_triangle_property_pythagorean(CDA)",
-    "right_triangle_property_pythagorean(ADB)",
-    "triangle_perimeter_formula(ADB)"
-  ]
+    "adjacent_complementary_angle(1,CDA,ADB)",
+    "right_triangle_judgment_angle(1,CDA)",
+    "right_triangle_judgment_angle(1,ADB)",
+    "right_triangle_property_pythagorean(1,CDA)",
+    "right_triangle_property_pythagorean(1,ADB)",
+    "triangle_perimeter_formula(1,ADB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CDA,ADB)": [
+      "right_triangle_judgment_angle(1,ADB)"
+    ],
+    "right_triangle_judgment_angle(1,CDA)": [
+      "right_triangle_property_pythagorean(1,CDA)"
+    ],
+    "right_triangle_judgment_angle(1,ADB)": [
+      "right_triangle_property_pythagorean(1,ADB)"
+    ],
+    "right_triangle_property_pythagorean(1,CDA)": [],
+    "right_triangle_property_pythagorean(1,ADB)": [],
+    "triangle_perimeter_formula(1,ADB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CDA,ADB)",
+      "right_triangle_judgment_angle(1,CDA)",
+      "triangle_perimeter_formula(1,ADB)"
+    ]
+  }
 }

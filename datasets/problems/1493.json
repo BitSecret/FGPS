@@ -47,23 +47,73 @@
   "goal_cdl": "Value(MeasureOfAngle(LNQ))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(WD,BT,O)",
-    "parallel_property_collinear_extend(OD,BT,R)",
-    "parallel_property_collinear_extend(TB,RO,F)",
-    "parallel_property_collinear_extend(TF,RO,G)",
-    "parallel_property_collinear_extend(MH,EL,S)",
-    "parallel_property_collinear_extend(MS,EL,J)",
-    "parallel_property_collinear_extend(LE,SJ,O)",
-    "parallel_property_collinear_extend(OE,SJ,F)",
-    "parallel_property_collinear_extend(HA,CG,N)",
-    "parallel_property_collinear_extend(GC,AN,P)",
-    "vertical_angle(AGK,FGR)",
-    "vertical_angle(MJB,SJF)",
-    "parallel_property_corresponding_angle(JS,FO,G)",
-    "parallel_property_corresponding_angle(GF,RO,P)",
-    "parallel_property_corresponding_angle(OR,FG,P)",
-    "triangle_property_angle_sum(POR)",
-    "parallel_property_corresponding_angle(NA,PG,O)",
-    "adjacent_complementary_angle(LNQ,QNP)"
-  ]
+    "parallel_property_collinear_extend(3,WD,BT,O)",
+    "parallel_property_collinear_extend(3,OD,BT,R)",
+    "parallel_property_collinear_extend(3,TB,RO,F)",
+    "parallel_property_collinear_extend(3,TF,RO,G)",
+    "parallel_property_collinear_extend(3,MH,EL,S)",
+    "parallel_property_collinear_extend(3,MS,EL,J)",
+    "parallel_property_collinear_extend(3,LE,SJ,O)",
+    "parallel_property_collinear_extend(3,OE,SJ,F)",
+    "parallel_property_collinear_extend(3,HA,CG,N)",
+    "parallel_property_collinear_extend(3,GC,AN,P)",
+    "vertical_angle(1,AGK,FGR)",
+    "vertical_angle(1,MJB,SJF)",
+    "parallel_property_corresponding_angle(2,JS,FO,G)",
+    "parallel_property_corresponding_angle(2,GF,RO,P)",
+    "parallel_property_corresponding_angle(1,OR,FG,P)",
+    "triangle_property_angle_sum(1,POR)",
+    "parallel_property_corresponding_angle(2,NA,PG,O)",
+    "adjacent_complementary_angle(1,LNQ,QNP)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,WD,BT,O)": [
+      "parallel_property_collinear_extend(3,OD,BT,R)"
+    ],
+    "parallel_property_collinear_extend(3,OD,BT,R)": [
+      "parallel_property_collinear_extend(3,TB,RO,F)"
+    ],
+    "parallel_property_collinear_extend(3,TB,RO,F)": [
+      "parallel_property_collinear_extend(3,TF,RO,G)"
+    ],
+    "parallel_property_collinear_extend(3,TF,RO,G)": [
+      "parallel_property_corresponding_angle(2,GF,RO,P)",
+      "parallel_property_corresponding_angle(1,OR,FG,P)"
+    ],
+    "parallel_property_collinear_extend(3,MH,EL,S)": [
+      "parallel_property_collinear_extend(3,MS,EL,J)"
+    ],
+    "parallel_property_collinear_extend(3,MS,EL,J)": [
+      "parallel_property_collinear_extend(3,LE,SJ,O)"
+    ],
+    "parallel_property_collinear_extend(3,LE,SJ,O)": [
+      "parallel_property_collinear_extend(3,OE,SJ,F)"
+    ],
+    "parallel_property_collinear_extend(3,OE,SJ,F)": [
+      "parallel_property_corresponding_angle(2,JS,FO,G)"
+    ],
+    "parallel_property_collinear_extend(3,HA,CG,N)": [
+      "parallel_property_collinear_extend(3,GC,AN,P)"
+    ],
+    "parallel_property_collinear_extend(3,GC,AN,P)": [
+      "parallel_property_corresponding_angle(2,NA,PG,O)"
+    ],
+    "vertical_angle(1,AGK,FGR)": [],
+    "vertical_angle(1,MJB,SJF)": [],
+    "parallel_property_corresponding_angle(2,JS,FO,G)": [],
+    "parallel_property_corresponding_angle(2,GF,RO,P)": [],
+    "parallel_property_corresponding_angle(1,OR,FG,P)": [],
+    "triangle_property_angle_sum(1,POR)": [],
+    "parallel_property_corresponding_angle(2,NA,PG,O)": [],
+    "adjacent_complementary_angle(1,LNQ,QNP)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,WD,BT,O)",
+      "parallel_property_collinear_extend(3,MH,EL,S)",
+      "parallel_property_collinear_extend(3,HA,CG,N)",
+      "vertical_angle(1,AGK,FGR)",
+      "vertical_angle(1,MJB,SJF)",
+      "triangle_property_angle_sum(1,POR)",
+      "adjacent_complementary_angle(1,LNQ,QNP)"
+    ]
+  }
 }

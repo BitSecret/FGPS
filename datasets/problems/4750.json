@@ -27,17 +27,49 @@
   "goal_cdl": "Value(MeasureOfAngle(CDB))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "flat_angle(ECD)",
-    "angle_addition(ECA,ACD)",
-    "tangent_of_circle_property_perpendicular(DC,O,O)",
-    "tangent_of_circle_property_perpendicular(DB,O,O)",
-    "angle_addition(ACO,OCD)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(OAC)",
-    "isosceles_triangle_property_angle_equal(OAC)",
-    "arc_property_center_angle(OCB,O)",
-    "arc_property_circumference_angle_external(OCB,A)",
-    "quadrilateral_property_angle_sum(BOCD)"
-  ]
+    "flat_angle(1,ECD)",
+    "angle_addition(1,ECA,ACD)",
+    "tangent_of_circle_property_perpendicular(1,DC,O,O)",
+    "tangent_of_circle_property_perpendicular(2,DB,O,O)",
+    "angle_addition(1,ACO,OCD)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,OAC)",
+    "isosceles_triangle_property_angle_equal(1,OAC)",
+    "arc_property_center_angle(1,OCB,O)",
+    "arc_property_circumference_angle_external(1,OCB,A)",
+    "quadrilateral_property_angle_sum(1,BOCD)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,ECD)": [],
+    "angle_addition(1,ECA,ACD)": [],
+    "tangent_of_circle_property_perpendicular(1,DC,O,O)": [],
+    "tangent_of_circle_property_perpendicular(2,DB,O,O)": [],
+    "angle_addition(1,ACO,OCD)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OAC)": [
+      "isosceles_triangle_property_angle_equal(1,OAC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OAC)": [],
+    "arc_property_center_angle(1,OCB,O)": [],
+    "arc_property_circumference_angle_external(1,OCB,A)": [],
+    "quadrilateral_property_angle_sum(1,BOCD)": [],
+    "START": [
+      "flat_angle(1,ECD)",
+      "angle_addition(1,ECA,ACD)",
+      "tangent_of_circle_property_perpendicular(1,DC,O,O)",
+      "tangent_of_circle_property_perpendicular(2,DB,O,O)",
+      "angle_addition(1,ACO,OCD)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "arc_property_center_angle(1,OCB,O)",
+      "arc_property_circumference_angle_external(1,OCB,A)",
+      "quadrilateral_property_angle_sum(1,BOCD)"
+    ]
+  }
 }

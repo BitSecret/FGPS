@@ -27,12 +27,38 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "10",
   "theorem_seqs": [
-    "mirror_similar_triangle_property_angle_equal(BAC,DGF)",
-    "mirror_similar_triangle_property_angle_equal(ACB,FDG)",
-    "angle_addition(BAP,PAC)",
-    "angle_addition(GFQ,QFD)",
-    "mirror_similar_triangle_judgment_aa(PBA,QFD)",
-    "mirror_similar_triangle_property_line_ratio(PBA,QFD)",
-    "mirror_similar_triangle_property_line_ratio(BAP,DQF)"
-  ]
+    "mirror_similar_triangle_property_angle_equal(1,BAC,DGF)",
+    "mirror_similar_triangle_property_angle_equal(1,ACB,FDG)",
+    "angle_addition(1,BAP,PAC)",
+    "angle_addition(1,GFQ,QFD)",
+    "mirror_similar_triangle_judgment_aa(1,PBA,QFD)",
+    "mirror_similar_triangle_property_line_ratio(1,PBA,QFD)",
+    "mirror_similar_triangle_property_line_ratio(1,BAP,DQF)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_property_angle_equal(1,BAC,DGF)": [
+      "mirror_similar_triangle_judgment_aa(1,PBA,QFD)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,ACB,FDG)": [
+      "mirror_similar_triangle_judgment_aa(1,PBA,QFD)"
+    ],
+    "angle_addition(1,BAP,PAC)": [
+      "mirror_similar_triangle_judgment_aa(1,PBA,QFD)"
+    ],
+    "angle_addition(1,GFQ,QFD)": [
+      "mirror_similar_triangle_judgment_aa(1,PBA,QFD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,PBA,QFD)": [
+      "mirror_similar_triangle_property_line_ratio(1,PBA,QFD)",
+      "mirror_similar_triangle_property_line_ratio(1,BAP,DQF)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,PBA,QFD)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BAP,DQF)": [],
+    "START": [
+      "mirror_similar_triangle_property_angle_equal(1,BAC,DGF)",
+      "mirror_similar_triangle_property_angle_equal(1,ACB,FDG)",
+      "angle_addition(1,BAP,PAC)",
+      "angle_addition(1,GFQ,QFD)"
+    ]
+  }
 }

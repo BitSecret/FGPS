@@ -29,10 +29,26 @@
   "goal_cdl": "Value(MeasureOfAngle(FEI))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,H)",
-    "parallel_property_collinear_extend(DC,HA,E)",
-    "parallel_property_corresponding_angle(EC,HA,G)",
-    "adjacent_complementary_angle(IEC,CEH)",
-    "angle_addition(FEI,IEC)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,H)",
+    "parallel_property_collinear_extend(3,DC,HA,E)",
+    "parallel_property_corresponding_angle(2,EC,HA,G)",
+    "adjacent_complementary_angle(1,IEC,CEH)",
+    "angle_addition(1,FEI,IEC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,H)": [
+      "parallel_property_collinear_extend(3,DC,HA,E)"
+    ],
+    "parallel_property_collinear_extend(3,DC,HA,E)": [
+      "parallel_property_corresponding_angle(2,EC,HA,G)"
+    ],
+    "parallel_property_corresponding_angle(2,EC,HA,G)": [],
+    "adjacent_complementary_angle(1,IEC,CEH)": [],
+    "angle_addition(1,FEI,IEC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,H)",
+      "adjacent_complementary_angle(1,IEC,CEH)",
+      "angle_addition(1,FEI,IEC)"
+    ]
+  }
 }

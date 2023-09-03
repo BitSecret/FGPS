@@ -22,11 +22,30 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "sqrt(15)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AXB,BXC)",
-    "line_addition(AX,XC)",
-    "right_triangle_judgment_angle(AXB)",
-    "right_triangle_judgment_angle(BXC)",
-    "right_triangle_property_pythagorean(AXB)",
-    "right_triangle_property_pythagorean(BXC)"
-  ]
+    "adjacent_complementary_angle(1,AXB,BXC)",
+    "line_addition(1,AX,XC)",
+    "right_triangle_judgment_angle(1,AXB)",
+    "right_triangle_judgment_angle(1,BXC)",
+    "right_triangle_property_pythagorean(1,AXB)",
+    "right_triangle_property_pythagorean(1,BXC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AXB,BXC)": [
+      "right_triangle_judgment_angle(1,AXB)"
+    ],
+    "line_addition(1,AX,XC)": [],
+    "right_triangle_judgment_angle(1,AXB)": [
+      "right_triangle_property_pythagorean(1,AXB)"
+    ],
+    "right_triangle_judgment_angle(1,BXC)": [
+      "right_triangle_property_pythagorean(1,BXC)"
+    ],
+    "right_triangle_property_pythagorean(1,AXB)": [],
+    "right_triangle_property_pythagorean(1,BXC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AXB,BXC)",
+      "line_addition(1,AX,XC)",
+      "right_triangle_judgment_angle(1,BXC)"
+    ]
+  }
 }

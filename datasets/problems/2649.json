@@ -26,15 +26,43 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "123",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(AK,A)",
-    "radius_of_circle_property_length_equal(AH,A)",
-    "flat_angle(KLH)",
-    "angle_addition(KLA,ALH)",
-    "triangle_property_angle_sum(AKL)",
-    "isosceles_triangle_judgment_line_equal(AKH)",
-    "isosceles_triangle_property_angle_equal(AKH)",
-    "triangle_property_angle_sum(ALH)",
-    "flat_angle(GAL)",
-    "angle_addition(GAH,HAL)"
-  ]
+    "radius_of_circle_property_length_equal(1,AK,A)",
+    "radius_of_circle_property_length_equal(1,AH,A)",
+    "flat_angle(1,KLH)",
+    "angle_addition(1,KLA,ALH)",
+    "triangle_property_angle_sum(1,AKL)",
+    "isosceles_triangle_judgment_line_equal(1,AKH)",
+    "isosceles_triangle_property_angle_equal(1,AKH)",
+    "triangle_property_angle_sum(1,ALH)",
+    "flat_angle(1,GAL)",
+    "angle_addition(1,GAH,HAL)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,AK,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AKH)"
+    ],
+    "radius_of_circle_property_length_equal(1,AH,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AKH)"
+    ],
+    "flat_angle(1,KLH)": [],
+    "angle_addition(1,KLA,ALH)": [],
+    "triangle_property_angle_sum(1,AKL)": [],
+    "isosceles_triangle_judgment_line_equal(1,AKH)": [
+      "isosceles_triangle_property_angle_equal(1,AKH)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,AKH)": [],
+    "triangle_property_angle_sum(1,ALH)": [],
+    "flat_angle(1,GAL)": [],
+    "angle_addition(1,GAH,HAL)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,AK,A)",
+      "radius_of_circle_property_length_equal(1,AH,A)",
+      "flat_angle(1,KLH)",
+      "angle_addition(1,KLA,ALH)",
+      "triangle_property_angle_sum(1,AKL)",
+      "triangle_property_angle_sum(1,ALH)",
+      "flat_angle(1,GAL)",
+      "angle_addition(1,GAH,HAL)"
+    ]
+  }
 }

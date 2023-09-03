@@ -27,11 +27,27 @@
   "goal_cdl": "Value(MeasureOfArc(CFE))",
   "problem_answer": "52",
   "theorem_seqs": [
-    "flat_angle(GCD)",
-    "angle_addition(GCH,HCD)",
-    "vertical_angle(GCH,DCE)",
-    "adjacent_complementary_angle(DCF,FCG)",
-    "angle_addition(DCE,ECF)",
-    "arc_property_center_angle(CFE,C)"
-  ]
+    "flat_angle(1,GCD)",
+    "angle_addition(1,GCH,HCD)",
+    "vertical_angle(1,GCH,DCE)",
+    "adjacent_complementary_angle(1,DCF,FCG)",
+    "angle_addition(1,DCE,ECF)",
+    "arc_property_center_angle(1,CFE,C)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,GCD)": [],
+    "angle_addition(1,GCH,HCD)": [],
+    "vertical_angle(1,GCH,DCE)": [],
+    "adjacent_complementary_angle(1,DCF,FCG)": [],
+    "angle_addition(1,DCE,ECF)": [],
+    "arc_property_center_angle(1,CFE,C)": [],
+    "START": [
+      "flat_angle(1,GCD)",
+      "angle_addition(1,GCH,HCD)",
+      "vertical_angle(1,GCH,DCE)",
+      "adjacent_complementary_angle(1,DCF,FCG)",
+      "angle_addition(1,DCE,ECF)",
+      "arc_property_center_angle(1,CFE,C)"
+    ]
+  }
 }

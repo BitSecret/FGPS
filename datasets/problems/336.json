@@ -25,8 +25,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "71.05",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(RST,UWV)",
-    "similar_triangle_property_line_ratio(RST,UWV)",
-    "similar_triangle_property_line_ratio(TRS,VUW)"
-  ]
+    "similar_triangle_judgment_aa(1,RST,UWV)",
+    "similar_triangle_property_line_ratio(1,RST,UWV)",
+    "similar_triangle_property_line_ratio(1,TRS,VUW)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,RST,UWV)": [
+      "similar_triangle_property_line_ratio(1,RST,UWV)",
+      "similar_triangle_property_line_ratio(1,TRS,VUW)"
+    ],
+    "similar_triangle_property_line_ratio(1,RST,UWV)": [],
+    "similar_triangle_property_line_ratio(1,TRS,VUW)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,RST,UWV)"
+    ]
+  }
 }

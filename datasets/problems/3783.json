@@ -20,9 +20,22 @@
   "goal_cdl": "Value(MeasureOfAngle(BEA))",
   "problem_answer": "36",
   "theorem_seqs": [
-    "parallel_property_ipsilateral_internal_angle(BA,CD)",
-    "angle_addition(ABE,EBC)",
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_alternate_interior_angle(AE,BC)"
-  ]
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)",
+    "angle_addition(1,ABE,EBC)",
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_alternate_interior_angle(2,AE,BC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)": [],
+    "angle_addition(1,ABE,EBC)": [],
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_alternate_interior_angle(2,AE,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,BC)": [],
+    "START": [
+      "parallel_property_ipsilateral_internal_angle(1,BA,CD)",
+      "angle_addition(1,ABE,EBC)",
+      "parallel_property_collinear_extend(3,AD,BC,E)"
+    ]
+  }
 }

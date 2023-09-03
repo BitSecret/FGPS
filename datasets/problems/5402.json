@@ -24,11 +24,29 @@
   "goal_cdl": "Value(MeasureOfAngle(FCE))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,BA,F)",
-    "triangle_property_angle_sum(EFC)",
-    "isosceles_triangle_judgment_line_equal(FCE)",
-    "isosceles_triangle_property_angle_equal(FCE)",
-    "adjacent_complementary_angle(DFE,EFC)",
-    "parallel_property_corresponding_angle(AB,FD,E)"
-  ]
+    "parallel_property_collinear_extend(3,DC,BA,F)",
+    "triangle_property_angle_sum(1,EFC)",
+    "isosceles_triangle_judgment_line_equal(1,FCE)",
+    "isosceles_triangle_property_angle_equal(1,FCE)",
+    "adjacent_complementary_angle(1,DFE,EFC)",
+    "parallel_property_corresponding_angle(2,AB,FD,E)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DC,BA,F)": [
+      "parallel_property_corresponding_angle(2,AB,FD,E)"
+    ],
+    "triangle_property_angle_sum(1,EFC)": [],
+    "isosceles_triangle_judgment_line_equal(1,FCE)": [
+      "isosceles_triangle_property_angle_equal(1,FCE)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,FCE)": [],
+    "adjacent_complementary_angle(1,DFE,EFC)": [],
+    "parallel_property_corresponding_angle(2,AB,FD,E)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DC,BA,F)",
+      "triangle_property_angle_sum(1,EFC)",
+      "isosceles_triangle_judgment_line_equal(1,FCE)",
+      "adjacent_complementary_angle(1,DFE,EFC)"
+    ]
+  }
 }

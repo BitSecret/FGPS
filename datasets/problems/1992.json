@@ -26,10 +26,25 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(CSA),AreaOfTriangle(ASE)))",
   "problem_answer": "261",
   "theorem_seqs": [
-    "adjacent_complementary_angle(SDA,ADE)",
-    "altitude_of_triangle_judgment(CB,CSA)",
-    "altitude_of_triangle_judgment(AD,ASE)",
-    "triangle_area_formula_common(CSA)",
-    "triangle_area_formula_common(ASE)"
-  ]
+    "adjacent_complementary_angle(1,SDA,ADE)",
+    "altitude_of_triangle_judgment(1,CB,CSA)",
+    "altitude_of_triangle_judgment(1,AD,ASE)",
+    "triangle_area_formula_common(1,CSA)",
+    "triangle_area_formula_common(1,ASE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,SDA,ADE)": [
+      "altitude_of_triangle_judgment(1,AD,ASE)"
+    ],
+    "altitude_of_triangle_judgment(1,CB,CSA)": [],
+    "altitude_of_triangle_judgment(1,AD,ASE)": [],
+    "triangle_area_formula_common(1,CSA)": [],
+    "triangle_area_formula_common(1,ASE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,SDA,ADE)",
+      "altitude_of_triangle_judgment(1,CB,CSA)",
+      "triangle_area_formula_common(1,CSA)",
+      "triangle_area_formula_common(1,ASE)"
+    ]
+  }
 }

@@ -25,13 +25,34 @@
   "goal_cdl": "Value(MeasureOfAngle(BMA))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(DCA)",
-    "isosceles_triangle_property_angle_equal(DCA)",
-    "triangle_property_angle_sum(DCA)",
-    "adjacent_complementary_angle(BDA,ADC)",
-    "angle_addition(ABO,OBD)",
-    "triangle_property_angle_sum(ABD)",
-    "triangle_property_angle_sum(MBC)",
-    "adjacent_complementary_angle(CMB,BMA)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,DCA)",
+    "isosceles_triangle_property_angle_equal(1,DCA)",
+    "triangle_property_angle_sum(1,DCA)",
+    "adjacent_complementary_angle(1,BDA,ADC)",
+    "angle_addition(1,ABO,OBD)",
+    "triangle_property_angle_sum(1,ABD)",
+    "triangle_property_angle_sum(1,MBC)",
+    "adjacent_complementary_angle(1,CMB,BMA)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,DCA)": [
+      "isosceles_triangle_property_angle_equal(1,DCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DCA)": [],
+    "triangle_property_angle_sum(1,DCA)": [],
+    "adjacent_complementary_angle(1,BDA,ADC)": [],
+    "angle_addition(1,ABO,OBD)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "triangle_property_angle_sum(1,MBC)": [],
+    "adjacent_complementary_angle(1,CMB,BMA)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,DCA)",
+      "triangle_property_angle_sum(1,DCA)",
+      "adjacent_complementary_angle(1,BDA,ADC)",
+      "angle_addition(1,ABO,OBD)",
+      "triangle_property_angle_sum(1,ABD)",
+      "triangle_property_angle_sum(1,MBC)",
+      "adjacent_complementary_angle(1,CMB,BMA)"
+    ]
+  }
 }

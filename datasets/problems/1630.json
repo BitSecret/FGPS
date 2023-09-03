@@ -13,13 +13,19 @@
   "image_cdl": [
     "Equal(MeasureOfAngle(CAB),45)",
     "Equal(LengthOfLine(AB),x)",
-    "Equal(LengthOfLine(BC),19.5)",
+    "Equal(LengthOfLine(BC),39/2)",
     "Equal(MeasureOfAngle(ABC),45)",
     "PerpendicularBetweenLine(BC,AC)"
   ],
   "goal_cdl": "Value(x)",
   "problem_answer": "39*sqrt(2)/2",
   "theorem_seqs": [
-    "sine_theorem(BCA)"
-  ]
+    "sine_theorem(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "sine_theorem(1,BCA)": [],
+    "START": [
+      "sine_theorem(1,BCA)"
+    ]
+  }
 }

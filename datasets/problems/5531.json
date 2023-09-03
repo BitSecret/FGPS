@@ -21,13 +21,40 @@
   "goal_cdl": "Value(AreaOfSector(CAB))",
   "problem_answer": "6*pi",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(CA,C)",
-    "radius_of_circle_property_length_equal(CB,C)",
-    "isosceles_triangle_judgment_line_equal(CAB)",
-    "isosceles_triangle_property_angle_equal(CAB)",
-    "triangle_property_angle_sum(CAB)",
-    "isosceles_triangle_judgment_angle_equal(BCA)",
-    "arc_property_center_angle(CAB,C)",
-    "sector_area_formula(CAB)"
-  ]
+    "radius_of_circle_property_length_equal(1,CA,C)",
+    "radius_of_circle_property_length_equal(1,CB,C)",
+    "isosceles_triangle_judgment_line_equal(1,CAB)",
+    "isosceles_triangle_property_angle_equal(1,CAB)",
+    "triangle_property_angle_sum(1,CAB)",
+    "isosceles_triangle_judgment_angle_equal(1,BCA)",
+    "arc_property_center_angle(1,CAB,C)",
+    "sector_area_formula(1,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,CA,C)": [
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ],
+    "radius_of_circle_property_length_equal(1,CB,C)": [
+      "isosceles_triangle_judgment_line_equal(1,CAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,CAB)": [
+      "isosceles_triangle_property_angle_equal(1,CAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CAB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BCA)"
+    ],
+    "triangle_property_angle_sum(1,CAB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BCA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BCA)": [],
+    "arc_property_center_angle(1,CAB,C)": [],
+    "sector_area_formula(1,CAB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,CA,C)",
+      "radius_of_circle_property_length_equal(1,CB,C)",
+      "triangle_property_angle_sum(1,CAB)",
+      "arc_property_center_angle(1,CAB,C)",
+      "sector_area_formula(1,CAB)"
+    ]
+  }
 }

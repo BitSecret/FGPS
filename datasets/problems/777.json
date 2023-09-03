@@ -23,7 +23,16 @@
   "goal_cdl": "Value(MeasureOfAngle(RPM))",
   "problem_answer": "55",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(RPM)",
-    "isosceles_triangle_property_angle_equal(RPM)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,RPM)",
+    "isosceles_triangle_property_angle_equal(1,RPM)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,RPM)": [
+      "isosceles_triangle_property_angle_equal(1,RPM)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,RPM)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,RPM)"
+    ]
+  }
 }

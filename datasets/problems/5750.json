@@ -26,12 +26,33 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "25/8",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(ABC)",
-    "right_triangle_property_pythagorean(ABC)",
-    "line_addition(AO,OC)",
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "mirror_similar_triangle_judgment_aa(ABC,DAO)",
-    "mirror_similar_triangle_property_line_ratio(ABC,DAO)",
-    "mirror_similar_triangle_property_line_ratio(BCA,ODA)"
-  ]
+    "right_triangle_judgment_angle(1,ABC)",
+    "right_triangle_property_pythagorean(1,ABC)",
+    "line_addition(1,AO,OC)",
+    "parallel_property_alternate_interior_angle(1,AD,BC)",
+    "mirror_similar_triangle_judgment_aa(1,ABC,DAO)",
+    "mirror_similar_triangle_property_line_ratio(1,ABC,DAO)",
+    "mirror_similar_triangle_property_line_ratio(1,BCA,ODA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,ABC)": [
+      "right_triangle_property_pythagorean(1,ABC)"
+    ],
+    "right_triangle_property_pythagorean(1,ABC)": [],
+    "line_addition(1,AO,OC)": [],
+    "parallel_property_alternate_interior_angle(1,AD,BC)": [
+      "mirror_similar_triangle_judgment_aa(1,ABC,DAO)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ABC,DAO)": [
+      "mirror_similar_triangle_property_line_ratio(1,ABC,DAO)",
+      "mirror_similar_triangle_property_line_ratio(1,BCA,ODA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,ABC,DAO)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BCA,ODA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,ABC)",
+      "line_addition(1,AO,OC)",
+      "parallel_property_alternate_interior_angle(1,AD,BC)"
+    ]
+  }
 }

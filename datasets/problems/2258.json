@@ -26,10 +26,26 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "32*pi",
   "theorem_seqs": [
-    "arc_property_center_angle(EDB,E)",
-    "arc_property_center_angle(ECA,E)",
-    "circle_perimeter_formula(E)",
-    "sector_area_formula(EDB)",
-    "sector_area_formula(ECA)"
-  ]
+    "arc_property_center_angle(1,EDB,E)",
+    "arc_property_center_angle(1,ECA,E)",
+    "circle_perimeter_formula(1,E)",
+    "sector_area_formula(1,EDB)",
+    "sector_area_formula(1,ECA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,EDB,E)": [],
+    "arc_property_center_angle(1,ECA,E)": [],
+    "circle_perimeter_formula(1,E)": [
+      "solve_eq_13)"
+    ],
+    "sector_area_formula(1,EDB)": [],
+    "sector_area_formula(1,ECA)": [],
+    "START": [
+      "arc_property_center_angle(1,EDB,E)",
+      "arc_property_center_angle(1,ECA,E)",
+      "circle_perimeter_formula(1,E)",
+      "sector_area_formula(1,EDB)",
+      "sector_area_formula(1,ECA)"
+    ]
+  }
 }

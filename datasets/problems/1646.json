@@ -20,8 +20,18 @@
   "goal_cdl": "Value(MeasureOfAngle(KJL))",
   "problem_answer": "29",
   "theorem_seqs": [
-    "flat_angle(JLM)",
-    "angle_addition(JLK,KLM)",
-    "triangle_property_angle_sum(JLK)"
-  ]
+    "flat_angle(1,JLM)",
+    "angle_addition(1,JLK,KLM)",
+    "triangle_property_angle_sum(1,JLK)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,JLM)": [],
+    "angle_addition(1,JLK,KLM)": [],
+    "triangle_property_angle_sum(1,JLK)": [],
+    "START": [
+      "flat_angle(1,JLM)",
+      "angle_addition(1,JLK,KLM)",
+      "triangle_property_angle_sum(1,JLK)"
+    ]
+  }
 }

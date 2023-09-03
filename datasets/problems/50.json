@@ -19,16 +19,30 @@
   ],
   "image_cdl": [
     "Equal(LengthOfLine(HG),2)",
-    "Equal(LengthOfLine(FG),2.5)",
+    "Equal(LengthOfLine(FG),3)",
     "Equal(LengthOfLine(FH),4)",
     "Equal(LengthOfLine(FE),6)"
   ],
   "goal_cdl": "Value(PerimeterOfTriangle(DEF))",
-  "problem_answer": "12.75",
+  "problem_answer": "27/2",
   "theorem_seqs": [
-    "similar_triangle_property_line_ratio(DEF,GFH)",
-    "similar_triangle_property_line_ratio(FDE,HGF)",
-    "similar_triangle_property_line_ratio(EFD,FHG)",
-    "triangle_perimeter_formula(DEF)"
-  ]
+    "similar_triangle_property_line_ratio(1,DEF,GFH)",
+    "similar_triangle_property_line_ratio(1,FDE,HGF)",
+    "similar_triangle_property_line_ratio(1,EFD,FHG)",
+    "triangle_perimeter_formula(1,DEF)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_line_ratio(1,DEF,GFH)": [
+      "solve_eq_8)"
+    ],
+    "similar_triangle_property_line_ratio(1,FDE,HGF)": [],
+    "similar_triangle_property_line_ratio(1,EFD,FHG)": [],
+    "triangle_perimeter_formula(1,DEF)": [],
+    "START": [
+      "similar_triangle_property_line_ratio(1,DEF,GFH)",
+      "similar_triangle_property_line_ratio(1,FDE,HGF)",
+      "similar_triangle_property_line_ratio(1,EFD,FHG)",
+      "triangle_perimeter_formula(1,DEF)"
+    ]
+  }
 }

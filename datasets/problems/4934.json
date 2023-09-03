@@ -29,11 +29,31 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(OBD,C)",
-    "arc_property_circumference_angle_external(OBD,A)",
-    "mirror_similar_triangle_judgment_aa(EDC,CAD)",
-    "line_addition(AE,ED)",
-    "mirror_similar_triangle_property_line_ratio(EDC,CAD)",
-    "mirror_similar_triangle_property_line_ratio(CED,ADC)"
-  ]
+    "arc_property_circumference_angle_external(1,OBD,C)",
+    "arc_property_circumference_angle_external(1,OBD,A)",
+    "mirror_similar_triangle_judgment_aa(1,EDC,CAD)",
+    "line_addition(1,AE,ED)",
+    "mirror_similar_triangle_property_line_ratio(1,EDC,CAD)",
+    "mirror_similar_triangle_property_line_ratio(1,CED,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,OBD,C)": [
+      "mirror_similar_triangle_judgment_aa(1,EDC,CAD)"
+    ],
+    "arc_property_circumference_angle_external(1,OBD,A)": [
+      "mirror_similar_triangle_judgment_aa(1,EDC,CAD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,EDC,CAD)": [
+      "mirror_similar_triangle_property_line_ratio(1,EDC,CAD)",
+      "mirror_similar_triangle_property_line_ratio(1,CED,ADC)"
+    ],
+    "line_addition(1,AE,ED)": [],
+    "mirror_similar_triangle_property_line_ratio(1,EDC,CAD)": [],
+    "mirror_similar_triangle_property_line_ratio(1,CED,ADC)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,OBD,C)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "line_addition(1,AE,ED)"
+    ]
+  }
 }

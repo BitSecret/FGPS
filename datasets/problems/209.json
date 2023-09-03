@@ -25,8 +25,19 @@
   "goal_cdl": "Value(MeasureOfAngle(HIJ))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "adjacent_complementary_angle(WXH,HXY)",
-    "mirror_similar_triangle_judgment_sas(JHI,JXY)",
-    "mirror_similar_triangle_property_angle_equal(IJH,XYJ)"
-  ]
+    "adjacent_complementary_angle(1,WXH,HXY)",
+    "mirror_similar_triangle_judgment_sas(1,JHI,JXY)",
+    "mirror_similar_triangle_property_angle_equal(1,IJH,XYJ)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,WXH,HXY)": [],
+    "mirror_similar_triangle_judgment_sas(1,JHI,JXY)": [
+      "mirror_similar_triangle_property_angle_equal(1,IJH,XYJ)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,IJH,XYJ)": [],
+    "START": [
+      "adjacent_complementary_angle(1,WXH,HXY)",
+      "mirror_similar_triangle_judgment_sas(1,JHI,JXY)"
+    ]
+  }
 }

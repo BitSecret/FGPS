@@ -26,9 +26,23 @@
   "goal_cdl": "Value(MeasureOfAngle(BCE))",
   "problem_answer": "23",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,FH,C)",
-    "parallel_property_collinear_extend(HF,CA,G)",
-    "parallel_property_alternate_interior_angle(HG,CA)",
-    "angle_addition(GCB,BCE)"
-  ]
+    "parallel_property_collinear_extend(3,AD,FH,C)",
+    "parallel_property_collinear_extend(3,HF,CA,G)",
+    "parallel_property_alternate_interior_angle(2,HG,CA)",
+    "angle_addition(1,GCB,BCE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,FH,C)": [
+      "parallel_property_collinear_extend(3,HF,CA,G)"
+    ],
+    "parallel_property_collinear_extend(3,HF,CA,G)": [
+      "parallel_property_alternate_interior_angle(2,HG,CA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,HG,CA)": [],
+    "angle_addition(1,GCB,BCE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,FH,C)",
+      "angle_addition(1,GCB,BCE)"
+    ]
+  }
 }

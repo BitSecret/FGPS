@@ -24,10 +24,25 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(DFC),AreaOfTriangle(ECF)))",
   "problem_answer": "104",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CAE,EAF)",
-    "altitude_of_triangle_judgment(DB,DFC)",
-    "altitude_of_triangle_judgment(EA,ECF)",
-    "triangle_area_formula_common(DFC)",
-    "triangle_area_formula_common(ECF)"
-  ]
+    "adjacent_complementary_angle(1,CAE,EAF)",
+    "altitude_of_triangle_judgment(1,DB,DFC)",
+    "altitude_of_triangle_judgment(1,EA,ECF)",
+    "triangle_area_formula_common(1,DFC)",
+    "triangle_area_formula_common(1,ECF)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CAE,EAF)": [
+      "altitude_of_triangle_judgment(1,EA,ECF)"
+    ],
+    "altitude_of_triangle_judgment(1,DB,DFC)": [],
+    "altitude_of_triangle_judgment(1,EA,ECF)": [],
+    "triangle_area_formula_common(1,DFC)": [],
+    "triangle_area_formula_common(1,ECF)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CAE,EAF)",
+      "altitude_of_triangle_judgment(1,DB,DFC)",
+      "triangle_area_formula_common(1,DFC)",
+      "triangle_area_formula_common(1,ECF)"
+    ]
+  }
 }

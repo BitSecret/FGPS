@@ -25,9 +25,23 @@
   "goal_cdl": "Value(MeasureOfAngle(GEF))",
   "problem_answer": "17.5",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,HD,E)",
-    "parallel_property_collinear_extend(DH,EA,C)",
-    "parallel_property_alternate_interior_angle(DC,EA)",
-    "angle_addition(CEG,GEF)"
-  ]
+    "parallel_property_collinear_extend(3,AB,HD,E)",
+    "parallel_property_collinear_extend(3,DH,EA,C)",
+    "parallel_property_alternate_interior_angle(2,DC,EA)",
+    "angle_addition(1,CEG,GEF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,HD,E)": [
+      "parallel_property_collinear_extend(3,DH,EA,C)"
+    ],
+    "parallel_property_collinear_extend(3,DH,EA,C)": [
+      "parallel_property_alternate_interior_angle(2,DC,EA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DC,EA)": [],
+    "angle_addition(1,CEG,GEF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,HD,E)",
+      "angle_addition(1,CEG,GEF)"
+    ]
+  }
 }

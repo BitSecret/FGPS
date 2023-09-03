@@ -27,11 +27,29 @@
   "goal_cdl": "Value(Div(LengthOfLine(BP),LengthOfLine(EQ)))",
   "problem_answer": "5/3",
   "theorem_seqs": [
-    "similar_triangle_property_angle_equal(ACB,DFE)",
-    "similar_triangle_judgment_aa(BAP,EDQ)",
-    "similar_triangle_property_line_ratio(CBA,FED)",
-    "similar_triangle_property_line_ratio(APB,DQE)",
-    "similar_triangle_property_line_ratio(PBA,QED)",
-    "similar_triangle_property_area_square_ratio(BAC,EDF)"
-  ]
+    "similar_triangle_property_angle_equal(1,ACB,DFE)",
+    "similar_triangle_judgment_aa(1,BAP,EDQ)",
+    "similar_triangle_property_line_ratio(1,CBA,FED)",
+    "similar_triangle_property_line_ratio(1,APB,DQE)",
+    "similar_triangle_property_line_ratio(1,PBA,QED)",
+    "similar_triangle_property_area_square_ratio(1,BAC,EDF)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_angle_equal(1,ACB,DFE)": [
+      "similar_triangle_judgment_aa(1,BAP,EDQ)"
+    ],
+    "similar_triangle_judgment_aa(1,BAP,EDQ)": [
+      "similar_triangle_property_line_ratio(1,APB,DQE)",
+      "similar_triangle_property_line_ratio(1,PBA,QED)"
+    ],
+    "similar_triangle_property_line_ratio(1,CBA,FED)": [],
+    "similar_triangle_property_line_ratio(1,APB,DQE)": [],
+    "similar_triangle_property_line_ratio(1,PBA,QED)": [],
+    "similar_triangle_property_area_square_ratio(1,BAC,EDF)": [],
+    "START": [
+      "similar_triangle_property_angle_equal(1,ACB,DFE)",
+      "similar_triangle_property_line_ratio(1,CBA,FED)",
+      "similar_triangle_property_area_square_ratio(1,BAC,EDF)"
+    ]
+  }
 }

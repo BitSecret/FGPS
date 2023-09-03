@@ -29,9 +29,23 @@
   "goal_cdl": "Value(PerimeterOfTriangle(CHB))",
   "problem_answer": "18.9",
   "theorem_seqs": [
-    "similar_triangle_property_line_ratio(CHB,FHE)",
-    "similar_triangle_property_line_ratio(HBC,HEF)",
-    "similar_triangle_property_line_ratio(BCH,EFH)",
-    "triangle_perimeter_formula(CHB)"
-  ]
+    "similar_triangle_property_line_ratio(1,CHB,FHE)",
+    "similar_triangle_property_line_ratio(1,HBC,HEF)",
+    "similar_triangle_property_line_ratio(1,BCH,EFH)",
+    "triangle_perimeter_formula(1,CHB)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_line_ratio(1,CHB,FHE)": [],
+    "similar_triangle_property_line_ratio(1,HBC,HEF)": [],
+    "similar_triangle_property_line_ratio(1,BCH,EFH)": [
+      "solve_eq_8)"
+    ],
+    "triangle_perimeter_formula(1,CHB)": [],
+    "START": [
+      "similar_triangle_property_line_ratio(1,CHB,FHE)",
+      "similar_triangle_property_line_ratio(1,HBC,HEF)",
+      "similar_triangle_property_line_ratio(1,BCH,EFH)",
+      "triangle_perimeter_formula(1,CHB)"
+    ]
+  }
 }

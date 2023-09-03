@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfArc(HKL))",
   "problem_answer": "42",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_arc(HML,HPK)",
-    "congruent_arc_judgment_length_equal(HMK,HKL)",
-    "congruent_arc_property_measure_equal(HMK,HKL)",
-    "arc_addition_measure(HMK,HKL)"
-  ]
+    "circle_property_chord_perpendicular_bisect_arc(1,HML,HPK)",
+    "congruent_arc_judgment_length_equal(1,HMK,HKL)",
+    "congruent_arc_property_measure_equal(1,HMK,HKL)",
+    "arc_addition_measure(1,HMK,HKL)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_arc(1,HML,HPK)": [
+      "congruent_arc_judgment_length_equal(1,HMK,HKL)"
+    ],
+    "congruent_arc_judgment_length_equal(1,HMK,HKL)": [
+      "congruent_arc_property_measure_equal(1,HMK,HKL)"
+    ],
+    "congruent_arc_property_measure_equal(1,HMK,HKL)": [],
+    "arc_addition_measure(1,HMK,HKL)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_arc(1,HML,HPK)",
+      "arc_addition_measure(1,HMK,HKL)"
+    ]
+  }
 }

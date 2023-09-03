@@ -23,8 +23,19 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(AOB,O)",
-    "diameter_of_circle_property_right_angle(ACB,O)",
-    "sine_theorem(ACB)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+    "diameter_of_circle_property_right_angle(1,ACB,O)",
+    "sine_theorem(1,ACB)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)": [
+      "diameter_of_circle_property_right_angle(1,ACB,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,ACB,O)": [],
+    "sine_theorem(1,ACB)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "sine_theorem(1,ACB)"
+    ]
+  }
 }

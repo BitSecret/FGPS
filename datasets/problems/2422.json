@@ -34,15 +34,53 @@
   "goal_cdl": "Value(MeasureOfAngle(JMN))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "arc_property_center_angle(MHP,M)",
-    "radius_of_circle_property_length_equal(MH,M)",
-    "radius_of_circle_property_length_equal(MJ,M)",
-    "isosceles_triangle_judgment_line_equal(MHJ)",
-    "isosceles_triangle_property_angle_equal(MHJ)",
-    "adjacent_complementary_angle(JNP,PNH)",
-    "adjacent_complementary_angle(MNJ,JNP)",
-    "adjacent_complementary_angle(PNH,HNM)",
-    "mirror_congruent_triangle_judgment_aas(MHN,MNJ)",
-    "mirror_congruent_triangle_property_angle_equal(MHN,MNJ)"
-  ]
+    "arc_property_center_angle(1,MHP,M)",
+    "radius_of_circle_property_length_equal(1,MH,M)",
+    "radius_of_circle_property_length_equal(1,MJ,M)",
+    "isosceles_triangle_judgment_line_equal(1,MHJ)",
+    "isosceles_triangle_property_angle_equal(1,MHJ)",
+    "adjacent_complementary_angle(1,JNP,PNH)",
+    "adjacent_complementary_angle(1,MNJ,JNP)",
+    "adjacent_complementary_angle(1,PNH,HNM)",
+    "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)",
+    "mirror_congruent_triangle_property_angle_equal(1,MHN,MNJ)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,MHP,M)": [],
+    "radius_of_circle_property_length_equal(1,MH,M)": [
+      "isosceles_triangle_judgment_line_equal(1,MHJ)",
+      "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)"
+    ],
+    "radius_of_circle_property_length_equal(1,MJ,M)": [
+      "isosceles_triangle_judgment_line_equal(1,MHJ)",
+      "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,MHJ)": [
+      "isosceles_triangle_property_angle_equal(1,MHJ)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,MHJ)": [
+      "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)"
+    ],
+    "adjacent_complementary_angle(1,JNP,PNH)": [
+      "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)"
+    ],
+    "adjacent_complementary_angle(1,MNJ,JNP)": [
+      "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)"
+    ],
+    "adjacent_complementary_angle(1,PNH,HNM)": [
+      "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,MHN,MNJ)": [
+      "mirror_congruent_triangle_property_angle_equal(1,MHN,MNJ)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,MHN,MNJ)": [],
+    "START": [
+      "arc_property_center_angle(1,MHP,M)",
+      "radius_of_circle_property_length_equal(1,MH,M)",
+      "radius_of_circle_property_length_equal(1,MJ,M)",
+      "adjacent_complementary_angle(1,JNP,PNH)",
+      "adjacent_complementary_angle(1,MNJ,JNP)",
+      "adjacent_complementary_angle(1,PNH,HNM)"
+    ]
+  }
 }

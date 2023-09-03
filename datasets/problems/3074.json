@@ -20,10 +20,26 @@
   "goal_cdl": "Value(MeasureOfAngle(CAB))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "sine_theorem(BCD)",
-    "adjacent_complementary_angle(CDB,BDA)",
-    "isosceles_triangle_judgment_line_equal(DAB)",
-    "isosceles_triangle_property_angle_equal(DAB)",
-    "triangle_property_angle_sum(DAB)"
-  ]
+    "sine_theorem(1,BCD)",
+    "adjacent_complementary_angle(1,CDB,BDA)",
+    "isosceles_triangle_judgment_line_equal(1,DAB)",
+    "isosceles_triangle_property_angle_equal(1,DAB)",
+    "triangle_property_angle_sum(1,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "sine_theorem(1,BCD)": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)"
+    ],
+    "adjacent_complementary_angle(1,CDB,BDA)": [],
+    "isosceles_triangle_judgment_line_equal(1,DAB)": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DAB)": [],
+    "triangle_property_angle_sum(1,DAB)": [],
+    "START": [
+      "sine_theorem(1,BCD)",
+      "adjacent_complementary_angle(1,CDB,BDA)",
+      "triangle_property_angle_sum(1,DAB)"
+    ]
+  }
 }

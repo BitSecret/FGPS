@@ -27,10 +27,25 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABEF))",
   "problem_answer": "250",
   "theorem_seqs": [
-    "quadrilateral_perimeter_formula(DCIA)",
-    "quadrilateral_perimeter_formula(ABEF)",
-    "quadrilateral_perimeter_formula(IGHB)",
-    "right_triangle_judgment_angle(AIB)",
-    "right_triangle_property_pythagorean(AIB)"
-  ]
+    "quadrilateral_perimeter_formula(1,DCIA)",
+    "quadrilateral_perimeter_formula(1,ABEF)",
+    "quadrilateral_perimeter_formula(1,IGHB)",
+    "right_triangle_judgment_angle(1,AIB)",
+    "right_triangle_property_pythagorean(1,AIB)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_perimeter_formula(1,DCIA)": [],
+    "quadrilateral_perimeter_formula(1,ABEF)": [],
+    "quadrilateral_perimeter_formula(1,IGHB)": [],
+    "right_triangle_judgment_angle(1,AIB)": [
+      "right_triangle_property_pythagorean(1,AIB)"
+    ],
+    "right_triangle_property_pythagorean(1,AIB)": [],
+    "START": [
+      "quadrilateral_perimeter_formula(1,DCIA)",
+      "quadrilateral_perimeter_formula(1,ABEF)",
+      "quadrilateral_perimeter_formula(1,IGHB)",
+      "right_triangle_judgment_angle(1,AIB)"
+    ]
+  }
 }

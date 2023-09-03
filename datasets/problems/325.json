@@ -21,7 +21,15 @@
   "goal_cdl": "Value(MeasureOfAngle(CAE))",
   "problem_answer": "56",
   "theorem_seqs": [
-    "flat_angle(BAE)",
-    "angle_addition(BAC,CAE)"
-  ]
+    "flat_angle(1,BAE)",
+    "angle_addition(1,BAC,CAE)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,BAE)": [],
+    "angle_addition(1,BAC,CAE)": [],
+    "START": [
+      "flat_angle(1,BAE)",
+      "angle_addition(1,BAC,CAE)"
+    ]
+  }
 }

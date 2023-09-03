@@ -29,12 +29,36 @@
   "goal_cdl": "Value(LengthOfLine(FB))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "similar_triangle_property_angle_equal(TSR,GFE)",
-    "adjacent_complementary_angle(RTS,STA)",
-    "adjacent_complementary_angle(EGF,FGB)",
-    "similar_triangle_judgment_aa(STA,FGB)",
-    "similar_triangle_property_line_ratio(RTS,EGF)",
-    "similar_triangle_property_line_ratio(TAS,GBF)",
-    "similar_triangle_property_line_ratio(AST,BFG)"
-  ]
+    "similar_triangle_property_angle_equal(1,TSR,GFE)",
+    "adjacent_complementary_angle(1,RTS,STA)",
+    "adjacent_complementary_angle(1,EGF,FGB)",
+    "similar_triangle_judgment_aa(1,STA,FGB)",
+    "similar_triangle_property_line_ratio(1,RTS,EGF)",
+    "similar_triangle_property_line_ratio(1,TAS,GBF)",
+    "similar_triangle_property_line_ratio(1,AST,BFG)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_angle_equal(1,TSR,GFE)": [
+      "similar_triangle_judgment_aa(1,STA,FGB)"
+    ],
+    "adjacent_complementary_angle(1,RTS,STA)": [
+      "similar_triangle_judgment_aa(1,STA,FGB)"
+    ],
+    "adjacent_complementary_angle(1,EGF,FGB)": [
+      "similar_triangle_judgment_aa(1,STA,FGB)"
+    ],
+    "similar_triangle_judgment_aa(1,STA,FGB)": [
+      "similar_triangle_property_line_ratio(1,TAS,GBF)",
+      "similar_triangle_property_line_ratio(1,AST,BFG)"
+    ],
+    "similar_triangle_property_line_ratio(1,RTS,EGF)": [],
+    "similar_triangle_property_line_ratio(1,TAS,GBF)": [],
+    "similar_triangle_property_line_ratio(1,AST,BFG)": [],
+    "START": [
+      "similar_triangle_property_angle_equal(1,TSR,GFE)",
+      "adjacent_complementary_angle(1,RTS,STA)",
+      "adjacent_complementary_angle(1,EGF,FGB)",
+      "similar_triangle_property_line_ratio(1,RTS,EGF)"
+    ]
+  }
 }

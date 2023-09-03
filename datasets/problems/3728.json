@@ -22,7 +22,16 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(ED,ACB)",
-    "midsegment_of_triangle_property_length(ED,ACB)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,ED,ACB)",
+    "midsegment_of_triangle_property_length(1,ED,ACB)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,ED,ACB)": [
+      "midsegment_of_triangle_property_length(1,ED,ACB)"
+    ],
+    "midsegment_of_triangle_property_length(1,ED,ACB)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ACB)"
+    ]
+  }
 }

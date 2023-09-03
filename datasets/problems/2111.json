@@ -28,10 +28,25 @@
   "goal_cdl": "Value(LengthOfLine(FE))",
   "problem_answer": "sqrt(135)",
   "theorem_seqs": [
-    "diameter_of_circle_property_length_equal(AB,C)",
-    "circle_property_length_of_radius_and_diameter(C)",
-    "radius_of_circle_property_length_equal(CE,C)",
-    "right_triangle_judgment_angle(CFE)",
-    "right_triangle_property_pythagorean(CFE)"
-  ]
+    "diameter_of_circle_property_length_equal(1,AB,C)",
+    "circle_property_length_of_radius_and_diameter(1,C)",
+    "radius_of_circle_property_length_equal(1,CE,C)",
+    "right_triangle_judgment_angle(1,CFE)",
+    "right_triangle_property_pythagorean(1,CFE)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_length_equal(1,AB,C)": [],
+    "circle_property_length_of_radius_and_diameter(1,C)": [],
+    "radius_of_circle_property_length_equal(1,CE,C)": [],
+    "right_triangle_judgment_angle(1,CFE)": [
+      "right_triangle_property_pythagorean(1,CFE)"
+    ],
+    "right_triangle_property_pythagorean(1,CFE)": [],
+    "START": [
+      "diameter_of_circle_property_length_equal(1,AB,C)",
+      "circle_property_length_of_radius_and_diameter(1,C)",
+      "radius_of_circle_property_length_equal(1,CE,C)",
+      "right_triangle_judgment_angle(1,CFE)"
+    ]
+  }
 }

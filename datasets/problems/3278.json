@@ -27,8 +27,18 @@
   "goal_cdl": "Value(MeasureOfAngle(BCA))",
   "problem_answer": "28",
   "theorem_seqs": [
-    "angle_addition(DOB,BOA)",
-    "arc_property_center_angle(OAB,O)",
-    "arc_property_circumference_angle_external(OAB,C)"
-  ]
+    "angle_addition(1,DOB,BOA)",
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_circumference_angle_external(1,OAB,C)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,DOB,BOA)": [],
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_circumference_angle_external(1,OAB,C)": [],
+    "START": [
+      "angle_addition(1,DOB,BOA)",
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_circumference_angle_external(1,OAB,C)"
+    ]
+  }
 }

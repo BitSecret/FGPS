@@ -22,8 +22,25 @@
   "goal_cdl": "Value(Div(AreaOfTriangle(AOD),AreaOfTriangle(OBC)))",
   "problem_answer": "1/4",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "similar_triangle_judgment_aa(OBC,ODA)",
-    "similar_triangle_property_area_square_ratio(OBC,ODA)"
-  ]
+    "parallel_property_alternate_interior_angle(1,AD,BC)",
+    "parallel_property_alternate_interior_angle(2,AD,BC)",
+    "similar_triangle_judgment_aa(1,OBC,ODA)",
+    "similar_triangle_property_area_square_ratio(1,OBC,ODA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,AD,BC)": [
+      "similar_triangle_judgment_aa(1,OBC,ODA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AD,BC)": [
+      "similar_triangle_judgment_aa(1,OBC,ODA)"
+    ],
+    "similar_triangle_judgment_aa(1,OBC,ODA)": [
+      "similar_triangle_property_area_square_ratio(1,OBC,ODA)"
+    ],
+    "similar_triangle_property_area_square_ratio(1,OBC,ODA)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,AD,BC)",
+      "parallel_property_alternate_interior_angle(2,AD,BC)"
+    ]
+  }
 }

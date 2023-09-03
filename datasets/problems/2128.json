@@ -33,7 +33,16 @@
   "goal_cdl": "Value(MeasureOfAngle(DIB))",
   "problem_answer": "104",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(EA,IB,D)",
-    "parallel_property_corresponding_angle(DA,IB,L)"
-  ]
+    "parallel_property_collinear_extend(3,EA,IB,D)",
+    "parallel_property_corresponding_angle(1,DA,IB,L)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,EA,IB,D)": [
+      "parallel_property_corresponding_angle(1,DA,IB,L)"
+    ],
+    "parallel_property_corresponding_angle(1,DA,IB,L)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,EA,IB,D)"
+    ]
+  }
 }

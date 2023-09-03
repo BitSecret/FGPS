@@ -25,8 +25,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "5",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(DE,F,F)",
-    "right_triangle_judgment_angle(FED)",
-    "right_triangle_property_pythagorean(FED)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,DE,F,F)",
+    "right_triangle_judgment_angle(1,FED)",
+    "right_triangle_property_pythagorean(1,FED)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,DE,F,F)": [
+      "right_triangle_judgment_angle(1,FED)"
+    ],
+    "right_triangle_judgment_angle(1,FED)": [
+      "right_triangle_property_pythagorean(1,FED)"
+    ],
+    "right_triangle_property_pythagorean(1,FED)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,DE,F,F)"
+    ]
+  }
 }

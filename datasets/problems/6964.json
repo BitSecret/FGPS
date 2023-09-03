@@ -26,9 +26,21 @@
   "goal_cdl": "Value(MeasureOfAngle(DOA))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(ODB,C)",
-    "arc_property_center_angle(ODB,O)",
-    "flat_angle(BOA)",
-    "angle_addition(BOD,DOA)"
-  ]
+    "arc_property_circumference_angle_external(1,ODB,C)",
+    "arc_property_center_angle(1,ODB,O)",
+    "flat_angle(1,BOA)",
+    "angle_addition(1,BOD,DOA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,ODB,C)": [],
+    "arc_property_center_angle(1,ODB,O)": [],
+    "flat_angle(1,BOA)": [],
+    "angle_addition(1,BOD,DOA)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,ODB,C)",
+      "arc_property_center_angle(1,ODB,O)",
+      "flat_angle(1,BOA)",
+      "angle_addition(1,BOD,DOA)"
+    ]
+  }
 }

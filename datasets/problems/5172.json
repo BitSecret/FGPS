@@ -27,12 +27,38 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(O,OD,AB)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OE,CA)",
-    "line_addition(AD,DB)",
-    "line_addition(AE,EC)",
-    "similar_triangle_judgment_sas(ADE,ABC)",
-    "similar_triangle_property_line_ratio(DEA,BCA)",
-    "similar_triangle_property_line_ratio(ADE,ABC)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CA)",
+    "line_addition(1,AD,DB)",
+    "line_addition(1,AE,EC)",
+    "similar_triangle_judgment_sas(1,ADE,ABC)",
+    "similar_triangle_property_line_ratio(1,DEA,BCA)",
+    "similar_triangle_property_line_ratio(1,ADE,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)": [
+      "similar_triangle_judgment_sas(1,ADE,ABC)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CA)": [
+      "similar_triangle_judgment_sas(1,ADE,ABC)"
+    ],
+    "line_addition(1,AD,DB)": [
+      "similar_triangle_judgment_sas(1,ADE,ABC)"
+    ],
+    "line_addition(1,AE,EC)": [
+      "similar_triangle_judgment_sas(1,ADE,ABC)"
+    ],
+    "similar_triangle_judgment_sas(1,ADE,ABC)": [
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,DEA,BCA)"
+    ],
+    "similar_triangle_property_line_ratio(1,DEA,BCA)": [],
+    "similar_triangle_property_line_ratio(1,ADE,ABC)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CA)",
+      "line_addition(1,AD,DB)",
+      "line_addition(1,AE,EC)"
+    ]
+  }
 }

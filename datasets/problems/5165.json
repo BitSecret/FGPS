@@ -27,12 +27,38 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "7",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(O,OF,CA)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OE,AB)",
-    "line_addition(BE,EA)",
-    "line_addition(CF,FA)",
-    "similar_triangle_judgment_sas(ABC,AEF)",
-    "similar_triangle_property_line_ratio(BCA,EFA)",
-    "similar_triangle_property_line_ratio(ABC,AEF)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OF,CA)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AB)",
+    "line_addition(1,BE,EA)",
+    "line_addition(1,CF,FA)",
+    "similar_triangle_judgment_sas(1,ABC,AEF)",
+    "similar_triangle_property_line_ratio(1,BCA,EFA)",
+    "similar_triangle_property_line_ratio(1,ABC,AEF)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OF,CA)": [
+      "similar_triangle_judgment_sas(1,ABC,AEF)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AB)": [
+      "similar_triangle_judgment_sas(1,ABC,AEF)"
+    ],
+    "line_addition(1,BE,EA)": [
+      "similar_triangle_judgment_sas(1,ABC,AEF)"
+    ],
+    "line_addition(1,CF,FA)": [
+      "similar_triangle_judgment_sas(1,ABC,AEF)"
+    ],
+    "similar_triangle_judgment_sas(1,ABC,AEF)": [
+      "similar_triangle_property_line_ratio(1,ABC,AEF)",
+      "similar_triangle_property_line_ratio(1,BCA,EFA)"
+    ],
+    "similar_triangle_property_line_ratio(1,BCA,EFA)": [],
+    "similar_triangle_property_line_ratio(1,ABC,AEF)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OF,CA)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,AB)",
+      "line_addition(1,BE,EA)",
+      "line_addition(1,CF,FA)"
+    ]
+  }
 }

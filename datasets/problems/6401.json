@@ -23,13 +23,41 @@
   "goal_cdl": "Value(MeasureOfAngle(EFA))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AED,DEB)",
-    "line_addition(AF,FD)",
-    "right_triangle_judgment_angle(AED)",
-    "median_of_triangle_judgment(EF,EDA)",
-    "right_triangle_property_length_of_median(AED,F)",
-    "isosceles_triangle_judgment_line_equal(FAE)",
-    "isosceles_triangle_property_angle_equal(FAE)",
-    "triangle_property_angle_sum(FAE)"
-  ]
+    "adjacent_complementary_angle(1,AED,DEB)",
+    "line_addition(1,AF,FD)",
+    "right_triangle_judgment_angle(1,AED)",
+    "median_of_triangle_judgment(1,EF,EDA)",
+    "right_triangle_property_length_of_median(1,AED,F)",
+    "isosceles_triangle_judgment_line_equal(1,FAE)",
+    "isosceles_triangle_property_angle_equal(1,FAE)",
+    "triangle_property_angle_sum(1,FAE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AED,DEB)": [
+      "right_triangle_judgment_angle(1,AED)"
+    ],
+    "line_addition(1,AF,FD)": [
+      "isosceles_triangle_judgment_line_equal(1,FAE)"
+    ],
+    "right_triangle_judgment_angle(1,AED)": [
+      "right_triangle_property_length_of_median(1,AED,F)"
+    ],
+    "median_of_triangle_judgment(1,EF,EDA)": [
+      "right_triangle_property_length_of_median(1,AED,F)"
+    ],
+    "right_triangle_property_length_of_median(1,AED,F)": [
+      "isosceles_triangle_judgment_line_equal(1,FAE)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,FAE)": [
+      "isosceles_triangle_property_angle_equal(1,FAE)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,FAE)": [],
+    "triangle_property_angle_sum(1,FAE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AED,DEB)",
+      "line_addition(1,AF,FD)",
+      "median_of_triangle_judgment(1,EF,EDA)",
+      "triangle_property_angle_sum(1,FAE)"
+    ]
+  }
 }

@@ -27,8 +27,19 @@
   "goal_cdl": "Value(MeasureOfAngle(FNI))",
   "problem_answer": "79",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FH,JK,N)",
-    "parallel_property_corresponding_angle(NH,JK,I)",
-    "adjacent_complementary_angle(FNI,INH)"
-  ]
+    "parallel_property_collinear_extend(3,FH,JK,N)",
+    "parallel_property_corresponding_angle(1,NH,JK,I)",
+    "adjacent_complementary_angle(1,FNI,INH)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,FH,JK,N)": [
+      "parallel_property_corresponding_angle(1,NH,JK,I)"
+    ],
+    "parallel_property_corresponding_angle(1,NH,JK,I)": [],
+    "adjacent_complementary_angle(1,FNI,INH)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,FH,JK,N)",
+      "adjacent_complementary_angle(1,FNI,INH)"
+    ]
+  }
 }

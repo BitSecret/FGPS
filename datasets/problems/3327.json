@@ -24,9 +24,23 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "4.5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AED,DEB)",
-    "mirror_congruent_triangle_judgment_aas(DAE,DCA)",
-    "mirror_congruent_triangle_property_line_equal(AED,ADC)",
-    "line_addition(BD,DC)"
-  ]
+    "adjacent_complementary_angle(1,AED,DEB)",
+    "mirror_congruent_triangle_judgment_aas(1,DAE,DCA)",
+    "mirror_congruent_triangle_property_line_equal(1,AED,ADC)",
+    "line_addition(1,BD,DC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AED,DEB)": [
+      "mirror_congruent_triangle_judgment_aas(1,DAE,DCA)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,DAE,DCA)": [
+      "mirror_congruent_triangle_property_line_equal(1,AED,ADC)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,AED,ADC)": [],
+    "line_addition(1,BD,DC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AED,DEB)",
+      "line_addition(1,BD,DC)"
+    ]
+  }
 }

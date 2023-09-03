@@ -30,14 +30,46 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "6.5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CDA,ADM)",
-    "triangle_property_angle_sum(ACD)",
-    "triangle_property_angle_sum(ADM)",
-    "isosceles_triangle_judgment_angle_equal(ACM)",
-    "altitude_of_triangle_judgment(AD,ACM)",
-    "isosceles_triangle_property_line_coincidence(ACM,D)",
-    "line_addition(BA,AM)",
-    "midsegment_of_triangle_judgment_midpoint(DE,CMB)",
-    "midsegment_of_triangle_property_length(DE,CMB)"
-  ]
+    "adjacent_complementary_angle(1,CDA,ADM)",
+    "triangle_property_angle_sum(1,ACD)",
+    "triangle_property_angle_sum(1,ADM)",
+    "isosceles_triangle_judgment_angle_equal(1,ACM)",
+    "altitude_of_triangle_judgment(1,AD,ACM)",
+    "isosceles_triangle_property_line_coincidence(1,ACM,D)",
+    "line_addition(1,BA,AM)",
+    "midsegment_of_triangle_judgment_midpoint(1,DE,CMB)",
+    "midsegment_of_triangle_property_length(1,DE,CMB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CDA,ADM)": [
+      "isosceles_triangle_judgment_angle_equal(1,ACM)"
+    ],
+    "triangle_property_angle_sum(1,ACD)": [
+      "isosceles_triangle_judgment_angle_equal(1,ACM)"
+    ],
+    "triangle_property_angle_sum(1,ADM)": [
+      "isosceles_triangle_judgment_angle_equal(1,ACM)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ACM)": [
+      "isosceles_triangle_property_line_coincidence(1,ACM,D)"
+    ],
+    "altitude_of_triangle_judgment(1,AD,ACM)": [
+      "isosceles_triangle_property_line_coincidence(1,ACM,D)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,ACM,D)": [
+      "midsegment_of_triangle_judgment_midpoint(1,DE,CMB)"
+    ],
+    "line_addition(1,BA,AM)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,DE,CMB)": [
+      "midsegment_of_triangle_property_length(1,DE,CMB)"
+    ],
+    "midsegment_of_triangle_property_length(1,DE,CMB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CDA,ADM)",
+      "triangle_property_angle_sum(1,ACD)",
+      "triangle_property_angle_sum(1,ADM)",
+      "altitude_of_triangle_judgment(1,AD,ACM)",
+      "line_addition(1,BA,AM)"
+    ]
+  }
 }

@@ -27,9 +27,21 @@
   "goal_cdl": "Value(MeasureOfAngle(AEC))",
   "problem_answer": "100",
   "theorem_seqs": [
-    "arc_property_center_angle(OBD,O)",
-    "arc_property_circumference_angle_external(OBD,C)",
-    "triangle_property_angle_sum(CED)",
-    "adjacent_complementary_angle(AEC,CED)"
-  ]
+    "arc_property_center_angle(1,OBD,O)",
+    "arc_property_circumference_angle_external(1,OBD,C)",
+    "triangle_property_angle_sum(1,CED)",
+    "adjacent_complementary_angle(1,AEC,CED)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OBD,O)": [],
+    "arc_property_circumference_angle_external(1,OBD,C)": [],
+    "triangle_property_angle_sum(1,CED)": [],
+    "adjacent_complementary_angle(1,AEC,CED)": [],
+    "START": [
+      "arc_property_center_angle(1,OBD,O)",
+      "arc_property_circumference_angle_external(1,OBD,C)",
+      "triangle_property_angle_sum(1,CED)",
+      "adjacent_complementary_angle(1,AEC,CED)"
+    ]
+  }
 }

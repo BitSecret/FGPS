@@ -25,20 +25,63 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ACBN))",
   "problem_answer": "92.46",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CEA,AEF)",
-    "adjacent_complementary_angle(CFN,NFB)",
-    "parallel_judgment_per_per(EA,FN)",
-    "parallel_property_collinear_extend(BC,NA,F)",
-    "parallel_property_collinear_extend(FC,NA,E)",
-    "parallelogram_judgment_parallel_and_parallel(AEFN)",
-    "parallelogram_property_opposite_line_equal(AEFN)",
-    "parallelogram_property_opposite_line_equal(EFNA)",
-    "right_triangle_judgment_angle(CEA)",
-    "right_triangle_judgment_angle(NFB)",
-    "right_triangle_property_pythagorean(CEA)",
-    "right_triangle_property_pythagorean(NFB)",
-    "line_addition(CE,EF)",
-    "line_addition(CF,FB)",
-    "quadrilateral_perimeter_formula(ACBN)"
-  ]
+    "adjacent_complementary_angle(1,CEA,AEF)",
+    "adjacent_complementary_angle(1,CFN,NFB)",
+    "parallel_judgment_per_per(1,EA,FN)",
+    "parallel_property_collinear_extend(3,BC,NA,F)",
+    "parallel_property_collinear_extend(3,FC,NA,E)",
+    "parallelogram_judgment_parallel_and_parallel(1,AEFN)",
+    "parallelogram_property_opposite_line_equal(1,AEFN)",
+    "parallelogram_property_opposite_line_equal(1,EFNA)",
+    "right_triangle_judgment_angle(1,CEA)",
+    "right_triangle_judgment_angle(1,NFB)",
+    "right_triangle_property_pythagorean(1,CEA)",
+    "right_triangle_property_pythagorean(1,NFB)",
+    "line_addition(1,CE,EF)",
+    "line_addition(1,CF,FB)",
+    "quadrilateral_perimeter_formula(1,ACBN)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CEA,AEF)": [
+      "right_triangle_judgment_angle(1,CEA)"
+    ],
+    "adjacent_complementary_angle(1,CFN,NFB)": [
+      "right_triangle_judgment_angle(1,NFB)"
+    ],
+    "parallel_judgment_per_per(1,EA,FN)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AEFN)"
+    ],
+    "parallel_property_collinear_extend(3,BC,NA,F)": [
+      "parallel_property_collinear_extend(3,FC,NA,E)"
+    ],
+    "parallel_property_collinear_extend(3,FC,NA,E)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AEFN)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,AEFN)": [
+      "parallelogram_property_opposite_line_equal(1,AEFN)",
+      "parallelogram_property_opposite_line_equal(1,EFNA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,AEFN)": [],
+    "parallelogram_property_opposite_line_equal(1,EFNA)": [],
+    "right_triangle_judgment_angle(1,CEA)": [
+      "right_triangle_property_pythagorean(1,CEA)"
+    ],
+    "right_triangle_judgment_angle(1,NFB)": [
+      "right_triangle_property_pythagorean(1,NFB)"
+    ],
+    "right_triangle_property_pythagorean(1,CEA)": [],
+    "right_triangle_property_pythagorean(1,NFB)": [],
+    "line_addition(1,CE,EF)": [],
+    "line_addition(1,CF,FB)": [],
+    "quadrilateral_perimeter_formula(1,ACBN)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CEA,AEF)",
+      "adjacent_complementary_angle(1,CFN,NFB)",
+      "parallel_judgment_per_per(1,EA,FN)",
+      "parallel_property_collinear_extend(3,BC,NA,F)",
+      "line_addition(1,CE,EF)",
+      "line_addition(1,CF,FB)",
+      "quadrilateral_perimeter_formula(1,ACBN)"
+    ]
+  }
 }

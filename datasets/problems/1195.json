@@ -26,9 +26,23 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "31",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DJ,MB,P)",
-    "parallel_property_collinear_extend(BM,DP,A)",
-    "parallel_property_corresponding_angle(MA,DP,K)",
-    "adjacent_complementary_angle(PDK,KDJ)"
-  ]
+    "parallel_property_collinear_extend(1,DJ,MB,P)",
+    "parallel_property_collinear_extend(2,BM,DP,A)",
+    "parallel_property_corresponding_angle(2,MA,DP,K)",
+    "adjacent_complementary_angle(1,PDK,KDJ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,DJ,MB,P)": [
+      "parallel_property_collinear_extend(2,BM,DP,A)"
+    ],
+    "parallel_property_collinear_extend(2,BM,DP,A)": [
+      "parallel_property_corresponding_angle(2,MA,DP,K)"
+    ],
+    "parallel_property_corresponding_angle(2,MA,DP,K)": [],
+    "adjacent_complementary_angle(1,PDK,KDJ)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,DJ,MB,P)",
+      "adjacent_complementary_angle(1,PDK,KDJ)"
+    ]
+  }
 }

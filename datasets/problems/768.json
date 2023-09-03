@@ -22,10 +22,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "127",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(OPL,M)",
-    "arc_property_circumference_angle_external(OMP,L)",
-    "isosceles_triangle_judgment_line_equal(MPL)",
-    "isosceles_triangle_property_angle_equal(MPL)",
-    "triangle_property_angle_sum(MPL)"
-  ]
+    "arc_property_circumference_angle_external(1,OPL,M)",
+    "arc_property_circumference_angle_external(1,OMP,L)",
+    "isosceles_triangle_judgment_line_equal(1,MPL)",
+    "isosceles_triangle_property_angle_equal(1,MPL)",
+    "triangle_property_angle_sum(1,MPL)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,OPL,M)": [],
+    "arc_property_circumference_angle_external(1,OMP,L)": [],
+    "isosceles_triangle_judgment_line_equal(1,MPL)": [
+      "isosceles_triangle_property_angle_equal(1,MPL)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,MPL)": [],
+    "triangle_property_angle_sum(1,MPL)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,OPL,M)",
+      "arc_property_circumference_angle_external(1,OMP,L)",
+      "isosceles_triangle_judgment_line_equal(1,MPL)",
+      "triangle_property_angle_sum(1,MPL)"
+    ]
+  }
 }

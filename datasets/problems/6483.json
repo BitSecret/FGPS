@@ -19,9 +19,22 @@
   "goal_cdl": "Value(MeasureOfAngle(BDA))",
   "problem_answer": "32",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(BCD)",
-    "isosceles_triangle_property_angle_equal(BCD)",
-    "parallel_property_ipsilateral_internal_angle(CB,DA)",
-    "angle_addition(CDB,BDA)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,BCD)",
+    "isosceles_triangle_property_angle_equal(1,BCD)",
+    "parallel_property_ipsilateral_internal_angle(1,CB,DA)",
+    "angle_addition(1,CDB,BDA)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,BCD)": [
+      "isosceles_triangle_property_angle_equal(1,BCD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BCD)": [],
+    "parallel_property_ipsilateral_internal_angle(1,CB,DA)": [],
+    "angle_addition(1,CDB,BDA)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,BCD)",
+      "parallel_property_ipsilateral_internal_angle(1,CB,DA)",
+      "angle_addition(1,CDB,BDA)"
+    ]
+  }
 }

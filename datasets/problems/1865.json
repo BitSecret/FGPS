@@ -20,10 +20,28 @@
   "goal_cdl": "Value(LengthOfLine(DF))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(GFH,HFD)",
-    "isosceles_triangle_judgment_line_equal(HGD)",
-    "altitude_of_triangle_judgment(HF,HGD)",
-    "isosceles_triangle_property_line_coincidence(HGD,F)",
-    "line_addition(DF,FG)"
-  ]
+    "adjacent_complementary_angle(1,GFH,HFD)",
+    "isosceles_triangle_judgment_line_equal(1,HGD)",
+    "altitude_of_triangle_judgment(1,HF,HGD)",
+    "isosceles_triangle_property_line_coincidence(1,HGD,F)",
+    "line_addition(1,DF,FG)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,GFH,HFD)": [
+      "altitude_of_triangle_judgment(1,HF,HGD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,HGD)": [
+      "isosceles_triangle_property_line_coincidence(1,HGD,F)"
+    ],
+    "altitude_of_triangle_judgment(1,HF,HGD)": [
+      "isosceles_triangle_property_line_coincidence(1,HGD,F)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,HGD,F)": [],
+    "line_addition(1,DF,FG)": [],
+    "START": [
+      "adjacent_complementary_angle(1,GFH,HFD)",
+      "isosceles_triangle_judgment_line_equal(1,HGD)",
+      "line_addition(1,DF,FG)"
+    ]
+  }
 }

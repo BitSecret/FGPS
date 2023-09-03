@@ -22,7 +22,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "21",
   "theorem_seqs": [
-    "congruent_arc_judgment_chord_equal(OBA,OED)",
-    "congruent_arc_property_measure_equal(OBA,OED)"
-  ]
+    "congruent_arc_judgment_chord_equal(1,OBA,OED)",
+    "congruent_arc_property_measure_equal(1,OBA,OED)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_chord_equal(1,OBA,OED)": [
+      "congruent_arc_property_measure_equal(1,OBA,OED)"
+    ],
+    "congruent_arc_property_measure_equal(1,OBA,OED)": [],
+    "START": [
+      "congruent_arc_judgment_chord_equal(1,OBA,OED)"
+    ]
+  }
 }

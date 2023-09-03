@@ -31,24 +31,84 @@
   "goal_cdl": "Value(LengthOfLine(BE))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(EG,AD)",
-    "perpendicular_bisector_property_distance_equal(FG,DA)",
-    "isosceles_triangle_judgment_line_equal(EAD)",
-    "isosceles_triangle_judgment_line_equal(FDA)",
-    "isosceles_triangle_property_angle_equal(EAD)",
-    "isosceles_triangle_property_angle_equal(FDA)",
-    "parallel_judgment_alternate_interior_angle(AE,FD)",
-    "parallel_judgment_alternate_interior_angle(ED,AF)",
-    "parallel_judgment_alternate_interior_angle(ED,AC)",
-    "parallelogram_judgment_parallel_and_parallel(EAFD)",
-    "kite_judgment_equal_and_equal(EAFD)",
-    "rhombus_judgment_parallelogram_and_kite(EAFD)",
-    "line_addition(AE,EB)",
-    "line_addition(BD,DC)",
-    "parallel_property_corresponding_angle(ED,AF,B)",
-    "parallel_property_corresponding_angle(CA,DE,B)",
-    "similar_triangle_judgment_aa(BED,BAC)",
-    "similar_triangle_property_line_ratio(EDB,ACB)",
-    "similar_triangle_property_line_ratio(DBE,CBA)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,EG,AD)",
+    "perpendicular_bisector_property_distance_equal(1,FG,DA)",
+    "isosceles_triangle_judgment_line_equal(1,EAD)",
+    "isosceles_triangle_judgment_line_equal(1,FDA)",
+    "isosceles_triangle_property_angle_equal(1,EAD)",
+    "isosceles_triangle_property_angle_equal(1,FDA)",
+    "parallel_judgment_alternate_interior_angle(1,AE,FD)",
+    "parallel_judgment_alternate_interior_angle(2,ED,AF)",
+    "parallel_judgment_alternate_interior_angle(2,ED,AC)",
+    "parallelogram_judgment_parallel_and_parallel(1,EAFD)",
+    "kite_judgment_equal_and_equal(1,EAFD)",
+    "rhombus_judgment_parallelogram_and_kite(1,EAFD)",
+    "line_addition(1,AE,EB)",
+    "line_addition(1,BD,DC)",
+    "parallel_property_corresponding_angle(1,ED,AF,B)",
+    "parallel_property_corresponding_angle(2,CA,DE,B)",
+    "similar_triangle_judgment_aa(1,BED,BAC)",
+    "similar_triangle_property_line_ratio(1,EDB,ACB)",
+    "similar_triangle_property_line_ratio(1,DBE,CBA)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,EG,AD)": [
+      "isosceles_triangle_judgment_line_equal(1,EAD)",
+      "kite_judgment_equal_and_equal(1,EAFD)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,FG,DA)": [
+      "isosceles_triangle_judgment_line_equal(1,FDA)",
+      "kite_judgment_equal_and_equal(1,EAFD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EAD)": [
+      "isosceles_triangle_property_angle_equal(1,EAD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,FDA)": [
+      "isosceles_triangle_property_angle_equal(1,FDA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EAD)": [
+      "parallel_judgment_alternate_interior_angle(2,ED,AF)",
+      "parallel_judgment_alternate_interior_angle(2,ED,AC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,FDA)": [
+      "parallel_judgment_alternate_interior_angle(1,AE,FD)"
+    ],
+    "parallel_judgment_alternate_interior_angle(1,AE,FD)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EAFD)"
+    ],
+    "parallel_judgment_alternate_interior_angle(2,ED,AF)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EAFD)",
+      "parallel_property_corresponding_angle(1,ED,AF,B)"
+    ],
+    "parallel_judgment_alternate_interior_angle(2,ED,AC)": [
+      "parallel_property_corresponding_angle(2,CA,DE,B)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,EAFD)": [
+      "rhombus_judgment_parallelogram_and_kite(1,EAFD)"
+    ],
+    "kite_judgment_equal_and_equal(1,EAFD)": [
+      "rhombus_judgment_parallelogram_and_kite(1,EAFD)"
+    ],
+    "rhombus_judgment_parallelogram_and_kite(1,EAFD)": [],
+    "line_addition(1,AE,EB)": [],
+    "line_addition(1,BD,DC)": [],
+    "parallel_property_corresponding_angle(1,ED,AF,B)": [
+      "similar_triangle_judgment_aa(1,BED,BAC)"
+    ],
+    "parallel_property_corresponding_angle(2,CA,DE,B)": [
+      "similar_triangle_judgment_aa(1,BED,BAC)"
+    ],
+    "similar_triangle_judgment_aa(1,BED,BAC)": [
+      "similar_triangle_property_line_ratio(1,EDB,ACB)",
+      "similar_triangle_property_line_ratio(1,DBE,CBA)"
+    ],
+    "similar_triangle_property_line_ratio(1,EDB,ACB)": [],
+    "similar_triangle_property_line_ratio(1,DBE,CBA)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,EG,AD)",
+      "perpendicular_bisector_property_distance_equal(1,FG,DA)",
+      "line_addition(1,AE,EB)",
+      "line_addition(1,BD,DC)"
+    ]
+  }
 }

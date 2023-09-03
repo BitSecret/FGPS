@@ -18,8 +18,19 @@
   "goal_cdl": "Value(MeasureOfAngle(DAB))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "parallelogram_judgment_equal_and_equal(ABCD)",
-    "quadrilateral_property_angle_sum(ABCD)",
-    "parallelogram_property_opposite_angle_equal(ABCD)"
-  ]
+    "parallelogram_judgment_equal_and_equal(1,ABCD)",
+    "quadrilateral_property_angle_sum(1,ABCD)",
+    "parallelogram_property_opposite_angle_equal(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_equal_and_equal(1,ABCD)": [
+      "parallelogram_property_opposite_angle_equal(1,ABCD)"
+    ],
+    "quadrilateral_property_angle_sum(1,ABCD)": [],
+    "parallelogram_property_opposite_angle_equal(1,ABCD)": [],
+    "START": [
+      "parallelogram_judgment_equal_and_equal(1,ABCD)",
+      "quadrilateral_property_angle_sum(1,ABCD)"
+    ]
+  }
 }

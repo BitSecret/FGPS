@@ -22,9 +22,25 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CBAD))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "parallel_judgment_per_per(BC,AD)",
-    "parallel_judgment_per_per(AB,DC)",
-    "parallelogram_judgment_parallel_and_parallel(CBAD)",
-    "parallelogram_area_formula_common(CBAD)"
-  ]
+    "parallel_judgment_per_per(1,BC,AD)",
+    "parallel_judgment_per_per(1,AB,DC)",
+    "parallelogram_judgment_parallel_and_parallel(1,CBAD)",
+    "parallelogram_area_formula_common(1,CBAD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_per_per(1,BC,AD)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CBAD)"
+    ],
+    "parallel_judgment_per_per(1,AB,DC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,CBAD)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,CBAD)": [
+      "parallelogram_area_formula_common(1,CBAD)"
+    ],
+    "parallelogram_area_formula_common(1,CBAD)": [],
+    "START": [
+      "parallel_judgment_per_per(1,BC,AD)",
+      "parallel_judgment_per_per(1,AB,DC)"
+    ]
+  }
 }

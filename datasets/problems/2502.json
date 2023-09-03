@@ -22,9 +22,22 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(BADC))",
   "problem_answer": "48",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(DBA)",
-    "right_triangle_property_pythagorean(DBA)",
-    "altitude_of_quadrilateral_judgment_diagonal(CBAD)",
-    "parallelogram_area_formula_common(CBAD)"
-  ]
+    "right_triangle_judgment_angle(1,DBA)",
+    "right_triangle_property_pythagorean(1,DBA)",
+    "altitude_of_quadrilateral_judgment_diagonal(3,CBAD)",
+    "parallelogram_area_formula_common(1,CBAD)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,DBA)": [
+      "right_triangle_property_pythagorean(1,DBA)"
+    ],
+    "right_triangle_property_pythagorean(1,DBA)": [],
+    "altitude_of_quadrilateral_judgment_diagonal(3,CBAD)": [],
+    "parallelogram_area_formula_common(1,CBAD)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,DBA)",
+      "altitude_of_quadrilateral_judgment_diagonal(3,CBAD)",
+      "parallelogram_area_formula_common(1,CBAD)"
+    ]
+  }
 }

@@ -37,24 +37,86 @@
   "goal_cdl": "Value(RadiusOfCircle(O))",
   "problem_answer": "2.5",
   "theorem_seqs": [
-    "diameter_of_circle_judgment_pass_centre(MOC,O)",
-    "diameter_of_circle_property_right_angle(CAM,O)",
-    "diameter_of_circle_property_right_angle(CDM,O)",
-    "adjacent_complementary_angle(DEC,CEI)",
-    "parallel_judgment_corresponding_angle(EI,AM,C)",
-    "parallel_property_collinear_extend(EI,AM,D)",
-    "parallel_property_alternate_interior_angle(DE,AM)",
-    "arc_property_circumference_angle_external(OMB,D)",
-    "arc_property_circumference_angle_external(ODA,M)",
-    "congruent_arc_judgment_measure_equal(OMB,ODA)",
-    "congruent_arc_property_length_equal(OMB,ODA)",
-    "arc_addition_length(ODA,OAM)",
-    "arc_addition_length(OAM,OMB)",
-    "congruent_arc_judgment_length_equal(ODM,OAB)",
-    "congruent_arc_property_chord_equal(ODM,OAB)",
-    "right_triangle_judgment_angle(CDM)",
-    "right_triangle_property_pythagorean(CDM)",
-    "diameter_of_circle_property_length_equal(MC,O)",
-    "circle_property_length_of_radius_and_diameter(O)"
-  ]
+    "diameter_of_circle_judgment_pass_centre(1,MOC,O)",
+    "diameter_of_circle_property_right_angle(1,CAM,O)",
+    "diameter_of_circle_property_right_angle(1,CDM,O)",
+    "adjacent_complementary_angle(1,DEC,CEI)",
+    "parallel_judgment_corresponding_angle(1,EI,AM,C)",
+    "parallel_property_collinear_extend(1,EI,AM,D)",
+    "parallel_property_alternate_interior_angle(1,DE,AM)",
+    "arc_property_circumference_angle_external(1,OMB,D)",
+    "arc_property_circumference_angle_external(1,ODA,M)",
+    "congruent_arc_judgment_measure_equal(1,OMB,ODA)",
+    "congruent_arc_property_length_equal(1,OMB,ODA)",
+    "arc_addition_length(1,ODA,OAM)",
+    "arc_addition_length(1,OAM,OMB)",
+    "congruent_arc_judgment_length_equal(1,ODM,OAB)",
+    "congruent_arc_property_chord_equal(1,ODM,OAB)",
+    "right_triangle_judgment_angle(1,CDM)",
+    "right_triangle_property_pythagorean(1,CDM)",
+    "diameter_of_circle_property_length_equal(1,MC,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_judgment_pass_centre(1,MOC,O)": [
+      "diameter_of_circle_property_right_angle(1,CAM,O)",
+      "diameter_of_circle_property_right_angle(1,CDM,O)",
+      "diameter_of_circle_property_length_equal(1,MC,O)"
+    ],
+    "diameter_of_circle_property_right_angle(1,CAM,O)": [
+      "parallel_judgment_corresponding_angle(1,EI,AM,C)"
+    ],
+    "diameter_of_circle_property_right_angle(1,CDM,O)": [
+      "right_triangle_judgment_angle(1,CDM)"
+    ],
+    "adjacent_complementary_angle(1,DEC,CEI)": [
+      "parallel_judgment_corresponding_angle(1,EI,AM,C)"
+    ],
+    "parallel_judgment_corresponding_angle(1,EI,AM,C)": [
+      "parallel_property_collinear_extend(1,EI,AM,D)"
+    ],
+    "parallel_property_collinear_extend(1,EI,AM,D)": [
+      "parallel_property_alternate_interior_angle(1,DE,AM)"
+    ],
+    "parallel_property_alternate_interior_angle(1,DE,AM)": [
+      "congruent_arc_judgment_measure_equal(1,OMB,ODA)"
+    ],
+    "arc_property_circumference_angle_external(1,OMB,D)": [
+      "congruent_arc_judgment_measure_equal(1,OMB,ODA)"
+    ],
+    "arc_property_circumference_angle_external(1,ODA,M)": [
+      "congruent_arc_judgment_measure_equal(1,OMB,ODA)"
+    ],
+    "congruent_arc_judgment_measure_equal(1,OMB,ODA)": [
+      "congruent_arc_property_length_equal(1,OMB,ODA)"
+    ],
+    "congruent_arc_property_length_equal(1,OMB,ODA)": [
+      "congruent_arc_judgment_length_equal(1,ODM,OAB)"
+    ],
+    "arc_addition_length(1,ODA,OAM)": [
+      "congruent_arc_judgment_length_equal(1,ODM,OAB)"
+    ],
+    "arc_addition_length(1,OAM,OMB)": [
+      "congruent_arc_judgment_length_equal(1,ODM,OAB)"
+    ],
+    "congruent_arc_judgment_length_equal(1,ODM,OAB)": [
+      "congruent_arc_property_chord_equal(1,ODM,OAB)"
+    ],
+    "congruent_arc_property_chord_equal(1,ODM,OAB)": [],
+    "right_triangle_judgment_angle(1,CDM)": [
+      "right_triangle_property_pythagorean(1,CDM)"
+    ],
+    "right_triangle_property_pythagorean(1,CDM)": [],
+    "diameter_of_circle_property_length_equal(1,MC,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "START": [
+      "diameter_of_circle_judgment_pass_centre(1,MOC,O)",
+      "adjacent_complementary_angle(1,DEC,CEI)",
+      "arc_property_circumference_angle_external(1,OMB,D)",
+      "arc_property_circumference_angle_external(1,ODA,M)",
+      "arc_addition_length(1,ODA,OAM)",
+      "arc_addition_length(1,OAM,OMB)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  }
 }

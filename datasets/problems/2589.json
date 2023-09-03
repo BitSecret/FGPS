@@ -30,12 +30,32 @@
   "goal_cdl": "Value(MeasureOfAngle(HNO))",
   "problem_answer": "43",
   "theorem_seqs": [
-    "flat_angle(POC)",
-    "angle_addition(POM,MOC)",
-    "flat_angle(HNJ)",
-    "parallel_property_collinear_extend(KC,GJ,O)",
-    "parallel_property_collinear_extend(JG,CO,N)",
-    "parallel_property_corresponding_angle(OC,NJ,M)",
-    "angle_addition(HNO,ONJ)"
-  ]
+    "flat_angle(1,POC)",
+    "angle_addition(1,POM,MOC)",
+    "flat_angle(1,HNJ)",
+    "parallel_property_collinear_extend(3,KC,GJ,O)",
+    "parallel_property_collinear_extend(3,JG,CO,N)",
+    "parallel_property_corresponding_angle(1,OC,NJ,M)",
+    "angle_addition(1,HNO,ONJ)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,POC)": [],
+    "angle_addition(1,POM,MOC)": [],
+    "flat_angle(1,HNJ)": [],
+    "parallel_property_collinear_extend(3,KC,GJ,O)": [
+      "parallel_property_collinear_extend(3,JG,CO,N)"
+    ],
+    "parallel_property_collinear_extend(3,JG,CO,N)": [
+      "parallel_property_corresponding_angle(1,OC,NJ,M)"
+    ],
+    "parallel_property_corresponding_angle(1,OC,NJ,M)": [],
+    "angle_addition(1,HNO,ONJ)": [],
+    "START": [
+      "flat_angle(1,POC)",
+      "angle_addition(1,POM,MOC)",
+      "flat_angle(1,HNJ)",
+      "parallel_property_collinear_extend(3,KC,GJ,O)",
+      "angle_addition(1,HNO,ONJ)"
+    ]
+  }
 }

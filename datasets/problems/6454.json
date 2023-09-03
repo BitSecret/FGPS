@@ -23,8 +23,18 @@
   "goal_cdl": "Value(MeasureOfAngle(DOC))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "triangle_property_angle_sum(AOD)",
-    "adjacent_complementary_angle(AOD,DOC)"
-  ]
+    "parallel_property_alternate_interior_angle(2,AD,BC)",
+    "triangle_property_angle_sum(1,AOD)",
+    "adjacent_complementary_angle(1,AOD,DOC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,AD,BC)": [],
+    "triangle_property_angle_sum(1,AOD)": [],
+    "adjacent_complementary_angle(1,AOD,DOC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,AD,BC)",
+      "triangle_property_angle_sum(1,AOD)",
+      "adjacent_complementary_angle(1,AOD,DOC)"
+    ]
+  }
 }

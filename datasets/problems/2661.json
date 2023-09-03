@@ -24,14 +24,45 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "48",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(GA,G)",
-    "radius_of_circle_property_length_equal(GC,G)",
-    "flat_angle(CBA)",
-    "angle_addition(CBG,GBA)",
-    "right_triangle_judgment_angle(GBA)",
-    "right_triangle_property_pythagorean(GBA)",
-    "mirror_congruent_triangle_judgment_hl(GBA,GCB)",
-    "mirror_congruent_triangle_property_line_equal(GBA,GCB)",
-    "line_addition(AB,BC)"
-  ]
+    "radius_of_circle_property_length_equal(1,GA,G)",
+    "radius_of_circle_property_length_equal(1,GC,G)",
+    "flat_angle(1,CBA)",
+    "angle_addition(1,CBG,GBA)",
+    "right_triangle_judgment_angle(1,GBA)",
+    "right_triangle_property_pythagorean(1,GBA)",
+    "mirror_congruent_triangle_judgment_hl(2,GBA,GCB)",
+    "mirror_congruent_triangle_property_line_equal(1,GBA,GCB)",
+    "line_addition(1,AB,BC)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,GA,G)": [
+      "mirror_congruent_triangle_judgment_hl(2,GBA,GCB)"
+    ],
+    "radius_of_circle_property_length_equal(1,GC,G)": [
+      "mirror_congruent_triangle_judgment_hl(2,GBA,GCB)"
+    ],
+    "flat_angle(1,CBA)": [
+      "mirror_congruent_triangle_judgment_hl(2,GBA,GCB)"
+    ],
+    "angle_addition(1,CBG,GBA)": [
+      "mirror_congruent_triangle_judgment_hl(2,GBA,GCB)"
+    ],
+    "right_triangle_judgment_angle(1,GBA)": [
+      "right_triangle_property_pythagorean(1,GBA)"
+    ],
+    "right_triangle_property_pythagorean(1,GBA)": [],
+    "mirror_congruent_triangle_judgment_hl(2,GBA,GCB)": [
+      "mirror_congruent_triangle_property_line_equal(1,GBA,GCB)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,GBA,GCB)": [],
+    "line_addition(1,AB,BC)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,GA,G)",
+      "radius_of_circle_property_length_equal(1,GC,G)",
+      "flat_angle(1,CBA)",
+      "angle_addition(1,CBG,GBA)",
+      "right_triangle_judgment_angle(1,GBA)",
+      "line_addition(1,AB,BC)"
+    ]
+  }
 }

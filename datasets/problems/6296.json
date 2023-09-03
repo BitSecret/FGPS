@@ -28,7 +28,16 @@
   "goal_cdl": "Value(LengthOfLine(MQ))",
   "problem_answer": "5/2",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCP)",
-    "right_triangle_property_pythagorean(BCP)"
-  ]
+    "right_triangle_judgment_angle(1,BCP)",
+    "right_triangle_property_pythagorean(1,BCP)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCP)": [
+      "right_triangle_property_pythagorean(1,BCP)"
+    ],
+    "right_triangle_property_pythagorean(1,BCP)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCP)"
+    ]
+  }
 }

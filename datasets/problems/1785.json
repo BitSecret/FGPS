@@ -24,14 +24,46 @@
   "goal_cdl": "Value(MeasureOfAngle(ZAY))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "rectangle_property_diagonal_equal(WYZX)",
-    "parallelogram_property_diagonal_bisection(WYZX,A)",
-    "parallelogram_property_diagonal_bisection(YZXW,A)",
-    "line_addition(WA,AZ)",
-    "line_addition(YA,AX)",
-    "isosceles_triangle_judgment_line_equal(AXW)",
-    "isosceles_triangle_property_angle_equal(AXW)",
-    "triangle_property_angle_sum(AXW)",
-    "vertical_angle(WAX,ZAY)"
-  ]
+    "rectangle_property_diagonal_equal(1,WYZX)",
+    "parallelogram_property_diagonal_bisection(1,WYZX,A)",
+    "parallelogram_property_diagonal_bisection(1,YZXW,A)",
+    "line_addition(1,WA,AZ)",
+    "line_addition(1,YA,AX)",
+    "isosceles_triangle_judgment_line_equal(1,AXW)",
+    "isosceles_triangle_property_angle_equal(1,AXW)",
+    "triangle_property_angle_sum(1,AXW)",
+    "vertical_angle(1,WAX,ZAY)"
+  ],
+  "theorem_seq_dag": {
+    "rectangle_property_diagonal_equal(1,WYZX)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,WYZX,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,YZXW,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "line_addition(1,WA,AZ)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "line_addition(1,YA,AX)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,AXW)": [
+      "isosceles_triangle_property_angle_equal(1,AXW)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,AXW)": [],
+    "triangle_property_angle_sum(1,AXW)": [],
+    "vertical_angle(1,WAX,ZAY)": [],
+    "START": [
+      "rectangle_property_diagonal_equal(1,WYZX)",
+      "parallelogram_property_diagonal_bisection(1,WYZX,A)",
+      "parallelogram_property_diagonal_bisection(1,YZXW,A)",
+      "line_addition(1,WA,AZ)",
+      "line_addition(1,YA,AX)",
+      "triangle_property_angle_sum(1,AXW)",
+      "vertical_angle(1,WAX,ZAY)"
+    ]
+  }
 }

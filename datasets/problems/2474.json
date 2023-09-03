@@ -28,7 +28,15 @@
   "goal_cdl": "Value(LengthOfLine(RC))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "line_addition(RC,CD)",
-    "line_addition(CD,DS)"
-  ]
+    "line_addition(1,RC,CD)",
+    "line_addition(1,CD,DS)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,RC,CD)": [],
+    "line_addition(1,CD,DS)": [],
+    "START": [
+      "line_addition(1,RC,CD)",
+      "line_addition(1,CD,DS)"
+    ]
+  }
 }

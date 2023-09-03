@@ -30,16 +30,46 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
   "problem_answer": "36",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AE,O,O)",
-    "tangent_of_circle_property_perpendicular(AD,O,O)",
-    "tangent_of_circle_judgment_perpendicular(CD,O,O)",
-    "tangent_of_circle_judgment_perpendicular(BE,O,O)",
-    "tangent_of_circle_property_length_equal(AE,AD,O)",
-    "tangent_of_circle_property_length_equal(BF,BE,O)",
-    "tangent_of_circle_property_length_equal(CF,CD,O)",
-    "line_addition(AB,BE)",
-    "line_addition(AC,CD)",
-    "line_addition(BF,FC)",
-    "triangle_perimeter_formula(ABC)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,AE,O,O)",
+    "tangent_of_circle_property_perpendicular(1,AD,O,O)",
+    "tangent_of_circle_judgment_perpendicular(1,CD,O,O)",
+    "tangent_of_circle_judgment_perpendicular(1,BE,O,O)",
+    "tangent_of_circle_property_length_equal(1,AE,AD,O)",
+    "tangent_of_circle_property_length_equal(1,BF,BE,O)",
+    "tangent_of_circle_property_length_equal(1,CF,CD,O)",
+    "line_addition(1,AB,BE)",
+    "line_addition(1,AC,CD)",
+    "line_addition(1,BF,FC)",
+    "triangle_perimeter_formula(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,AE,O,O)": [
+      "tangent_of_circle_judgment_perpendicular(1,BE,O,O)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,AD,O,O)": [
+      "tangent_of_circle_judgment_perpendicular(1,CD,O,O)"
+    ],
+    "tangent_of_circle_judgment_perpendicular(1,CD,O,O)": [
+      "tangent_of_circle_property_length_equal(1,CF,CD,O)"
+    ],
+    "tangent_of_circle_judgment_perpendicular(1,BE,O,O)": [
+      "tangent_of_circle_property_length_equal(1,BF,BE,O)"
+    ],
+    "tangent_of_circle_property_length_equal(1,AE,AD,O)": [],
+    "tangent_of_circle_property_length_equal(1,BF,BE,O)": [],
+    "tangent_of_circle_property_length_equal(1,CF,CD,O)": [],
+    "line_addition(1,AB,BE)": [],
+    "line_addition(1,AC,CD)": [],
+    "line_addition(1,BF,FC)": [],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,AE,O,O)",
+      "tangent_of_circle_property_perpendicular(1,AD,O,O)",
+      "tangent_of_circle_property_length_equal(1,AE,AD,O)",
+      "line_addition(1,AB,BE)",
+      "line_addition(1,AC,CD)",
+      "line_addition(1,BF,FC)",
+      "triangle_perimeter_formula(1,ABC)"
+    ]
+  }
 }

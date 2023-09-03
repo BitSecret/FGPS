@@ -22,7 +22,16 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(DABC))",
   "problem_answer": "96",
   "theorem_seqs": [
-    "right_trapezoid_judgment_right_angle(DABC)",
-    "right_trapezoid_area_formular(DABC)"
-  ]
+    "right_trapezoid_judgment_right_angle(1,DABC)",
+    "right_trapezoid_area_formular(1,DABC)"
+  ],
+  "theorem_seq_dag": {
+    "right_trapezoid_judgment_right_angle(1,DABC)": [
+      "right_trapezoid_area_formular(1,DABC)"
+    ],
+    "right_trapezoid_area_formular(1,DABC)": [],
+    "START": [
+      "right_trapezoid_judgment_right_angle(1,DABC)"
+    ]
+  }
 }

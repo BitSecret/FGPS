@@ -33,17 +33,54 @@
   "goal_cdl": "Value(LengthOfLine(BD))",
   "problem_answer": "4*sqrt(2)",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(AB,A)",
-    "radius_of_circle_property_length_equal(AF,A)",
-    "diameter_of_circle_judgment_pass_centre(FAB,A)",
-    "diameter_of_circle_property_right_angle(BDF,A)",
-    "parallel_property_alternate_interior_angle(DC,AB)",
-    "arc_property_circumference_angle_external(ADF,B)",
-    "arc_property_circumference_angle_external(ABC,D)",
-    "congruent_arc_judgment_measure_equal(ADF,ABC)",
-    "congruent_arc_property_chord_equal(ADF,ABC)",
-    "line_addition(FA,AB)",
-    "right_triangle_judgment_angle(BDF)",
-    "right_triangle_property_pythagorean(BDF)"
-  ]
+    "radius_of_circle_property_length_equal(1,AB,A)",
+    "radius_of_circle_property_length_equal(1,AF,A)",
+    "diameter_of_circle_judgment_pass_centre(1,FAB,A)",
+    "diameter_of_circle_property_right_angle(1,BDF,A)",
+    "parallel_property_alternate_interior_angle(1,DC,AB)",
+    "arc_property_circumference_angle_external(1,ADF,B)",
+    "arc_property_circumference_angle_external(1,ABC,D)",
+    "congruent_arc_judgment_measure_equal(1,ADF,ABC)",
+    "congruent_arc_property_chord_equal(1,ADF,ABC)",
+    "line_addition(1,FA,AB)",
+    "right_triangle_judgment_angle(1,BDF)",
+    "right_triangle_property_pythagorean(1,BDF)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,AB,A)": [],
+    "radius_of_circle_property_length_equal(1,AF,A)": [],
+    "diameter_of_circle_judgment_pass_centre(1,FAB,A)": [
+      "diameter_of_circle_property_right_angle(1,BDF,A)"
+    ],
+    "diameter_of_circle_property_right_angle(1,BDF,A)": [
+      "right_triangle_judgment_angle(1,BDF)"
+    ],
+    "parallel_property_alternate_interior_angle(1,DC,AB)": [
+      "congruent_arc_judgment_measure_equal(1,ADF,ABC)"
+    ],
+    "arc_property_circumference_angle_external(1,ADF,B)": [
+      "congruent_arc_judgment_measure_equal(1,ADF,ABC)"
+    ],
+    "arc_property_circumference_angle_external(1,ABC,D)": [
+      "congruent_arc_judgment_measure_equal(1,ADF,ABC)"
+    ],
+    "congruent_arc_judgment_measure_equal(1,ADF,ABC)": [
+      "congruent_arc_property_chord_equal(1,ADF,ABC)"
+    ],
+    "congruent_arc_property_chord_equal(1,ADF,ABC)": [],
+    "line_addition(1,FA,AB)": [],
+    "right_triangle_judgment_angle(1,BDF)": [
+      "right_triangle_property_pythagorean(1,BDF)"
+    ],
+    "right_triangle_property_pythagorean(1,BDF)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,AB,A)",
+      "radius_of_circle_property_length_equal(1,AF,A)",
+      "diameter_of_circle_judgment_pass_centre(1,FAB,A)",
+      "parallel_property_alternate_interior_angle(1,DC,AB)",
+      "arc_property_circumference_angle_external(1,ADF,B)",
+      "arc_property_circumference_angle_external(1,ABC,D)",
+      "line_addition(1,FA,AB)"
+    ]
+  }
 }

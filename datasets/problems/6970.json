@@ -29,11 +29,27 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "100",
   "theorem_seqs": [
-    "equilateral_triangle_property_angle(ABC)",
-    "angle_addition(CAD,DAB)",
-    "arc_property_circumference_angle_external(OBD,A)",
-    "arc_property_circumference_angle_external(OBD,C)",
-    "equilateral_triangle_property_angle(CAB)",
-    "angle_addition(DCB,BCA)"
-  ]
+    "equilateral_triangle_property_angle(1,ABC)",
+    "angle_addition(1,CAD,DAB)",
+    "arc_property_circumference_angle_external(1,OBD,A)",
+    "arc_property_circumference_angle_external(1,OBD,C)",
+    "equilateral_triangle_property_angle(1,CAB)",
+    "angle_addition(1,DCB,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "equilateral_triangle_property_angle(1,ABC)": [],
+    "angle_addition(1,CAD,DAB)": [],
+    "arc_property_circumference_angle_external(1,OBD,A)": [],
+    "arc_property_circumference_angle_external(1,OBD,C)": [],
+    "equilateral_triangle_property_angle(1,CAB)": [],
+    "angle_addition(1,DCB,BCA)": [],
+    "START": [
+      "equilateral_triangle_property_angle(1,ABC)",
+      "angle_addition(1,CAD,DAB)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "arc_property_circumference_angle_external(1,OBD,C)",
+      "equilateral_triangle_property_angle(1,CAB)",
+      "angle_addition(1,DCB,BCA)"
+    ]
+  }
 }

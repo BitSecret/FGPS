@@ -34,23 +34,80 @@
   "goal_cdl": "Value(Div(LengthOfLine(PG),LengthOfLine(PC)))",
   "problem_answer": "sqrt(3)",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,GF,H)",
-    "parallel_property_alternate_interior_angle(DH,GF)",
-    "vertical_angle(DPH,FPG)",
-    "triangle_property_angle_sum(CPG)",
-    "congruent_triangle_judgment_aas(DPH,FPG)",
-    "congruent_triangle_property_line_equal(DPH,FPG)",
-    "congruent_triangle_property_line_equal(PHD,PGF)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BEFG)",
-    "line_addition(DH,HC)",
-    "line_addition(CG,GB)",
-    "mirror_congruent_triangle_judgment_sss(HPC,GCP)",
-    "mirror_congruent_triangle_property_angle_equal(HPC,GCP)",
-    "mirror_congruent_triangle_property_angle_equal(PCH,PGC)",
-    "mirror_congruent_triangle_property_angle_equal(CHP,CPG)",
-    "adjacent_complementary_angle(HPC,CPG)",
-    "angle_addition(QCP,PCH)",
-    "sine_theorem(PGC)"
-  ]
+    "parallel_property_collinear_extend(3,DC,GF,H)",
+    "parallel_property_alternate_interior_angle(2,DH,GF)",
+    "vertical_angle(1,DPH,FPG)",
+    "triangle_property_angle_sum(1,CPG)",
+    "congruent_triangle_judgment_aas(1,DPH,FPG)",
+    "congruent_triangle_property_line_equal(1,DPH,FPG)",
+    "congruent_triangle_property_line_equal(1,PHD,PGF)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BEFG)",
+    "line_addition(1,DH,HC)",
+    "line_addition(1,CG,GB)",
+    "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)",
+    "mirror_congruent_triangle_property_angle_equal(1,HPC,GCP)",
+    "mirror_congruent_triangle_property_angle_equal(1,PCH,PGC)",
+    "mirror_congruent_triangle_property_angle_equal(1,CHP,CPG)",
+    "adjacent_complementary_angle(1,HPC,CPG)",
+    "angle_addition(1,QCP,PCH)",
+    "sine_theorem(1,PGC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DC,GF,H)": [
+      "parallel_property_alternate_interior_angle(2,DH,GF)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DH,GF)": [
+      "congruent_triangle_judgment_aas(1,DPH,FPG)"
+    ],
+    "vertical_angle(1,DPH,FPG)": [
+      "congruent_triangle_judgment_aas(1,DPH,FPG)"
+    ],
+    "triangle_property_angle_sum(1,CPG)": [],
+    "congruent_triangle_judgment_aas(1,DPH,FPG)": [
+      "congruent_triangle_property_line_equal(1,DPH,FPG)",
+      "congruent_triangle_property_line_equal(1,PHD,PGF)"
+    ],
+    "congruent_triangle_property_line_equal(1,DPH,FPG)": [
+      "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)"
+    ],
+    "congruent_triangle_property_line_equal(1,PHD,PGF)": [
+      "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [
+      "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BEFG)": [
+      "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)"
+    ],
+    "line_addition(1,DH,HC)": [
+      "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)"
+    ],
+    "line_addition(1,CG,GB)": [
+      "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)"
+    ],
+    "mirror_congruent_triangle_judgment_sss(1,HPC,GCP)": [
+      "mirror_congruent_triangle_property_angle_equal(1,HPC,GCP)",
+      "mirror_congruent_triangle_property_angle_equal(1,PCH,PGC)",
+      "mirror_congruent_triangle_property_angle_equal(1,CHP,CPG)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,HPC,GCP)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,PCH,PGC)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,CHP,CPG)": [],
+    "adjacent_complementary_angle(1,HPC,CPG)": [],
+    "angle_addition(1,QCP,PCH)": [],
+    "sine_theorem(1,PGC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DC,GF,H)",
+      "vertical_angle(1,DPH,FPG)",
+      "triangle_property_angle_sum(1,CPG)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BEFG)",
+      "line_addition(1,DH,HC)",
+      "line_addition(1,CG,GB)",
+      "adjacent_complementary_angle(1,HPC,CPG)",
+      "angle_addition(1,QCP,PCH)",
+      "sine_theorem(1,PGC)"
+    ]
+  }
 }

@@ -24,8 +24,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "2*sqrt(21)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ABC,CBD)",
-    "right_triangle_judgment_angle(CBD)",
-    "right_triangle_property_pythagorean(CBD)"
-  ]
+    "adjacent_complementary_angle(1,ABC,CBD)",
+    "right_triangle_judgment_angle(1,CBD)",
+    "right_triangle_property_pythagorean(1,CBD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ABC,CBD)": [
+      "right_triangle_judgment_angle(1,CBD)"
+    ],
+    "right_triangle_judgment_angle(1,CBD)": [
+      "right_triangle_property_pythagorean(1,CBD)"
+    ],
+    "right_triangle_property_pythagorean(1,CBD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ABC,CBD)"
+    ]
+  }
 }

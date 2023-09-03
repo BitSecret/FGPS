@@ -22,8 +22,18 @@
   "goal_cdl": "Value(MeasureOfAngle(FDC))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ADC,CDB)",
-    "angle_addition(FDC,CDE)",
-    "angle_addition(CDE,EDB)"
-  ]
+    "adjacent_complementary_angle(1,ADC,CDB)",
+    "angle_addition(1,FDC,CDE)",
+    "angle_addition(1,CDE,EDB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ADC,CDB)": [],
+    "angle_addition(1,FDC,CDE)": [],
+    "angle_addition(1,CDE,EDB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "angle_addition(1,FDC,CDE)",
+      "angle_addition(1,CDE,EDB)"
+    ]
+  }
 }

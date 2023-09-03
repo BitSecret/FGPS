@@ -23,9 +23,21 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ABC))",
   "problem_answer": "13",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(ED,AB)",
-    "triangle_perimeter_formula(EBC)",
-    "triangle_perimeter_formula(ABC)",
-    "line_addition(AE,EC)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,ED,AB)",
+    "triangle_perimeter_formula(1,EBC)",
+    "triangle_perimeter_formula(1,ABC)",
+    "line_addition(1,AE,EC)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,ED,AB)": [],
+    "triangle_perimeter_formula(1,EBC)": [],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "line_addition(1,AE,EC)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,ED,AB)",
+      "triangle_perimeter_formula(1,EBC)",
+      "triangle_perimeter_formula(1,ABC)",
+      "line_addition(1,AE,EC)"
+    ]
+  }
 }

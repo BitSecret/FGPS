@@ -29,7 +29,16 @@
   "goal_cdl": "Value(LengthOfLine(LK))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(FLK)",
-    "right_triangle_property_pythagorean(FLK)"
-  ]
+    "right_triangle_judgment_angle(1,FLK)",
+    "right_triangle_property_pythagorean(1,FLK)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,FLK)": [
+      "right_triangle_property_pythagorean(1,FLK)"
+    ],
+    "right_triangle_property_pythagorean(1,FLK)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,FLK)"
+    ]
+  }
 }

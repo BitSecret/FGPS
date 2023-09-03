@@ -37,12 +37,36 @@
   "goal_cdl": "Value(MeasureOfAngle(PQD))",
   "problem_answer": "72",
   "theorem_seqs": [
-    "flat_angle(EMN)",
-    "angle_addition(EMP,PMN)",
-    "parallel_judgment_corresponding_angle(MP,NQ,F)",
-    "parallel_property_collinear_extend(QN,PM,D)",
-    "parallel_property_collinear_extend(MP,QD,B)",
-    "parallel_property_ipsilateral_internal_angle(PB,QD)",
-    "vertical_angle(MPG,BPQ)"
-  ]
+    "flat_angle(1,EMN)",
+    "angle_addition(1,EMP,PMN)",
+    "parallel_judgment_corresponding_angle(2,MP,NQ,F)",
+    "parallel_property_collinear_extend(1,QN,PM,D)",
+    "parallel_property_collinear_extend(2,MP,QD,B)",
+    "parallel_property_ipsilateral_internal_angle(1,PB,QD)",
+    "vertical_angle(1,MPG,BPQ)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,EMN)": [
+      "parallel_judgment_corresponding_angle(2,MP,NQ,F)"
+    ],
+    "angle_addition(1,EMP,PMN)": [
+      "parallel_judgment_corresponding_angle(2,MP,NQ,F)"
+    ],
+    "parallel_judgment_corresponding_angle(2,MP,NQ,F)": [
+      "parallel_property_collinear_extend(1,QN,PM,D)"
+    ],
+    "parallel_property_collinear_extend(1,QN,PM,D)": [
+      "parallel_property_collinear_extend(2,MP,QD,B)"
+    ],
+    "parallel_property_collinear_extend(2,MP,QD,B)": [
+      "parallel_property_ipsilateral_internal_angle(1,PB,QD)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,PB,QD)": [],
+    "vertical_angle(1,MPG,BPQ)": [],
+    "START": [
+      "flat_angle(1,EMN)",
+      "angle_addition(1,EMP,PMN)",
+      "vertical_angle(1,MPG,BPQ)"
+    ]
+  }
 }

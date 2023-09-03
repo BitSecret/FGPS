@@ -23,9 +23,21 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "flat_angle(ADC)",
-    "angle_addition(ADE,EDC)",
-    "parallel_property_alternate_interior_angle(DE,BC)",
-    "triangle_property_angle_sum(ABC)"
-  ]
+    "flat_angle(1,ADC)",
+    "angle_addition(1,ADE,EDC)",
+    "parallel_property_alternate_interior_angle(1,DE,BC)",
+    "triangle_property_angle_sum(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,ADC)": [],
+    "angle_addition(1,ADE,EDC)": [],
+    "parallel_property_alternate_interior_angle(1,DE,BC)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "flat_angle(1,ADC)",
+      "angle_addition(1,ADE,EDC)",
+      "parallel_property_alternate_interior_angle(1,DE,BC)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  }
 }

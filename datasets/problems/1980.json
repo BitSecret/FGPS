@@ -21,11 +21,31 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(DFKA))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(DA,FK)",
-    "parallel_judgment_ipsilateral_internal_angle(FD,KA)",
-    "parallelogram_judgment_parallel_and_parallel(ADFK)",
-    "parallelogram_property_opposite_line_equal(ADFK)",
-    "parallelogram_property_opposite_line_equal(DFKA)",
-    "quadrilateral_perimeter_formula(ADFK)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,DA,FK)",
+    "parallel_judgment_ipsilateral_internal_angle(1,FD,KA)",
+    "parallelogram_judgment_parallel_and_parallel(1,ADFK)",
+    "parallelogram_property_opposite_line_equal(1,ADFK)",
+    "parallelogram_property_opposite_line_equal(1,DFKA)",
+    "quadrilateral_perimeter_formula(1,ADFK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,DA,FK)": [
+      "parallelogram_judgment_parallel_and_parallel(1,ADFK)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,FD,KA)": [
+      "parallelogram_judgment_parallel_and_parallel(1,ADFK)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,ADFK)": [
+      "parallelogram_property_opposite_line_equal(1,ADFK)",
+      "parallelogram_property_opposite_line_equal(1,DFKA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ADFK)": [],
+    "parallelogram_property_opposite_line_equal(1,DFKA)": [],
+    "quadrilateral_perimeter_formula(1,ADFK)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,DA,FK)",
+      "parallel_judgment_ipsilateral_internal_angle(1,FD,KA)",
+      "quadrilateral_perimeter_formula(1,ADFK)"
+    ]
+  }
 }

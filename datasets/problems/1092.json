@@ -29,10 +29,30 @@
   "goal_cdl": "Value(MeasureOfAngle(GKH))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(KF,K)",
-    "radius_of_circle_property_length_equal(KH,K)",
-    "isosceles_triangle_judgment_line_equal(GFH)",
-    "median_of_triangle_judgment(GK,GFH)",
-    "isosceles_triangle_property_line_coincidence(GFH,K)"
-  ]
+    "radius_of_circle_property_length_equal(1,KF,K)",
+    "radius_of_circle_property_length_equal(1,KH,K)",
+    "isosceles_triangle_judgment_line_equal(1,GFH)",
+    "median_of_triangle_judgment(1,GK,GFH)",
+    "isosceles_triangle_property_line_coincidence(2,GFH,K)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,KF,K)": [
+      "median_of_triangle_judgment(1,GK,GFH)"
+    ],
+    "radius_of_circle_property_length_equal(1,KH,K)": [
+      "median_of_triangle_judgment(1,GK,GFH)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,GFH)": [
+      "isosceles_triangle_property_line_coincidence(2,GFH,K)"
+    ],
+    "median_of_triangle_judgment(1,GK,GFH)": [
+      "isosceles_triangle_property_line_coincidence(2,GFH,K)"
+    ],
+    "isosceles_triangle_property_line_coincidence(2,GFH,K)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,KF,K)",
+      "radius_of_circle_property_length_equal(1,KH,K)",
+      "isosceles_triangle_judgment_line_equal(1,GFH)"
+    ]
+  }
 }

@@ -29,13 +29,41 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "27",
   "theorem_seqs": [
-    "arc_property_center_angle(CKL,C)",
-    "arc_property_center_angle(DJA,D)",
-    "radius_of_circle_property_length_equal(CK,C)",
-    "radius_of_circle_property_length_equal(CL,C)",
-    "radius_of_circle_property_length_equal(DJ,D)",
-    "radius_of_circle_property_length_equal(DA,D)",
-    "congruent_triangle_judgment_sss(KLC,JAD)",
-    "congruent_triangle_property_angle_equal(CKL,DJA)"
-  ]
+    "arc_property_center_angle(1,CKL,C)",
+    "arc_property_center_angle(1,DJA,D)",
+    "radius_of_circle_property_length_equal(1,CK,C)",
+    "radius_of_circle_property_length_equal(1,CL,C)",
+    "radius_of_circle_property_length_equal(1,DJ,D)",
+    "radius_of_circle_property_length_equal(1,DA,D)",
+    "congruent_triangle_judgment_sss(1,KLC,JAD)",
+    "congruent_triangle_property_angle_equal(1,CKL,DJA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,CKL,C)": [],
+    "arc_property_center_angle(1,DJA,D)": [],
+    "radius_of_circle_property_length_equal(1,CK,C)": [
+      "congruent_triangle_judgment_sss(1,KLC,JAD)"
+    ],
+    "radius_of_circle_property_length_equal(1,CL,C)": [
+      "congruent_triangle_judgment_sss(1,KLC,JAD)"
+    ],
+    "radius_of_circle_property_length_equal(1,DJ,D)": [
+      "congruent_triangle_judgment_sss(1,KLC,JAD)"
+    ],
+    "radius_of_circle_property_length_equal(1,DA,D)": [
+      "congruent_triangle_judgment_sss(1,KLC,JAD)"
+    ],
+    "congruent_triangle_judgment_sss(1,KLC,JAD)": [
+      "congruent_triangle_property_angle_equal(1,CKL,DJA)"
+    ],
+    "congruent_triangle_property_angle_equal(1,CKL,DJA)": [],
+    "START": [
+      "arc_property_center_angle(1,CKL,C)",
+      "arc_property_center_angle(1,DJA,D)",
+      "radius_of_circle_property_length_equal(1,CK,C)",
+      "radius_of_circle_property_length_equal(1,CL,C)",
+      "radius_of_circle_property_length_equal(1,DJ,D)",
+      "radius_of_circle_property_length_equal(1,DA,D)"
+    ]
+  }
 }

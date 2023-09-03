@@ -28,15 +28,49 @@
   "goal_cdl": "Value(MeasureOfArc(OBC))",
   "problem_answer": "67",
   "theorem_seqs": [
-    "arc_property_center_angle(ODC,O)",
-    "arc_property_center_angle(OBC,O)",
-    "adjacent_complementary_angle(CXB,BXD)",
-    "adjacent_complementary_angle(OXC,CXB)",
-    "adjacent_complementary_angle(BXD,DXO)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "mirror_congruent_triangle_judgment_hl(OXC,ODX)",
-    "mirror_congruent_triangle_property_angle_equal(OXC,ODX)",
-    "angle_addition(COX,XOD)"
-  ]
+    "arc_property_center_angle(1,ODC,O)",
+    "arc_property_center_angle(1,OBC,O)",
+    "adjacent_complementary_angle(1,CXB,BXD)",
+    "adjacent_complementary_angle(1,OXC,CXB)",
+    "adjacent_complementary_angle(1,BXD,DXO)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "mirror_congruent_triangle_judgment_hl(2,OXC,ODX)",
+    "mirror_congruent_triangle_property_angle_equal(1,OXC,ODX)",
+    "angle_addition(1,COX,XOD)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,ODC,O)": [],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "adjacent_complementary_angle(1,CXB,BXD)": [
+      "mirror_congruent_triangle_judgment_hl(2,OXC,ODX)"
+    ],
+    "adjacent_complementary_angle(1,OXC,CXB)": [
+      "mirror_congruent_triangle_judgment_hl(2,OXC,ODX)"
+    ],
+    "adjacent_complementary_angle(1,BXD,DXO)": [
+      "mirror_congruent_triangle_judgment_hl(2,OXC,ODX)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "mirror_congruent_triangle_judgment_hl(2,OXC,ODX)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "mirror_congruent_triangle_judgment_hl(2,OXC,ODX)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(2,OXC,ODX)": [
+      "mirror_congruent_triangle_property_angle_equal(1,OXC,ODX)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,OXC,ODX)": [],
+    "angle_addition(1,COX,XOD)": [],
+    "START": [
+      "arc_property_center_angle(1,ODC,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "adjacent_complementary_angle(1,CXB,BXD)",
+      "adjacent_complementary_angle(1,OXC,CXB)",
+      "adjacent_complementary_angle(1,BXD,DXO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,COX,XOD)"
+    ]
+  }
 }

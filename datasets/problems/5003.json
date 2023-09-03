@@ -27,12 +27,34 @@
   "goal_cdl": "Value(Div(LengthOfLine(CE),LengthOfLine(AE)))",
   "problem_answer": "1/4",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(EF,AB,C)",
-    "parallel_property_corresponding_angle(BA,FE,C)",
-    "similar_triangle_judgment_aa(CEF,CAB)",
-    "line_addition(CE,EA)",
-    "line_addition(CF,FB)",
-    "similar_triangle_property_line_ratio(EFC,ABC)",
-    "similar_triangle_property_line_ratio(FCE,BCA)"
-  ]
+    "parallel_property_corresponding_angle(1,EF,AB,C)",
+    "parallel_property_corresponding_angle(2,BA,FE,C)",
+    "similar_triangle_judgment_aa(1,CEF,CAB)",
+    "line_addition(1,CE,EA)",
+    "line_addition(1,CF,FB)",
+    "similar_triangle_property_line_ratio(1,EFC,ABC)",
+    "similar_triangle_property_line_ratio(1,FCE,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,EF,AB,C)": [
+      "similar_triangle_judgment_aa(1,CEF,CAB)"
+    ],
+    "parallel_property_corresponding_angle(2,BA,FE,C)": [
+      "similar_triangle_judgment_aa(1,CEF,CAB)"
+    ],
+    "similar_triangle_judgment_aa(1,CEF,CAB)": [
+      "similar_triangle_property_line_ratio(1,EFC,ABC)",
+      "similar_triangle_property_line_ratio(1,FCE,BCA)"
+    ],
+    "line_addition(1,CE,EA)": [],
+    "line_addition(1,CF,FB)": [],
+    "similar_triangle_property_line_ratio(1,EFC,ABC)": [],
+    "similar_triangle_property_line_ratio(1,FCE,BCA)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,EF,AB,C)",
+      "parallel_property_corresponding_angle(2,BA,FE,C)",
+      "line_addition(1,CE,EA)",
+      "line_addition(1,CF,FB)"
+    ]
+  }
 }

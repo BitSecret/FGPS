@@ -25,12 +25,31 @@
   "goal_cdl": "Value(MeasureOfAngle(PCD))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(ED,BA,P)",
-    "parallel_property_alternate_interior_angle(EP,BA)",
-    "flat_angle(BPC)",
-    "angle_addition(BPD,DPC)",
-    "flat_angle(EDP)",
-    "angle_addition(EDC,CDP)",
-    "triangle_property_angle_sum(DPC)"
-  ]
+    "parallel_property_collinear_extend(2,ED,BA,P)",
+    "parallel_property_alternate_interior_angle(2,EP,BA)",
+    "flat_angle(1,BPC)",
+    "angle_addition(1,BPD,DPC)",
+    "flat_angle(1,EDP)",
+    "angle_addition(1,EDC,CDP)",
+    "triangle_property_angle_sum(1,DPC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,ED,BA,P)": [
+      "parallel_property_alternate_interior_angle(2,EP,BA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,EP,BA)": [],
+    "flat_angle(1,BPC)": [],
+    "angle_addition(1,BPD,DPC)": [],
+    "flat_angle(1,EDP)": [],
+    "angle_addition(1,EDC,CDP)": [],
+    "triangle_property_angle_sum(1,DPC)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,ED,BA,P)",
+      "flat_angle(1,BPC)",
+      "angle_addition(1,BPD,DPC)",
+      "flat_angle(1,EDP)",
+      "angle_addition(1,EDC,CDP)",
+      "triangle_property_angle_sum(1,DPC)"
+    ]
+  }
 }

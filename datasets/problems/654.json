@@ -20,13 +20,35 @@
   "goal_cdl": "Value(MeasureOfAngle(QPS))",
   "problem_answer": "27",
   "theorem_seqs": [
-    "triangle_property_angle_sum(SRQ)",
-    "triangle_property_angle_sum(SQP)",
-    "triangle_property_angle_sum(RPS)",
-    "isosceles_triangle_judgment_line_equal(RQS)",
-    "isosceles_triangle_property_angle_equal(RQS)",
-    "isosceles_triangle_judgment_line_equal(QPS)",
-    "isosceles_triangle_property_angle_equal(QPS)",
-    "adjacent_complementary_angle(RQS,SQP)"
-  ]
+    "triangle_property_angle_sum(1,SRQ)",
+    "triangle_property_angle_sum(1,SQP)",
+    "triangle_property_angle_sum(1,RPS)",
+    "isosceles_triangle_judgment_line_equal(1,RQS)",
+    "isosceles_triangle_property_angle_equal(1,RQS)",
+    "isosceles_triangle_judgment_line_equal(1,QPS)",
+    "isosceles_triangle_property_angle_equal(1,QPS)",
+    "adjacent_complementary_angle(1,RQS,SQP)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,SRQ)": [],
+    "triangle_property_angle_sum(1,SQP)": [],
+    "triangle_property_angle_sum(1,RPS)": [],
+    "isosceles_triangle_judgment_line_equal(1,RQS)": [
+      "isosceles_triangle_property_angle_equal(1,RQS)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,RQS)": [],
+    "isosceles_triangle_judgment_line_equal(1,QPS)": [
+      "isosceles_triangle_property_angle_equal(1,QPS)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,QPS)": [],
+    "adjacent_complementary_angle(1,RQS,SQP)": [],
+    "START": [
+      "triangle_property_angle_sum(1,SRQ)",
+      "triangle_property_angle_sum(1,SQP)",
+      "triangle_property_angle_sum(1,RPS)",
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "isosceles_triangle_judgment_line_equal(1,QPS)",
+      "adjacent_complementary_angle(1,RQS,SQP)"
+    ]
+  }
 }

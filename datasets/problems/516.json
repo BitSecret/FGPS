@@ -20,8 +20,19 @@
   "goal_cdl": "Value(LengthOfLine(CE))",
   "problem_answer": "28",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CFD,DFE)",
-    "altitude_of_triangle_judgment(DF,DCE)",
-    "triangle_area_formula_common(DCE)"
-  ]
+    "adjacent_complementary_angle(1,CFD,DFE)",
+    "altitude_of_triangle_judgment(1,DF,DCE)",
+    "triangle_area_formula_common(1,DCE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CFD,DFE)": [
+      "altitude_of_triangle_judgment(1,DF,DCE)"
+    ],
+    "altitude_of_triangle_judgment(1,DF,DCE)": [],
+    "triangle_area_formula_common(1,DCE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CFD,DFE)",
+      "triangle_area_formula_common(1,DCE)"
+    ]
+  }
 }

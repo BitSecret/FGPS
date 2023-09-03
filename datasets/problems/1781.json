@@ -31,10 +31,26 @@
   "goal_cdl": "Value(LengthOfLine(KM))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "adjacent_complementary_angle(MLF,FLK)",
-    "right_triangle_judgment_angle(FLK)",
-    "right_triangle_property_pythagorean(FLK)",
-    "circle_property_chord_perpendicular_bisect_chord(F,FL,MK)",
-    "line_addition(KL,LM)"
-  ]
+    "adjacent_complementary_angle(1,MLF,FLK)",
+    "right_triangle_judgment_angle(1,FLK)",
+    "right_triangle_property_pythagorean(1,FLK)",
+    "circle_property_chord_perpendicular_bisect_chord(1,F,FL,MK)",
+    "line_addition(1,KL,LM)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,MLF,FLK)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,F,FL,MK)"
+    ],
+    "right_triangle_judgment_angle(1,FLK)": [
+      "right_triangle_property_pythagorean(1,FLK)"
+    ],
+    "right_triangle_property_pythagorean(1,FLK)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,F,FL,MK)": [],
+    "line_addition(1,KL,LM)": [],
+    "START": [
+      "adjacent_complementary_angle(1,MLF,FLK)",
+      "right_triangle_judgment_angle(1,FLK)",
+      "line_addition(1,KL,LM)"
+    ]
+  }
 }

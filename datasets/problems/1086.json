@@ -23,13 +23,43 @@
   "goal_cdl": "Value(MeasureOfAngle(DCB))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(BA,DC)",
-    "parallelogram_property_diagonal_bisection(ABDC,E)",
-    "parallelogram_property_diagonal_bisection(BDCA,E)",
-    "rectangle_property_diagonal_equal(ABDC)",
-    "line_addition(AE,ED)",
-    "line_addition(BE,EC)",
-    "isosceles_triangle_judgment_line_equal(EDC)",
-    "isosceles_triangle_property_angle_equal(EDC)"
-  ]
+    "parallel_property_alternate_interior_angle(2,BA,DC)",
+    "parallelogram_property_diagonal_bisection(1,ABDC,E)",
+    "parallelogram_property_diagonal_bisection(1,BDCA,E)",
+    "rectangle_property_diagonal_equal(1,ABDC)",
+    "line_addition(1,AE,ED)",
+    "line_addition(1,BE,EC)",
+    "isosceles_triangle_judgment_line_equal(1,EDC)",
+    "isosceles_triangle_property_angle_equal(1,EDC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,BA,DC)": [],
+    "parallelogram_property_diagonal_bisection(1,ABDC,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BDCA,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ],
+    "rectangle_property_diagonal_equal(1,ABDC)": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ],
+    "line_addition(1,AE,ED)": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ],
+    "line_addition(1,BE,EC)": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EDC)": [
+      "isosceles_triangle_property_angle_equal(1,EDC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EDC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,BA,DC)",
+      "parallelogram_property_diagonal_bisection(1,ABDC,E)",
+      "parallelogram_property_diagonal_bisection(1,BDCA,E)",
+      "rectangle_property_diagonal_equal(1,ABDC)",
+      "line_addition(1,AE,ED)",
+      "line_addition(1,BE,EC)"
+    ]
+  }
 }

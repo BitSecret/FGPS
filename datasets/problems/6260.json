@@ -32,24 +32,71 @@
   "goal_cdl": "Value(LengthOfLine(MN))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "adjacent_complementary_angle(NPH,HPA)",
-    "parallel_judgment_ipsilateral_internal_angle(AP,DH)",
-    "parallel_judgment_ipsilateral_internal_angle(PH,AD)",
-    "line_addition(AM,MP)",
-    "line_addition(MP,PN)",
-    "line_addition(DE,EH)",
-    "line_addition(DE,EF)",
-    "line_addition(DE,EC)",
-    "line_addition(DH,HF)",
-    "line_addition(DH,HC)",
-    "line_addition(DF,FC)",
-    "line_addition(EH,HF)",
-    "line_addition(EH,HC)",
-    "line_addition(EF,FC)",
-    "line_addition(HF,FC)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OP,NM)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OH,FE)",
-    "parallelogram_judgment_parallel_and_parallel(HPAD)",
-    "parallelogram_property_opposite_line_equal(PADH)"
-  ]
+    "adjacent_complementary_angle(1,NPH,HPA)",
+    "parallel_judgment_ipsilateral_internal_angle(1,AP,DH)",
+    "parallel_judgment_ipsilateral_internal_angle(1,PH,AD)",
+    "line_addition(1,AM,MP)",
+    "line_addition(1,MP,PN)",
+    "line_addition(1,DE,EH)",
+    "line_addition(1,DE,EF)",
+    "line_addition(1,DE,EC)",
+    "line_addition(1,DH,HF)",
+    "line_addition(1,DH,HC)",
+    "line_addition(1,DF,FC)",
+    "line_addition(1,EH,HF)",
+    "line_addition(1,EH,HC)",
+    "line_addition(1,EF,FC)",
+    "line_addition(1,HF,FC)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OP,NM)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OH,FE)",
+    "parallelogram_judgment_parallel_and_parallel(1,HPAD)",
+    "parallelogram_property_opposite_line_equal(1,PADH)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,NPH,HPA)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,PH,AD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,AP,DH)": [
+      "parallelogram_judgment_parallel_and_parallel(1,HPAD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,PH,AD)": [
+      "parallelogram_judgment_parallel_and_parallel(1,HPAD)"
+    ],
+    "line_addition(1,AM,MP)": [],
+    "line_addition(1,MP,PN)": [],
+    "line_addition(1,DE,EH)": [],
+    "line_addition(1,DE,EF)": [],
+    "line_addition(1,DE,EC)": [],
+    "line_addition(1,DH,HF)": [],
+    "line_addition(1,DH,HC)": [],
+    "line_addition(1,DF,FC)": [],
+    "line_addition(1,EH,HF)": [],
+    "line_addition(1,EH,HC)": [],
+    "line_addition(1,EF,FC)": [],
+    "line_addition(1,HF,FC)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OP,NM)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OH,FE)": [],
+    "parallelogram_judgment_parallel_and_parallel(1,HPAD)": [
+      "parallelogram_property_opposite_line_equal(1,PADH)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,PADH)": [],
+    "START": [
+      "adjacent_complementary_angle(1,NPH,HPA)",
+      "parallel_judgment_ipsilateral_internal_angle(1,AP,DH)",
+      "line_addition(1,AM,MP)",
+      "line_addition(1,MP,PN)",
+      "line_addition(1,DE,EH)",
+      "line_addition(1,DE,EF)",
+      "line_addition(1,DE,EC)",
+      "line_addition(1,DH,HF)",
+      "line_addition(1,DH,HC)",
+      "line_addition(1,DF,FC)",
+      "line_addition(1,EH,HF)",
+      "line_addition(1,EH,HC)",
+      "line_addition(1,EF,FC)",
+      "line_addition(1,HF,FC)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OP,NM)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OH,FE)"
+    ]
+  }
 }

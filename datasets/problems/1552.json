@@ -20,7 +20,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "7*sqrt(2)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)"
-  ]
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  }
 }

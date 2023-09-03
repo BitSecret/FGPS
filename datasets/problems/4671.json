@@ -27,14 +27,38 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "4*sqrt(5)",
   "theorem_seqs": [
-    "circle_property_chord_perpendicular_bisect_chord(O,OE,DC)",
-    "line_addition(CE,ED)",
-    "line_addition(AO,OE)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "right_triangle_judgment_angle(OEC)",
-    "right_triangle_judgment_angle(AEC)",
-    "right_triangle_property_pythagorean(OEC)",
-    "right_triangle_property_pythagorean(AEC)"
-  ]
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,DC)",
+    "line_addition(1,CE,ED)",
+    "line_addition(1,AO,OE)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "right_triangle_judgment_angle(1,OEC)",
+    "right_triangle_judgment_angle(1,AEC)",
+    "right_triangle_property_pythagorean(1,OEC)",
+    "right_triangle_property_pythagorean(1,AEC)"
+  ],
+  "theorem_seq_dag": {
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OE,DC)": [],
+    "line_addition(1,CE,ED)": [],
+    "line_addition(1,AO,OE)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "right_triangle_judgment_angle(1,OEC)": [
+      "right_triangle_property_pythagorean(1,OEC)"
+    ],
+    "right_triangle_judgment_angle(1,AEC)": [
+      "right_triangle_property_pythagorean(1,AEC)"
+    ],
+    "right_triangle_property_pythagorean(1,OEC)": [],
+    "right_triangle_property_pythagorean(1,AEC)": [],
+    "START": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,DC)",
+      "line_addition(1,CE,ED)",
+      "line_addition(1,AO,OE)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,OEC)",
+      "right_triangle_judgment_angle(1,AEC)"
+    ]
+  }
 }

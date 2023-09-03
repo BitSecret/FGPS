@@ -23,12 +23,35 @@
   "goal_cdl": "Value(MeasureOfAngle(TWY))",
   "problem_answer": "28",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(ZXWY,T)",
-    "isosceles_triangle_judgment_line_equal(ZXY)",
-    "altitude_of_triangle_judgment(ZT,ZXY)",
-    "isosceles_triangle_property_line_coincidence(ZXY,T)",
-    "angle_addition(YZT,TZX)",
-    "isosceles_triangle_judgment_line_equal(YZW)",
-    "isosceles_triangle_property_angle_equal(YZW)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,ZXWY,T)",
+    "isosceles_triangle_judgment_line_equal(1,ZXY)",
+    "altitude_of_triangle_judgment(1,ZT,ZXY)",
+    "isosceles_triangle_property_line_coincidence(1,ZXY,T)",
+    "angle_addition(1,YZT,TZX)",
+    "isosceles_triangle_judgment_line_equal(1,YZW)",
+    "isosceles_triangle_property_angle_equal(1,YZW)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,ZXWY,T)": [
+      "altitude_of_triangle_judgment(1,ZT,ZXY)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ZXY)": [
+      "isosceles_triangle_property_line_coincidence(1,ZXY,T)"
+    ],
+    "altitude_of_triangle_judgment(1,ZT,ZXY)": [
+      "isosceles_triangle_property_line_coincidence(1,ZXY,T)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,ZXY,T)": [],
+    "angle_addition(1,YZT,TZX)": [],
+    "isosceles_triangle_judgment_line_equal(1,YZW)": [
+      "isosceles_triangle_property_angle_equal(1,YZW)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,YZW)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,ZXWY,T)",
+      "isosceles_triangle_judgment_line_equal(1,ZXY)",
+      "angle_addition(1,YZT,TZX)",
+      "isosceles_triangle_judgment_line_equal(1,YZW)"
+    ]
+  }
 }

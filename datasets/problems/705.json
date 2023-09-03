@@ -28,9 +28,23 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "114",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(JO,HD,M)",
-    "parallel_property_collinear_extend(DH,OM,C)",
-    "parallel_property_corresponding_angle(MO,CD,G)",
-    "vertical_angle(MCD,ACH)"
-  ]
+    "parallel_property_collinear_extend(3,JO,HD,M)",
+    "parallel_property_collinear_extend(3,DH,OM,C)",
+    "parallel_property_corresponding_angle(1,MO,CD,G)",
+    "vertical_angle(1,MCD,ACH)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,JO,HD,M)": [
+      "parallel_property_collinear_extend(3,DH,OM,C)"
+    ],
+    "parallel_property_collinear_extend(3,DH,OM,C)": [
+      "parallel_property_corresponding_angle(1,MO,CD,G)"
+    ],
+    "parallel_property_corresponding_angle(1,MO,CD,G)": [],
+    "vertical_angle(1,MCD,ACH)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,JO,HD,M)",
+      "vertical_angle(1,MCD,ACH)"
+    ]
+  }
 }

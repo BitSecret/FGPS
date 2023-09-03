@@ -27,10 +27,28 @@
   "goal_cdl": "Value(LengthOfLine(DE))",
   "problem_answer": "4/5",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(ODC,B)",
-    "arc_property_circumference_angle_external(ODC,A)",
-    "mirror_similar_triangle_judgment_aa(BDA,EBD)",
-    "mirror_similar_triangle_property_line_ratio(BDA,EBD)",
-    "mirror_similar_triangle_property_line_ratio(ABD,BDE)"
-  ]
+    "arc_property_circumference_angle_external(1,ODC,B)",
+    "arc_property_circumference_angle_external(1,ODC,A)",
+    "mirror_similar_triangle_judgment_aa(1,BDA,EBD)",
+    "mirror_similar_triangle_property_line_ratio(1,BDA,EBD)",
+    "mirror_similar_triangle_property_line_ratio(1,ABD,BDE)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,ODC,B)": [
+      "mirror_similar_triangle_judgment_aa(1,BDA,EBD)"
+    ],
+    "arc_property_circumference_angle_external(1,ODC,A)": [
+      "mirror_similar_triangle_judgment_aa(1,BDA,EBD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,BDA,EBD)": [
+      "mirror_similar_triangle_property_line_ratio(1,BDA,EBD)",
+      "mirror_similar_triangle_property_line_ratio(1,ABD,BDE)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,BDA,EBD)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ABD,BDE)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,ODC,B)",
+      "arc_property_circumference_angle_external(1,ODC,A)"
+    ]
+  }
 }

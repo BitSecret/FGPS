@@ -24,9 +24,21 @@
   "goal_cdl": "Value(MeasureOfAngle(OBC))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AC,O,O)",
-    "triangle_property_angle_sum(OCA)",
-    "arc_property_center_angle(OCD,O)",
-    "arc_property_circumference_angle_external(OCD,B)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,AC,O,O)",
+    "triangle_property_angle_sum(1,OCA)",
+    "arc_property_center_angle(1,OCD,O)",
+    "arc_property_circumference_angle_external(1,OCD,B)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,AC,O,O)": [],
+    "triangle_property_angle_sum(1,OCA)": [],
+    "arc_property_center_angle(1,OCD,O)": [],
+    "arc_property_circumference_angle_external(1,OCD,B)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,AC,O,O)",
+      "triangle_property_angle_sum(1,OCA)",
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_property_circumference_angle_external(1,OCD,B)"
+    ]
+  }
 }

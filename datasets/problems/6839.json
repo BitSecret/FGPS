@@ -26,21 +26,66 @@
   "goal_cdl": "Value(MeasureOfAngle(ABD))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "parallel_property_alternate_interior_angle(BA,CD)",
-    "midsegment_of_triangle_judgment_midpoint(FO,DAB)",
-    "midsegment_of_triangle_judgment_midpoint(OF,ACD)",
-    "midsegment_of_triangle_property_parallel(FO,DAB)",
-    "midsegment_of_triangle_property_parallel(OF,ACD)",
-    "parallel_property_corresponding_angle(OF,CD,A)",
-    "parallel_property_corresponding_angle(BA,OF,D)",
-    "adjacent_complementary_angle(AOF,FOC)",
-    "adjacent_complementary_angle(AOD,DOC)",
-    "adjacent_complementary_angle(COB,BOA)",
-    "adjacent_complementary_angle(BOA,AOD)",
-    "adjacent_complementary_angle(BOF,FOD)",
-    "adjacent_complementary_angle(DOC,COB)",
-    "angle_addition(FOD,DOC)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "parallel_property_alternate_interior_angle(1,BA,CD)",
+    "parallel_property_alternate_interior_angle(2,BA,CD)",
+    "midsegment_of_triangle_judgment_midpoint(1,FO,DAB)",
+    "midsegment_of_triangle_judgment_midpoint(1,OF,ACD)",
+    "midsegment_of_triangle_property_parallel(1,FO,DAB)",
+    "midsegment_of_triangle_property_parallel(1,OF,ACD)",
+    "parallel_property_corresponding_angle(1,OF,CD,A)",
+    "parallel_property_corresponding_angle(2,BA,OF,D)",
+    "adjacent_complementary_angle(1,AOF,FOC)",
+    "adjacent_complementary_angle(1,AOD,DOC)",
+    "adjacent_complementary_angle(1,COB,BOA)",
+    "adjacent_complementary_angle(1,BOA,AOD)",
+    "adjacent_complementary_angle(1,BOF,FOD)",
+    "adjacent_complementary_angle(1,DOC,COB)",
+    "angle_addition(1,FOD,DOC)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,OF,ACD)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,FO,DAB)"
+    ],
+    "parallel_property_alternate_interior_angle(1,BA,CD)": [],
+    "parallel_property_alternate_interior_angle(2,BA,CD)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,FO,DAB)": [
+      "midsegment_of_triangle_property_parallel(1,FO,DAB)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,OF,ACD)": [
+      "midsegment_of_triangle_property_parallel(1,OF,ACD)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,FO,DAB)": [
+      "parallel_property_corresponding_angle(2,BA,OF,D)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,OF,ACD)": [
+      "parallel_property_corresponding_angle(1,OF,CD,A)"
+    ],
+    "parallel_property_corresponding_angle(1,OF,CD,A)": [],
+    "parallel_property_corresponding_angle(2,BA,OF,D)": [],
+    "adjacent_complementary_angle(1,AOF,FOC)": [],
+    "adjacent_complementary_angle(1,AOD,DOC)": [],
+    "adjacent_complementary_angle(1,COB,BOA)": [],
+    "adjacent_complementary_angle(1,BOA,AOD)": [],
+    "adjacent_complementary_angle(1,BOF,FOD)": [],
+    "adjacent_complementary_angle(1,DOC,COB)": [],
+    "angle_addition(1,FOD,DOC)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallel_property_alternate_interior_angle(1,BA,CD)",
+      "parallel_property_alternate_interior_angle(2,BA,CD)",
+      "adjacent_complementary_angle(1,AOF,FOC)",
+      "adjacent_complementary_angle(1,AOD,DOC)",
+      "adjacent_complementary_angle(1,COB,BOA)",
+      "adjacent_complementary_angle(1,BOA,AOD)",
+      "adjacent_complementary_angle(1,BOF,FOD)",
+      "adjacent_complementary_angle(1,DOC,COB)",
+      "angle_addition(1,FOD,DOC)"
+    ]
+  }
 }

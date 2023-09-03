@@ -31,8 +31,20 @@
   "goal_cdl": "Value(LengthOfLine(QP))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "adjacent_complementary_angle(LPQ,QPJ)",
-    "right_triangle_judgment_angle(QPJ)",
-    "right_triangle_property_pythagorean(QPJ)"
-  ]
+    "adjacent_complementary_angle(1,LPQ,QPJ)",
+    "right_triangle_judgment_angle(1,QPJ)",
+    "right_triangle_property_pythagorean(1,QPJ)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,LPQ,QPJ)": [
+      "right_triangle_judgment_angle(1,QPJ)"
+    ],
+    "right_triangle_judgment_angle(1,QPJ)": [
+      "right_triangle_property_pythagorean(1,QPJ)"
+    ],
+    "right_triangle_property_pythagorean(1,QPJ)": [],
+    "START": [
+      "adjacent_complementary_angle(1,LPQ,QPJ)"
+    ]
+  }
 }

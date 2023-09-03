@@ -28,12 +28,34 @@
   "goal_cdl": "Value(LengthOfLine(PR))",
   "problem_answer": "50/3",
   "theorem_seqs": [
-    "line_addition(LN,NK)",
-    "parallel_property_ipsilateral_internal_angle(LK,RP)",
-    "adjacent_complementary_angle(LRQ,QRM)",
-    "line_addition(KP,PM)",
-    "similar_triangle_judgment_aa(PRM,KLM)",
-    "similar_triangle_property_line_ratio(RMP,LMK)",
-    "similar_triangle_property_line_ratio(MPR,MKL)"
-  ]
+    "line_addition(1,LN,NK)",
+    "parallel_property_ipsilateral_internal_angle(1,LK,RP)",
+    "adjacent_complementary_angle(1,LRQ,QRM)",
+    "line_addition(1,KP,PM)",
+    "similar_triangle_judgment_aa(1,PRM,KLM)",
+    "similar_triangle_property_line_ratio(1,RMP,LMK)",
+    "similar_triangle_property_line_ratio(1,MPR,MKL)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,LN,NK)": [],
+    "parallel_property_ipsilateral_internal_angle(1,LK,RP)": [
+      "similar_triangle_judgment_aa(1,PRM,KLM)"
+    ],
+    "adjacent_complementary_angle(1,LRQ,QRM)": [
+      "similar_triangle_judgment_aa(1,PRM,KLM)"
+    ],
+    "line_addition(1,KP,PM)": [],
+    "similar_triangle_judgment_aa(1,PRM,KLM)": [
+      "similar_triangle_property_line_ratio(1,RMP,LMK)",
+      "similar_triangle_property_line_ratio(1,MPR,MKL)"
+    ],
+    "similar_triangle_property_line_ratio(1,RMP,LMK)": [],
+    "similar_triangle_property_line_ratio(1,MPR,MKL)": [],
+    "START": [
+      "line_addition(1,LN,NK)",
+      "parallel_property_ipsilateral_internal_angle(1,LK,RP)",
+      "adjacent_complementary_angle(1,LRQ,QRM)",
+      "line_addition(1,KP,PM)"
+    ]
+  }
 }

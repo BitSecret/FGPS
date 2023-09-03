@@ -37,8 +37,19 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "22",
   "theorem_seqs": [
-    "parallelogram_judgment_parallel_and_parallel(CMPR)",
-    "parallelogram_property_opposite_angle_equal(CMPR)",
-    "adjacent_complementary_angle(SCR,RCM)"
-  ]
+    "parallelogram_judgment_parallel_and_parallel(1,CMPR)",
+    "parallelogram_property_opposite_angle_equal(1,CMPR)",
+    "adjacent_complementary_angle(1,SCR,RCM)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_parallel_and_parallel(1,CMPR)": [
+      "parallelogram_property_opposite_angle_equal(1,CMPR)"
+    ],
+    "parallelogram_property_opposite_angle_equal(1,CMPR)": [],
+    "adjacent_complementary_angle(1,SCR,RCM)": [],
+    "START": [
+      "parallelogram_judgment_parallel_and_parallel(1,CMPR)",
+      "adjacent_complementary_angle(1,SCR,RCM)"
+    ]
+  }
 }

@@ -22,7 +22,16 @@
   "goal_cdl": "Value(LengthOfLine(NP))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(PMN,PLM)",
-    "mirror_congruent_triangle_property_line_equal(MNP,MPL)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(1,PMN,PLM)",
+    "mirror_congruent_triangle_property_line_equal(1,MNP,MPL)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(1,PMN,PLM)": [
+      "mirror_congruent_triangle_property_line_equal(1,MNP,MPL)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,MNP,MPL)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(1,PMN,PLM)"
+    ]
+  }
 }

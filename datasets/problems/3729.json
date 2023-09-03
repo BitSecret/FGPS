@@ -22,9 +22,21 @@
   "goal_cdl": "Value(MeasureOfAngle(ECD))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "mirror_congruent_triangle_property_angle_equal(ABC,DBC)",
-    "mirror_congruent_triangle_property_angle_equal(CAB,BCD)",
-    "triangle_property_angle_sum(DBC)",
-    "angle_addition(BCE,ECD)"
-  ]
+    "mirror_congruent_triangle_property_angle_equal(1,ABC,DBC)",
+    "mirror_congruent_triangle_property_angle_equal(1,CAB,BCD)",
+    "triangle_property_angle_sum(1,DBC)",
+    "angle_addition(1,BCE,ECD)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_property_angle_equal(1,ABC,DBC)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,CAB,BCD)": [],
+    "triangle_property_angle_sum(1,DBC)": [],
+    "angle_addition(1,BCE,ECD)": [],
+    "START": [
+      "mirror_congruent_triangle_property_angle_equal(1,ABC,DBC)",
+      "mirror_congruent_triangle_property_angle_equal(1,CAB,BCD)",
+      "triangle_property_angle_sum(1,DBC)",
+      "angle_addition(1,BCE,ECD)"
+    ]
+  }
 }

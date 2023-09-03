@@ -30,20 +30,58 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(SPQR))",
   "problem_answer": "38+6*sqrt(2)+6*sqrt(3)",
   "theorem_seqs": [
-    "triangle_property_angle_sum(RZQ)",
-    "sine_theorem(RZQ)",
-    "sine_theorem(QRZ)",
-    "altitude_of_quadrilateral_judgment_left_vertex(SA,SPQR)",
-    "adjacent_complementary_angle(PZR,RZQ)",
-    "altitude_of_quadrilateral_judgment_right_vertex(RZ,SPQR)",
-    "parallel_judgment_corresponding_angle(AS,ZR,P)",
-    "parallelogram_judgment_parallel_and_parallel(SAZR)",
-    "parallelogram_property_opposite_line_equal(AZRS)",
-    "triangle_property_angle_sum(SPA)",
-    "isosceles_triangle_judgment_angle_equal(ASP)",
-    "sine_theorem(SPA)",
-    "line_addition(PA,AZ)",
-    "line_addition(PZ,ZQ)",
-    "quadrilateral_perimeter_formula(SPQR)"
-  ]
+    "triangle_property_angle_sum(1,RZQ)",
+    "sine_theorem(1,RZQ)",
+    "sine_theorem(1,QRZ)",
+    "altitude_of_quadrilateral_judgment_left_vertex(2,SA,SPQR)",
+    "adjacent_complementary_angle(1,PZR,RZQ)",
+    "altitude_of_quadrilateral_judgment_right_vertex(2,RZ,SPQR)",
+    "parallel_judgment_corresponding_angle(1,AS,ZR,P)",
+    "parallelogram_judgment_parallel_and_parallel(1,SAZR)",
+    "parallelogram_property_opposite_line_equal(1,AZRS)",
+    "triangle_property_angle_sum(1,SPA)",
+    "isosceles_triangle_judgment_angle_equal(1,ASP)",
+    "sine_theorem(1,SPA)",
+    "line_addition(1,PA,AZ)",
+    "line_addition(1,PZ,ZQ)",
+    "quadrilateral_perimeter_formula(1,SPQR)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,RZQ)": [],
+    "sine_theorem(1,RZQ)": [],
+    "sine_theorem(1,QRZ)": [],
+    "altitude_of_quadrilateral_judgment_left_vertex(2,SA,SPQR)": [],
+    "adjacent_complementary_angle(1,PZR,RZQ)": [
+      "altitude_of_quadrilateral_judgment_right_vertex(2,RZ,SPQR)",
+      "parallel_judgment_corresponding_angle(1,AS,ZR,P)"
+    ],
+    "altitude_of_quadrilateral_judgment_right_vertex(2,RZ,SPQR)": [],
+    "parallel_judgment_corresponding_angle(1,AS,ZR,P)": [
+      "parallelogram_judgment_parallel_and_parallel(1,SAZR)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,SAZR)": [
+      "parallelogram_property_opposite_line_equal(1,AZRS)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,AZRS)": [],
+    "triangle_property_angle_sum(1,SPA)": [
+      "isosceles_triangle_judgment_angle_equal(1,ASP)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ASP)": [],
+    "sine_theorem(1,SPA)": [],
+    "line_addition(1,PA,AZ)": [],
+    "line_addition(1,PZ,ZQ)": [],
+    "quadrilateral_perimeter_formula(1,SPQR)": [],
+    "START": [
+      "triangle_property_angle_sum(1,RZQ)",
+      "sine_theorem(1,RZQ)",
+      "sine_theorem(1,QRZ)",
+      "altitude_of_quadrilateral_judgment_left_vertex(2,SA,SPQR)",
+      "adjacent_complementary_angle(1,PZR,RZQ)",
+      "triangle_property_angle_sum(1,SPA)",
+      "sine_theorem(1,SPA)",
+      "line_addition(1,PA,AZ)",
+      "line_addition(1,PZ,ZQ)",
+      "quadrilateral_perimeter_formula(1,SPQR)"
+    ]
+  }
 }

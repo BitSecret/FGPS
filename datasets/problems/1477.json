@@ -19,8 +19,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "23.213",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(XYZ)",
-    "cosine_theorem(ZXY)",
-    "right_triangle_property_pythagorean(XYZ)"
-  ]
+    "right_triangle_judgment_angle(1,XYZ)",
+    "cosine_theorem(1,ZXY)",
+    "right_triangle_property_pythagorean(1,XYZ)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,XYZ)": [
+      "right_triangle_property_pythagorean(1,XYZ)"
+    ],
+    "cosine_theorem(1,ZXY)": [],
+    "right_triangle_property_pythagorean(1,XYZ)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,XYZ)",
+      "cosine_theorem(1,ZXY)"
+    ]
+  }
 }

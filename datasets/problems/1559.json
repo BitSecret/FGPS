@@ -34,8 +34,20 @@
   "goal_cdl": "Value(MeasureOfAngle(KCN))",
   "problem_answer": "62",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(NO,MH,C)",
-    "parallel_property_collinear_extend(HM,CN,K)",
-    "parallel_property_corresponding_angle(KM,CN,G)"
-  ]
+    "parallel_property_collinear_extend(3,NO,MH,C)",
+    "parallel_property_collinear_extend(3,HM,CN,K)",
+    "parallel_property_corresponding_angle(1,KM,CN,G)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,NO,MH,C)": [
+      "parallel_property_collinear_extend(3,HM,CN,K)"
+    ],
+    "parallel_property_collinear_extend(3,HM,CN,K)": [
+      "parallel_property_corresponding_angle(1,KM,CN,G)"
+    ],
+    "parallel_property_corresponding_angle(1,KM,CN,G)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,NO,MH,C)"
+    ]
+  }
 }

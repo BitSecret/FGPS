@@ -20,9 +20,24 @@
   "goal_cdl": "Value(LengthOfLine(RS))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "altitude_of_triangle_judgment(TQ,TRS)",
-    "isosceles_triangle_judgment_line_equal(TRS)",
-    "isosceles_triangle_property_line_coincidence(TRS,Q)",
-    "line_addition(RQ,QS)"
-  ]
+    "altitude_of_triangle_judgment(1,TQ,TRS)",
+    "isosceles_triangle_judgment_line_equal(1,TRS)",
+    "isosceles_triangle_property_line_coincidence(1,TRS,Q)",
+    "line_addition(1,RQ,QS)"
+  ],
+  "theorem_seq_dag": {
+    "altitude_of_triangle_judgment(1,TQ,TRS)": [
+      "isosceles_triangle_property_line_coincidence(1,TRS,Q)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,TRS)": [
+      "isosceles_triangle_property_line_coincidence(1,TRS,Q)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,TRS,Q)": [],
+    "line_addition(1,RQ,QS)": [],
+    "START": [
+      "altitude_of_triangle_judgment(1,TQ,TRS)",
+      "isosceles_triangle_judgment_line_equal(1,TRS)",
+      "line_addition(1,RQ,QS)"
+    ]
+  }
 }

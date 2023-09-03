@@ -28,10 +28,26 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AC,FU,B)",
-    "parallel_property_collinear_extend(UF,BA,E)",
-    "vertical_angle(ABD,CBE)",
-    "vertical_angle(FED,UEC)",
-    "parallel_property_corresponding_angle(EF,BA,D)"
-  ]
+    "parallel_property_collinear_extend(3,AC,FU,B)",
+    "parallel_property_collinear_extend(3,UF,BA,E)",
+    "vertical_angle(1,ABD,CBE)",
+    "vertical_angle(1,FED,UEC)",
+    "parallel_property_corresponding_angle(2,EF,BA,D)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AC,FU,B)": [
+      "parallel_property_collinear_extend(3,UF,BA,E)"
+    ],
+    "parallel_property_collinear_extend(3,UF,BA,E)": [
+      "parallel_property_corresponding_angle(2,EF,BA,D)"
+    ],
+    "vertical_angle(1,ABD,CBE)": [],
+    "vertical_angle(1,FED,UEC)": [],
+    "parallel_property_corresponding_angle(2,EF,BA,D)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AC,FU,B)",
+      "vertical_angle(1,ABD,CBE)",
+      "vertical_angle(1,FED,UEC)"
+    ]
+  }
 }

@@ -29,11 +29,30 @@
   "goal_cdl": "Value(MeasureOfAngle(FEN))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CMD,DMN)",
-    "adjacent_complementary_angle(GDA,ADE)",
-    "adjacent_complementary_angle(ADE,EDM)",
-    "perpendicular_judgment_angle(DM,NM)",
-    "parallel_judgment_per_per(MD,NE)",
-    "parallel_property_corresponding_angle(EN,DM,F)"
-  ]
+    "adjacent_complementary_angle(1,CMD,DMN)",
+    "adjacent_complementary_angle(1,GDA,ADE)",
+    "adjacent_complementary_angle(1,ADE,EDM)",
+    "perpendicular_judgment_angle(1,DM,NM)",
+    "parallel_judgment_per_per(1,MD,NE)",
+    "parallel_property_corresponding_angle(1,EN,DM,F)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CMD,DMN)": [
+      "perpendicular_judgment_angle(1,DM,NM)"
+    ],
+    "adjacent_complementary_angle(1,GDA,ADE)": [],
+    "adjacent_complementary_angle(1,ADE,EDM)": [],
+    "perpendicular_judgment_angle(1,DM,NM)": [
+      "parallel_judgment_per_per(1,MD,NE)"
+    ],
+    "parallel_judgment_per_per(1,MD,NE)": [
+      "parallel_property_corresponding_angle(1,EN,DM,F)"
+    ],
+    "parallel_property_corresponding_angle(1,EN,DM,F)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CMD,DMN)",
+      "adjacent_complementary_angle(1,GDA,ADE)",
+      "adjacent_complementary_angle(1,ADE,EDM)"
+    ]
+  }
 }

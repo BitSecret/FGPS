@@ -23,9 +23,21 @@
   "goal_cdl": "Value(MeasureOfAngle(BOD))",
   "problem_answer": "96",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(OBD,A)",
-    "arc_property_circumference_angle_internal(OBD,C)",
-    "arc_property_circumference_angle_external(ODB,C)",
-    "arc_property_center_angle(ODB,O)"
-  ]
+    "arc_property_circumference_angle_external(1,OBD,A)",
+    "arc_property_circumference_angle_internal(1,OBD,C)",
+    "arc_property_circumference_angle_external(1,ODB,C)",
+    "arc_property_center_angle(1,ODB,O)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,OBD,A)": [],
+    "arc_property_circumference_angle_internal(1,OBD,C)": [],
+    "arc_property_circumference_angle_external(1,ODB,C)": [],
+    "arc_property_center_angle(1,ODB,O)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "arc_property_circumference_angle_internal(1,OBD,C)",
+      "arc_property_circumference_angle_external(1,ODB,C)",
+      "arc_property_center_angle(1,ODB,O)"
+    ]
+  }
 }

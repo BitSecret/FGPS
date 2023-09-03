@@ -20,10 +20,21 @@
     "Equal(MeasureOfAngle(TRQ),MeasureOfAngle(SRT))"
   ],
   "goal_cdl": "Value(x)",
-  "problem_answer": "5.4",
+  "problem_answer": "27/5",
   "theorem_seqs": [
-    "line_addition(QT,TS)",
-    "bisector_of_angle_judgment_angle_equal(RT,SRQ)",
-    "bisector_of_angle_property_line_ratio(RT,SRQ)"
-  ]
+    "line_addition(1,QT,TS)",
+    "bisector_of_angle_judgment_angle_equal(1,RT,SRQ)",
+    "bisector_of_angle_property_line_ratio(1,RT,SRQ)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,QT,TS)": [],
+    "bisector_of_angle_judgment_angle_equal(1,RT,SRQ)": [
+      "bisector_of_angle_property_line_ratio(1,RT,SRQ)"
+    ],
+    "bisector_of_angle_property_line_ratio(1,RT,SRQ)": [],
+    "START": [
+      "line_addition(1,QT,TS)",
+      "bisector_of_angle_judgment_angle_equal(1,RT,SRQ)"
+    ]
+  }
 }

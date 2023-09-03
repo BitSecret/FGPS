@@ -23,8 +23,18 @@
   "goal_cdl": "Value(MeasureOfAngle(EAC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "similar_triangle_property_angle_equal(ABC,ADE)",
-    "angle_addition(EAC,CAD)",
-    "angle_addition(CAD,DAB)"
-  ]
+    "similar_triangle_property_angle_equal(1,ABC,ADE)",
+    "angle_addition(1,EAC,CAD)",
+    "angle_addition(1,CAD,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_angle_equal(1,ABC,ADE)": [],
+    "angle_addition(1,EAC,CAD)": [],
+    "angle_addition(1,CAD,DAB)": [],
+    "START": [
+      "similar_triangle_property_angle_equal(1,ABC,ADE)",
+      "angle_addition(1,EAC,CAD)",
+      "angle_addition(1,CAD,DAB)"
+    ]
+  }
 }

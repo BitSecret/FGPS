@@ -23,10 +23,25 @@
   "goal_cdl": "Value(MeasureOfAngle(CDA))",
   "problem_answer": "125",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "triangle_property_angle_sum(ABC)",
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "arc_property_circumference_angle_external(OCA,B)",
-    "arc_property_circumference_angle_internal(OCA,D)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "triangle_property_angle_sum(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "arc_property_circumference_angle_internal(1,OCA,D)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [],
+    "arc_property_circumference_angle_external(1,OCA,B)": [],
+    "arc_property_circumference_angle_internal(1,OCA,D)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "triangle_property_angle_sum(1,ABC)",
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "arc_property_circumference_angle_internal(1,OCA,D)"
+    ]
+  }
 }

@@ -24,10 +24,26 @@
   "goal_cdl": "Value(MeasureOfAngle(GFE))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CEG,GED)",
-    "angle_addition(CEF,FEG)",
-    "parallel_property_collinear_extend(AB,CD,F)",
-    "parallel_property_collinear_extend(DC,BF,E)",
-    "parallel_property_alternate_interior_angle(FB,CE)"
-  ]
+    "adjacent_complementary_angle(1,CEG,GED)",
+    "angle_addition(1,CEF,FEG)",
+    "parallel_property_collinear_extend(3,AB,CD,F)",
+    "parallel_property_collinear_extend(3,DC,BF,E)",
+    "parallel_property_alternate_interior_angle(1,FB,CE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CEG,GED)": [],
+    "angle_addition(1,CEF,FEG)": [],
+    "parallel_property_collinear_extend(3,AB,CD,F)": [
+      "parallel_property_collinear_extend(3,DC,BF,E)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BF,E)": [
+      "parallel_property_alternate_interior_angle(1,FB,CE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,FB,CE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CEG,GED)",
+      "angle_addition(1,CEF,FEG)",
+      "parallel_property_collinear_extend(3,AB,CD,F)"
+    ]
+  }
 }

@@ -29,10 +29,26 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ABE))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "line_addition(AE,ED)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "perpendicular_bisector_judgment_per_and_mid(EO,BD)",
-    "perpendicular_bisector_property_distance_equal(EO,BD)",
-    "triangle_perimeter_formula(ABE)"
-  ]
+    "line_addition(1,AE,ED)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,BD)",
+    "perpendicular_bisector_property_distance_equal(1,EO,BD)",
+    "triangle_perimeter_formula(1,ABE)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AE,ED)": [],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,BD)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,BD)": [
+      "perpendicular_bisector_property_distance_equal(1,EO,BD)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,EO,BD)": [],
+    "triangle_perimeter_formula(1,ABE)": [],
+    "START": [
+      "line_addition(1,AE,ED)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "triangle_perimeter_formula(1,ABE)"
+    ]
+  }
 }

@@ -24,7 +24,15 @@
   "goal_cdl": "Value(MeasureOfAngle(CAB))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "arc_property_center_angle(OBC,O)",
-    "arc_property_circumference_angle_external(OBC,A)"
-  ]
+    "arc_property_center_angle(1,OBC,O)",
+    "arc_property_circumference_angle_external(1,OBC,A)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OBC,O)": [],
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "START": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  }
 }

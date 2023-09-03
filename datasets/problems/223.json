@@ -19,8 +19,19 @@
   "goal_cdl": "Value(MeasureOfAngle(YXW))",
   "problem_answer": "117",
   "theorem_seqs": [
-    "kite_judgment_equal_and_equal(WZYX)",
-    "kite_property_opposite_angle_equal(WZYX)",
-    "quadrilateral_property_angle_sum(WZYX)"
-  ]
+    "kite_judgment_equal_and_equal(1,WZYX)",
+    "kite_property_opposite_angle_equal(1,WZYX)",
+    "quadrilateral_property_angle_sum(1,WZYX)"
+  ],
+  "theorem_seq_dag": {
+    "kite_judgment_equal_and_equal(1,WZYX)": [
+      "kite_property_opposite_angle_equal(1,WZYX)"
+    ],
+    "kite_property_opposite_angle_equal(1,WZYX)": [],
+    "quadrilateral_property_angle_sum(1,WZYX)": [],
+    "START": [
+      "kite_judgment_equal_and_equal(1,WZYX)",
+      "quadrilateral_property_angle_sum(1,WZYX)"
+    ]
+  }
 }

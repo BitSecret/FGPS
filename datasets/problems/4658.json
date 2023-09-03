@@ -22,7 +22,15 @@
   "goal_cdl": "Value(Sub(AreaOfCircle(O),AreaOfCircle(P)))",
   "problem_answer": "25*pi",
   "theorem_seqs": [
-    "circle_area_formula(O)",
-    "circle_area_formula(P)"
-  ]
+    "circle_area_formula(1,O)",
+    "circle_area_formula(1,P)"
+  ],
+  "theorem_seq_dag": {
+    "circle_area_formula(1,O)": [],
+    "circle_area_formula(1,P)": [],
+    "START": [
+      "circle_area_formula(1,O)",
+      "circle_area_formula(1,P)"
+    ]
+  }
 }

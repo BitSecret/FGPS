@@ -23,11 +23,29 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "37.2",
   "theorem_seqs": [
-    "line_addition(CA,AD)",
-    "right_triangle_judgment_angle(CDB)",
-    "right_triangle_property_pythagorean(CDB)",
-    "right_triangle_judgment_angle(ADB)",
-    "right_triangle_property_pythagorean(ADB)",
-    "sine_theorem(ADB)"
-  ]
+    "line_addition(1,CA,AD)",
+    "right_triangle_judgment_angle(1,CDB)",
+    "right_triangle_property_pythagorean(1,CDB)",
+    "right_triangle_judgment_angle(1,ADB)",
+    "right_triangle_property_pythagorean(1,ADB)",
+    "sine_theorem(1,ADB)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,CA,AD)": [],
+    "right_triangle_judgment_angle(1,CDB)": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ],
+    "right_triangle_property_pythagorean(1,CDB)": [],
+    "right_triangle_judgment_angle(1,ADB)": [
+      "right_triangle_property_pythagorean(1,ADB)"
+    ],
+    "right_triangle_property_pythagorean(1,ADB)": [],
+    "sine_theorem(1,ADB)": [],
+    "START": [
+      "line_addition(1,CA,AD)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,ADB)",
+      "sine_theorem(1,ADB)"
+    ]
+  }
 }

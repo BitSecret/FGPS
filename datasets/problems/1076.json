@@ -18,8 +18,19 @@
   "goal_cdl": "Value(MeasureOfAngle(STR))",
   "problem_answer": "33.7",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(RST)",
-    "right_triangle_property_pythagorean(RST)",
-    "cosine_theorem(TRS)"
-  ]
+    "right_triangle_judgment_angle(1,RST)",
+    "right_triangle_property_pythagorean(1,RST)",
+    "cosine_theorem(1,TRS)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,RST)": [
+      "right_triangle_property_pythagorean(1,RST)"
+    ],
+    "right_triangle_property_pythagorean(1,RST)": [],
+    "cosine_theorem(1,TRS)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,RST)",
+      "cosine_theorem(1,TRS)"
+    ]
+  }
 }

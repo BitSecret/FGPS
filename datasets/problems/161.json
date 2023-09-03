@@ -25,13 +25,38 @@
   "goal_cdl": "Value(Add(AreaOfTriangle(DFB),AreaOfQuadrilateral(FEAB)))",
   "problem_answer": "54",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(EF,AB)",
-    "parallel_judgment_ipsilateral_internal_angle(AE,BF)",
-    "parallelogram_judgment_parallel_and_parallel(FEAB)",
-    "parallelogram_property_opposite_line_equal(EABF)",
-    "parallelogram_area_formula_sine(FEAB)",
-    "adjacent_complementary_angle(FHD,DHB)",
-    "altitude_of_triangle_judgment(DH,DFB)",
-    "triangle_area_formula_common(DFB)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,EF,AB)",
+    "parallel_judgment_ipsilateral_internal_angle(1,AE,BF)",
+    "parallelogram_judgment_parallel_and_parallel(1,FEAB)",
+    "parallelogram_property_opposite_line_equal(1,EABF)",
+    "parallelogram_area_formula_sine(1,FEAB)",
+    "adjacent_complementary_angle(1,FHD,DHB)",
+    "altitude_of_triangle_judgment(1,DH,DFB)",
+    "triangle_area_formula_common(1,DFB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,EF,AB)": [
+      "parallelogram_judgment_parallel_and_parallel(1,FEAB)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,AE,BF)": [
+      "parallelogram_judgment_parallel_and_parallel(1,FEAB)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,FEAB)": [
+      "parallelogram_area_formula_sine(1,FEAB)",
+      "parallelogram_property_opposite_line_equal(1,EABF)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,EABF)": [],
+    "parallelogram_area_formula_sine(1,FEAB)": [],
+    "adjacent_complementary_angle(1,FHD,DHB)": [
+      "altitude_of_triangle_judgment(1,DH,DFB)"
+    ],
+    "altitude_of_triangle_judgment(1,DH,DFB)": [],
+    "triangle_area_formula_common(1,DFB)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EF,AB)",
+      "parallel_judgment_ipsilateral_internal_angle(1,AE,BF)",
+      "adjacent_complementary_angle(1,FHD,DHB)",
+      "triangle_area_formula_common(1,DFB)"
+    ]
+  }
 }

@@ -22,10 +22,26 @@
   "goal_cdl": "Value(RadiusOfCircle(E))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(MON)",
-    "right_triangle_property_pythagorean(MON)",
-    "diameter_of_circle_judgment_right_angle(MON,E)",
-    "diameter_of_circle_property_length_equal(NM,E)",
-    "circle_property_length_of_radius_and_diameter(E)"
-  ]
+    "right_triangle_judgment_angle(1,MON)",
+    "right_triangle_property_pythagorean(1,MON)",
+    "diameter_of_circle_judgment_right_angle(1,MON,E)",
+    "diameter_of_circle_property_length_equal(1,NM,E)",
+    "circle_property_length_of_radius_and_diameter(1,E)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,MON)": [
+      "right_triangle_property_pythagorean(1,MON)"
+    ],
+    "right_triangle_property_pythagorean(1,MON)": [],
+    "diameter_of_circle_judgment_right_angle(1,MON,E)": [
+      "diameter_of_circle_property_length_equal(1,NM,E)"
+    ],
+    "diameter_of_circle_property_length_equal(1,NM,E)": [],
+    "circle_property_length_of_radius_and_diameter(1,E)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,MON)",
+      "diameter_of_circle_judgment_right_angle(1,MON,E)",
+      "circle_property_length_of_radius_and_diameter(1,E)"
+    ]
+  }
 }

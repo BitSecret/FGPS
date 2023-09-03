@@ -30,9 +30,23 @@
   "goal_cdl": "Value(LengthOfLine(DC))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "similar_triangle_property_angle_equal(LJK,CDE)",
-    "similar_triangle_judgment_aa(JML,DGC)",
-    "similar_triangle_property_line_ratio(LJM,CDG)",
-    "similar_triangle_property_line_ratio(MLJ,GCD)"
-  ]
+    "similar_triangle_property_angle_equal(1,LJK,CDE)",
+    "similar_triangle_judgment_aa(1,JML,DGC)",
+    "similar_triangle_property_line_ratio(1,LJM,CDG)",
+    "similar_triangle_property_line_ratio(1,MLJ,GCD)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_angle_equal(1,LJK,CDE)": [
+      "similar_triangle_judgment_aa(1,JML,DGC)"
+    ],
+    "similar_triangle_judgment_aa(1,JML,DGC)": [
+      "similar_triangle_property_line_ratio(1,MLJ,GCD)",
+      "similar_triangle_property_line_ratio(1,LJM,CDG)"
+    ],
+    "similar_triangle_property_line_ratio(1,LJM,CDG)": [],
+    "similar_triangle_property_line_ratio(1,MLJ,GCD)": [],
+    "START": [
+      "similar_triangle_property_angle_equal(1,LJK,CDE)"
+    ]
+  }
 }

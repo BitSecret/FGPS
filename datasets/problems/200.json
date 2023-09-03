@@ -19,7 +19,16 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "sqrt(161)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCF)",
-    "right_triangle_property_pythagorean(BCF)"
-  ]
+    "right_triangle_judgment_angle(1,BCF)",
+    "right_triangle_property_pythagorean(1,BCF)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCF)": [
+      "right_triangle_property_pythagorean(1,BCF)"
+    ],
+    "right_triangle_property_pythagorean(1,BCF)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCF)"
+    ]
+  }
 }

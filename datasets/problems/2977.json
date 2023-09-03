@@ -27,13 +27,35 @@
   "goal_cdl": "Value(MeasureOfAngle(HCA))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "angle_addition(EBH,HBC)",
-    "flat_angle(EBF)",
-    "angle_addition(EBC,CBF)",
-    "parallel_property_collinear_extend(FE,GD,B)",
-    "parallel_property_collinear_extend(DG,BF,C)",
-    "parallel_property_alternate_interior_angle(DC,BF)",
-    "triangle_property_angle_sum(ABC)",
-    "angle_addition(BCH,HCA)"
-  ]
+    "angle_addition(1,EBH,HBC)",
+    "flat_angle(1,EBF)",
+    "angle_addition(1,EBC,CBF)",
+    "parallel_property_collinear_extend(3,FE,GD,B)",
+    "parallel_property_collinear_extend(3,DG,BF,C)",
+    "parallel_property_alternate_interior_angle(2,DC,BF)",
+    "triangle_property_angle_sum(1,ABC)",
+    "angle_addition(1,BCH,HCA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,EBH,HBC)": [],
+    "flat_angle(1,EBF)": [],
+    "angle_addition(1,EBC,CBF)": [],
+    "parallel_property_collinear_extend(3,FE,GD,B)": [
+      "parallel_property_collinear_extend(3,DG,BF,C)"
+    ],
+    "parallel_property_collinear_extend(3,DG,BF,C)": [
+      "parallel_property_alternate_interior_angle(2,DC,BF)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DC,BF)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "angle_addition(1,BCH,HCA)": [],
+    "START": [
+      "angle_addition(1,EBH,HBC)",
+      "flat_angle(1,EBF)",
+      "angle_addition(1,EBC,CBF)",
+      "parallel_property_collinear_extend(3,FE,GD,B)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,BCH,HCA)"
+    ]
+  }
 }

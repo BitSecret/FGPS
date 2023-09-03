@@ -32,15 +32,45 @@
   "goal_cdl": "Value(Add(LengthOfLine(EP),LengthOfLine(BP)))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "midsegment_of_triangle_property_parallel(EF,ABC)",
-    "parallel_property_collinear_extend(EF,BC,M)",
-    "parallel_property_alternate_interior_angle(EF,BC)",
-    "parallel_property_alternate_interior_angle(EM,BC)",
-    "isosceles_triangle_judgment_angle_equal(PBM)",
-    "line_addition(EP,PM)",
-    "line_addition(EQ,QC)",
-    "similar_triangle_judgment_aa(QBC,QME)",
-    "similar_triangle_property_line_ratio(QBC,QME)",
-    "similar_triangle_property_line_ratio(BCQ,MEQ)"
-  ]
+    "midsegment_of_triangle_property_parallel(1,EF,ABC)",
+    "parallel_property_collinear_extend(2,EF,BC,M)",
+    "parallel_property_alternate_interior_angle(1,EF,BC)",
+    "parallel_property_alternate_interior_angle(2,EM,BC)",
+    "isosceles_triangle_judgment_angle_equal(1,PBM)",
+    "line_addition(1,EP,PM)",
+    "line_addition(1,EQ,QC)",
+    "similar_triangle_judgment_aa(1,QBC,QME)",
+    "similar_triangle_property_line_ratio(1,QBC,QME)",
+    "similar_triangle_property_line_ratio(1,BCQ,MEQ)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_property_parallel(1,EF,ABC)": [
+      "parallel_property_collinear_extend(2,EF,BC,M)",
+      "parallel_property_alternate_interior_angle(1,EF,BC)"
+    ],
+    "parallel_property_collinear_extend(2,EF,BC,M)": [
+      "parallel_property_alternate_interior_angle(2,EM,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EF,BC)": [
+      "similar_triangle_judgment_aa(1,QBC,QME)"
+    ],
+    "parallel_property_alternate_interior_angle(2,EM,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,PBM)",
+      "similar_triangle_judgment_aa(1,QBC,QME)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,PBM)": [],
+    "line_addition(1,EP,PM)": [],
+    "line_addition(1,EQ,QC)": [],
+    "similar_triangle_judgment_aa(1,QBC,QME)": [
+      "similar_triangle_property_line_ratio(1,QBC,QME)",
+      "similar_triangle_property_line_ratio(1,BCQ,MEQ)"
+    ],
+    "similar_triangle_property_line_ratio(1,QBC,QME)": [],
+    "similar_triangle_property_line_ratio(1,BCQ,MEQ)": [],
+    "START": [
+      "midsegment_of_triangle_property_parallel(1,EF,ABC)",
+      "line_addition(1,EP,PM)",
+      "line_addition(1,EQ,QC)"
+    ]
+  }
 }

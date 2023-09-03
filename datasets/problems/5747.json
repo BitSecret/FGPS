@@ -24,12 +24,35 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "3*sqrt(5)/2",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(AED)",
-    "right_triangle_property_pythagorean(AED)",
-    "angle_addition(CAD,DAB)",
-    "triangle_property_angle_sum(AED)",
-    "mirror_similar_triangle_judgment_aa(AED,CAD)",
-    "mirror_similar_triangle_property_line_ratio(AED,CAD)",
-    "mirror_similar_triangle_property_line_ratio(DAE,ADC)"
-  ]
+    "right_triangle_judgment_angle(1,AED)",
+    "right_triangle_property_pythagorean(1,AED)",
+    "angle_addition(1,CAD,DAB)",
+    "triangle_property_angle_sum(1,AED)",
+    "mirror_similar_triangle_judgment_aa(1,AED,CAD)",
+    "mirror_similar_triangle_property_line_ratio(1,AED,CAD)",
+    "mirror_similar_triangle_property_line_ratio(1,DAE,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,AED)": [
+      "right_triangle_property_pythagorean(1,AED)"
+    ],
+    "right_triangle_property_pythagorean(1,AED)": [],
+    "angle_addition(1,CAD,DAB)": [
+      "mirror_similar_triangle_judgment_aa(1,AED,CAD)"
+    ],
+    "triangle_property_angle_sum(1,AED)": [
+      "mirror_similar_triangle_judgment_aa(1,AED,CAD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,AED,CAD)": [
+      "mirror_similar_triangle_property_line_ratio(1,AED,CAD)",
+      "mirror_similar_triangle_property_line_ratio(1,DAE,ADC)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,AED,CAD)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DAE,ADC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,AED)",
+      "angle_addition(1,CAD,DAB)",
+      "triangle_property_angle_sum(1,AED)"
+    ]
+  }
 }

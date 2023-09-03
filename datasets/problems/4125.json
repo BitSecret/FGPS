@@ -25,8 +25,18 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(NED)))",
   "problem_answer": "1/2",
   "theorem_seqs": [
-    "mirror_congruent_triangle_property_angle_equal(ECD,EDN)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "sine_theorem(DEC)"
-  ]
+    "mirror_congruent_triangle_property_angle_equal(1,ECD,EDN)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "sine_theorem(1,DEC)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_property_angle_equal(1,ECD,EDN)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "sine_theorem(1,DEC)": [],
+    "START": [
+      "mirror_congruent_triangle_property_angle_equal(1,ECD,EDN)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "sine_theorem(1,DEC)"
+    ]
+  }
 }

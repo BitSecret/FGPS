@@ -23,10 +23,25 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(CBAD))",
   "problem_answer": "180",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BEC)",
-    "right_triangle_property_pythagorean(BEC)",
-    "altitude_of_quadrilateral_judgment_left_vertex(CE,CBAD)",
-    "parallelogram_property_opposite_line_equal(DCBA)",
-    "parallelogram_area_formula_common(CBAD)"
-  ]
+    "right_triangle_judgment_angle(1,BEC)",
+    "right_triangle_property_pythagorean(1,BEC)",
+    "altitude_of_quadrilateral_judgment_left_vertex(1,CE,CBAD)",
+    "parallelogram_property_opposite_line_equal(1,DCBA)",
+    "parallelogram_area_formula_common(1,CBAD)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BEC)": [
+      "right_triangle_property_pythagorean(1,BEC)"
+    ],
+    "right_triangle_property_pythagorean(1,BEC)": [],
+    "altitude_of_quadrilateral_judgment_left_vertex(1,CE,CBAD)": [],
+    "parallelogram_property_opposite_line_equal(1,DCBA)": [],
+    "parallelogram_area_formula_common(1,CBAD)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BEC)",
+      "altitude_of_quadrilateral_judgment_left_vertex(1,CE,CBAD)",
+      "parallelogram_property_opposite_line_equal(1,DCBA)",
+      "parallelogram_area_formula_common(1,CBAD)"
+    ]
+  }
 }

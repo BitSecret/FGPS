@@ -28,9 +28,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "15",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(CB,C)",
-    "radius_of_circle_property_length_equal(CD,C)",
-    "mirror_congruent_triangle_judgment_hl(ABC,ACD)",
-    "mirror_congruent_triangle_property_line_equal(CAB,CDA)"
-  ]
+    "radius_of_circle_property_length_equal(1,CB,C)",
+    "radius_of_circle_property_length_equal(1,CD,C)",
+    "mirror_congruent_triangle_judgment_hl(1,ABC,ACD)",
+    "mirror_congruent_triangle_property_line_equal(1,CAB,CDA)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,CB,C)": [
+      "mirror_congruent_triangle_judgment_hl(1,ABC,ACD)"
+    ],
+    "radius_of_circle_property_length_equal(1,CD,C)": [
+      "mirror_congruent_triangle_judgment_hl(1,ABC,ACD)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,ABC,ACD)": [
+      "mirror_congruent_triangle_property_line_equal(1,CAB,CDA)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,CAB,CDA)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,CB,C)",
+      "radius_of_circle_property_length_equal(1,CD,C)"
+    ]
+  }
 }

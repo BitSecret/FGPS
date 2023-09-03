@@ -20,7 +20,15 @@
   "goal_cdl": "Value(MeasureOfAngle(ADB))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "flat_angle(CDB)",
-    "angle_addition(CDA,ADB)"
-  ]
+    "flat_angle(1,CDB)",
+    "angle_addition(1,CDA,ADB)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,CDB)": [],
+    "angle_addition(1,CDA,ADB)": [],
+    "START": [
+      "flat_angle(1,CDB)",
+      "angle_addition(1,CDA,ADB)"
+    ]
+  }
 }

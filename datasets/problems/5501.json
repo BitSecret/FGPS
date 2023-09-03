@@ -30,11 +30,32 @@
   "goal_cdl": "Value(LengthOfLine(HE))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(DF,BCA)",
-    "midsegment_of_triangle_property_length(DF,BCA)",
-    "adjacent_complementary_angle(BHG,GHC)",
-    "right_triangle_judgment_angle(AHC)",
-    "median_of_triangle_judgment(HE,HCA)",
-    "right_triangle_property_length_of_median(AHC,E)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,DF,BCA)",
+    "midsegment_of_triangle_property_length(1,DF,BCA)",
+    "adjacent_complementary_angle(1,BHG,GHC)",
+    "right_triangle_judgment_angle(1,AHC)",
+    "median_of_triangle_judgment(1,HE,HCA)",
+    "right_triangle_property_length_of_median(1,AHC,E)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,DF,BCA)": [
+      "midsegment_of_triangle_property_length(1,DF,BCA)"
+    ],
+    "midsegment_of_triangle_property_length(1,DF,BCA)": [],
+    "adjacent_complementary_angle(1,BHG,GHC)": [
+      "right_triangle_judgment_angle(1,AHC)"
+    ],
+    "right_triangle_judgment_angle(1,AHC)": [
+      "right_triangle_property_length_of_median(1,AHC,E)"
+    ],
+    "median_of_triangle_judgment(1,HE,HCA)": [
+      "right_triangle_property_length_of_median(1,AHC,E)"
+    ],
+    "right_triangle_property_length_of_median(1,AHC,E)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,DF,BCA)",
+      "adjacent_complementary_angle(1,BHG,GHC)",
+      "median_of_triangle_judgment(1,HE,HCA)"
+    ]
+  }
 }

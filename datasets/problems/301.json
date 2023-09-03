@@ -23,14 +23,48 @@
   "goal_cdl": "Value(LengthOfLine(PS))",
   "problem_answer": "13.5",
   "theorem_seqs": [
-    "parallel_property_ipsilateral_internal_angle(PQ,TR)",
-    "parallel_property_ipsilateral_internal_angle(RT,QP)",
-    "flat_angle(PTS)",
-    "flat_angle(SRQ)",
-    "angle_addition(PTR,RTS)",
-    "angle_addition(SRT,TRQ)",
-    "similar_triangle_judgment_aa(SRT,SQP)",
-    "similar_triangle_property_line_ratio(RTS,QPS)",
-    "similar_triangle_property_line_ratio(SRT,SQP)"
-  ]
+    "parallel_property_ipsilateral_internal_angle(1,PQ,TR)",
+    "parallel_property_ipsilateral_internal_angle(1,RT,QP)",
+    "flat_angle(1,PTS)",
+    "flat_angle(1,SRQ)",
+    "angle_addition(1,PTR,RTS)",
+    "angle_addition(1,SRT,TRQ)",
+    "similar_triangle_judgment_aa(1,SRT,SQP)",
+    "similar_triangle_property_line_ratio(1,RTS,QPS)",
+    "similar_triangle_property_line_ratio(1,SRT,SQP)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_ipsilateral_internal_angle(1,PQ,TR)": [
+      "similar_triangle_judgment_aa(1,SRT,SQP)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,RT,QP)": [
+      "similar_triangle_judgment_aa(1,SRT,SQP)"
+    ],
+    "flat_angle(1,PTS)": [
+      "similar_triangle_judgment_aa(1,SRT,SQP)"
+    ],
+    "flat_angle(1,SRQ)": [
+      "similar_triangle_judgment_aa(1,SRT,SQP)"
+    ],
+    "angle_addition(1,PTR,RTS)": [
+      "similar_triangle_judgment_aa(1,SRT,SQP)"
+    ],
+    "angle_addition(1,SRT,TRQ)": [
+      "similar_triangle_judgment_aa(1,SRT,SQP)"
+    ],
+    "similar_triangle_judgment_aa(1,SRT,SQP)": [
+      "similar_triangle_property_line_ratio(1,SRT,SQP)",
+      "similar_triangle_property_line_ratio(1,RTS,QPS)"
+    ],
+    "similar_triangle_property_line_ratio(1,RTS,QPS)": [],
+    "similar_triangle_property_line_ratio(1,SRT,SQP)": [],
+    "START": [
+      "parallel_property_ipsilateral_internal_angle(1,PQ,TR)",
+      "parallel_property_ipsilateral_internal_angle(1,RT,QP)",
+      "flat_angle(1,PTS)",
+      "flat_angle(1,SRQ)",
+      "angle_addition(1,PTR,RTS)",
+      "angle_addition(1,SRT,TRQ)"
+    ]
+  }
 }

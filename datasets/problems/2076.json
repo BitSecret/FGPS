@@ -35,19 +35,61 @@
   "goal_cdl": "Value(Sub(AreaOfTriangle(BCD),AreaOfCircle(A)))",
   "problem_answer": "26.62",
   "theorem_seqs": [
-    "equilateral_triangle_property_angle(BCD)",
-    "tangent_of_circle_property_length_equal(BE,BF,A)",
-    "radius_of_circle_property_length_equal(AE,A)",
-    "radius_of_circle_property_length_equal(AF,A)",
-    "mirror_congruent_triangle_judgment_sss(BEA,BAF)",
-    "mirror_congruent_triangle_property_angle_equal(BEA,BAF)",
-    "angle_addition(FBA,ABE)",
-    "tangent_of_circle_property_perpendicular(BE,A,A)",
-    "triangle_property_angle_sum(ABE)",
-    "triangle_property_angle_sum(BED)",
-    "sine_theorem(EAB)",
-    "sine_theorem(BED)",
-    "triangle_area_formula_sine(BCD)",
-    "circle_area_formula(A)"
-  ]
+    "equilateral_triangle_property_angle(1,BCD)",
+    "tangent_of_circle_property_length_equal(1,BE,BF,A)",
+    "radius_of_circle_property_length_equal(1,AE,A)",
+    "radius_of_circle_property_length_equal(1,AF,A)",
+    "mirror_congruent_triangle_judgment_sss(1,BEA,BAF)",
+    "mirror_congruent_triangle_property_angle_equal(1,BEA,BAF)",
+    "angle_addition(1,FBA,ABE)",
+    "tangent_of_circle_property_perpendicular(2,BE,A,A)",
+    "triangle_property_angle_sum(1,ABE)",
+    "triangle_property_angle_sum(1,BED)",
+    "sine_theorem(1,EAB)",
+    "sine_theorem(1,BED)",
+    "triangle_area_formula_sine(1,BCD)",
+    "circle_area_formula(1,A)"
+  ],
+  "theorem_seq_dag": {
+    "equilateral_triangle_property_angle(1,BCD)": [
+      "solve_eq_32)"
+    ],
+    "tangent_of_circle_property_length_equal(1,BE,BF,A)": [
+      "mirror_congruent_triangle_judgment_sss(1,BEA,BAF)"
+    ],
+    "radius_of_circle_property_length_equal(1,AE,A)": [
+      "mirror_congruent_triangle_judgment_sss(1,BEA,BAF)"
+    ],
+    "radius_of_circle_property_length_equal(1,AF,A)": [
+      "mirror_congruent_triangle_judgment_sss(1,BEA,BAF)"
+    ],
+    "mirror_congruent_triangle_judgment_sss(1,BEA,BAF)": [
+      "mirror_congruent_triangle_property_angle_equal(1,BEA,BAF)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,BEA,BAF)": [],
+    "angle_addition(1,FBA,ABE)": [],
+    "tangent_of_circle_property_perpendicular(2,BE,A,A)": [
+      "solve_eq_35)"
+    ],
+    "triangle_property_angle_sum(1,ABE)": [],
+    "triangle_property_angle_sum(1,BED)": [],
+    "sine_theorem(1,EAB)": [],
+    "sine_theorem(1,BED)": [],
+    "triangle_area_formula_sine(1,BCD)": [],
+    "circle_area_formula(1,A)": [],
+    "START": [
+      "equilateral_triangle_property_angle(1,BCD)",
+      "tangent_of_circle_property_length_equal(1,BE,BF,A)",
+      "radius_of_circle_property_length_equal(1,AE,A)",
+      "radius_of_circle_property_length_equal(1,AF,A)",
+      "angle_addition(1,FBA,ABE)",
+      "tangent_of_circle_property_perpendicular(2,BE,A,A)",
+      "triangle_property_angle_sum(1,ABE)",
+      "triangle_property_angle_sum(1,BED)",
+      "sine_theorem(1,EAB)",
+      "sine_theorem(1,BED)",
+      "triangle_area_formula_sine(1,BCD)",
+      "circle_area_formula(1,A)"
+    ]
+  }
 }

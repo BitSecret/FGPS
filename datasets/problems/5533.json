@@ -29,22 +29,84 @@
   "goal_cdl": "Value(AreaOfSector(ODA))",
   "problem_answer": "pi/6",
   "theorem_seqs": [
-    "cosine_theorem(BCA)",
-    "cosine_theorem(ABC)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "angle_addition(DAC,CAB)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_judgment_line_equal(OBC)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(OBC)",
-    "triangle_property_angle_sum(ODA)",
-    "triangle_property_angle_sum(OBC)",
-    "triangle_property_angle_sum(ABC)",
-    "isosceles_triangle_judgment_angle_equal(COB)",
-    "arc_property_center_angle(ODA,O)",
-    "sector_area_formula(ODA)"
-  ]
+    "cosine_theorem(1,BCA)",
+    "cosine_theorem(1,ABC)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "angle_addition(1,DAC,CAB)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_judgment_line_equal(1,OBC)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,OBC)",
+    "triangle_property_angle_sum(1,ODA)",
+    "triangle_property_angle_sum(1,OBC)",
+    "triangle_property_angle_sum(1,ABC)",
+    "isosceles_triangle_judgment_angle_equal(1,COB)",
+    "arc_property_center_angle(1,ODA,O)",
+    "sector_area_formula(1,ODA)"
+  ],
+  "theorem_seq_dag": {
+    "cosine_theorem(1,BCA)": [
+      "isosceles_triangle_judgment_angle_equal(1,COB)",
+      "isosceles_triangle_judgment_angle_equal(1,COB)",
+      "isosceles_triangle_judgment_angle_equal(1,COB)"
+    ],
+    "cosine_theorem(1,ABC)": [
+      "isosceles_triangle_judgment_angle_equal(1,COB)",
+      "isosceles_triangle_judgment_angle_equal(1,COB)",
+      "isosceles_triangle_judgment_angle_equal(1,COB)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBC)"
+    ],
+    "angle_addition(1,DAC,CAB)": [],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBC)": [
+      "isosceles_triangle_property_angle_equal(1,OBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "isosceles_triangle_property_angle_equal(1,OBC)": [
+      "isosceles_triangle_judgment_angle_equal(1,COB)",
+      "isosceles_triangle_judgment_angle_equal(1,COB)"
+    ],
+    "triangle_property_angle_sum(1,ODA)": [],
+    "triangle_property_angle_sum(1,OBC)": [
+      "isosceles_triangle_judgment_angle_equal(1,COB)"
+    ],
+    "triangle_property_angle_sum(1,ABC)": [
+      "isosceles_triangle_judgment_angle_equal(1,COB)",
+      "isosceles_triangle_judgment_angle_equal(1,COB)",
+      "isosceles_triangle_judgment_angle_equal(1,COB)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,COB)": [],
+    "arc_property_center_angle(1,ODA,O)": [],
+    "sector_area_formula(1,ODA)": [],
+    "START": [
+      "cosine_theorem(1,BCA)",
+      "cosine_theorem(1,ABC)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "angle_addition(1,DAC,CAB)",
+      "triangle_property_angle_sum(1,ODA)",
+      "triangle_property_angle_sum(1,OBC)",
+      "triangle_property_angle_sum(1,ABC)",
+      "arc_property_center_angle(1,ODA,O)",
+      "sector_area_formula(1,ODA)"
+    ]
+  }
 }

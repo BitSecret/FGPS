@@ -18,8 +18,19 @@
   "goal_cdl": "Value(Sin(MeasureOfAngle(CAB)))",
   "problem_answer": "0.6",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)",
-    "cosine_theorem(ABC)"
-  ]
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "cosine_theorem(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "cosine_theorem(1,ABC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,ABC)"
+    ]
+  }
 }

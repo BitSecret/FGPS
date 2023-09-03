@@ -21,12 +21,32 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "parallel_property_alternate_interior_angle(CE,DA)",
-    "isosceles_triangle_judgment_angle_equal(CDE)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(BE,EC)",
-    "quadrilateral_perimeter_formula(DABC)"
-  ]
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "parallel_property_alternate_interior_angle(2,CE,DA)",
+    "isosceles_triangle_judgment_angle_equal(1,CDE)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,BE,EC)",
+    "quadrilateral_perimeter_formula(1,DABC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(2,CE,DA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,CE,DA)": [
+      "isosceles_triangle_judgment_angle_equal(1,CDE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,CDE)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,BE,EC)": [],
+    "quadrilateral_perimeter_formula(1,DABC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CB,DA,E)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,BE,EC)",
+      "quadrilateral_perimeter_formula(1,DABC)"
+    ]
+  }
 }

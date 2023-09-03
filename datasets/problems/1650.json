@@ -21,11 +21,32 @@
   "goal_cdl": "Value(LengthOfLine(SW))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "adjacent_complementary_angle(STR,RTW)",
-    "isosceles_triangle_judgment_line_equal(RSW)",
-    "isosceles_triangle_property_angle_equal(RSW)",
-    "mirror_congruent_triangle_judgment_aas(RTW,RST)",
-    "mirror_congruent_triangle_property_line_equal(RTW,RST)",
-    "line_addition(WT,TS)"
-  ]
+    "adjacent_complementary_angle(1,STR,RTW)",
+    "isosceles_triangle_judgment_line_equal(1,RSW)",
+    "isosceles_triangle_property_angle_equal(1,RSW)",
+    "mirror_congruent_triangle_judgment_aas(1,RTW,RST)",
+    "mirror_congruent_triangle_property_line_equal(1,RTW,RST)",
+    "line_addition(1,WT,TS)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,STR,RTW)": [
+      "mirror_congruent_triangle_judgment_aas(1,RTW,RST)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,RSW)": [
+      "isosceles_triangle_property_angle_equal(1,RSW)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,RSW)": [
+      "mirror_congruent_triangle_judgment_aas(1,RTW,RST)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,RTW,RST)": [
+      "mirror_congruent_triangle_property_line_equal(1,RTW,RST)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,RTW,RST)": [],
+    "line_addition(1,WT,TS)": [],
+    "START": [
+      "adjacent_complementary_angle(1,STR,RTW)",
+      "isosceles_triangle_judgment_line_equal(1,RSW)",
+      "line_addition(1,WT,TS)"
+    ]
+  }
 }

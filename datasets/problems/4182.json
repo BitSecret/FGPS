@@ -21,11 +21,30 @@
   "goal_cdl": "Value(Tan(MeasureOfAngle(BAE)))",
   "problem_answer": " 1.4142135623730951",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCD)",
-    "right_triangle_property_pythagorean(BCD)",
-    "adjacent_complementary_angle(EBA,ABC)",
-    "right_triangle_judgment_angle(EBA)",
-    "right_triangle_property_pythagorean(EBA)",
-    "cosine_theorem(AEB)"
-  ]
+    "right_triangle_judgment_angle(1,BCD)",
+    "right_triangle_property_pythagorean(1,BCD)",
+    "adjacent_complementary_angle(1,EBA,ABC)",
+    "right_triangle_judgment_angle(1,EBA)",
+    "right_triangle_property_pythagorean(1,EBA)",
+    "cosine_theorem(1,AEB)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCD)": [
+      "right_triangle_property_pythagorean(1,BCD)"
+    ],
+    "right_triangle_property_pythagorean(1,BCD)": [],
+    "adjacent_complementary_angle(1,EBA,ABC)": [
+      "right_triangle_judgment_angle(1,EBA)"
+    ],
+    "right_triangle_judgment_angle(1,EBA)": [
+      "right_triangle_property_pythagorean(1,EBA)"
+    ],
+    "right_triangle_property_pythagorean(1,EBA)": [],
+    "cosine_theorem(1,AEB)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCD)",
+      "adjacent_complementary_angle(1,EBA,ABC)",
+      "cosine_theorem(1,AEB)"
+    ]
+  }
 }

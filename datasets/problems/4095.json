@@ -24,17 +24,59 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "128",
   "theorem_seqs": [
-    "congruent_arc_judgment_chord_equal(OAB,OCD)",
-    "congruent_arc_judgment_chord_equal(OBC,ODE)",
-    "congruent_arc_property_length_equal(OAB,OCD)",
-    "congruent_arc_property_length_equal(OBC,ODE)",
-    "arc_addition_length(OEA,OAB)",
-    "arc_addition_length(OEB,OBC)",
-    "arc_addition_length(OCD,ODE)",
-    "arc_addition_length(OCE,OEA)",
-    "congruent_arc_judgment_length_equal(OCA,OEC)",
-    "congruent_arc_property_measure_equal(OCA,OEC)",
-    "arc_property_circumference_angle_external(OCA,B)",
-    "arc_property_circumference_angle_external(OEC,D)"
-  ]
+    "congruent_arc_judgment_chord_equal(1,OAB,OCD)",
+    "congruent_arc_judgment_chord_equal(1,OBC,ODE)",
+    "congruent_arc_property_length_equal(1,OAB,OCD)",
+    "congruent_arc_property_length_equal(1,OBC,ODE)",
+    "arc_addition_length(1,OEA,OAB)",
+    "arc_addition_length(1,OEB,OBC)",
+    "arc_addition_length(1,OCD,ODE)",
+    "arc_addition_length(1,OCE,OEA)",
+    "congruent_arc_judgment_length_equal(1,OCA,OEC)",
+    "congruent_arc_property_measure_equal(1,OCA,OEC)",
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "arc_property_circumference_angle_external(1,OEC,D)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_chord_equal(1,OAB,OCD)": [
+      "congruent_arc_property_length_equal(1,OAB,OCD)"
+    ],
+    "congruent_arc_judgment_chord_equal(1,OBC,ODE)": [
+      "congruent_arc_property_length_equal(1,OBC,ODE)"
+    ],
+    "congruent_arc_property_length_equal(1,OAB,OCD)": [
+      "congruent_arc_judgment_length_equal(1,OCA,OEC)"
+    ],
+    "congruent_arc_property_length_equal(1,OBC,ODE)": [
+      "congruent_arc_judgment_length_equal(1,OCA,OEC)"
+    ],
+    "arc_addition_length(1,OEA,OAB)": [
+      "congruent_arc_judgment_length_equal(1,OCA,OEC)"
+    ],
+    "arc_addition_length(1,OEB,OBC)": [
+      "congruent_arc_judgment_length_equal(1,OCA,OEC)"
+    ],
+    "arc_addition_length(1,OCD,ODE)": [
+      "congruent_arc_judgment_length_equal(1,OCA,OEC)"
+    ],
+    "arc_addition_length(1,OCE,OEA)": [
+      "congruent_arc_judgment_length_equal(1,OCA,OEC)"
+    ],
+    "congruent_arc_judgment_length_equal(1,OCA,OEC)": [
+      "congruent_arc_property_measure_equal(1,OCA,OEC)"
+    ],
+    "congruent_arc_property_measure_equal(1,OCA,OEC)": [],
+    "arc_property_circumference_angle_external(1,OCA,B)": [],
+    "arc_property_circumference_angle_external(1,OEC,D)": [],
+    "START": [
+      "congruent_arc_judgment_chord_equal(1,OAB,OCD)",
+      "congruent_arc_judgment_chord_equal(1,OBC,ODE)",
+      "arc_addition_length(1,OEA,OAB)",
+      "arc_addition_length(1,OEB,OBC)",
+      "arc_addition_length(1,OCD,ODE)",
+      "arc_addition_length(1,OCE,OEA)",
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "arc_property_circumference_angle_external(1,OEC,D)"
+    ]
+  }
 }

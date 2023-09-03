@@ -32,20 +32,69 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "3*sqrt(3)",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_collinear_extend(CB,DA,H)",
-    "parallel_property_alternate_interior_angle(HB,DA)",
-    "parallel_property_alternate_interior_angle(AE,BC)",
-    "isosceles_triangle_judgment_angle_equal(ABE)",
-    "parallelogram_property_opposite_angle_equal(BCDA)",
-    "mirror_similar_triangle_judgment_aa(ABH,AFD)",
-    "mirror_similar_triangle_property_angle_equal(ABH,AFD)",
-    "mirror_congruent_triangle_judgment_aas(IAB,GEA)",
-    "mirror_congruent_triangle_property_line_equal(ABI,AGE)",
-    "mirror_congruent_triangle_property_line_equal(BIA,EAG)",
-    "right_triangle_judgment_angle(EAI)",
-    "median_of_triangle_judgment(AG,AIE)",
-    "right_triangle_property_length_of_median(EAI,G)",
-    "right_triangle_property_pythagorean(EAI)"
-  ]
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_collinear_extend(3,CB,DA,H)",
+    "parallel_property_alternate_interior_angle(1,HB,DA)",
+    "parallel_property_alternate_interior_angle(2,AE,BC)",
+    "isosceles_triangle_judgment_angle_equal(1,ABE)",
+    "parallelogram_property_opposite_angle_equal(1,BCDA)",
+    "mirror_similar_triangle_judgment_aa(1,ABH,AFD)",
+    "mirror_similar_triangle_property_angle_equal(1,ABH,AFD)",
+    "mirror_congruent_triangle_judgment_aas(2,IAB,GEA)",
+    "mirror_congruent_triangle_property_line_equal(1,ABI,AGE)",
+    "mirror_congruent_triangle_property_line_equal(1,BIA,EAG)",
+    "right_triangle_judgment_angle(1,EAI)",
+    "median_of_triangle_judgment(1,AG,AIE)",
+    "right_triangle_property_length_of_median(1,EAI,G)",
+    "right_triangle_property_pythagorean(1,EAI)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_alternate_interior_angle(2,AE,BC)"
+    ],
+    "parallel_property_collinear_extend(3,CB,DA,H)": [
+      "parallel_property_alternate_interior_angle(1,HB,DA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,HB,DA)": [
+      "right_triangle_judgment_angle(1,EAI)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABE)",
+      "mirror_congruent_triangle_judgment_aas(2,IAB,GEA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ABE)": [
+      "mirror_congruent_triangle_judgment_aas(2,IAB,GEA)"
+    ],
+    "parallelogram_property_opposite_angle_equal(1,BCDA)": [
+      "mirror_similar_triangle_judgment_aa(1,ABH,AFD)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ABH,AFD)": [
+      "mirror_similar_triangle_property_angle_equal(1,ABH,AFD)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,ABH,AFD)": [
+      "mirror_congruent_triangle_judgment_aas(2,IAB,GEA)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(2,IAB,GEA)": [
+      "mirror_congruent_triangle_property_line_equal(1,ABI,AGE)",
+      "mirror_congruent_triangle_property_line_equal(1,BIA,EAG)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,ABI,AGE)": [
+      "median_of_triangle_judgment(1,AG,AIE)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,BIA,EAG)": [],
+    "right_triangle_judgment_angle(1,EAI)": [
+      "right_triangle_property_length_of_median(1,EAI,G)",
+      "right_triangle_property_pythagorean(1,EAI)"
+    ],
+    "median_of_triangle_judgment(1,AG,AIE)": [
+      "right_triangle_property_length_of_median(1,EAI,G)"
+    ],
+    "right_triangle_property_length_of_median(1,EAI,G)": [],
+    "right_triangle_property_pythagorean(1,EAI)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,BC,E)",
+      "parallel_property_collinear_extend(3,CB,DA,H)",
+      "parallelogram_property_opposite_angle_equal(1,BCDA)"
+    ]
+  }
 }

@@ -24,12 +24,35 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "16.667",
   "theorem_seqs": [
-    "line_addition(BC,CS)",
-    "adjacent_complementary_angle(SCA,ACB)",
-    "mirror_similar_triangle_judgment_aa(ASC,BAS)",
-    "mirror_similar_triangle_property_angle_equal(ASC,BAS)",
-    "similar_triangle_judgment_aa(ACB,SCA)",
-    "similar_triangle_property_line_ratio(ACB,SCA)",
-    "similar_triangle_property_line_ratio(BAC,ASC)"
-  ]
+    "line_addition(1,BC,CS)",
+    "adjacent_complementary_angle(1,SCA,ACB)",
+    "mirror_similar_triangle_judgment_aa(1,ASC,BAS)",
+    "mirror_similar_triangle_property_angle_equal(1,ASC,BAS)",
+    "similar_triangle_judgment_aa(1,ACB,SCA)",
+    "similar_triangle_property_line_ratio(1,ACB,SCA)",
+    "similar_triangle_property_line_ratio(1,BAC,ASC)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,BC,CS)": [],
+    "adjacent_complementary_angle(1,SCA,ACB)": [
+      "similar_triangle_judgment_aa(1,ACB,SCA)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ASC,BAS)": [
+      "mirror_similar_triangle_property_angle_equal(1,ASC,BAS)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,ASC,BAS)": [
+      "similar_triangle_judgment_aa(1,ACB,SCA)"
+    ],
+    "similar_triangle_judgment_aa(1,ACB,SCA)": [
+      "similar_triangle_property_line_ratio(1,ACB,SCA)",
+      "similar_triangle_property_line_ratio(1,BAC,ASC)"
+    ],
+    "similar_triangle_property_line_ratio(1,ACB,SCA)": [],
+    "similar_triangle_property_line_ratio(1,BAC,ASC)": [],
+    "START": [
+      "line_addition(1,BC,CS)",
+      "adjacent_complementary_angle(1,SCA,ACB)",
+      "mirror_similar_triangle_judgment_aa(1,ASC,BAS)"
+    ]
+  }
 }

@@ -28,13 +28,38 @@
   "goal_cdl": "Value(MeasureOfAngle(FHG))",
   "problem_answer": "33",
   "theorem_seqs": [
-    "arc_property_center_angle(AJH,A)",
-    "mirror_similar_triangle_judgment_aa(HGB,JHG)",
-    "mirror_similar_triangle_property_angle_equal(HGB,JHG)",
-    "radius_of_circle_property_length_equal(AJ,A)",
-    "radius_of_circle_property_length_equal(AH,A)",
-    "isosceles_triangle_judgment_line_equal(AJH)",
-    "isosceles_triangle_property_angle_equal(AJH)",
-    "triangle_property_angle_sum(AJH)"
-  ]
+    "arc_property_center_angle(1,AJH,A)",
+    "mirror_similar_triangle_judgment_aa(1,HGB,JHG)",
+    "mirror_similar_triangle_property_angle_equal(1,HGB,JHG)",
+    "radius_of_circle_property_length_equal(1,AJ,A)",
+    "radius_of_circle_property_length_equal(1,AH,A)",
+    "isosceles_triangle_judgment_line_equal(1,AJH)",
+    "isosceles_triangle_property_angle_equal(1,AJH)",
+    "triangle_property_angle_sum(1,AJH)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,AJH,A)": [],
+    "mirror_similar_triangle_judgment_aa(1,HGB,JHG)": [
+      "mirror_similar_triangle_property_angle_equal(1,HGB,JHG)"
+    ],
+    "mirror_similar_triangle_property_angle_equal(1,HGB,JHG)": [],
+    "radius_of_circle_property_length_equal(1,AJ,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AJH)"
+    ],
+    "radius_of_circle_property_length_equal(1,AH,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AJH)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,AJH)": [
+      "isosceles_triangle_property_angle_equal(1,AJH)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,AJH)": [],
+    "triangle_property_angle_sum(1,AJH)": [],
+    "START": [
+      "arc_property_center_angle(1,AJH,A)",
+      "mirror_similar_triangle_judgment_aa(1,HGB,JHG)",
+      "radius_of_circle_property_length_equal(1,AJ,A)",
+      "radius_of_circle_property_length_equal(1,AH,A)",
+      "triangle_property_angle_sum(1,AJH)"
+    ]
+  }
 }

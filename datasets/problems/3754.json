@@ -27,10 +27,26 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(GC,HF,D)",
-    "parallel_property_collinear_extend(FH,DG,E)",
-    "parallel_property_corresponding_angle(EH,DG,A)",
-    "adjacent_complementary_angle(GDA,ADC)",
-    "triangle_property_angle_sum(ADC)"
-  ]
+    "parallel_property_collinear_extend(3,GC,HF,D)",
+    "parallel_property_collinear_extend(3,FH,DG,E)",
+    "parallel_property_corresponding_angle(2,EH,DG,A)",
+    "adjacent_complementary_angle(1,GDA,ADC)",
+    "triangle_property_angle_sum(1,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,GC,HF,D)": [
+      "parallel_property_collinear_extend(3,FH,DG,E)"
+    ],
+    "parallel_property_collinear_extend(3,FH,DG,E)": [
+      "parallel_property_corresponding_angle(2,EH,DG,A)"
+    ],
+    "parallel_property_corresponding_angle(2,EH,DG,A)": [],
+    "adjacent_complementary_angle(1,GDA,ADC)": [],
+    "triangle_property_angle_sum(1,ADC)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,GC,HF,D)",
+      "adjacent_complementary_angle(1,GDA,ADC)",
+      "triangle_property_angle_sum(1,ADC)"
+    ]
+  }
 }

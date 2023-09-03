@@ -25,9 +25,25 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(ABCD,O)",
-    "right_triangle_judgment_angle(AOD)",
-    "median_of_triangle_judgment(OE,ODA)",
-    "right_triangle_property_length_of_median(AOD,E)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+    "right_triangle_judgment_angle(1,AOD)",
+    "median_of_triangle_judgment(1,OE,ODA)",
+    "right_triangle_property_length_of_median(1,AOD,E)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)": [
+      "right_triangle_judgment_angle(1,AOD)"
+    ],
+    "right_triangle_judgment_angle(1,AOD)": [
+      "right_triangle_property_length_of_median(1,AOD,E)"
+    ],
+    "median_of_triangle_judgment(1,OE,ODA)": [
+      "right_triangle_property_length_of_median(1,AOD,E)"
+    ],
+    "right_triangle_property_length_of_median(1,AOD,E)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "median_of_triangle_judgment(1,OE,ODA)"
+    ]
+  }
 }

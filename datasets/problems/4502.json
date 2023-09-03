@@ -25,11 +25,28 @@
   "goal_cdl": "Value(MeasureOfAngle(DAB))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "arc_property_center_angle(OBC,O)",
-    "congruent_arc_judgment_chord_equal(OBC,OCD)",
-    "congruent_arc_property_measure_equal(OBC,OCD)",
-    "arc_addition_measure(OBC,OCD)",
-    "round_arc(OBD,ODB)",
-    "arc_property_circumference_angle_internal(ODB,A)"
-  ]
+    "arc_property_center_angle(1,OBC,O)",
+    "congruent_arc_judgment_chord_equal(1,OBC,OCD)",
+    "congruent_arc_property_measure_equal(1,OBC,OCD)",
+    "arc_addition_measure(1,OBC,OCD)",
+    "round_arc(1,OBD,ODB)",
+    "arc_property_circumference_angle_internal(1,ODB,A)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OBC,O)": [],
+    "congruent_arc_judgment_chord_equal(1,OBC,OCD)": [
+      "congruent_arc_property_measure_equal(1,OBC,OCD)"
+    ],
+    "congruent_arc_property_measure_equal(1,OBC,OCD)": [],
+    "arc_addition_measure(1,OBC,OCD)": [],
+    "round_arc(1,OBD,ODB)": [],
+    "arc_property_circumference_angle_internal(1,ODB,A)": [],
+    "START": [
+      "arc_property_center_angle(1,OBC,O)",
+      "congruent_arc_judgment_chord_equal(1,OBC,OCD)",
+      "arc_addition_measure(1,OBC,OCD)",
+      "round_arc(1,OBD,ODB)",
+      "arc_property_circumference_angle_internal(1,ODB,A)"
+    ]
+  }
 }

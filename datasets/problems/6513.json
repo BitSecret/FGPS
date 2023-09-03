@@ -29,16 +29,48 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(BCEF))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(BA,CD)",
-    "vertical_angle(DOE,BOF)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "congruent_triangle_judgment_aas(EDO,FBO)",
-    "congruent_triangle_property_line_equal(DOE,BOF)",
-    "congruent_triangle_property_line_equal(OED,OFB)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(EO,OF)",
-    "line_addition(DE,EC)",
-    "quadrilateral_perimeter_formula(BCEF)"
-  ]
+    "parallel_property_alternate_interior_angle(1,BA,CD)",
+    "vertical_angle(1,DOE,BOF)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "congruent_triangle_judgment_aas(2,EDO,FBO)",
+    "congruent_triangle_property_line_equal(1,DOE,BOF)",
+    "congruent_triangle_property_line_equal(1,OED,OFB)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,EO,OF)",
+    "line_addition(1,DE,EC)",
+    "quadrilateral_perimeter_formula(1,BCEF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,BA,CD)": [
+      "congruent_triangle_judgment_aas(2,EDO,FBO)"
+    ],
+    "vertical_angle(1,DOE,BOF)": [
+      "congruent_triangle_judgment_aas(2,EDO,FBO)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "congruent_triangle_judgment_aas(2,EDO,FBO)"
+    ],
+    "congruent_triangle_judgment_aas(2,EDO,FBO)": [
+      "congruent_triangle_property_line_equal(1,DOE,BOF)",
+      "congruent_triangle_property_line_equal(1,OED,OFB)"
+    ],
+    "congruent_triangle_property_line_equal(1,DOE,BOF)": [],
+    "congruent_triangle_property_line_equal(1,OED,OFB)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,EO,OF)": [],
+    "line_addition(1,DE,EC)": [],
+    "quadrilateral_perimeter_formula(1,BCEF)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,BA,CD)",
+      "vertical_angle(1,DOE,BOF)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,EO,OF)",
+      "line_addition(1,DE,EC)",
+      "quadrilateral_perimeter_formula(1,BCEF)"
+    ]
+  }
 }

@@ -25,10 +25,25 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABFD))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "line_addition(BC,CF)",
-    "triangle_perimeter_formula(ABC)",
-    "parallelogram_judgment_parallel_and_equal(DACF)",
-    "parallelogram_property_opposite_line_equal(ACFD)",
-    "quadrilateral_perimeter_formula(ABFD)"
-  ]
+    "line_addition(1,BC,CF)",
+    "triangle_perimeter_formula(1,ABC)",
+    "parallelogram_judgment_parallel_and_equal(1,DACF)",
+    "parallelogram_property_opposite_line_equal(1,ACFD)",
+    "quadrilateral_perimeter_formula(1,ABFD)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,BC,CF)": [],
+    "triangle_perimeter_formula(1,ABC)": [],
+    "parallelogram_judgment_parallel_and_equal(1,DACF)": [
+      "parallelogram_property_opposite_line_equal(1,ACFD)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ACFD)": [],
+    "quadrilateral_perimeter_formula(1,ABFD)": [],
+    "START": [
+      "line_addition(1,BC,CF)",
+      "triangle_perimeter_formula(1,ABC)",
+      "parallelogram_judgment_parallel_and_equal(1,DACF)",
+      "quadrilateral_perimeter_formula(1,ABFD)"
+    ]
+  }
 }

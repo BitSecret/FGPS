@@ -32,24 +32,91 @@
   "goal_cdl": "Value(Add(LengthOfLine(EG),LengthOfLine(FH),LengthOfLine(EF)))",
   "problem_answer": "sqrt(13)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BAC)",
-    "right_triangle_property_pythagorean(BAC)",
-    "line_addition(BG,GH)",
-    "line_addition(BH,HC)",
-    "line_addition(BD,DC)",
-    "median_of_triangle_judgment(AD,ACB)",
-    "right_triangle_property_length_of_median(BAC,D)",
-    "parallel_judgment_par_par(EG,AD,FH)",
-    "parallel_property_collinear_extend(BC,EF,G)",
-    "parallel_property_collinear_extend(GC,EF,H)",
-    "parallelogram_judgment_parallel_and_parallel(EFHG)",
-    "parallelogram_property_opposite_line_equal(EFHG)",
-    "parallelogram_property_opposite_line_equal(FHGE)",
-    "parallel_property_corresponding_angle(EG,AD,B)",
-    "parallel_property_corresponding_angle(AD,FH,C)",
-    "sine_theorem(DBA)",
-    "sine_theorem(DAC)",
-    "isosceles_triangle_judgment_angle_equal(GBE)",
-    "isosceles_triangle_judgment_angle_equal(HFC)"
-  ]
+    "right_triangle_judgment_angle(1,BAC)",
+    "right_triangle_property_pythagorean(1,BAC)",
+    "line_addition(1,BG,GH)",
+    "line_addition(1,BH,HC)",
+    "line_addition(1,BD,DC)",
+    "median_of_triangle_judgment(1,AD,ACB)",
+    "right_triangle_property_length_of_median(1,BAC,D)",
+    "parallel_judgment_par_par(1,EG,AD,FH)",
+    "parallel_property_collinear_extend(3,BC,EF,G)",
+    "parallel_property_collinear_extend(3,GC,EF,H)",
+    "parallelogram_judgment_parallel_and_parallel(1,EFHG)",
+    "parallelogram_property_opposite_line_equal(1,EFHG)",
+    "parallelogram_property_opposite_line_equal(1,FHGE)",
+    "parallel_property_corresponding_angle(1,EG,AD,B)",
+    "parallel_property_corresponding_angle(2,AD,FH,C)",
+    "sine_theorem(1,DBA)",
+    "sine_theorem(1,DAC)",
+    "isosceles_triangle_judgment_angle_equal(1,GBE)",
+    "isosceles_triangle_judgment_angle_equal(1,HFC)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BAC)": [
+      "right_triangle_property_pythagorean(1,BAC)",
+      "right_triangle_property_length_of_median(1,BAC,D)"
+    ],
+    "right_triangle_property_pythagorean(1,BAC)": [
+      "isosceles_triangle_judgment_angle_equal(1,GBE)",
+      "isosceles_triangle_judgment_angle_equal(1,HFC)",
+      "isosceles_triangle_judgment_angle_equal(1,GBE)",
+      "isosceles_triangle_judgment_angle_equal(1,HFC)"
+    ],
+    "line_addition(1,BG,GH)": [],
+    "line_addition(1,BH,HC)": [],
+    "line_addition(1,BD,DC)": [
+      "isosceles_triangle_judgment_angle_equal(1,GBE)",
+      "isosceles_triangle_judgment_angle_equal(1,HFC)"
+    ],
+    "median_of_triangle_judgment(1,AD,ACB)": [
+      "right_triangle_property_length_of_median(1,BAC,D)"
+    ],
+    "right_triangle_property_length_of_median(1,BAC,D)": [
+      "isosceles_triangle_judgment_angle_equal(1,GBE)",
+      "isosceles_triangle_judgment_angle_equal(1,HFC)"
+    ],
+    "parallel_judgment_par_par(1,EG,AD,FH)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EFHG)"
+    ],
+    "parallel_property_collinear_extend(3,BC,EF,G)": [
+      "parallel_property_collinear_extend(3,GC,EF,H)"
+    ],
+    "parallel_property_collinear_extend(3,GC,EF,H)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EFHG)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,EFHG)": [
+      "parallelogram_property_opposite_line_equal(1,EFHG)",
+      "parallelogram_property_opposite_line_equal(1,FHGE)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,EFHG)": [],
+    "parallelogram_property_opposite_line_equal(1,FHGE)": [],
+    "parallel_property_corresponding_angle(1,EG,AD,B)": [
+      "isosceles_triangle_judgment_angle_equal(1,GBE)"
+    ],
+    "parallel_property_corresponding_angle(2,AD,FH,C)": [
+      "isosceles_triangle_judgment_angle_equal(1,HFC)"
+    ],
+    "sine_theorem(1,DBA)": [
+      "isosceles_triangle_judgment_angle_equal(1,GBE)"
+    ],
+    "sine_theorem(1,DAC)": [
+      "isosceles_triangle_judgment_angle_equal(1,HFC)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,GBE)": [],
+    "isosceles_triangle_judgment_angle_equal(1,HFC)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BAC)",
+      "line_addition(1,BG,GH)",
+      "line_addition(1,BH,HC)",
+      "line_addition(1,BD,DC)",
+      "median_of_triangle_judgment(1,AD,ACB)",
+      "parallel_judgment_par_par(1,EG,AD,FH)",
+      "parallel_property_collinear_extend(3,BC,EF,G)",
+      "parallel_property_corresponding_angle(1,EG,AD,B)",
+      "parallel_property_corresponding_angle(2,AD,FH,C)",
+      "sine_theorem(1,DBA)",
+      "sine_theorem(1,DAC)"
+    ]
+  }
 }

@@ -25,22 +25,86 @@
   "goal_cdl": "Value(PerimeterOfTriangle(EFC))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,AB,F)",
-    "parallel_property_collinear_extend(CB,DA,E)",
-    "vertical_angle(BEA,CEF)",
-    "vertical_angle(AEC,FEB)",
-    "parallel_property_ipsilateral_internal_angle(AD,BC)",
-    "parallel_property_ipsilateral_internal_angle(AD,EC)",
-    "parallel_property_alternate_interior_angle(CF,AB)",
-    "parallel_property_alternate_interior_angle(EB,DA)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "isosceles_triangle_judgment_angle_equal(DAF)",
-    "triangle_property_angle_sum(ABE)",
-    "line_addition(BE,EC)",
-    "line_addition(DC,CF)",
-    "isosceles_triangle_judgment_angle_equal(EFC)",
-    "triangle_perimeter_formula(EFC)"
-  ]
+    "parallel_property_collinear_extend(2,DC,AB,F)",
+    "parallel_property_collinear_extend(3,CB,DA,E)",
+    "vertical_angle(1,BEA,CEF)",
+    "vertical_angle(1,AEC,FEB)",
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+    "parallel_property_ipsilateral_internal_angle(1,AD,EC)",
+    "parallel_property_alternate_interior_angle(1,CF,AB)",
+    "parallel_property_alternate_interior_angle(2,CF,AB)",
+    "parallel_property_alternate_interior_angle(1,EB,DA)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "isosceles_triangle_judgment_angle_equal(1,DAF)",
+    "triangle_property_angle_sum(1,ABE)",
+    "line_addition(1,BE,EC)",
+    "line_addition(1,DC,CF)",
+    "isosceles_triangle_judgment_angle_equal(1,EFC)",
+    "triangle_perimeter_formula(1,EFC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,DC,AB,F)": [
+      "parallel_property_alternate_interior_angle(1,CF,AB)",
+      "parallel_property_alternate_interior_angle(2,CF,AB)"
+    ],
+    "parallel_property_collinear_extend(3,CB,DA,E)": [
+      "parallel_property_alternate_interior_angle(1,EB,DA)",
+      "parallel_property_ipsilateral_internal_angle(1,AD,EC)"
+    ],
+    "vertical_angle(1,BEA,CEF)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)",
+      "isosceles_triangle_judgment_angle_equal(1,DAF)",
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "vertical_angle(1,AEC,FEB)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAF)",
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,EFC)",
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,AD,EC)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAF)",
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "parallel_property_alternate_interior_angle(1,CF,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,CF,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,DAF)",
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EB,DA)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)",
+      "isosceles_triangle_judgment_angle_equal(1,DAF)",
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [],
+    "isosceles_triangle_judgment_angle_equal(1,DAF)": [],
+    "triangle_property_angle_sum(1,ABE)": [
+      "isosceles_triangle_judgment_angle_equal(1,EFC)"
+    ],
+    "line_addition(1,BE,EC)": [],
+    "line_addition(1,DC,CF)": [],
+    "isosceles_triangle_judgment_angle_equal(1,EFC)": [],
+    "triangle_perimeter_formula(1,EFC)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,DC,AB,F)",
+      "parallel_property_collinear_extend(3,CB,DA,E)",
+      "vertical_angle(1,BEA,CEF)",
+      "vertical_angle(1,AEC,FEB)",
+      "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_property_angle_sum(1,ABE)",
+      "line_addition(1,BE,EC)",
+      "line_addition(1,DC,CF)",
+      "triangle_perimeter_formula(1,EFC)"
+    ]
+  }
 }

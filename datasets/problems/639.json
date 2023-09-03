@@ -23,8 +23,20 @@
   "goal_cdl": "Value(LengthOfLine(YZ))",
   "problem_answer": "sqrt(89)",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(YXWZ,A)",
-    "right_triangle_judgment_angle(YAZ)",
-    "right_triangle_property_pythagorean(YAZ)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,YXWZ,A)",
+    "right_triangle_judgment_angle(1,YAZ)",
+    "right_triangle_property_pythagorean(1,YAZ)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,YXWZ,A)": [
+      "right_triangle_judgment_angle(1,YAZ)"
+    ],
+    "right_triangle_judgment_angle(1,YAZ)": [
+      "right_triangle_property_pythagorean(1,YAZ)"
+    ],
+    "right_triangle_property_pythagorean(1,YAZ)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,YXWZ,A)"
+    ]
+  }
 }

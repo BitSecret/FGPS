@@ -23,8 +23,19 @@
   "goal_cdl": "Value(MeasureOfAngle(CFE))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CD,AB,F)",
-    "parallel_property_corresponding_angle(FD,AB,E)",
-    "adjacent_complementary_angle(CFE,EFD)"
-  ]
+    "parallel_property_collinear_extend(3,CD,AB,F)",
+    "parallel_property_corresponding_angle(1,FD,AB,E)",
+    "adjacent_complementary_angle(1,CFE,EFD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CD,AB,F)": [
+      "parallel_property_corresponding_angle(1,FD,AB,E)"
+    ],
+    "parallel_property_corresponding_angle(1,FD,AB,E)": [],
+    "adjacent_complementary_angle(1,CFE,EFD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CD,AB,F)",
+      "adjacent_complementary_angle(1,CFE,EFD)"
+    ]
+  }
 }

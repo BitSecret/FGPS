@@ -20,7 +20,15 @@
   "goal_cdl": "Value(MeasureOfAngle(ADB))",
   "problem_answer": "49",
   "theorem_seqs": [
-    "angle_addition(DBE,EBA)",
-    "triangle_property_angle_sum(BAD)"
-  ]
+    "angle_addition(1,DBE,EBA)",
+    "triangle_property_angle_sum(1,BAD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,DBE,EBA)": [],
+    "triangle_property_angle_sum(1,BAD)": [],
+    "START": [
+      "angle_addition(1,DBE,EBA)",
+      "triangle_property_angle_sum(1,BAD)"
+    ]
+  }
 }

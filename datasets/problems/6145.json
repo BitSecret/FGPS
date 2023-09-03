@@ -26,13 +26,37 @@
   "goal_cdl": "Value(LengthOfLine(AO))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "arc_property_center_angle(OBA,O)",
-    "arc_property_circumference_angle_external(OBA,C)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "isosceles_triangle_judgment_line_equal(OBA)",
-    "isosceles_triangle_property_angle_equal(OBA)",
-    "triangle_property_angle_sum(AOB)",
-    "sine_theorem(AOB)"
-  ]
+    "arc_property_center_angle(1,OBA,O)",
+    "arc_property_circumference_angle_external(1,OBA,C)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBA)",
+    "isosceles_triangle_property_angle_equal(1,OBA)",
+    "triangle_property_angle_sum(1,AOB)",
+    "sine_theorem(1,AOB)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OBA,O)": [],
+    "arc_property_circumference_angle_external(1,OBA,C)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBA)": [
+      "isosceles_triangle_property_angle_equal(1,OBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBA)": [],
+    "triangle_property_angle_sum(1,AOB)": [],
+    "sine_theorem(1,AOB)": [],
+    "START": [
+      "arc_property_center_angle(1,OBA,O)",
+      "arc_property_circumference_angle_external(1,OBA,C)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "triangle_property_angle_sum(1,AOB)",
+      "sine_theorem(1,AOB)"
+    ]
+  }
 }

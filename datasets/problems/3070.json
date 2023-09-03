@@ -35,11 +35,29 @@
   "goal_cdl": "Value(MeasureOfAngle(FXM))",
   "problem_answer": "115",
   "theorem_seqs": [
-    "vertical_angle(MNA,ENC)",
-    "triangle_property_angle_sum(AMN)",
-    "vertical_angle(XMD,AMN)",
-    "parallel_property_collinear_extend(DE,FG,M)",
-    "parallel_property_collinear_extend(GF,MD,X)",
-    "parallel_property_ipsilateral_internal_angle(XF,MD)"
-  ]
+    "vertical_angle(1,MNA,ENC)",
+    "triangle_property_angle_sum(1,AMN)",
+    "vertical_angle(1,XMD,AMN)",
+    "parallel_property_collinear_extend(3,DE,FG,M)",
+    "parallel_property_collinear_extend(3,GF,MD,X)",
+    "parallel_property_ipsilateral_internal_angle(1,XF,MD)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,MNA,ENC)": [],
+    "triangle_property_angle_sum(1,AMN)": [],
+    "vertical_angle(1,XMD,AMN)": [],
+    "parallel_property_collinear_extend(3,DE,FG,M)": [
+      "parallel_property_collinear_extend(3,GF,MD,X)"
+    ],
+    "parallel_property_collinear_extend(3,GF,MD,X)": [
+      "parallel_property_ipsilateral_internal_angle(1,XF,MD)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,XF,MD)": [],
+    "START": [
+      "vertical_angle(1,MNA,ENC)",
+      "triangle_property_angle_sum(1,AMN)",
+      "vertical_angle(1,XMD,AMN)",
+      "parallel_property_collinear_extend(3,DE,FG,M)"
+    ]
+  }
 }

@@ -23,9 +23,24 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(JMLK))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "flat_angle(MEL)",
-    "angle_addition(MEJ,JEL)",
-    "altitude_of_quadrilateral_judgment_left_vertex(JE,JMLK)",
-    "parallelogram_area_formula_common(JMLK)"
-  ]
+    "flat_angle(1,MEL)",
+    "angle_addition(1,MEJ,JEL)",
+    "altitude_of_quadrilateral_judgment_left_vertex(1,JE,JMLK)",
+    "parallelogram_area_formula_common(1,JMLK)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,MEL)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(1,JE,JMLK)"
+    ],
+    "angle_addition(1,MEJ,JEL)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(1,JE,JMLK)"
+    ],
+    "altitude_of_quadrilateral_judgment_left_vertex(1,JE,JMLK)": [],
+    "parallelogram_area_formula_common(1,JMLK)": [],
+    "START": [
+      "flat_angle(1,MEL)",
+      "angle_addition(1,MEJ,JEL)",
+      "parallelogram_area_formula_common(1,JMLK)"
+    ]
+  }
 }

@@ -24,7 +24,16 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "sqrt(171)",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BAY)",
-    "right_triangle_property_pythagorean(BAY)"
-  ]
+    "right_triangle_judgment_angle(1,BAY)",
+    "right_triangle_property_pythagorean(1,BAY)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BAY)": [
+      "right_triangle_property_pythagorean(1,BAY)"
+    ],
+    "right_triangle_property_pythagorean(1,BAY)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BAY)"
+    ]
+  }
 }

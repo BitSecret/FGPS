@@ -24,10 +24,26 @@
   "goal_cdl": "Value(MeasureOfAngle(BGT))",
   "problem_answer": "131",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(QR,TG,J)",
-    "parallel_property_collinear_extend(HR,TC,G)",
-    "parallel_property_collinear_extend(HG,TC,B)",
-    "adjacent_complementary_angle(QTG,GTC)",
-    "parallel_property_ipsilateral_internal_angle(GB,TC)"
-  ]
+    "parallel_property_corresponding_angle(1,QR,TG,J)",
+    "parallel_property_collinear_extend(2,HR,TC,G)",
+    "parallel_property_collinear_extend(2,HG,TC,B)",
+    "adjacent_complementary_angle(1,QTG,GTC)",
+    "parallel_property_ipsilateral_internal_angle(1,GB,TC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,QR,TG,J)": [],
+    "parallel_property_collinear_extend(2,HR,TC,G)": [
+      "parallel_property_collinear_extend(2,HG,TC,B)"
+    ],
+    "parallel_property_collinear_extend(2,HG,TC,B)": [
+      "parallel_property_ipsilateral_internal_angle(1,GB,TC)"
+    ],
+    "adjacent_complementary_angle(1,QTG,GTC)": [],
+    "parallel_property_ipsilateral_internal_angle(1,GB,TC)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,QR,TG,J)",
+      "parallel_property_collinear_extend(2,HR,TC,G)",
+      "adjacent_complementary_angle(1,QTG,GTC)"
+    ]
+  }
 }

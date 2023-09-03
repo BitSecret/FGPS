@@ -27,8 +27,20 @@
   "goal_cdl": "Value(MeasureOfAngle(BOF))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,CD,O)",
-    "parallel_property_collinear_extend(DC,BO,P)",
-    "parallel_property_ipsilateral_internal_angle(OB,PD)"
-  ]
+    "parallel_property_collinear_extend(3,AB,CD,O)",
+    "parallel_property_collinear_extend(3,DC,BO,P)",
+    "parallel_property_ipsilateral_internal_angle(1,OB,PD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,CD,O)": [
+      "parallel_property_collinear_extend(3,DC,BO,P)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BO,P)": [
+      "parallel_property_ipsilateral_internal_angle(1,OB,PD)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,OB,PD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,CD,O)"
+    ]
+  }
 }

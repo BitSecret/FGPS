@@ -26,16 +26,46 @@
   "goal_cdl": "Value(AreaOfSector(OBA))",
   "problem_answer": "12*pi",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(PA,O,O)",
-    "tangent_of_circle_property_perpendicular(PB,O,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "sine_theorem(OPA)",
-    "triangle_property_angle_sum(OBP)",
-    "triangle_property_angle_sum(AOP)",
-    "sine_theorem(OBP)",
-    "angle_addition(AOC,COB)",
-    "arc_property_center_angle(OBA,O)",
-    "sector_area_formula(OBA)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+    "tangent_of_circle_property_perpendicular(1,PB,O,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "sine_theorem(1,OPA)",
+    "triangle_property_angle_sum(1,OBP)",
+    "triangle_property_angle_sum(1,AOP)",
+    "sine_theorem(1,OBP)",
+    "angle_addition(1,AOC,COB)",
+    "arc_property_center_angle(1,OBA,O)",
+    "sector_area_formula(1,OBA)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)": [
+      "solve_eq_25)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,PB,O,O)": [
+      "solve_eq_25)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "sine_theorem(1,OPA)": [],
+    "triangle_property_angle_sum(1,OBP)": [],
+    "triangle_property_angle_sum(1,AOP)": [],
+    "sine_theorem(1,OBP)": [],
+    "angle_addition(1,AOC,COB)": [],
+    "arc_property_center_angle(1,OBA,O)": [],
+    "sector_area_formula(1,OBA)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+      "tangent_of_circle_property_perpendicular(1,PB,O,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "sine_theorem(1,OPA)",
+      "triangle_property_angle_sum(1,OBP)",
+      "triangle_property_angle_sum(1,AOP)",
+      "sine_theorem(1,OBP)",
+      "angle_addition(1,AOC,COB)",
+      "arc_property_center_angle(1,OBA,O)",
+      "sector_area_formula(1,OBA)"
+    ]
+  }
 }

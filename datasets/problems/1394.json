@@ -24,9 +24,23 @@
   "goal_cdl": "Value(LengthOfLine(CE))",
   "problem_answer": "sqrt(63)",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(ADCB,E)",
-    "right_triangle_judgment_angle(AEB)",
-    "right_triangle_property_pythagorean(AEB)",
-    "parallelogram_property_diagonal_bisection(ADCB,E)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,ADCB,E)",
+    "right_triangle_judgment_angle(1,AEB)",
+    "right_triangle_property_pythagorean(1,AEB)",
+    "parallelogram_property_diagonal_bisection(1,ADCB,E)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,ADCB,E)": [
+      "right_triangle_judgment_angle(1,AEB)"
+    ],
+    "right_triangle_judgment_angle(1,AEB)": [
+      "right_triangle_property_pythagorean(1,AEB)"
+    ],
+    "right_triangle_property_pythagorean(1,AEB)": [],
+    "parallelogram_property_diagonal_bisection(1,ADCB,E)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,ADCB,E)",
+      "parallelogram_property_diagonal_bisection(1,ADCB,E)"
+    ]
+  }
 }

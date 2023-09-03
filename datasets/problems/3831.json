@@ -28,12 +28,35 @@
   "goal_cdl": "Value(MeasureOfAngle(AOE))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DO,EA,C)",
-    "parallel_property_alternate_interior_angle(OC,EA)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "isosceles_triangle_judgment_line_equal(OEA)",
-    "isosceles_triangle_property_angle_equal(OEA)",
-    "triangle_property_angle_sum(AOE)"
-  ]
+    "parallel_property_collinear_extend(2,DO,EA,C)",
+    "parallel_property_alternate_interior_angle(1,OC,EA)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "isosceles_triangle_judgment_line_equal(1,OEA)",
+    "isosceles_triangle_property_angle_equal(1,OEA)",
+    "triangle_property_angle_sum(1,AOE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,DO,EA,C)": [
+      "parallel_property_alternate_interior_angle(1,OC,EA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,OC,EA)": [],
+    "radius_of_circle_property_length_equal(1,OE,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OEA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OEA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OEA)": [
+      "isosceles_triangle_property_angle_equal(1,OEA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OEA)": [],
+    "triangle_property_angle_sum(1,AOE)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,DO,EA,C)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_property_angle_sum(1,AOE)"
+    ]
+  }
 }

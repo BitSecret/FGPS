@@ -27,20 +27,69 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "line_addition(CO,OD)",
-    "line_addition(AO,OE)",
-    "median_of_triangle_judgment(AC,ABE)",
-    "isosceles_triangle_judgment_line_equal(ABE)",
-    "isosceles_triangle_property_line_coincidence(ABE,C)",
-    "parallelogram_property_diagonal_bisection(ACED,O)",
-    "parallelogram_property_diagonal_bisection(CEDA,O)",
-    "rectangle_judgment_right_angle(ACED)",
-    "rectangle_property_diagonal_equal(ACED)",
-    "vertical_angle(AOD,EOC)",
-    "isosceles_triangle_judgment_line_equal(OCE)",
-    "isosceles_triangle_property_angle_equal(ABE)",
-    "isosceles_triangle_property_angle_equal(OCE)",
-    "triangle_property_angle_sum(OCE)",
-    "sine_theorem(ACE)"
-  ]
+    "line_addition(1,CO,OD)",
+    "line_addition(1,AO,OE)",
+    "median_of_triangle_judgment(1,AC,ABE)",
+    "isosceles_triangle_judgment_line_equal(1,ABE)",
+    "isosceles_triangle_property_line_coincidence(2,ABE,C)",
+    "parallelogram_property_diagonal_bisection(1,ACED,O)",
+    "parallelogram_property_diagonal_bisection(1,CEDA,O)",
+    "rectangle_judgment_right_angle(1,ACED)",
+    "rectangle_property_diagonal_equal(1,ACED)",
+    "vertical_angle(1,AOD,EOC)",
+    "isosceles_triangle_judgment_line_equal(1,OCE)",
+    "isosceles_triangle_property_angle_equal(1,ABE)",
+    "isosceles_triangle_property_angle_equal(1,OCE)",
+    "triangle_property_angle_sum(1,OCE)",
+    "sine_theorem(1,ACE)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,CO,OD)": [
+      "isosceles_triangle_judgment_line_equal(1,OCE)"
+    ],
+    "line_addition(1,AO,OE)": [
+      "isosceles_triangle_judgment_line_equal(1,OCE)"
+    ],
+    "median_of_triangle_judgment(1,AC,ABE)": [
+      "isosceles_triangle_property_line_coincidence(2,ABE,C)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABE)": [
+      "isosceles_triangle_property_line_coincidence(2,ABE,C)",
+      "isosceles_triangle_property_angle_equal(1,ABE)"
+    ],
+    "isosceles_triangle_property_line_coincidence(2,ABE,C)": [
+      "rectangle_judgment_right_angle(1,ACED)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ACED,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCE)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,CEDA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCE)"
+    ],
+    "rectangle_judgment_right_angle(1,ACED)": [
+      "rectangle_property_diagonal_equal(1,ACED)"
+    ],
+    "rectangle_property_diagonal_equal(1,ACED)": [
+      "isosceles_triangle_judgment_line_equal(1,OCE)"
+    ],
+    "vertical_angle(1,AOD,EOC)": [],
+    "isosceles_triangle_judgment_line_equal(1,OCE)": [
+      "isosceles_triangle_property_angle_equal(1,OCE)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABE)": [],
+    "isosceles_triangle_property_angle_equal(1,OCE)": [],
+    "triangle_property_angle_sum(1,OCE)": [],
+    "sine_theorem(1,ACE)": [],
+    "START": [
+      "line_addition(1,CO,OD)",
+      "line_addition(1,AO,OE)",
+      "median_of_triangle_judgment(1,AC,ABE)",
+      "isosceles_triangle_judgment_line_equal(1,ABE)",
+      "parallelogram_property_diagonal_bisection(1,ACED,O)",
+      "parallelogram_property_diagonal_bisection(1,CEDA,O)",
+      "vertical_angle(1,AOD,EOC)",
+      "triangle_property_angle_sum(1,OCE)",
+      "sine_theorem(1,ACE)"
+    ]
+  }
 }

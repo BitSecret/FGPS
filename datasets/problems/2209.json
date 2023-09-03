@@ -29,8 +29,21 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "adjacent_complementary_angle(EDC,CDN)",
-    "adjacent_complementary_angle(FBC,CBE)",
-    "bisector_of_angle_property_distance_equal(EC,BED)"
-  ]
+    "adjacent_complementary_angle(1,EDC,CDN)",
+    "adjacent_complementary_angle(1,FBC,CBE)",
+    "bisector_of_angle_property_distance_equal(1,EC,BED)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,EDC,CDN)": [
+      "bisector_of_angle_property_distance_equal(1,EC,BED)"
+    ],
+    "adjacent_complementary_angle(1,FBC,CBE)": [
+      "bisector_of_angle_property_distance_equal(1,EC,BED)"
+    ],
+    "bisector_of_angle_property_distance_equal(1,EC,BED)": [],
+    "START": [
+      "adjacent_complementary_angle(1,EDC,CDN)",
+      "adjacent_complementary_angle(1,FBC,CBE)"
+    ]
+  }
 }

@@ -25,8 +25,18 @@
   "goal_cdl": "Value(MeasureOfAngle(CAE))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "triangle_property_angle_sum(BAC)",
-    "congruent_triangle_property_angle_equal(ACB,AED)",
-    "angle_addition(DAF,FAE)"
-  ]
+    "triangle_property_angle_sum(1,BAC)",
+    "congruent_triangle_property_angle_equal(1,ACB,AED)",
+    "angle_addition(1,DAF,FAE)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,BAC)": [],
+    "congruent_triangle_property_angle_equal(1,ACB,AED)": [],
+    "angle_addition(1,DAF,FAE)": [],
+    "START": [
+      "triangle_property_angle_sum(1,BAC)",
+      "congruent_triangle_property_angle_equal(1,ACB,AED)",
+      "angle_addition(1,DAF,FAE)"
+    ]
+  }
 }

@@ -31,10 +31,26 @@
   "goal_cdl": "Value(MeasureOfAngle(BCM))",
   "problem_answer": "75",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(OB,NC,P)",
-    "parallel_property_collinear_extend(CN,PB,M)",
-    "parallel_property_corresponding_angle(BP,CM,L)",
-    "adjacent_complementary_angle(ABP,PBC)",
-    "adjacent_complementary_angle(BCM,MCL)"
-  ]
+    "parallel_property_collinear_extend(2,OB,NC,P)",
+    "parallel_property_collinear_extend(1,CN,PB,M)",
+    "parallel_property_corresponding_angle(2,BP,CM,L)",
+    "adjacent_complementary_angle(1,ABP,PBC)",
+    "adjacent_complementary_angle(1,BCM,MCL)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,OB,NC,P)": [
+      "parallel_property_collinear_extend(1,CN,PB,M)"
+    ],
+    "parallel_property_collinear_extend(1,CN,PB,M)": [
+      "parallel_property_corresponding_angle(2,BP,CM,L)"
+    ],
+    "parallel_property_corresponding_angle(2,BP,CM,L)": [],
+    "adjacent_complementary_angle(1,ABP,PBC)": [],
+    "adjacent_complementary_angle(1,BCM,MCL)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,OB,NC,P)",
+      "adjacent_complementary_angle(1,ABP,PBC)",
+      "adjacent_complementary_angle(1,BCM,MCL)"
+    ]
+  }
 }

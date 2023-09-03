@@ -22,11 +22,31 @@
   "goal_cdl": "Value(MeasureOfAngle(DOC))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "arc_addition_length(OAB,OBC)",
-    "arc_addition_length(OBC,OCD)",
-    "congruent_arc_judgment_length_equal(OAB,OCD)",
-    "congruent_arc_property_measure_equal(OAB,OCD)",
-    "arc_property_center_angle(OAB,O)",
-    "arc_property_center_angle(OCD,O)"
-  ]
+    "arc_addition_length(1,OAB,OBC)",
+    "arc_addition_length(1,OBC,OCD)",
+    "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+    "congruent_arc_property_measure_equal(1,OAB,OCD)",
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_center_angle(1,OCD,O)"
+  ],
+  "theorem_seq_dag": {
+    "arc_addition_length(1,OAB,OBC)": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)"
+    ],
+    "arc_addition_length(1,OBC,OCD)": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)"
+    ],
+    "congruent_arc_judgment_length_equal(1,OAB,OCD)": [
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ],
+    "congruent_arc_property_measure_equal(1,OAB,OCD)": [],
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_center_angle(1,OCD,O)": [],
+    "START": [
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_addition_length(1,OBC,OCD)",
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_center_angle(1,OCD,O)"
+    ]
+  }
 }

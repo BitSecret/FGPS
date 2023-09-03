@@ -29,11 +29,28 @@
   "goal_cdl": "Value(MeasureOfAngle(GFO))",
   "problem_answer": "33",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(DAO)",
-    "isosceles_triangle_property_angle_equal(DAO)",
-    "arc_property_center_angle(ODF,O)",
-    "arc_property_circumference_angle_external(ODF,E)",
-    "triangle_property_angle_sum(EAF)",
-    "adjacent_complementary_angle(AFG,GFO)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,DAO)",
+    "isosceles_triangle_property_angle_equal(1,DAO)",
+    "arc_property_center_angle(1,ODF,O)",
+    "arc_property_circumference_angle_external(1,ODF,E)",
+    "triangle_property_angle_sum(1,EAF)",
+    "adjacent_complementary_angle(1,AFG,GFO)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,DAO)": [
+      "isosceles_triangle_property_angle_equal(1,DAO)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DAO)": [],
+    "arc_property_center_angle(1,ODF,O)": [],
+    "arc_property_circumference_angle_external(1,ODF,E)": [],
+    "triangle_property_angle_sum(1,EAF)": [],
+    "adjacent_complementary_angle(1,AFG,GFO)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,DAO)",
+      "arc_property_center_angle(1,ODF,O)",
+      "arc_property_circumference_angle_external(1,ODF,E)",
+      "triangle_property_angle_sum(1,EAF)",
+      "adjacent_complementary_angle(1,AFG,GFO)"
+    ]
+  }
 }

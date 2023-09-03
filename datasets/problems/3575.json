@@ -23,9 +23,21 @@
   "goal_cdl": "Value(MeasureOfAngle(ACD))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "triangle_property_angle_sum(ABC)",
-    "adjacent_complementary_angle(ABC,CBF)",
-    "adjacent_complementary_angle(BCA,ACD)",
-    "adjacent_complementary_angle(CAB,BAE)"
-  ]
+    "triangle_property_angle_sum(1,ABC)",
+    "adjacent_complementary_angle(1,ABC,CBF)",
+    "adjacent_complementary_angle(1,BCA,ACD)",
+    "adjacent_complementary_angle(1,CAB,BAE)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,ABC)": [],
+    "adjacent_complementary_angle(1,ABC,CBF)": [],
+    "adjacent_complementary_angle(1,BCA,ACD)": [],
+    "adjacent_complementary_angle(1,CAB,BAE)": [],
+    "START": [
+      "triangle_property_angle_sum(1,ABC)",
+      "adjacent_complementary_angle(1,ABC,CBF)",
+      "adjacent_complementary_angle(1,BCA,ACD)",
+      "adjacent_complementary_angle(1,CAB,BAE)"
+    ]
+  }
 }

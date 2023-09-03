@@ -25,8 +25,18 @@
   "goal_cdl": "Value(MeasureOfAngle(DBC))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "mirror_congruent_triangle_property_angle_equal(ACD,EDC)",
-    "arc_property_circumference_angle_internal(OCD,E)",
-    "arc_property_circumference_angle_external(OCD,B)"
-  ]
+    "mirror_congruent_triangle_property_angle_equal(1,ACD,EDC)",
+    "arc_property_circumference_angle_internal(1,OCD,E)",
+    "arc_property_circumference_angle_external(1,OCD,B)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_property_angle_equal(1,ACD,EDC)": [],
+    "arc_property_circumference_angle_internal(1,OCD,E)": [],
+    "arc_property_circumference_angle_external(1,OCD,B)": [],
+    "START": [
+      "mirror_congruent_triangle_property_angle_equal(1,ACD,EDC)",
+      "arc_property_circumference_angle_internal(1,OCD,E)",
+      "arc_property_circumference_angle_external(1,OCD,B)"
+    ]
+  }
 }

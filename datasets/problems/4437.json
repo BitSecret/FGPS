@@ -32,13 +32,37 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "18",
   "theorem_seqs": [
-    "arc_property_circumference_angle_external(OCA,F)",
-    "arc_property_circumference_angle_external(OCA,E)",
-    "right_triangle_property_length_of_median(CAB,E)",
-    "adjacent_complementary_angle(BEA,AEC)",
-    "line_addition(BE,EC)",
-    "isosceles_triangle_judgment_line_equal(EAB)",
-    "isosceles_triangle_property_angle_equal(EAB)",
-    "triangle_property_angle_sum(EAB)"
-  ]
+    "arc_property_circumference_angle_external(1,OCA,F)",
+    "arc_property_circumference_angle_external(1,OCA,E)",
+    "right_triangle_property_length_of_median(1,CAB,E)",
+    "adjacent_complementary_angle(1,BEA,AEC)",
+    "line_addition(1,BE,EC)",
+    "isosceles_triangle_judgment_line_equal(1,EAB)",
+    "isosceles_triangle_property_angle_equal(1,EAB)",
+    "triangle_property_angle_sum(1,EAB)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_circumference_angle_external(1,OCA,F)": [],
+    "arc_property_circumference_angle_external(1,OCA,E)": [],
+    "right_triangle_property_length_of_median(1,CAB,E)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "adjacent_complementary_angle(1,BEA,AEC)": [],
+    "line_addition(1,BE,EC)": [
+      "isosceles_triangle_judgment_line_equal(1,EAB)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,EAB)": [
+      "isosceles_triangle_property_angle_equal(1,EAB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,EAB)": [],
+    "triangle_property_angle_sum(1,EAB)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,OCA,F)",
+      "arc_property_circumference_angle_external(1,OCA,E)",
+      "right_triangle_property_length_of_median(1,CAB,E)",
+      "adjacent_complementary_angle(1,BEA,AEC)",
+      "line_addition(1,BE,EC)",
+      "triangle_property_angle_sum(1,EAB)"
+    ]
+  }
 }

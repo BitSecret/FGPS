@@ -24,8 +24,19 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "4",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(DBA)",
-    "cosine_theorem(DBA)",
-    "right_triangle_property_pythagorean(DBA)"
-  ]
+    "right_triangle_judgment_angle(1,DBA)",
+    "cosine_theorem(1,DBA)",
+    "right_triangle_property_pythagorean(1,DBA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,DBA)": [
+      "right_triangle_property_pythagorean(1,DBA)"
+    ],
+    "cosine_theorem(1,DBA)": [],
+    "right_triangle_property_pythagorean(1,DBA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,DBA)",
+      "cosine_theorem(1,DBA)"
+    ]
+  }
 }

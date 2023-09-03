@@ -23,9 +23,23 @@
   "goal_cdl": "Value(MeasureOfAngle(ODA))",
   "problem_answer": "75",
   "theorem_seqs": [
-    "congruent_triangle_property_line_equal(BAO,CDO)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(AOD)"
-  ]
+    "congruent_triangle_property_line_equal(1,BAO,CDO)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,AOD)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_triangle_property_line_equal(1,BAO,CDO)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "triangle_property_angle_sum(1,AOD)": [],
+    "START": [
+      "congruent_triangle_property_line_equal(1,BAO,CDO)",
+      "triangle_property_angle_sum(1,AOD)"
+    ]
+  }
 }

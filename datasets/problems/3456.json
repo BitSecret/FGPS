@@ -29,17 +29,48 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "4.5",
   "theorem_seqs": [
-    "triangle_property_angle_sum(ABE)",
-    "isosceles_triangle_judgment_angle_equal(BEA)",
-    "line_addition(BC,CD)",
-    "line_addition(BC,CE)",
-    "line_addition(BD,DE)",
-    "line_addition(CD,DE)",
-    "similar_triangle_judgment_aa(MCD,ABD)",
-    "similar_triangle_judgment_aa(NDE,ABE)",
-    "similar_triangle_property_line_ratio(MCD,ABD)",
-    "similar_triangle_property_line_ratio(DMC,DAB)",
-    "similar_triangle_property_line_ratio(NDE,ABE)",
-    "similar_triangle_property_line_ratio(END,EAB)"
-  ]
+    "triangle_property_angle_sum(1,ABE)",
+    "isosceles_triangle_judgment_angle_equal(1,BEA)",
+    "line_addition(1,BC,CD)",
+    "line_addition(1,BC,CE)",
+    "line_addition(1,BD,DE)",
+    "line_addition(1,CD,DE)",
+    "similar_triangle_judgment_aa(1,MCD,ABD)",
+    "similar_triangle_judgment_aa(1,NDE,ABE)",
+    "similar_triangle_property_line_ratio(1,MCD,ABD)",
+    "similar_triangle_property_line_ratio(1,DMC,DAB)",
+    "similar_triangle_property_line_ratio(1,NDE,ABE)",
+    "similar_triangle_property_line_ratio(1,END,EAB)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,ABE)": [
+      "isosceles_triangle_judgment_angle_equal(1,BEA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BEA)": [],
+    "line_addition(1,BC,CD)": [],
+    "line_addition(1,BC,CE)": [],
+    "line_addition(1,BD,DE)": [],
+    "line_addition(1,CD,DE)": [],
+    "similar_triangle_judgment_aa(1,MCD,ABD)": [
+      "similar_triangle_property_line_ratio(1,MCD,ABD)",
+      "similar_triangle_property_line_ratio(1,DMC,DAB)"
+    ],
+    "similar_triangle_judgment_aa(1,NDE,ABE)": [
+      "similar_triangle_property_line_ratio(1,NDE,ABE)",
+      "similar_triangle_property_line_ratio(1,END,EAB)"
+    ],
+    "similar_triangle_property_line_ratio(1,MCD,ABD)": [],
+    "similar_triangle_property_line_ratio(1,DMC,DAB)": [],
+    "similar_triangle_property_line_ratio(1,NDE,ABE)": [],
+    "similar_triangle_property_line_ratio(1,END,EAB)": [],
+    "START": [
+      "triangle_property_angle_sum(1,ABE)",
+      "line_addition(1,BC,CD)",
+      "line_addition(1,BC,CE)",
+      "line_addition(1,BD,DE)",
+      "line_addition(1,CD,DE)",
+      "similar_triangle_judgment_aa(1,MCD,ABD)",
+      "similar_triangle_judgment_aa(1,NDE,ABE)"
+    ]
+  }
 }

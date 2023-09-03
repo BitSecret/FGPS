@@ -21,7 +21,16 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(DBEA))",
   "problem_answer": "144",
   "theorem_seqs": [
-    "parallelogram_judgment_angle_and_angle(DBEA)",
-    "parallelogram_area_formula_sine(BEAD)"
-  ]
+    "parallelogram_judgment_angle_and_angle(1,DBEA)",
+    "parallelogram_area_formula_sine(1,BEAD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_angle_and_angle(1,DBEA)": [
+      "parallelogram_area_formula_sine(1,BEAD)"
+    ],
+    "parallelogram_area_formula_sine(1,BEAD)": [],
+    "START": [
+      "parallelogram_judgment_angle_and_angle(1,DBEA)"
+    ]
+  }
 }

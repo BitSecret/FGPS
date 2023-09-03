@@ -26,8 +26,18 @@
   "goal_cdl": "Value(MeasureOfAngle(CAE))",
   "problem_answer": "64",
   "theorem_seqs": [
-    "angle_addition(EAD,DAF)",
-    "angle_addition(CAE,EAF)",
-    "flat_angle(CAF)"
-  ]
+    "angle_addition(1,EAD,DAF)",
+    "angle_addition(1,CAE,EAF)",
+    "flat_angle(1,CAF)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,EAD,DAF)": [],
+    "angle_addition(1,CAE,EAF)": [],
+    "flat_angle(1,CAF)": [],
+    "START": [
+      "angle_addition(1,EAD,DAF)",
+      "angle_addition(1,CAE,EAF)",
+      "flat_angle(1,CAF)"
+    ]
+  }
 }

@@ -28,12 +28,31 @@
   "goal_cdl": "Value(MeasureOfAngle(CAB))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(CAD)",
-    "isosceles_triangle_property_angle_equal(CAD)",
-    "triangle_property_angle_sum(ADC)",
-    "arc_property_circumference_angle_external(OCA,D)",
-    "arc_property_circumference_angle_external(OCA,B)",
-    "diameter_of_circle_property_right_angle(BCA,O)",
-    "triangle_property_angle_sum(ABC)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,CAD)",
+    "isosceles_triangle_property_angle_equal(1,CAD)",
+    "triangle_property_angle_sum(1,ADC)",
+    "arc_property_circumference_angle_external(1,OCA,D)",
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "diameter_of_circle_property_right_angle(1,BCA,O)",
+    "triangle_property_angle_sum(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,CAD)": [
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,CAD)": [],
+    "triangle_property_angle_sum(1,ADC)": [],
+    "arc_property_circumference_angle_external(1,OCA,D)": [],
+    "arc_property_circumference_angle_external(1,OCA,B)": [],
+    "diameter_of_circle_property_right_angle(1,BCA,O)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,CAD)",
+      "triangle_property_angle_sum(1,ADC)",
+      "arc_property_circumference_angle_external(1,OCA,D)",
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  }
 }

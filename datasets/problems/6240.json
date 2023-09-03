@@ -23,11 +23,29 @@
   "goal_cdl": "Value(LengthOfLine(OC))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BCO,OCA)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OC,BA)",
-    "line_addition(AC,CB)",
-    "right_triangle_judgment_angle(OCA)",
-    "right_triangle_property_pythagorean(OCA)"
-  ]
+    "adjacent_complementary_angle(1,BCO,OCA)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OC,BA)",
+    "line_addition(1,AC,CB)",
+    "right_triangle_judgment_angle(1,OCA)",
+    "right_triangle_property_pythagorean(1,OCA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BCO,OCA)": [
+      "right_triangle_judgment_angle(1,OCA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OC,BA)": [],
+    "line_addition(1,AC,CB)": [],
+    "right_triangle_judgment_angle(1,OCA)": [
+      "right_triangle_property_pythagorean(1,OCA)"
+    ],
+    "right_triangle_property_pythagorean(1,OCA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BCO,OCA)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OC,BA)",
+      "line_addition(1,AC,CB)"
+    ]
+  }
 }

@@ -21,8 +21,20 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "58",
   "theorem_seqs": [
-    "vertical_angle(ACB,DCE)",
-    "congruent_triangle_judgment_sas(CBA,CED)",
-    "congruent_triangle_property_line_equal(CBA,CED)"
-  ]
+    "vertical_angle(1,ACB,DCE)",
+    "congruent_triangle_judgment_sas(1,CBA,CED)",
+    "congruent_triangle_property_line_equal(1,CBA,CED)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,ACB,DCE)": [
+      "congruent_triangle_judgment_sas(1,CBA,CED)"
+    ],
+    "congruent_triangle_judgment_sas(1,CBA,CED)": [
+      "congruent_triangle_property_line_equal(1,CBA,CED)"
+    ],
+    "congruent_triangle_property_line_equal(1,CBA,CED)": [],
+    "START": [
+      "vertical_angle(1,ACB,DCE)"
+    ]
+  }
 }

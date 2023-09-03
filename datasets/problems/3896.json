@@ -28,16 +28,51 @@
   "goal_cdl": "Value(LengthOfLine(DC))",
   "problem_answer": "2*sqrt(3)",
   "theorem_seqs": [
-    "angle_addition(ECO,OCA)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "isosceles_triangle_judgment_line_equal(OCA)",
-    "isosceles_triangle_judgment_line_equal(ODC)",
-    "isosceles_triangle_property_angle_equal(OCA)",
-    "isosceles_triangle_property_angle_equal(ODC)",
-    "triangle_property_angle_sum(CAE)",
-    "triangle_property_angle_sum(COD)",
-    "sine_theorem(COD)"
-  ]
+    "angle_addition(1,ECO,OCA)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "isosceles_triangle_judgment_line_equal(1,OCA)",
+    "isosceles_triangle_judgment_line_equal(1,ODC)",
+    "isosceles_triangle_property_angle_equal(1,OCA)",
+    "isosceles_triangle_property_angle_equal(1,ODC)",
+    "triangle_property_angle_sum(1,CAE)",
+    "triangle_property_angle_sum(1,COD)",
+    "sine_theorem(1,COD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ECO,OCA)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCA)",
+      "isosceles_triangle_judgment_line_equal(1,ODC)",
+      "isosceles_triangle_judgment_line_equal(1,OCA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCA)",
+      "isosceles_triangle_judgment_line_equal(1,ODC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OCA)": [
+      "isosceles_triangle_property_angle_equal(1,OCA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODC)": [
+      "isosceles_triangle_property_angle_equal(1,ODC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OCA)": [],
+    "isosceles_triangle_property_angle_equal(1,ODC)": [],
+    "triangle_property_angle_sum(1,CAE)": [],
+    "triangle_property_angle_sum(1,COD)": [],
+    "sine_theorem(1,COD)": [],
+    "START": [
+      "angle_addition(1,ECO,OCA)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "triangle_property_angle_sum(1,CAE)",
+      "triangle_property_angle_sum(1,COD)",
+      "sine_theorem(1,COD)"
+    ]
+  }
 }

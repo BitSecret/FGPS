@@ -23,8 +23,18 @@
   "goal_cdl": "Value(MeasureOfAngle(DOB))",
   "problem_answer": "38",
   "theorem_seqs": [
-    "flat_angle(AOB)",
-    "angle_addition(AOE,EOB)",
-    "angle_addition(EOD,DOB)"
-  ]
+    "flat_angle(1,AOB)",
+    "angle_addition(1,AOE,EOB)",
+    "angle_addition(1,EOD,DOB)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,AOB)": [],
+    "angle_addition(1,AOE,EOB)": [],
+    "angle_addition(1,EOD,DOB)": [],
+    "START": [
+      "flat_angle(1,AOB)",
+      "angle_addition(1,AOE,EOB)",
+      "angle_addition(1,EOD,DOB)"
+    ]
+  }
 }

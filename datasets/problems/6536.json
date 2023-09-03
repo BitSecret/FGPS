@@ -25,9 +25,23 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "midsegment_of_triangle_judgment_parallel(OE,DBC)",
-    "midsegment_of_triangle_property_length(OE,DBC)",
-    "parallelogram_property_opposite_line_equal(BCDA)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "midsegment_of_triangle_judgment_parallel(1,OE,DBC)",
+    "midsegment_of_triangle_property_length(1,OE,DBC)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "midsegment_of_triangle_judgment_parallel(1,OE,DBC)"
+    ],
+    "midsegment_of_triangle_judgment_parallel(1,OE,DBC)": [
+      "midsegment_of_triangle_property_length(1,OE,DBC)"
+    ],
+    "midsegment_of_triangle_property_length(1,OE,DBC)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)"
+    ]
+  }
 }

@@ -21,7 +21,15 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "adjacent_complementary_angle(EDA,ADC)",
-    "triangle_property_angle_sum(ADC)"
-  ]
+    "adjacent_complementary_angle(1,EDA,ADC)",
+    "triangle_property_angle_sum(1,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,EDA,ADC)": [],
+    "triangle_property_angle_sum(1,ADC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,EDA,ADC)",
+      "triangle_property_angle_sum(1,ADC)"
+    ]
+  }
 }

@@ -26,14 +26,44 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BDA,ADN)",
-    "triangle_property_angle_sum(ABD)",
-    "triangle_property_angle_sum(ADN)",
-    "mirror_congruent_triangle_judgment_aas(ADN,ABD)",
-    "mirror_congruent_triangle_property_line_equal(ADN,ABD)",
-    "mirror_congruent_triangle_property_line_equal(DNA,DAB)",
-    "line_addition(AN,NC)",
-    "midsegment_of_triangle_judgment_midpoint(MD,BCN)",
-    "midsegment_of_triangle_property_length(MD,BCN)"
-  ]
+    "adjacent_complementary_angle(1,BDA,ADN)",
+    "triangle_property_angle_sum(1,ABD)",
+    "triangle_property_angle_sum(1,ADN)",
+    "mirror_congruent_triangle_judgment_aas(1,ADN,ABD)",
+    "mirror_congruent_triangle_property_line_equal(1,ADN,ABD)",
+    "mirror_congruent_triangle_property_line_equal(1,DNA,DAB)",
+    "line_addition(1,AN,NC)",
+    "midsegment_of_triangle_judgment_midpoint(1,MD,BCN)",
+    "midsegment_of_triangle_property_length(1,MD,BCN)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BDA,ADN)": [
+      "mirror_congruent_triangle_judgment_aas(1,ADN,ABD)"
+    ],
+    "triangle_property_angle_sum(1,ABD)": [
+      "mirror_congruent_triangle_judgment_aas(1,ADN,ABD)"
+    ],
+    "triangle_property_angle_sum(1,ADN)": [
+      "mirror_congruent_triangle_judgment_aas(1,ADN,ABD)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,ADN,ABD)": [
+      "mirror_congruent_triangle_property_line_equal(1,ADN,ABD)",
+      "mirror_congruent_triangle_property_line_equal(1,DNA,DAB)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,ADN,ABD)": [
+      "midsegment_of_triangle_judgment_midpoint(1,MD,BCN)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,DNA,DAB)": [],
+    "line_addition(1,AN,NC)": [],
+    "midsegment_of_triangle_judgment_midpoint(1,MD,BCN)": [
+      "midsegment_of_triangle_property_length(1,MD,BCN)"
+    ],
+    "midsegment_of_triangle_property_length(1,MD,BCN)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BDA,ADN)",
+      "triangle_property_angle_sum(1,ABD)",
+      "triangle_property_angle_sum(1,ADN)",
+      "line_addition(1,AN,NC)"
+    ]
+  }
 }

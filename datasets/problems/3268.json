@@ -20,7 +20,15 @@
   "goal_cdl": "Value(MeasureOfAngle(BOD))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "angle_addition(COE,EOB)",
-    "adjacent_complementary_angle(COB,BOD)"
-  ]
+    "angle_addition(1,COE,EOB)",
+    "adjacent_complementary_angle(1,COB,BOD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,COE,EOB)": [],
+    "adjacent_complementary_angle(1,COB,BOD)": [],
+    "START": [
+      "angle_addition(1,COE,EOB)",
+      "adjacent_complementary_angle(1,COB,BOD)"
+    ]
+  }
 }

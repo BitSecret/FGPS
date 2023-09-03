@@ -24,8 +24,19 @@
   "goal_cdl": "Value(MeasureOfAngle(PNM))",
   "problem_answer": "88",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_hl(NMQ,NQP)",
-    "mirror_congruent_triangle_property_angle_equal(NMQ,NQP)",
-    "angle_addition(PNQ,QNM)"
-  ]
+    "mirror_congruent_triangle_judgment_hl(1,NMQ,NQP)",
+    "mirror_congruent_triangle_property_angle_equal(1,NMQ,NQP)",
+    "angle_addition(1,PNQ,QNM)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_hl(1,NMQ,NQP)": [
+      "mirror_congruent_triangle_property_angle_equal(1,NMQ,NQP)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,NMQ,NQP)": [],
+    "angle_addition(1,PNQ,QNM)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_hl(1,NMQ,NQP)",
+      "angle_addition(1,PNQ,QNM)"
+    ]
+  }
 }

@@ -29,11 +29,29 @@
   "goal_cdl": "Value(LengthOfLine(ML))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(LP,KQ,M)",
-    "similar_triangle_judgment_aa(PML,QMK)",
-    "line_addition(QP,PM)",
-    "line_addition(KL,LM)",
-    "similar_triangle_property_line_ratio(LPM,KQM)",
-    "similar_triangle_property_line_ratio(PML,QMK)"
-  ]
+    "parallel_property_corresponding_angle(1,LP,KQ,M)",
+    "similar_triangle_judgment_aa(1,PML,QMK)",
+    "line_addition(1,QP,PM)",
+    "line_addition(1,KL,LM)",
+    "similar_triangle_property_line_ratio(1,LPM,KQM)",
+    "similar_triangle_property_line_ratio(1,PML,QMK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,LP,KQ,M)": [
+      "similar_triangle_judgment_aa(1,PML,QMK)"
+    ],
+    "similar_triangle_judgment_aa(1,PML,QMK)": [
+      "similar_triangle_property_line_ratio(1,PML,QMK)",
+      "similar_triangle_property_line_ratio(1,LPM,KQM)"
+    ],
+    "line_addition(1,QP,PM)": [],
+    "line_addition(1,KL,LM)": [],
+    "similar_triangle_property_line_ratio(1,LPM,KQM)": [],
+    "similar_triangle_property_line_ratio(1,PML,QMK)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,LP,KQ,M)",
+      "line_addition(1,QP,PM)",
+      "line_addition(1,KL,LM)"
+    ]
+  }
 }

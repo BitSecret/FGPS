@@ -25,16 +25,54 @@
   "goal_cdl": "Value(LengthOfLine(CF))",
   "problem_answer": "2",
   "theorem_seqs": [
-    "equilateral_triangle_property_angle(ABC)",
-    "equilateral_triangle_property_angle(BCA)",
-    "equilateral_triangle_property_angle(ADE)",
-    "equilateral_triangle_property_angle(EAD)",
-    "cosine_theorem(BDA)",
-    "angle_addition(CAD,DAB)",
-    "angle_addition(EAF,FAD)",
-    "mirror_similar_triangle_judgment_aa(DAB,FEA)",
-    "mirror_similar_triangle_property_line_ratio(DAB,FEA)",
-    "mirror_similar_triangle_property_line_ratio(BDA,EAF)",
-    "line_addition(AF,FC)"
-  ]
+    "equilateral_triangle_property_angle(1,ABC)",
+    "equilateral_triangle_property_angle(1,BCA)",
+    "equilateral_triangle_property_angle(1,ADE)",
+    "equilateral_triangle_property_angle(1,EAD)",
+    "cosine_theorem(1,BDA)",
+    "angle_addition(1,CAD,DAB)",
+    "angle_addition(1,EAF,FAD)",
+    "mirror_similar_triangle_judgment_aa(1,DAB,FEA)",
+    "mirror_similar_triangle_property_line_ratio(1,DAB,FEA)",
+    "mirror_similar_triangle_property_line_ratio(1,BDA,EAF)",
+    "line_addition(1,AF,FC)"
+  ],
+  "theorem_seq_dag": {
+    "equilateral_triangle_property_angle(1,ABC)": [
+      "mirror_similar_triangle_judgment_aa(1,DAB,FEA)"
+    ],
+    "equilateral_triangle_property_angle(1,BCA)": [
+      "mirror_similar_triangle_judgment_aa(1,DAB,FEA)"
+    ],
+    "equilateral_triangle_property_angle(1,ADE)": [
+      "mirror_similar_triangle_judgment_aa(1,DAB,FEA)"
+    ],
+    "equilateral_triangle_property_angle(1,EAD)": [
+      "mirror_similar_triangle_judgment_aa(1,DAB,FEA)"
+    ],
+    "cosine_theorem(1,BDA)": [],
+    "angle_addition(1,CAD,DAB)": [
+      "mirror_similar_triangle_judgment_aa(1,DAB,FEA)"
+    ],
+    "angle_addition(1,EAF,FAD)": [
+      "mirror_similar_triangle_judgment_aa(1,DAB,FEA)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,DAB,FEA)": [
+      "mirror_similar_triangle_property_line_ratio(1,DAB,FEA)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,EAF)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,DAB,FEA)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BDA,EAF)": [],
+    "line_addition(1,AF,FC)": [],
+    "START": [
+      "equilateral_triangle_property_angle(1,ABC)",
+      "equilateral_triangle_property_angle(1,BCA)",
+      "equilateral_triangle_property_angle(1,ADE)",
+      "equilateral_triangle_property_angle(1,EAD)",
+      "cosine_theorem(1,BDA)",
+      "angle_addition(1,CAD,DAB)",
+      "angle_addition(1,EAF,FAD)",
+      "line_addition(1,AF,FC)"
+    ]
+  }
 }

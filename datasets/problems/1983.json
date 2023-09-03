@@ -23,8 +23,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(BADC,F)",
-    "mirror_congruent_triangle_judgment_sss(ADF,AFB)",
-    "mirror_congruent_triangle_property_angle_equal(ADF,AFB)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,BADC,F)",
+    "mirror_congruent_triangle_judgment_sss(1,ADF,AFB)",
+    "mirror_congruent_triangle_property_angle_equal(1,ADF,AFB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,BADC,F)": [
+      "mirror_congruent_triangle_judgment_sss(1,ADF,AFB)"
+    ],
+    "mirror_congruent_triangle_judgment_sss(1,ADF,AFB)": [
+      "mirror_congruent_triangle_property_angle_equal(1,ADF,AFB)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,ADF,AFB)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,BADC,F)"
+    ]
+  }
 }

@@ -25,11 +25,27 @@
   "goal_cdl": "Value(MeasureOfArc(PCB))",
   "problem_answer": "123",
   "theorem_seqs": [
-    "arc_property_center_angle(PAC,P)",
-    "arc_property_center_angle(PCY,P)",
-    "flat_angle(BPA)",
-    "angle_addition(BPY,YPC)",
-    "angle_addition(BPC,CPA)",
-    "arc_property_center_angle(PCB,P)"
-  ]
+    "arc_property_center_angle(1,PAC,P)",
+    "arc_property_center_angle(1,PCY,P)",
+    "flat_angle(1,BPA)",
+    "angle_addition(1,BPY,YPC)",
+    "angle_addition(1,BPC,CPA)",
+    "arc_property_center_angle(1,PCB,P)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,PAC,P)": [],
+    "arc_property_center_angle(1,PCY,P)": [],
+    "flat_angle(1,BPA)": [],
+    "angle_addition(1,BPY,YPC)": [],
+    "angle_addition(1,BPC,CPA)": [],
+    "arc_property_center_angle(1,PCB,P)": [],
+    "START": [
+      "arc_property_center_angle(1,PAC,P)",
+      "arc_property_center_angle(1,PCY,P)",
+      "flat_angle(1,BPA)",
+      "angle_addition(1,BPY,YPC)",
+      "angle_addition(1,BPC,CPA)",
+      "arc_property_center_angle(1,PCB,P)"
+    ]
+  }
 }

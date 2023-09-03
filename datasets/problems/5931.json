@@ -21,9 +21,24 @@
   "goal_cdl": "Value(LengthOfLine(DC))",
   "problem_answer": "5*sqrt(3)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ABC,CBD)",
-    "triangle_property_angle_sum(ABC)",
-    "isosceles_triangle_judgment_angle_equal(BCA)",
-    "sine_theorem(CBD)"
-  ]
+    "adjacent_complementary_angle(1,ABC,CBD)",
+    "triangle_property_angle_sum(1,ABC)",
+    "isosceles_triangle_judgment_angle_equal(1,BCA)",
+    "sine_theorem(1,CBD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ABC,CBD)": [
+      "isosceles_triangle_judgment_angle_equal(1,BCA)"
+    ],
+    "triangle_property_angle_sum(1,ABC)": [
+      "isosceles_triangle_judgment_angle_equal(1,BCA)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BCA)": [],
+    "sine_theorem(1,CBD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ABC,CBD)",
+      "triangle_property_angle_sum(1,ABC)",
+      "sine_theorem(1,CBD)"
+    ]
+  }
 }

@@ -24,10 +24,25 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "3",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(CBE,ADE)",
-    "similar_triangle_property_line_ratio(BEC,DEA)",
-    "similar_triangle_property_line_ratio(CBE,ADE)",
-    "line_addition(EC,CA)",
-    "line_addition(EB,BD)"
-  ]
+    "similar_triangle_judgment_aa(1,CBE,ADE)",
+    "similar_triangle_property_line_ratio(1,BEC,DEA)",
+    "similar_triangle_property_line_ratio(1,CBE,ADE)",
+    "line_addition(1,EC,CA)",
+    "line_addition(1,EB,BD)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,CBE,ADE)": [
+      "similar_triangle_property_line_ratio(1,CBE,ADE)",
+      "similar_triangle_property_line_ratio(1,BEC,DEA)"
+    ],
+    "similar_triangle_property_line_ratio(1,BEC,DEA)": [],
+    "similar_triangle_property_line_ratio(1,CBE,ADE)": [],
+    "line_addition(1,EC,CA)": [],
+    "line_addition(1,EB,BD)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,CBE,ADE)",
+      "line_addition(1,EC,CA)",
+      "line_addition(1,EB,BD)"
+    ]
+  }
 }

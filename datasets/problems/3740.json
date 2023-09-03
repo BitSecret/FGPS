@@ -27,20 +27,62 @@
   "goal_cdl": "Value(MeasureOfAngle(CDE))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "angle_addition(ABF,FBE)",
-    "angle_addition(DAF,FAB)",
-    "triangle_property_angle_sum(ABC)",
-    "triangle_property_angle_sum(ABF)",
-    "adjacent_complementary_angle(EFB,BFA)",
-    "adjacent_complementary_angle(BFA,AFD)",
-    "vertical_angle(BFA,DFE)",
-    "mirror_congruent_triangle_judgment_aas(ABF,EFB)",
-    "mirror_congruent_triangle_property_line_equal(BFA,BEF)",
-    "mirror_congruent_triangle_judgment_sas(FDA,FED)",
-    "mirror_congruent_triangle_property_angle_equal(AFD,EDF)",
-    "triangle_property_angle_sum(AFD)",
-    "triangle_property_angle_sum(DFE)",
-    "angle_addition(EDF,FDA)",
-    "adjacent_complementary_angle(CDE,EDA)"
-  ]
+    "angle_addition(1,ABF,FBE)",
+    "angle_addition(1,DAF,FAB)",
+    "triangle_property_angle_sum(1,ABC)",
+    "triangle_property_angle_sum(1,ABF)",
+    "adjacent_complementary_angle(1,EFB,BFA)",
+    "adjacent_complementary_angle(1,BFA,AFD)",
+    "vertical_angle(1,BFA,DFE)",
+    "mirror_congruent_triangle_judgment_aas(2,ABF,EFB)",
+    "mirror_congruent_triangle_property_line_equal(1,BFA,BEF)",
+    "mirror_congruent_triangle_judgment_sas(1,FDA,FED)",
+    "mirror_congruent_triangle_property_angle_equal(1,AFD,EDF)",
+    "triangle_property_angle_sum(1,AFD)",
+    "triangle_property_angle_sum(1,DFE)",
+    "angle_addition(1,EDF,FDA)",
+    "adjacent_complementary_angle(1,CDE,EDA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ABF,FBE)": [],
+    "angle_addition(1,DAF,FAB)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "triangle_property_angle_sum(1,ABF)": [],
+    "adjacent_complementary_angle(1,EFB,BFA)": [
+      "mirror_congruent_triangle_judgment_aas(2,ABF,EFB)"
+    ],
+    "adjacent_complementary_angle(1,BFA,AFD)": [
+      "mirror_congruent_triangle_judgment_sas(1,FDA,FED)"
+    ],
+    "vertical_angle(1,BFA,DFE)": [
+      "mirror_congruent_triangle_judgment_sas(1,FDA,FED)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(2,ABF,EFB)": [
+      "mirror_congruent_triangle_property_line_equal(1,BFA,BEF)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,BFA,BEF)": [
+      "mirror_congruent_triangle_judgment_sas(1,FDA,FED)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,FDA,FED)": [
+      "mirror_congruent_triangle_property_angle_equal(1,AFD,EDF)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,AFD,EDF)": [],
+    "triangle_property_angle_sum(1,AFD)": [],
+    "triangle_property_angle_sum(1,DFE)": [],
+    "angle_addition(1,EDF,FDA)": [],
+    "adjacent_complementary_angle(1,CDE,EDA)": [],
+    "START": [
+      "angle_addition(1,ABF,FBE)",
+      "angle_addition(1,DAF,FAB)",
+      "triangle_property_angle_sum(1,ABC)",
+      "triangle_property_angle_sum(1,ABF)",
+      "adjacent_complementary_angle(1,EFB,BFA)",
+      "adjacent_complementary_angle(1,BFA,AFD)",
+      "vertical_angle(1,BFA,DFE)",
+      "triangle_property_angle_sum(1,AFD)",
+      "triangle_property_angle_sum(1,DFE)",
+      "angle_addition(1,EDF,FDA)",
+      "adjacent_complementary_angle(1,CDE,EDA)"
+    ]
+  }
 }

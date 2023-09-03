@@ -29,15 +29,50 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(EFCD))",
   "problem_answer": "11",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_collinear_extend(CB,EA,F)",
-    "parallel_property_alternate_interior_angle(AE,FC)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "congruent_triangle_judgment_aas(OFC,OEA)",
-    "congruent_triangle_property_line_equal(OFC,OEA)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(AE,ED)",
-    "quadrilateral_perimeter_formula(EFCD)"
-  ]
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_collinear_extend(3,CB,EA,F)",
+    "parallel_property_alternate_interior_angle(1,AE,FC)",
+    "parallel_property_alternate_interior_angle(2,AE,FC)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "congruent_triangle_judgment_aas(3,OFC,OEA)",
+    "congruent_triangle_property_line_equal(1,OFC,OEA)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,AE,ED)",
+    "quadrilateral_perimeter_formula(1,EFCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_collinear_extend(3,CB,EA,F)"
+    ],
+    "parallel_property_collinear_extend(3,CB,EA,F)": [
+      "parallel_property_alternate_interior_angle(1,AE,FC)",
+      "parallel_property_alternate_interior_angle(2,AE,FC)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AE,FC)": [
+      "congruent_triangle_judgment_aas(3,OFC,OEA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,FC)": [
+      "congruent_triangle_judgment_aas(3,OFC,OEA)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "congruent_triangle_judgment_aas(3,OFC,OEA)"
+    ],
+    "congruent_triangle_judgment_aas(3,OFC,OEA)": [
+      "congruent_triangle_property_line_equal(1,OFC,OEA)"
+    ],
+    "congruent_triangle_property_line_equal(1,OFC,OEA)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,AE,ED)": [],
+    "quadrilateral_perimeter_formula(1,EFCD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,BC,E)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,AE,ED)",
+      "quadrilateral_perimeter_formula(1,EFCD)"
+    ]
+  }
 }

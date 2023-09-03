@@ -33,10 +33,27 @@
   "goal_cdl": "Value(MeasureOfAngle(PQN))",
   "problem_answer": "87",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,BA,P)",
-    "parallel_property_collinear_extend(PC,BA,Q)",
-    "parallel_property_collinear_extend(AB,PQ,M)",
-    "parallel_property_alternate_interior_angle(AM,PQ)",
-    "triangle_property_angle_sum(EPQ)"
-  ]
+    "parallel_property_collinear_extend(3,DC,BA,P)",
+    "parallel_property_collinear_extend(1,PC,BA,Q)",
+    "parallel_property_collinear_extend(3,AB,PQ,M)",
+    "parallel_property_alternate_interior_angle(2,AM,PQ)",
+    "triangle_property_angle_sum(1,EPQ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DC,BA,P)": [
+      "parallel_property_collinear_extend(1,PC,BA,Q)"
+    ],
+    "parallel_property_collinear_extend(1,PC,BA,Q)": [
+      "parallel_property_collinear_extend(3,AB,PQ,M)"
+    ],
+    "parallel_property_collinear_extend(3,AB,PQ,M)": [
+      "parallel_property_alternate_interior_angle(2,AM,PQ)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AM,PQ)": [],
+    "triangle_property_angle_sum(1,EPQ)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DC,BA,P)",
+      "triangle_property_angle_sum(1,EPQ)"
+    ]
+  }
 }

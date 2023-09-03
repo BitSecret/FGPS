@@ -31,9 +31,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "5.5",
   "theorem_seqs": [
-    "median_of_triangle_judgment(KR,KJL)",
-    "median_of_triangle_judgment(JQ,JLK)",
-    "centroid_of_triangle_judgment_intersection(D,LKJ,Q,R)",
-    "centroid_of_triangle_property_line_ratio(D,KJL,R)"
-  ]
+    "median_of_triangle_judgment(1,KR,KJL)",
+    "median_of_triangle_judgment(1,JQ,JLK)",
+    "centroid_of_triangle_judgment_intersection(1,D,LKJ,Q,R)",
+    "centroid_of_triangle_property_line_ratio(1,D,KJL,R)"
+  ],
+  "theorem_seq_dag": {
+    "median_of_triangle_judgment(1,KR,KJL)": [
+      "centroid_of_triangle_judgment_intersection(1,D,LKJ,Q,R)"
+    ],
+    "median_of_triangle_judgment(1,JQ,JLK)": [
+      "centroid_of_triangle_judgment_intersection(1,D,LKJ,Q,R)"
+    ],
+    "centroid_of_triangle_judgment_intersection(1,D,LKJ,Q,R)": [
+      "centroid_of_triangle_property_line_ratio(1,D,KJL,R)"
+    ],
+    "centroid_of_triangle_property_line_ratio(1,D,KJL,R)": [],
+    "START": [
+      "median_of_triangle_judgment(1,KR,KJL)",
+      "median_of_triangle_judgment(1,JQ,JLK)"
+    ]
+  }
 }

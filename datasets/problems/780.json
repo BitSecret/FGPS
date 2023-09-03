@@ -45,7 +45,16 @@
   "goal_cdl": "Value(y)",
   "problem_answer": "5",
   "theorem_seqs": [
-    "trapezoid_judgment_parallel(RQME)",
-    "midsegment_of_quadrilateral_judgment_parallel(JK,RQME)"
-  ]
+    "trapezoid_judgment_parallel(1,RQME)",
+    "midsegment_of_quadrilateral_judgment_parallel(1,JK,RQME)"
+  ],
+  "theorem_seq_dag": {
+    "trapezoid_judgment_parallel(1,RQME)": [
+      "midsegment_of_quadrilateral_judgment_parallel(1,JK,RQME)"
+    ],
+    "midsegment_of_quadrilateral_judgment_parallel(1,JK,RQME)": [],
+    "START": [
+      "trapezoid_judgment_parallel(1,RQME)"
+    ]
+  }
 }

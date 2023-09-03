@@ -23,9 +23,23 @@
   "goal_cdl": "Value(LengthOfLine(PS))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(SRP)",
-    "right_triangle_judgment_angle(PRQ)",
-    "right_triangle_property_pythagorean(PRQ)",
-    "right_triangle_property_pythagorean(SRP)"
-  ]
+    "right_triangle_judgment_angle(1,SRP)",
+    "right_triangle_judgment_angle(1,PRQ)",
+    "right_triangle_property_pythagorean(1,PRQ)",
+    "right_triangle_property_pythagorean(1,SRP)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,SRP)": [
+      "right_triangle_property_pythagorean(1,SRP)"
+    ],
+    "right_triangle_judgment_angle(1,PRQ)": [
+      "right_triangle_property_pythagorean(1,PRQ)"
+    ],
+    "right_triangle_property_pythagorean(1,PRQ)": [],
+    "right_triangle_property_pythagorean(1,SRP)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,SRP)",
+      "right_triangle_judgment_angle(1,PRQ)"
+    ]
+  }
 }

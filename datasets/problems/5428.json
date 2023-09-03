@@ -26,11 +26,30 @@
   "goal_cdl": "Value(MeasureOfAngle(EOC))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "midsegment_of_triangle_judgment_midpoint(EO,CDA)",
-    "midsegment_of_triangle_property_parallel(EO,CDA)",
-    "parallel_property_corresponding_angle(AD,OE,C)",
-    "parallel_property_ipsilateral_internal_angle(AD,BC)",
-    "angle_addition(DAO,OAB)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "midsegment_of_triangle_judgment_midpoint(1,EO,CDA)",
+    "midsegment_of_triangle_property_parallel(1,EO,CDA)",
+    "parallel_property_corresponding_angle(2,AD,OE,C)",
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+    "angle_addition(1,DAO,OAB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "midsegment_of_triangle_judgment_midpoint(1,EO,CDA)"
+    ],
+    "midsegment_of_triangle_judgment_midpoint(1,EO,CDA)": [
+      "midsegment_of_triangle_property_parallel(1,EO,CDA)"
+    ],
+    "midsegment_of_triangle_property_parallel(1,EO,CDA)": [
+      "parallel_property_corresponding_angle(2,AD,OE,C)"
+    ],
+    "parallel_property_corresponding_angle(2,AD,OE,C)": [],
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)": [],
+    "angle_addition(1,DAO,OAB)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+      "angle_addition(1,DAO,OAB)"
+    ]
+  }
 }

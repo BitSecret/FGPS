@@ -27,10 +27,26 @@
   "goal_cdl": "Value(MeasureOfAngle(NBG))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "vertical_angle(DMA,NMB)",
-    "triangle_property_angle_sum(MBN)",
-    "parallel_property_collinear_extend(DE,FG,N)",
-    "parallel_property_collinear_extend(GF,ND,B)",
-    "parallel_property_alternate_interior_angle(DN,BG)"
-  ]
+    "vertical_angle(1,DMA,NMB)",
+    "triangle_property_angle_sum(1,MBN)",
+    "parallel_property_collinear_extend(3,DE,FG,N)",
+    "parallel_property_collinear_extend(3,GF,ND,B)",
+    "parallel_property_alternate_interior_angle(2,DN,BG)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,DMA,NMB)": [],
+    "triangle_property_angle_sum(1,MBN)": [],
+    "parallel_property_collinear_extend(3,DE,FG,N)": [
+      "parallel_property_collinear_extend(3,GF,ND,B)"
+    ],
+    "parallel_property_collinear_extend(3,GF,ND,B)": [
+      "parallel_property_alternate_interior_angle(2,DN,BG)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DN,BG)": [],
+    "START": [
+      "vertical_angle(1,DMA,NMB)",
+      "triangle_property_angle_sum(1,MBN)",
+      "parallel_property_collinear_extend(3,DE,FG,N)"
+    ]
+  }
 }

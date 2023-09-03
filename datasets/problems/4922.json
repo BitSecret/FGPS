@@ -22,10 +22,31 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AB,CD)",
-    "similar_triangle_judgment_aa(OBA,OCD)",
-    "similar_triangle_property_line_ratio(BAO,CDO)",
-    "similar_triangle_property_line_ratio(AOB,DOC)",
-    "line_addition(BO,OC)"
-  ]
+    "parallel_property_alternate_interior_angle(1,AB,CD)",
+    "parallel_property_alternate_interior_angle(2,AB,CD)",
+    "similar_triangle_judgment_aa(1,OBA,OCD)",
+    "similar_triangle_property_line_ratio(1,BAO,CDO)",
+    "similar_triangle_property_line_ratio(1,AOB,DOC)",
+    "line_addition(1,BO,OC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,AB,CD)": [
+      "similar_triangle_judgment_aa(1,OBA,OCD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AB,CD)": [
+      "similar_triangle_judgment_aa(1,OBA,OCD)"
+    ],
+    "similar_triangle_judgment_aa(1,OBA,OCD)": [
+      "similar_triangle_property_line_ratio(1,BAO,CDO)",
+      "similar_triangle_property_line_ratio(1,AOB,DOC)"
+    ],
+    "similar_triangle_property_line_ratio(1,BAO,CDO)": [],
+    "similar_triangle_property_line_ratio(1,AOB,DOC)": [],
+    "line_addition(1,BO,OC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,AB,CD)",
+      "parallel_property_alternate_interior_angle(2,AB,CD)",
+      "line_addition(1,BO,OC)"
+    ]
+  }
 }

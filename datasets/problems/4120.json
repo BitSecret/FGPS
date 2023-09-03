@@ -22,16 +22,44 @@
   "goal_cdl": "Value(MeasureOfAngle(DAB))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "isosceles_triangle_judgment_line_equal(ADE)",
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "isosceles_triangle_property_angle_equal(ADE)",
-    "triangle_property_angle_sum(ABD)",
-    "triangle_property_angle_sum(ADE)",
-    "triangle_property_angle_sum(EDC)",
-    "triangle_property_angle_sum(ADC)",
-    "triangle_property_angle_sum(ABC)",
-    "adjacent_complementary_angle(CED,DEA)",
-    "adjacent_complementary_angle(BDA,ADC)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "isosceles_triangle_judgment_line_equal(1,ADE)",
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,ADE)",
+    "triangle_property_angle_sum(1,ABD)",
+    "triangle_property_angle_sum(1,ADE)",
+    "triangle_property_angle_sum(1,EDC)",
+    "triangle_property_angle_sum(1,ADC)",
+    "triangle_property_angle_sum(1,ABC)",
+    "adjacent_complementary_angle(1,CED,DEA)",
+    "adjacent_complementary_angle(1,BDA,ADC)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ADE)": [
+      "isosceles_triangle_property_angle_equal(1,ADE)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [],
+    "isosceles_triangle_property_angle_equal(1,ADE)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "triangle_property_angle_sum(1,ADE)": [],
+    "triangle_property_angle_sum(1,EDC)": [],
+    "triangle_property_angle_sum(1,ADC)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "adjacent_complementary_angle(1,CED,DEA)": [],
+    "adjacent_complementary_angle(1,BDA,ADC)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_judgment_line_equal(1,ADE)",
+      "triangle_property_angle_sum(1,ABD)",
+      "triangle_property_angle_sum(1,ADE)",
+      "triangle_property_angle_sum(1,EDC)",
+      "triangle_property_angle_sum(1,ADC)",
+      "triangle_property_angle_sum(1,ABC)",
+      "adjacent_complementary_angle(1,CED,DEA)",
+      "adjacent_complementary_angle(1,BDA,ADC)"
+    ]
+  }
 }

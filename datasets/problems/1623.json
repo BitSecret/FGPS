@@ -27,16 +27,53 @@
   "goal_cdl": "Value(MeasureOfAngle(WTZ))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "line_addition(XT,TZ)",
-    "line_addition(YT,TW)",
-    "isosceles_triangle_judgment_line_equal(WXZ)",
-    "isosceles_triangle_property_angle_equal(WXZ)",
-    "triangle_property_angle_sum(WXZ)",
-    "parallelogram_property_diagonal_bisection(XYZW,T)",
-    "parallelogram_property_diagonal_bisection(YZWX,T)",
-    "rectangle_property_diagonal_equal(XYZW)",
-    "isosceles_triangle_judgment_line_equal(TZW)",
-    "isosceles_triangle_property_angle_equal(TZW)",
-    "triangle_property_angle_sum(TZW)"
-  ]
+    "line_addition(1,XT,TZ)",
+    "line_addition(1,YT,TW)",
+    "isosceles_triangle_judgment_line_equal(1,WXZ)",
+    "isosceles_triangle_property_angle_equal(1,WXZ)",
+    "triangle_property_angle_sum(1,WXZ)",
+    "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+    "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+    "rectangle_property_diagonal_equal(1,XYZW)",
+    "isosceles_triangle_judgment_line_equal(1,TZW)",
+    "isosceles_triangle_property_angle_equal(1,TZW)",
+    "triangle_property_angle_sum(1,TZW)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,XT,TZ)": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ],
+    "line_addition(1,YT,TW)": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,WXZ)": [
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,WXZ)": [],
+    "triangle_property_angle_sum(1,WXZ)": [],
+    "parallelogram_property_diagonal_bisection(1,XYZW,T)": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,YZWX,T)": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ],
+    "rectangle_property_diagonal_equal(1,XYZW)": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,TZW)": [
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,TZW)": [],
+    "triangle_property_angle_sum(1,TZW)": [],
+    "START": [
+      "line_addition(1,XT,TZ)",
+      "line_addition(1,YT,TW)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  }
 }

@@ -26,13 +26,37 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(AEBC))",
   "problem_answer": "500",
   "theorem_seqs": [
-    "parallel_judgment_per_per(FA,NC)",
-    "parallel_judgment_per_per(AC,FN)",
-    "parallelogram_judgment_parallel_and_parallel(AFNC)",
-    "parallelogram_property_opposite_line_equal(AFNC)",
-    "parallelogram_property_opposite_line_equal(FNCA)",
-    "line_addition(EF,FN)",
-    "line_addition(EN,NB)",
-    "trapezoid_area_formula(AEBC)"
-  ]
+    "parallel_judgment_per_per(1,FA,NC)",
+    "parallel_judgment_per_per(1,AC,FN)",
+    "parallelogram_judgment_parallel_and_parallel(1,AFNC)",
+    "parallelogram_property_opposite_line_equal(1,AFNC)",
+    "parallelogram_property_opposite_line_equal(1,FNCA)",
+    "line_addition(1,EF,FN)",
+    "line_addition(1,EN,NB)",
+    "trapezoid_area_formula(1,AEBC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_per_per(1,FA,NC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AFNC)"
+    ],
+    "parallel_judgment_per_per(1,AC,FN)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AFNC)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,AFNC)": [
+      "parallelogram_property_opposite_line_equal(1,AFNC)",
+      "parallelogram_property_opposite_line_equal(1,FNCA)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,AFNC)": [],
+    "parallelogram_property_opposite_line_equal(1,FNCA)": [],
+    "line_addition(1,EF,FN)": [],
+    "line_addition(1,EN,NB)": [],
+    "trapezoid_area_formula(1,AEBC)": [],
+    "START": [
+      "parallel_judgment_per_per(1,FA,NC)",
+      "parallel_judgment_per_per(1,AC,FN)",
+      "line_addition(1,EF,FN)",
+      "line_addition(1,EN,NB)",
+      "trapezoid_area_formula(1,AEBC)"
+    ]
+  }
 }

@@ -23,10 +23,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8",
   "theorem_seqs": [
-    "similar_triangle_judgment_aa(ECA,DCF)",
-    "line_addition(CE,ED)",
-    "line_addition(CA,AF)",
-    "similar_triangle_property_line_ratio(ECA,DCF)",
-    "similar_triangle_property_line_ratio(AEC,FDC)"
-  ]
+    "similar_triangle_judgment_aa(1,ECA,DCF)",
+    "line_addition(1,CE,ED)",
+    "line_addition(1,CA,AF)",
+    "similar_triangle_property_line_ratio(1,ECA,DCF)",
+    "similar_triangle_property_line_ratio(1,AEC,FDC)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_judgment_aa(1,ECA,DCF)": [
+      "similar_triangle_property_line_ratio(1,ECA,DCF)",
+      "similar_triangle_property_line_ratio(1,AEC,FDC)"
+    ],
+    "line_addition(1,CE,ED)": [],
+    "line_addition(1,CA,AF)": [],
+    "similar_triangle_property_line_ratio(1,ECA,DCF)": [],
+    "similar_triangle_property_line_ratio(1,AEC,FDC)": [],
+    "START": [
+      "similar_triangle_judgment_aa(1,ECA,DCF)",
+      "line_addition(1,CE,ED)",
+      "line_addition(1,CA,AF)"
+    ]
+  }
 }

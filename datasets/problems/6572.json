@@ -28,14 +28,40 @@
   "goal_cdl": "Value(PerimeterOfTriangle(ABE))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "adjacent_complementary_angle(BOE,EOD)",
-    "perpendicular_bisector_judgment_per_and_mid(EO,BD)",
-    "perpendicular_bisector_property_distance_equal(EO,BD)",
-    "quadrilateral_perimeter_formula(ABCD)",
-    "triangle_perimeter_formula(ABE)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(AE,ED)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "adjacent_complementary_angle(1,BOE,EOD)",
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,BD)",
+    "perpendicular_bisector_property_distance_equal(1,EO,BD)",
+    "quadrilateral_perimeter_formula(1,ABCD)",
+    "triangle_perimeter_formula(1,ABE)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,AE,ED)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,BD)"
+    ],
+    "adjacent_complementary_angle(1,BOE,EOD)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,BD)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,BD)": [
+      "perpendicular_bisector_property_distance_equal(1,EO,BD)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,EO,BD)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "triangle_perimeter_formula(1,ABE)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,AE,ED)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "adjacent_complementary_angle(1,BOE,EOD)",
+      "quadrilateral_perimeter_formula(1,ABCD)",
+      "triangle_perimeter_formula(1,ABE)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,AE,ED)"
+    ]
+  }
 }

@@ -34,10 +34,27 @@
   "goal_cdl": "Value(LengthOfLine(PK))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "adjacent_complementary_angle(ZJP,PJY)",
-    "right_triangle_judgment_angle(ZJP)",
-    "right_triangle_property_pythagorean(ZJP)",
-    "bisector_of_angle_judgment_angle_equal(YP,JYK)",
-    "bisector_of_angle_property_distance_equal(YP,JYK)"
-  ]
+    "adjacent_complementary_angle(1,ZJP,PJY)",
+    "right_triangle_judgment_angle(1,ZJP)",
+    "right_triangle_property_pythagorean(1,ZJP)",
+    "bisector_of_angle_judgment_angle_equal(1,YP,JYK)",
+    "bisector_of_angle_property_distance_equal(1,YP,JYK)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,ZJP,PJY)": [
+      "right_triangle_judgment_angle(1,ZJP)"
+    ],
+    "right_triangle_judgment_angle(1,ZJP)": [
+      "right_triangle_property_pythagorean(1,ZJP)"
+    ],
+    "right_triangle_property_pythagorean(1,ZJP)": [],
+    "bisector_of_angle_judgment_angle_equal(1,YP,JYK)": [
+      "bisector_of_angle_property_distance_equal(1,YP,JYK)"
+    ],
+    "bisector_of_angle_property_distance_equal(1,YP,JYK)": [],
+    "START": [
+      "adjacent_complementary_angle(1,ZJP,PJY)",
+      "bisector_of_angle_judgment_angle_equal(1,YP,JYK)"
+    ]
+  }
 }

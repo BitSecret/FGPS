@@ -30,15 +30,42 @@
   "goal_cdl": "Value(Sub(AreaOfCircle(P),AreaOfCircle(O)))",
   "problem_answer": "314.159",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OB,P)",
-    "tangent_of_circle_property_perpendicular(AC,O,O)",
-    "tangent_of_circle_property_perpendicular(BC,O,O)",
-    "circle_property_chord_perpendicular_bisect_chord(P,OC,AB)",
-    "line_addition(AC,CB)",
-    "right_triangle_judgment_angle(OCB)",
-    "right_triangle_property_pythagorean(OCB)",
-    "circle_area_formula(O)",
-    "circle_area_formula(P)"
-  ]
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OB,P)",
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+    "tangent_of_circle_property_perpendicular(1,BC,O,O)",
+    "circle_property_chord_perpendicular_bisect_chord(1,P,OC,AB)",
+    "line_addition(1,AC,CB)",
+    "right_triangle_judgment_angle(1,OCB)",
+    "right_triangle_property_pythagorean(1,OCB)",
+    "circle_area_formula(1,O)",
+    "circle_area_formula(1,P)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OC,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,P)": [],
+    "tangent_of_circle_property_perpendicular(2,AC,O,O)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,P,OC,AB)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,BC,O,O)": [
+      "right_triangle_judgment_angle(1,OCB)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,P,OC,AB)": [],
+    "line_addition(1,AC,CB)": [],
+    "right_triangle_judgment_angle(1,OCB)": [
+      "right_triangle_property_pythagorean(1,OCB)"
+    ],
+    "right_triangle_property_pythagorean(1,OCB)": [],
+    "circle_area_formula(1,O)": [],
+    "circle_area_formula(1,P)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,P)",
+      "tangent_of_circle_property_perpendicular(2,AC,O,O)",
+      "tangent_of_circle_property_perpendicular(1,BC,O,O)",
+      "line_addition(1,AC,CB)",
+      "circle_area_formula(1,O)",
+      "circle_area_formula(1,P)"
+    ]
+  }
 }

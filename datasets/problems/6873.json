@@ -25,14 +25,40 @@
   "goal_cdl": "Value(MeasureOfAngle(OBD))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(CD,O,O)",
-    "triangle_property_angle_sum(DOB)",
-    "triangle_property_angle_sum(DCO)",
-    "triangle_property_angle_sum(DCB)",
-    "adjacent_complementary_angle(COD,DOB)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "isosceles_triangle_judgment_line_equal(OBD)",
-    "isosceles_triangle_property_angle_equal(OBD)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,CD,O,O)",
+    "triangle_property_angle_sum(1,DOB)",
+    "triangle_property_angle_sum(1,DCO)",
+    "triangle_property_angle_sum(1,DCB)",
+    "adjacent_complementary_angle(1,COD,DOB)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBD)",
+    "isosceles_triangle_property_angle_equal(1,OBD)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,CD,O,O)": [],
+    "triangle_property_angle_sum(1,DOB)": [],
+    "triangle_property_angle_sum(1,DCO)": [],
+    "triangle_property_angle_sum(1,DCB)": [],
+    "adjacent_complementary_angle(1,COD,DOB)": [],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBD)": [
+      "isosceles_triangle_property_angle_equal(1,OBD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBD)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,CD,O,O)",
+      "triangle_property_angle_sum(1,DOB)",
+      "triangle_property_angle_sum(1,DCO)",
+      "triangle_property_angle_sum(1,DCB)",
+      "adjacent_complementary_angle(1,COD,DOB)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)"
+    ]
+  }
 }

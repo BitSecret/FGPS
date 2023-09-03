@@ -25,9 +25,23 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "17.5",
   "theorem_seqs": [
-    "vertical_angle(CFE,GFB)",
-    "mirror_similar_triangle_judgment_aa(CFE,BGF)",
-    "mirror_similar_triangle_property_line_ratio(FEC,FBG)",
-    "mirror_similar_triangle_property_line_ratio(ECF,GFB)"
-  ]
+    "vertical_angle(1,CFE,GFB)",
+    "mirror_similar_triangle_judgment_aa(1,CFE,BGF)",
+    "mirror_similar_triangle_property_line_ratio(1,FEC,FBG)",
+    "mirror_similar_triangle_property_line_ratio(1,ECF,GFB)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,CFE,GFB)": [
+      "mirror_similar_triangle_judgment_aa(1,CFE,BGF)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,CFE,BGF)": [
+      "mirror_similar_triangle_property_line_ratio(1,FEC,FBG)",
+      "mirror_similar_triangle_property_line_ratio(1,ECF,GFB)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,FEC,FBG)": [],
+    "mirror_similar_triangle_property_line_ratio(1,ECF,GFB)": [],
+    "START": [
+      "vertical_angle(1,CFE,GFB)"
+    ]
+  }
 }

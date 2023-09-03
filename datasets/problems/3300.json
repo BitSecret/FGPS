@@ -23,12 +23,31 @@
   "goal_cdl": "Value(MeasureOfAngle(EDC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_sss(ABD,ADC)",
-    "mirror_congruent_triangle_property_angle_equal(BDA,CAD)",
-    "mirror_congruent_triangle_property_angle_equal(DAB,DCA)",
-    "adjacent_complementary_angle(BDA,ADC)",
-    "triangle_property_angle_sum(ABD)",
-    "adjacent_complementary_angle(CED,DEA)",
-    "triangle_property_angle_sum(CED)"
-  ]
+    "mirror_congruent_triangle_judgment_sss(1,ABD,ADC)",
+    "mirror_congruent_triangle_property_angle_equal(1,BDA,CAD)",
+    "mirror_congruent_triangle_property_angle_equal(1,DAB,DCA)",
+    "adjacent_complementary_angle(1,BDA,ADC)",
+    "triangle_property_angle_sum(1,ABD)",
+    "adjacent_complementary_angle(1,CED,DEA)",
+    "triangle_property_angle_sum(1,CED)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_sss(1,ABD,ADC)": [
+      "mirror_congruent_triangle_property_angle_equal(1,BDA,CAD)",
+      "mirror_congruent_triangle_property_angle_equal(1,DAB,DCA)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,BDA,CAD)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,DAB,DCA)": [],
+    "adjacent_complementary_angle(1,BDA,ADC)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "adjacent_complementary_angle(1,CED,DEA)": [],
+    "triangle_property_angle_sum(1,CED)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_sss(1,ABD,ADC)",
+      "adjacent_complementary_angle(1,BDA,ADC)",
+      "triangle_property_angle_sum(1,ABD)",
+      "adjacent_complementary_angle(1,CED,DEA)",
+      "triangle_property_angle_sum(1,CED)"
+    ]
+  }
 }

@@ -27,8 +27,20 @@
   "goal_cdl": "Value(MeasureOfAngle(EGD))",
   "problem_answer": "55",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BC,EF,D)",
-    "parallel_property_collinear_extend(FE,DB,G)",
-    "parallel_property_corresponding_angle(GE,DB,A)"
-  ]
+    "parallel_property_collinear_extend(3,BC,EF,D)",
+    "parallel_property_collinear_extend(3,FE,DB,G)",
+    "parallel_property_corresponding_angle(2,GE,DB,A)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,BC,EF,D)": [
+      "parallel_property_collinear_extend(3,FE,DB,G)"
+    ],
+    "parallel_property_collinear_extend(3,FE,DB,G)": [
+      "parallel_property_corresponding_angle(2,GE,DB,A)"
+    ],
+    "parallel_property_corresponding_angle(2,GE,DB,A)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,BC,EF,D)"
+    ]
+  }
 }

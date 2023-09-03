@@ -23,10 +23,24 @@
   "goal_cdl": "Value(LengthOfLine(AP))",
   "problem_answer": "3*sqrt(3)",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(PA,O,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "triangle_property_angle_sum(AOP)",
-    "sine_theorem(AOP)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "triangle_property_angle_sum(1,AOP)",
+    "sine_theorem(1,AOP)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "triangle_property_angle_sum(1,AOP)": [],
+    "sine_theorem(1,AOP)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_property_angle_sum(1,AOP)",
+      "sine_theorem(1,AOP)"
+    ]
+  }
 }

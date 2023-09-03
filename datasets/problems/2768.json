@@ -23,9 +23,21 @@
   "goal_cdl": "Value(MeasureOfAngle(AOF))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "flat_angle(AOB)",
-    "angle_addition(AOF,FOB)",
-    "angle_addition(FOE,EOB)",
-    "angle_addition(EOD,DOB)"
-  ]
+    "flat_angle(1,AOB)",
+    "angle_addition(1,AOF,FOB)",
+    "angle_addition(1,FOE,EOB)",
+    "angle_addition(1,EOD,DOB)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,AOB)": [],
+    "angle_addition(1,AOF,FOB)": [],
+    "angle_addition(1,FOE,EOB)": [],
+    "angle_addition(1,EOD,DOB)": [],
+    "START": [
+      "flat_angle(1,AOB)",
+      "angle_addition(1,AOF,FOB)",
+      "angle_addition(1,FOE,EOB)",
+      "angle_addition(1,EOD,DOB)"
+    ]
+  }
 }

@@ -30,13 +30,37 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "180",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(AEF)",
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "isosceles_triangle_property_line_coincidence(AEF,G)",
-    "line_addition(EG,GF)",
-    "triangle_property_angle_sum(ABD)",
-    "sine_theorem(EGA)",
-    "sine_theorem(ABD)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,AEF)",
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "isosceles_triangle_property_line_coincidence(1,AEF,G)",
+    "line_addition(1,EG,GF)",
+    "triangle_property_angle_sum(1,ABD)",
+    "sine_theorem(1,EGA)",
+    "sine_theorem(1,ABD)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,AEF)": [
+      "isosceles_triangle_property_line_coincidence(1,AEF,G)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [
+      "solve_eq_22)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,AEF,G)": [],
+    "line_addition(1,EG,GF)": [],
+    "triangle_property_angle_sum(1,ABD)": [],
+    "sine_theorem(1,EGA)": [],
+    "sine_theorem(1,ABD)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,AEF)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "line_addition(1,EG,GF)",
+      "triangle_property_angle_sum(1,ABD)",
+      "sine_theorem(1,EGA)",
+      "sine_theorem(1,ABD)"
+    ]
+  }
 }

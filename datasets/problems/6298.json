@@ -35,11 +35,29 @@
   "goal_cdl": "Value(LengthOfLine(EF))",
   "problem_answer": "sqrt(10)",
   "theorem_seqs": [
-    "congruent_triangle_judgment_sas(OEB,OFC)",
-    "congruent_triangle_property_line_equal(OEB,OFC)",
-    "line_addition(AE,EB)",
-    "line_addition(BF,FC)",
-    "right_triangle_judgment_angle(EBF)",
-    "right_triangle_property_pythagorean(EBF)"
-  ]
+    "congruent_triangle_judgment_sas(1,OEB,OFC)",
+    "congruent_triangle_property_line_equal(1,OEB,OFC)",
+    "line_addition(1,AE,EB)",
+    "line_addition(1,BF,FC)",
+    "right_triangle_judgment_angle(1,EBF)",
+    "right_triangle_property_pythagorean(1,EBF)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_triangle_judgment_sas(1,OEB,OFC)": [
+      "congruent_triangle_property_line_equal(1,OEB,OFC)"
+    ],
+    "congruent_triangle_property_line_equal(1,OEB,OFC)": [],
+    "line_addition(1,AE,EB)": [],
+    "line_addition(1,BF,FC)": [],
+    "right_triangle_judgment_angle(1,EBF)": [
+      "right_triangle_property_pythagorean(1,EBF)"
+    ],
+    "right_triangle_property_pythagorean(1,EBF)": [],
+    "START": [
+      "congruent_triangle_judgment_sas(1,OEB,OFC)",
+      "line_addition(1,AE,EB)",
+      "line_addition(1,BF,FC)",
+      "right_triangle_judgment_angle(1,EBF)"
+    ]
+  }
 }

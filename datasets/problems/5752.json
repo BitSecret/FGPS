@@ -22,9 +22,28 @@
   "goal_cdl": "Value(AreaOfTriangle(EBC))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(DA,BC)",
-    "similar_triangle_judgment_aa(EAD,EBC)",
-    "similar_triangle_property_line_ratio(DEA,CEB)",
-    "similar_triangle_property_area_square_ratio(EAD,EBC)"
-  ]
+    "parallel_property_alternate_interior_angle(1,DA,BC)",
+    "parallel_property_alternate_interior_angle(2,DA,BC)",
+    "similar_triangle_judgment_aa(1,EAD,EBC)",
+    "similar_triangle_property_line_ratio(1,DEA,CEB)",
+    "similar_triangle_property_area_square_ratio(1,EAD,EBC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(1,DA,BC)": [
+      "similar_triangle_judgment_aa(1,EAD,EBC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DA,BC)": [
+      "similar_triangle_judgment_aa(1,EAD,EBC)"
+    ],
+    "similar_triangle_judgment_aa(1,EAD,EBC)": [
+      "similar_triangle_property_area_square_ratio(1,EAD,EBC)",
+      "similar_triangle_property_line_ratio(1,DEA,CEB)"
+    ],
+    "similar_triangle_property_line_ratio(1,DEA,CEB)": [],
+    "similar_triangle_property_area_square_ratio(1,EAD,EBC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(1,DA,BC)",
+      "parallel_property_alternate_interior_angle(2,DA,BC)"
+    ]
+  }
 }

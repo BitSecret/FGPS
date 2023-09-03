@@ -30,11 +30,29 @@
   "goal_cdl": "Value(LengthOfLine(PR))",
   "problem_answer": "50/3",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(LK,RP,M)",
-    "similar_triangle_judgment_aa(KLM,PRM)",
-    "similar_triangle_property_line_ratio(LMK,RMP)",
-    "similar_triangle_property_line_ratio(MKL,MPR)",
-    "line_addition(KP,PM)",
-    "line_addition(LN,NK)"
-  ]
+    "parallel_property_corresponding_angle(2,LK,RP,M)",
+    "similar_triangle_judgment_aa(1,KLM,PRM)",
+    "similar_triangle_property_line_ratio(1,LMK,RMP)",
+    "similar_triangle_property_line_ratio(1,MKL,MPR)",
+    "line_addition(1,KP,PM)",
+    "line_addition(1,LN,NK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(2,LK,RP,M)": [
+      "similar_triangle_judgment_aa(1,KLM,PRM)"
+    ],
+    "similar_triangle_judgment_aa(1,KLM,PRM)": [
+      "similar_triangle_property_line_ratio(1,LMK,RMP)",
+      "similar_triangle_property_line_ratio(1,MKL,MPR)"
+    ],
+    "similar_triangle_property_line_ratio(1,LMK,RMP)": [],
+    "similar_triangle_property_line_ratio(1,MKL,MPR)": [],
+    "line_addition(1,KP,PM)": [],
+    "line_addition(1,LN,NK)": [],
+    "START": [
+      "parallel_property_corresponding_angle(2,LK,RP,M)",
+      "line_addition(1,KP,PM)",
+      "line_addition(1,LN,NK)"
+    ]
+  }
 }

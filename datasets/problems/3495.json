@@ -20,8 +20,18 @@
   "goal_cdl": "Value(Sub(MeasureOfAngle(AEF),MeasureOfAngle(CFE)))",
   "problem_answer": "112",
   "theorem_seqs": [
-    "parallel_property_ipsilateral_internal_angle(AB,CD)",
-    "adjacent_complementary_angle(AEF,FEC)",
-    "triangle_property_angle_sum(FEC)"
-  ]
+    "parallel_property_ipsilateral_internal_angle(1,AB,CD)",
+    "adjacent_complementary_angle(1,AEF,FEC)",
+    "triangle_property_angle_sum(1,FEC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_ipsilateral_internal_angle(1,AB,CD)": [],
+    "adjacent_complementary_angle(1,AEF,FEC)": [],
+    "triangle_property_angle_sum(1,FEC)": [],
+    "START": [
+      "parallel_property_ipsilateral_internal_angle(1,AB,CD)",
+      "adjacent_complementary_angle(1,AEF,FEC)",
+      "triangle_property_angle_sum(1,FEC)"
+    ]
+  }
 }

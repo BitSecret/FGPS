@@ -27,11 +27,34 @@
   "goal_cdl": "Value(Add(LengthOfLine(DE),LengthOfLine(DF)))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "triangle_property_angle_sum(ABC)",
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "line_addition(BD,DC)",
-    "sine_theorem(DEB)",
-    "sine_theorem(DCF)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "triangle_property_angle_sum(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "line_addition(1,BD,DC)",
+    "sine_theorem(1,DEB)",
+    "sine_theorem(1,DCF)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "triangle_property_angle_sum(1,ABC)": [
+      "solve_eq_16)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [
+      "solve_eq_16)"
+    ],
+    "line_addition(1,BD,DC)": [
+      "solve_eq_16)"
+    ],
+    "sine_theorem(1,DEB)": [],
+    "sine_theorem(1,DCF)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "triangle_property_angle_sum(1,ABC)",
+      "line_addition(1,BD,DC)",
+      "sine_theorem(1,DEB)",
+      "sine_theorem(1,DCF)"
+    ]
+  }
 }

@@ -26,15 +26,45 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DOE))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "quadrilateral_perimeter_formula(ABCD)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "line_addition(BO,OD)",
-    "line_addition(CE,ED)",
-    "similar_triangle_judgment_sas(DOE,DBC)",
-    "similar_triangle_property_line_ratio(EDO,CDB)",
-    "similar_triangle_property_line_ratio(DOE,DBC)",
-    "triangle_perimeter_formula(DOE)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "quadrilateral_perimeter_formula(1,ABCD)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "line_addition(1,BO,OD)",
+    "line_addition(1,CE,ED)",
+    "similar_triangle_judgment_sas(1,DOE,DBC)",
+    "similar_triangle_property_line_ratio(1,EDO,CDB)",
+    "similar_triangle_property_line_ratio(1,DOE,DBC)",
+    "triangle_perimeter_formula(1,DOE)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ],
+    "line_addition(1,BO,OD)": [
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ],
+    "line_addition(1,CE,ED)": [
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ],
+    "similar_triangle_judgment_sas(1,DOE,DBC)": [
+      "similar_triangle_property_line_ratio(1,DOE,DBC)",
+      "similar_triangle_property_line_ratio(1,EDO,CDB)"
+    ],
+    "similar_triangle_property_line_ratio(1,EDO,CDB)": [],
+    "similar_triangle_property_line_ratio(1,DOE,DBC)": [],
+    "triangle_perimeter_formula(1,DOE)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "quadrilateral_perimeter_formula(1,ABCD)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,CE,ED)",
+      "triangle_perimeter_formula(1,DOE)"
+    ]
+  }
 }

@@ -24,20 +24,62 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "46",
   "theorem_seqs": [
-    "line_addition(AE,EF)",
-    "line_addition(AF,FD)",
-    "isosceles_trapezoid_property_angle_equal(BADC)",
-    "triangle_property_angle_sum(AEB)",
-    "triangle_property_angle_sum(CFD)",
-    "sine_theorem(EBA)",
-    "sine_theorem(FDC)",
-    "parallel_property_collinear_extend(DA,CB,F)",
-    "parallel_property_collinear_extend(FA,CB,E)",
-    "adjacent_complementary_angle(AEB,BEF)",
-    "adjacent_complementary_angle(AFC,CFD)",
-    "parallel_judgment_ipsilateral_internal_angle(EB,FC)",
-    "parallelogram_judgment_parallel_and_parallel(BEFC)",
-    "parallelogram_property_opposite_line_equal(BEFC)",
-    "parallelogram_property_opposite_line_equal(EFCB)"
-  ]
+    "line_addition(1,AE,EF)",
+    "line_addition(1,AF,FD)",
+    "isosceles_trapezoid_property_angle_equal(1,BADC)",
+    "triangle_property_angle_sum(1,AEB)",
+    "triangle_property_angle_sum(1,CFD)",
+    "sine_theorem(1,EBA)",
+    "sine_theorem(1,FDC)",
+    "parallel_property_collinear_extend(3,DA,CB,F)",
+    "parallel_property_collinear_extend(3,FA,CB,E)",
+    "adjacent_complementary_angle(1,AEB,BEF)",
+    "adjacent_complementary_angle(1,AFC,CFD)",
+    "parallel_judgment_ipsilateral_internal_angle(1,EB,FC)",
+    "parallelogram_judgment_parallel_and_parallel(1,BEFC)",
+    "parallelogram_property_opposite_line_equal(1,BEFC)",
+    "parallelogram_property_opposite_line_equal(1,EFCB)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AE,EF)": [],
+    "line_addition(1,AF,FD)": [],
+    "isosceles_trapezoid_property_angle_equal(1,BADC)": [],
+    "triangle_property_angle_sum(1,AEB)": [],
+    "triangle_property_angle_sum(1,CFD)": [],
+    "sine_theorem(1,EBA)": [],
+    "sine_theorem(1,FDC)": [],
+    "parallel_property_collinear_extend(3,DA,CB,F)": [
+      "parallel_property_collinear_extend(3,FA,CB,E)"
+    ],
+    "parallel_property_collinear_extend(3,FA,CB,E)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BEFC)"
+    ],
+    "adjacent_complementary_angle(1,AEB,BEF)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EB,FC)"
+    ],
+    "adjacent_complementary_angle(1,AFC,CFD)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EB,FC)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,EB,FC)": [
+      "parallelogram_judgment_parallel_and_parallel(1,BEFC)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,BEFC)": [
+      "parallelogram_property_opposite_line_equal(1,BEFC)",
+      "parallelogram_property_opposite_line_equal(1,EFCB)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,BEFC)": [],
+    "parallelogram_property_opposite_line_equal(1,EFCB)": [],
+    "START": [
+      "line_addition(1,AE,EF)",
+      "line_addition(1,AF,FD)",
+      "isosceles_trapezoid_property_angle_equal(1,BADC)",
+      "triangle_property_angle_sum(1,AEB)",
+      "triangle_property_angle_sum(1,CFD)",
+      "sine_theorem(1,EBA)",
+      "sine_theorem(1,FDC)",
+      "parallel_property_collinear_extend(3,DA,CB,F)",
+      "adjacent_complementary_angle(1,AEB,BEF)",
+      "adjacent_complementary_angle(1,AFC,CFD)"
+    ]
+  }
 }

@@ -27,11 +27,29 @@
   "goal_cdl": "Value(PerimeterOfCircle(P))",
   "problem_answer": "40.841",
   "theorem_seqs": [
-    "diameter_of_circle_property_right_angle(DAB,P)",
-    "right_triangle_judgment_angle(DAB)",
-    "right_triangle_property_pythagorean(DAB)",
-    "diameter_of_circle_property_length_equal(BD,P)",
-    "circle_property_length_of_radius_and_diameter(P)",
-    "circle_perimeter_formula(P)"
-  ]
+    "diameter_of_circle_property_right_angle(1,DAB,P)",
+    "right_triangle_judgment_angle(1,DAB)",
+    "right_triangle_property_pythagorean(1,DAB)",
+    "diameter_of_circle_property_length_equal(1,BD,P)",
+    "circle_property_length_of_radius_and_diameter(1,P)",
+    "circle_perimeter_formula(1,P)"
+  ],
+  "theorem_seq_dag": {
+    "diameter_of_circle_property_right_angle(1,DAB,P)": [
+      "right_triangle_judgment_angle(1,DAB)"
+    ],
+    "right_triangle_judgment_angle(1,DAB)": [
+      "right_triangle_property_pythagorean(1,DAB)"
+    ],
+    "right_triangle_property_pythagorean(1,DAB)": [],
+    "diameter_of_circle_property_length_equal(1,BD,P)": [],
+    "circle_property_length_of_radius_and_diameter(1,P)": [],
+    "circle_perimeter_formula(1,P)": [],
+    "START": [
+      "diameter_of_circle_property_right_angle(1,DAB,P)",
+      "diameter_of_circle_property_length_equal(1,BD,P)",
+      "circle_property_length_of_radius_and_diameter(1,P)",
+      "circle_perimeter_formula(1,P)"
+    ]
+  }
 }

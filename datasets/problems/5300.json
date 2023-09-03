@@ -21,10 +21,27 @@
   "goal_cdl": "Value(MeasureOfAngle(ABC))",
   "problem_answer": "70",
   "theorem_seqs": [
-    "congruent_arc_judgment_length_equal(OAB,OCA)",
-    "congruent_arc_property_chord_equal(OAB,OCA)",
-    "isosceles_triangle_judgment_line_equal(ABC)",
-    "isosceles_triangle_property_angle_equal(ABC)",
-    "triangle_property_angle_sum(BCA)"
-  ]
+    "congruent_arc_judgment_length_equal(1,OAB,OCA)",
+    "congruent_arc_property_chord_equal(1,OAB,OCA)",
+    "isosceles_triangle_judgment_line_equal(1,ABC)",
+    "isosceles_triangle_property_angle_equal(1,ABC)",
+    "triangle_property_angle_sum(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_length_equal(1,OAB,OCA)": [
+      "congruent_arc_property_chord_equal(1,OAB,OCA)"
+    ],
+    "congruent_arc_property_chord_equal(1,OAB,OCA)": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABC)": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABC)": [],
+    "triangle_property_angle_sum(1,BCA)": [],
+    "START": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCA)",
+      "triangle_property_angle_sum(1,BCA)"
+    ]
+  }
 }

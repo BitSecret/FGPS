@@ -32,9 +32,22 @@
   "goal_cdl": "Value(MeasureOfAngle(DAC))",
   "problem_answer": "35",
   "theorem_seqs": [
-    "arc_property_center_angle(ODA,O)",
-    "arc_property_circumference_angle_external(OCD,A)",
-    "congruent_arc_judgment_length_equal(OCD,ODA)",
-    "congruent_arc_property_measure_equal(OCD,ODA)"
-  ]
+    "arc_property_center_angle(1,ODA,O)",
+    "arc_property_circumference_angle_external(1,OCD,A)",
+    "congruent_arc_judgment_length_equal(1,OCD,ODA)",
+    "congruent_arc_property_measure_equal(1,OCD,ODA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,ODA,O)": [],
+    "arc_property_circumference_angle_external(1,OCD,A)": [],
+    "congruent_arc_judgment_length_equal(1,OCD,ODA)": [
+      "congruent_arc_property_measure_equal(1,OCD,ODA)"
+    ],
+    "congruent_arc_property_measure_equal(1,OCD,ODA)": [],
+    "START": [
+      "arc_property_center_angle(1,ODA,O)",
+      "arc_property_circumference_angle_external(1,OCD,A)",
+      "congruent_arc_judgment_length_equal(1,OCD,ODA)"
+    ]
+  }
 }

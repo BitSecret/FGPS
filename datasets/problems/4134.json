@@ -21,15 +21,43 @@
   "goal_cdl": "Value(Cos(MeasureOfAngle(BCD)))",
   "problem_answer": "4/5",
   "theorem_seqs": [
-    "line_addition(AD,DB)",
-    "adjacent_complementary_angle(ADC,CDB)",
-    "right_triangle_judgment_angle(ADC)",
-    "right_triangle_judgment_angle(CDB)",
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(ADC)",
-    "right_triangle_property_pythagorean(CDB)",
-    "right_triangle_property_pythagorean(BCA)",
-    "sine_theorem(CDB)",
-    "sine_theorem(DBC)"
-  ]
+    "line_addition(1,AD,DB)",
+    "adjacent_complementary_angle(1,ADC,CDB)",
+    "right_triangle_judgment_angle(1,ADC)",
+    "right_triangle_judgment_angle(1,CDB)",
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,ADC)",
+    "right_triangle_property_pythagorean(1,CDB)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "sine_theorem(1,CDB)",
+    "sine_theorem(1,DBC)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AD,DB)": [],
+    "adjacent_complementary_angle(1,ADC,CDB)": [
+      "right_triangle_judgment_angle(1,ADC)"
+    ],
+    "right_triangle_judgment_angle(1,ADC)": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ],
+    "right_triangle_judgment_angle(1,CDB)": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ],
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,ADC)": [],
+    "right_triangle_property_pythagorean(1,CDB)": [],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "sine_theorem(1,CDB)": [],
+    "sine_theorem(1,DBC)": [],
+    "START": [
+      "line_addition(1,AD,DB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "sine_theorem(1,CDB)",
+      "sine_theorem(1,DBC)"
+    ]
+  }
 }

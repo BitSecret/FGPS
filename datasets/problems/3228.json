@@ -38,9 +38,25 @@
   "goal_cdl": "Value(MeasureOfAngle(HQN))",
   "problem_answer": "125",
   "theorem_seqs": [
-    "flat_angle(CNQ)",
-    "angle_addition(CNM,MNQ)",
-    "parallel_judgment_corresponding_angle(MP,NQ,E)",
-    "parallel_property_corresponding_angle(QN,PM,H)"
-  ]
+    "flat_angle(1,CNQ)",
+    "angle_addition(1,CNM,MNQ)",
+    "parallel_judgment_corresponding_angle(1,MP,NQ,E)",
+    "parallel_property_corresponding_angle(1,QN,PM,H)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,CNQ)": [
+      "parallel_judgment_corresponding_angle(1,MP,NQ,E)"
+    ],
+    "angle_addition(1,CNM,MNQ)": [
+      "parallel_judgment_corresponding_angle(1,MP,NQ,E)"
+    ],
+    "parallel_judgment_corresponding_angle(1,MP,NQ,E)": [
+      "parallel_property_corresponding_angle(1,QN,PM,H)"
+    ],
+    "parallel_property_corresponding_angle(1,QN,PM,H)": [],
+    "START": [
+      "flat_angle(1,CNQ)",
+      "angle_addition(1,CNM,MNQ)"
+    ]
+  }
 }

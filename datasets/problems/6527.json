@@ -19,9 +19,21 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "14",
   "theorem_seqs": [
-    "triangle_perimeter_formula(ABC)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "triangle_perimeter_formula(1,ABC)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_perimeter_formula(1,ABC)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "triangle_perimeter_formula(1,ABC)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

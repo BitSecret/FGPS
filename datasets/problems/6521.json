@@ -21,9 +21,21 @@
   "goal_cdl": "Value(PerimeterOfTriangle(AEB))",
   "problem_answer": "16",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(EA,AD)",
-    "triangle_perimeter_formula(AEB)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,EA,AD)",
+    "triangle_perimeter_formula(1,AEB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,EA,AD)": [],
+    "triangle_perimeter_formula(1,AEB)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,EA,AD)",
+      "triangle_perimeter_formula(1,AEB)"
+    ]
+  }
 }

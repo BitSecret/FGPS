@@ -22,12 +22,40 @@
   "goal_cdl": "Value(MeasureOfAngle(XWA))",
   "problem_answer": "30",
   "theorem_seqs": [
-    "rectangle_property_diagonal_equal(WYZX)",
-    "line_addition(WA,AZ)",
-    "line_addition(XA,AY)",
-    "parallelogram_property_diagonal_bisection(WYZX,A)",
-    "parallelogram_property_diagonal_bisection(XWYZ,A)",
-    "isosceles_triangle_judgment_line_equal(AXW)",
-    "isosceles_triangle_property_angle_equal(AXW)"
-  ]
+    "rectangle_property_diagonal_equal(1,WYZX)",
+    "line_addition(1,WA,AZ)",
+    "line_addition(1,XA,AY)",
+    "parallelogram_property_diagonal_bisection(1,WYZX,A)",
+    "parallelogram_property_diagonal_bisection(1,XWYZ,A)",
+    "isosceles_triangle_judgment_line_equal(1,AXW)",
+    "isosceles_triangle_property_angle_equal(1,AXW)"
+  ],
+  "theorem_seq_dag": {
+    "rectangle_property_diagonal_equal(1,WYZX)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "line_addition(1,WA,AZ)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "line_addition(1,XA,AY)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,WYZX,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,XWYZ,A)": [
+      "isosceles_triangle_judgment_line_equal(1,AXW)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,AXW)": [
+      "isosceles_triangle_property_angle_equal(1,AXW)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,AXW)": [],
+    "START": [
+      "rectangle_property_diagonal_equal(1,WYZX)",
+      "line_addition(1,WA,AZ)",
+      "line_addition(1,XA,AY)",
+      "parallelogram_property_diagonal_bisection(1,WYZX,A)",
+      "parallelogram_property_diagonal_bisection(1,XWYZ,A)"
+    ]
+  }
 }

@@ -26,9 +26,23 @@
   "goal_cdl": "Value(MeasureOfAngle(MNA))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "angle_addition(BCP,PCN)",
-    "parallel_property_collinear_extend(EG,FD,N)",
-    "parallel_property_collinear_extend(DF,NE,C)",
-    "parallel_property_corresponding_angle(CF,NE,A)"
-  ]
+    "angle_addition(1,BCP,PCN)",
+    "parallel_property_collinear_extend(3,EG,FD,N)",
+    "parallel_property_collinear_extend(3,DF,NE,C)",
+    "parallel_property_corresponding_angle(2,CF,NE,A)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,BCP,PCN)": [],
+    "parallel_property_collinear_extend(3,EG,FD,N)": [
+      "parallel_property_collinear_extend(3,DF,NE,C)"
+    ],
+    "parallel_property_collinear_extend(3,DF,NE,C)": [
+      "parallel_property_corresponding_angle(2,CF,NE,A)"
+    ],
+    "parallel_property_corresponding_angle(2,CF,NE,A)": [],
+    "START": [
+      "angle_addition(1,BCP,PCN)",
+      "parallel_property_collinear_extend(3,EG,FD,N)"
+    ]
+  }
 }

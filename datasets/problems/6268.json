@@ -34,27 +34,92 @@
   "goal_cdl": "Value(MeasureOfAngle(MON))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "arc_property_center_angle(OAM,O)",
-    "arc_property_center_angle(ONM,O)",
-    "arc_property_center_angle(OBC,O)",
-    "arc_property_circumference_angle_external(OBC,A)",
-    "congruent_arc_judgment_length_equal(OAM,OMB)",
-    "congruent_arc_judgment_length_equal(ONA,OCN)",
-    "congruent_arc_property_chord_equal(OAM,OMB)",
-    "congruent_arc_property_chord_equal(ONA,OCN)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OM,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(ON,O)",
-    "congruent_triangle_judgment_sss(OCN,ONA)",
-    "congruent_triangle_judgment_sss(OMB,OAM)",
-    "congruent_triangle_property_angle_equal(OCN,ONA)",
-    "congruent_triangle_property_angle_equal(OMB,OAM)",
-    "angle_addition(AON,NOC)",
-    "angle_addition(BOM,MOA)",
-    "angle_addition(BOA,AOC)",
-    "angle_addition(MOA,AON)",
-    "round_angle(BOC,COB)"
-  ]
+    "arc_property_center_angle(1,OAM,O)",
+    "arc_property_center_angle(1,ONM,O)",
+    "arc_property_center_angle(1,OBC,O)",
+    "arc_property_circumference_angle_external(1,OBC,A)",
+    "congruent_arc_judgment_length_equal(1,OAM,OMB)",
+    "congruent_arc_judgment_length_equal(1,ONA,OCN)",
+    "congruent_arc_property_chord_equal(1,OAM,OMB)",
+    "congruent_arc_property_chord_equal(1,ONA,OCN)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OM,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,ON,O)",
+    "congruent_triangle_judgment_sss(1,OCN,ONA)",
+    "congruent_triangle_judgment_sss(1,OMB,OAM)",
+    "congruent_triangle_property_angle_equal(1,OCN,ONA)",
+    "congruent_triangle_property_angle_equal(1,OMB,OAM)",
+    "angle_addition(1,AON,NOC)",
+    "angle_addition(1,BOM,MOA)",
+    "angle_addition(1,BOA,AOC)",
+    "angle_addition(1,MOA,AON)",
+    "round_angle(1,BOC,COB)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OAM,O)": [],
+    "arc_property_center_angle(1,ONM,O)": [],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "congruent_arc_judgment_length_equal(1,OAM,OMB)": [
+      "congruent_arc_property_chord_equal(1,OAM,OMB)"
+    ],
+    "congruent_arc_judgment_length_equal(1,ONA,OCN)": [
+      "congruent_arc_property_chord_equal(1,ONA,OCN)"
+    ],
+    "congruent_arc_property_chord_equal(1,OAM,OMB)": [
+      "congruent_triangle_judgment_sss(1,OMB,OAM)"
+    ],
+    "congruent_arc_property_chord_equal(1,ONA,OCN)": [
+      "congruent_triangle_judgment_sss(1,OCN,ONA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "congruent_triangle_judgment_sss(1,OCN,ONA)",
+      "congruent_triangle_judgment_sss(1,OMB,OAM)"
+    ],
+    "radius_of_circle_property_length_equal(1,OM,O)": [
+      "congruent_triangle_judgment_sss(1,OMB,OAM)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "congruent_triangle_judgment_sss(1,OMB,OAM)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "congruent_triangle_judgment_sss(1,OCN,ONA)"
+    ],
+    "radius_of_circle_property_length_equal(1,ON,O)": [
+      "congruent_triangle_judgment_sss(1,OCN,ONA)"
+    ],
+    "congruent_triangle_judgment_sss(1,OCN,ONA)": [
+      "congruent_triangle_property_angle_equal(1,OCN,ONA)"
+    ],
+    "congruent_triangle_judgment_sss(1,OMB,OAM)": [
+      "congruent_triangle_property_angle_equal(1,OMB,OAM)"
+    ],
+    "congruent_triangle_property_angle_equal(1,OCN,ONA)": [],
+    "congruent_triangle_property_angle_equal(1,OMB,OAM)": [],
+    "angle_addition(1,AON,NOC)": [],
+    "angle_addition(1,BOM,MOA)": [],
+    "angle_addition(1,BOA,AOC)": [],
+    "angle_addition(1,MOA,AON)": [],
+    "round_angle(1,BOC,COB)": [],
+    "START": [
+      "arc_property_center_angle(1,OAM,O)",
+      "arc_property_center_angle(1,ONM,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "congruent_arc_judgment_length_equal(1,OAM,OMB)",
+      "congruent_arc_judgment_length_equal(1,ONA,OCN)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OM,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,ON,O)",
+      "angle_addition(1,AON,NOC)",
+      "angle_addition(1,BOM,MOA)",
+      "angle_addition(1,BOA,AOC)",
+      "angle_addition(1,MOA,AON)",
+      "round_angle(1,BOC,COB)"
+    ]
+  }
 }

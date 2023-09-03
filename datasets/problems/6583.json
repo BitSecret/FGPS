@@ -26,20 +26,64 @@
   "goal_cdl": "Value(AreaOfTriangle(ABE))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,AB,M)",
-    "parallel_property_alternate_interior_angle(MC,AB)",
-    "isosceles_triangle_judgment_angle_equal(CMB)",
-    "line_addition(DM,MC)",
-    "parallelogram_property_opposite_line_equal(DABC)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_area_formula_sine(DABC)",
-    "parallel_property_ipsilateral_internal_angle(AD,BC)",
-    "cosine_theorem(BCA)",
-    "similar_triangle_judgment_aa(EAB,ECM)",
-    "similar_triangle_property_line_ratio(EAB,ECM)",
-    "similar_triangle_property_line_ratio(BEA,MEC)",
-    "line_addition(AE,EC)",
-    "cosine_theorem(ABC)",
-    "triangle_area_formula_sine(ABE)"
-  ]
+    "parallel_property_collinear_extend(3,DC,AB,M)",
+    "parallel_property_alternate_interior_angle(1,MC,AB)",
+    "parallel_property_alternate_interior_angle(2,MC,AB)",
+    "isosceles_triangle_judgment_angle_equal(1,CMB)",
+    "line_addition(1,DM,MC)",
+    "parallelogram_property_opposite_line_equal(1,DABC)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_area_formula_sine(1,DABC)",
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+    "cosine_theorem(1,BCA)",
+    "similar_triangle_judgment_aa(1,EAB,ECM)",
+    "similar_triangle_property_line_ratio(1,EAB,ECM)",
+    "similar_triangle_property_line_ratio(1,BEA,MEC)",
+    "line_addition(1,AE,EC)",
+    "cosine_theorem(1,ABC)",
+    "triangle_area_formula_sine(1,ABE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DC,AB,M)": [
+      "parallel_property_alternate_interior_angle(1,MC,AB)",
+      "parallel_property_alternate_interior_angle(2,MC,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(1,MC,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,CMB)",
+      "similar_triangle_judgment_aa(1,EAB,ECM)"
+    ],
+    "parallel_property_alternate_interior_angle(2,MC,AB)": [
+      "similar_triangle_judgment_aa(1,EAB,ECM)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,CMB)": [
+      "solve_eq_26)"
+    ],
+    "line_addition(1,DM,MC)": [],
+    "parallelogram_property_opposite_line_equal(1,DABC)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_area_formula_sine(1,DABC)": [],
+    "parallel_property_ipsilateral_internal_angle(1,AD,BC)": [],
+    "cosine_theorem(1,BCA)": [],
+    "similar_triangle_judgment_aa(1,EAB,ECM)": [
+      "similar_triangle_property_line_ratio(1,EAB,ECM)",
+      "similar_triangle_property_line_ratio(1,BEA,MEC)"
+    ],
+    "similar_triangle_property_line_ratio(1,EAB,ECM)": [],
+    "similar_triangle_property_line_ratio(1,BEA,MEC)": [],
+    "line_addition(1,AE,EC)": [],
+    "cosine_theorem(1,ABC)": [],
+    "triangle_area_formula_sine(1,ABE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DC,AB,M)",
+      "line_addition(1,DM,MC)",
+      "parallelogram_property_opposite_line_equal(1,DABC)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_area_formula_sine(1,DABC)",
+      "parallel_property_ipsilateral_internal_angle(1,AD,BC)",
+      "cosine_theorem(1,BCA)",
+      "line_addition(1,AE,EC)",
+      "cosine_theorem(1,ABC)",
+      "triangle_area_formula_sine(1,ABE)"
+    ]
+  }
 }

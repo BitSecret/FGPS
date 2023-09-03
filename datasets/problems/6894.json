@@ -27,18 +27,55 @@
   "goal_cdl": "Value(MeasureOfAngle(OAC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "isosceles_triangle_judgment_line_equal(OAC)",
-    "isosceles_triangle_judgment_line_equal(OCD)",
-    "isosceles_triangle_property_angle_equal(OAC)",
-    "isosceles_triangle_property_angle_equal(OCD)",
-    "triangle_property_angle_sum(OAC)",
-    "triangle_property_angle_sum(EOC)",
-    "triangle_property_angle_sum(DOE)",
-    "triangle_property_angle_sum(OCD)",
-    "flat_angle(EOA)",
-    "angle_addition(EOC,COA)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "isosceles_triangle_judgment_line_equal(1,OAC)",
+    "isosceles_triangle_judgment_line_equal(1,OCD)",
+    "isosceles_triangle_property_angle_equal(1,OAC)",
+    "isosceles_triangle_property_angle_equal(1,OCD)",
+    "triangle_property_angle_sum(1,OAC)",
+    "triangle_property_angle_sum(1,EOC)",
+    "triangle_property_angle_sum(1,DOE)",
+    "triangle_property_angle_sum(1,OCD)",
+    "flat_angle(1,EOA)",
+    "angle_addition(1,EOC,COA)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAC)"
+    ],
+    "radius_of_circle_property_length_equal(1,OC,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAC)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OAC)": [
+      "isosceles_triangle_property_angle_equal(1,OAC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OCD)": [
+      "isosceles_triangle_property_angle_equal(1,OCD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OAC)": [],
+    "isosceles_triangle_property_angle_equal(1,OCD)": [],
+    "triangle_property_angle_sum(1,OAC)": [],
+    "triangle_property_angle_sum(1,EOC)": [],
+    "triangle_property_angle_sum(1,DOE)": [],
+    "triangle_property_angle_sum(1,OCD)": [],
+    "flat_angle(1,EOA)": [],
+    "angle_addition(1,EOC,COA)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "triangle_property_angle_sum(1,OAC)",
+      "triangle_property_angle_sum(1,EOC)",
+      "triangle_property_angle_sum(1,DOE)",
+      "triangle_property_angle_sum(1,OCD)",
+      "flat_angle(1,EOA)",
+      "angle_addition(1,EOC,COA)"
+    ]
+  }
 }

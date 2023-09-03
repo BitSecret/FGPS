@@ -24,14 +24,43 @@
   "goal_cdl": "Value(LengthOfLine(CE))",
   "problem_answer": "3",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,F)",
-    "parallel_property_alternate_interior_angle(AD,BF)",
-    "isosceles_triangle_judgment_angle_equal(BFA)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "line_addition(BF,FC)",
-    "parallel_property_collinear_extend(DC,AB,E)",
-    "parallel_property_alternate_interior_angle(DE,AB)",
-    "vertical_angle(BFA,CFE)",
-    "isosceles_triangle_judgment_angle_equal(CFE)"
-  ]
+    "parallel_property_collinear_extend(3,CB,DA,F)",
+    "parallel_property_alternate_interior_angle(1,AD,BF)",
+    "isosceles_triangle_judgment_angle_equal(1,BFA)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "line_addition(1,BF,FC)",
+    "parallel_property_collinear_extend(2,DC,AB,E)",
+    "parallel_property_alternate_interior_angle(2,DE,AB)",
+    "vertical_angle(1,BFA,CFE)",
+    "isosceles_triangle_judgment_angle_equal(1,CFE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,CB,DA,F)": [
+      "parallel_property_alternate_interior_angle(1,AD,BF)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AD,BF)": [
+      "isosceles_triangle_judgment_angle_equal(1,BFA)",
+      "isosceles_triangle_judgment_angle_equal(1,CFE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BFA)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "line_addition(1,BF,FC)": [],
+    "parallel_property_collinear_extend(2,DC,AB,E)": [
+      "parallel_property_alternate_interior_angle(2,DE,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(2,DE,AB)": [
+      "isosceles_triangle_judgment_angle_equal(1,CFE)"
+    ],
+    "vertical_angle(1,BFA,CFE)": [
+      "isosceles_triangle_judgment_angle_equal(1,CFE)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,CFE)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,CB,DA,F)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "line_addition(1,BF,FC)",
+      "parallel_property_collinear_extend(2,DC,AB,E)",
+      "vertical_angle(1,BFA,CFE)"
+    ]
+  }
 }

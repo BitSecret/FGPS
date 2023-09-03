@@ -19,7 +19,16 @@
   "goal_cdl": "Value(LengthOfLine(AD))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_aas(CDA,CAB)",
-    "mirror_congruent_triangle_property_line_equal(CDA,CAB)"
-  ]
+    "mirror_congruent_triangle_judgment_aas(3,CDA,CAB)",
+    "mirror_congruent_triangle_property_line_equal(1,CDA,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_aas(3,CDA,CAB)": [
+      "mirror_congruent_triangle_property_line_equal(1,CDA,CAB)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,CDA,CAB)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_aas(3,CDA,CAB)"
+    ]
+  }
 }

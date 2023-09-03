@@ -23,12 +23,37 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(OCAB))",
   "problem_answer": "164.31",
   "theorem_seqs": [
-    "parallelogram_judgment_equal_and_equal(OCAB)",
-    "flat_angle(CDA)",
-    "angle_addition(CDO,ODA)",
-    "right_triangle_judgment_angle(CDO)",
-    "right_triangle_property_pythagorean(CDO)",
-    "altitude_of_quadrilateral_judgment_left_vertex(OD,OCAB)",
-    "parallelogram_area_formula_common(OCAB)"
-  ]
+    "parallelogram_judgment_equal_and_equal(1,OCAB)",
+    "flat_angle(1,CDA)",
+    "angle_addition(1,CDO,ODA)",
+    "right_triangle_judgment_angle(1,CDO)",
+    "right_triangle_property_pythagorean(1,CDO)",
+    "altitude_of_quadrilateral_judgment_left_vertex(1,OD,OCAB)",
+    "parallelogram_area_formula_common(1,OCAB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_judgment_equal_and_equal(1,OCAB)": [
+      "altitude_of_quadrilateral_judgment_left_vertex(1,OD,OCAB)",
+      "parallelogram_area_formula_common(1,OCAB)"
+    ],
+    "flat_angle(1,CDA)": [
+      "right_triangle_judgment_angle(1,CDO)",
+      "altitude_of_quadrilateral_judgment_left_vertex(1,OD,OCAB)"
+    ],
+    "angle_addition(1,CDO,ODA)": [
+      "right_triangle_judgment_angle(1,CDO)",
+      "altitude_of_quadrilateral_judgment_left_vertex(1,OD,OCAB)"
+    ],
+    "right_triangle_judgment_angle(1,CDO)": [
+      "right_triangle_property_pythagorean(1,CDO)"
+    ],
+    "right_triangle_property_pythagorean(1,CDO)": [],
+    "altitude_of_quadrilateral_judgment_left_vertex(1,OD,OCAB)": [],
+    "parallelogram_area_formula_common(1,OCAB)": [],
+    "START": [
+      "parallelogram_judgment_equal_and_equal(1,OCAB)",
+      "flat_angle(1,CDA)",
+      "angle_addition(1,CDO,ODA)"
+    ]
+  }
 }

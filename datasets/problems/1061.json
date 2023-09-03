@@ -24,10 +24,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "3",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(UTS,RVT)",
-    "line_addition(VU,UT)",
-    "line_addition(RS,ST)",
-    "mirror_similar_triangle_property_line_ratio(UTS,RVT)",
-    "mirror_similar_triangle_property_line_ratio(SUT,VTR)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,UTS,RVT)",
+    "line_addition(1,VU,UT)",
+    "line_addition(1,RS,ST)",
+    "mirror_similar_triangle_property_line_ratio(1,UTS,RVT)",
+    "mirror_similar_triangle_property_line_ratio(1,SUT,VTR)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,UTS,RVT)": [
+      "mirror_similar_triangle_property_line_ratio(1,UTS,RVT)",
+      "mirror_similar_triangle_property_line_ratio(1,SUT,VTR)"
+    ],
+    "line_addition(1,VU,UT)": [],
+    "line_addition(1,RS,ST)": [],
+    "mirror_similar_triangle_property_line_ratio(1,UTS,RVT)": [],
+    "mirror_similar_triangle_property_line_ratio(1,SUT,VTR)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,UTS,RVT)",
+      "line_addition(1,VU,UT)",
+      "line_addition(1,RS,ST)"
+    ]
+  }
 }

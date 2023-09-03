@@ -24,9 +24,23 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "2",
   "theorem_seqs": [
-    "vertical_angle(BEC,DEA)",
-    "similar_triangle_judgment_aa(ADE,CBE)",
-    "similar_triangle_property_line_ratio(ADE,CBE)",
-    "similar_triangle_property_line_ratio(EAD,ECB)"
-  ]
+    "vertical_angle(1,BEC,DEA)",
+    "similar_triangle_judgment_aa(1,ADE,CBE)",
+    "similar_triangle_property_line_ratio(1,ADE,CBE)",
+    "similar_triangle_property_line_ratio(1,EAD,ECB)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,BEC,DEA)": [
+      "similar_triangle_judgment_aa(1,ADE,CBE)"
+    ],
+    "similar_triangle_judgment_aa(1,ADE,CBE)": [
+      "similar_triangle_property_line_ratio(1,ADE,CBE)",
+      "similar_triangle_property_line_ratio(1,EAD,ECB)"
+    ],
+    "similar_triangle_property_line_ratio(1,ADE,CBE)": [],
+    "similar_triangle_property_line_ratio(1,EAD,ECB)": [],
+    "START": [
+      "vertical_angle(1,BEC,DEA)"
+    ]
+  }
 }

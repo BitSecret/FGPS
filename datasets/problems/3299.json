@@ -24,10 +24,25 @@
   "goal_cdl": "Value(MeasureOfAngle(CDE))",
   "problem_answer": "150",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(BEA)",
-    "isosceles_triangle_property_angle_equal(BEA)",
-    "parallel_property_alternate_interior_angle(AE,BC)",
-    "arc_property_center_angle(BCE,B)",
-    "arc_property_circumference_angle_internal(BCE,D)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,BEA)",
+    "isosceles_triangle_property_angle_equal(1,BEA)",
+    "parallel_property_alternate_interior_angle(2,AE,BC)",
+    "arc_property_center_angle(1,BCE,B)",
+    "arc_property_circumference_angle_internal(1,BCE,D)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,BEA)": [
+      "isosceles_triangle_property_angle_equal(1,BEA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BEA)": [],
+    "parallel_property_alternate_interior_angle(2,AE,BC)": [],
+    "arc_property_center_angle(1,BCE,B)": [],
+    "arc_property_circumference_angle_internal(1,BCE,D)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,BEA)",
+      "parallel_property_alternate_interior_angle(2,AE,BC)",
+      "arc_property_center_angle(1,BCE,B)",
+      "arc_property_circumference_angle_internal(1,BCE,D)"
+    ]
+  }
 }

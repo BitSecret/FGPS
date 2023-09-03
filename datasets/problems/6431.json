@@ -25,11 +25,33 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "line_addition(AO,OC)",
-    "line_addition(BE,EC)",
-    "similar_triangle_judgment_sas(CAB,COE)",
-    "similar_triangle_property_line_ratio(BCA,ECO)",
-    "similar_triangle_property_line_ratio(CAB,COE)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "line_addition(1,AO,OC)",
+    "line_addition(1,BE,EC)",
+    "similar_triangle_judgment_sas(1,CAB,COE)",
+    "similar_triangle_property_line_ratio(1,BCA,ECO)",
+    "similar_triangle_property_line_ratio(1,CAB,COE)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "similar_triangle_judgment_sas(1,CAB,COE)"
+    ],
+    "line_addition(1,AO,OC)": [
+      "similar_triangle_judgment_sas(1,CAB,COE)"
+    ],
+    "line_addition(1,BE,EC)": [
+      "similar_triangle_judgment_sas(1,CAB,COE)"
+    ],
+    "similar_triangle_judgment_sas(1,CAB,COE)": [
+      "similar_triangle_property_line_ratio(1,CAB,COE)",
+      "similar_triangle_property_line_ratio(1,BCA,ECO)"
+    ],
+    "similar_triangle_property_line_ratio(1,BCA,ECO)": [],
+    "similar_triangle_property_line_ratio(1,CAB,COE)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "line_addition(1,AO,OC)",
+      "line_addition(1,BE,EC)"
+    ]
+  }
 }

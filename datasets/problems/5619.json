@@ -21,8 +21,19 @@
   "goal_cdl": "Value(Sub(AreaOfTriangle(ABC),AreaOfTriangle(ADC)))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "mirror_similar_triangle_judgment_aa(CAB,DCA)",
-    "mirror_similar_triangle_property_line_ratio(BCA,CAD)",
-    "mirror_similar_triangle_property_area_square_ratio(BCA,CAD)"
-  ]
+    "mirror_similar_triangle_judgment_aa(1,CAB,DCA)",
+    "mirror_similar_triangle_property_line_ratio(1,BCA,CAD)",
+    "mirror_similar_triangle_property_area_square_ratio(1,BCA,CAD)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_judgment_aa(1,CAB,DCA)": [
+      "mirror_similar_triangle_property_line_ratio(1,BCA,CAD)",
+      "mirror_similar_triangle_property_area_square_ratio(1,BCA,CAD)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,BCA,CAD)": [],
+    "mirror_similar_triangle_property_area_square_ratio(1,BCA,CAD)": [],
+    "START": [
+      "mirror_similar_triangle_judgment_aa(1,CAB,DCA)"
+    ]
+  }
 }

@@ -20,12 +20,32 @@
   "goal_cdl": "Value(MeasureOfAngle(KJH))",
   "problem_answer": "34.5",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(GKH)",
-    "isosceles_triangle_property_angle_equal(GKH)",
-    "triangle_property_angle_sum(GKH)",
-    "adjacent_complementary_angle(GKH,HKJ)",
-    "isosceles_triangle_judgment_line_equal(KJH)",
-    "isosceles_triangle_property_angle_equal(KJH)",
-    "triangle_property_angle_sum(KJH)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,GKH)",
+    "isosceles_triangle_property_angle_equal(1,GKH)",
+    "triangle_property_angle_sum(1,GKH)",
+    "adjacent_complementary_angle(1,GKH,HKJ)",
+    "isosceles_triangle_judgment_line_equal(1,KJH)",
+    "isosceles_triangle_property_angle_equal(1,KJH)",
+    "triangle_property_angle_sum(1,KJH)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,GKH)": [
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,GKH)": [],
+    "triangle_property_angle_sum(1,GKH)": [],
+    "adjacent_complementary_angle(1,GKH,HKJ)": [],
+    "isosceles_triangle_judgment_line_equal(1,KJH)": [
+      "isosceles_triangle_property_angle_equal(1,KJH)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,KJH)": [],
+    "triangle_property_angle_sum(1,KJH)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "triangle_property_angle_sum(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "triangle_property_angle_sum(1,KJH)"
+    ]
+  }
 }

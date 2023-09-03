@@ -26,14 +26,41 @@
   "goal_cdl": "Value(Div(LengthOfLine(AF),LengthOfLine(AC)))",
   "problem_answer": "1/7",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_parallel(HD,CFB)",
-    "parallel_property_collinear_extend(BF,DH,E)",
-    "parallel_property_corresponding_angle(EF,DH,A)",
-    "parallel_property_corresponding_angle(HD,FB,A)",
-    "similar_triangle_judgment_aa(ADH,AEF)",
-    "similar_triangle_property_line_ratio(DHA,EFA)",
-    "similar_triangle_property_line_ratio(HAD,FAE)",
-    "line_addition(AF,FH)",
-    "line_addition(AH,HC)"
-  ]
+    "midsegment_of_triangle_judgment_parallel(2,HD,CFB)",
+    "parallel_property_collinear_extend(3,BF,DH,E)",
+    "parallel_property_corresponding_angle(1,EF,DH,A)",
+    "parallel_property_corresponding_angle(2,HD,FB,A)",
+    "similar_triangle_judgment_aa(1,ADH,AEF)",
+    "similar_triangle_property_line_ratio(1,DHA,EFA)",
+    "similar_triangle_property_line_ratio(1,HAD,FAE)",
+    "line_addition(1,AF,FH)",
+    "line_addition(1,AH,HC)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_parallel(2,HD,CFB)": [],
+    "parallel_property_collinear_extend(3,BF,DH,E)": [
+      "parallel_property_corresponding_angle(1,EF,DH,A)"
+    ],
+    "parallel_property_corresponding_angle(1,EF,DH,A)": [
+      "similar_triangle_judgment_aa(1,ADH,AEF)"
+    ],
+    "parallel_property_corresponding_angle(2,HD,FB,A)": [
+      "similar_triangle_judgment_aa(1,ADH,AEF)"
+    ],
+    "similar_triangle_judgment_aa(1,ADH,AEF)": [
+      "similar_triangle_property_line_ratio(1,DHA,EFA)",
+      "similar_triangle_property_line_ratio(1,HAD,FAE)"
+    ],
+    "similar_triangle_property_line_ratio(1,DHA,EFA)": [],
+    "similar_triangle_property_line_ratio(1,HAD,FAE)": [],
+    "line_addition(1,AF,FH)": [],
+    "line_addition(1,AH,HC)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_parallel(2,HD,CFB)",
+      "parallel_property_collinear_extend(3,BF,DH,E)",
+      "parallel_property_corresponding_angle(2,HD,FB,A)",
+      "line_addition(1,AF,FH)",
+      "line_addition(1,AH,HC)"
+    ]
+  }
 }

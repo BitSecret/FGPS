@@ -24,8 +24,19 @@
   "goal_cdl": "Value(MeasureOfAngle(GCE))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(BC,DE,G)",
-    "angle_addition(FED,DEC)",
-    "parallel_property_alternate_interior_angle(CG,DE)"
-  ]
+    "parallel_property_collinear_extend(2,BC,DE,G)",
+    "angle_addition(1,FED,DEC)",
+    "parallel_property_alternate_interior_angle(1,CG,DE)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,BC,DE,G)": [
+      "parallel_property_alternate_interior_angle(1,CG,DE)"
+    ],
+    "angle_addition(1,FED,DEC)": [],
+    "parallel_property_alternate_interior_angle(1,CG,DE)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,BC,DE,G)",
+      "angle_addition(1,FED,DEC)"
+    ]
+  }
 }

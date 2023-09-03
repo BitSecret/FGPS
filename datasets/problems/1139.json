@@ -24,8 +24,20 @@
   "goal_cdl": "Value(AreaOfTriangle(RST))",
   "problem_answer": "300",
   "theorem_seqs": [
-    "mirror_congruent_triangle_property_line_equal(RST,VTU)",
-    "mirror_congruent_triangle_property_line_equal(TRS,TUV)",
-    "triangle_area_formula_sine(STR)"
-  ]
+    "mirror_congruent_triangle_property_line_equal(1,RST,VTU)",
+    "mirror_congruent_triangle_property_line_equal(1,TRS,TUV)",
+    "triangle_area_formula_sine(1,STR)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_property_line_equal(1,RST,VTU)": [
+      "solve_eq_8)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,TRS,TUV)": [],
+    "triangle_area_formula_sine(1,STR)": [],
+    "START": [
+      "mirror_congruent_triangle_property_line_equal(1,RST,VTU)",
+      "mirror_congruent_triangle_property_line_equal(1,TRS,TUV)",
+      "triangle_area_formula_sine(1,STR)"
+    ]
+  }
 }

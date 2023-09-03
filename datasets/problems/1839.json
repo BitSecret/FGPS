@@ -28,10 +28,30 @@
   "goal_cdl": "Value(LengthOfLine(QR))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(NMRQ,L)",
-    "parallelogram_property_diagonal_bisection(MRQN,L)",
-    "vertical_angle(MLN,QLR)",
-    "congruent_triangle_judgment_sas(LNM,LRQ)",
-    "congruent_triangle_property_line_equal(LNM,LRQ)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,NMRQ,L)",
+    "parallelogram_property_diagonal_bisection(1,MRQN,L)",
+    "vertical_angle(1,MLN,QLR)",
+    "congruent_triangle_judgment_sas(1,LNM,LRQ)",
+    "congruent_triangle_property_line_equal(1,LNM,LRQ)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,NMRQ,L)": [
+      "congruent_triangle_judgment_sas(1,LNM,LRQ)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,MRQN,L)": [
+      "congruent_triangle_judgment_sas(1,LNM,LRQ)"
+    ],
+    "vertical_angle(1,MLN,QLR)": [
+      "congruent_triangle_judgment_sas(1,LNM,LRQ)"
+    ],
+    "congruent_triangle_judgment_sas(1,LNM,LRQ)": [
+      "congruent_triangle_property_line_equal(1,LNM,LRQ)"
+    ],
+    "congruent_triangle_property_line_equal(1,LNM,LRQ)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,NMRQ,L)",
+      "parallelogram_property_diagonal_bisection(1,MRQN,L)",
+      "vertical_angle(1,MLN,QLR)"
+    ]
+  }
 }

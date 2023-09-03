@@ -19,10 +19,28 @@
   "goal_cdl": "Value(LengthOfLine(BD))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "quadrilateral_perimeter_formula(ADCB)",
-    "isosceles_triangle_judgment_line_equal(ADB)",
-    "isosceles_triangle_property_angle_equal(ADB)",
-    "triangle_property_angle_sum(ADB)",
-    "isosceles_triangle_judgment_angle_equal(BAD)"
-  ]
+    "quadrilateral_perimeter_formula(1,ADCB)",
+    "isosceles_triangle_judgment_line_equal(1,ADB)",
+    "isosceles_triangle_property_angle_equal(1,ADB)",
+    "triangle_property_angle_sum(1,ADB)",
+    "isosceles_triangle_judgment_angle_equal(1,BAD)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_perimeter_formula(1,ADCB)": [],
+    "isosceles_triangle_judgment_line_equal(1,ADB)": [
+      "isosceles_triangle_property_angle_equal(1,ADB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ADB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BAD)"
+    ],
+    "triangle_property_angle_sum(1,ADB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BAD)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BAD)": [],
+    "START": [
+      "quadrilateral_perimeter_formula(1,ADCB)",
+      "isosceles_triangle_judgment_line_equal(1,ADB)",
+      "triangle_property_angle_sum(1,ADB)"
+    ]
+  }
 }

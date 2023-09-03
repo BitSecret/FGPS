@@ -22,9 +22,23 @@
   "goal_cdl": "Value(MeasureOfAngle(ECB))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(FA,GD,B)",
-    "parallel_property_collinear_extend(DG,AB,C)",
-    "parallel_property_alternate_interior_angle(CG,AB)",
-    "angle_addition(GCE,ECB)"
-  ]
+    "parallel_property_collinear_extend(3,FA,GD,B)",
+    "parallel_property_collinear_extend(3,DG,AB,C)",
+    "parallel_property_alternate_interior_angle(1,CG,AB)",
+    "angle_addition(1,GCE,ECB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,FA,GD,B)": [
+      "parallel_property_collinear_extend(3,DG,AB,C)"
+    ],
+    "parallel_property_collinear_extend(3,DG,AB,C)": [
+      "parallel_property_alternate_interior_angle(1,CG,AB)"
+    ],
+    "parallel_property_alternate_interior_angle(1,CG,AB)": [],
+    "angle_addition(1,GCE,ECB)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,FA,GD,B)",
+      "angle_addition(1,GCE,ECB)"
+    ]
+  }
 }

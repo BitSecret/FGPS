@@ -27,8 +27,20 @@
   "goal_cdl": "Value(MeasureOfAngle(EFD))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,BA,F)",
-    "parallel_property_collinear_extend(AB,FD,E)",
-    "parallel_property_alternate_interior_angle(AE,FD)"
-  ]
+    "parallel_property_collinear_extend(3,DC,BA,F)",
+    "parallel_property_collinear_extend(3,AB,FD,E)",
+    "parallel_property_alternate_interior_angle(2,AE,FD)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DC,BA,F)": [
+      "parallel_property_collinear_extend(3,AB,FD,E)"
+    ],
+    "parallel_property_collinear_extend(3,AB,FD,E)": [
+      "parallel_property_alternate_interior_angle(2,AE,FD)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,FD)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DC,BA,F)"
+    ]
+  }
 }

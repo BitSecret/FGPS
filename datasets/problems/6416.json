@@ -29,14 +29,42 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABFE))",
   "problem_answer": "15",
   "theorem_seqs": [
-    "line_addition(AE,ED)",
-    "line_addition(EO,OF)",
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "vertical_angle(EOD,FOB)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "congruent_triangle_judgment_aas(EOD,FOB)",
-    "congruent_triangle_property_line_equal(ODE,OBF)",
-    "congruent_triangle_property_line_equal(DEO,BFO)",
-    "quadrilateral_perimeter_formula(ABFE)"
-  ]
+    "line_addition(1,AE,ED)",
+    "line_addition(1,EO,OF)",
+    "parallel_property_alternate_interior_angle(2,AD,BC)",
+    "vertical_angle(1,EOD,FOB)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "congruent_triangle_judgment_aas(2,EOD,FOB)",
+    "congruent_triangle_property_line_equal(1,ODE,OBF)",
+    "congruent_triangle_property_line_equal(1,DEO,BFO)",
+    "quadrilateral_perimeter_formula(1,ABFE)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AE,ED)": [],
+    "line_addition(1,EO,OF)": [],
+    "parallel_property_alternate_interior_angle(2,AD,BC)": [
+      "congruent_triangle_judgment_aas(2,EOD,FOB)"
+    ],
+    "vertical_angle(1,EOD,FOB)": [
+      "congruent_triangle_judgment_aas(2,EOD,FOB)"
+    ],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [
+      "congruent_triangle_judgment_aas(2,EOD,FOB)"
+    ],
+    "congruent_triangle_judgment_aas(2,EOD,FOB)": [
+      "congruent_triangle_property_line_equal(1,ODE,OBF)",
+      "congruent_triangle_property_line_equal(1,DEO,BFO)"
+    ],
+    "congruent_triangle_property_line_equal(1,ODE,OBF)": [],
+    "congruent_triangle_property_line_equal(1,DEO,BFO)": [],
+    "quadrilateral_perimeter_formula(1,ABFE)": [],
+    "START": [
+      "line_addition(1,AE,ED)",
+      "line_addition(1,EO,OF)",
+      "parallel_property_alternate_interior_angle(2,AD,BC)",
+      "vertical_angle(1,EOD,FOB)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "quadrilateral_perimeter_formula(1,ABFE)"
+    ]
+  }
 }

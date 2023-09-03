@@ -21,9 +21,25 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(DEHK))",
   "problem_answer": "64",
   "theorem_seqs": [
-    "parallel_judgment_per_per(KH,DE)",
-    "parallel_judgment_per_per(DK,EH)",
-    "parallelogram_judgment_parallel_and_parallel(DEHK)",
-    "parallelogram_area_formula_sine(DEHK)"
-  ]
+    "parallel_judgment_per_per(1,KH,DE)",
+    "parallel_judgment_per_per(1,DK,EH)",
+    "parallelogram_judgment_parallel_and_parallel(1,DEHK)",
+    "parallelogram_area_formula_sine(1,DEHK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_per_per(1,KH,DE)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DEHK)"
+    ],
+    "parallel_judgment_per_per(1,DK,EH)": [
+      "parallelogram_judgment_parallel_and_parallel(1,DEHK)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,DEHK)": [
+      "parallelogram_area_formula_sine(1,DEHK)"
+    ],
+    "parallelogram_area_formula_sine(1,DEHK)": [],
+    "START": [
+      "parallel_judgment_per_per(1,KH,DE)",
+      "parallel_judgment_per_per(1,DK,EH)"
+    ]
+  }
 }

@@ -22,10 +22,26 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "perpendicular_bisector_property_distance_equal(DE,BC)",
-    "isosceles_triangle_judgment_line_equal(DBC)",
-    "isosceles_triangle_property_angle_equal(DBC)",
-    "triangle_property_angle_sum(ABC)",
-    "angle_addition(ECD,DCA)"
-  ]
+    "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+    "isosceles_triangle_judgment_line_equal(1,DBC)",
+    "isosceles_triangle_property_angle_equal(1,DBC)",
+    "triangle_property_angle_sum(1,ABC)",
+    "angle_addition(1,ECD,DCA)"
+  ],
+  "theorem_seq_dag": {
+    "perpendicular_bisector_property_distance_equal(1,DE,BC)": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,DBC)": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DBC)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "angle_addition(1,ECD,DCA)": [],
+    "START": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,ECD,DCA)"
+    ]
+  }
 }

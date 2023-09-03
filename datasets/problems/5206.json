@@ -32,26 +32,92 @@
   "goal_cdl": "Value(Add(LengthOfLine(CP),LengthOfLine(PD)))",
   "problem_answer": "2*sqrt(2)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(EFP,PFD)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OF,ED)",
-    "perpendicular_bisector_judgment_per_and_mid(PF,ED)",
-    "perpendicular_bisector_property_distance_equal(PF,ED)",
-    "arc_property_center_angle(OBC,O)",
-    "congruent_arc_judgment_length_equal(OBD,ODC)",
-    "congruent_arc_property_measure_equal(OBD,ODC)",
-    "arc_addition_measure(OBD,ODC)",
-    "circle_property_chord_perpendicular_bisect_arc(OED,OFB)",
-    "congruent_arc_judgment_length_equal(OEB,ODC)",
-    "congruent_arc_property_measure_equal(OEB,ODC)",
-    "arc_property_center_angle(OEB,O)",
-    "angle_addition(COP,POE)",
-    "diameter_of_circle_judgment_pass_centre(AOB,O)",
-    "diameter_of_circle_property_length_equal(AB,O)",
-    "circle_property_length_of_radius_and_diameter(O)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "radius_of_circle_property_length_equal(OC,O)",
-    "right_triangle_judgment_angle(COE)",
-    "right_triangle_property_pythagorean(COE)",
-    "line_addition(CP,PE)"
-  ]
+    "adjacent_complementary_angle(1,EFP,PFD)",
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OF,ED)",
+    "perpendicular_bisector_judgment_per_and_mid(1,PF,ED)",
+    "perpendicular_bisector_property_distance_equal(1,PF,ED)",
+    "arc_property_center_angle(1,OBC,O)",
+    "congruent_arc_judgment_length_equal(1,OBD,ODC)",
+    "congruent_arc_property_measure_equal(1,OBD,ODC)",
+    "arc_addition_measure(1,OBD,ODC)",
+    "circle_property_chord_perpendicular_bisect_arc(1,OED,OFB)",
+    "congruent_arc_judgment_length_equal(1,OEB,ODC)",
+    "congruent_arc_property_measure_equal(1,OEB,ODC)",
+    "arc_property_center_angle(1,OEB,O)",
+    "angle_addition(1,COP,POE)",
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+    "diameter_of_circle_property_length_equal(1,AB,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "radius_of_circle_property_length_equal(1,OC,O)",
+    "right_triangle_judgment_angle(1,COE)",
+    "right_triangle_property_pythagorean(1,COE)",
+    "line_addition(1,CP,PE)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,EFP,PFD)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OF,ED)",
+      "perpendicular_bisector_judgment_per_and_mid(1,PF,ED)",
+      "circle_property_chord_perpendicular_bisect_arc(1,OED,OFB)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,O,OF,ED)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,PF,ED)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,PF,ED)": [
+      "perpendicular_bisector_property_distance_equal(1,PF,ED)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,PF,ED)": [],
+    "arc_property_center_angle(1,OBC,O)": [
+      "right_triangle_judgment_angle(1,COE)"
+    ],
+    "congruent_arc_judgment_length_equal(1,OBD,ODC)": [
+      "congruent_arc_property_measure_equal(1,OBD,ODC)"
+    ],
+    "congruent_arc_property_measure_equal(1,OBD,ODC)": [
+      "right_triangle_judgment_angle(1,COE)"
+    ],
+    "arc_addition_measure(1,OBD,ODC)": [
+      "right_triangle_judgment_angle(1,COE)"
+    ],
+    "circle_property_chord_perpendicular_bisect_arc(1,OED,OFB)": [
+      "congruent_arc_judgment_length_equal(1,OEB,ODC)"
+    ],
+    "congruent_arc_judgment_length_equal(1,OEB,ODC)": [
+      "congruent_arc_property_measure_equal(1,OEB,ODC)"
+    ],
+    "congruent_arc_property_measure_equal(1,OEB,ODC)": [
+      "right_triangle_judgment_angle(1,COE)"
+    ],
+    "arc_property_center_angle(1,OEB,O)": [
+      "right_triangle_judgment_angle(1,COE)"
+    ],
+    "angle_addition(1,COP,POE)": [
+      "right_triangle_judgment_angle(1,COE)"
+    ],
+    "diameter_of_circle_judgment_pass_centre(1,AOB,O)": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ],
+    "diameter_of_circle_property_length_equal(1,AB,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "radius_of_circle_property_length_equal(1,OE,O)": [],
+    "radius_of_circle_property_length_equal(1,OC,O)": [],
+    "right_triangle_judgment_angle(1,COE)": [
+      "right_triangle_property_pythagorean(1,COE)"
+    ],
+    "right_triangle_property_pythagorean(1,COE)": [],
+    "line_addition(1,CP,PE)": [],
+    "START": [
+      "adjacent_complementary_angle(1,EFP,PFD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "congruent_arc_judgment_length_equal(1,OBD,ODC)",
+      "arc_addition_measure(1,OBD,ODC)",
+      "arc_property_center_angle(1,OEB,O)",
+      "angle_addition(1,COP,POE)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "line_addition(1,CP,PE)"
+    ]
+  }
 }

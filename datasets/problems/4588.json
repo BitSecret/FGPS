@@ -27,14 +27,40 @@
   "goal_cdl": "Value(LengthOfLine(BC))",
   "problem_answer": "4*sqrt(3)",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OB,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "isosceles_triangle_judgment_line_equal(OBA)",
-    "isosceles_triangle_property_angle_equal(OBA)",
-    "triangle_property_angle_sum(OBA)",
-    "circle_property_chord_perpendicular_bisect_chord(O,OE,BC)",
-    "adjacent_complementary_angle(AEB,BEO)",
-    "sine_theorem(BAE)",
-    "line_addition(BE,EC)"
-  ]
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBA)",
+    "isosceles_triangle_property_angle_equal(1,OBA)",
+    "triangle_property_angle_sum(1,OBA)",
+    "circle_property_chord_perpendicular_bisect_chord(2,O,OE,BC)",
+    "adjacent_complementary_angle(1,AEB,BEO)",
+    "sine_theorem(1,BAE)",
+    "line_addition(1,BE,EC)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OBA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OBA)": [
+      "isosceles_triangle_property_angle_equal(1,OBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBA)": [],
+    "triangle_property_angle_sum(1,OBA)": [],
+    "circle_property_chord_perpendicular_bisect_chord(2,O,OE,BC)": [],
+    "adjacent_complementary_angle(1,AEB,BEO)": [],
+    "sine_theorem(1,BAE)": [],
+    "line_addition(1,BE,EC)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_property_angle_sum(1,OBA)",
+      "circle_property_chord_perpendicular_bisect_chord(2,O,OE,BC)",
+      "adjacent_complementary_angle(1,AEB,BEO)",
+      "sine_theorem(1,BAE)",
+      "line_addition(1,BE,EC)"
+    ]
+  }
 }

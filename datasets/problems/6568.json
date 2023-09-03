@@ -22,10 +22,25 @@
   "goal_cdl": "Value(MeasureOfAngle(BCE))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "parallelogram_property_opposite_angle_equal(ABCD)",
-    "isosceles_triangle_judgment_line_equal(DBC)",
-    "isosceles_triangle_property_angle_equal(DBC)",
-    "adjacent_complementary_angle(DEC,CEB)",
-    "triangle_property_angle_sum(CEB)"
-  ]
+    "parallelogram_property_opposite_angle_equal(1,ABCD)",
+    "isosceles_triangle_judgment_line_equal(1,DBC)",
+    "isosceles_triangle_property_angle_equal(1,DBC)",
+    "adjacent_complementary_angle(1,DEC,CEB)",
+    "triangle_property_angle_sum(1,CEB)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_angle_equal(1,ABCD)": [],
+    "isosceles_triangle_judgment_line_equal(1,DBC)": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,DBC)": [],
+    "adjacent_complementary_angle(1,DEC,CEB)": [],
+    "triangle_property_angle_sum(1,CEB)": [],
+    "START": [
+      "parallelogram_property_opposite_angle_equal(1,ABCD)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "adjacent_complementary_angle(1,DEC,CEB)",
+      "triangle_property_angle_sum(1,CEB)"
+    ]
+  }
 }

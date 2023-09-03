@@ -24,7 +24,16 @@
   "goal_cdl": "Value(MeasureOfAngle(ZYW))",
   "problem_answer": "23",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_hl(YXW,YWZ)",
-    "mirror_congruent_triangle_property_angle_equal(YXW,YWZ)"
-  ]
+    "mirror_congruent_triangle_judgment_hl(1,YXW,YWZ)",
+    "mirror_congruent_triangle_property_angle_equal(1,YXW,YWZ)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_hl(1,YXW,YWZ)": [
+      "mirror_congruent_triangle_property_angle_equal(1,YXW,YWZ)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,YXW,YWZ)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_hl(1,YXW,YWZ)"
+    ]
+  }
 }

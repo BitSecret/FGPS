@@ -24,9 +24,23 @@
   "goal_cdl": "Value(MeasureOfAngle(ANQ))",
   "problem_answer": "43",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(KC,GJ,O)",
-    "parallel_property_collinear_extend(JG,OK,N)",
-    "parallel_property_corresponding_angle(NG,OK,M)",
-    "vertical_angle(GNM,ANQ)"
-  ]
+    "parallel_property_collinear_extend(3,KC,GJ,O)",
+    "parallel_property_collinear_extend(3,JG,OK,N)",
+    "parallel_property_corresponding_angle(2,NG,OK,M)",
+    "vertical_angle(1,GNM,ANQ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,KC,GJ,O)": [
+      "parallel_property_collinear_extend(3,JG,OK,N)"
+    ],
+    "parallel_property_collinear_extend(3,JG,OK,N)": [
+      "parallel_property_corresponding_angle(2,NG,OK,M)"
+    ],
+    "parallel_property_corresponding_angle(2,NG,OK,M)": [],
+    "vertical_angle(1,GNM,ANQ)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,KC,GJ,O)",
+      "vertical_angle(1,GNM,ANQ)"
+    ]
+  }
 }

@@ -29,14 +29,50 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "11",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(PR,P)",
-    "radius_of_circle_property_length_equal(PS,P)",
-    "radius_of_circle_property_length_equal(QT,Q)",
-    "radius_of_circle_property_length_equal(QU,Q)",
-    "arc_property_center_angle(PSR,P)",
-    "arc_property_center_angle(QTU,Q)",
-    "round_angle(TQU,UQT)",
-    "congruent_triangle_judgment_sas(PSR,QUT)",
-    "congruent_triangle_property_line_equal(PSR,QUT)"
-  ]
+    "radius_of_circle_property_length_equal(1,PR,P)",
+    "radius_of_circle_property_length_equal(1,PS,P)",
+    "radius_of_circle_property_length_equal(1,QT,Q)",
+    "radius_of_circle_property_length_equal(1,QU,Q)",
+    "arc_property_center_angle(1,PSR,P)",
+    "arc_property_center_angle(1,QTU,Q)",
+    "round_angle(1,TQU,UQT)",
+    "congruent_triangle_judgment_sas(1,PSR,QUT)",
+    "congruent_triangle_property_line_equal(1,PSR,QUT)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,PR,P)": [
+      "congruent_triangle_judgment_sas(1,PSR,QUT)"
+    ],
+    "radius_of_circle_property_length_equal(1,PS,P)": [
+      "congruent_triangle_judgment_sas(1,PSR,QUT)"
+    ],
+    "radius_of_circle_property_length_equal(1,QT,Q)": [
+      "congruent_triangle_judgment_sas(1,PSR,QUT)"
+    ],
+    "radius_of_circle_property_length_equal(1,QU,Q)": [
+      "congruent_triangle_judgment_sas(1,PSR,QUT)"
+    ],
+    "arc_property_center_angle(1,PSR,P)": [
+      "congruent_triangle_judgment_sas(1,PSR,QUT)"
+    ],
+    "arc_property_center_angle(1,QTU,Q)": [
+      "congruent_triangle_judgment_sas(1,PSR,QUT)"
+    ],
+    "round_angle(1,TQU,UQT)": [
+      "congruent_triangle_judgment_sas(1,PSR,QUT)"
+    ],
+    "congruent_triangle_judgment_sas(1,PSR,QUT)": [
+      "congruent_triangle_property_line_equal(1,PSR,QUT)"
+    ],
+    "congruent_triangle_property_line_equal(1,PSR,QUT)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,PR,P)",
+      "radius_of_circle_property_length_equal(1,PS,P)",
+      "radius_of_circle_property_length_equal(1,QT,Q)",
+      "radius_of_circle_property_length_equal(1,QU,Q)",
+      "arc_property_center_angle(1,PSR,P)",
+      "arc_property_center_angle(1,QTU,Q)",
+      "round_angle(1,TQU,UQT)"
+    ]
+  }
 }

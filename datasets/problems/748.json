@@ -22,8 +22,19 @@
   "goal_cdl": "Value(PerimeterOfTriangle(OCB))",
   "problem_answer": "sqrt(1154)+46",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(OAC)",
-    "right_triangle_property_pythagorean(OAC)",
-    "triangle_perimeter_formula(OCB)"
-  ]
+    "right_triangle_judgment_angle(1,OAC)",
+    "right_triangle_property_pythagorean(1,OAC)",
+    "triangle_perimeter_formula(1,OCB)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,OAC)": [
+      "right_triangle_property_pythagorean(1,OAC)"
+    ],
+    "right_triangle_property_pythagorean(1,OAC)": [],
+    "triangle_perimeter_formula(1,OCB)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,OAC)",
+      "triangle_perimeter_formula(1,OCB)"
+    ]
+  }
 }

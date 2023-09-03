@@ -25,10 +25,25 @@
   "goal_cdl": "Value(MeasureOfAngle(ADC))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(DA,O,O)",
-    "isosceles_triangle_judgment_line_equal(OBA)",
-    "isosceles_triangle_property_angle_equal(OBA)",
-    "angle_addition(BAO,OAD)",
-    "triangle_property_angle_sum(DBA)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,DA,O,O)",
+    "isosceles_triangle_judgment_line_equal(1,OBA)",
+    "isosceles_triangle_property_angle_equal(1,OBA)",
+    "angle_addition(1,BAO,OAD)",
+    "triangle_property_angle_sum(1,DBA)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,DA,O,O)": [],
+    "isosceles_triangle_judgment_line_equal(1,OBA)": [
+      "isosceles_triangle_property_angle_equal(1,OBA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBA)": [],
+    "angle_addition(1,BAO,OAD)": [],
+    "triangle_property_angle_sum(1,DBA)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,DA,O,O)",
+      "isosceles_triangle_judgment_line_equal(1,OBA)",
+      "angle_addition(1,BAO,OAD)",
+      "triangle_property_angle_sum(1,DBA)"
+    ]
+  }
 }

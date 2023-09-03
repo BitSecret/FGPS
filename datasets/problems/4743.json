@@ -27,12 +27,38 @@
   "goal_cdl": "Value(LengthOfLine(CP))",
   "problem_answer": "8.660254037844387",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(PC,O,O)",
-    "isosceles_triangle_judgment_line_equal(OCA)",
-    "isosceles_triangle_property_angle_equal(OCA)",
-    "angle_addition(PCO,OCA)",
-    "cosine_theorem(AOC)",
-    "triangle_property_angle_sum(CAP)",
-    "isosceles_triangle_judgment_angle_equal(CAP)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,PC,O,O)",
+    "isosceles_triangle_judgment_line_equal(1,OCA)",
+    "isosceles_triangle_property_angle_equal(1,OCA)",
+    "angle_addition(1,PCO,OCA)",
+    "cosine_theorem(1,AOC)",
+    "triangle_property_angle_sum(1,CAP)",
+    "isosceles_triangle_judgment_angle_equal(1,CAP)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,PC,O,O)": [
+      "isosceles_triangle_judgment_angle_equal(1,CAP)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OCA)": [
+      "isosceles_triangle_property_angle_equal(1,OCA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OCA)": [
+      "isosceles_triangle_judgment_angle_equal(1,CAP)"
+    ],
+    "angle_addition(1,PCO,OCA)": [
+      "isosceles_triangle_judgment_angle_equal(1,CAP)"
+    ],
+    "cosine_theorem(1,AOC)": [],
+    "triangle_property_angle_sum(1,CAP)": [
+      "isosceles_triangle_judgment_angle_equal(1,CAP)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,CAP)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,PC,O,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCA)",
+      "angle_addition(1,PCO,OCA)",
+      "cosine_theorem(1,AOC)",
+      "triangle_property_angle_sum(1,CAP)"
+    ]
+  }
 }

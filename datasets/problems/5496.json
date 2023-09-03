@@ -21,8 +21,20 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "parallel_judgment_corresponding_angle(DE,AB,C)",
-    "midsegment_of_triangle_judgment_parallel(DE,CAB)",
-    "midsegment_of_triangle_property_length(DE,CAB)"
-  ]
+    "parallel_judgment_corresponding_angle(1,DE,AB,C)",
+    "midsegment_of_triangle_judgment_parallel(1,DE,CAB)",
+    "midsegment_of_triangle_property_length(1,DE,CAB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_corresponding_angle(1,DE,AB,C)": [
+      "midsegment_of_triangle_judgment_parallel(1,DE,CAB)"
+    ],
+    "midsegment_of_triangle_judgment_parallel(1,DE,CAB)": [
+      "midsegment_of_triangle_property_length(1,DE,CAB)"
+    ],
+    "midsegment_of_triangle_property_length(1,DE,CAB)": [],
+    "START": [
+      "parallel_judgment_corresponding_angle(1,DE,AB,C)"
+    ]
+  }
 }

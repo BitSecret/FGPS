@@ -26,13 +26,43 @@
   "goal_cdl": "Value(LengthOfLine(EH))",
   "problem_answer": "7.5",
   "theorem_seqs": [
-    "line_addition(AG,GC)",
-    "line_addition(DH,HF)",
-    "similar_triangle_property_line_ratio(BAC,EDF)",
-    "similar_triangle_property_line_ratio(ACB,DFE)",
-    "similar_triangle_property_angle_equal(CBA,FED)",
-    "similar_triangle_judgment_sas(CBG,FEH)",
-    "similar_triangle_property_line_ratio(CBG,FEH)",
-    "similar_triangle_property_line_ratio(GCB,HFE)"
-  ]
+    "line_addition(1,AG,GC)",
+    "line_addition(1,DH,HF)",
+    "similar_triangle_property_line_ratio(1,BAC,EDF)",
+    "similar_triangle_property_line_ratio(1,ACB,DFE)",
+    "similar_triangle_property_angle_equal(1,CBA,FED)",
+    "similar_triangle_judgment_sas(1,CBG,FEH)",
+    "similar_triangle_property_line_ratio(1,CBG,FEH)",
+    "similar_triangle_property_line_ratio(1,GCB,HFE)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AG,GC)": [
+      "similar_triangle_judgment_sas(1,CBG,FEH)"
+    ],
+    "line_addition(1,DH,HF)": [
+      "similar_triangle_judgment_sas(1,CBG,FEH)"
+    ],
+    "similar_triangle_property_line_ratio(1,BAC,EDF)": [
+      "similar_triangle_judgment_sas(1,CBG,FEH)"
+    ],
+    "similar_triangle_property_line_ratio(1,ACB,DFE)": [
+      "similar_triangle_judgment_sas(1,CBG,FEH)"
+    ],
+    "similar_triangle_property_angle_equal(1,CBA,FED)": [
+      "similar_triangle_judgment_sas(1,CBG,FEH)"
+    ],
+    "similar_triangle_judgment_sas(1,CBG,FEH)": [
+      "similar_triangle_property_line_ratio(1,CBG,FEH)",
+      "similar_triangle_property_line_ratio(1,GCB,HFE)"
+    ],
+    "similar_triangle_property_line_ratio(1,CBG,FEH)": [],
+    "similar_triangle_property_line_ratio(1,GCB,HFE)": [],
+    "START": [
+      "line_addition(1,AG,GC)",
+      "line_addition(1,DH,HF)",
+      "similar_triangle_property_line_ratio(1,BAC,EDF)",
+      "similar_triangle_property_line_ratio(1,ACB,DFE)",
+      "similar_triangle_property_angle_equal(1,CBA,FED)"
+    ]
+  }
 }

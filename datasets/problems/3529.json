@@ -21,8 +21,18 @@
   "goal_cdl": "Value(MeasureOfAngle(BED))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AB,CD)",
-    "triangle_property_angle_sum(ECD)",
-    "adjacent_complementary_angle(BED,DEC)"
-  ]
+    "parallel_property_alternate_interior_angle(2,AB,CD)",
+    "triangle_property_angle_sum(1,ECD)",
+    "adjacent_complementary_angle(1,BED,DEC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,AB,CD)": [],
+    "triangle_property_angle_sum(1,ECD)": [],
+    "adjacent_complementary_angle(1,BED,DEC)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,AB,CD)",
+      "triangle_property_angle_sum(1,ECD)",
+      "adjacent_complementary_angle(1,BED,DEC)"
+    ]
+  }
 }

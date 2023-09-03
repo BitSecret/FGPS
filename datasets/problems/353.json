@@ -36,15 +36,47 @@
   "goal_cdl": "Value(PerimeterOfCircle(O))",
   "problem_answer": "25*pi",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(FE,O,O)",
-    "tangent_of_circle_property_perpendicular(DH,O,O)",
-    "parallel_judgment_ipsilateral_internal_angle(EO,FD)",
-    "parallel_property_collinear_extend(EO,FD,H)",
-    "parallel_judgment_ipsilateral_internal_angle(HD,EF)",
-    "parallelogram_judgment_parallel_and_parallel(EFDH)",
-    "parallelogram_property_opposite_line_equal(FDHE)",
-    "diameter_of_circle_property_length_equal(EH,O)",
-    "circle_property_length_of_radius_and_diameter(O)",
-    "circle_perimeter_formula(O)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,FE,O,O)",
+    "tangent_of_circle_property_perpendicular(2,DH,O,O)",
+    "parallel_judgment_ipsilateral_internal_angle(1,EO,FD)",
+    "parallel_property_collinear_extend(2,EO,FD,H)",
+    "parallel_judgment_ipsilateral_internal_angle(1,HD,EF)",
+    "parallelogram_judgment_parallel_and_parallel(1,EFDH)",
+    "parallelogram_property_opposite_line_equal(1,FDHE)",
+    "diameter_of_circle_property_length_equal(1,EH,O)",
+    "circle_property_length_of_radius_and_diameter(1,O)",
+    "circle_perimeter_formula(1,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,FE,O,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,EO,FD)",
+      "parallel_judgment_ipsilateral_internal_angle(1,HD,EF)"
+    ],
+    "tangent_of_circle_property_perpendicular(2,DH,O,O)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,HD,EF)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,EO,FD)": [
+      "parallel_property_collinear_extend(2,EO,FD,H)"
+    ],
+    "parallel_property_collinear_extend(2,EO,FD,H)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EFDH)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,HD,EF)": [
+      "parallelogram_judgment_parallel_and_parallel(1,EFDH)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,EFDH)": [
+      "parallelogram_property_opposite_line_equal(1,FDHE)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,FDHE)": [],
+    "diameter_of_circle_property_length_equal(1,EH,O)": [],
+    "circle_property_length_of_radius_and_diameter(1,O)": [],
+    "circle_perimeter_formula(1,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,FE,O,O)",
+      "tangent_of_circle_property_perpendicular(2,DH,O,O)",
+      "diameter_of_circle_property_length_equal(1,EH,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "circle_perimeter_formula(1,O)"
+    ]
+  }
 }

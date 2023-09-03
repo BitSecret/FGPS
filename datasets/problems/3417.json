@@ -26,12 +26,34 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DEC))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BED,DEC)",
-    "bisector_of_angle_property_distance_equal(BD,ABE)",
-    "mirror_congruent_triangle_judgment_hl(BED,BDA)",
-    "mirror_congruent_triangle_property_line_equal(DBE,DAB)",
-    "line_addition(BE,EC)",
-    "line_addition(AD,DC)",
-    "triangle_perimeter_formula(DEC)"
-  ]
+    "adjacent_complementary_angle(1,BED,DEC)",
+    "bisector_of_angle_property_distance_equal(1,BD,ABE)",
+    "mirror_congruent_triangle_judgment_hl(1,BED,BDA)",
+    "mirror_congruent_triangle_property_line_equal(1,DBE,DAB)",
+    "line_addition(1,BE,EC)",
+    "line_addition(1,AD,DC)",
+    "triangle_perimeter_formula(1,DEC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BED,DEC)": [
+      "bisector_of_angle_property_distance_equal(1,BD,ABE)",
+      "mirror_congruent_triangle_judgment_hl(1,BED,BDA)"
+    ],
+    "bisector_of_angle_property_distance_equal(1,BD,ABE)": [
+      "mirror_congruent_triangle_judgment_hl(1,BED,BDA)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,BED,BDA)": [
+      "mirror_congruent_triangle_property_line_equal(1,DBE,DAB)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,DBE,DAB)": [],
+    "line_addition(1,BE,EC)": [],
+    "line_addition(1,AD,DC)": [],
+    "triangle_perimeter_formula(1,DEC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BED,DEC)",
+      "line_addition(1,BE,EC)",
+      "line_addition(1,AD,DC)",
+      "triangle_perimeter_formula(1,DEC)"
+    ]
+  }
 }

@@ -23,8 +23,18 @@
   "goal_cdl": "Value(MeasureOfAngle(QPB))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "triangle_property_angle_sum(QOP)",
-    "parallel_property_corresponding_angle(QR,OP,A)",
-    "adjacent_complementary_angle(OPQ,QPB)"
-  ]
+    "triangle_property_angle_sum(1,QOP)",
+    "parallel_property_corresponding_angle(1,QR,OP,A)",
+    "adjacent_complementary_angle(1,OPQ,QPB)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_property_angle_sum(1,QOP)": [],
+    "parallel_property_corresponding_angle(1,QR,OP,A)": [],
+    "adjacent_complementary_angle(1,OPQ,QPB)": [],
+    "START": [
+      "triangle_property_angle_sum(1,QOP)",
+      "parallel_property_corresponding_angle(1,QR,OP,A)",
+      "adjacent_complementary_angle(1,OPQ,QPB)"
+    ]
+  }
 }

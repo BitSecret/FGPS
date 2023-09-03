@@ -28,14 +28,40 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "adjacent_complementary_angle(AOM,MOC)",
-    "mirror_congruent_triangle_judgment_sas(OMA,OCM)",
-    "mirror_congruent_triangle_property_line_equal(OMA,OCM)",
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "triangle_perimeter_formula(CDM)",
-    "line_addition(AM,MD)",
-    "quadrilateral_perimeter_formula(ABCD)"
-  ]
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "adjacent_complementary_angle(1,AOM,MOC)",
+    "mirror_congruent_triangle_judgment_sas(1,OMA,OCM)",
+    "mirror_congruent_triangle_property_line_equal(1,OMA,OCM)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "triangle_perimeter_formula(1,CDM)",
+    "line_addition(1,AM,MD)",
+    "quadrilateral_perimeter_formula(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "mirror_congruent_triangle_judgment_sas(1,OMA,OCM)"
+    ],
+    "adjacent_complementary_angle(1,AOM,MOC)": [
+      "mirror_congruent_triangle_judgment_sas(1,OMA,OCM)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,OMA,OCM)": [
+      "mirror_congruent_triangle_property_line_equal(1,OMA,OCM)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,OMA,OCM)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "triangle_perimeter_formula(1,CDM)": [],
+    "line_addition(1,AM,MD)": [],
+    "quadrilateral_perimeter_formula(1,ABCD)": [],
+    "START": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "adjacent_complementary_angle(1,AOM,MOC)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_perimeter_formula(1,CDM)",
+      "line_addition(1,AM,MD)",
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  }
 }

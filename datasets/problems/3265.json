@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(CFE))",
   "problem_answer": "110",
   "theorem_seqs": [
-    "vertical_angle(GEB,FEA)",
-    "parallel_property_collinear_extend(AB,CD,E)",
-    "parallel_property_collinear_extend(DC,EA,F)",
-    "parallel_property_ipsilateral_internal_angle(FC,EA)"
-  ]
+    "vertical_angle(1,GEB,FEA)",
+    "parallel_property_collinear_extend(3,AB,CD,E)",
+    "parallel_property_collinear_extend(3,DC,EA,F)",
+    "parallel_property_ipsilateral_internal_angle(1,FC,EA)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,GEB,FEA)": [],
+    "parallel_property_collinear_extend(3,AB,CD,E)": [
+      "parallel_property_collinear_extend(3,DC,EA,F)"
+    ],
+    "parallel_property_collinear_extend(3,DC,EA,F)": [
+      "parallel_property_ipsilateral_internal_angle(1,FC,EA)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,FC,EA)": [],
+    "START": [
+      "vertical_angle(1,GEB,FEA)",
+      "parallel_property_collinear_extend(3,AB,CD,E)"
+    ]
+  }
 }

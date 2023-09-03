@@ -21,9 +21,22 @@
   "goal_cdl": "Value(MeasureOfAngle(AED))",
   "problem_answer": "115",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,BA,E)",
-    "parallel_property_alternate_interior_angle(EC,BA)",
-    "triangle_property_angle_sum(ACE)",
-    "adjacent_complementary_angle(CEA,AED)"
-  ]
+    "parallel_property_collinear_extend(3,DC,BA,E)",
+    "parallel_property_alternate_interior_angle(1,EC,BA)",
+    "triangle_property_angle_sum(1,ACE)",
+    "adjacent_complementary_angle(1,CEA,AED)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DC,BA,E)": [
+      "parallel_property_alternate_interior_angle(1,EC,BA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,EC,BA)": [],
+    "triangle_property_angle_sum(1,ACE)": [],
+    "adjacent_complementary_angle(1,CEA,AED)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DC,BA,E)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AED)"
+    ]
+  }
 }

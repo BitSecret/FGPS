@@ -21,11 +21,27 @@
   "goal_cdl": "Value(MeasureOfAngle(HFG))",
   "problem_answer": "68",
   "theorem_seqs": [
-    "isosceles_triangle_property_angle_equal(GFD)",
-    "triangle_property_angle_sum(FDG)",
-    "flat_angle(DGH)",
-    "angle_addition(DGF,FGH)",
-    "isosceles_triangle_property_angle_equal(FGH)",
-    "triangle_property_angle_sum(FGH)"
-  ]
+    "isosceles_triangle_property_angle_equal(1,GFD)",
+    "triangle_property_angle_sum(1,FDG)",
+    "flat_angle(1,DGH)",
+    "angle_addition(1,DGF,FGH)",
+    "isosceles_triangle_property_angle_equal(1,FGH)",
+    "triangle_property_angle_sum(1,FGH)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_property_angle_equal(1,GFD)": [],
+    "triangle_property_angle_sum(1,FDG)": [],
+    "flat_angle(1,DGH)": [],
+    "angle_addition(1,DGF,FGH)": [],
+    "isosceles_triangle_property_angle_equal(1,FGH)": [],
+    "triangle_property_angle_sum(1,FGH)": [],
+    "START": [
+      "isosceles_triangle_property_angle_equal(1,GFD)",
+      "triangle_property_angle_sum(1,FDG)",
+      "flat_angle(1,DGH)",
+      "angle_addition(1,DGF,FGH)",
+      "isosceles_triangle_property_angle_equal(1,FGH)",
+      "triangle_property_angle_sum(1,FGH)"
+    ]
+  }
 }

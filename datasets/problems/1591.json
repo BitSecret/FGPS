@@ -29,17 +29,58 @@
   "goal_cdl": "Value(Add(AreaOfQuadrilateral(AGCD),AreaOfQuadrilateral(GEBF)))",
   "problem_answer": "231",
   "theorem_seqs": [
-    "parallel_judgment_per_per(CF,DA)",
-    "parallel_judgment_per_per(DC,AG)",
-    "parallel_judgment_per_per(EG,BF)",
-    "parallel_property_collinear_extend(CF,DA,G)",
-    "parallelogram_judgment_parallel_and_parallel(AGCD)",
-    "parallelogram_area_formula_sine(CDAG)",
-    "rectangle_judgment_right_angle(CDAG)",
-    "adjacent_complementary_angle(AGF,FGE)",
-    "perpendicular_judgment_angle(FG,EG)",
-    "parallel_judgment_per_per(GF,EB)",
-    "parallelogram_judgment_parallel_and_parallel(GEBF)",
-    "parallelogram_area_formula_sine(EBFG)"
-  ]
+    "parallel_judgment_per_per(1,CF,DA)",
+    "parallel_judgment_per_per(1,DC,AG)",
+    "parallel_judgment_per_per(1,EG,BF)",
+    "parallel_property_collinear_extend(2,CF,DA,G)",
+    "parallelogram_judgment_parallel_and_parallel(1,AGCD)",
+    "parallelogram_area_formula_sine(1,CDAG)",
+    "rectangle_judgment_right_angle(1,CDAG)",
+    "adjacent_complementary_angle(1,AGF,FGE)",
+    "perpendicular_judgment_angle(1,FG,EG)",
+    "parallel_judgment_per_per(1,GF,EB)",
+    "parallelogram_judgment_parallel_and_parallel(1,GEBF)",
+    "parallelogram_area_formula_sine(1,EBFG)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_per_per(1,CF,DA)": [
+      "parallel_property_collinear_extend(2,CF,DA,G)"
+    ],
+    "parallel_judgment_per_per(1,DC,AG)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AGCD)"
+    ],
+    "parallel_judgment_per_per(1,EG,BF)": [
+      "parallelogram_judgment_parallel_and_parallel(1,GEBF)"
+    ],
+    "parallel_property_collinear_extend(2,CF,DA,G)": [
+      "parallelogram_judgment_parallel_and_parallel(1,AGCD)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,AGCD)": [
+      "parallelogram_area_formula_sine(1,CDAG)",
+      "rectangle_judgment_right_angle(1,CDAG)"
+    ],
+    "parallelogram_area_formula_sine(1,CDAG)": [],
+    "rectangle_judgment_right_angle(1,CDAG)": [
+      "perpendicular_judgment_angle(1,FG,EG)"
+    ],
+    "adjacent_complementary_angle(1,AGF,FGE)": [
+      "perpendicular_judgment_angle(1,FG,EG)"
+    ],
+    "perpendicular_judgment_angle(1,FG,EG)": [
+      "parallel_judgment_per_per(1,GF,EB)"
+    ],
+    "parallel_judgment_per_per(1,GF,EB)": [
+      "parallelogram_judgment_parallel_and_parallel(1,GEBF)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,GEBF)": [
+      "parallelogram_area_formula_sine(1,EBFG)"
+    ],
+    "parallelogram_area_formula_sine(1,EBFG)": [],
+    "START": [
+      "parallel_judgment_per_per(1,CF,DA)",
+      "parallel_judgment_per_per(1,DC,AG)",
+      "parallel_judgment_per_per(1,EG,BF)",
+      "adjacent_complementary_angle(1,AGF,FGE)"
+    ]
+  }
 }

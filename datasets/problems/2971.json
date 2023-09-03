@@ -32,10 +32,26 @@
   "goal_cdl": "Value(MeasureOfAngle(DCA))",
   "problem_answer": "140",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(QC,BA,P)",
-    "parallel_property_alternate_interior_angle(CP,BA)",
-    "parallel_property_collinear_extend(CQ,DF,P)",
-    "parallel_property_alternate_interior_angle(PC,DF)",
-    "angle_addition(DCP,PCA)"
-  ]
+    "parallel_property_collinear_extend(2,QC,BA,P)",
+    "parallel_property_alternate_interior_angle(1,CP,BA)",
+    "parallel_property_collinear_extend(1,CQ,DF,P)",
+    "parallel_property_alternate_interior_angle(2,PC,DF)",
+    "angle_addition(1,DCP,PCA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,QC,BA,P)": [
+      "parallel_property_alternate_interior_angle(1,CP,BA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,CP,BA)": [],
+    "parallel_property_collinear_extend(1,CQ,DF,P)": [
+      "parallel_property_alternate_interior_angle(2,PC,DF)"
+    ],
+    "parallel_property_alternate_interior_angle(2,PC,DF)": [],
+    "angle_addition(1,DCP,PCA)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,QC,BA,P)",
+      "parallel_property_collinear_extend(1,CQ,DF,P)",
+      "angle_addition(1,DCP,PCA)"
+    ]
+  }
 }

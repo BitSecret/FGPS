@@ -23,7 +23,15 @@
   "goal_cdl": "Value(MeasureOfArc(AEC))",
   "problem_answer": "180",
   "theorem_seqs": [
-    "flat_angle(CAE)",
-    "arc_property_center_angle(AEC,A)"
-  ]
+    "flat_angle(1,CAE)",
+    "arc_property_center_angle(1,AEC,A)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,CAE)": [],
+    "arc_property_center_angle(1,AEC,A)": [],
+    "START": [
+      "flat_angle(1,CAE)",
+      "arc_property_center_angle(1,AEC,A)"
+    ]
+  }
 }

@@ -32,18 +32,52 @@
   "goal_cdl": "Value(MeasureOfAngle(CBD))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "adjacent_complementary_angle(GBC,CBA)",
-    "arc_property_circumference_angle_external(OAD,B)",
-    "arc_property_circumference_angle_external(OAC,B)",
-    "arc_property_circumference_angle_internal(OAC,D)",
-    "adjacent_complementary_angle(DEO,OEC)",
-    "triangle_property_angle_sum(EAD)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "isosceles_triangle_judgment_line_equal(OAD)",
-    "isosceles_triangle_property_angle_equal(OAD)",
-    "triangle_property_angle_sum(OAD)",
-    "arc_property_center_angle(OAD,O)",
-    "angle_addition(CBH,HBA)"
-  ]
+    "adjacent_complementary_angle(1,GBC,CBA)",
+    "arc_property_circumference_angle_external(1,OAD,B)",
+    "arc_property_circumference_angle_external(1,OAC,B)",
+    "arc_property_circumference_angle_internal(1,OAC,D)",
+    "adjacent_complementary_angle(1,DEO,OEC)",
+    "triangle_property_angle_sum(1,EAD)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "isosceles_triangle_judgment_line_equal(1,OAD)",
+    "isosceles_triangle_property_angle_equal(1,OAD)",
+    "triangle_property_angle_sum(1,OAD)",
+    "arc_property_center_angle(1,OAD,O)",
+    "angle_addition(1,CBH,HBA)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,GBC,CBA)": [],
+    "arc_property_circumference_angle_external(1,OAD,B)": [],
+    "arc_property_circumference_angle_external(1,OAC,B)": [],
+    "arc_property_circumference_angle_internal(1,OAC,D)": [],
+    "adjacent_complementary_angle(1,DEO,OEC)": [],
+    "triangle_property_angle_sum(1,EAD)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAD)"
+    ],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,OAD)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,OAD)": [
+      "isosceles_triangle_property_angle_equal(1,OAD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OAD)": [],
+    "triangle_property_angle_sum(1,OAD)": [],
+    "arc_property_center_angle(1,OAD,O)": [],
+    "angle_addition(1,CBH,HBA)": [],
+    "START": [
+      "adjacent_complementary_angle(1,GBC,CBA)",
+      "arc_property_circumference_angle_external(1,OAD,B)",
+      "arc_property_circumference_angle_external(1,OAC,B)",
+      "arc_property_circumference_angle_internal(1,OAC,D)",
+      "adjacent_complementary_angle(1,DEO,OEC)",
+      "triangle_property_angle_sum(1,EAD)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "triangle_property_angle_sum(1,OAD)",
+      "arc_property_center_angle(1,OAD,O)",
+      "angle_addition(1,CBH,HBA)"
+    ]
+  }
 }

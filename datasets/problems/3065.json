@@ -22,10 +22,26 @@
   "goal_cdl": "Value(LengthOfLine(CD))",
   "problem_answer": "7",
   "theorem_seqs": [
-    "parallel_property_corresponding_angle(BA,DC,O)",
-    "similar_triangle_judgment_aa(AOB,COD)",
-    "line_addition(OB,BD)",
-    "similar_triangle_property_line_ratio(AOB,COD)",
-    "similar_triangle_property_line_ratio(OBA,ODC)"
-  ]
+    "parallel_property_corresponding_angle(1,BA,DC,O)",
+    "similar_triangle_judgment_aa(1,AOB,COD)",
+    "line_addition(1,OB,BD)",
+    "similar_triangle_property_line_ratio(1,AOB,COD)",
+    "similar_triangle_property_line_ratio(1,OBA,ODC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_corresponding_angle(1,BA,DC,O)": [
+      "similar_triangle_judgment_aa(1,AOB,COD)"
+    ],
+    "similar_triangle_judgment_aa(1,AOB,COD)": [
+      "similar_triangle_property_line_ratio(1,AOB,COD)",
+      "similar_triangle_property_line_ratio(1,OBA,ODC)"
+    ],
+    "line_addition(1,OB,BD)": [],
+    "similar_triangle_property_line_ratio(1,AOB,COD)": [],
+    "similar_triangle_property_line_ratio(1,OBA,ODC)": [],
+    "START": [
+      "parallel_property_corresponding_angle(1,BA,DC,O)",
+      "line_addition(1,OB,BD)"
+    ]
+  }
 }

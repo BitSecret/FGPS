@@ -24,8 +24,20 @@
   "goal_cdl": "Value(MeasureOfAngle(QRH))",
   "problem_answer": "49",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(TQ,GR,J)",
-    "parallel_property_collinear_extend(RG,JQ,H)",
-    "parallel_property_ipsilateral_internal_angle(QJ,RH)"
-  ]
+    "parallel_property_collinear_extend(2,TQ,GR,J)",
+    "parallel_property_collinear_extend(1,RG,JQ,H)",
+    "parallel_property_ipsilateral_internal_angle(1,QJ,RH)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(2,TQ,GR,J)": [
+      "parallel_property_collinear_extend(1,RG,JQ,H)"
+    ],
+    "parallel_property_collinear_extend(1,RG,JQ,H)": [
+      "parallel_property_ipsilateral_internal_angle(1,QJ,RH)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,QJ,RH)": [],
+    "START": [
+      "parallel_property_collinear_extend(2,TQ,GR,J)"
+    ]
+  }
 }

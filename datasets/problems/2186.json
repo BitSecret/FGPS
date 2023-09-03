@@ -27,8 +27,19 @@
   "goal_cdl": "Value(MeasureOfAngle(IYW))",
   "problem_answer": "127",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(ZI,WG,Y)",
-    "vertical_angle(LWX,YWG)",
-    "parallel_property_ipsilateral_internal_angle(YI,WG)"
-  ]
+    "parallel_property_collinear_extend(3,ZI,WG,Y)",
+    "vertical_angle(1,LWX,YWG)",
+    "parallel_property_ipsilateral_internal_angle(1,YI,WG)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,ZI,WG,Y)": [
+      "parallel_property_ipsilateral_internal_angle(1,YI,WG)"
+    ],
+    "vertical_angle(1,LWX,YWG)": [],
+    "parallel_property_ipsilateral_internal_angle(1,YI,WG)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,ZI,WG,Y)",
+      "vertical_angle(1,LWX,YWG)"
+    ]
+  }
 }

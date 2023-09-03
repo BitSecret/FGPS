@@ -29,12 +29,32 @@
   "goal_cdl": "Value(PerimeterOfTriangle(CDE))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "perpendicular_bisector_judgment_per_and_mid(EO,AC)",
-    "perpendicular_bisector_property_distance_equal(EO,AC)",
-    "line_addition(AE,ED)",
-    "triangle_perimeter_formula(ECD)"
-  ]
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallelogram_property_opposite_line_equal(1,BCDA)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,AC)",
+    "perpendicular_bisector_property_distance_equal(1,EO,AC)",
+    "line_addition(1,AE,ED)",
+    "triangle_perimeter_formula(1,ECD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallelogram_property_opposite_line_equal(1,BCDA)": [],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [
+      "perpendicular_bisector_judgment_per_and_mid(1,EO,AC)"
+    ],
+    "perpendicular_bisector_judgment_per_and_mid(1,EO,AC)": [
+      "perpendicular_bisector_property_distance_equal(1,EO,AC)"
+    ],
+    "perpendicular_bisector_property_distance_equal(1,EO,AC)": [],
+    "line_addition(1,AE,ED)": [],
+    "triangle_perimeter_formula(1,ECD)": [],
+    "START": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "line_addition(1,AE,ED)",
+      "triangle_perimeter_formula(1,ECD)"
+    ]
+  }
 }

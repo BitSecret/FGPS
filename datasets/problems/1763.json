@@ -29,16 +29,50 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "61.725",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AF,C,C)",
-    "parallel_judgment_ipsilateral_internal_angle(FG,AD)",
-    "parallel_property_collinear_extend(AE,DB,F)",
-    "parallel_property_collinear_extend(BD,FA,G)",
-    "parallelogram_judgment_parallel_and_parallel(ADGF)",
-    "parallelogram_property_opposite_line_equal(ADBE)",
-    "parallelogram_property_opposite_line_equal(ADGF)",
-    "diameter_of_circle_property_length_equal(FG,C)",
-    "circle_property_length_of_radius_and_diameter(C)",
-    "circle_area_formula(C)",
-    "parallelogram_area_formula_sine(ADBE)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,AF,C,C)",
+    "parallel_judgment_ipsilateral_internal_angle(1,FG,AD)",
+    "parallel_property_collinear_extend(3,AE,DB,F)",
+    "parallel_property_collinear_extend(3,BD,FA,G)",
+    "parallelogram_judgment_parallel_and_parallel(1,ADGF)",
+    "parallelogram_property_opposite_line_equal(1,ADBE)",
+    "parallelogram_property_opposite_line_equal(1,ADGF)",
+    "diameter_of_circle_property_length_equal(1,FG,C)",
+    "circle_property_length_of_radius_and_diameter(1,C)",
+    "circle_area_formula(1,C)",
+    "parallelogram_area_formula_sine(1,ADBE)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,AF,C,C)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,FG,AD)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,FG,AD)": [
+      "parallelogram_judgment_parallel_and_parallel(1,ADGF)"
+    ],
+    "parallel_property_collinear_extend(3,AE,DB,F)": [
+      "parallel_property_collinear_extend(3,BD,FA,G)"
+    ],
+    "parallel_property_collinear_extend(3,BD,FA,G)": [
+      "parallelogram_judgment_parallel_and_parallel(1,ADGF)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,ADGF)": [
+      "parallelogram_property_opposite_line_equal(1,ADGF)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ADBE)": [
+      "solve_eq_29)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,ADGF)": [],
+    "diameter_of_circle_property_length_equal(1,FG,C)": [],
+    "circle_property_length_of_radius_and_diameter(1,C)": [],
+    "circle_area_formula(1,C)": [],
+    "parallelogram_area_formula_sine(1,ADBE)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,AF,C,C)",
+      "parallel_property_collinear_extend(3,AE,DB,F)",
+      "parallelogram_property_opposite_line_equal(1,ADBE)",
+      "diameter_of_circle_property_length_equal(1,FG,C)",
+      "circle_property_length_of_radius_and_diameter(1,C)",
+      "circle_area_formula(1,C)",
+      "parallelogram_area_formula_sine(1,ADBE)"
+    ]
+  }
 }

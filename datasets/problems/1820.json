@@ -41,15 +41,49 @@
   "goal_cdl": "Value(PerimeterOfTriangle(RST))",
   "problem_answer": "36",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(TC,A,A)",
-    "tangent_of_circle_property_perpendicular(TD,A,A)",
-    "radius_of_circle_property_length_equal(AC,A)",
-    "radius_of_circle_property_length_equal(AD,A)",
-    "mirror_congruent_triangle_judgment_hl(ADT,ATC)",
-    "mirror_congruent_triangle_property_line_equal(ADT,ATC)",
-    "line_addition(RB,BS)",
-    "line_addition(SD,DT)",
-    "line_addition(RC,CT)",
-    "triangle_perimeter_formula(RST)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,TC,A,A)",
+    "tangent_of_circle_property_perpendicular(1,TD,A,A)",
+    "radius_of_circle_property_length_equal(1,AC,A)",
+    "radius_of_circle_property_length_equal(1,AD,A)",
+    "mirror_congruent_triangle_judgment_hl(2,ADT,ATC)",
+    "mirror_congruent_triangle_property_line_equal(1,ADT,ATC)",
+    "line_addition(1,RB,BS)",
+    "line_addition(1,SD,DT)",
+    "line_addition(1,RC,CT)",
+    "triangle_perimeter_formula(1,RST)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,TC,A,A)": [
+      "mirror_congruent_triangle_judgment_hl(2,ADT,ATC)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,TD,A,A)": [
+      "mirror_congruent_triangle_judgment_hl(2,ADT,ATC)"
+    ],
+    "radius_of_circle_property_length_equal(1,AC,A)": [
+      "mirror_congruent_triangle_judgment_hl(2,ADT,ATC)"
+    ],
+    "radius_of_circle_property_length_equal(1,AD,A)": [
+      "mirror_congruent_triangle_judgment_hl(2,ADT,ATC)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(2,ADT,ATC)": [
+      "mirror_congruent_triangle_property_line_equal(1,ADT,ATC)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,ADT,ATC)": [
+      "solve_eq_24)"
+    ],
+    "line_addition(1,RB,BS)": [],
+    "line_addition(1,SD,DT)": [],
+    "line_addition(1,RC,CT)": [],
+    "triangle_perimeter_formula(1,RST)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,TC,A,A)",
+      "tangent_of_circle_property_perpendicular(1,TD,A,A)",
+      "radius_of_circle_property_length_equal(1,AC,A)",
+      "radius_of_circle_property_length_equal(1,AD,A)",
+      "line_addition(1,RB,BS)",
+      "line_addition(1,SD,DT)",
+      "line_addition(1,RC,CT)",
+      "triangle_perimeter_formula(1,RST)"
+    ]
+  }
 }

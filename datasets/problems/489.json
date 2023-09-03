@@ -19,7 +19,16 @@
   "goal_cdl": "Value(MeasureOfAngle(ADC))",
   "problem_answer": "45",
   "theorem_seqs": [
-    "parallel_judgment_ipsilateral_internal_angle(CD,BA)",
-    "parallel_property_ipsilateral_internal_angle(AB,DC)"
-  ]
+    "parallel_judgment_ipsilateral_internal_angle(1,CD,BA)",
+    "parallel_property_ipsilateral_internal_angle(1,AB,DC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_ipsilateral_internal_angle(1,CD,BA)": [
+      "parallel_property_ipsilateral_internal_angle(1,AB,DC)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,AB,DC)": [],
+    "START": [
+      "parallel_judgment_ipsilateral_internal_angle(1,CD,BA)"
+    ]
+  }
 }

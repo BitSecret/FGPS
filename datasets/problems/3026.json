@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(MND))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "vertical_angle(AME,BMN)",
-    "parallel_property_collinear_extend(AB,CD,M)",
-    "parallel_property_collinear_extend(DC,BM,N)",
-    "parallel_property_ipsilateral_internal_angle(MB,ND)"
-  ]
+    "vertical_angle(1,AME,BMN)",
+    "parallel_property_collinear_extend(3,AB,CD,M)",
+    "parallel_property_collinear_extend(3,DC,BM,N)",
+    "parallel_property_ipsilateral_internal_angle(1,MB,ND)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,AME,BMN)": [],
+    "parallel_property_collinear_extend(3,AB,CD,M)": [
+      "parallel_property_collinear_extend(3,DC,BM,N)"
+    ],
+    "parallel_property_collinear_extend(3,DC,BM,N)": [
+      "parallel_property_ipsilateral_internal_angle(1,MB,ND)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,MB,ND)": [],
+    "START": [
+      "vertical_angle(1,AME,BMN)",
+      "parallel_property_collinear_extend(3,AB,CD,M)"
+    ]
+  }
 }

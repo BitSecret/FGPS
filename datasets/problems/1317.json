@@ -23,9 +23,22 @@
   "goal_cdl": "Value(MeasureOfAngle(BAC))",
   "problem_answer": "32",
   "theorem_seqs": [
-    "parallelogram_property_opposite_angle_equal(ADCB)",
-    "kite_property_diagonal_perpendicular_bisection(ADCB,O)",
-    "perpendicular_bisector_property_bisector(AO,DB)",
-    "angle_addition(BAC,CAD)"
-  ]
+    "parallelogram_property_opposite_angle_equal(1,ADCB)",
+    "kite_property_diagonal_perpendicular_bisection(1,ADCB,O)",
+    "perpendicular_bisector_property_bisector(1,AO,DB)",
+    "angle_addition(1,BAC,CAD)"
+  ],
+  "theorem_seq_dag": {
+    "parallelogram_property_opposite_angle_equal(1,ADCB)": [],
+    "kite_property_diagonal_perpendicular_bisection(1,ADCB,O)": [
+      "perpendicular_bisector_property_bisector(1,AO,DB)"
+    ],
+    "perpendicular_bisector_property_bisector(1,AO,DB)": [],
+    "angle_addition(1,BAC,CAD)": [],
+    "START": [
+      "parallelogram_property_opposite_angle_equal(1,ADCB)",
+      "kite_property_diagonal_perpendicular_bisection(1,ADCB,O)",
+      "angle_addition(1,BAC,CAD)"
+    ]
+  }
 }

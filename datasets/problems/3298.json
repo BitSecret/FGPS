@@ -21,13 +21,38 @@
   "goal_cdl": "Value(MeasureOfAngle(OAB))",
   "problem_answer": "10",
   "theorem_seqs": [
-    "incenter_of_triangle_judgment_intersection(O,ABC)",
-    "isosceles_triangle_judgment_line_equal(OBC)",
-    "isosceles_triangle_property_angle_equal(OBC)",
-    "triangle_property_angle_sum(OBC)",
-    "angle_addition(ABO,OBC)",
-    "angle_addition(BCO,OCA)",
-    "triangle_property_angle_sum(ABC)",
-    "angle_addition(CAO,OAB)"
-  ]
+    "incenter_of_triangle_judgment_intersection(1,O,ABC)",
+    "isosceles_triangle_judgment_line_equal(1,OBC)",
+    "isosceles_triangle_property_angle_equal(1,OBC)",
+    "triangle_property_angle_sum(1,OBC)",
+    "angle_addition(1,ABO,OBC)",
+    "angle_addition(1,BCO,OCA)",
+    "triangle_property_angle_sum(1,ABC)",
+    "angle_addition(1,CAO,OAB)"
+  ],
+  "theorem_seq_dag": {
+    "incenter_of_triangle_judgment_intersection(1,O,ABC)": [],
+    "isosceles_triangle_judgment_line_equal(1,OBC)": [
+      "isosceles_triangle_property_angle_equal(1,OBC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,OBC)": [
+      "solve_eq_16)"
+    ],
+    "triangle_property_angle_sum(1,OBC)": [
+      "solve_eq_16)"
+    ],
+    "angle_addition(1,ABO,OBC)": [],
+    "angle_addition(1,BCO,OCA)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "angle_addition(1,CAO,OAB)": [],
+    "START": [
+      "incenter_of_triangle_judgment_intersection(1,O,ABC)",
+      "isosceles_triangle_judgment_line_equal(1,OBC)",
+      "triangle_property_angle_sum(1,OBC)",
+      "angle_addition(1,ABO,OBC)",
+      "angle_addition(1,BCO,OCA)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,CAO,OAB)"
+    ]
+  }
 }

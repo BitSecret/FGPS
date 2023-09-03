@@ -20,8 +20,18 @@
   "goal_cdl": "Value(LengthOfArc(OBA))",
   "problem_answer": "3*pi/4",
   "theorem_seqs": [
-    "arc_property_center_angle(OBA,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "arc_length_formula(OBA)"
-  ]
+    "arc_property_center_angle(1,OBA,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "arc_length_formula(1,OBA)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OBA,O)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "arc_length_formula(1,OBA)": [],
+    "START": [
+      "arc_property_center_angle(1,OBA,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "arc_length_formula(1,OBA)"
+    ]
+  }
 }

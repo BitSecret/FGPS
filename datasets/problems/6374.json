@@ -19,9 +19,22 @@
   "goal_cdl": "Value(MeasureOfAngle(ADB))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(BDC)",
-    "isosceles_triangle_property_angle_equal(BDC)",
-    "parallel_property_ipsilateral_internal_angle(DA,CB)",
-    "angle_addition(ADB,BDC)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,BDC)",
+    "isosceles_triangle_property_angle_equal(1,BDC)",
+    "parallel_property_ipsilateral_internal_angle(1,DA,CB)",
+    "angle_addition(1,ADB,BDC)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,BDC)": [
+      "isosceles_triangle_property_angle_equal(1,BDC)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,BDC)": [],
+    "parallel_property_ipsilateral_internal_angle(1,DA,CB)": [],
+    "angle_addition(1,ADB,BDC)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,BDC)",
+      "parallel_property_ipsilateral_internal_angle(1,DA,CB)",
+      "angle_addition(1,ADB,BDC)"
+    ]
+  }
 }

@@ -18,7 +18,16 @@
   "goal_cdl": "Value(Div(LengthOfLine(CA),LengthOfLine(BC)))",
   "problem_answer": "sqrt(3)/3",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_pythagorean(BCA)"
-  ]
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_pythagorean(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  }
 }

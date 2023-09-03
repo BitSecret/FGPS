@@ -22,9 +22,23 @@
   "goal_cdl": "Value(MeasureOfAngle(EAB))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "congruent_arc_property_chord_equal(OAB,OEA)",
-    "isosceles_triangle_judgment_line_equal(ABE)",
-    "isosceles_triangle_property_angle_equal(ABE)",
-    "triangle_property_angle_sum(ABE)"
-  ]
+    "congruent_arc_property_chord_equal(1,OAB,OEA)",
+    "isosceles_triangle_judgment_line_equal(1,ABE)",
+    "isosceles_triangle_property_angle_equal(1,ABE)",
+    "triangle_property_angle_sum(1,ABE)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_property_chord_equal(1,OAB,OEA)": [
+      "isosceles_triangle_judgment_line_equal(1,ABE)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABE)": [
+      "isosceles_triangle_property_angle_equal(1,ABE)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABE)": [],
+    "triangle_property_angle_sum(1,ABE)": [],
+    "START": [
+      "congruent_arc_property_chord_equal(1,OAB,OEA)",
+      "triangle_property_angle_sum(1,ABE)"
+    ]
+  }
 }

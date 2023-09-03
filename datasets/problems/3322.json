@@ -20,7 +20,15 @@
   "goal_cdl": "Value(MeasureOfAngle(COD))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "angle_addition(AOB,BOC)",
-    "angle_addition(BOC,COD)"
-  ]
+    "angle_addition(1,AOB,BOC)",
+    "angle_addition(1,BOC,COD)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,AOB,BOC)": [],
+    "angle_addition(1,BOC,COD)": [],
+    "START": [
+      "angle_addition(1,AOB,BOC)",
+      "angle_addition(1,BOC,COD)"
+    ]
+  }
 }

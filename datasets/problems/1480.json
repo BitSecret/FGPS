@@ -47,11 +47,31 @@
   "goal_cdl": "Value(MeasureOfAngle(ORP))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(WD,BT,O)",
-    "parallel_property_collinear_extend(OD,BT,R)",
-    "parallel_property_collinear_extend(TB,RO,F)",
-    "parallel_property_collinear_extend(TF,RO,G)",
-    "vertical_angle(AGK,FGR)",
-    "parallel_property_corresponding_angle(GF,RO,P)"
-  ]
+    "parallel_property_collinear_extend(3,WD,BT,O)",
+    "parallel_property_collinear_extend(3,OD,BT,R)",
+    "parallel_property_collinear_extend(3,TB,RO,F)",
+    "parallel_property_collinear_extend(3,TF,RO,G)",
+    "vertical_angle(1,AGK,FGR)",
+    "parallel_property_corresponding_angle(2,GF,RO,P)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,WD,BT,O)": [
+      "parallel_property_collinear_extend(3,OD,BT,R)"
+    ],
+    "parallel_property_collinear_extend(3,OD,BT,R)": [
+      "parallel_property_collinear_extend(3,TB,RO,F)"
+    ],
+    "parallel_property_collinear_extend(3,TB,RO,F)": [
+      "parallel_property_collinear_extend(3,TF,RO,G)"
+    ],
+    "parallel_property_collinear_extend(3,TF,RO,G)": [
+      "parallel_property_corresponding_angle(2,GF,RO,P)"
+    ],
+    "vertical_angle(1,AGK,FGR)": [],
+    "parallel_property_corresponding_angle(2,GF,RO,P)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,WD,BT,O)",
+      "vertical_angle(1,AGK,FGR)"
+    ]
+  }
 }

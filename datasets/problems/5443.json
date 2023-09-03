@@ -27,13 +27,35 @@
   "goal_cdl": "Value(PerimeterOfTriangle(CNM))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "triangle_perimeter_formula(CNM)",
-    "parallel_property_alternate_interior_angle(BA,MO)",
-    "parallel_property_alternate_interior_angle(BA,ON)",
-    "isosceles_triangle_judgment_angle_equal(NAO)",
-    "isosceles_triangle_judgment_angle_equal(MOB)",
-    "line_addition(AN,NC)",
-    "line_addition(MO,ON)",
-    "line_addition(BM,MC)"
-  ]
+    "triangle_perimeter_formula(1,CNM)",
+    "parallel_property_alternate_interior_angle(1,BA,MO)",
+    "parallel_property_alternate_interior_angle(2,BA,ON)",
+    "isosceles_triangle_judgment_angle_equal(1,NAO)",
+    "isosceles_triangle_judgment_angle_equal(1,MOB)",
+    "line_addition(1,AN,NC)",
+    "line_addition(1,MO,ON)",
+    "line_addition(1,BM,MC)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_perimeter_formula(1,CNM)": [],
+    "parallel_property_alternate_interior_angle(1,BA,MO)": [
+      "isosceles_triangle_judgment_angle_equal(1,MOB)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BA,ON)": [
+      "isosceles_triangle_judgment_angle_equal(1,NAO)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,NAO)": [],
+    "isosceles_triangle_judgment_angle_equal(1,MOB)": [],
+    "line_addition(1,AN,NC)": [],
+    "line_addition(1,MO,ON)": [],
+    "line_addition(1,BM,MC)": [],
+    "START": [
+      "triangle_perimeter_formula(1,CNM)",
+      "parallel_property_alternate_interior_angle(1,BA,MO)",
+      "parallel_property_alternate_interior_angle(2,BA,ON)",
+      "line_addition(1,AN,NC)",
+      "line_addition(1,MO,ON)",
+      "line_addition(1,BM,MC)"
+    ]
+  }
 }

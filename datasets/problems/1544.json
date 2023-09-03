@@ -22,9 +22,23 @@
   "goal_cdl": "Value(PerimeterOfTriangle(DFE))",
   "problem_answer": "24",
   "theorem_seqs": [
-    "similar_triangle_property_line_ratio(DFE,ACB)",
-    "similar_triangle_property_line_ratio(FED,CBA)",
-    "similar_triangle_property_line_ratio(EDF,BAC)",
-    "triangle_perimeter_formula(DFE)"
-  ]
+    "similar_triangle_property_line_ratio(1,DFE,ACB)",
+    "similar_triangle_property_line_ratio(1,FED,CBA)",
+    "similar_triangle_property_line_ratio(1,EDF,BAC)",
+    "triangle_perimeter_formula(1,DFE)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_line_ratio(1,DFE,ACB)": [
+      "solve_eq_8)"
+    ],
+    "similar_triangle_property_line_ratio(1,FED,CBA)": [],
+    "similar_triangle_property_line_ratio(1,EDF,BAC)": [],
+    "triangle_perimeter_formula(1,DFE)": [],
+    "START": [
+      "similar_triangle_property_line_ratio(1,DFE,ACB)",
+      "similar_triangle_property_line_ratio(1,FED,CBA)",
+      "similar_triangle_property_line_ratio(1,EDF,BAC)",
+      "triangle_perimeter_formula(1,DFE)"
+    ]
+  }
 }

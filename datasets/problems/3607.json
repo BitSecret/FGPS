@@ -20,8 +20,19 @@
   "goal_cdl": "Value(MeasureOfAngle(EBA))",
   "problem_answer": "55",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(DC,BA,E)",
-    "vertical_angle(CEB,DEF)",
-    "parallel_property_ipsilateral_internal_angle(EC,BA)"
-  ]
+    "parallel_property_collinear_extend(3,DC,BA,E)",
+    "vertical_angle(1,CEB,DEF)",
+    "parallel_property_ipsilateral_internal_angle(1,EC,BA)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,DC,BA,E)": [
+      "parallel_property_ipsilateral_internal_angle(1,EC,BA)"
+    ],
+    "vertical_angle(1,CEB,DEF)": [],
+    "parallel_property_ipsilateral_internal_angle(1,EC,BA)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,DC,BA,E)",
+      "vertical_angle(1,CEB,DEF)"
+    ]
+  }
 }

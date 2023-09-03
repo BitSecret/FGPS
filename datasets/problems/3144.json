@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(HFE))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "vertical_angle(ACD,FCB)",
-    "parallel_property_collinear_extend(BD,EG,C)",
-    "parallel_property_collinear_extend(GE,CB,F)",
-    "parallel_property_corresponding_angle(FE,CB,H)"
-  ]
+    "vertical_angle(1,ACD,FCB)",
+    "parallel_property_collinear_extend(3,BD,EG,C)",
+    "parallel_property_collinear_extend(3,GE,CB,F)",
+    "parallel_property_corresponding_angle(1,FE,CB,H)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,ACD,FCB)": [],
+    "parallel_property_collinear_extend(3,BD,EG,C)": [
+      "parallel_property_collinear_extend(3,GE,CB,F)"
+    ],
+    "parallel_property_collinear_extend(3,GE,CB,F)": [
+      "parallel_property_corresponding_angle(1,FE,CB,H)"
+    ],
+    "parallel_property_corresponding_angle(1,FE,CB,H)": [],
+    "START": [
+      "vertical_angle(1,ACD,FCB)",
+      "parallel_property_collinear_extend(3,BD,EG,C)"
+    ]
+  }
 }

@@ -24,8 +24,20 @@
   "goal_cdl": "Value(z)",
   "problem_answer": "8*sqrt(5)",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BAC,CAD)",
-    "right_triangle_judgment_angle(CAD)",
-    "right_triangle_property_pythagorean(CAD)"
-  ]
+    "adjacent_complementary_angle(1,BAC,CAD)",
+    "right_triangle_judgment_angle(1,CAD)",
+    "right_triangle_property_pythagorean(1,CAD)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BAC,CAD)": [
+      "right_triangle_judgment_angle(1,CAD)"
+    ],
+    "right_triangle_judgment_angle(1,CAD)": [
+      "right_triangle_property_pythagorean(1,CAD)"
+    ],
+    "right_triangle_property_pythagorean(1,CAD)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BAC,CAD)"
+    ]
+  }
 }

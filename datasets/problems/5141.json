@@ -24,9 +24,21 @@
   "goal_cdl": "Value(MeasureOfAngle(ACD))",
   "problem_answer": "9",
   "theorem_seqs": [
-    "angle_addition(FCA,ACB)",
-    "angle_addition(FCD,DCB)",
-    "mirror_congruent_triangle_property_angle_equal(CBD,CDF)",
-    "angle_addition(ACD,DCB)"
-  ]
+    "angle_addition(1,FCA,ACB)",
+    "angle_addition(1,FCD,DCB)",
+    "mirror_congruent_triangle_property_angle_equal(1,CBD,CDF)",
+    "angle_addition(1,ACD,DCB)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,FCA,ACB)": [],
+    "angle_addition(1,FCD,DCB)": [],
+    "mirror_congruent_triangle_property_angle_equal(1,CBD,CDF)": [],
+    "angle_addition(1,ACD,DCB)": [],
+    "START": [
+      "angle_addition(1,FCA,ACB)",
+      "angle_addition(1,FCD,DCB)",
+      "mirror_congruent_triangle_property_angle_equal(1,CBD,CDF)",
+      "angle_addition(1,ACD,DCB)"
+    ]
+  }
 }

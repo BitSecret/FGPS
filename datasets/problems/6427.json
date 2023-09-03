@@ -23,13 +23,41 @@
   "goal_cdl": "Value(HeightOfTriangle(EBC))",
   "problem_answer": "60/13",
   "theorem_seqs": [
-    "angle_addition(ABE,EBC)",
-    "angle_addition(BCE,ECD)",
-    "parallel_property_ipsilateral_internal_angle(BA,CD)",
-    "triangle_property_angle_sum(EBC)",
-    "right_triangle_judgment_angle(CEB)",
-    "right_triangle_property_pythagorean(CEB)",
-    "triangle_area_formula_sine(EBC)",
-    "triangle_area_formula_common(EBC)"
-  ]
+    "angle_addition(1,ABE,EBC)",
+    "angle_addition(1,BCE,ECD)",
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)",
+    "triangle_property_angle_sum(1,EBC)",
+    "right_triangle_judgment_angle(1,CEB)",
+    "right_triangle_property_pythagorean(1,CEB)",
+    "triangle_area_formula_sine(1,EBC)",
+    "triangle_area_formula_common(1,EBC)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,ABE,EBC)": [
+      "right_triangle_judgment_angle(1,CEB)"
+    ],
+    "angle_addition(1,BCE,ECD)": [
+      "right_triangle_judgment_angle(1,CEB)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,BA,CD)": [
+      "right_triangle_judgment_angle(1,CEB)"
+    ],
+    "triangle_property_angle_sum(1,EBC)": [
+      "right_triangle_judgment_angle(1,CEB)"
+    ],
+    "right_triangle_judgment_angle(1,CEB)": [
+      "right_triangle_property_pythagorean(1,CEB)"
+    ],
+    "right_triangle_property_pythagorean(1,CEB)": [],
+    "triangle_area_formula_sine(1,EBC)": [],
+    "triangle_area_formula_common(1,EBC)": [],
+    "START": [
+      "angle_addition(1,ABE,EBC)",
+      "angle_addition(1,BCE,ECD)",
+      "parallel_property_ipsilateral_internal_angle(1,BA,CD)",
+      "triangle_property_angle_sum(1,EBC)",
+      "triangle_area_formula_sine(1,EBC)",
+      "triangle_area_formula_common(1,EBC)"
+    ]
+  }
 }

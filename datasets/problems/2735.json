@@ -29,11 +29,32 @@
   "goal_cdl": "Value(LengthOfLine(EG))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "adjacent_complementary_angle(BEG,GEA)",
-    "adjacent_complementary_angle(CFG,GFB)",
-    "mirror_congruent_triangle_judgment_aas(GFB,GBE)",
-    "mirror_congruent_triangle_property_line_equal(BGF,BEG)",
-    "right_triangle_judgment_angle(CFG)",
-    "right_triangle_property_pythagorean(CFG)"
-  ]
+    "adjacent_complementary_angle(1,BEG,GEA)",
+    "adjacent_complementary_angle(1,CFG,GFB)",
+    "mirror_congruent_triangle_judgment_aas(3,GFB,GBE)",
+    "mirror_congruent_triangle_property_line_equal(1,BGF,BEG)",
+    "right_triangle_judgment_angle(1,CFG)",
+    "right_triangle_property_pythagorean(1,CFG)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,BEG,GEA)": [
+      "mirror_congruent_triangle_judgment_aas(3,GFB,GBE)"
+    ],
+    "adjacent_complementary_angle(1,CFG,GFB)": [
+      "mirror_congruent_triangle_judgment_aas(3,GFB,GBE)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(3,GFB,GBE)": [
+      "mirror_congruent_triangle_property_line_equal(1,BGF,BEG)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,BGF,BEG)": [],
+    "right_triangle_judgment_angle(1,CFG)": [
+      "right_triangle_property_pythagorean(1,CFG)"
+    ],
+    "right_triangle_property_pythagorean(1,CFG)": [],
+    "START": [
+      "adjacent_complementary_angle(1,BEG,GEA)",
+      "adjacent_complementary_angle(1,CFG,GFB)",
+      "right_triangle_judgment_angle(1,CFG)"
+    ]
+  }
 }

@@ -17,8 +17,19 @@
   "goal_cdl": "Value(MeasureOfAngle(TUV))",
   "problem_answer": "53",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(TUV)",
-    "isosceles_triangle_property_angle_equal(TUV)",
-    "triangle_property_angle_sum(TUV)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,TUV)",
+    "isosceles_triangle_property_angle_equal(1,TUV)",
+    "triangle_property_angle_sum(1,TUV)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,TUV)": [
+      "isosceles_triangle_property_angle_equal(1,TUV)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,TUV)": [],
+    "triangle_property_angle_sum(1,TUV)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,TUV)",
+      "triangle_property_angle_sum(1,TUV)"
+    ]
+  }
 }

@@ -31,13 +31,36 @@
   "goal_cdl": "Value(MeasureOfArc(XBA))",
   "problem_answer": "80",
   "theorem_seqs": [
-    "vertical_angle(CNX,DNZ)",
-    "circle_property_chord_perpendicular_bisect_arc(XCD,XNZ)",
-    "arc_addition_length(XCZ,XZD)",
-    "similar_arc_judgment_cocircular(XCZ,XCD)",
-    "similar_arc_property_length_ratio(XCZ,XCD)",
-    "similar_arc_property_measure_ratio(XCZ,XCD)",
-    "congruent_arc_judgment_chord_equal(XCD,XBA)",
-    "congruent_arc_property_measure_equal(XCD,XBA)"
-  ]
+    "vertical_angle(1,CNX,DNZ)",
+    "circle_property_chord_perpendicular_bisect_arc(1,XCD,XNZ)",
+    "arc_addition_length(1,XCZ,XZD)",
+    "similar_arc_judgment_cocircular(1,XCZ,XCD)",
+    "similar_arc_property_length_ratio(1,XCZ,XCD)",
+    "similar_arc_property_measure_ratio(1,XCZ,XCD)",
+    "congruent_arc_judgment_chord_equal(1,XCD,XBA)",
+    "congruent_arc_property_measure_equal(1,XCD,XBA)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,CNX,DNZ)": [
+      "circle_property_chord_perpendicular_bisect_arc(1,XCD,XNZ)"
+    ],
+    "circle_property_chord_perpendicular_bisect_arc(1,XCD,XNZ)": [],
+    "arc_addition_length(1,XCZ,XZD)": [],
+    "similar_arc_judgment_cocircular(1,XCZ,XCD)": [
+      "similar_arc_property_length_ratio(1,XCZ,XCD)",
+      "similar_arc_property_measure_ratio(1,XCZ,XCD)"
+    ],
+    "similar_arc_property_length_ratio(1,XCZ,XCD)": [],
+    "similar_arc_property_measure_ratio(1,XCZ,XCD)": [],
+    "congruent_arc_judgment_chord_equal(1,XCD,XBA)": [
+      "congruent_arc_property_measure_equal(1,XCD,XBA)"
+    ],
+    "congruent_arc_property_measure_equal(1,XCD,XBA)": [],
+    "START": [
+      "vertical_angle(1,CNX,DNZ)",
+      "arc_addition_length(1,XCZ,XZD)",
+      "similar_arc_judgment_cocircular(1,XCZ,XCD)",
+      "congruent_arc_judgment_chord_equal(1,XCD,XBA)"
+    ]
+  }
 }

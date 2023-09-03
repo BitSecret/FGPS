@@ -24,13 +24,36 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "4*sqrt(3)",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "adjacent_complementary_angle(BDO,ODA)",
-    "right_triangle_judgment_angle(ODA)",
-    "right_triangle_judgment_angle(BDO)",
-    "right_triangle_property_pythagorean(ODA)",
-    "right_triangle_property_pythagorean(BDO)",
-    "line_addition(AD,DB)"
-  ]
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "adjacent_complementary_angle(1,BDO,ODA)",
+    "right_triangle_judgment_angle(1,ODA)",
+    "right_triangle_judgment_angle(1,BDO)",
+    "right_triangle_property_pythagorean(1,ODA)",
+    "right_triangle_property_pythagorean(1,BDO)",
+    "line_addition(1,AD,DB)"
+  ],
+  "theorem_seq_dag": {
+    "radius_of_circle_property_length_equal(1,OA,O)": [],
+    "radius_of_circle_property_length_equal(1,OB,O)": [],
+    "adjacent_complementary_angle(1,BDO,ODA)": [
+      "right_triangle_judgment_angle(1,BDO)"
+    ],
+    "right_triangle_judgment_angle(1,ODA)": [
+      "right_triangle_property_pythagorean(1,ODA)"
+    ],
+    "right_triangle_judgment_angle(1,BDO)": [
+      "right_triangle_property_pythagorean(1,BDO)"
+    ],
+    "right_triangle_property_pythagorean(1,ODA)": [],
+    "right_triangle_property_pythagorean(1,BDO)": [],
+    "line_addition(1,AD,DB)": [],
+    "START": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "adjacent_complementary_angle(1,BDO,ODA)",
+      "right_triangle_judgment_angle(1,ODA)",
+      "line_addition(1,AD,DB)"
+    ]
+  }
 }

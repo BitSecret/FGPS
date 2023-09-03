@@ -20,7 +20,15 @@
   "goal_cdl": "Value(AreaOfSector(ABC))",
   "problem_answer": "1.57",
   "theorem_seqs": [
-    "arc_property_center_angle(ABC,A)",
-    "sector_area_formula(ABC)"
-  ]
+    "arc_property_center_angle(1,ABC,A)",
+    "sector_area_formula(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,ABC,A)": [],
+    "sector_area_formula(1,ABC)": [],
+    "START": [
+      "arc_property_center_angle(1,ABC,A)",
+      "sector_area_formula(1,ABC)"
+    ]
+  }
 }

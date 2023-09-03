@@ -36,11 +36,29 @@
   "goal_cdl": "Value(LengthOfLine(BG))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(AE,O,O)",
-    "radius_of_circle_property_length_equal(OE,O)",
-    "right_triangle_judgment_angle(AEO)",
-    "right_triangle_property_pythagorean(AEO)",
-    "line_addition(AE,EB)",
-    "tangent_of_circle_property_length_equal(BE,BG,O)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,AE,O,O)",
+    "radius_of_circle_property_length_equal(1,OE,O)",
+    "right_triangle_judgment_angle(1,AEO)",
+    "right_triangle_property_pythagorean(1,AEO)",
+    "line_addition(1,AE,EB)",
+    "tangent_of_circle_property_length_equal(1,BE,BG,O)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,AE,O,O)": [
+      "right_triangle_judgment_angle(1,AEO)"
+    ],
+    "radius_of_circle_property_length_equal(1,OE,O)": [],
+    "right_triangle_judgment_angle(1,AEO)": [
+      "right_triangle_property_pythagorean(1,AEO)"
+    ],
+    "right_triangle_property_pythagorean(1,AEO)": [],
+    "line_addition(1,AE,EB)": [],
+    "tangent_of_circle_property_length_equal(1,BE,BG,O)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,AE,O,O)",
+      "radius_of_circle_property_length_equal(1,OE,O)",
+      "line_addition(1,AE,EB)",
+      "tangent_of_circle_property_length_equal(1,BE,BG,O)"
+    ]
+  }
 }

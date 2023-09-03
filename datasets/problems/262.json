@@ -22,11 +22,31 @@
   "goal_cdl": "Value(MeasureOfAngle(JHK))",
   "problem_answer": "49",
   "theorem_seqs": [
-    "kite_property_diagonal_perpendicular_bisection(JHGF,K)",
-    "altitude_of_triangle_judgment(JK,JHF)",
-    "isosceles_triangle_judgment_line_equal(JHF)",
-    "isosceles_triangle_property_line_coincidence(JHF,K)",
-    "angle_addition(FJK,KJH)",
-    "triangle_property_angle_sum(JHK)"
-  ]
+    "kite_property_diagonal_perpendicular_bisection(1,JHGF,K)",
+    "altitude_of_triangle_judgment(1,JK,JHF)",
+    "isosceles_triangle_judgment_line_equal(1,JHF)",
+    "isosceles_triangle_property_line_coincidence(1,JHF,K)",
+    "angle_addition(1,FJK,KJH)",
+    "triangle_property_angle_sum(1,JHK)"
+  ],
+  "theorem_seq_dag": {
+    "kite_property_diagonal_perpendicular_bisection(1,JHGF,K)": [
+      "altitude_of_triangle_judgment(1,JK,JHF)"
+    ],
+    "altitude_of_triangle_judgment(1,JK,JHF)": [
+      "isosceles_triangle_property_line_coincidence(1,JHF,K)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,JHF)": [
+      "isosceles_triangle_property_line_coincidence(1,JHF,K)"
+    ],
+    "isosceles_triangle_property_line_coincidence(1,JHF,K)": [],
+    "angle_addition(1,FJK,KJH)": [],
+    "triangle_property_angle_sum(1,JHK)": [],
+    "START": [
+      "kite_property_diagonal_perpendicular_bisection(1,JHGF,K)",
+      "isosceles_triangle_judgment_line_equal(1,JHF)",
+      "angle_addition(1,FJK,KJH)",
+      "triangle_property_angle_sum(1,JHK)"
+    ]
+  }
 }

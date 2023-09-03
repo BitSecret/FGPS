@@ -30,15 +30,51 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "20",
   "theorem_seqs": [
-    "line_addition(DF,FA)",
-    "line_addition(AG,GO)",
-    "parallel_property_alternate_interior_angle(AF,EO)",
-    "parallel_property_alternate_interior_angle(BA,CD)",
-    "similar_triangle_judgment_aa(GFA,GEO)",
-    "similar_triangle_judgment_aa(DAC,EOA)",
-    "similar_triangle_property_line_ratio(GFA,GEO)",
-    "similar_triangle_property_line_ratio(FAG,EOG)",
-    "similar_triangle_property_line_ratio(DAC,EOA)",
-    "similar_triangle_property_line_ratio(CDA,AEO)"
-  ]
+    "line_addition(1,DF,FA)",
+    "line_addition(1,AG,GO)",
+    "parallel_property_alternate_interior_angle(1,AF,EO)",
+    "parallel_property_alternate_interior_angle(2,AF,EO)",
+    "parallel_property_alternate_interior_angle(2,BA,CD)",
+    "similar_triangle_judgment_aa(1,GFA,GEO)",
+    "similar_triangle_judgment_aa(1,DAC,EOA)",
+    "similar_triangle_property_line_ratio(1,GFA,GEO)",
+    "similar_triangle_property_line_ratio(1,FAG,EOG)",
+    "similar_triangle_property_line_ratio(1,DAC,EOA)",
+    "similar_triangle_property_line_ratio(1,CDA,AEO)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,DF,FA)": [
+      "solve_eq_21)"
+    ],
+    "line_addition(1,AG,GO)": [],
+    "parallel_property_alternate_interior_angle(1,AF,EO)": [
+      "similar_triangle_judgment_aa(1,GFA,GEO)",
+      "similar_triangle_judgment_aa(1,DAC,EOA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AF,EO)": [
+      "similar_triangle_judgment_aa(1,GFA,GEO)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BA,CD)": [
+      "similar_triangle_judgment_aa(1,DAC,EOA)"
+    ],
+    "similar_triangle_judgment_aa(1,GFA,GEO)": [
+      "similar_triangle_property_line_ratio(1,GFA,GEO)",
+      "similar_triangle_property_line_ratio(1,FAG,EOG)"
+    ],
+    "similar_triangle_judgment_aa(1,DAC,EOA)": [
+      "similar_triangle_property_line_ratio(1,DAC,EOA)",
+      "similar_triangle_property_line_ratio(1,CDA,AEO)"
+    ],
+    "similar_triangle_property_line_ratio(1,GFA,GEO)": [],
+    "similar_triangle_property_line_ratio(1,FAG,EOG)": [],
+    "similar_triangle_property_line_ratio(1,DAC,EOA)": [],
+    "similar_triangle_property_line_ratio(1,CDA,AEO)": [],
+    "START": [
+      "line_addition(1,DF,FA)",
+      "line_addition(1,AG,GO)",
+      "parallel_property_alternate_interior_angle(1,AF,EO)",
+      "parallel_property_alternate_interior_angle(2,AF,EO)",
+      "parallel_property_alternate_interior_angle(2,BA,CD)"
+    ]
+  }
 }

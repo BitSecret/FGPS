@@ -26,9 +26,23 @@
   "goal_cdl": "Value(MeasureOfAngle(DUA))",
   "problem_answer": "116",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(IL,BN,U)",
-    "parallel_property_collinear_extend(NB,LU,E)",
-    "parallel_property_corresponding_angle(UL,EN,A)",
-    "adjacent_complementary_angle(DUA,AUL)"
-  ]
+    "parallel_property_collinear_extend(3,IL,BN,U)",
+    "parallel_property_collinear_extend(3,NB,LU,E)",
+    "parallel_property_corresponding_angle(1,UL,EN,A)",
+    "adjacent_complementary_angle(1,DUA,AUL)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,IL,BN,U)": [
+      "parallel_property_collinear_extend(3,NB,LU,E)"
+    ],
+    "parallel_property_collinear_extend(3,NB,LU,E)": [
+      "parallel_property_corresponding_angle(1,UL,EN,A)"
+    ],
+    "parallel_property_corresponding_angle(1,UL,EN,A)": [],
+    "adjacent_complementary_angle(1,DUA,AUL)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,IL,BN,U)",
+      "adjacent_complementary_angle(1,DUA,AUL)"
+    ]
+  }
 }

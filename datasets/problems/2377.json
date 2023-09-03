@@ -30,10 +30,25 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "2",
   "theorem_seqs": [
-    "line_addition(AC,CB)",
-    "line_addition(DE,EF)",
-    "adjacent_complementary_angle(ACL,LCB)",
-    "circle_property_chord_perpendicular_bisect_chord(L,LC,AB)",
-    "circle_property_chord_perpendicular_bisect_chord(L,LE,FD)"
-  ]
+    "line_addition(1,AC,CB)",
+    "line_addition(1,DE,EF)",
+    "adjacent_complementary_angle(1,ACL,LCB)",
+    "circle_property_chord_perpendicular_bisect_chord(1,L,LC,AB)",
+    "circle_property_chord_perpendicular_bisect_chord(1,L,LE,FD)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,AC,CB)": [],
+    "line_addition(1,DE,EF)": [],
+    "adjacent_complementary_angle(1,ACL,LCB)": [
+      "circle_property_chord_perpendicular_bisect_chord(1,L,LC,AB)"
+    ],
+    "circle_property_chord_perpendicular_bisect_chord(1,L,LC,AB)": [],
+    "circle_property_chord_perpendicular_bisect_chord(1,L,LE,FD)": [],
+    "START": [
+      "line_addition(1,AC,CB)",
+      "line_addition(1,DE,EF)",
+      "adjacent_complementary_angle(1,ACL,LCB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,L,LE,FD)"
+    ]
+  }
 }

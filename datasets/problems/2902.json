@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(FDK))",
   "problem_answer": "130",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AB,EF,C)",
-    "parallel_property_collinear_extend(FE,CA,D)",
-    "parallel_property_corresponding_angle(DE,CA,J)",
-    "vertical_angle(EDC,FDK)"
-  ]
+    "parallel_property_collinear_extend(3,AB,EF,C)",
+    "parallel_property_collinear_extend(3,FE,CA,D)",
+    "parallel_property_corresponding_angle(2,DE,CA,J)",
+    "vertical_angle(1,EDC,FDK)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AB,EF,C)": [
+      "parallel_property_collinear_extend(3,FE,CA,D)"
+    ],
+    "parallel_property_collinear_extend(3,FE,CA,D)": [
+      "parallel_property_corresponding_angle(2,DE,CA,J)"
+    ],
+    "parallel_property_corresponding_angle(2,DE,CA,J)": [],
+    "vertical_angle(1,EDC,FDK)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AB,EF,C)",
+      "vertical_angle(1,EDC,FDK)"
+    ]
+  }
 }

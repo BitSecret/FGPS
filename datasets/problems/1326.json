@@ -21,8 +21,20 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "20",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(MN,L,L)",
-    "right_triangle_judgment_angle(LNM)",
-    "right_triangle_property_pythagorean(LNM)"
-  ]
+    "tangent_of_circle_property_perpendicular(1,MN,L,L)",
+    "right_triangle_judgment_angle(1,LNM)",
+    "right_triangle_property_pythagorean(1,LNM)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(1,MN,L,L)": [
+      "right_triangle_judgment_angle(1,LNM)"
+    ],
+    "right_triangle_judgment_angle(1,LNM)": [
+      "right_triangle_property_pythagorean(1,LNM)"
+    ],
+    "right_triangle_property_pythagorean(1,LNM)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(1,MN,L,L)"
+    ]
+  }
 }

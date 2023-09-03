@@ -25,13 +25,41 @@
   "goal_cdl": "Value(LengthOfLine(OP))",
   "problem_answer": "2*sqrt(2)",
   "theorem_seqs": [
-    "angle_addition(BPC,CPA)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "radius_of_circle_property_length_equal(OB,O)",
-    "tangent_of_circle_property_perpendicular(PA,O,O)",
-    "tangent_of_circle_property_perpendicular(PB,O,O)",
-    "mirror_congruent_triangle_judgment_hl(PAO,POB)",
-    "mirror_congruent_triangle_property_angle_equal(PAO,POB)",
-    "sine_theorem(OPA)"
-  ]
+    "angle_addition(1,BPC,CPA)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "radius_of_circle_property_length_equal(1,OB,O)",
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+    "tangent_of_circle_property_perpendicular(1,PB,O,O)",
+    "mirror_congruent_triangle_judgment_hl(1,PAO,POB)",
+    "mirror_congruent_triangle_property_angle_equal(1,PAO,POB)",
+    "sine_theorem(1,OPA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,BPC,CPA)": [],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PAO,POB)"
+    ],
+    "radius_of_circle_property_length_equal(1,OB,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PAO,POB)"
+    ],
+    "tangent_of_circle_property_perpendicular(2,PA,O,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PAO,POB)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,PB,O,O)": [
+      "mirror_congruent_triangle_judgment_hl(1,PAO,POB)"
+    ],
+    "mirror_congruent_triangle_judgment_hl(1,PAO,POB)": [
+      "mirror_congruent_triangle_property_angle_equal(1,PAO,POB)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,PAO,POB)": [],
+    "sine_theorem(1,OPA)": [],
+    "START": [
+      "angle_addition(1,BPC,CPA)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "tangent_of_circle_property_perpendicular(2,PA,O,O)",
+      "tangent_of_circle_property_perpendicular(1,PB,O,O)",
+      "sine_theorem(1,OPA)"
+    ]
+  }
 }

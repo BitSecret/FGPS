@@ -25,11 +25,35 @@
   "goal_cdl": "Value(Div(LengthOfLine(BF),LengthOfLine(EF)))",
   "problem_answer": "5/3",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_alternate_interior_angle(AE,BC)",
-    "isosceles_triangle_judgment_angle_equal(ABE)",
-    "similar_triangle_judgment_aa(FEA,FBC)",
-    "similar_triangle_property_line_ratio(FEA,FBC)",
-    "similar_triangle_property_line_ratio(AFE,CFB)"
-  ]
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_alternate_interior_angle(1,AE,BC)",
+    "parallel_property_alternate_interior_angle(2,AE,BC)",
+    "isosceles_triangle_judgment_angle_equal(1,ABE)",
+    "similar_triangle_judgment_aa(1,FEA,FBC)",
+    "similar_triangle_property_line_ratio(1,FEA,FBC)",
+    "similar_triangle_property_line_ratio(1,AFE,CFB)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_alternate_interior_angle(1,AE,BC)",
+      "parallel_property_alternate_interior_angle(2,AE,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AE,BC)": [
+      "similar_triangle_judgment_aa(1,FEA,FBC)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,BC)": [
+      "isosceles_triangle_judgment_angle_equal(1,ABE)",
+      "similar_triangle_judgment_aa(1,FEA,FBC)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,ABE)": [],
+    "similar_triangle_judgment_aa(1,FEA,FBC)": [
+      "similar_triangle_property_line_ratio(1,FEA,FBC)",
+      "similar_triangle_property_line_ratio(1,AFE,CFB)"
+    ],
+    "similar_triangle_property_line_ratio(1,FEA,FBC)": [],
+    "similar_triangle_property_line_ratio(1,AFE,CFB)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,BC,E)"
+    ]
+  }
 }

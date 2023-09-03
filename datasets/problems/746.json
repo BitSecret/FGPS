@@ -23,8 +23,19 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(BADC))",
   "problem_answer": "288",
   "theorem_seqs": [
-    "adjacent_complementary_angle(AEC,CED)",
-    "altitude_of_quadrilateral_judgment_right_vertex(CE,BADC)",
-    "parallelogram_area_formula_common(BADC)"
-  ]
+    "adjacent_complementary_angle(1,AEC,CED)",
+    "altitude_of_quadrilateral_judgment_right_vertex(1,CE,BADC)",
+    "parallelogram_area_formula_common(1,BADC)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,AEC,CED)": [
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,BADC)"
+    ],
+    "altitude_of_quadrilateral_judgment_right_vertex(1,CE,BADC)": [],
+    "parallelogram_area_formula_common(1,BADC)": [],
+    "START": [
+      "adjacent_complementary_angle(1,AEC,CED)",
+      "parallelogram_area_formula_common(1,BADC)"
+    ]
+  }
 }

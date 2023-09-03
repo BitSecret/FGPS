@@ -18,8 +18,20 @@
   "goal_cdl": "Value(MeasureOfAngle(ADC))",
   "problem_answer": "101",
   "theorem_seqs": [
-    "trapezoid_judgment_parallel(ADCB)",
-    "isosceles_trapezoid_judgment_line_equal(ADCB)",
-    "isosceles_trapezoid_property_angle_equal(ADCB)"
-  ]
+    "trapezoid_judgment_parallel(1,ADCB)",
+    "isosceles_trapezoid_judgment_line_equal(1,ADCB)",
+    "isosceles_trapezoid_property_angle_equal(1,ADCB)"
+  ],
+  "theorem_seq_dag": {
+    "trapezoid_judgment_parallel(1,ADCB)": [
+      "isosceles_trapezoid_judgment_line_equal(1,ADCB)"
+    ],
+    "isosceles_trapezoid_judgment_line_equal(1,ADCB)": [
+      "isosceles_trapezoid_property_angle_equal(1,ADCB)"
+    ],
+    "isosceles_trapezoid_property_angle_equal(1,ADCB)": [],
+    "START": [
+      "trapezoid_judgment_parallel(1,ADCB)"
+    ]
+  }
 }

@@ -33,9 +33,25 @@
   "goal_cdl": "Value(LengthOfLine(MB))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "median_of_triangle_judgment(AT,ACB)",
-    "median_of_triangle_judgment(BR,BAC)",
-    "centroid_of_triangle_judgment_intersection(M,CBA,T,R)",
-    "centroid_of_triangle_property_line_ratio(M,BAC,R)"
-  ]
+    "median_of_triangle_judgment(1,AT,ACB)",
+    "median_of_triangle_judgment(1,BR,BAC)",
+    "centroid_of_triangle_judgment_intersection(1,M,CBA,T,R)",
+    "centroid_of_triangle_property_line_ratio(1,M,BAC,R)"
+  ],
+  "theorem_seq_dag": {
+    "median_of_triangle_judgment(1,AT,ACB)": [
+      "centroid_of_triangle_judgment_intersection(1,M,CBA,T,R)"
+    ],
+    "median_of_triangle_judgment(1,BR,BAC)": [
+      "centroid_of_triangle_judgment_intersection(1,M,CBA,T,R)"
+    ],
+    "centroid_of_triangle_judgment_intersection(1,M,CBA,T,R)": [
+      "centroid_of_triangle_property_line_ratio(1,M,BAC,R)"
+    ],
+    "centroid_of_triangle_property_line_ratio(1,M,BAC,R)": [],
+    "START": [
+      "median_of_triangle_judgment(1,AT,ACB)",
+      "median_of_triangle_judgment(1,BR,BAC)"
+    ]
+  }
 }

@@ -22,13 +22,39 @@
   "goal_cdl": "Value(LengthOfLine(BE))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "quadrilateral_property_angle_sum(EBCD)",
-    "adjacent_complementary_angle(AED,DEB)",
-    "adjacent_complementary_angle(CDE,EDA)",
-    "mirror_similar_triangle_judgment_aa(AED,ABC)",
-    "mirror_similar_triangle_property_line_ratio(EDA,CAB)",
-    "mirror_similar_triangle_property_line_ratio(DAE,BCA)",
-    "line_addition(AE,EB)",
-    "line_addition(AD,DC)"
-  ]
+    "quadrilateral_property_angle_sum(1,EBCD)",
+    "adjacent_complementary_angle(1,AED,DEB)",
+    "adjacent_complementary_angle(1,CDE,EDA)",
+    "mirror_similar_triangle_judgment_aa(1,AED,ABC)",
+    "mirror_similar_triangle_property_line_ratio(1,EDA,CAB)",
+    "mirror_similar_triangle_property_line_ratio(1,DAE,BCA)",
+    "line_addition(1,AE,EB)",
+    "line_addition(1,AD,DC)"
+  ],
+  "theorem_seq_dag": {
+    "quadrilateral_property_angle_sum(1,EBCD)": [
+      "mirror_similar_triangle_judgment_aa(1,AED,ABC)"
+    ],
+    "adjacent_complementary_angle(1,AED,DEB)": [
+      "mirror_similar_triangle_judgment_aa(1,AED,ABC)"
+    ],
+    "adjacent_complementary_angle(1,CDE,EDA)": [
+      "mirror_similar_triangle_judgment_aa(1,AED,ABC)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,AED,ABC)": [
+      "mirror_similar_triangle_property_line_ratio(1,EDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,DAE,BCA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,EDA,CAB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DAE,BCA)": [],
+    "line_addition(1,AE,EB)": [],
+    "line_addition(1,AD,DC)": [],
+    "START": [
+      "quadrilateral_property_angle_sum(1,EBCD)",
+      "adjacent_complementary_angle(1,AED,DEB)",
+      "adjacent_complementary_angle(1,CDE,EDA)",
+      "line_addition(1,AE,EB)",
+      "line_addition(1,AD,DC)"
+    ]
+  }
 }

@@ -29,13 +29,43 @@
   "goal_cdl": "Value(LengthOfLine(EG))",
   "problem_answer": "8.5",
   "theorem_seqs": [
-    "mirror_similar_triangle_property_angle_equal(CAB,GFE)",
-    "flat_angle(BCD)",
-    "flat_angle(HGF)",
-    "angle_addition(BCA,ACD)",
-    "angle_addition(HGE,EGF)",
-    "mirror_similar_triangle_judgment_aa(ACD,EHG)",
-    "mirror_similar_triangle_property_line_ratio(CDA,GEH)",
-    "mirror_similar_triangle_property_line_ratio(DAC,HGE)"
-  ]
+    "mirror_similar_triangle_property_angle_equal(1,CAB,GFE)",
+    "flat_angle(1,BCD)",
+    "flat_angle(1,HGF)",
+    "angle_addition(1,BCA,ACD)",
+    "angle_addition(1,HGE,EGF)",
+    "mirror_similar_triangle_judgment_aa(1,ACD,EHG)",
+    "mirror_similar_triangle_property_line_ratio(1,CDA,GEH)",
+    "mirror_similar_triangle_property_line_ratio(1,DAC,HGE)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_similar_triangle_property_angle_equal(1,CAB,GFE)": [
+      "mirror_similar_triangle_judgment_aa(1,ACD,EHG)"
+    ],
+    "flat_angle(1,BCD)": [
+      "mirror_similar_triangle_judgment_aa(1,ACD,EHG)"
+    ],
+    "flat_angle(1,HGF)": [
+      "mirror_similar_triangle_judgment_aa(1,ACD,EHG)"
+    ],
+    "angle_addition(1,BCA,ACD)": [
+      "mirror_similar_triangle_judgment_aa(1,ACD,EHG)"
+    ],
+    "angle_addition(1,HGE,EGF)": [
+      "mirror_similar_triangle_judgment_aa(1,ACD,EHG)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,ACD,EHG)": [
+      "mirror_similar_triangle_property_line_ratio(1,CDA,GEH)",
+      "mirror_similar_triangle_property_line_ratio(1,DAC,HGE)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,CDA,GEH)": [],
+    "mirror_similar_triangle_property_line_ratio(1,DAC,HGE)": [],
+    "START": [
+      "mirror_similar_triangle_property_angle_equal(1,CAB,GFE)",
+      "flat_angle(1,BCD)",
+      "flat_angle(1,HGF)",
+      "angle_addition(1,BCA,ACD)",
+      "angle_addition(1,HGE,EGF)"
+    ]
+  }
 }

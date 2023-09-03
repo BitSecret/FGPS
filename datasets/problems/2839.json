@@ -25,7 +25,16 @@
   "goal_cdl": "Value(MeasureOfAngle(CAD))",
   "problem_answer": "38",
   "theorem_seqs": [
-    "mirror_congruent_triangle_judgment_hl(ADC,ACB)",
-    "mirror_congruent_triangle_property_angle_equal(ADC,ACB)"
-  ]
+    "mirror_congruent_triangle_judgment_hl(1,ADC,ACB)",
+    "mirror_congruent_triangle_property_angle_equal(1,ADC,ACB)"
+  ],
+  "theorem_seq_dag": {
+    "mirror_congruent_triangle_judgment_hl(1,ADC,ACB)": [
+      "mirror_congruent_triangle_property_angle_equal(1,ADC,ACB)"
+    ],
+    "mirror_congruent_triangle_property_angle_equal(1,ADC,ACB)": [],
+    "START": [
+      "mirror_congruent_triangle_judgment_hl(1,ADC,ACB)"
+    ]
+  }
 }

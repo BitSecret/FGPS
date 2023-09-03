@@ -35,21 +35,73 @@
   "goal_cdl": "Value(LengthOfLine(PQ))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(RP,XW,Y)",
-    "parallel_property_collinear_extend(WX,PY,Q)",
-    "adjacent_complementary_angle(QSY,YSP)",
-    "adjacent_complementary_angle(RAY,YAQ)",
-    "parallel_judgment_ipsilateral_internal_angle(QA,SY)",
-    "parallel_judgment_ipsilateral_internal_angle(SQ,YA)",
-    "parallel_judgment_ipsilateral_internal_angle(QR,SY)",
-    "parallel_property_ipsilateral_internal_angle(YS,AQ)",
-    "parallel_property_alternate_interior_angle(YP,QW)",
-    "parallel_property_corresponding_angle(YS,RQ,P)",
-    "similar_triangle_judgment_aa(XWY,YRA)",
-    "similar_triangle_property_line_ratio(WYX,RAY)",
-    "similar_triangle_property_line_ratio(YXW,AYR)",
-    "parallelogram_judgment_parallel_and_parallel(YAQS)",
-    "parallelogram_property_opposite_line_equal(YAQS)",
-    "line_addition(PS,SQ)"
-  ]
+    "parallel_property_collinear_extend(3,RP,XW,Y)",
+    "parallel_property_collinear_extend(3,WX,PY,Q)",
+    "adjacent_complementary_angle(1,QSY,YSP)",
+    "adjacent_complementary_angle(1,RAY,YAQ)",
+    "parallel_judgment_ipsilateral_internal_angle(1,QA,SY)",
+    "parallel_judgment_ipsilateral_internal_angle(1,SQ,YA)",
+    "parallel_judgment_ipsilateral_internal_angle(1,QR,SY)",
+    "parallel_property_ipsilateral_internal_angle(1,YS,AQ)",
+    "parallel_property_alternate_interior_angle(1,YP,QW)",
+    "parallel_property_corresponding_angle(1,YS,RQ,P)",
+    "similar_triangle_judgment_aa(1,XWY,YRA)",
+    "similar_triangle_property_line_ratio(1,WYX,RAY)",
+    "similar_triangle_property_line_ratio(1,YXW,AYR)",
+    "parallelogram_judgment_parallel_and_parallel(1,YAQS)",
+    "parallelogram_property_opposite_line_equal(1,YAQS)",
+    "line_addition(1,PS,SQ)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,RP,XW,Y)": [
+      "parallel_property_collinear_extend(3,WX,PY,Q)"
+    ],
+    "parallel_property_collinear_extend(3,WX,PY,Q)": [
+      "parallel_property_alternate_interior_angle(1,YP,QW)"
+    ],
+    "adjacent_complementary_angle(1,QSY,YSP)": [
+      "parallel_judgment_ipsilateral_internal_angle(1,QA,SY)",
+      "parallel_judgment_ipsilateral_internal_angle(1,SQ,YA)",
+      "parallel_judgment_ipsilateral_internal_angle(1,QR,SY)"
+    ],
+    "adjacent_complementary_angle(1,RAY,YAQ)": [
+      "similar_triangle_judgment_aa(1,XWY,YRA)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,QA,SY)": [
+      "parallel_property_ipsilateral_internal_angle(1,YS,AQ)",
+      "parallelogram_judgment_parallel_and_parallel(1,YAQS)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,SQ,YA)": [
+      "parallelogram_judgment_parallel_and_parallel(1,YAQS)"
+    ],
+    "parallel_judgment_ipsilateral_internal_angle(1,QR,SY)": [
+      "parallel_property_corresponding_angle(1,YS,RQ,P)"
+    ],
+    "parallel_property_ipsilateral_internal_angle(1,YS,AQ)": [
+      "similar_triangle_judgment_aa(1,XWY,YRA)"
+    ],
+    "parallel_property_alternate_interior_angle(1,YP,QW)": [
+      "similar_triangle_judgment_aa(1,XWY,YRA)"
+    ],
+    "parallel_property_corresponding_angle(1,YS,RQ,P)": [
+      "similar_triangle_judgment_aa(1,XWY,YRA)"
+    ],
+    "similar_triangle_judgment_aa(1,XWY,YRA)": [
+      "similar_triangle_property_line_ratio(1,WYX,RAY)",
+      "similar_triangle_property_line_ratio(1,YXW,AYR)"
+    ],
+    "similar_triangle_property_line_ratio(1,WYX,RAY)": [],
+    "similar_triangle_property_line_ratio(1,YXW,AYR)": [],
+    "parallelogram_judgment_parallel_and_parallel(1,YAQS)": [
+      "parallelogram_property_opposite_line_equal(1,YAQS)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,YAQS)": [],
+    "line_addition(1,PS,SQ)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,RP,XW,Y)",
+      "adjacent_complementary_angle(1,QSY,YSP)",
+      "adjacent_complementary_angle(1,RAY,YAQ)",
+      "line_addition(1,PS,SQ)"
+    ]
+  }
 }

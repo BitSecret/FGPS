@@ -25,10 +25,27 @@
   "goal_cdl": "Value(MeasureOfAngle(CBD))",
   "problem_answer": "138",
   "theorem_seqs": [
-    "adjacent_complementary_angle(FDB,BDE)",
-    "adjacent_complementary_angle(CBD,DBF)",
-    "perpendicular_judgment_angle(FD,BD)",
-    "parallel_judgment_per_per(FG,DB)",
-    "parallel_property_alternate_interior_angle(FG,DB)"
-  ]
+    "adjacent_complementary_angle(1,FDB,BDE)",
+    "adjacent_complementary_angle(1,CBD,DBF)",
+    "perpendicular_judgment_angle(1,FD,BD)",
+    "parallel_judgment_per_per(1,FG,DB)",
+    "parallel_property_alternate_interior_angle(1,FG,DB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,FDB,BDE)": [
+      "perpendicular_judgment_angle(1,FD,BD)"
+    ],
+    "adjacent_complementary_angle(1,CBD,DBF)": [],
+    "perpendicular_judgment_angle(1,FD,BD)": [
+      "parallel_judgment_per_per(1,FG,DB)"
+    ],
+    "parallel_judgment_per_per(1,FG,DB)": [
+      "parallel_property_alternate_interior_angle(1,FG,DB)"
+    ],
+    "parallel_property_alternate_interior_angle(1,FG,DB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,FDB,BDE)",
+      "adjacent_complementary_angle(1,CBD,DBF)"
+    ]
+  }
 }

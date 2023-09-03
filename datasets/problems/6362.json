@@ -23,9 +23,25 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(ADB)",
-    "isosceles_triangle_property_angle_equal(ADB)",
-    "triangle_property_angle_sum(ADB)",
-    "isosceles_triangle_judgment_angle_equal(BAD)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,ADB)",
+    "isosceles_triangle_property_angle_equal(1,ADB)",
+    "triangle_property_angle_sum(1,ADB)",
+    "isosceles_triangle_judgment_angle_equal(1,BAD)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,ADB)": [
+      "isosceles_triangle_property_angle_equal(1,ADB)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ADB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BAD)"
+    ],
+    "triangle_property_angle_sum(1,ADB)": [
+      "isosceles_triangle_judgment_angle_equal(1,BAD)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BAD)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,ADB)",
+      "triangle_property_angle_sum(1,ADB)"
+    ]
+  }
 }

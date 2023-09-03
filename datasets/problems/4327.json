@@ -29,17 +29,55 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "5",
   "theorem_seqs": [
-    "flat_angle(FAC)",
-    "angle_addition(FAB,BAC)",
-    "arc_property_center_angle(ABF,A)",
-    "arc_property_center_angle(AED,A)",
-    "congruent_arc_judgment_measure_equal(ABF,AED)",
-    "congruent_arc_property_chord_equal(ABF,AED)",
-    "diameter_of_circle_property_right_angle(CBF,A)",
-    "right_triangle_judgment_angle(CBF)",
-    "right_triangle_property_pythagorean(CBF)",
-    "diameter_of_circle_property_length_equal(CF,A)",
-    "circle_property_length_of_radius_and_diameter(A)",
-    "radius_of_circle_property_length_equal(AC,A)"
-  ]
+    "flat_angle(1,FAC)",
+    "angle_addition(1,FAB,BAC)",
+    "arc_property_center_angle(1,ABF,A)",
+    "arc_property_center_angle(1,AED,A)",
+    "congruent_arc_judgment_measure_equal(1,ABF,AED)",
+    "congruent_arc_property_chord_equal(1,ABF,AED)",
+    "diameter_of_circle_property_right_angle(1,CBF,A)",
+    "right_triangle_judgment_angle(1,CBF)",
+    "right_triangle_property_pythagorean(1,CBF)",
+    "diameter_of_circle_property_length_equal(1,CF,A)",
+    "circle_property_length_of_radius_and_diameter(1,A)",
+    "radius_of_circle_property_length_equal(1,AC,A)"
+  ],
+  "theorem_seq_dag": {
+    "flat_angle(1,FAC)": [
+      "congruent_arc_judgment_measure_equal(1,ABF,AED)"
+    ],
+    "angle_addition(1,FAB,BAC)": [
+      "congruent_arc_judgment_measure_equal(1,ABF,AED)"
+    ],
+    "arc_property_center_angle(1,ABF,A)": [
+      "congruent_arc_judgment_measure_equal(1,ABF,AED)"
+    ],
+    "arc_property_center_angle(1,AED,A)": [
+      "congruent_arc_judgment_measure_equal(1,ABF,AED)"
+    ],
+    "congruent_arc_judgment_measure_equal(1,ABF,AED)": [
+      "congruent_arc_property_chord_equal(1,ABF,AED)"
+    ],
+    "congruent_arc_property_chord_equal(1,ABF,AED)": [],
+    "diameter_of_circle_property_right_angle(1,CBF,A)": [
+      "right_triangle_judgment_angle(1,CBF)"
+    ],
+    "right_triangle_judgment_angle(1,CBF)": [
+      "right_triangle_property_pythagorean(1,CBF)"
+    ],
+    "right_triangle_property_pythagorean(1,CBF)": [],
+    "diameter_of_circle_property_length_equal(1,CF,A)": [],
+    "circle_property_length_of_radius_and_diameter(1,A)": [],
+    "radius_of_circle_property_length_equal(1,AC,A)": [],
+    "START": [
+      "flat_angle(1,FAC)",
+      "angle_addition(1,FAB,BAC)",
+      "arc_property_center_angle(1,ABF,A)",
+      "arc_property_center_angle(1,AED,A)",
+      "diameter_of_circle_property_right_angle(1,CBF,A)",
+      "diameter_of_circle_property_length_equal(1,CF,A)",
+      "circle_property_length_of_radius_and_diameter(1,A)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  }
 }

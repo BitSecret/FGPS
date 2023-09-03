@@ -71,11 +71,6 @@ class Condition:
         if not self.has(predicate, item):
             self.items.append((predicate, item, tuple(set(premise)), theorem, self.step_count))
             self.items_group[predicate].append(item)
-
-            if predicate == "Equation":
-                self.id_of_item[(predicate, str(item))] = self.id_count
-            else:
-                self.id_of_item[(predicate, item)] = self.id_count
             self.ids_of_predicate[predicate].append(self.id_count)
             self.ids_of_step[self.step_count].append(self.id_count)
 
@@ -83,7 +78,11 @@ class Condition:
                 self.simplified_equation[item] = [self.id_count]
                 self.eq_solved = False
 
+            if predicate == "Equation":
+                item = str(item)
+            self.id_of_item[(predicate, item)] = self.id_count
             self.id_count += 1
+
             return True, self.id_count - 1
 
         return False, None
@@ -129,14 +128,10 @@ class Condition:
         return ids, items
 
     def get_premise_by_predicate_and_item(self, predicate, item):
-        if predicate == "Equation":
-            item = str(item)
-        return self.items[self.id_of_item[(predicate, item)]][2]
+        return self.items[self.get_id_by_predicate_and_item(predicate, item)][2]
 
     def get_theorem_by_predicate_and_item(self, predicate, item):
-        if predicate == "Equation":
-            item = str(item)
-        return self.items[self.id_of_item[(predicate, item)]][3]
+        return self.items[self.get_id_by_predicate_and_item(predicate, item)][3]
 
 
 class Goal:

@@ -23,10 +23,24 @@
   "goal_cdl": "Value(Add(LengthOfLine(AC),LengthOfLine(BD)))",
   "problem_answer": "18",
   "theorem_seqs": [
-    "triangle_perimeter_formula(ABO)",
-    "parallelogram_property_diagonal_bisection(ABCD,O)",
-    "parallelogram_property_diagonal_bisection(BCDA,O)",
-    "line_addition(AO,OC)",
-    "line_addition(BO,OD)"
-  ]
+    "triangle_perimeter_formula(1,ABO)",
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+    "line_addition(1,AO,OC)",
+    "line_addition(1,BO,OD)"
+  ],
+  "theorem_seq_dag": {
+    "triangle_perimeter_formula(1,ABO)": [],
+    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [],
+    "parallelogram_property_diagonal_bisection(1,BCDA,O)": [],
+    "line_addition(1,AO,OC)": [],
+    "line_addition(1,BO,OD)": [],
+    "START": [
+      "triangle_perimeter_formula(1,ABO)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,AO,OC)",
+      "line_addition(1,BO,OD)"
+    ]
+  }
 }

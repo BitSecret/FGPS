@@ -24,8 +24,19 @@
   "goal_cdl": "Value(LengthOfLine(AB))",
   "problem_answer": "6",
   "theorem_seqs": [
-    "midsegment_of_triangle_judgment_midpoint(OM,ACD)",
-    "midsegment_of_triangle_property_length(OM,ACD)",
-    "parallelogram_property_opposite_line_equal(ABCD)"
-  ]
+    "midsegment_of_triangle_judgment_midpoint(1,OM,ACD)",
+    "midsegment_of_triangle_property_length(1,OM,ACD)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)"
+  ],
+  "theorem_seq_dag": {
+    "midsegment_of_triangle_judgment_midpoint(1,OM,ACD)": [
+      "midsegment_of_triangle_property_length(1,OM,ACD)"
+    ],
+    "midsegment_of_triangle_property_length(1,OM,ACD)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "START": [
+      "midsegment_of_triangle_judgment_midpoint(1,OM,ACD)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)"
+    ]
+  }
 }

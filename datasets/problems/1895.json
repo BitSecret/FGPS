@@ -29,9 +29,23 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "5",
   "theorem_seqs": [
-    "similar_triangle_property_angle_equal(DAC,MJL)",
-    "similar_triangle_judgment_aa(ABD,JKM)",
-    "similar_triangle_property_line_ratio(DAB,MJK)",
-    "similar_triangle_property_line_ratio(BDA,KMJ)"
-  ]
+    "similar_triangle_property_angle_equal(1,DAC,MJL)",
+    "similar_triangle_judgment_aa(1,ABD,JKM)",
+    "similar_triangle_property_line_ratio(1,DAB,MJK)",
+    "similar_triangle_property_line_ratio(1,BDA,KMJ)"
+  ],
+  "theorem_seq_dag": {
+    "similar_triangle_property_angle_equal(1,DAC,MJL)": [
+      "similar_triangle_judgment_aa(1,ABD,JKM)"
+    ],
+    "similar_triangle_judgment_aa(1,ABD,JKM)": [
+      "similar_triangle_property_line_ratio(1,BDA,KMJ)",
+      "similar_triangle_property_line_ratio(1,DAB,MJK)"
+    ],
+    "similar_triangle_property_line_ratio(1,DAB,MJK)": [],
+    "similar_triangle_property_line_ratio(1,BDA,KMJ)": [],
+    "START": [
+      "similar_triangle_property_angle_equal(1,DAC,MJL)"
+    ]
+  }
 }

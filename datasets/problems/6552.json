@@ -24,14 +24,40 @@
   "goal_cdl": "Value(MeasureOfAngle(BDA))",
   "problem_answer": "120",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(BD,O,O)",
-    "triangle_property_angle_sum(DOB)",
-    "adjacent_complementary_angle(AOD,DOB)",
-    "radius_of_circle_property_length_equal(OD,O)",
-    "radius_of_circle_property_length_equal(OA,O)",
-    "isosceles_triangle_judgment_line_equal(ODA)",
-    "isosceles_triangle_property_angle_equal(ODA)",
-    "triangle_property_angle_sum(ODA)",
-    "triangle_property_angle_sum(DAB)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,BD,O,O)",
+    "triangle_property_angle_sum(1,DOB)",
+    "adjacent_complementary_angle(1,AOD,DOB)",
+    "radius_of_circle_property_length_equal(1,OD,O)",
+    "radius_of_circle_property_length_equal(1,OA,O)",
+    "isosceles_triangle_judgment_line_equal(1,ODA)",
+    "isosceles_triangle_property_angle_equal(1,ODA)",
+    "triangle_property_angle_sum(1,ODA)",
+    "triangle_property_angle_sum(1,DAB)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,BD,O,O)": [],
+    "triangle_property_angle_sum(1,DOB)": [],
+    "adjacent_complementary_angle(1,AOD,DOB)": [],
+    "radius_of_circle_property_length_equal(1,OD,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "radius_of_circle_property_length_equal(1,OA,O)": [
+      "isosceles_triangle_judgment_line_equal(1,ODA)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ODA)": [
+      "isosceles_triangle_property_angle_equal(1,ODA)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ODA)": [],
+    "triangle_property_angle_sum(1,ODA)": [],
+    "triangle_property_angle_sum(1,DAB)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,BD,O,O)",
+      "triangle_property_angle_sum(1,DOB)",
+      "adjacent_complementary_angle(1,AOD,DOB)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_property_angle_sum(1,ODA)",
+      "triangle_property_angle_sum(1,DAB)"
+    ]
+  }
 }

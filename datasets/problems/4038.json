@@ -29,22 +29,72 @@
   "goal_cdl": "Value(LengthOfLine(EH))",
   "problem_answer": "48",
   "theorem_seqs": [
-    "parallel_judgment_corresponding_angle(FE,DK,G)",
-    "parallel_property_collinear_extend(GF,HE,C)",
-    "parallel_property_collinear_extend(GF,HE,B)",
-    "parallel_property_collinear_extend(EH,BF,K)",
-    "parallel_property_collinear_extend(FB,KE,D)",
-    "parallelogram_judgment_parallel_and_parallel(KEFD)",
-    "parallelogram_property_opposite_line_equal(EFDK)",
-    "line_addition(AK,KD)",
-    "parallel_property_corresponding_angle(EH,BG,A)",
-    "parallel_property_corresponding_angle(CG,HE,A)",
-    "parallel_property_corresponding_angle(DF,KE,A)",
-    "similar_triangle_judgment_aa(AEH,ABC)",
-    "altitude_of_triangle_judgment(AK,AEH)",
-    "triangle_area_formula_common(AEH)",
-    "triangle_area_formula_common(ABC)",
-    "similar_triangle_property_line_ratio(AEH,ABC)",
-    "similar_triangle_property_area_square_ratio(AEH,ABC)"
-  ]
+    "parallel_judgment_corresponding_angle(2,FE,DK,G)",
+    "parallel_property_collinear_extend(1,GF,HE,C)",
+    "parallel_property_collinear_extend(2,GF,HE,B)",
+    "parallel_property_collinear_extend(3,EH,BF,K)",
+    "parallel_property_collinear_extend(1,FB,KE,D)",
+    "parallelogram_judgment_parallel_and_parallel(1,KEFD)",
+    "parallelogram_property_opposite_line_equal(1,EFDK)",
+    "line_addition(1,AK,KD)",
+    "parallel_property_corresponding_angle(1,EH,BG,A)",
+    "parallel_property_corresponding_angle(2,CG,HE,A)",
+    "parallel_property_corresponding_angle(2,DF,KE,A)",
+    "similar_triangle_judgment_aa(1,AEH,ABC)",
+    "altitude_of_triangle_judgment(1,AK,AEH)",
+    "triangle_area_formula_common(1,AEH)",
+    "triangle_area_formula_common(1,ABC)",
+    "similar_triangle_property_line_ratio(1,AEH,ABC)",
+    "similar_triangle_property_area_square_ratio(1,AEH,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_judgment_corresponding_angle(2,FE,DK,G)": [
+      "parallelogram_judgment_parallel_and_parallel(1,KEFD)"
+    ],
+    "parallel_property_collinear_extend(1,GF,HE,C)": [
+      "parallel_property_corresponding_angle(2,CG,HE,A)"
+    ],
+    "parallel_property_collinear_extend(2,GF,HE,B)": [
+      "parallel_property_corresponding_angle(1,EH,BG,A)",
+      "parallel_property_collinear_extend(3,EH,BF,K)"
+    ],
+    "parallel_property_collinear_extend(3,EH,BF,K)": [
+      "parallel_property_collinear_extend(1,FB,KE,D)"
+    ],
+    "parallel_property_collinear_extend(1,FB,KE,D)": [
+      "parallel_property_corresponding_angle(2,DF,KE,A)",
+      "parallelogram_judgment_parallel_and_parallel(1,KEFD)"
+    ],
+    "parallelogram_judgment_parallel_and_parallel(1,KEFD)": [
+      "parallelogram_property_opposite_line_equal(1,EFDK)"
+    ],
+    "parallelogram_property_opposite_line_equal(1,EFDK)": [],
+    "line_addition(1,AK,KD)": [],
+    "parallel_property_corresponding_angle(1,EH,BG,A)": [
+      "similar_triangle_judgment_aa(1,AEH,ABC)"
+    ],
+    "parallel_property_corresponding_angle(2,CG,HE,A)": [
+      "similar_triangle_judgment_aa(1,AEH,ABC)"
+    ],
+    "parallel_property_corresponding_angle(2,DF,KE,A)": [
+      "altitude_of_triangle_judgment(1,AK,AEH)"
+    ],
+    "similar_triangle_judgment_aa(1,AEH,ABC)": [
+      "similar_triangle_property_line_ratio(1,AEH,ABC)",
+      "similar_triangle_property_area_square_ratio(1,AEH,ABC)"
+    ],
+    "altitude_of_triangle_judgment(1,AK,AEH)": [],
+    "triangle_area_formula_common(1,AEH)": [],
+    "triangle_area_formula_common(1,ABC)": [],
+    "similar_triangle_property_line_ratio(1,AEH,ABC)": [],
+    "similar_triangle_property_area_square_ratio(1,AEH,ABC)": [],
+    "START": [
+      "parallel_judgment_corresponding_angle(2,FE,DK,G)",
+      "parallel_property_collinear_extend(1,GF,HE,C)",
+      "parallel_property_collinear_extend(2,GF,HE,B)",
+      "line_addition(1,AK,KD)",
+      "triangle_area_formula_common(1,AEH)",
+      "triangle_area_formula_common(1,ABC)"
+    ]
+  }
 }

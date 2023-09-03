@@ -22,9 +22,21 @@
   "goal_cdl": "Value(Add(MeasureOfAngle(CAO),MeasureOfAngle(OBC)))",
   "problem_answer": "50",
   "theorem_seqs": [
-    "arc_property_center_angle(OAB,O)",
-    "arc_property_circumference_angle_external(OAB,C)",
-    "round_angle(BOA,AOB)",
-    "quadrilateral_property_angle_sum(AOBC)"
-  ]
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_circumference_angle_external(1,OAB,C)",
+    "round_angle(1,BOA,AOB)",
+    "quadrilateral_property_angle_sum(1,AOBC)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_circumference_angle_external(1,OAB,C)": [],
+    "round_angle(1,BOA,AOB)": [],
+    "quadrilateral_property_angle_sum(1,AOBC)": [],
+    "START": [
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_circumference_angle_external(1,OAB,C)",
+      "round_angle(1,BOA,AOB)",
+      "quadrilateral_property_angle_sum(1,AOBC)"
+    ]
+  }
 }

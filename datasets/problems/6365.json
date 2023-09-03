@@ -25,10 +25,29 @@
   "goal_cdl": "Value(LengthOfLine(PF))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "isosceles_triangle_judgment_line_equal(ABD)",
-    "isosceles_triangle_property_angle_equal(ABD)",
-    "bisector_of_angle_judgment_angle_equal(BP,EBF)",
-    "bisector_of_angle_property_distance_equal(BP,EBF)"
-  ]
+    "parallel_property_alternate_interior_angle(2,AD,BC)",
+    "isosceles_triangle_judgment_line_equal(1,ABD)",
+    "isosceles_triangle_property_angle_equal(1,ABD)",
+    "bisector_of_angle_judgment_angle_equal(1,BP,EBF)",
+    "bisector_of_angle_property_distance_equal(1,BP,EBF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_alternate_interior_angle(2,AD,BC)": [
+      "bisector_of_angle_judgment_angle_equal(1,BP,EBF)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,ABD)": [
+      "isosceles_triangle_property_angle_equal(1,ABD)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,ABD)": [
+      "bisector_of_angle_judgment_angle_equal(1,BP,EBF)"
+    ],
+    "bisector_of_angle_judgment_angle_equal(1,BP,EBF)": [
+      "bisector_of_angle_property_distance_equal(1,BP,EBF)"
+    ],
+    "bisector_of_angle_property_distance_equal(1,BP,EBF)": [],
+    "START": [
+      "parallel_property_alternate_interior_angle(2,AD,BC)",
+      "isosceles_triangle_judgment_line_equal(1,ABD)"
+    ]
+  }
 }

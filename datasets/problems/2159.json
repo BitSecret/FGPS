@@ -18,9 +18,22 @@
   "goal_cdl": "Value(MeasureOfAngle(RTS))",
   "problem_answer": "61.428",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(TSR)",
-    "right_triangle_property_pythagorean(TSR)",
-    "sine_theorem(TSR)",
-    "sine_theorem(SRT)"
-  ]
+    "right_triangle_judgment_angle(1,TSR)",
+    "right_triangle_property_pythagorean(1,TSR)",
+    "sine_theorem(1,TSR)",
+    "sine_theorem(1,SRT)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,TSR)": [
+      "right_triangle_property_pythagorean(1,TSR)"
+    ],
+    "right_triangle_property_pythagorean(1,TSR)": [],
+    "sine_theorem(1,TSR)": [],
+    "sine_theorem(1,SRT)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,TSR)",
+      "sine_theorem(1,TSR)",
+      "sine_theorem(1,SRT)"
+    ]
+  }
 }

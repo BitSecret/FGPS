@@ -41,9 +41,21 @@
   "goal_cdl": "Value(Add(AreaOfSector(OAG),AreaOfSector(OFN)))",
   "problem_answer": "2*pi",
   "theorem_seqs": [
-    "arc_property_center_angle(OAG,O)",
-    "arc_property_center_angle(OFN,O)",
-    "sector_area_formula(OAG)",
-    "sector_area_formula(OFN)"
-  ]
+    "arc_property_center_angle(1,OAG,O)",
+    "arc_property_center_angle(1,OFN,O)",
+    "sector_area_formula(1,OAG)",
+    "sector_area_formula(1,OFN)"
+  ],
+  "theorem_seq_dag": {
+    "arc_property_center_angle(1,OAG,O)": [],
+    "arc_property_center_angle(1,OFN,O)": [],
+    "sector_area_formula(1,OAG)": [],
+    "sector_area_formula(1,OFN)": [],
+    "START": [
+      "arc_property_center_angle(1,OAG,O)",
+      "arc_property_center_angle(1,OFN,O)",
+      "sector_area_formula(1,OAG)",
+      "sector_area_formula(1,OFN)"
+    ]
+  }
 }

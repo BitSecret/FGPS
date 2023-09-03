@@ -17,8 +17,19 @@
   "goal_cdl": "Value(MeasureOfAngle(KLJ))",
   "problem_answer": "40",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(LJK)",
-    "isosceles_triangle_property_angle_equal(LJK)",
-    "triangle_property_angle_sum(JKL)"
-  ]
+    "isosceles_triangle_judgment_line_equal(1,LJK)",
+    "isosceles_triangle_property_angle_equal(1,LJK)",
+    "triangle_property_angle_sum(1,JKL)"
+  ],
+  "theorem_seq_dag": {
+    "isosceles_triangle_judgment_line_equal(1,LJK)": [
+      "isosceles_triangle_property_angle_equal(1,LJK)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,LJK)": [],
+    "triangle_property_angle_sum(1,JKL)": [],
+    "START": [
+      "isosceles_triangle_judgment_line_equal(1,LJK)",
+      "triangle_property_angle_sum(1,JKL)"
+    ]
+  }
 }

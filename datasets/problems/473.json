@@ -31,11 +31,29 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "8",
   "theorem_seqs": [
-    "tangent_of_circle_property_perpendicular(BE,C,C)",
-    "radius_of_circle_property_length_equal(CF,C)",
-    "radius_of_circle_property_length_equal(CE,C)",
-    "line_addition(CF,FB)",
-    "right_triangle_judgment_angle(BEC)",
-    "right_triangle_property_pythagorean(BEC)"
-  ]
+    "tangent_of_circle_property_perpendicular(2,BE,C,C)",
+    "radius_of_circle_property_length_equal(1,CF,C)",
+    "radius_of_circle_property_length_equal(1,CE,C)",
+    "line_addition(1,CF,FB)",
+    "right_triangle_judgment_angle(1,BEC)",
+    "right_triangle_property_pythagorean(1,BEC)"
+  ],
+  "theorem_seq_dag": {
+    "tangent_of_circle_property_perpendicular(2,BE,C,C)": [
+      "right_triangle_judgment_angle(1,BEC)"
+    ],
+    "radius_of_circle_property_length_equal(1,CF,C)": [],
+    "radius_of_circle_property_length_equal(1,CE,C)": [],
+    "line_addition(1,CF,FB)": [],
+    "right_triangle_judgment_angle(1,BEC)": [
+      "right_triangle_property_pythagorean(1,BEC)"
+    ],
+    "right_triangle_property_pythagorean(1,BEC)": [],
+    "START": [
+      "tangent_of_circle_property_perpendicular(2,BE,C,C)",
+      "radius_of_circle_property_length_equal(1,CF,C)",
+      "radius_of_circle_property_length_equal(1,CE,C)",
+      "line_addition(1,CF,FB)"
+    ]
+  }
 }

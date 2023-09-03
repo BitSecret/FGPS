@@ -23,9 +23,23 @@
   "goal_cdl": "Value(LengthOfLine(WR))",
   "problem_answer": "8",
   "theorem_seqs": [
-    "vertical_angle(WRS,TRV)",
-    "similar_triangle_judgment_aa(SWR,VTR)",
-    "similar_triangle_property_line_ratio(RSW,RVT)",
-    "similar_triangle_property_line_ratio(SWR,VTR)"
-  ]
+    "vertical_angle(1,WRS,TRV)",
+    "similar_triangle_judgment_aa(1,SWR,VTR)",
+    "similar_triangle_property_line_ratio(1,RSW,RVT)",
+    "similar_triangle_property_line_ratio(1,SWR,VTR)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,WRS,TRV)": [
+      "similar_triangle_judgment_aa(1,SWR,VTR)"
+    ],
+    "similar_triangle_judgment_aa(1,SWR,VTR)": [
+      "similar_triangle_property_line_ratio(1,SWR,VTR)",
+      "similar_triangle_property_line_ratio(1,RSW,RVT)"
+    ],
+    "similar_triangle_property_line_ratio(1,RSW,RVT)": [],
+    "similar_triangle_property_line_ratio(1,SWR,VTR)": [],
+    "START": [
+      "vertical_angle(1,WRS,TRV)"
+    ]
+  }
 }

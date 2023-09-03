@@ -25,14 +25,38 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "29.48",
   "theorem_seqs": [
-    "equilateral_triangle_property_angle(ADC)",
-    "equilateral_triangle_property_angle(CAD)",
-    "arc_property_circumference_angle_external(FAD,C)",
-    "arc_property_center_angle(FAD,F)",
-    "radius_of_circle_property_length_equal(FA,F)",
-    "radius_of_circle_property_length_equal(FD,F)",
-    "cosine_theorem(FAD)",
-    "triangle_area_formula_sine(ADC)",
-    "circle_area_formula(F)"
-  ]
+    "equilateral_triangle_property_angle(1,ADC)",
+    "equilateral_triangle_property_angle(1,CAD)",
+    "arc_property_circumference_angle_external(1,FAD,C)",
+    "arc_property_center_angle(1,FAD,F)",
+    "radius_of_circle_property_length_equal(1,FA,F)",
+    "radius_of_circle_property_length_equal(1,FD,F)",
+    "cosine_theorem(1,FAD)",
+    "triangle_area_formula_sine(1,ADC)",
+    "circle_area_formula(1,F)"
+  ],
+  "theorem_seq_dag": {
+    "equilateral_triangle_property_angle(1,ADC)": [],
+    "equilateral_triangle_property_angle(1,CAD)": [],
+    "arc_property_circumference_angle_external(1,FAD,C)": [],
+    "arc_property_center_angle(1,FAD,F)": [],
+    "radius_of_circle_property_length_equal(1,FA,F)": [
+      "solve_eq_22)"
+    ],
+    "radius_of_circle_property_length_equal(1,FD,F)": [],
+    "cosine_theorem(1,FAD)": [],
+    "triangle_area_formula_sine(1,ADC)": [],
+    "circle_area_formula(1,F)": [],
+    "START": [
+      "equilateral_triangle_property_angle(1,ADC)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "arc_property_center_angle(1,FAD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "cosine_theorem(1,FAD)",
+      "triangle_area_formula_sine(1,ADC)",
+      "circle_area_formula(1,F)"
+    ]
+  }
 }

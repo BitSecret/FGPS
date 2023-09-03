@@ -28,11 +28,28 @@
   "goal_cdl": "Value(MeasureOfAngle(AEC))",
   "problem_answer": "65",
   "theorem_seqs": [
-    "congruent_arc_judgment_length_equal(OAB,OCA)",
-    "congruent_arc_property_measure_equal(OAB,OCA)",
-    "arc_property_circumference_angle_external(OAB,C)",
-    "arc_property_circumference_angle_external(OCA,B)",
-    "arc_property_circumference_angle_external(OCA,E)",
-    "triangle_property_angle_sum(ABC)"
-  ]
+    "congruent_arc_judgment_length_equal(1,OAB,OCA)",
+    "congruent_arc_property_measure_equal(1,OAB,OCA)",
+    "arc_property_circumference_angle_external(1,OAB,C)",
+    "arc_property_circumference_angle_external(1,OCA,B)",
+    "arc_property_circumference_angle_external(1,OCA,E)",
+    "triangle_property_angle_sum(1,ABC)"
+  ],
+  "theorem_seq_dag": {
+    "congruent_arc_judgment_length_equal(1,OAB,OCA)": [
+      "congruent_arc_property_measure_equal(1,OAB,OCA)"
+    ],
+    "congruent_arc_property_measure_equal(1,OAB,OCA)": [],
+    "arc_property_circumference_angle_external(1,OAB,C)": [],
+    "arc_property_circumference_angle_external(1,OCA,B)": [],
+    "arc_property_circumference_angle_external(1,OCA,E)": [],
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCA)",
+      "arc_property_circumference_angle_external(1,OAB,C)",
+      "arc_property_circumference_angle_external(1,OCA,B)",
+      "arc_property_circumference_angle_external(1,OCA,E)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  }
 }

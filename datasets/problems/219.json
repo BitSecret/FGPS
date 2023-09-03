@@ -28,9 +28,23 @@
   "goal_cdl": "Value(PerimeterOfTriangle(CPD))",
   "problem_answer": "36",
   "theorem_seqs": [
-    "vertical_angle(BPM,CPN)",
-    "similar_triangle_judgment_aa(BPA,CPD)",
-    "similar_triangle_property_line_ratio(BPA,CPD)",
-    "similar_triangle_property_perimeter_ratio(PAB,PDC)"
-  ]
+    "vertical_angle(1,BPM,CPN)",
+    "similar_triangle_judgment_aa(1,BPA,CPD)",
+    "similar_triangle_property_line_ratio(1,BPA,CPD)",
+    "similar_triangle_property_perimeter_ratio(1,PAB,PDC)"
+  ],
+  "theorem_seq_dag": {
+    "vertical_angle(1,BPM,CPN)": [
+      "similar_triangle_judgment_aa(1,BPA,CPD)"
+    ],
+    "similar_triangle_judgment_aa(1,BPA,CPD)": [
+      "similar_triangle_property_line_ratio(1,BPA,CPD)",
+      "similar_triangle_property_perimeter_ratio(1,PAB,PDC)"
+    ],
+    "similar_triangle_property_line_ratio(1,BPA,CPD)": [],
+    "similar_triangle_property_perimeter_ratio(1,PAB,PDC)": [],
+    "START": [
+      "vertical_angle(1,BPM,CPN)"
+    ]
+  }
 }

@@ -25,10 +25,32 @@
   "goal_cdl": "Value(LengthOfLine(AE))",
   "problem_answer": "4",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_alternate_interior_angle(AE,BC)",
-    "similar_triangle_judgment_aa(FBC,FEA)",
-    "similar_triangle_property_line_ratio(FBC,FEA)",
-    "similar_triangle_property_line_ratio(BCF,EAF)"
-  ]
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_alternate_interior_angle(1,AE,BC)",
+    "parallel_property_alternate_interior_angle(2,AE,BC)",
+    "similar_triangle_judgment_aa(1,FBC,FEA)",
+    "similar_triangle_property_line_ratio(1,FBC,FEA)",
+    "similar_triangle_property_line_ratio(1,BCF,EAF)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_alternate_interior_angle(1,AE,BC)",
+      "parallel_property_alternate_interior_angle(2,AE,BC)"
+    ],
+    "parallel_property_alternate_interior_angle(1,AE,BC)": [
+      "similar_triangle_judgment_aa(1,FBC,FEA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,AE,BC)": [
+      "similar_triangle_judgment_aa(1,FBC,FEA)"
+    ],
+    "similar_triangle_judgment_aa(1,FBC,FEA)": [
+      "similar_triangle_property_line_ratio(1,FBC,FEA)",
+      "similar_triangle_property_line_ratio(1,BCF,EAF)"
+    ],
+    "similar_triangle_property_line_ratio(1,FBC,FEA)": [],
+    "similar_triangle_property_line_ratio(1,BCF,EAF)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AD,BC,E)"
+    ]
+  }
 }

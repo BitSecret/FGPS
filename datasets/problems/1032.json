@@ -21,8 +21,18 @@
   "goal_cdl": "Value(AreaOfSector(YXZ))",
   "problem_answer": "333.874",
   "theorem_seqs": [
-    "round_angle(XYZ,ZYX)",
-    "arc_property_center_angle(YXZ,Y)",
-    "sector_area_formula(YXZ)"
-  ]
+    "round_angle(1,XYZ,ZYX)",
+    "arc_property_center_angle(1,YXZ,Y)",
+    "sector_area_formula(1,YXZ)"
+  ],
+  "theorem_seq_dag": {
+    "round_angle(1,XYZ,ZYX)": [],
+    "arc_property_center_angle(1,YXZ,Y)": [],
+    "sector_area_formula(1,YXZ)": [],
+    "START": [
+      "round_angle(1,XYZ,ZYX)",
+      "arc_property_center_angle(1,YXZ,Y)",
+      "sector_area_formula(1,YXZ)"
+    ]
+  }
 }

@@ -21,9 +21,22 @@
   "goal_cdl": "Value(Tan(MeasureOfAngle(ABC)))",
   "problem_answer": "sqrt(5)/2",
   "theorem_seqs": [
-    "right_triangle_judgment_angle(BCA)",
-    "right_triangle_property_length_of_median(BCA,D)",
-    "right_triangle_property_pythagorean(BCA)",
-    "cosine_theorem(BCA)"
-  ]
+    "right_triangle_judgment_angle(1,BCA)",
+    "right_triangle_property_length_of_median(1,BCA,D)",
+    "right_triangle_property_pythagorean(1,BCA)",
+    "cosine_theorem(1,BCA)"
+  ],
+  "theorem_seq_dag": {
+    "right_triangle_judgment_angle(1,BCA)": [
+      "right_triangle_property_length_of_median(1,BCA,D)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ],
+    "right_triangle_property_length_of_median(1,BCA,D)": [],
+    "right_triangle_property_pythagorean(1,BCA)": [],
+    "cosine_theorem(1,BCA)": [],
+    "START": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,BCA)"
+    ]
+  }
 }

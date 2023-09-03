@@ -24,10 +24,26 @@
   "goal_cdl": "Value(MeasureOfAngle(GEA))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "angle_addition(DEF,FEG)",
-    "parallel_property_collinear_extend(AD,BC,E)",
-    "parallel_property_collinear_extend(CB,DE,F)",
-    "parallel_property_alternate_interior_angle(FB,DE)",
-    "adjacent_complementary_angle(DEG,GEA)"
-  ]
+    "angle_addition(1,DEF,FEG)",
+    "parallel_property_collinear_extend(3,AD,BC,E)",
+    "parallel_property_collinear_extend(3,CB,DE,F)",
+    "parallel_property_alternate_interior_angle(1,FB,DE)",
+    "adjacent_complementary_angle(1,DEG,GEA)"
+  ],
+  "theorem_seq_dag": {
+    "angle_addition(1,DEF,FEG)": [],
+    "parallel_property_collinear_extend(3,AD,BC,E)": [
+      "parallel_property_collinear_extend(3,CB,DE,F)"
+    ],
+    "parallel_property_collinear_extend(3,CB,DE,F)": [
+      "parallel_property_alternate_interior_angle(1,FB,DE)"
+    ],
+    "parallel_property_alternate_interior_angle(1,FB,DE)": [],
+    "adjacent_complementary_angle(1,DEG,GEA)": [],
+    "START": [
+      "angle_addition(1,DEF,FEG)",
+      "parallel_property_collinear_extend(3,AD,BC,E)",
+      "adjacent_complementary_angle(1,DEG,GEA)"
+    ]
+  }
 }

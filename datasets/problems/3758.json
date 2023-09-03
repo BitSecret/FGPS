@@ -27,9 +27,23 @@
   "goal_cdl": "Value(MeasureOfAngle(ABG))",
   "problem_answer": "125",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(AC,DF,B)",
-    "parallel_property_collinear_extend(FD,BA,E)",
-    "parallel_property_alternate_interior_angle(FE,BA)",
-    "adjacent_complementary_angle(EBA,ABG)"
-  ]
+    "parallel_property_collinear_extend(3,AC,DF,B)",
+    "parallel_property_collinear_extend(3,FD,BA,E)",
+    "parallel_property_alternate_interior_angle(2,FE,BA)",
+    "adjacent_complementary_angle(1,EBA,ABG)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(3,AC,DF,B)": [
+      "parallel_property_collinear_extend(3,FD,BA,E)"
+    ],
+    "parallel_property_collinear_extend(3,FD,BA,E)": [
+      "parallel_property_alternate_interior_angle(2,FE,BA)"
+    ],
+    "parallel_property_alternate_interior_angle(2,FE,BA)": [],
+    "adjacent_complementary_angle(1,EBA,ABG)": [],
+    "START": [
+      "parallel_property_collinear_extend(3,AC,DF,B)",
+      "adjacent_complementary_angle(1,EBA,ABG)"
+    ]
+  }
 }

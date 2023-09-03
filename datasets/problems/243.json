@@ -24,10 +24,28 @@
   "goal_cdl": "Value(x)",
   "problem_answer": "21",
   "theorem_seqs": [
-    "line_addition(CA,AY)",
-    "line_addition(BD,DY)",
-    "similar_triangle_judgment_sas(YDA,YBC)",
-    "similar_triangle_property_line_ratio(YDA,YBC)",
-    "similar_triangle_property_line_ratio(AYD,CYB)"
-  ]
+    "line_addition(1,CA,AY)",
+    "line_addition(1,BD,DY)",
+    "similar_triangle_judgment_sas(1,YDA,YBC)",
+    "similar_triangle_property_line_ratio(1,YDA,YBC)",
+    "similar_triangle_property_line_ratio(1,AYD,CYB)"
+  ],
+  "theorem_seq_dag": {
+    "line_addition(1,CA,AY)": [
+      "similar_triangle_judgment_sas(1,YDA,YBC)"
+    ],
+    "line_addition(1,BD,DY)": [
+      "similar_triangle_judgment_sas(1,YDA,YBC)"
+    ],
+    "similar_triangle_judgment_sas(1,YDA,YBC)": [
+      "similar_triangle_property_line_ratio(1,YDA,YBC)",
+      "similar_triangle_property_line_ratio(1,AYD,CYB)"
+    ],
+    "similar_triangle_property_line_ratio(1,YDA,YBC)": [],
+    "similar_triangle_property_line_ratio(1,AYD,CYB)": [],
+    "START": [
+      "line_addition(1,CA,AY)",
+      "line_addition(1,BD,DY)"
+    ]
+  }
 }

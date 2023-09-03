@@ -25,16 +25,53 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ACDB))",
   "problem_answer": "1200",
   "theorem_seqs": [
-    "adjacent_complementary_angle(CEA,AEB)",
-    "adjacent_complementary_angle(AEB,BED)",
-    "adjacent_complementary_angle(DEC,CEA)",
-    "mirror_congruent_triangle_judgment_sas(EDB,ECD)",
-    "mirror_congruent_triangle_judgment_sas(EBA,EAC)",
-    "mirror_congruent_triangle_property_line_equal(EDB,ECD)",
-    "mirror_congruent_triangle_property_line_equal(EBA,EAC)",
-    "kite_judgment_equal_and_equal(DBAC)",
-    "line_addition(AE,ED)",
-    "line_addition(BE,EC)",
-    "kite_area_formula_diagonal(ACDB)"
-  ]
+    "adjacent_complementary_angle(1,CEA,AEB)",
+    "adjacent_complementary_angle(1,AEB,BED)",
+    "adjacent_complementary_angle(1,DEC,CEA)",
+    "mirror_congruent_triangle_judgment_sas(1,EDB,ECD)",
+    "mirror_congruent_triangle_judgment_sas(1,EBA,EAC)",
+    "mirror_congruent_triangle_property_line_equal(1,EDB,ECD)",
+    "mirror_congruent_triangle_property_line_equal(1,EBA,EAC)",
+    "kite_judgment_equal_and_equal(1,DBAC)",
+    "line_addition(1,AE,ED)",
+    "line_addition(1,BE,EC)",
+    "kite_area_formula_diagonal(1,ACDB)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,CEA,AEB)": [
+      "mirror_congruent_triangle_judgment_sas(1,EBA,EAC)",
+      "mirror_congruent_triangle_judgment_sas(1,EDB,ECD)"
+    ],
+    "adjacent_complementary_angle(1,AEB,BED)": [
+      "mirror_congruent_triangle_judgment_sas(1,EDB,ECD)"
+    ],
+    "adjacent_complementary_angle(1,DEC,CEA)": [
+      "mirror_congruent_triangle_judgment_sas(1,EDB,ECD)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,EDB,ECD)": [
+      "mirror_congruent_triangle_property_line_equal(1,EDB,ECD)"
+    ],
+    "mirror_congruent_triangle_judgment_sas(1,EBA,EAC)": [
+      "mirror_congruent_triangle_property_line_equal(1,EBA,EAC)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,EDB,ECD)": [
+      "kite_judgment_equal_and_equal(1,DBAC)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,EBA,EAC)": [
+      "kite_judgment_equal_and_equal(1,DBAC)"
+    ],
+    "kite_judgment_equal_and_equal(1,DBAC)": [
+      "kite_area_formula_diagonal(1,ACDB)"
+    ],
+    "line_addition(1,AE,ED)": [],
+    "line_addition(1,BE,EC)": [],
+    "kite_area_formula_diagonal(1,ACDB)": [],
+    "START": [
+      "adjacent_complementary_angle(1,CEA,AEB)",
+      "adjacent_complementary_angle(1,AEB,BED)",
+      "adjacent_complementary_angle(1,DEC,CEA)",
+      "line_addition(1,AE,ED)",
+      "line_addition(1,BE,EC)"
+    ]
+  }
 }

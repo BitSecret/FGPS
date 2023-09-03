@@ -23,15 +23,44 @@
   "goal_cdl": "Value(PerimeterOfQuadrilateral(DABC))",
   "problem_answer": "12",
   "theorem_seqs": [
-    "parallel_property_collinear_extend(CB,DA,N)",
-    "parallel_property_collinear_extend(BA,CD,M)",
-    "parallel_property_corresponding_angle(DC,MB,N)",
-    "parallel_property_corresponding_angle(NB,DA,M)",
-    "isosceles_triangle_judgment_angle_equal(CND)",
-    "isosceles_triangle_judgment_angle_equal(ADM)",
-    "isosceles_triangle_judgment_angle_equal(BNM)",
-    "line_addition(MA,AB)",
-    "line_addition(BC,CN)",
-    "quadrilateral_perimeter_formula(DABC)"
-  ]
+    "parallel_property_collinear_extend(1,CB,DA,N)",
+    "parallel_property_collinear_extend(2,BA,CD,M)",
+    "parallel_property_corresponding_angle(1,DC,MB,N)",
+    "parallel_property_corresponding_angle(2,NB,DA,M)",
+    "isosceles_triangle_judgment_angle_equal(1,CND)",
+    "isosceles_triangle_judgment_angle_equal(1,ADM)",
+    "isosceles_triangle_judgment_angle_equal(1,BNM)",
+    "line_addition(1,MA,AB)",
+    "line_addition(1,BC,CN)",
+    "quadrilateral_perimeter_formula(1,DABC)"
+  ],
+  "theorem_seq_dag": {
+    "parallel_property_collinear_extend(1,CB,DA,N)": [
+      "parallel_property_corresponding_angle(2,NB,DA,M)"
+    ],
+    "parallel_property_collinear_extend(2,BA,CD,M)": [
+      "parallel_property_corresponding_angle(1,DC,MB,N)"
+    ],
+    "parallel_property_corresponding_angle(1,DC,MB,N)": [
+      "isosceles_triangle_judgment_angle_equal(1,ADM)",
+      "isosceles_triangle_judgment_angle_equal(1,BNM)"
+    ],
+    "parallel_property_corresponding_angle(2,NB,DA,M)": [
+      "isosceles_triangle_judgment_angle_equal(1,CND)",
+      "isosceles_triangle_judgment_angle_equal(1,BNM)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,CND)": [],
+    "isosceles_triangle_judgment_angle_equal(1,ADM)": [],
+    "isosceles_triangle_judgment_angle_equal(1,BNM)": [],
+    "line_addition(1,MA,AB)": [],
+    "line_addition(1,BC,CN)": [],
+    "quadrilateral_perimeter_formula(1,DABC)": [],
+    "START": [
+      "parallel_property_collinear_extend(1,CB,DA,N)",
+      "parallel_property_collinear_extend(2,BA,CD,M)",
+      "line_addition(1,MA,AB)",
+      "line_addition(1,BC,CN)",
+      "quadrilateral_perimeter_formula(1,DABC)"
+    ]
+  }
 }

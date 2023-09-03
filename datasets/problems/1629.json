@@ -24,10 +24,30 @@
   "goal_cdl": "Value(LengthOfLine(SP))",
   "problem_answer": "17",
   "theorem_seqs": [
-    "adjacent_complementary_angle(JPS,SPT)",
-    "triangle_property_angle_sum(MJS)",
-    "triangle_property_angle_sum(SJP)",
-    "mirror_congruent_triangle_judgment_aas(JSM,JPS)",
-    "mirror_congruent_triangle_property_line_equal(JSM,JPS)"
-  ]
+    "adjacent_complementary_angle(1,JPS,SPT)",
+    "triangle_property_angle_sum(1,MJS)",
+    "triangle_property_angle_sum(1,SJP)",
+    "mirror_congruent_triangle_judgment_aas(1,JSM,JPS)",
+    "mirror_congruent_triangle_property_line_equal(1,JSM,JPS)"
+  ],
+  "theorem_seq_dag": {
+    "adjacent_complementary_angle(1,JPS,SPT)": [
+      "mirror_congruent_triangle_judgment_aas(1,JSM,JPS)"
+    ],
+    "triangle_property_angle_sum(1,MJS)": [
+      "mirror_congruent_triangle_judgment_aas(1,JSM,JPS)"
+    ],
+    "triangle_property_angle_sum(1,SJP)": [
+      "mirror_congruent_triangle_judgment_aas(1,JSM,JPS)"
+    ],
+    "mirror_congruent_triangle_judgment_aas(1,JSM,JPS)": [
+      "mirror_congruent_triangle_property_line_equal(1,JSM,JPS)"
+    ],
+    "mirror_congruent_triangle_property_line_equal(1,JSM,JPS)": [],
+    "START": [
+      "adjacent_complementary_angle(1,JPS,SPT)",
+      "triangle_property_angle_sum(1,MJS)",
+      "triangle_property_angle_sum(1,SJP)"
+    ]
+  }
 }
