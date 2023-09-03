@@ -1,4 +1,4 @@
-from solver.aux_tools.parser import InverseParser
+from solver.aux_tools.parser import InverseParserM2F
 from solver.aux_tools.utils import save_json
 from sympy import Float
 from graphviz import Digraph, Graph
@@ -44,7 +44,7 @@ def show(problem):
 
     """-----------Process of Problem Solving-----------"""
     print("\033[36mreasoning_cdl:\033[0m")
-    anti_parsed_cdl = InverseParser.inverse_parse_logic_to_cdl(problem)
+    anti_parsed_cdl = InverseParserM2F.inverse_parse_logic_to_cdl(problem)
     for step in anti_parsed_cdl:
         for cdl in anti_parsed_cdl[step]:
             print("{0:^3}{1:<20}".format(step, cdl))
@@ -179,7 +179,7 @@ def save_solution_tree(problem, path):
 
     for _id in range(problem.condition.id_count):  # summary information
         predicate, item, premise, theorem, _ = problem.condition.items[_id]
-        cdl[_id] = InverseParser.inverse_parse_one(predicate, item, problem)
+        cdl[_id] = InverseParserM2F.inverse_parse_one(predicate, item, problem)
         if theorem == "prerequisite":  # prerequisite not show in graph
             continue
         if (premise, theorem) not in group:
@@ -192,7 +192,7 @@ def save_solution_tree(problem, path):
         if problem.goal.type == "algebra":
             eq = problem.goal.item - problem.goal.answer
             if eq not in problem.condition.get_items_by_predicate("Equation"):  # target not in condition set
-                target_equation = InverseParser.inverse_parse_one("Equation", eq, problem)
+                target_equation = InverseParserM2F.inverse_parse_one("Equation", eq, problem)
                 _id = len(cdl)
                 cdl[_id] = target_equation
                 group[(problem.goal.premise, problem.goal.theorem)] = [_id]
@@ -365,7 +365,7 @@ def _add_edge(dot, nodes, start_node, end_node, edges=None):
 def save_step_msg(problem, path):
     """Save conditions grouped by step in dict."""
     step_msg = {
-        "cdl_inverse_parsed": InverseParser.inverse_parse_logic_to_cdl(problem),
+        "cdl_inverse_parsed": InverseParserM2F.inverse_parse_logic_to_cdl(problem),
         "theorems_applied": {}
     }
     for step in problem.timing:
@@ -397,7 +397,9 @@ def get_used_theorem(problem):
 
     selected_theorem = []
     for step in problem.timing:  # ensure ordered theorem seqs list
-        if problem.timing[step][0] in used_theorem and problem.timing[step][0] not in selected_theorem:
+        if problem.timing[step][0] in used_theorem and \
+                problem.timing[step][0] not in selected_theorem and \
+                problem.timing[step][0] not in ["solve_eq", "extended", "prerequisite"]:
             selected_theorem.append(problem.timing[step][0])
     if problem.goal.theorem not in ["solve_eq", "extended", "prerequisite"] and \
             problem.goal.theorem not in selected_theorem:

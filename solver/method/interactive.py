@@ -1,6 +1,6 @@
 from solver.problem.problem import Problem
 from solver.aux_tools.parser import GDLParser, CDLParser
-from solver.aux_tools.parser import InverseParser as IvParser
+from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
 from solver.core.engine import GeometryPredicateLogic as GeoLogic
 from solver.aux_tools.utils import rough_equal
@@ -28,58 +28,95 @@ class Interactor:
         EqKiller.solve_equations(self.problem)  # Solve the equations after initialization
         self.problem.step("init_problem", time.time() - start_time)  # save applied theorem and update step
 
-    def apply_theorem(self, theorem_name, theorem_para=None):
+    def apply_theorem(self, t_name, t_branch=None, t_para=None):
         """
         Apply a theorem and return whether it is successfully applied.
-        :param theorem_name: <str>.
-        :param theorem_para: tuple of <str>, set None when rough apply theorem.
-        :return update: True or False.
+        :param t_name: <str>.
+        :param t_branch: <str>.
+        :param t_para: tuple of <str>.
+        :return update: <bool>, Whether the question condition updated or not.
         """
         if self.problem is None:
             e_msg = "Problem not loaded. Please run <load_problem> before run <apply_theorem>."
             raise Exception(e_msg)
-        if theorem_name not in self.theorem_GDL:
-            e_msg = "Theorem {} not defined in current GDL.".format(theorem_name)
+        if t_name not in self.theorem_GDL:
+            e_msg = "Theorem {} not defined in current GDL.".format(t_name)
             raise Exception(e_msg)
-        if theorem_name.endswith("definition"):
-            e_msg = "Theorem {} only used for backward reason.".format(theorem_name)
+        if t_name.endswith("definition"):
+            e_msg = "Theorem {} only used for backward reason.".format(t_name)
             raise Exception(e_msg)
-        if theorem_para is not None and len(theorem_para) != len(self.theorem_GDL[theorem_name]["vars"]):
+        if t_para is not None and len(t_para) != len(self.theorem_GDL[t_name]["vars"]):
             e_msg = "Theorem <{}> para length error. Expected {} but got {}.".format(
-                theorem_name, len(self.theorem_GDL[theorem_name]["vars"]), theorem_para)
+                t_name, len(self.theorem_GDL[t_name]["vars"]), t_para)
+            raise Exception(e_msg)
+        if t_branch is not None and t_branch not in self.theorem_GDL[t_name]["body"]:
+            e_msg = "Theorem <{}> branch error. Expected {} but got {}.".format(
+                t_name, self.theorem_GDL[t_name]["body"].keys(), t_branch)
             raise Exception(e_msg)
 
-        if theorem_para is not None:
-            update = self.apply_theorem_accurate(theorem_name, theorem_para)  # mode 1, accurate mode
+        if t_para is None and t_branch is None:
+            update = self.apply_theorem_by_name(t_name)
+        elif t_para is not None and t_branch is None:
+            update = self.apply_theorem_by_name_and_para(t_name, t_para)
+        elif t_para is None and t_branch is not None:
+            update = self.apply_theorem_by_name_and_branch(t_name, t_branch)
         else:
-            update = self.apply_theorem_rough(theorem_name)  # mode 2, rough mode
+            update = self.apply_theorem_by_name_and_para_and_branch(t_name, t_branch, t_para)
 
         if not update:
-            w_msg = "Theorem <{},{}> not applied. Please check your theorem_para or prerequisite.".format(
-                theorem_name, theorem_para)
+            w_msg = "Theorem <{},{},{}> not applied. Please check your t_para or prerequisite.".format(
+                t_name, t_branch, t_para)
             warnings.warn(w_msg)
 
         return update
 
-    def apply_theorem_accurate(self, theorem_name, theorem_para):
+    def apply_theorem_by_name(self, t_name):
         """
-        Apply a theorem in accurate mode and return whether it is successfully applied.
-        :param theorem_name: <str>.
-        :param theorem_para: tuple of <str>
-        :return update: True or False.
+        Apply a theorem with t_name.
+        :param t_name: <str>.
+        :return update: <bool>, Whether the problem condition updated or not.
         """
         update = False
-        start_time = time.time()  # timing
 
-        theorem = IvParser.inverse_parse_logic(  # theorem + para
-            theorem_name, theorem_para, self.theorem_GDL[theorem_name]["para_len"])
+        for branch in self.theorem_GDL[t_name]["body"]:
+            timing = time.time()  # timing
+            gpl = self.theorem_GDL[t_name]["body"][branch]
 
+            conclusions = GeoLogic.run(gpl, self.problem)  # get gpl reasoned result
+            if len(conclusions) == 0:
+                theorem = InverseParserM2F.inverse_parse_theorem(t_name, branch, None, self.theorem_GDL)
+                self.problem.step(theorem, time.time() - timing)
+                continue
+            avg_timing = (time.time() - timing) / len(conclusions)
+            for letters, premise, conclusion in conclusions:
+                t_para = [letters[i] for i in self.theorem_GDL[t_name]["vars"]]
+                theorem = InverseParserM2F.inverse_parse_theorem(t_name, branch, t_para, self.theorem_GDL)
+                for predicate, item in conclusion:  # add conclusion
+                    update = self.problem.add(predicate, item, premise, theorem) or update
+                self.problem.step(theorem, avg_timing)
+
+        timing = time.time()  # timing
+        EqKiller.solve_equations(self.problem)
+        self.problem.step("solve_eq", time.time() - timing)
+
+        return update
+
+    def apply_theorem_by_name_and_para(self, t_name, t_para):
+        """
+        Apply a theorem with t_name and t_para.
+        :param t_name: <str>.
+        :param t_para: tuple of <str>.
+        :return update: <bool>, Whether the problem condition updated or not.
+        """
+        update = False
         letters = {}  # used for vars-letters replacement
-        for i in range(len(self.theorem_GDL[theorem_name]["vars"])):
-            letters[self.theorem_GDL[theorem_name]["vars"][i]] = theorem_para[i]
+        for i in range(len(self.theorem_GDL[t_name]["vars"])):
+            letters[self.theorem_GDL[t_name]["vars"][i]] = t_para[i]
 
-        for branch in self.theorem_GDL[theorem_name]["body"]:
-            gpl = self.theorem_GDL[theorem_name]["body"][branch]
+        for branch in self.theorem_GDL[t_name]["body"]:
+            timing = time.time()  # timing
+            theorem = InverseParserM2F.inverse_parse_theorem(t_name, branch, t_para, self.theorem_GDL)
+            gpl = self.theorem_GDL[t_name]["body"][branch]
             premises = []
             passed = True
 
@@ -98,6 +135,7 @@ class Interactor:
                     break
 
             if not passed:
+                self.problem.step(theorem, time.time() - timing)
                 continue
 
             for equal, item in gpl["algebra_constraints"]:
@@ -117,6 +155,7 @@ class Interactor:
                     break
 
             if not passed:
+                self.problem.step(theorem, time.time() - timing)
                 continue
 
             for predicate, item in gpl["conclusions"]:
@@ -127,42 +166,106 @@ class Interactor:
                     item = tuple(letters[i] for i in item)
                     update = self.problem.add(predicate, item, premises, theorem) or update
 
-        EqKiller.solve_equations(self.problem)
+            self.problem.step(theorem, time.time() - timing)
 
-        self.problem.step(theorem, time.time() - start_time)
+        timing = time.time()  # timing
+        EqKiller.solve_equations(self.problem)
+        self.problem.step("solve_eq", time.time() - timing)
 
         return update
 
-    def apply_theorem_rough(self, theorem_name):
+    def apply_theorem_by_name_and_branch(self, t_name, t_branch):
         """
-        Apply a theorem in rough mode and return whether it is successfully applied.
-        :param theorem_name: <str>.
-        :return update: True or False.
+        Apply a theorem with t_name and t_branch.
+        :param t_name: <str>.
+        :param t_branch: <str>.
+        :return update: <bool>, Whether the question condition updated or not.
         """
         update = False
-        start_time = time.time()  # timing
 
-        theorem_list = []
-        for branch in self.theorem_GDL[theorem_name]["body"]:
-            gpl = self.theorem_GDL[theorem_name]["body"][branch]
+        timing = time.time()  # timing
+        gpl = self.theorem_GDL[t_name]["body"][t_branch]
 
-            conclusions = GeoLogic.run(gpl, self.problem)  # get gpl reasoned result
+        conclusions = GeoLogic.run(gpl, self.problem)  # get gpl reasoned result
+        if len(conclusions) == 0:
+            theorem = InverseParserM2F.inverse_parse_theorem(t_name, t_branch, None, self.theorem_GDL)
+            self.problem.step(theorem, time.time() - timing)
+            return False
+        avg_timing = (time.time() - timing) / len(conclusions)
+        for letters, premise, conclusion in conclusions:
+            t_para = [letters[i] for i in self.theorem_GDL[t_name]["vars"]]
+            theorem = InverseParserM2F.inverse_parse_theorem(t_name, t_branch, t_para, self.theorem_GDL)
 
-            for letters, premise, conclusion in conclusions:
-                theorem_para = [letters[i] for i in self.theorem_GDL[theorem_name]["vars"]]
-                theorem = IvParser.inverse_parse_logic(  # theorem + para, add in problem
-                    theorem_name, theorem_para, self.theorem_GDL[theorem_name]["para_len"])
-                theorem_list.append(theorem)
+            for predicate, item in conclusion:  # add conclusion
+                update = self.problem.add(predicate, item, premise, theorem) or update
+            self.problem.step(theorem, avg_timing)
 
-                for predicate, item in conclusion:  # add conclusion
-                    update = self.problem.add(predicate, item, premise, theorem) or update
-
+        timing = time.time()  # timing
         EqKiller.solve_equations(self.problem)
+        self.problem.step("solve_eq", time.time() - timing)
 
-        self.problem.step(theorem_name, 0)
-        if len(theorem_list) > 0:
-            timing = (time.time() - start_time) / len(theorem_list)
-            for t in theorem_list:
-                self.problem.step(t, timing)
+        return update
+
+    def apply_theorem_by_name_and_para_and_branch(self, t_name, t_branch, t_para):
+        """
+        Apply a theorem with t_name, t_branch and t_para.
+        :param t_name: <str>.
+        :param t_branch: <str>.
+        :param t_para: tuple of <str>.
+        :return update: <bool>, Whether the problem condition updated or not.
+        """
+        update = False
+        timing = time.time()  # timing
+        theorem = InverseParserM2F.inverse_parse_theorem(t_name, t_branch, t_para, self.theorem_GDL)
+
+        letters = {}  # used for vars-letters replacement
+        for i in range(len(self.theorem_GDL[t_name]["vars"])):
+            letters[self.theorem_GDL[t_name]["vars"][i]] = t_para[i]
+
+        gpl = self.theorem_GDL[t_name]["body"][t_branch]
+        premises = []
+
+        for predicate, item in gpl["products"] + gpl["logic_constraints"]:
+            oppose = False
+            if "~" in predicate:
+                oppose = True
+                predicate = predicate.replace("~", "")
+            item = tuple(letters[i] for i in item)
+            has_item = self.problem.condition.has(predicate, item)
+            if has_item:
+                premises.append(self.problem.condition.get_id_by_predicate_and_item(predicate, item))
+
+            if (not oppose and not has_item) or (oppose and has_item):
+                self.problem.step(theorem, time.time() - timing)
+                return False
+
+        for equal, item in gpl["algebra_constraints"]:
+            oppose = False
+            if "~" in equal:
+                oppose = True
+            eq = CDLParser.get_equation_from_tree(self.problem, item, True, letters)
+            solved_eq = False
+
+            result, premise = EqKiller.solve_target(eq, self.problem)
+            if result is not None and rough_equal(result, 0):
+                solved_eq = True
+            premises += premise
+
+            if (not oppose and not solved_eq) or (oppose and solved_eq):
+                self.problem.step(theorem, time.time() - timing)
+                return False
+
+        for predicate, item in gpl["conclusions"]:
+            if predicate == "Equal":  # algebra conclusion
+                eq = CDLParser.get_equation_from_tree(self.problem, item, True, letters)
+                update = self.problem.add("Equation", eq, premises, theorem) or update
+            else:  # logic conclusion
+                item = tuple(letters[i] for i in item)
+                update = self.problem.add(predicate, item, premises, theorem) or update
+        self.problem.step(theorem, time.time() - timing)
+
+        timing = time.time()  # timing
+        EqKiller.solve_equations(self.problem)
+        self.problem.step("solve_eq", time.time() - timing)
 
         return update

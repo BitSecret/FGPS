@@ -269,8 +269,8 @@ class GDLParser(Parser):
                     if len(p2 - p1) > 0 or len(p1 - p2) > 0:
                         e_msg = "Theorem GDL definition error in <{}>.".format(theorem_name)
                         raise Exception(e_msg)
-                    body[branch_count] = parsed_premise[i]
-                    body[branch_count].update(parsed_conclusion)
+                    body[str(branch_count)] = parsed_premise[i]
+                    body[str(branch_count)].update(parsed_conclusion)
                     branch_count += 1
 
             parsed_GDL[name] = {
@@ -538,13 +538,24 @@ class CDLParser(Parser):
         results = []
 
         for theorem in theorem_seqs:
-            if "(" not in theorem:
-                results.append([theorem, None])
-            else:
-                name, para, _ = CDLParser.parse_geo_predicate(theorem)
-                results.append([name, para])
+            results.append(CDLParser.parse_one_theorem(theorem))
 
         return results
+
+    @staticmethod
+    def parse_one_theorem(theorem):
+        if "(" not in theorem:
+            return theorem, None, None
+
+        t_name, t_para = theorem.split("(", 1)
+        t_para = t_para.replace(")", "")
+        if t_para[0].isnumeric():
+            t_branch, t_para = t_para.split(",", 1)
+            t_para = tuple(t_para.replace(",", ""))
+            return t_name, t_branch, t_para
+
+        t_para = tuple(t_para.replace(",", ""))
+        return t_name, None, t_para
 
     @staticmethod
     def get_equation_from_tree(problem, tree, replaced=False, letters=None):
@@ -665,7 +676,8 @@ class CDLParser(Parser):
         return None
 
 
-class InverseParser:
+class InverseParserM2F:
+    """Inverse parse machine language to formal language."""
 
     @staticmethod
     def inverse_parse_logic_to_cdl(problem):
@@ -688,7 +700,7 @@ class InverseParser:
                     i += 1
                     continue
 
-                result = InverseParser.inverse_parse_one(predicate, item, problem)
+                result = InverseParserM2F.inverse_parse_one(predicate, item, problem)
                 inverse_parsed_cdl[step].append(result)
 
                 if predicate in problem.predicate_GDL["Entity"]:  # remove duplicate representation
@@ -707,29 +719,25 @@ class InverseParser:
         Called by <inverse_parse_logic_to_cdl>.
         """
         if predicate == "Equation":
-            return InverseParser._inverse_parse_equation(item, problem)
-        elif predicate in problem.predicate_GDL["Entity"]:
-            return InverseParser.inverse_parse_logic(predicate, item, [1])
-        elif predicate in problem.predicate_GDL["Relation"]:
-            para_len = problem.predicate_GDL["Relation"][predicate]["para_len"]
-            return InverseParser.inverse_parse_logic(predicate, item, para_len)
+            return InverseParserM2F.inverse_parse_equation(item, problem)
+        elif predicate in problem.predicate_GDL["Construction"] or predicate in problem.predicate_GDL["BasicEntity"]:
+            return InverseParserM2F.inverse_parse_preset(predicate, item)
         else:
-            return InverseParser._inverse_parse_preset(predicate, item)
+            return InverseParserM2F.inverse_parse_logic(predicate, item, problem)
 
     @staticmethod
-    def inverse_parse_logic(predicate, item, para_len):
+    def inverse_parse_logic(predicate, item, problem):
         """
         Inverse parse conditions of logic form to CDL.
-        Note that this function also used by Solver for theorem inverse parse.
-        >> inverse_parse_logic(Parallel, ('A', 'B', 'C', 'D'), [2, 2])
+        >> inverse_parse_logic(Parallel, ('A', 'B', 'C', 'D'), problem)
         'Parallel(AB,CD)'
         """
-        if len(para_len) == 1:  # no need add ','
+        if predicate in problem.predicate_GDL["Entity"]:
             return predicate + "(" + "".join(item) + ")"
-        else:  # relation
+        else:
             result = []
             i = 0
-            for l in para_len:
+            for l in problem.predicate_GDL["Relation"][predicate]["para_len"]:
                 result.append("")
                 for _ in range(l):
                     result[-1] += item[i]
@@ -737,7 +745,7 @@ class InverseParser:
             return predicate + "(" + ",".join(result) + ")"
 
     @staticmethod
-    def _inverse_parse_equation(item, problem):
+    def inverse_parse_equation(item, problem):
         """
         Inverse parse conditions of logic form to CDL.
         Called by <inverse_parse_one>.
@@ -756,7 +764,7 @@ class InverseParser:
         return "Equation" + "(" + str(item).replace(" ", "") + ")"
 
     @staticmethod
-    def _inverse_parse_preset(predicate, item):
+    def inverse_parse_preset(predicate, item):
         """
         Inverse parse conditions of logic form to CDL.
         Note that this function only inverse parse preset predicate.
@@ -767,8 +775,33 @@ class InverseParser:
             if len(item) == 1:
                 return "Cocircular({})".format(item[0])
             else:
-                return "Cocircular({},{})".format(item[0], item[1:])
+                return "Cocircular({},{})".format(item[0], "".join(item[1:]))
         elif predicate == "Shape":
             return "Shape({})".format(",".join(item))
         else:
             return "{}({})".format(predicate, "".join(item))
+
+    @staticmethod
+    def inverse_parse_theorem(t_name, t_branch, t_para, theorem_GDL):
+        if t_para is None:
+            if t_branch is None:
+                return t_name
+            return "{}({})".format(t_name, t_branch)
+        else:
+            result = []
+            i = 0
+            for l in theorem_GDL[t_name]["para_len"]:
+                result.append("")
+                for _ in range(l):
+                    result[-1] += t_para[i]
+                    i += 1
+            t_para = ",".join(result)
+
+            if t_branch is None:
+                return "{}({})".format(t_name, t_para)
+            return "{}({},{})".format(t_name, t_branch, t_para)
+
+
+class InverseParserF2N:
+    """Inverse parse formal language to natural language."""
+    pass

@@ -6,7 +6,7 @@ from enum import Enum
 from func_timeout import func_set_timeout
 from solver.problem.problem import Problem
 from solver.aux_tools.parser import GDLParser, CDLParser
-from solver.aux_tools.parser import InverseParser as IvParser
+from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
 from solver.aux_tools.utils import rough_equal
 import time
@@ -195,7 +195,7 @@ class SuperNode:
             return
 
         t_name, t_branch, t_para = self.theorem
-        theorem = IvParser.inverse_parse_logic(  # theorem + para
+        theorem = InverseParserM2F.inverse_parse_logic(  # theorem + para
             t_name, t_para, self.finder.theorem_GDL[t_name]["para_len"])
 
         letters = {}  # used for vars-letters replacement

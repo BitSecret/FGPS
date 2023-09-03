@@ -1,6 +1,6 @@
 from solver.problem.problem import Problem
 from solver.aux_tools.parser import GDLParser, CDLParser
-from solver.aux_tools.parser import InverseParser as IvParser
+from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
 from solver.core.engine import GeometryPredicateLogic as GeoLogic
 from solver.aux_tools.output import get_used_theorem
@@ -550,7 +550,7 @@ class ForwardSearcher:
         update = False
         for t_msg, conclusions in t_simple:
             t_name, t_branch, t_para = t_msg
-            theorem = IvParser.inverse_parse_logic(t_name, t_para, self.theorem_GDL[t_name]["para_len"])
+            theorem = InverseParserM2F.inverse_parse_logic(t_name, t_para, self.theorem_GDL[t_name]["para_len"])
             print("\r\033[34m(pid={},timing={:.4f}s,prog={}/{})\033[0m Apply (Basic) Theorem <{}>".format(
                 pid, time.time() - timing, count, l, theorem), end="")
             count += 1
@@ -572,7 +572,7 @@ class ForwardSearcher:
         update = False
         for t_msg, conclusions in t_special:
             t_name, t_branch, t_para = t_msg
-            theorem = IvParser.inverse_parse_logic(t_name, t_para, self.theorem_GDL[t_name]["para_len"])
+            theorem = InverseParserM2F.inverse_parse_logic(t_name, t_para, self.theorem_GDL[t_name]["para_len"])
             print("\r\033[34m(pid={},timing={:.4f}s,prog={}/{})\033[0m Apply (Special) Theorem <{}>".format(
                 pid, time.time() - timing, count, l, theorem), end="")
             count += 1
@@ -602,7 +602,7 @@ class ForwardSearcher:
             update = False
             for t_msg, conclusions in t_complex:
                 t_name, t_branch, t_para = t_msg
-                theorem = IvParser.inverse_parse_logic(t_name, t_para, self.theorem_GDL[t_name]["para_len"])
+                theorem = InverseParserM2F.inverse_parse_logic(t_name, t_para, self.theorem_GDL[t_name]["para_len"])
                 print("\r\033[34m(pid={},timing={:.4f}s,prog={}/{})\033[0m Apply (Complex) Theorem <{}>".format(
                     pid, time.time() - timing, count, l, theorem), end="")
                 count += 1

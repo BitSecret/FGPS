@@ -693,7 +693,7 @@ class Problem:
 
     def step(self, item, timing):
         """
-        Execute when theorem successful applied. Save theorem name and update step.
+        Execute when theorem successful applied. Save theorem and update step.
         :param item: <str>, theorem_name, 'init_problem' and 'check_goal'.
         :param timing: <float>.
         """
