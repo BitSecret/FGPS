@@ -285,10 +285,10 @@ def save_solution_tree(problem, path):
                 dag[s_node].append(e_node)
 
     update = True
-    while update:  # remove extended and solve_eq nodes
+    while update:  # remove tail which contains 'extended' and 'solve_eq'
         update = False
         for head in dag:
-            for tail in dag[head]:
+            for tail in list(dag[head]):
                 if not (tail.startswith("extended") or tail.startswith("solve_eq")):
                     continue
                 dag[head].pop(dag[head].index(tail))
@@ -299,10 +299,10 @@ def save_solution_tree(problem, path):
                     update = True
 
     cleaned = {}
-    for key in dag:
+    for key in dag:  # remove head which contains 'extended' and 'solve_eq'
         if key.startswith("extended") or key.startswith("solve_eq"):
             continue
-        new_key = key.split(")")[0] + ")"
+        new_key = key.split(")")[0] + ")"    # remove number
         cleaned[new_key] = []
         for tail in dag[key]:
             cleaned[new_key].append(tail.split(")")[0] + ")")

@@ -12,8 +12,7 @@ def main(start_pid, end_pid):
             continue
         dag = load_json(solved_path + "{}_dag.json".format(pid))
         problem = load_json(problems_path + "{}.json".format(pid))
-        if "theorem_seq_dag" not in problem:
-            problem["theorem_seq_dag"] = dag
+        problem["theorem_seq_dag"] = dag
         save_json(problem, problems_path + "{}.json".format(pid))
         print("{} done.".format(pid))
 
