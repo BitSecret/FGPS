@@ -16,12 +16,20 @@
   ],
   "image_cdl": [],
   "goal_cdl": "Value(Mul(LengthOfLine(AC),LengthOfLine(BC)))",
-  "problem_answer": "7.7274066103125465",
+  "problem_answer": "16",
   "theorem_seqs": [
-    "triangle_property_angle_sum(CAB)",
-    "sine_theorem(ABC)"
+    "triangle_property_angle_sum(1,CAB)",
+    "sine_theorem(1,ABC)",
+    "sine_theorem(1,BCA)"
   ],
   "theorem_seq_dag": {
-    "START": []
+    "triangle_property_angle_sum(1,CAB)": [],
+    "sine_theorem(1,ABC)": [],
+    "sine_theorem(1,BCA)": [],
+    "START": [
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,ABC)",
+      "sine_theorem(1,BCA)"
+    ]
   }
 }

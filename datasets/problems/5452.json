@@ -7,34 +7,23 @@
   "problem_text_en": "The position of the three equilateral triangles is shown in the figure, if ∠3 = N_0, then the degree of ∠1 + ∠2 is ()",
   "problem_img": "5452.png",
   "construction_cdl": [
-    "Shape(AB,BD,DC,CA)",
-    "Shape(DC,CG,GH,HD)",
-    "Shape(DE,EF,FG,GD)",
-    "Shape(DG,GC,CD)",
-    "Shape(HG,GF)",
-    "Shape(AC,CD)",
-    "Shape(ED,DB)",
-    "Collinear(BDC)",
-    "Collinear(DCG)",
-    "Collinear(DGF)"
+    "Shape(AB,BC,CA)"
   ],
   "text_cdl": [
-    "Equal(MeasureOfAngle(EDB),60)",
-    "Equal(MeasureOfAngle(DCA),60)",
-    "Equal(MeasureOfAngle(CGH),60)",
-    "Equal(MeasureOfAngle(GDE),60)",
-    "Equal(MeasureOfAngle(CDG),60)",
-    "Equal(MeasureOfAngle(DGC),60)",
-    "Equal(MeasureOfAngle(GCD),60)"
+    "Equal(MeasureOfAngle(CAB),60)",
+    "Equal(MeasureOfAngle(ABC),120-x)",
+    "Equal(MeasureOfAngle(BCA),120-y)"
   ],
   "image_cdl": [],
-  "goal_cdl": "Value(Add(MeasureOfAngle(HGF),MeasureOfAngle(ACD)))",
+  "goal_cdl": "Value(x+y)",
   "problem_answer": "120",
   "theorem_seqs": [
-    "angle_addition",
-    "adjacent_complementary_angle"
+    "triangle_property_angle_sum(1,ABC)"
   ],
   "theorem_seq_dag": {
-    "START": []
+    "triangle_property_angle_sum(1,ABC)": [],
+    "START": [
+      "triangle_property_angle_sum(1,ABC)"
+    ]
   }
 }

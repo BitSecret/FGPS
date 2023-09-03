@@ -22,23 +22,44 @@
     "Equal(LengthOfLine(BC),4)"
   ],
   "image_cdl": [],
-  "goal_cdl": "Value(Div(LengthOfLine(OB),LengthOfLine(DB)))",
+  "goal_cdl": "Value(Div(LengthOfLine(OB),LengthOfLine(BD)))",
   "problem_answer": "2/5",
   "theorem_seqs": [
-    "line_addition(DO,OB)",
-    "parallel_property_collinear_extend(BA,CD,E)",
-    "parallel_property_alternate_interior_angle(DC,AB)",
-    "parallel_property_alternate_interior_angle(BE,CD)",
-    "parallel_property_alternate_interior_angle(AD,BC)",
-    "isosceles_triangle_judgment_angle_equal(BCE)",
-    "similar_triangle_judgment_aa(OCD,OEB)",
-    "similar_triangle_judgment_aa(CDB,ABD)",
-    "similar_triangle_property_line_ratio(OCD,OEB)",
-    "similar_triangle_property_line_ratio(CDO,EBO)",
-    "similar_triangle_property_line_ratio(CDB,ABD)",
-    "similar_triangle_property_line_ratio(BCD,DAB)"
+    "line_addition(1,DO,OB)",
+    "parallelogram_property_opposite_line_equal(1,ABCD)",
+    "parallel_property_collinear_extend(3,BA,CD,E)",
+    "parallel_property_alternate_interior_angle(1,DC,AB)",
+    "parallel_property_alternate_interior_angle(2,BE,CD)",
+    "isosceles_triangle_judgment_angle_equal(1,BCE)",
+    "similar_triangle_judgment_aa(1,OCD,OEB)",
+    "similar_triangle_property_line_ratio(1,OCD,OEB)",
+    "similar_triangle_property_line_ratio(1,CDO,EBO)"
   ],
   "theorem_seq_dag": {
-    "START": []
+    "line_addition(1,DO,OB)": [],
+    "parallelogram_property_opposite_line_equal(1,ABCD)": [],
+    "parallel_property_collinear_extend(3,BA,CD,E)": [
+      "parallel_property_alternate_interior_angle(2,BE,CD)"
+    ],
+    "parallel_property_alternate_interior_angle(1,DC,AB)": [
+      "similar_triangle_judgment_aa(1,OCD,OEB)"
+    ],
+    "parallel_property_alternate_interior_angle(2,BE,CD)": [
+      "isosceles_triangle_judgment_angle_equal(1,BCE)",
+      "similar_triangle_judgment_aa(1,OCD,OEB)"
+    ],
+    "isosceles_triangle_judgment_angle_equal(1,BCE)": [],
+    "similar_triangle_judgment_aa(1,OCD,OEB)": [
+      "similar_triangle_property_line_ratio(1,OCD,OEB)",
+      "similar_triangle_property_line_ratio(1,CDO,EBO)"
+    ],
+    "similar_triangle_property_line_ratio(1,OCD,OEB)": [],
+    "similar_triangle_property_line_ratio(1,CDO,EBO)": [],
+    "START": [
+      "line_addition(1,DO,OB)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "parallel_property_collinear_extend(3,BA,CD,E)",
+      "parallel_property_alternate_interior_angle(1,DC,AB)"
+    ]
   }
 }

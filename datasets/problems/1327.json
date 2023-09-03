@@ -13,17 +13,22 @@
   "text_cdl": [],
   "image_cdl": [
     "SimilarBetweenTriangle(BAC,EDF)",
-    "Equal(LengthOfLine(AB),8.3)",
-    "Equal(LengthOfLine(BC),6.5)",
+    "Equal(LengthOfLine(AB),8)",
+    "Equal(LengthOfLine(BC),7)",
     "Equal(LengthOfLine(BH),6)",
     "Equal(LengthOfLine(AC),8)",
     "Equal(LengthOfLine(HF),4)",
-    "Equal(LengthOfLine(DE),4.15)"
+    "Equal(LengthOfLine(DE),4)"
   ],
-  "goal_cdl": "Value(Div(LengthOfLine(AB),LengthOfLine(DE)))",
+  "goal_cdl": "Value(RatioOfSimilarTriangle(BAC,EDF))",
   "problem_answer": "2",
-  "theorem_seqs": [],
+  "theorem_seqs": [
+    "similar_triangle_property_line_ratio(1,CBA,FED)"
+  ],
   "theorem_seq_dag": {
-    "START": []
+    "similar_triangle_property_line_ratio(1,CBA,FED)": [],
+    "START": [
+      "similar_triangle_property_line_ratio(1,CBA,FED)"
+    ]
   }
 }

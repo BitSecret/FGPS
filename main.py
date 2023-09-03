@@ -70,8 +70,8 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
                     else:
                         continue
 
-                for theorem_name, theorem_para in CDLParser.parse_theorem_seqs(theorem_seqs):
-                    solver.apply_theorem(theorem_name, theorem_para)
+                for t_name, t_branch, t_para in CDLParser.parse_theorem_seqs(theorem_seqs):
+                    solver.apply_theorem(t_name, t_branch, t_para)
 
                 solver.problem.check_goal()  # check goal after applied theorem seqs
 
@@ -138,8 +138,8 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
                     print("No backward search seqs.")
                     continue
 
-            for theorem_name, theorem_para in CDLParser.parse_theorem_seqs(theorem_seqs):
-                solver.apply_theorem(theorem_name, theorem_para)
+            for t_name, t_branch, t_para in CDLParser.parse_theorem_seqs(theorem_seqs):
+                solver.apply_theorem(t_name, t_branch, t_para)
 
             solver.problem.check_goal()  # check goal after applied theorem seqs
 
@@ -279,7 +279,7 @@ def search(direction="fw", strategy="df", auto=False, save_seqs=True,
 
 if __name__ == '__main__':
     # save_gdl()
-    check(auto=True, save_CDL=False)
+    check(auto=False, clean_theorem=False, save_CDL=False)
     # save_gdl()
 
     # search(auto=False, save_seqs=True, direction="bw")

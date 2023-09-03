@@ -15,6 +15,7 @@ def main(start_pid, end_pid):
         if "theorem_seq_dag" not in problem:
             problem["theorem_seq_dag"] = dag
         save_json(problem, problems_path + "{}.json".format(pid))
+        print("{} done.".format(pid))
 
 
 if __name__ == '__main__':

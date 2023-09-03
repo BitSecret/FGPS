@@ -22,26 +22,28 @@
   "goal_cdl": "Value(LengthOfLine(AC))",
   "problem_answer": "sqrt(7)",
   "theorem_seqs": [
-    "parallelogram_property_opposite_line_equal(ABCD)",
-    "parallelogram_property_opposite_line_equal(BCDA)",
-    "triangle_property_angle_sum(ABE)",
-    "triangle_property_angle_sum(AEC)",
-    "triangle_property_angle_sum(ACD)",
-    "triangle_property_angle_sum(ABC)",
-    "sine_theorem(ABE)",
-    "sine_theorem(EAB)",
-    "sine_theorem(AEC)",
-    "sine_theorem(ECA)",
-    "sine_theorem(CAE)",
-    "sine_theorem(ACD)",
-    "sine_theorem(CDA)",
-    "sine_theorem(DAC)",
-    "sine_theorem(ABC)",
-    "sine_theorem(BCA)",
-    "sine_theorem(CAB)",
-    "line_addition(BE,EC)"
+    "triangle_property_angle_sum(1,ABE)",
+    "sine_theorem(1,ABE)",
+    "sine_theorem(1,EAB)",
+    "line_addition(1,BE,EC)",
+    "right_triangle_judgment_angle(1,ABC)",
+    "right_triangle_property_pythagorean(1,ABC)"
   ],
   "theorem_seq_dag": {
-    "START": []
+    "triangle_property_angle_sum(1,ABE)": [],
+    "sine_theorem(1,ABE)": [],
+    "sine_theorem(1,EAB)": [],
+    "line_addition(1,BE,EC)": [],
+    "right_triangle_judgment_angle(1,ABC)": [
+      "right_triangle_property_pythagorean(1,ABC)"
+    ],
+    "right_triangle_property_pythagorean(1,ABC)": [],
+    "START": [
+      "triangle_property_angle_sum(1,ABE)",
+      "sine_theorem(1,ABE)",
+      "sine_theorem(1,EAB)",
+      "line_addition(1,BE,EC)",
+      "right_triangle_judgment_angle(1,ABC)"
+    ]
   }
 }

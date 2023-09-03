@@ -19,6 +19,7 @@
     "Cocircular(O,ABC)"
   ],
   "text_cdl": [
+    "IsCentreOfCircle(O,O)",
     "Equal(MeasureOfAngle(BCA),20)",
     "Equal(MeasureOfAngle(COB),Mul(MeasureOfAngle(BOA),3))"
   ],
@@ -26,10 +27,21 @@
   "goal_cdl": "Value(MeasureOfAngle(DAB))",
   "problem_answer": "60",
   "theorem_seqs": [
-    "arc_property_center_angle",
-    "arc_property_circumference_angle_external"
+    "arc_property_circumference_angle_external(1,OAB,C)",
+    "arc_property_circumference_angle_external(1,OBC,A)",
+    "arc_property_center_angle(1,OAB,O)",
+    "arc_property_center_angle(1,OBC,O)"
   ],
   "theorem_seq_dag": {
-    "START": []
+    "arc_property_circumference_angle_external(1,OAB,C)": [],
+    "arc_property_circumference_angle_external(1,OBC,A)": [],
+    "arc_property_center_angle(1,OAB,O)": [],
+    "arc_property_center_angle(1,OBC,O)": [],
+    "START": [
+      "arc_property_circumference_angle_external(1,OAB,C)",
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "arc_property_center_angle(1,OAB,O)",
+      "arc_property_center_angle(1,OBC,O)"
+    ]
   }
 }

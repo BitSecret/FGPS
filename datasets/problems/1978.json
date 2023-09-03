@@ -16,23 +16,46 @@
   "text_cdl": [],
   "image_cdl": [
     "IsCentreOfCircle(G,G)",
-    "Equal(MeasureOfAngle(JGK),194)",
-    "PerpendicularBetweenLine(GK,LK)"
+    "Equal(MeasureOfArc(GKJ),194)",
+    "IsTangentOfCircle(LK,G)"
   ],
   "goal_cdl": "Value(MeasureOfAngle(JKL))",
   "problem_answer": "97",
   "theorem_seqs": [
-    "round_angle(KGJ,JGK)",
-    "round_angle(GKL,LKG)",
-    "angle_addition(JKG,GKL)",
-    "angle_addition(JKL,LKG)",
-    "radius_of_circle_property_length_equal(GJ,G)",
-    "radius_of_circle_property_length_equal(GK,G)",
-    "isosceles_triangle_judgment_line_equal(GJK)",
-    "isosceles_triangle_property_angle_equal(GJK)",
-    "triangle_property_angle_sum(GJK)"
+    "arc_property_center_angle(1,GKJ,G)",
+    "round_angle(1,JGK,KGJ)",
+    "radius_of_circle_property_length_equal(1,GJ,G)",
+    "radius_of_circle_property_length_equal(1,GK,G)",
+    "isosceles_triangle_judgment_line_equal(1,GJK)",
+    "isosceles_triangle_property_angle_equal(1,GJK)",
+    "triangle_property_angle_sum(1,GJK)",
+    "tangent_of_circle_property_perpendicular(1,LK,G,G)",
+    "angle_addition(1,JKG,GKL)"
   ],
   "theorem_seq_dag": {
-    "START": []
+    "arc_property_center_angle(1,GKJ,G)": [],
+    "round_angle(1,JGK,KGJ)": [],
+    "radius_of_circle_property_length_equal(1,GJ,G)": [
+      "isosceles_triangle_judgment_line_equal(1,GJK)"
+    ],
+    "radius_of_circle_property_length_equal(1,GK,G)": [
+      "isosceles_triangle_judgment_line_equal(1,GJK)"
+    ],
+    "isosceles_triangle_judgment_line_equal(1,GJK)": [
+      "isosceles_triangle_property_angle_equal(1,GJK)"
+    ],
+    "isosceles_triangle_property_angle_equal(1,GJK)": [],
+    "triangle_property_angle_sum(1,GJK)": [],
+    "tangent_of_circle_property_perpendicular(1,LK,G,G)": [],
+    "angle_addition(1,JKG,GKL)": [],
+    "START": [
+      "arc_property_center_angle(1,GKJ,G)",
+      "round_angle(1,JGK,KGJ)",
+      "radius_of_circle_property_length_equal(1,GJ,G)",
+      "radius_of_circle_property_length_equal(1,GK,G)",
+      "triangle_property_angle_sum(1,GJK)",
+      "tangent_of_circle_property_perpendicular(1,LK,G,G)",
+      "angle_addition(1,JKG,GKL)"
+    ]
   }
 }

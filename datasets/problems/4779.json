@@ -18,23 +18,39 @@
     "Cocircular(O,DCE)"
   ],
   "text_cdl": [
-    "Equal(LengthOfLine(BC),3)",
-    "Equal(LengthOfLine(AC),4)",
     "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(BO),3)",
+    "Equal(LengthOfLine(AO),4)",
     "IsTangentOfCircle(AC,O)",
+    "IsTangentOfCircle(BC,O)",
     "IsCentreOfCircle(O,O)"
   ],
   "image_cdl": [],
   "goal_cdl": "Value(LengthOfLine(OC))",
-  "problem_answer": "2.4",
+  "problem_answer": "12/5",
   "theorem_seqs": [
-    "radius_of_circle_property_length_equal",
-    "tangent_of_circle_property_perpendicular",
-    "right_triangle_judgment_pythagorean_inverse",
-    "triangle_area_formula_common(OAB)",
-    "triangle_area_formula_sine(OAB)"
+    "right_triangle_judgment_pythagorean_inverse(1,BOA)",
+    "tangent_of_circle_property_perpendicular(1,BC,O,O)",
+    "mirror_similar_triangle_judgment_aa(1,OCB,ABO)",
+    "mirror_similar_triangle_property_line_ratio(1,CBO,OAB)",
+    "mirror_similar_triangle_property_line_ratio(1,BOC,BOA)"
   ],
   "theorem_seq_dag": {
-    "START": []
+    "right_triangle_judgment_pythagorean_inverse(1,BOA)": [
+      "mirror_similar_triangle_judgment_aa(1,OCB,ABO)"
+    ],
+    "tangent_of_circle_property_perpendicular(1,BC,O,O)": [
+      "mirror_similar_triangle_judgment_aa(1,OCB,ABO)"
+    ],
+    "mirror_similar_triangle_judgment_aa(1,OCB,ABO)": [
+      "mirror_similar_triangle_property_line_ratio(1,CBO,OAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BOC,BOA)"
+    ],
+    "mirror_similar_triangle_property_line_ratio(1,CBO,OAB)": [],
+    "mirror_similar_triangle_property_line_ratio(1,BOC,BOA)": [],
+    "START": [
+      "right_triangle_judgment_pythagorean_inverse(1,BOA)",
+      "tangent_of_circle_property_perpendicular(1,BC,O,O)"
+    ]
   }
 }
