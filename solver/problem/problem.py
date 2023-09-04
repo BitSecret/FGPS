@@ -35,6 +35,8 @@ class Problem:
         for predicate, item in problem_CDL["parsed_cdl"]["text_and_image_cdl"]:  # conditions of text_and_image
             if predicate == "Equal":
                 self.add("Equation", CDLParser.get_equation_from_tree(self, item), (-1,), "prerequisite")
+            elif predicate == "Equation":
+                self.add("Equation", CDLParser.parse_expr(self, item), (-1,), "prerequisite")
             else:
                 self.add(predicate, tuple(item), (-1,), "prerequisite")
 
@@ -467,7 +469,8 @@ class Problem:
 
             for extended_predicate, para in item_GDL["extend"]:  # extended
                 if extended_predicate == "Equal":
-                    self.add("Equation", CDLParser.get_equation_from_tree(self, para, True, letters), (_id,), "extended")
+                    self.add("Equation", CDLParser.get_equation_from_tree(self, para, True, letters),
+                             (_id,), "extended")
                 else:
                     self.add(extended_predicate, tuple(letters[i] for i in para), (_id,), "extended")
 

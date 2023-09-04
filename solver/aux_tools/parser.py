@@ -729,12 +729,12 @@ class CDLParser(Parser):
                     return None
                 expr = expr.subs(sym, saved_sym)
             else:
-                sym, para = str(sym).split("_", 1)
+                sym_str, para = str(sym).split("_", 1)
                 para = tuple(para.upper())
                 attr_GDL = problem.predicate_GDL["Attribution"]
                 in_GDL = False
                 for attr_name in attr_GDL:
-                    if attr_GDL[attr_name]["sym"] == sym:
+                    if attr_GDL[attr_name]["sym"] == sym_str:
                         in_GDL = True
                         saved_sym = problem.get_sym_of_attr(attr_name, para)
                         if saved_sym is None:
