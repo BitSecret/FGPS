@@ -16,8 +16,8 @@ class Interactor:
         :param predicate_GDL: predicate GDL.
         :param theorem_GDL: theorem GDL.
         """
-        self.predicate_GDL = GDLParser.parse_predicate(predicate_GDL)
-        self.theorem_GDL = GDLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
+        self.predicate_GDL = GDLParser.parse_predicate_gdl(predicate_GDL)
+        self.theorem_GDL = GDLParser.parse_theorem_gdl(theorem_GDL, self.predicate_GDL)
         self.problem = None
 
     def load_problem(self, problem_CDL):
@@ -216,7 +216,7 @@ class Interactor:
         """
         update = False
         timing = time.time()  # timing
-        theorem = InverseParserM2F.inverse_parse_theorem(t_name, t_branch, t_para, self.theorem_GDL)
+        theorem = InverseParserM2F.inverse_parse_one_theorem(t_name, t_branch, t_para, self.theorem_GDL)
 
         letters = {}  # used for vars-letters replacement
         for i in range(len(self.theorem_GDL[t_name]["vars"])):

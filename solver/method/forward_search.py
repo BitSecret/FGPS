@@ -3,7 +3,7 @@ from solver.aux_tools.parser import GDLParser, CDLParser
 from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
 from solver.core.engine import GeometryPredicateLogic as GeoLogic
-from solver.aux_tools.output import get_used_theorem
+from solver.aux_tools.output import get_used
 from collections import deque
 from itertools import combinations
 from solver.aux_tools.utils import rough_equal

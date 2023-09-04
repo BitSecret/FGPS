@@ -1,16 +1,15 @@
-import copy
-from sympy import sin, cos, tan, sqrt, pi, Float, Integer
+from sympy import sin, cos, tan, sqrt, pi
 from sympy.parsing import parse_expr
-from solver.aux_tools.utils import number_round
 
 
 class Parser:
+    """Parse formal language to machine language"""
     operator_predicate = ["Add", "Sub", "Mul", "Div", "Pow", "Mod", "Sqrt", "Sin", "Cos", "Tan"]
 
     @staticmethod
     def parse_geo_predicate(s, make_vars=False):
         """
-        parse s to get predicate, para, and structural msg.
+        Parse s to get predicate_name, para, and para structural msg.
         >> parse_geo_predicate('Predicate(ABC)')
         ('Predicate', ['A', 'B', 'C'], [3])
         >> parse_geo_predicate('Predicate(ABC, DE)', True)
@@ -32,11 +31,16 @@ class Parser:
     @staticmethod
     def parse_equal_predicate(s, make_vars=False):
         """
-        Parse s to a Tree.
-        >> _parse_equal_predicate('Equal(LengthOfLine(OA),LengthOfLine(OB))', True)
-        ['Equal', [['LengthOfLine', ['o', 'a']], ['LengthOfLine', ['o', 'b']]]]
-        >> _parse_equal_predicate('Equal(Length(AB),Length(CD))')
-        ['Equal', [[Length, ['A', 'B']], [Length, ['C', 'D']]]]
+        Parse s to a Tree, return the tree and all attr.
+        >> parse_equal_predicate('Equal(LengthOfLine(AB),LengthOfLine(CD))')
+        (('Equal', (('LengthOfLine', ('A', 'B')), ('LengthOfLine', ('C', 'D')))),
+         [('LengthOfLine', ('A', 'B')), ('LengthOfLine', ('C', 'D'))])
+        >> parse_equal_predicate('Equal(LengthOfLine(OA),LengthOfLine(OB))', True)
+        (('Equal', (('LengthOfLine', ('o', 'a')), ('LengthOfLine', ('o', 'b')))),
+         [('LengthOfLine', ('o', 'a')), ('LengthOfLine', ('o', 'b'))])
+        >> parse_equal_predicate('Equal(Add(LengthOfLine(OA),x+1),y+2)', True)
+        (('Equal', (('Add', (('LengthOfLine', ('o', 'a')), 'x+1')), 'y+2')),
+         [('LengthOfLine', ('o', 'a'))])
         """
         s = s[6:len(s) - 1]
         count = 0
@@ -68,6 +72,15 @@ class Parser:
 
     @staticmethod
     def parse_to_tree(s, make_vars=False):
+        """
+        Parse equal's para to a Tree, return the tree and all attr.
+        >> parse_to_tree('LengthOfLine(AB)')
+        (('LengthOfLine', ('A', 'B')), [('LengthOfLine', ('A', 'B'))])
+        >> parse_to_tree('LengthOfLine(AB)', True)
+        (('LengthOfLine', ('a', 'b')), [('LengthOfLine', ('a', 'b'))])
+        >> parse_to_tree('Add(LengthOfLine(OA),x+1)', True)
+        (('Add', (('LengthOfLine', ('o', 'a')), 'x+1')), [('LengthOfLine', ('o', 'a'))])
+        """
         attrs = []
         i = 0
         j = 0
@@ -110,8 +123,10 @@ class Parser:
 
 
 class GDLParser(Parser):
+    """Parse formal language to machine language"""
+
     @staticmethod
-    def parse_predicate(predicate_GDL):
+    def parse_predicate_gdl(predicate_GDL):
         """parse predicate_GDL to logic form."""
         parsed_GDL = {  # preset Construction
             "FixLength": tuple(predicate_GDL["Preset"]["FixLength"]),
@@ -181,10 +196,10 @@ class GDLParser(Parser):
     def parse_ee_check(ee_check):
         """
         parse ee_check to logic form.
-        >> _parse_ee_check(['Triangle(ABC)'])
-        [['Triangle', ['a', 'b', 'c']]]
-        >> _parse_ee_check(['Line(AO)', 'Line(CO)'])
-        [['Line', ['a', 'o']], ['Line', ['c', 'o']]]
+        >> parse_ee_check(['Triangle(ABC)'])
+        [('Triangle', ('a', 'b', 'c'))]
+        >> parse_ee_check(['Line(AO)', 'Line(CO)'])
+        [('Line', ('a', 'o')), ('Line', ('c', 'o'))]
         """
         results = []
         for item in ee_check:
@@ -196,9 +211,9 @@ class GDLParser(Parser):
     def parse_fv_check(fv_check):
         """
         parse fv_check to logic form.
-        >> _parse_fv_check(['O,AB,CD'])
+        >> parse_fv_check(['O,AB,CD'])
         ['01234']
-        >> _parse_fv_check(['AD,ABC', 'AB,ABC', 'AC,ABC'])
+        >> parse_fv_check(['AD,ABC', 'AB,ABC', 'AC,ABC'])
         ['01023', '01012', '01021']
         """
         results = []
@@ -217,9 +232,9 @@ class GDLParser(Parser):
         """
         parse multi to logic form.
         >> _parse_multi(['BCA', 'CAB'])
-        [['b', 'c', 'a'], ['c', 'a', 'b']]
+        [('b', 'c', 'a'), ('c', 'a', 'b')]
         >> _parse_multi(['M,BA'])
-        [['m', 'b', 'a']]
+        [('m', 'b', 'a')]
         """
         return [tuple(parsed_multi.replace(",", "").lower()) for parsed_multi in multi]
 
@@ -227,10 +242,10 @@ class GDLParser(Parser):
     def parse_extend(extend_items):
         """
         parse extend to logic form.
-        >> _parse_extend(['Equal(MeasureOfAngle(AOC),90)'])
-        [['Equal', [['MeasureOfAngle', ['a', 'o', 'c']], '90']]]
-        >> _parse_extend(['Perpendicular(AB,CB)', 'IsAltitude(AB,ABC)'])
-        [['Perpendicular', ['a', 'b', 'c', 'b']], ['IsAltitude', ['a', 'b', 'a', 'b', 'c']]]
+        >> parse_extend(['Equal(MeasureOfAngle(AOC),90)'])
+        [('Equal', (('MeasureOfAngle', ('a', 'o', 'c')), '90'))]
+        >> parse_extend(['Perpendicular(AB,CB)', 'IsAltitude(AB,ABC)'])
+        [('Perpendicular', ('a', 'b', 'c', 'b')), ('IsAltitude', ('a', 'b', 'a', 'b', 'c'))]
         """
         results = []
         for extend in extend_items:
@@ -243,8 +258,8 @@ class GDLParser(Parser):
         return results
 
     @staticmethod
-    def parse_theorem(theorem_GDL, parsed_predicate_GDL):
-        """parse theorem_GDL to logic form."""
+    def parse_theorem_gdl(theorem_GDL, parsed_predicate_GDL):
+        """Parse theorem_GDL to logic form."""
         parsed_GDL = {}
 
         for theorem_name in theorem_GDL:
@@ -259,7 +274,7 @@ class GDLParser(Parser):
                 raw_theorem_GDL = theorem_GDL[theorem_name][branch]["conclusion"]
                 parsed_conclusion, paras = GDLParser.parse_conclusion(raw_theorem_GDL)
 
-                p2 = set(paras)
+                p2 = set(paras)    # theorem_GDL format check
                 if len(p2 - p1) > 0:
                     e_msg = "Theorem GDL definition error in <{}>.".format(theorem_name)
                     raise Exception(e_msg)
@@ -269,8 +284,8 @@ class GDLParser(Parser):
                     if len(p2 - p1) > 0 or len(p1 - p2) > 0:
                         e_msg = "Theorem GDL definition error in <{}>.".format(theorem_name)
                         raise Exception(e_msg)
-                    body[str(branch_count)] = parsed_premise[i]
-                    body[str(branch_count)].update(parsed_conclusion)
+                    body[str(branch_count)] = parsed_premise[i]    # add parsed premise
+                    body[str(branch_count)].update(parsed_conclusion)    # add parsed conclusion
                     branch_count += 1
 
             parsed_GDL[name] = {
@@ -279,9 +294,10 @@ class GDLParser(Parser):
                 "body": body
             }
 
+        # Auto generate theorem definition for backward solving
         for predicate in parsed_predicate_GDL["Entity"]:
-            conclusions = list(parsed_predicate_GDL["Entity"][predicate]["extend"])
-            for multi in parsed_predicate_GDL["Entity"][predicate]["multi"]:
+            conclusions = list(parsed_predicate_GDL["Entity"][predicate]["extend"])    # add extend
+            for multi in parsed_predicate_GDL["Entity"][predicate]["multi"]:    # add multi
                 conclusions.append((predicate, multi))
             if len(conclusions) == 0:
                 continue
@@ -292,7 +308,13 @@ class GDLParser(Parser):
                     name += "_{}".format(predicate[i].lower())
                 else:
                     name += predicate[i]
-            name += "_definition"  # multi 是不是也要加进来？
+            name += "_definition"
+
+            attr_in_conclusions = []
+            for conclusion in conclusions:
+                if conclusion[0] != "Equal":
+                    continue
+                attr_in_conclusions += GDLParser.find_attrs_in_tree(conclusion)
 
             parsed_GDL[name] = {
                 "vars": parsed_predicate_GDL["Entity"][predicate]["vars"],
@@ -304,7 +326,7 @@ class GDLParser(Parser):
                         "algebra_constraints": (),
                         "attr_in_algebra_constraints": (),
                         "conclusions": tuple(conclusions),
-                        "attr_in_conclusions": ()
+                        "attr_in_conclusions": tuple(set(attr_in_conclusions))
                     }
                 }
             }
@@ -324,6 +346,12 @@ class GDLParser(Parser):
                     name += predicate[i]
             name += "_definition"
 
+            attr_in_conclusions = []
+            for conclusion in conclusions:
+                if conclusion[0] != "Equal":
+                    continue
+                attr_in_conclusions += GDLParser.find_attrs_in_tree(conclusion)
+
             parsed_GDL[name] = {
                 "vars": parsed_predicate_GDL["Relation"][predicate]["vars"],
                 "para_len": parsed_predicate_GDL["Relation"][predicate]["para_len"],
@@ -334,7 +362,7 @@ class GDLParser(Parser):
                         "algebra_constraints": (),
                         "attr_in_algebra_constraints": (),
                         "conclusions": tuple(conclusions),
-                        "attr_in_conclusions": ()
+                        "attr_in_conclusions": tuple(set(attr_in_conclusions))
                     }
                 }
             }
@@ -344,11 +372,19 @@ class GDLParser(Parser):
     @staticmethod
     def parse_premise(premise_GDL):
         """
-        Convert geometric logic statements into disjunctive normal forms.
-        A&(B|C) ==> A&B|A&C ==> [[A, B], [A, C]]
-        >> _parse_premise(['Perpendicular(AO,CO)&(Collinear(OBC)|Collinear(OCB))'])
-        [[['Perpendicular', ['a', 'o', 'c', 'o']], ['Collinear', ['o', 'b', 'c']]]
-         [['Perpendicular', ['a', 'o', 'c', 'o']], ['Collinear', ['o', 'c', 'b']]]]
+        Parse premise and convert geometric logic statements into disjunctive normal forms.
+        'A&(B|C)' ==> 'A&B|A&C' ==> [['A', 'B'], ['A', 'C']]
+        >> parse_premise(['Perpendicular(AO,CO)&(Collinear(OBC)|Collinear(OCB))'])
+        ([{'products': (('Perpendicular', ('a', 'o', 'c', 'o')), ('Collinear', ('o', 'b', 'c'))),
+           'logic_constraints': (),
+           'algebra_constraints': (),
+           'attr_in_algebra_constraints': ()},
+          {'products': (('Perpendicular', ('a', 'o', 'c', 'o')), ('Collinear', ('o', 'c', 'b'))),
+           'logic_constraints': (),
+           'algebra_constraints': (),
+           'attr_in_algebra_constraints': ()}],
+         [['a', 'o', 'c', 'o', 'o', 'b', 'c'],
+          ['a', 'o', 'c', 'o', 'o', 'c', 'b']])
         """
         update = True
         while update:
@@ -441,9 +477,13 @@ class GDLParser(Parser):
     @staticmethod
     def parse_conclusion(conclusion_GDL):
         """
-        parse conclusion to logic form.
-        >> _parse_conclusion(['Similar(ABC,ADE)'])
-        [['Similar', ['a', 'b', 'c', 'a', 'd', 'e']]]
+        Parse conclusion to logic form, return logic form and para (for format check).
+        >> parse_conclusion(['Similar(ABC,ADE)', 'Equal(LengthOfLine(AB),LengthOfLine(CD))'])
+        ({'conclusions': (('Similar', ('a', 'b', 'c', 'a', 'd', 'e')),
+                         ('Equal', (('LengthOfLine', ('a', 'b')), ('LengthOfLine', ('c', 'd'))))),
+          'attr_in_conclusions': (('LengthOfLine', ('c', 'd')),
+                                 ('LengthOfLine', ('a', 'b')))},
+         ['a', 'b', 'c', 'a', 'd', 'e', 'a', 'b', 'c', 'd'])
         """
         paras = []
         attrs = []
@@ -464,8 +504,30 @@ class GDLParser(Parser):
         }
         return parsed_conclusion_GDL, paras
 
+    @staticmethod
+    def find_attrs_in_tree(tree):
+        """
+        Return attrs in parsed equal tree.
+        >> find_attrs_in_tree((('Equal', (('Add', (('LengthOfLine', ('o', 'a')), 'x+1')), 'y+2'))))
+        [('LengthOfLine', ('o', 'a'))]
+        """
+        attrs = []
+        stack = [tree[1][0], tree[1][1]]
+        while len(stack) > 0:
+            item = stack.pop()
+            if not isinstance(item, tuple):
+                continue
+            if item[0] in GDLParser.operator_predicate:
+                for item in item[1]:
+                    stack.append(item)
+                continue
+            if item not in attrs:
+                attrs.append(item)
+        return attrs
+
 
 class CDLParser(Parser):
+    """Parse formal language to machine language"""
 
     @staticmethod
     def parse_problem(problem_CDL):
@@ -534,7 +596,7 @@ class CDLParser(Parser):
 
     @staticmethod
     def parse_theorem_seqs(theorem_seqs):
-        """parse theorem_seqs to logic form."""
+        """Parse theorem_seqs to logic form."""
         results = []
 
         for theorem in theorem_seqs:
@@ -544,6 +606,15 @@ class CDLParser(Parser):
 
     @staticmethod
     def parse_one_theorem(theorem):
+        """
+        Parse one theorem to logic form.
+        >> parse_one_theorem('congruent_triangle_property_angle_equal(1,RST,XYZ)')
+        ('congruent_triangle_property_angle_equal', 1, ('R', 'S', 'T', 'X', 'Y', 'Z'))
+        >> parse_one_theorem('congruent_triangle_property_angle_equal(RST,XYZ)')
+        ('congruent_triangle_property_angle_equal', None, ('R', 'S', 'T', 'X', 'Y', 'Z'))
+        >> parse_one_theorem('congruent_triangle_property_angle_equal')
+        ('congruent_triangle_property_angle_equal', None, None)
+        """
         if "(" not in theorem:
             return theorem, None, None
 
@@ -562,9 +633,9 @@ class CDLParser(Parser):
         """
         Trans expr_tree to symbolic algebraic expression.
         >> get_expr_from_tree(problem, [['LengthOfLine', ['a', 'b']], '2*x-14'], True, {'a': 'Z', 'b': 'X'})
-        - 2.0*f_x + l_zx + 14.0
+        - 2.0*f_x + ll_zx + 14.0
         >> get_expr_from_tree(problem, [['LengthOfLine', ['Z', 'X']], '2*x-14'])
-        - 2.0*f_x + l_zx + 14.0
+        - 2.0*f_x + ll_zx + 14.0
         """
         left_expr = CDLParser.get_expr_from_tree(problem, tree[0], replaced, letters)
         if left_expr is None:
@@ -680,7 +751,7 @@ class InverseParserM2F:
 
     @staticmethod
     def inverse_parse_logic_to_cdl(problem):
-        """Inverse parse conditions of logic form to CDL."""
+        """Inverse parse conditions from machine language to formal language."""
         items = problem.condition.items
         steps = problem.condition.ids_of_step
 
@@ -714,7 +785,7 @@ class InverseParserM2F:
     @staticmethod
     def inverse_parse_one(predicate, item, problem):
         """
-        Inverse parse one condition of logic form to CDL.
+        Inverse parse one condition.
         Called by <inverse_parse_logic_to_cdl>.
         """
         if predicate == "Equation":
@@ -727,7 +798,7 @@ class InverseParserM2F:
     @staticmethod
     def inverse_parse_logic(predicate, item, problem):
         """
-        Inverse parse conditions of logic form to CDL.
+        Inverse parse logic conditions.
         >> inverse_parse_logic(Parallel, ('A', 'B', 'C', 'D'), problem)
         'Parallel(AB,CD)'
         """
@@ -746,29 +817,47 @@ class InverseParserM2F:
     @staticmethod
     def inverse_parse_equation(item, problem):
         """
-        Inverse parse conditions of logic form to CDL.
-        Called by <inverse_parse_one>.
-        >> _inverse_parse_one(ll_ac - ll_cd, equation)
-        'Equation(ll_ac-ll_cd)'
-        >> _inverse_parse_one(ll_ac - 1, equation)
-        'LengthOfLine(AC)'
+        Inverse parse algebra conditions.
+        >> inverse_parse_one(ll_ac - ll_cd, problem)
+        'Equal(LengthOfLine(AC),LengthOfLine(CD))'
+        >> inverse_parse_one(ll_ac - 1, problem)
+        'Value(LengthOfLine(AC))'
+        >> inverse_parse_one(ll_ac - ll_cd - ll_ef, problem)
+        'Equation(ll_ac-ll_cd-ll_ef)'
         """
-
-        if len(item.free_symbols) == 1:
-            sym = list(item.free_symbols)[0]
-            if problem.condition.value_of_sym[sym] is not None and sym - problem.condition.value_of_sym[sym] == item:
-                attr, items = problem.condition.attr_of_sym[sym]
-                return attr + "(" + "".join(items[0]) + ")"
+        syms = list(item.free_symbols)
+        if len(syms) == 1:
+            if problem.condition.value_of_sym[syms[0]] is not None and\
+                    syms[0] - problem.condition.value_of_sym[syms[0]] == item:
+                attr, items = problem.condition.attr_of_sym[syms[0]]
+                if attr == "Free":
+                    attr = items[0][0]
+                else:
+                    attr = attr + "(" + "".join(items[0]) + ")"
+                return "Equal({},{})".format(attr, str(problem.condition.value_of_sym[syms[0]]).replace(" ", ""))
+        elif len(syms) == 2 and (item == (syms[0] - syms[1]) or item == (syms[1] - syms[0])):
+            attr1, items1 = problem.condition.attr_of_sym[syms[0]]
+            if attr1 == "Free":
+                attr1 = items1[0][0]
+            else:
+                attr1 = attr1 + "(" + "".join(items1[0]) + ")"
+            attr2, items2 = problem.condition.attr_of_sym[syms[1]]
+            if attr2 == "Free":
+                attr2 = items2[0][0]
+            else:
+                attr2 = attr2 + "(" + "".join(items2[0]) + ")"
+            return "Equal({},{})".format(attr1, attr2)
 
         return "Equation" + "(" + str(item).replace(" ", "") + ")"
 
     @staticmethod
     def inverse_parse_preset(predicate, item):
         """
-        Inverse parse conditions of logic form to CDL.
-        Note that this function only inverse parse preset predicate.
+        Inverse parse preset conditions.
         >> inverse_parse_logic(Line, ('A', 'B'))
         'Line(AB)'
+        >> inverse_parse_logic(Cocircular, ('O', 'A', 'B', 'C'))
+        'Cocircular(O,ABC)'
         """
         if predicate == "Cocircular":
             if len(item) == 1:
@@ -781,7 +870,16 @@ class InverseParserM2F:
             return "{}({})".format(predicate, "".join(item))
 
     @staticmethod
-    def inverse_parse_theorem(t_name, t_branch, t_para, theorem_GDL):
+    def inverse_parse_one_theorem(t_name, t_branch, t_para, theorem_GDL):
+        """
+        Inverse parse theorem to formal language.
+        >> inverse_parse_one_theorem('t_name', 1, ('R', 'S', 'T'), theorem_GDL)
+        't_name(1,RST)'
+        >> inverse_parse_one_theorem('t_name', None, ('R', 'S', 'T'), theorem_GDL)
+        't_name(RST)'
+        >> inverse_parse_one_theorem('t_name', None, None, theorem_GDL)
+        't_name'
+        """
         if t_para is None:
             if t_branch is None:
                 return t_name

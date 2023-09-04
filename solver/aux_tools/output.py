@@ -1,3 +1,5 @@
+import time
+
 from solver.aux_tools.parser import InverseParserM2F
 from solver.aux_tools.utils import save_json
 from sympy import Float
@@ -50,7 +52,7 @@ def show(problem):
             print("{0:^3}{1:<20}".format(step, cdl))
     print()
 
-    used_id, used_theorem = get_used_theorem(problem)
+    used_id, used_theorem = get_used(problem)
 
     """-----------Logic Form-----------"""
     print("\033[33mRelations:\033[0m")
@@ -187,7 +189,7 @@ def save_solution_tree(problem, path):
         else:
             group[(premise, theorem)].append(_id)
 
-    used_id, _ = get_used_theorem(problem)  # just keep useful solution msg
+    used_id, _ = get_used(problem)  # just keep useful solution msg
     if problem.goal.solved:  # if target solved, add target
         if problem.goal.type == "algebra":
             eq = problem.goal.item - problem.goal.answer
@@ -379,7 +381,8 @@ def save_step_msg(problem, path):
     )
 
 
-def get_used_theorem(problem):
+def get_used(problem):
+    """Return used condition id and theorem for solving problem."""
     if not problem.goal.solved:
         return [], []
 
@@ -408,14 +411,9 @@ def get_used_theorem(problem):
     return used_id, selected_theorem
 
 
-class HG:
-    id_count = 1
-
-
 def save_equations_hyper_graph(eqs, path):
     """Save sym-equation hyper graph"""
-    id_count = HG.id_count
-    HG.id_count += 1
+    id_count = time.time_ns()
     dot = Graph(name=str(id_count), engine='circo')  # Tree
     added_sym = []
     for eq in eqs:
