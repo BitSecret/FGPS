@@ -415,8 +415,8 @@ class BackwardSearcher:
         :param max_depth: max search depth.
         :param strategy: <str>, 'df' or 'bf', use deep-first or breadth-first.
         """
-        self.predicate_GDL = GDLParser.parse_predicate(predicate_GDL)
-        self.theorem_GDL = GDLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
+        self.predicate_GDL = GDLParser.parse_predicate_gdl(predicate_GDL)
+        self.theorem_GDL = GDLParser.parse_theorem_gdl(theorem_GDL, self.predicate_GDL)
         self.max_depth = max_depth
         self.strategy = strategy
         self.node_map = {}

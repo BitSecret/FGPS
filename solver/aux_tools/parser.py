@@ -846,7 +846,9 @@ class InverseParserM2F:
                 attr2 = items2[0][0]
             else:
                 attr2 = attr2 + "(" + "".join(items2[0]) + ")"
-            return "Equal({},{})".format(attr1, attr2)
+            if item == (syms[0] - syms[1]):
+                return "Equal({},{})".format(attr1, attr2)
+            return "Equal({},{})".format(attr2, attr1)
 
         return "Equation" + "(" + str(item).replace(" ", "") + ")"
 

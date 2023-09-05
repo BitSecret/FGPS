@@ -1,5 +1,5 @@
-import copy
-import time
+import sys
+sys.path.append("../..")
 from solver.method.interactive import Interactor
 from solver.method.forward_search import Theorem
 from solver.aux_tools.utils import *
@@ -14,8 +14,9 @@ path_gdl = "../../datasets/gdl/"
 
 
 class Expander:
-    def __init__(self):
+    def __init__(self, use_theorem):
         warnings.filterwarnings("ignore")
+        self.use_theorem = use_theorem
         self.solver = Interactor(load_json(path_gdl + "predicate_GDL.json"),
                                  load_json(path_gdl + "theorem_GDL.json"))
         if "log.json" not in os.listdir(path_problems):
@@ -34,14 +35,14 @@ class Expander:
             problem_CDL = load_json(path_problems + "{}.json".format(self.raw_pid))
 
             print("\033[36m(pid={})\033[0m Start Expanding.".format(self.raw_pid))
-            self.init_problem(problem_CDL, use_theorem=True)  # apply theorem or random search
+            self.init_problem(problem_CDL)  # apply theorem or random search
             self.data = []
             self.expand_logic()
             self.expand_algebra()
             self.save_expand()
 
-    @func_set_timeout(300)
-    def apply_all_theorem(self, use_theorem):
+    @func_set_timeout(60)
+    def apply_all_theorem(self):
         timing = time.time()
         count = 0
         update = True
@@ -51,8 +52,8 @@ class Expander:
                 if Theorem.t_msg[theorem_name][0] != 1:
                     continue
                 update = self.solver.apply_theorem(theorem_name) or update
-                print("\033[34m(pid={},use_theorem={},timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
-                    self.raw_pid, use_theorem, time.time() - timing, count, theorem_name))
+                print("\033[34m(pid={},use_theorem=False,timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
+                    self.raw_pid, time.time() - timing, count, theorem_name))
                 count += 1
 
         update = True
@@ -62,23 +63,23 @@ class Expander:
                 if Theorem.t_msg[theorem_name][0] == 3:
                     continue
                 update = self.solver.apply_theorem(theorem_name) or update
-                print("\033[34m(pid={},use_theorem={},timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
-                    self.raw_pid, use_theorem, time.time() - timing, count, theorem_name))
+                print("\033[34m(pid={},use_theorem=False,timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
+                    self.raw_pid, time.time() - timing, count, theorem_name))
                 count += 1
 
-    def init_problem(self, problem_CDL, use_theorem):
+    def init_problem(self, problem_CDL):
         self.solver.load_problem(problem_CDL)
-        if use_theorem:
+        if self.use_theorem:
             timing = time.time()
             count = 0
             for t_name, t_branch, t_para in CDLParser.parse_theorem_seqs(problem_CDL["theorem_seqs"]):
                 self.solver.apply_theorem(t_name, t_branch, t_para)
-                print("\033[34m(pid={},use_theorem={},timing={:.4f}s,count={})\033[0m Apply theorem <{}>".format(
-                    self.raw_pid, use_theorem, time.time() - timing, count, t_name))
+                print("\033[34m(pid={},use_theorem=True,timing={:.4f}s,count={})\033[0m Apply theorem <{}>".format(
+                    self.raw_pid, time.time() - timing, count, t_name))
                 count += 1
         else:
             try:
-                self.apply_all_theorem(use_theorem)
+                self.apply_all_theorem()
             except FunctionTimedOut as e:
                 pass
 
@@ -95,10 +96,10 @@ class Expander:
             if "Equation" in goal_GDL:
                 goal_GDL = goal_GDL.replace("Equation", "Value")
 
-            if predicate != "Equation":    # logic
+            if predicate != "Equation":  # logic
                 problem_answer = goal_GDL
                 goal_GDL = "Relation({})".format(goal_GDL)
-            else:    # algebra
+            else:  # algebra
                 problem_answer = "0"
 
             for added_conditions, theorem_seqs in self.get_expand_problems(cid):
@@ -183,7 +184,7 @@ class Expander:
 
     def save_expand(self):
         all_expanded_data = set()
-        if str(self.raw_pid) not in self.log:    # ensure no duplicate problems
+        if str(self.raw_pid) not in self.log:  # ensure no duplicate problems
             self.log[str(self.raw_pid)] = []
         else:
             for pid in self.log[str(self.raw_pid)]:
@@ -219,10 +220,17 @@ class Expander:
             self.log[str(self.raw_pid)].append(self.count)
             self.count += 1
 
-        save_json(self.log, path_problems + "log.json")
+        save_json(self.log, path_problems + "log_bk.json")
+        try:
+            os.remove(path_problems + "log.json")
+        except FileNotFoundError:
+            pass
+        os.rename(path_problems + "log_bk.json", path_problems + "log.json")
         print("\033[34m(pid={},count={})\033[0m Save Expanded.\n".format(self.raw_pid, len(self.data)))
 
 
 if __name__ == '__main__':
-    expander = Expander()
-    expander.expand(start_pid=1, end_pid=500)
+    # expander = Expander(use_theorem=True)
+    # expander.expand(start_pid=1, end_pid=6981)
+    expander = Expander(use_theorem=False)
+    expander.expand(start_pid=1, end_pid=6981)

@@ -226,8 +226,8 @@ class ForwardSearcher:
         :param max_depth: max search depth.
         :param strategy: <str>, 'df' or 'bf', use deep-first or breadth-first.
         """
-        self.predicate_GDL = GDLParser.parse_predicate(predicate_GDL)
-        self.theorem_GDL = GDLParser.parse_theorem(theorem_GDL, self.predicate_GDL)
+        self.predicate_GDL = GDLParser.parse_predicate_gdl(predicate_GDL)
+        self.theorem_GDL = GDLParser.parse_theorem_gdl(theorem_GDL, self.predicate_GDL)
         self.max_depth = max_depth
         self.strategy = strategy
 
@@ -318,7 +318,7 @@ class ForwardSearcher:
             problem.check_goal()
             print("\033[34m(pid={},timing={:.4f}s)\033[0m Check Goal".format(pid, time.time() - timing))
             if problem.goal.solved:
-                _, seqs = get_used_theorem(problem)
+                _, seqs = get_used(problem)
                 print("\033[32m(pid={})\033[0m End Searching".format(pid))
                 return True, seqs
 

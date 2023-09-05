@@ -84,13 +84,13 @@ class Interactor:
 
             conclusions = GeoLogic.run(gpl, self.problem)  # get gpl reasoned result
             if len(conclusions) == 0:
-                theorem = InverseParserM2F.inverse_parse_theorem(t_name, branch, None, self.theorem_GDL)
+                theorem = InverseParserM2F.inverse_parse_one_theorem(t_name, branch, None, self.theorem_GDL)
                 self.problem.step(theorem, time.time() - timing)
                 continue
             avg_timing = (time.time() - timing) / len(conclusions)
             for letters, premise, conclusion in conclusions:
                 t_para = [letters[i] for i in self.theorem_GDL[t_name]["vars"]]
-                theorem = InverseParserM2F.inverse_parse_theorem(t_name, branch, t_para, self.theorem_GDL)
+                theorem = InverseParserM2F.inverse_parse_one_theorem(t_name, branch, t_para, self.theorem_GDL)
                 for predicate, item in conclusion:  # add conclusion
                     update = self.problem.add(predicate, item, premise, theorem) or update
                 self.problem.step(theorem, avg_timing)
@@ -115,7 +115,7 @@ class Interactor:
 
         for branch in self.theorem_GDL[t_name]["body"]:
             timing = time.time()  # timing
-            theorem = InverseParserM2F.inverse_parse_theorem(t_name, branch, t_para, self.theorem_GDL)
+            theorem = InverseParserM2F.inverse_parse_one_theorem(t_name, branch, t_para, self.theorem_GDL)
             gpl = self.theorem_GDL[t_name]["body"][branch]
             premises = []
             passed = True
@@ -188,13 +188,13 @@ class Interactor:
 
         conclusions = GeoLogic.run(gpl, self.problem)  # get gpl reasoned result
         if len(conclusions) == 0:
-            theorem = InverseParserM2F.inverse_parse_theorem(t_name, t_branch, None, self.theorem_GDL)
+            theorem = InverseParserM2F.inverse_parse_one_theorem(t_name, t_branch, None, self.theorem_GDL)
             self.problem.step(theorem, time.time() - timing)
             return False
         avg_timing = (time.time() - timing) / len(conclusions)
         for letters, premise, conclusion in conclusions:
             t_para = [letters[i] for i in self.theorem_GDL[t_name]["vars"]]
-            theorem = InverseParserM2F.inverse_parse_theorem(t_name, t_branch, t_para, self.theorem_GDL)
+            theorem = InverseParserM2F.inverse_parse_one_theorem(t_name, t_branch, t_para, self.theorem_GDL)
 
             for predicate, item in conclusion:  # add conclusion
                 update = self.problem.add(predicate, item, premise, theorem) or update
