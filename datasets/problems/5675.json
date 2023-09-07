@@ -24,42 +24,20 @@
     "line_addition(1,CM,MA)",
     "line_addition(1,CN,NB)",
     "similar_triangle_judgment_sas(1,CNM,CBA)",
-    "similar_triangle_judgment_sas(1,CBA,CNM)",
-    "similar_triangle_property_line_ratio(1,CNM,CBA)",
     "similar_triangle_property_line_ratio(1,NMC,BAC)",
-    "similar_triangle_property_line_ratio(1,MCN,ACB)",
-    "similar_triangle_property_line_ratio(1,CBA,CNM)",
-    "similar_triangle_property_line_ratio(1,BAC,NMC)",
-    "similar_triangle_property_line_ratio(1,ACB,MCN)",
     "similar_triangle_property_area_square_ratio(1,CNM,CBA)"
   ],
   "theorem_seq_dag": {
     "line_addition(1,CM,MA)": [
-      "similar_triangle_judgment_sas(1,CNM,CBA)",
-      "similar_triangle_judgment_sas(1,CBA,CNM)"
+      "similar_triangle_judgment_sas(1,CNM,CBA)"
     ],
     "line_addition(1,CN,NB)": [
-      "similar_triangle_judgment_sas(1,CNM,CBA)",
-      "similar_triangle_judgment_sas(1,CBA,CNM)"
+      "similar_triangle_judgment_sas(1,CNM,CBA)"
     ],
     "similar_triangle_judgment_sas(1,CNM,CBA)": [
-      "similar_triangle_property_line_ratio(1,CNM,CBA)",
       "similar_triangle_property_area_square_ratio(1,CNM,CBA)",
-      "similar_triangle_property_line_ratio(1,NMC,BAC)",
-      "similar_triangle_property_line_ratio(1,MCN,ACB)"
+      "similar_triangle_property_line_ratio(1,NMC,BAC)"
     ],
-    "similar_triangle_judgment_sas(1,CBA,CNM)": [
-      "similar_triangle_property_line_ratio(1,CBA,CNM)",
-      "similar_triangle_property_line_ratio(1,BAC,NMC)",
-      "similar_triangle_property_line_ratio(1,ACB,MCN)"
-    ],
-    "similar_triangle_property_line_ratio(1,CNM,CBA)": [],
-    "similar_triangle_property_line_ratio(1,NMC,BAC)": [],
-    "similar_triangle_property_line_ratio(1,MCN,ACB)": [],
-    "similar_triangle_property_line_ratio(1,CBA,CNM)": [],
-    "similar_triangle_property_line_ratio(1,BAC,NMC)": [],
-    "similar_triangle_property_line_ratio(1,ACB,MCN)": [],
-    "similar_triangle_property_area_square_ratio(1,CNM,CBA)": [],
     "START": [
       "line_addition(1,CM,MA)",
       "line_addition(1,CN,NB)"

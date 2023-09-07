@@ -28,11 +28,8 @@
   "goal_cdl": "Value(LengthOfLine(OE))",
   "problem_answer": "3/2",
   "theorem_seqs": [
-    "arc_property_center_angle(1,OCA,O)",
     "arc_property_center_angle(1,OBC,O)",
-    "arc_property_circumference_angle_external(1,OCA,B)",
     "arc_property_circumference_angle_external(1,OBC,D)",
-    "radius_of_circle_property_length_equal(1,OA,O)",
     "radius_of_circle_property_length_equal(1,OB,O)",
     "radius_of_circle_property_length_equal(1,OC,O)",
     "isosceles_triangle_judgment_line_equal(1,OBC)",
@@ -46,21 +43,14 @@
     "line_addition(1,AE,EB)"
   ],
   "theorem_seq_dag": {
-    "arc_property_center_angle(1,OCA,O)": [
-      "isosceles_triangle_judgment_angle_equal(1,COB)"
-    ],
     "arc_property_center_angle(1,OBC,O)": [
       "isosceles_triangle_judgment_angle_equal(1,COB)",
-      "isosceles_triangle_judgment_angle_equal(1,COB)"
-    ],
-    "arc_property_circumference_angle_external(1,OCA,B)": [
       "isosceles_triangle_judgment_angle_equal(1,COB)"
     ],
     "arc_property_circumference_angle_external(1,OBC,D)": [
       "isosceles_triangle_judgment_angle_equal(1,COB)",
       "isosceles_triangle_judgment_angle_equal(1,COB)"
     ],
-    "radius_of_circle_property_length_equal(1,OA,O)": [],
     "radius_of_circle_property_length_equal(1,OB,O)": [
       "isosceles_triangle_judgment_line_equal(1,OBC)"
     ],
@@ -82,16 +72,9 @@
     "altitude_of_triangle_judgment(1,CE,COB)": [
       "isosceles_triangle_property_line_coincidence(1,COB,E)"
     ],
-    "isosceles_triangle_property_line_coincidence(1,COB,E)": [],
-    "line_addition(1,AO,OE)": [],
-    "line_addition(1,AO,OB)": [],
-    "line_addition(1,AE,EB)": [],
     "START": [
-      "arc_property_center_angle(1,OCA,O)",
       "arc_property_center_angle(1,OBC,O)",
-      "arc_property_circumference_angle_external(1,OCA,B)",
       "arc_property_circumference_angle_external(1,OBC,D)",
-      "radius_of_circle_property_length_equal(1,OA,O)",
       "radius_of_circle_property_length_equal(1,OB,O)",
       "radius_of_circle_property_length_equal(1,OC,O)",
       "triangle_property_angle_sum(1,COB)",

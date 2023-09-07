@@ -34,7 +34,6 @@
   "goal_cdl": "Value(MeasureOfArc(RYW))",
   "problem_answer": "90",
   "theorem_seqs": [
-    "adjacent_complementary_angle(1,YZR,RZW)",
     "circle_property_chord_perpendicular_bisect_chord(1,R,RZ,YW)",
     "mirror_congruent_triangle_judgment_sas(1,ZRY,ZWR)",
     "mirror_congruent_triangle_property_angle_equal(1,RYZ,RZW)",
@@ -43,21 +42,14 @@
     "arc_property_center_angle(1,RYW,R)"
   ],
   "theorem_seq_dag": {
-    "adjacent_complementary_angle(1,YZR,RZW)": [
-      "mirror_congruent_triangle_judgment_sas(1,ZRY,ZWR)"
-    ],
     "circle_property_chord_perpendicular_bisect_chord(1,R,RZ,YW)": [
+      "mirror_congruent_triangle_judgment_sas(1,ZRY,ZWR)",
       "mirror_congruent_triangle_judgment_sas(1,ZRY,ZWR)"
     ],
     "mirror_congruent_triangle_judgment_sas(1,ZRY,ZWR)": [
       "mirror_congruent_triangle_property_angle_equal(1,RYZ,RZW)"
     ],
-    "mirror_congruent_triangle_property_angle_equal(1,RYZ,RZW)": [],
-    "angle_addition(1,WRZ,ZRY)": [],
-    "arc_property_center_angle(1,RYX,R)": [],
-    "arc_property_center_angle(1,RYW,R)": [],
     "START": [
-      "adjacent_complementary_angle(1,YZR,RZW)",
       "circle_property_chord_perpendicular_bisect_chord(1,R,RZ,YW)",
       "angle_addition(1,WRZ,ZRY)",
       "arc_property_center_angle(1,RYX,R)",

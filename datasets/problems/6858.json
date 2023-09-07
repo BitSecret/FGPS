@@ -28,9 +28,7 @@
   "goal_cdl": "Value(MeasureOfAngle(OCD))",
   "problem_answer": "25",
   "theorem_seqs": [
-    "arc_property_center_angle(1,OAB,O)",
     "arc_property_center_angle(1,OAC,O)",
-    "arc_property_center_angle(1,OBC,O)",
     "circle_property_chord_perpendicular_bisect_arc(1,OAC,OEB)",
     "congruent_arc_judgment_length_equal(1,OAB,OBC)",
     "congruent_arc_property_measure_equal(1,OAB,OBC)",
@@ -42,18 +40,12 @@
     "isosceles_triangle_property_angle_equal(1,OCD)"
   ],
   "theorem_seq_dag": {
-    "arc_property_center_angle(1,OAB,O)": [],
-    "arc_property_center_angle(1,OAC,O)": [],
-    "arc_property_center_angle(1,OBC,O)": [],
     "circle_property_chord_perpendicular_bisect_arc(1,OAC,OEB)": [
       "congruent_arc_judgment_length_equal(1,OAB,OBC)"
     ],
     "congruent_arc_judgment_length_equal(1,OAB,OBC)": [
       "congruent_arc_property_measure_equal(1,OAB,OBC)"
     ],
-    "congruent_arc_property_measure_equal(1,OAB,OBC)": [],
-    "arc_addition_measure(1,OAB,OBC)": [],
-    "arc_property_circumference_angle_external(1,OBC,D)": [],
     "radius_of_circle_property_length_equal(1,OD,O)": [
       "isosceles_triangle_judgment_line_equal(1,OCD)"
     ],
@@ -63,11 +55,8 @@
     "isosceles_triangle_judgment_line_equal(1,OCD)": [
       "isosceles_triangle_property_angle_equal(1,OCD)"
     ],
-    "isosceles_triangle_property_angle_equal(1,OCD)": [],
     "START": [
-      "arc_property_center_angle(1,OAB,O)",
       "arc_property_center_angle(1,OAC,O)",
-      "arc_property_center_angle(1,OBC,O)",
       "circle_property_chord_perpendicular_bisect_arc(1,OAC,OEB)",
       "arc_addition_measure(1,OAB,OBC)",
       "arc_property_circumference_angle_external(1,OBC,D)",

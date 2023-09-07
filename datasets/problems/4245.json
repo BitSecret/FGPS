@@ -31,25 +31,18 @@
     "radius_of_circle_property_length_equal(1,OB,O)",
     "diameter_of_circle_property_right_angle(1,BCA,O)",
     "parallel_judgment_corresponding_angle(1,DO,CA,B)",
-    "parallel_property_corresponding_angle(1,DO,CA,B)",
     "parallel_property_corresponding_angle(2,AC,OD,B)",
     "similar_triangle_judgment_aa(1,BDO,BCA)",
     "similar_triangle_property_line_ratio(1,BDO,BCA)",
     "similar_triangle_property_line_ratio(1,DOB,CAB)"
   ],
   "theorem_seq_dag": {
-    "line_addition(1,AO,OB)": [],
-    "radius_of_circle_property_length_equal(1,OA,O)": [],
-    "radius_of_circle_property_length_equal(1,OB,O)": [],
     "diameter_of_circle_property_right_angle(1,BCA,O)": [
-      "parallel_judgment_corresponding_angle(1,DO,CA,B)"
+      "parallel_judgment_corresponding_angle(1,DO,CA,B)",
+      "similar_triangle_judgment_aa(1,BDO,BCA)"
     ],
     "parallel_judgment_corresponding_angle(1,DO,CA,B)": [
-      "parallel_property_corresponding_angle(1,DO,CA,B)",
       "parallel_property_corresponding_angle(2,AC,OD,B)"
-    ],
-    "parallel_property_corresponding_angle(1,DO,CA,B)": [
-      "similar_triangle_judgment_aa(1,BDO,BCA)"
     ],
     "parallel_property_corresponding_angle(2,AC,OD,B)": [
       "similar_triangle_judgment_aa(1,BDO,BCA)"
@@ -58,8 +51,6 @@
       "similar_triangle_property_line_ratio(1,BDO,BCA)",
       "similar_triangle_property_line_ratio(1,DOB,CAB)"
     ],
-    "similar_triangle_property_line_ratio(1,BDO,BCA)": [],
-    "similar_triangle_property_line_ratio(1,DOB,CAB)": [],
     "START": [
       "line_addition(1,AO,OB)",
       "radius_of_circle_property_length_equal(1,OA,O)",

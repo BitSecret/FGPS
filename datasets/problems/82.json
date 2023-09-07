@@ -25,7 +25,6 @@
   "goal_cdl": "Value(AreaOfQuadrilateral(ADBC))",
   "problem_answer": "408",
   "theorem_seqs": [
-    "midpoint_of_line_judgment(1,E,DC)",
     "perpendicular_bisector_judgment_per_and_mid(1,AE,DC)",
     "perpendicular_bisector_property_distance_equal(1,AE,DC)",
     "vertical_angle(1,DEA,CEB)",
@@ -37,12 +36,9 @@
     "kite_area_formula_diagonal(1,ADBC)"
   ],
   "theorem_seq_dag": {
-    "midpoint_of_line_judgment(1,E,DC)": [
-      "perpendicular_bisector_judgment_per_and_mid(1,AE,DC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BE,CD)"
-    ],
     "perpendicular_bisector_judgment_per_and_mid(1,AE,DC)": [
-      "perpendicular_bisector_property_distance_equal(1,AE,DC)"
+      "perpendicular_bisector_property_distance_equal(1,AE,DC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BE,CD)"
     ],
     "perpendicular_bisector_property_distance_equal(1,AE,DC)": [
       "kite_judgment_equal_and_equal(1,ADBC)"
@@ -59,11 +55,8 @@
     "kite_judgment_equal_and_equal(1,ADBC)": [
       "kite_area_formula_diagonal(1,ADBC)"
     ],
-    "line_addition(1,DE,EC)": [],
-    "line_addition(1,AE,EB)": [],
-    "kite_area_formula_diagonal(1,ADBC)": [],
     "START": [
-      "midpoint_of_line_judgment(1,E,DC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,AE,DC)",
       "vertical_angle(1,DEA,CEB)",
       "line_addition(1,DE,EC)",
       "line_addition(1,AE,EB)"

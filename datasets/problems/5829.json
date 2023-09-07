@@ -23,18 +23,11 @@
   "theorem_seqs": [
     "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
     "midsegment_of_triangle_property_parallel(1,DE,ABC)",
-    "line_addition(1,AD,DB)",
     "line_addition(1,AE,EC)",
     "parallel_property_corresponding_angle(1,DE,BC,A)",
     "parallel_property_corresponding_angle(2,CB,ED,A)",
     "similar_triangle_judgment_aa(1,ADE,ABC)",
-    "similar_triangle_judgment_aa(1,ABC,ADE)",
-    "similar_triangle_property_line_ratio(1,ADE,ABC)",
     "similar_triangle_property_line_ratio(1,DEA,BCA)",
-    "similar_triangle_property_line_ratio(1,EAD,CAB)",
-    "similar_triangle_property_line_ratio(1,ABC,ADE)",
-    "similar_triangle_property_line_ratio(1,BCA,DEA)",
-    "similar_triangle_property_line_ratio(1,CAB,EAD)",
     "similar_triangle_property_area_square_ratio(1,ADE,ABC)"
   ],
   "theorem_seq_dag": {
@@ -45,37 +38,18 @@
       "parallel_property_corresponding_angle(1,DE,BC,A)",
       "parallel_property_corresponding_angle(2,CB,ED,A)"
     ],
-    "line_addition(1,AD,DB)": [],
-    "line_addition(1,AE,EC)": [],
     "parallel_property_corresponding_angle(1,DE,BC,A)": [
-      "similar_triangle_judgment_aa(1,ADE,ABC)",
-      "similar_triangle_judgment_aa(1,ABC,ADE)"
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
     ],
     "parallel_property_corresponding_angle(2,CB,ED,A)": [
-      "similar_triangle_judgment_aa(1,ADE,ABC)",
-      "similar_triangle_judgment_aa(1,ABC,ADE)"
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
     ],
     "similar_triangle_judgment_aa(1,ADE,ABC)": [
-      "similar_triangle_property_line_ratio(1,ADE,ABC)",
       "similar_triangle_property_area_square_ratio(1,ADE,ABC)",
-      "similar_triangle_property_line_ratio(1,DEA,BCA)",
-      "similar_triangle_property_line_ratio(1,EAD,CAB)"
+      "similar_triangle_property_line_ratio(1,DEA,BCA)"
     ],
-    "similar_triangle_judgment_aa(1,ABC,ADE)": [
-      "similar_triangle_property_line_ratio(1,ABC,ADE)",
-      "similar_triangle_property_line_ratio(1,BCA,DEA)",
-      "similar_triangle_property_line_ratio(1,CAB,EAD)"
-    ],
-    "similar_triangle_property_line_ratio(1,ADE,ABC)": [],
-    "similar_triangle_property_line_ratio(1,DEA,BCA)": [],
-    "similar_triangle_property_line_ratio(1,EAD,CAB)": [],
-    "similar_triangle_property_line_ratio(1,ABC,ADE)": [],
-    "similar_triangle_property_line_ratio(1,BCA,DEA)": [],
-    "similar_triangle_property_line_ratio(1,CAB,EAD)": [],
-    "similar_triangle_property_area_square_ratio(1,ADE,ABC)": [],
     "START": [
       "midsegment_of_triangle_judgment_midpoint(1,DE,ABC)",
-      "line_addition(1,AD,DB)",
       "line_addition(1,AE,EC)"
     ]
   }

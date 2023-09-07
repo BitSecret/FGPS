@@ -11,35 +11,17 @@
   ],
   "text_cdl": [
     "Equal(LengthOfLine(CA),80)",
-    "Equal(LengthOfLine(AB),LengthOfLine(BC))",
-    "Equal(MeasureOfAngle(CBA),90)"
+    "IsoscelesRightTriangle(BCA)"
   ],
   "image_cdl": [],
   "goal_cdl": "Value(Mul(2,LengthOfLine(AB)))",
   "problem_answer": "80*sqrt(2)",
   "theorem_seqs": [
-    "isosceles_triangle_judgment_line_equal(1,BCA)",
-    "isosceles_triangle_property_angle_equal(1,BCA)",
-    "triangle_property_angle_sum(1,ABC)",
-    "sine_theorem(1,ABC)",
-    "sine_theorem(1,BCA)",
-    "sine_theorem(1,CAB)"
+    "right_triangle_property_pythagorean(1,ABC)"
   ],
   "theorem_seq_dag": {
-    "isosceles_triangle_judgment_line_equal(1,BCA)": [
-      "isosceles_triangle_property_angle_equal(1,BCA)"
-    ],
-    "isosceles_triangle_property_angle_equal(1,BCA)": [],
-    "triangle_property_angle_sum(1,ABC)": [],
-    "sine_theorem(1,ABC)": [],
-    "sine_theorem(1,BCA)": [],
-    "sine_theorem(1,CAB)": [],
     "START": [
-      "isosceles_triangle_judgment_line_equal(1,BCA)",
-      "triangle_property_angle_sum(1,ABC)",
-      "sine_theorem(1,ABC)",
-      "sine_theorem(1,BCA)",
-      "sine_theorem(1,CAB)"
+      "right_triangle_property_pythagorean(1,ABC)"
     ]
   }
 }

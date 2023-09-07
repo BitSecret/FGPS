@@ -26,7 +26,6 @@
   "goal_cdl": "Value(LengthOfLine(OE))",
   "problem_answer": "5/2",
   "theorem_seqs": [
-    "parallelogram_property_diagonal_bisection(1,ABCD,O)",
     "parallelogram_property_diagonal_bisection(1,DABC,O)",
     "kite_property_diagonal_perpendicular_bisection(1,DABC,O)",
     "line_addition(1,BO,OD)",
@@ -37,25 +36,19 @@
     "midsegment_of_triangle_property_length(1,EO,BCD)"
   ],
   "theorem_seq_dag": {
-    "parallelogram_property_diagonal_bisection(1,ABCD,O)": [],
     "parallelogram_property_diagonal_bisection(1,DABC,O)": [
       "midsegment_of_triangle_judgment_midpoint(1,EO,BCD)"
     ],
     "kite_property_diagonal_perpendicular_bisection(1,DABC,O)": [
       "right_triangle_judgment_angle(1,DOC)"
     ],
-    "line_addition(1,BO,OD)": [],
-    "line_addition(1,AO,OC)": [],
     "right_triangle_judgment_angle(1,DOC)": [
       "right_triangle_property_pythagorean(1,DOC)"
     ],
-    "right_triangle_property_pythagorean(1,DOC)": [],
     "midsegment_of_triangle_judgment_midpoint(1,EO,BCD)": [
       "midsegment_of_triangle_property_length(1,EO,BCD)"
     ],
-    "midsegment_of_triangle_property_length(1,EO,BCD)": [],
     "START": [
-      "parallelogram_property_diagonal_bisection(1,ABCD,O)",
       "parallelogram_property_diagonal_bisection(1,DABC,O)",
       "kite_property_diagonal_perpendicular_bisection(1,DABC,O)",
       "line_addition(1,BO,OD)",

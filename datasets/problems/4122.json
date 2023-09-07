@@ -23,32 +23,13 @@
     "adjacent_complementary_angle(1,ADC,CDB)",
     "angle_addition(1,BCD,DCA)",
     "triangle_property_angle_sum(1,CAD)",
-    "triangle_property_angle_sum(1,CAB)",
-    "similar_triangle_judgment_aa(1,ADC,CDB)",
-    "similar_triangle_property_angle_equal(1,ADC,CDB)",
     "sine_theorem(1,CAD)"
   ],
   "theorem_seq_dag": {
-    "adjacent_complementary_angle(1,ADC,CDB)": [
-      "similar_triangle_judgment_aa(1,ADC,CDB)"
-    ],
-    "angle_addition(1,BCD,DCA)": [],
-    "triangle_property_angle_sum(1,CAD)": [
-      "similar_triangle_judgment_aa(1,ADC,CDB)"
-    ],
-    "triangle_property_angle_sum(1,CAB)": [
-      "similar_triangle_judgment_aa(1,ADC,CDB)"
-    ],
-    "similar_triangle_judgment_aa(1,ADC,CDB)": [
-      "similar_triangle_property_angle_equal(1,ADC,CDB)"
-    ],
-    "similar_triangle_property_angle_equal(1,ADC,CDB)": [],
-    "sine_theorem(1,CAD)": [],
     "START": [
       "adjacent_complementary_angle(1,ADC,CDB)",
       "angle_addition(1,BCD,DCA)",
       "triangle_property_angle_sum(1,CAD)",
-      "triangle_property_angle_sum(1,CAB)",
       "sine_theorem(1,CAD)"
     ]
   }
