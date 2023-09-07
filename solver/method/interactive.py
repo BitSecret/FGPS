@@ -64,7 +64,7 @@ class Interactor:
             update = self.apply_theorem_by_name_and_para_and_branch(t_name, t_branch, t_para)
 
         if not update:
-            w_msg = "Theorem <{},{},{}> not applied. Please check your t_para or prerequisite.".format(
+            w_msg = "Theorem <{},{},{}> not applied. Please check your theorem or prerequisite.".format(
                 t_name, t_branch, t_para)
             warnings.warn(w_msg)
 

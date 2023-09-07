@@ -3,7 +3,7 @@ from solver.method.forward_search import ForwardSearcher
 from solver.method.backward_search import BackwardSearcher
 from solver.aux_tools.utils import *
 from solver.aux_tools.output import *
-from solver.aux_tools.parser import GDLParser, CDLParser
+from solver.aux_tools.parser import CDLParser
 from solver.core.engine import EquationKiller as EqKiller
 from func_timeout import FunctionTimedOut
 import warnings
@@ -77,7 +77,7 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
 
                 if clean_theorem and solver.problem.goal.solved:  # clean theorem
                     problem_CDL = load_json(path_problems + filename)
-                    _id, seqs = get_used_theorem(solver.problem)
+                    _id, seqs = get_used(solver.problem)
                     if check_search is None:
                         problem_CDL["theorem_seqs"] = seqs
                     elif check_search == "fw":
@@ -91,20 +91,16 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
                 if save_CDL:  # save solved msg
                     save_json(
                         solver.problem.problem_CDL,
-                        path_solved + "{}_parsed.json".format(problem_CDL["problem_id"])
+                        path_solved + "{}_parsed.json".format(pid)
                     )
-                    save_step_msg(
-                        solver.problem,
-                        path_solved
-                    )
+
                     save_solution_tree(
-                        solver.problem,
-                        path_solved
+
                     )
 
             except Exception as e:  # exception
                 msg = "Raise Exception <{}> in problem {}.".format(e, pid)
-                unsolved.append("{}\t{}".format(problem_CDL["problem_id"], msg))
+                unsolved.append("{}\t{}".format(pid, msg))
 
         print("\npid\tannotation\tnotes")
         for n in unsolved:  # show unsolved
@@ -145,7 +141,7 @@ def check(auto=False, save_CDL=False, clean_theorem=False, acc_mode=False, check
 
             if clean_theorem and solver.problem.goal.solved:  # clean theorem
                 problem_CDL = load_json(path_problems + filename)
-                _id, seqs = get_used_theorem(solver.problem)
+                _id, seqs = get_used(solver.problem)
                 if check_search is None:
                     problem_CDL["theorem_seqs"] = seqs
                 elif check_search == "fw":
@@ -279,7 +275,7 @@ def search(direction="fw", strategy="df", auto=False, save_seqs=True,
 
 if __name__ == '__main__':
     # save_gdl()
-    check(auto=False, clean_theorem=False, save_CDL=False)
+    check(auto=False, save_CDL=False, clean_theorem=False, start_pid=1, end_pid=6981)
     # save_gdl()
 
     # search(auto=False, save_seqs=True, direction="bw")

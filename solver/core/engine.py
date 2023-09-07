@@ -309,13 +309,27 @@ class EquationKiller:
                 while update and len(solved) > 1:  # choose min but > 0, when has multi result
                     update = False
                     for sym in solved[0]:
-                        if len(solved[0][sym].free_symbols) != 0 or solved[0][sym] == solved[1][sym]:
-                            continue
-                        if solved[0][sym] < 0 < solved[1][sym]:
+                        if sym not in solved[1]:
+                            solved.pop(1)
+                            update = True
+                            break
+                        if len(solved[0][sym].free_symbols) != 0 and len(solved[1][sym].free_symbols) == 0:
                             solved.pop(0)
                             update = True
                             break
-                        if solved[1][sym] < 0 < solved[0][sym]:
+                        if len(solved[0][sym].free_symbols) == 0 and len(solved[1][sym].free_symbols) != 0:
+                            solved.pop(1)
+                            update = True
+                            break
+                        if len(solved[0][sym].free_symbols) != 0:
+                            continue
+                        if solved[0][sym] == solved[1][sym]:
+                            continue
+                        if float(solved[0][sym]) < 0 < float(solved[1][sym]):
+                            solved.pop(0)
+                            update = True
+                            break
+                        if float(solved[0][sym]) > 0 > float(solved[1][sym]):
                             solved.pop(1)
                             update = True
                             break
@@ -324,9 +338,11 @@ class EquationKiller:
                         continue
 
                     for sym in solved[0]:
-                        if len(solved[0][sym].free_symbols) != 0 or solved[0][sym] == solved[1][sym]:
+                        if len(solved[0][sym].free_symbols) != 0:
                             continue
-                        if abs(solved[0][sym]) > abs(solved[1][sym]):
+                        if solved[0][sym] == solved[1][sym]:
+                            continue
+                        if abs(float(solved[0][sym])) > abs(float(solved[1][sym])):
                             solved.pop(0)
                             update = True
                         else:

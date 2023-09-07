@@ -1,40 +1,49 @@
-import sys
-sys.path.append("../..")
 from solver.method.interactive import Interactor
 from solver.method.forward_search import Theorem
 from solver.aux_tools.utils import *
 from solver.aux_tools.output import *
 from solver.aux_tools.parser import CDLParser
 from solver.aux_tools.parser import InverseParserM2F
+from utils.utils import safe_save_json
 from func_timeout import FunctionTimedOut, func_set_timeout
 import warnings
 import os
+
 path_problems = "../../datasets/problems/"
+path_problems_aug = "../../datasets/problems-aug/"
 path_gdl = "../../datasets/gdl/"
 
 
+def init_aug_log():
+    log = {
+        "pid_count": 1,    # augmentation pid
+        "break_pid": {    # raw pid
+            "interactive": 1,
+            "search": 1
+        }
+    }
+    save_json(log, "aug_log.json")
+
+
 class Expander:
-    def __init__(self, use_theorem):
+    def __init__(self, method):
+        """
+        :param method: 'interactive' or 'search'.
+        """
         warnings.filterwarnings("ignore")
-        self.use_theorem = use_theorem
         self.solver = Interactor(load_json(path_gdl + "predicate_GDL.json"),
                                  load_json(path_gdl + "theorem_GDL.json"))
-        if "log.json" not in os.listdir(path_problems):
-            self.log = {}
-            self.count = len(os.listdir(path_problems)) + 1
-        else:
-            self.log = load_json(path_problems + "log.json")
-            self.count = len(os.listdir(path_problems))
-        self.raw_pid = 0
+        self.method = method
+        if "aug_log.json" not in os.listdir():
+            init_aug_log()
+        self.log = load_json("aug_log.json")
         self.data = []
 
-    def expand(self, start_pid, end_pid):
-        for self.raw_pid in range(start_pid, end_pid + 1):
-            if end_pid > 6981:
-                break
-            problem_CDL = load_json(path_problems + "{}.json".format(self.raw_pid))
+    def expand(self):
+        while self.log["break_pid"][self.method] < 6982:
+            problem_CDL = load_json(path_problems + "{}.json".format(self.log["break_pid"][self.method]))
 
-            print("\033[36m(pid={})\033[0m Start Expanding.".format(self.raw_pid))
+            print("\033[36m(pid={})\033[0m Start Expanding.".format(self.log["break_pid"][self.method]))
             self.init_problem(problem_CDL)  # apply theorem or random search
             self.data = []
             self.expand_logic()
@@ -53,7 +62,7 @@ class Expander:
                     continue
                 update = self.solver.apply_theorem(theorem_name) or update
                 print("\033[34m(pid={},use_theorem=False,timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
-                    self.raw_pid, time.time() - timing, count, theorem_name))
+                    self.log["break_pid"][self.method], time.time() - timing, count, theorem_name))
                 count += 1
 
         update = True
@@ -64,18 +73,18 @@ class Expander:
                     continue
                 update = self.solver.apply_theorem(theorem_name) or update
                 print("\033[34m(pid={},use_theorem=False,timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
-                    self.raw_pid, time.time() - timing, count, theorem_name))
+                    self.log["break_pid"][self.method], time.time() - timing, count, theorem_name))
                 count += 1
 
     def init_problem(self, problem_CDL):
         self.solver.load_problem(problem_CDL)
-        if self.use_theorem:
+        if self.method == "interactive":
             timing = time.time()
             count = 0
             for t_name, t_branch, t_para in CDLParser.parse_theorem_seqs(problem_CDL["theorem_seqs"]):
                 self.solver.apply_theorem(t_name, t_branch, t_para)
                 print("\033[34m(pid={},use_theorem=True,timing={:.4f}s,count={})\033[0m Apply theorem <{}>".format(
-                    self.raw_pid, time.time() - timing, count, t_name))
+                    self.log["break_pid"][self.method], time.time() - timing, count, t_name))
                 count += 1
         else:
             try:
@@ -93,14 +102,14 @@ class Expander:
                 continue
 
             goal_GDL = InverseParserM2F.inverse_parse_one(predicate, item, problem)
-            if "Equation" in goal_GDL:
-                goal_GDL = goal_GDL.replace("Equation", "Value")
+            if "Equation" in goal_GDL or "Value" in goal_GDL:
+                continue
 
-            if predicate != "Equation":  # logic
+            if "Equal" in goal_GDL:  # algebra
+                problem_answer = "0"
+            else:  # logic
                 problem_answer = goal_GDL
                 goal_GDL = "Relation({})".format(goal_GDL)
-            else:  # algebra
-                problem_answer = "0"
 
             for added_conditions, theorem_seqs in self.get_expand_problems(cid):
                 self.data.append((added_conditions, goal_GDL, problem_answer, theorem_seqs))
@@ -112,7 +121,7 @@ class Expander:
             if value is None:
                 continue
             try:
-                cid = problem.condition.id_of_item[("Equation", sym - value)]
+                cid = problem.condition.get_id_by_predicate_and_item("Equation", sym - value)
             except KeyError:
                 continue
 
@@ -142,6 +151,8 @@ class Expander:
                 for i in premises:
                     predicate, item, _, _, _ = problem.condition.items[i]
                     condition = InverseParserM2F.inverse_parse_one(predicate, item, problem)
+                    if "Value" in condition:
+                        condition = condition.replace("Value", "Equal")
                     added_conditions.append(condition)
                 expanded_problems.append((added_conditions, theorem_seqs[::-1]))
 
@@ -184,53 +195,44 @@ class Expander:
 
     def save_expand(self):
         all_expanded_data = set()
-        if str(self.raw_pid) not in self.log:  # ensure no duplicate problems
-            self.log[str(self.raw_pid)] = []
+        if "{}.json".format(self.log["break_pid"][self.method]) not in os.listdir(path_problems_aug):  # ensure no duplicate problems
+            expanded = {}
         else:
-            for pid in self.log[str(self.raw_pid)]:
-                problem_cdl = load_json(path_problems + "{}.json".format(pid))
-                all_expanded_data.add((tuple(problem_cdl["text_cdl"]), problem_cdl["goal_cdl"]))
-
-        raw_problem_cdl = load_json(path_problems + "{}.json".format(self.raw_pid))
+            expanded = load_json(path_problems_aug + "{}.json".format(self.log["break_pid"][self.method]))
+            for pid in expanded:
+                all_expanded_data.add((tuple(expanded[pid]["added_cdl"]), expanded[pid]["goal_cdl"]))
 
         for added_conditions, goal_GDL, problem_answer, theorem_seqs in self.data:
-            text_cdl = raw_problem_cdl["text_cdl"] + added_conditions
-            if (tuple(text_cdl), goal_GDL) in all_expanded_data:
+            if (tuple(added_conditions), goal_GDL) in all_expanded_data:
                 continue
-            # print(added_conditions, goal_GDL, problem_answer, theorem_seqs)
-            all_expanded_data.add((tuple(text_cdl), goal_GDL))
 
             new_data = {
-                "problem_id": self.count,
-                "annotation": "Expander_2023-09-01",
-                "source": "FormalGeo-{}".format(self.raw_pid),
-                "problem_level": 1,
-                "problem_text_cn": "",
-                "problem_text_en": "",
-                "problem_img": "{}.png".format(self.raw_pid),
-                "construction_cdl": raw_problem_cdl["construction_cdl"],
-                "text_cdl": text_cdl,
-                "image_cdl": raw_problem_cdl["image_cdl"],
+                "added_cdl": added_conditions,
                 "goal_cdl": goal_GDL,
                 "problem_answer": problem_answer,
                 "theorem_seqs": theorem_seqs
             }
+            expanded[str(self.log["pid_count"])] = new_data
+            self.log["pid_count"] += 1
 
-            save_json(new_data, path_problems + "{}.json".format(self.count))
-            self.log[str(self.raw_pid)].append(self.count)
-            self.count += 1
+        save_json(expanded, path_problems_aug + "{}.json".format(self.log["break_pid"][self.method]))
+        self.log["break_pid"][self.method] += 1
+        safe_save_json(self.log, "", "aug_log")
+        print("\033[34m(pid={},count={})\033[0m Save Expanded.\n".format(
+            self.log["break_pid"][self.method] - 1, len(self.data)))
 
-        save_json(self.log, path_problems + "log_bk.json")
-        try:
-            os.remove(path_problems + "log.json")
-        except FileNotFoundError:
-            pass
-        os.rename(path_problems + "log_bk.json", path_problems + "log.json")
-        print("\033[34m(pid={},count={})\033[0m Save Expanded.\n".format(self.raw_pid, len(self.data)))
+
+def assemble(raw_pid, aug_pid):
+    raw_problem = load_json(path_problems + "{}.json".format(raw_pid))
+    aug_problem = load_json(path_problems_aug + "{}.json".format(raw_pid))[str(aug_pid)]
+    raw_problem["problem_id"] = aug_pid
+    raw_problem["text_cdl"] += aug_problem["added_cdl"]
+    raw_problem["goal_cdl"] = aug_problem["goal_cdl"]
+    raw_problem["problem_answer"] = aug_problem["problem_answer"]
+    raw_problem["theorem_seqs"] = aug_problem["theorem_seqs"]
+    return raw_problem
 
 
 if __name__ == '__main__':
-    # expander = Expander(use_theorem=True)
-    # expander.expand(start_pid=1, end_pid=6981)
-    expander = Expander(use_theorem=False)
-    expander.expand(start_pid=1, end_pid=6981)
+    expander = Expander(method="interactive")
+    expander.expand()

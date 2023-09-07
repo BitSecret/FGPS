@@ -7,25 +7,6 @@ from graphviz import Digraph, Graph
 import os
 
 
-def simple_show(problem):
-    """Show simple information about problem-solving."""
-    time_sum = 0
-    for step in problem.timing:
-        time_sum += problem.timing[step][1]
-
-    printed = "{}\t{}\t".format(problem.problem_CDL["id"], str(problem.goal.answer))
-    if problem.goal.solved:
-        printed += "\033[32m1\033[0m\t"
-    else:
-        printed += "\033[31m0\033[0m\t"
-    printed += "{}\t".format(str(problem.goal.solved_answer))
-    if time_sum < 3.5:
-        printed += "{:.6f}".format(time_sum)
-    else:
-        printed += "\033[31m{:.6f}\033[0m".format(time_sum)
-    print(printed)
-
-
 def show(problem):
     """Show all information about problem-solving."""
     """-----------Conditional Declaration Statement-----------"""
@@ -170,7 +151,9 @@ def show(problem):
     print("total: {:.6f}s\n".format(time_sum))
 
 
-def save_solution_tree(problem, path):
+def save_solution_tree(problem, path, save_hyper, save_hyper_pic, save_dag, save_dag_pic):
+    if not(save_hyper or save_hyper_pic or save_dag or save_dag_pic):
+        return
     """Generate and save solution hyper tree and theorem DAG."""
     st_dot = Digraph(name=str(problem.problem_CDL["id"]))  # Tree
     nodes = []  # list of node(cdl or theorem).
@@ -264,13 +247,20 @@ def save_solution_tree(problem, path):
         }
         count += 1
 
-    save_json(solution_tree, path + "{}_hyper.json".format(problem.problem_CDL["id"]))  # save solution tree
-    st_dot.render(directory=path, view=False, format="png")  # save hyper graph
-    os.remove(path + "{}.gv".format(problem.problem_CDL["id"]))
-    if "{}_hyper.png".format(problem.problem_CDL["id"]) in os.listdir(path):
-        os.remove(path + "{}_hyper.png".format(problem.problem_CDL["id"]))
-    os.rename(path + "{}.gv.png".format(problem.problem_CDL["id"]),
-              path + "{}_hyper.png".format(problem.problem_CDL["id"]))
+    if save_hyper:
+        save_json(solution_tree, path + "{}_hyper.json".format(problem.problem_CDL["id"]))  # save solution tree
+    if save_hyper_pic:
+        st_dot.render(directory=path, view=False, format="png")  # save hyper graph
+        os.remove(path + "{}.gv".format(problem.problem_CDL["id"]))
+        try:
+            os.remove(path + "{}_hyper.png".format(problem.problem_CDL["id"]))
+        except NotImplementedError as e:
+            pass
+        os.rename(path + "{}.gv.png".format(problem.problem_CDL["id"]),
+                  path + "{}_hyper.png".format(problem.problem_CDL["id"]))
+
+    if not(save_dag or save_dag_pic):
+        return
 
     dag_dot = Digraph(name=str(problem.problem_CDL["id"]))  # generate theorem DAG
     nodes = []  # list of theorem.
@@ -334,13 +324,21 @@ def save_solution_tree(problem, path):
         _add_edge(dag_dot, nodes, "START", root)
     dag["START"] = real_root_nodes
 
-    save_json(dag, path + "{}_dag.json".format(problem.problem_CDL["id"]))  # save solution tree
-    dag_dot.render(directory=path, view=False, format="png")  # save hyper graph
-    os.remove(path + "{}.gv".format(problem.problem_CDL["id"]))
-    if "{}_dag.png".format(problem.problem_CDL["id"]) in os.listdir(path):
-        os.remove(path + "{}_dag.png".format(problem.problem_CDL["id"]))
-    os.rename(path + "{}.gv.png".format(problem.problem_CDL["id"]),
-              path + "{}_dag.png".format(problem.problem_CDL["id"]))
+    for head in list(dag.keys()):    # remove leaf node
+        if len(dag[head]) == 0:
+            dag.pop(head)
+
+    if save_dag:
+        save_json(dag, path + "{}_dag.json".format(problem.problem_CDL["id"]))  # save solution tree
+    if save_dag_pic:
+        dag_dot.render(directory=path, view=False, format="png")  # save hyper graph
+        os.remove(path + "{}.gv".format(problem.problem_CDL["id"]))
+        try:
+            os.remove(path + "{}_dag.png".format(problem.problem_CDL["id"]))
+        except NotImplementedError as e:
+            pass
+        os.rename(path + "{}.gv.png".format(problem.problem_CDL["id"]),
+                  path + "{}_dag.png".format(problem.problem_CDL["id"]))
 
 
 def _add_node(dot, nodes, node):
