@@ -326,7 +326,7 @@ class GDLParser(Parser):
                         "algebra_constraints": (),
                         "attr_in_algebra_constraints": (),
                         "conclusions": tuple(conclusions),
-                        "attr_in_conclusions": tuple(set(attr_in_conclusions))
+                        "attr_in_conclusions": sorted(tuple(set(attr_in_conclusions)))
                     }
                 }
             }
@@ -362,7 +362,7 @@ class GDLParser(Parser):
                         "algebra_constraints": (),
                         "attr_in_algebra_constraints": (),
                         "conclusions": tuple(conclusions),
-                        "attr_in_conclusions": tuple(set(attr_in_conclusions))
+                        "attr_in_conclusions": sorted(tuple(set(attr_in_conclusions)))
                     }
                 }
             }
@@ -468,7 +468,7 @@ class GDLParser(Parser):
                 "products": tuple(product),
                 "logic_constraints": tuple(logic_constraint),
                 "algebra_constraints": tuple(algebra_constraint),
-                "attr_in_algebra_constraints": tuple([(attr, tuple(para)) for attr, para in set(attrs)])
+                "attr_in_algebra_constraints": sorted(tuple([(attr, tuple(para)) for attr, para in set(attrs)]))
             }
             paras_list.append(paras)
 
@@ -500,7 +500,7 @@ class GDLParser(Parser):
 
         parsed_conclusion_GDL = {
             "conclusions": tuple(conclusion_GDL),
-            "attr_in_conclusions": tuple([(attr, tuple(para)) for attr, para in set(attrs)])
+            "attr_in_conclusions": sorted(tuple([(attr, tuple(para)) for attr, para in set(attrs)]))
         }
         return parsed_conclusion_GDL, paras
 

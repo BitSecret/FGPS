@@ -15,45 +15,45 @@ import random
 
 
 class Theorem:
-    t_msg = {  # t_name: (category, using_count)
-        "line_addition": (1, 2346),
-        "midpoint_of_line_judgment": (1, 7),
-        "parallel_judgment_corresponding_angle": (1, 29),
+    t_msg = {
+        "line_addition": (1, 2221),
+        "midpoint_of_line_judgment": (1, 2),
+        "parallel_judgment_corresponding_angle": (1, 28),
         "parallel_judgment_alternate_interior_angle": (1, 9),
-        "parallel_judgment_ipsilateral_internal_angle": (1, 72),
+        "parallel_judgment_ipsilateral_internal_angle": (1, 73),
         "parallel_judgment_par_par": (1, 12),
-        "parallel_judgment_per_per": (1, 41),
-        "parallel_property_collinear_extend": (1, 741),
-        "parallel_property_corresponding_angle": (1, 893),
-        "parallel_property_alternate_interior_angle": (1, 624),
-        "parallel_property_ipsilateral_internal_angle": (1, 294),
+        "parallel_judgment_per_per": (1, 40),
+        "parallel_property_collinear_extend": (1, 738),
+        "parallel_property_corresponding_angle": (1, 865),
+        "parallel_property_alternate_interior_angle": (1, 726),
+        "parallel_property_ipsilateral_internal_angle": (1, 289),
         "parallel_property_par_per": (1, 0),
-        "perpendicular_judgment_angle": (1, 17),
+        "perpendicular_judgment_angle": (1, 16),
         "perpendicular_bisector_judgment_per_and_mid": (1, 31),
         "perpendicular_bisector_judgment_distance_equal": (1, 10),
-        "perpendicular_bisector_property_distance_equal": (1, 120),
+        "perpendicular_bisector_property_distance_equal": (1, 121),
         "perpendicular_bisector_property_bisector": (1, 32),
-        "angle_addition": (1, 1398),
-        "flat_angle": (1, 272),
-        "adjacent_complementary_angle": (1, 1406),
-        "round_angle": (1, 82),
-        "vertical_angle": (1, 348),
-        "bisector_of_angle_judgment_angle_equal": (1, 33),
-        "bisector_of_angle_property_distance_equal": (1, 13),
+        "angle_addition": (1, 1382),
+        "flat_angle": (1, 273),
+        "adjacent_complementary_angle": (1, 1388),
+        "round_angle": (1, 87),
+        "vertical_angle": (1, 347),
+        "bisector_of_angle_judgment_angle_equal": (1, 32),
+        "bisector_of_angle_property_distance_equal": (1, 12),
         "bisector_of_angle_property_line_ratio": (2, 24),
         "bisector_of_angle_property_length_formula": (2, 0),
         "triangle_property_angle_sum": (1, 2607),
-        "sine_theorem": (3, 877),
-        "cosine_theorem": (3, 272),
-        "triangle_perimeter_formula": (4, 242),
+        "sine_theorem": (3, 824),
+        "cosine_theorem": (3, 273),
+        "triangle_perimeter_formula": (4, 222),
         "triangle_area_formula_common": (4, 53),
         "triangle_area_formula_sine": (3, 80),
         "median_of_triangle_judgment": (1, 71),
         "altitude_of_triangle_judgment": (1, 76),
-        "midsegment_of_triangle_judgment_midpoint": (1, 139),
+        "midsegment_of_triangle_judgment_midpoint": (1, 143),
         "midsegment_of_triangle_judgment_parallel": (1, 21),
         "midsegment_of_triangle_property_parallel": (1, 43),
-        "midsegment_of_triangle_property_length": (1, 146),
+        "midsegment_of_triangle_property_length": (1, 149),
         "circumcenter_of_triangle_judgment_intersection": (1, 0),
         "circumcenter_of_triangle_property_intersection": (1, 0),
         "incenter_of_triangle_judgment_intersection": (1, 1),
@@ -64,57 +64,57 @@ class Theorem:
         "orthocenter_of_triangle_property_intersection": (1, 1),
         "orthocenter_of_triangle_property_angle": (1, 0),
         "congruent_triangle_judgment_sss": (1, 4),
-        "congruent_triangle_judgment_sas": (1, 8),
+        "congruent_triangle_judgment_sas": (1, 9),
         "congruent_triangle_judgment_aas": (1, 27),
         "congruent_triangle_judgment_hl": (1, 6),
-        "congruent_triangle_property_line_equal": (1, 77),
-        "congruent_triangle_property_angle_equal": (1, 46),
+        "congruent_triangle_property_line_equal": (1, 78),
+        "congruent_triangle_property_angle_equal": (1, 47),
         "congruent_triangle_property_perimeter_equal": (4, 0),
         "congruent_triangle_property_area_equal": (4, 0),
         "congruent_triangle_property_exchange": (1, 0),
-        "mirror_congruent_triangle_judgment_sss": (1, 19),
-        "mirror_congruent_triangle_judgment_sas": (1, 52),
-        "mirror_congruent_triangle_judgment_aas": (1, 57),
+        "mirror_congruent_triangle_judgment_sss": (1, 21),
+        "mirror_congruent_triangle_judgment_sas": (1, 51),
+        "mirror_congruent_triangle_judgment_aas": (1, 58),
         "mirror_congruent_triangle_judgment_hl": (1, 45),
-        "mirror_congruent_triangle_property_line_equal": (1, 149),
-        "mirror_congruent_triangle_property_angle_equal": (1, 131),
+        "mirror_congruent_triangle_property_line_equal": (1, 151),
+        "mirror_congruent_triangle_property_angle_equal": (1, 121),
         "mirror_congruent_triangle_property_perimeter_equal": (4, 0),
         "mirror_congruent_triangle_property_area_equal": (4, 0),
         "mirror_congruent_triangle_property_exchange": (1, 0),
         "similar_triangle_judgment_sss": (1, 0),
-        "similar_triangle_judgment_sas": (1, 37),
-        "similar_triangle_judgment_aa": (1, 699),
+        "similar_triangle_judgment_sas": (1, 32),
+        "similar_triangle_judgment_aa": (1, 608),
         "similar_triangle_judgment_hl": (1, 0),
         "similar_triangle_property_ratio": (2, 0),
-        "similar_triangle_property_line_ratio": (2, 1696),
-        "similar_triangle_property_angle_equal": (1, 17),
-        "similar_triangle_property_perimeter_ratio": (4, 15),
+        "similar_triangle_property_line_ratio": (2, 1379),
+        "similar_triangle_property_angle_equal": (1, 16),
+        "similar_triangle_property_perimeter_ratio": (4, 14),
         "similar_triangle_property_area_square_ratio": (4, 61),
         "mirror_similar_triangle_judgment_sss": (1, 1),
-        "mirror_similar_triangle_judgment_sas": (1, 15),
-        "mirror_similar_triangle_judgment_aa": (1, 142),
+        "mirror_similar_triangle_judgment_sas": (1, 14),
+        "mirror_similar_triangle_judgment_aa": (1, 136),
         "mirror_similar_triangle_judgment_hl": (1, 1),
         "mirror_similar_triangle_property_ratio": (2, 0),
-        "mirror_similar_triangle_property_line_ratio": (2, 335),
+        "mirror_similar_triangle_property_line_ratio": (2, 301),
         "mirror_similar_triangle_property_angle_equal": (1, 33),
         "mirror_similar_triangle_property_perimeter_ratio": (4, 3),
         "mirror_similar_triangle_property_area_square_ratio": (4, 7),
-        "right_triangle_judgment_angle": (1, 896),
-        "right_triangle_judgment_pythagorean_inverse": (1, 9),
-        "right_triangle_property_pythagorean": (2, 909),
+        "right_triangle_judgment_angle": (1, 900),
+        "right_triangle_judgment_pythagorean_inverse": (1, 10),
+        "right_triangle_property_pythagorean": (2, 913),
         "right_triangle_property_length_of_median": (1, 33),
-        "isosceles_triangle_judgment_line_equal": (1, 899),
-        "isosceles_triangle_judgment_angle_equal": (1, 194),
-        "isosceles_triangle_property_angle_equal": (1, 878),
-        "isosceles_triangle_property_line_coincidence": (1, 58),
+        "isosceles_triangle_judgment_line_equal": (1, 933),
+        "isosceles_triangle_judgment_angle_equal": (1, 209),
+        "isosceles_triangle_property_angle_equal": (1, 906),
+        "isosceles_triangle_property_line_coincidence": (1, 60),
         "isosceles_right_triangle_judgment_isosceles_and_right": (1, 0),
         "isosceles_right_triangle_property_angle": (1, 0),
         "equilateral_triangle_judgment_isosceles_and_isosceles": (1, 9),
-        "equilateral_triangle_property_angle": (1, 64),
-        "quadrilateral_property_angle_sum": (1, 214),
-        "quadrilateral_perimeter_formula": (4, 150),
+        "equilateral_triangle_property_angle": (1, 67),
+        "quadrilateral_property_angle_sum": (1, 221),
+        "quadrilateral_perimeter_formula": (4, 155),
         "altitude_of_quadrilateral_judgment": (1, 1),
-        "altitude_of_quadrilateral_judgment_left_vertex": (1, 31),
+        "altitude_of_quadrilateral_judgment_left_vertex": (1, 32),
         "altitude_of_quadrilateral_judgment_right_vertex": (1, 21),
         "altitude_of_quadrilateral_judgment_diagonal": (1, 3),
         "midsegment_of_quadrilateral_judgment_midpoint": (1, 15),
@@ -128,7 +128,7 @@ class Theorem:
         "congruent_quadrilateral_property_area_equal": (4, 0),
         "congruent_quadrilateral_property_exchange": (1, 0),
         "mirror_congruent_quadrilateral_property_line_equal": (1, 1),
-        "mirror_congruent_quadrilateral_property_angle_equal": (1, 15),
+        "mirror_congruent_quadrilateral_property_angle_equal": (1, 13),
         "mirror_congruent_quadrilateral_property_perimeter_equal": (4, 0),
         "mirror_congruent_quadrilateral_property_area_equal": (4, 1),
         "mirror_congruent_quadrilateral_property_exchange": (1, 0),
@@ -147,13 +147,13 @@ class Theorem:
         "parallelogram_judgment_equal_and_equal": (1, 10),
         "parallelogram_judgment_angle_and_angle": (1, 11),
         "parallelogram_judgment_diagonal_bisection": (1, 1),
-        "parallelogram_property_opposite_line_equal": (1, 550),
-        "parallelogram_property_opposite_angle_equal": (1, 148),
-        "parallelogram_property_diagonal_bisection": (1, 242),
-        "parallelogram_area_formula_common": (4, 47),
+        "parallelogram_property_opposite_line_equal": (1, 546),
+        "parallelogram_property_opposite_angle_equal": (1, 138),
+        "parallelogram_property_diagonal_bisection": (1, 236),
+        "parallelogram_area_formula_common": (4, 48),
         "parallelogram_area_formula_sine": (3, 107),
         "kite_judgment_equal_and_equal": (1, 18),
-        "kite_property_diagonal_perpendicular_bisection": (1, 73),
+        "kite_property_diagonal_perpendicular_bisection": (1, 70),
         "kite_property_opposite_angle_equal": (1, 10),
         "kite_area_formula_diagonal": (4, 41),
         "kite_area_formula_sine": (3, 2),
@@ -171,65 +171,68 @@ class Theorem:
         "isosceles_trapezoid_judgment_diagonal_equal": (1, 0),
         "isosceles_trapezoid_property_angle_equal": (1, 9),
         "isosceles_trapezoid_property_diagonal_equal": (1, 5),
-        "round_arc": (1, 26),
+        "round_arc": (1, 25),
         "arc_addition_length": (1, 12),
         "arc_addition_measure": (1, 61),
-        "arc_property_center_angle": (1, 1271),
-        "arc_property_circumference_angle_external": (1, 1782),
-        "arc_property_circumference_angle_internal": (1, 201),
+        "arc_property_center_angle": (1, 1319),
+        "arc_property_circumference_angle_external": (1, 1820),
+        "arc_property_circumference_angle_internal": (1, 190),
         "arc_length_formula": (2, 27),
-        "congruent_arc_judgment_length_equal": (1, 122),
+        "congruent_arc_judgment_length_equal": (1, 121),
         "congruent_arc_judgment_measure_equal": (1, 13),
-        "congruent_arc_judgment_chord_equal": (1, 20),
+        "congruent_arc_judgment_chord_equal": (1, 21),
         "congruent_arc_property_length_equal": (1, 4),
-        "congruent_arc_property_measure_equal": (1, 138),
+        "congruent_arc_property_measure_equal": (1, 140),
         "congruent_arc_property_chord_equal": (1, 26),
         "similar_arc_judgment_cocircular": (1, 3),
         "similar_arc_property_ratio": (1, 0),
         "similar_arc_property_length_ratio": (2, 2),
         "similar_arc_property_measure_ratio": (2, 3),
         "similar_arc_property_chord_ratio": (2, 0),
-        "circle_property_length_of_radius_and_diameter": (1, 139),
+        "circle_property_length_of_radius_and_diameter": (1, 134),
         "circle_property_circular_power_chord_and_chord": (2, 32),
         "circle_property_circular_power_tangent_and_segment_line": (2, 35),
         "circle_property_circular_power_segment_and_segment_line": (2, 22),
         "circle_property_circular_power_tangent_and_segment_angle": (1, 18),
         "circle_property_circular_power_segment_and_segment_angle": (1, 20),
-        "circle_property_chord_perpendicular_bisect_chord": (1, 161),
+        "circle_property_chord_perpendicular_bisect_chord": (1, 162),
         "circle_property_chord_perpendicular_bisect_arc": (1, 58),
-        "circle_property_angle_of_osculation": (1, 13),
+        "circle_property_angle_of_osculation": (1, 12),
         "circle_perimeter_formula": (4, 33),
         "circle_area_formula": (4, 42),
-        "radius_of_circle_property_length_equal": (1, 1513),
+        "radius_of_circle_property_length_equal": (1, 1580),
         "diameter_of_circle_judgment_pass_centre": (1, 72),
         "diameter_of_circle_judgment_length_equal": (1, 0),
         "diameter_of_circle_judgment_right_angle": (1, 6),
         "diameter_of_circle_property_length_equal": (1, 105),
-        "diameter_of_circle_property_right_angle": (1, 368),
+        "diameter_of_circle_property_right_angle": (1, 385),
         "tangent_of_circle_judgment_perpendicular": (1, 12),
-        "tangent_of_circle_property_perpendicular": (1, 477),
-        "tangent_of_circle_property_length_equal": (1, 125),
+        "tangent_of_circle_property_perpendicular": (1, 541),
+        "tangent_of_circle_property_length_equal": (1, 131),
         "sector_perimeter_formula": (4, 0),
         "sector_area_formula": (4, 88),
-        "perpendicular_bisector_judgment_per_and_bisect": (1, 0),
-        "leva": (2, 0)
+        "perpendicular_bisector_judgment_per_and_bisect": (1, 0)
     }
 
 
 class ForwardSearcher:
 
-    def __init__(self, predicate_GDL, theorem_GDL, max_depth, strategy):
+    def __init__(self, predicate_GDL, theorem_GDL, max_depth, beam_size, method, debug=False):
         """
         Initialize Forward Searcher.
         :param predicate_GDL: predicate GDL.
         :param theorem_GDL: theorem GDL.
         :param max_depth: max search depth.
-        :param strategy: <str>, 'df' or 'bf', use deep-first or breadth-first.
+        :param beam_size: beam search size.
+        :param method: <str>, "dfs", "bfs", "rs", "bs".
+        :param debug: <bool>, set True when need print process information.
         """
         self.predicate_GDL = GDLParser.parse_predicate_gdl(predicate_GDL)
         self.theorem_GDL = GDLParser.parse_theorem_gdl(theorem_GDL, self.predicate_GDL)
         self.max_depth = max_depth
-        self.strategy = strategy
+        self.beam_size = beam_size
+        self.method = method
+        self.debug = debug
 
         self.p2t_map = {}  # dict, {predicate/attr: [(theorem_name, branch)]}, map predicate to theorem
         for t_name in Theorem.t_msg:
@@ -253,7 +256,7 @@ class ForwardSearcher:
         self.problem_p_paras = None  # Perimeter
         self.problem_a_paras = None  # Area
 
-    def get_problem(self, problem_CDL):
+    def init_problem(self, problem_CDL):
         """Init and return a problem by problem_CDL."""
         s_start_time = time.time()
         problem = Problem()
@@ -307,7 +310,7 @@ class ForwardSearcher:
             pid, time.time() - timing, len(problems)))
 
         while len(search_stack) > 0:
-            if self.strategy == "df":
+            if self.method == "df":
                 problem, last_step_count, pos = search_stack.pop()
             else:
                 problem, last_step_count, pos = search_stack.popleft()
