@@ -2124,13 +2124,3 @@
 **Notes**:  
 1.垂直平分线判定：AD是角平分线且BD=DC  
 
-### leva(ABC,DEF,O)
-<div>
-    <img src="gdl-pic/?.png" width="15%"
-</div>
-
-    premise: Polygon(ABC)&Collinear(ADB)&Collinear(BEC)&Collinear(CFA)&Collinear(AOE)&Collinear(BOF)&Collinear(COD)
-    conclusion: Equal(Mul(LengthOfLine(AD),LengthOfLine(BE),LengthOfLine(CF)),Mul(LengthOfLine(DB),LengthOfLine(EC),LengthOfLine(FA)))
-**Notes**:  
-1.塞瓦定理  
-

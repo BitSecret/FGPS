@@ -123,6 +123,6 @@ def main(auto=False, check_search=None, start_pid=1, end_pid=6981,
 
 
 if __name__ == '__main__':
-    # save_gdl()
+    save_gdl()
     # main(auto=False, save_dag=True)
-    add_theorem_dag()
+    # add_theorem_dag()
