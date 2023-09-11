@@ -21,9 +21,11 @@ def get_t_msg():
         for theorem in load_json(path_problems + filename)["theorem_seqs"]:
             t_name = theorem.split("(", 1)[0]
             result[t_name][1] += 1
-
-    save_json(result, path_search_log + "t_msg.json")
+    print("{")
+    for t_name in result:
+        print("'{}':{},".format(t_name, result[t_name]))
+    print("}")
 
 
 if __name__ == '__main__':
-    theorem_used_msg()
+    get_t_msg()
