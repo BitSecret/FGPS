@@ -1,13 +1,13 @@
-from solver.problem.condition import Condition, Goal
-from solver.aux_tools.parser import CDLParser
-from solver.aux_tools.utils import rough_equal
-from solver.core.engine import EquationKiller as EqKiller
 import warnings
 from itertools import combinations
 from sympy import symbols
 import copy
 import time
 from func_timeout import FunctionTimedOut
+from solver.problem.condition import Condition, Goal
+from solver.aux_tools.parser import CDLParser
+from solver.aux_tools.utils import rough_equal
+from solver.core.engine import EquationKiller as EqKiller
 
 
 class Problem:

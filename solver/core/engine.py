@@ -5,7 +5,6 @@ from solver.aux_tools.utils import number_round
 from solver.aux_tools.parser import CDLParser
 from solver.aux_tools.utils import rough_equal
 import warnings
-from solver.aux_tools.output import save_equations_hyper_graph
 
 
 class EquationKiller:
@@ -26,8 +25,6 @@ class EquationKiller:
         """
         target_sym = symbols("t_s")
         eqs = [target_sym - target_expr] + eqs
-
-        # save_equations_hyper_graph(eqs, "./data/solved/problems/")
 
         sym_to_eqs = {}  # dict, sym: [equation]
         for eq in eqs:
@@ -82,7 +79,6 @@ class EquationKiller:
         :return mini_eqs_list: minimum equations lists rank by solving difficulty.
         :return n_m: number of equations and syms.
         """
-        # save_equations_hyper_graph(eqs, "./data/solved/problems/")
 
         sym_to_eqs = {}  # dict, sym: [equation]
         for eq in eqs:
@@ -550,23 +546,25 @@ class EquationKiller:
 class GeometryPredicateLogic:
 
     @staticmethod
-    def run(gpl, problem):
+    def run(gpl, problem, letters=None):
         """
         Run reason step by step.
         :param gpl: <dict>, (products, logic_constraints, algebra_constraints, conclusions), geometric predicate logic.
         :param problem: instance of class <Problem>.
+        :param letters: preset letters for para selection.
         :return results: <list> of <tuple>, [(letters, premises, conclusions)].
         """
-        r = GeometryPredicateLogic.run_logic(gpl, problem)
+        r = GeometryPredicateLogic.run_logic(gpl, problem, letters)
         r = GeometryPredicateLogic.run_algebra(r, gpl, problem)
         return GeometryPredicateLogic.make_conclusion(r, gpl, problem)
 
     @staticmethod
-    def run_logic(gpl, problem):
+    def run_logic(gpl, problem, letters=None):
         """
         Run 'products', 'logic_constraints' of GPL.
         :param gpl: <dict>, (products, logic_constraints, algebra_constraints, conclusions), geometric predicate logic.
         :param problem: instance of class <Problem>.
+        :param letters: preset letters for para selection.
         :return r: triplet, (r_ids, r_items, r_vars).
         """
         products = gpl["products"]
@@ -590,9 +588,31 @@ class GeometryPredicateLogic:
             r_ids, r_items, r_vars = GeometryPredicateLogic.product(
                 (r_ids, r_items, r_vars), products[i], problem)
 
+        if letters is not None:   # select result according to letters
+            for i in range(len(r_ids))[::-1]:
+                selected = True
+                for v in letters:
+                    if r_items[i][r_vars.index(v)] != letters[v]:
+                        selected = False
+                        break
+                if not selected:
+                    r_items.pop(i)
+                    r_ids.pop(i)
+
         for i in range(len(logic_constraints)):
             r_ids, r_items, r_vars = GeometryPredicateLogic.constraint_logic(
                 (r_ids, r_items, r_vars), logic_constraints[i], problem)
+
+        if letters is not None:   # select result according to letters
+            for i in range(len(r_ids))[::-1]:
+                selected = True
+                for v in letters:
+                    if r_items[i][r_vars.index(v)] != letters[v]:
+                        selected = False
+                        break
+                if not selected:
+                    r_items.pop(i)
+                    r_ids.pop(i)
 
         return r_ids, r_items, r_vars
 
@@ -607,6 +627,8 @@ class GeometryPredicateLogic:
         """
         algebra_constraints = gpl["algebra_constraints"]
         r_ids, r_items, r_vars = r
+        if len(r_ids) == 0:
+            return [], [], r_vars
 
         for i in range(len(algebra_constraints)):
             r_ids, r_items, r_vars = GeometryPredicateLogic.constraint_algebra(
@@ -660,7 +682,7 @@ class GeometryPredicateLogic:
         """
         r1_ids, r1_items, r1_vars = r1
         if len(r1_ids) == 0:
-            return [], [], []
+            return [], [], r1_vars
         r2_ids, r2_items = problem.condition.get_ids_and_items_by_predicate_and_variable(r2_logic[0], r2_logic[1])
         r2_vars = r2_logic[1]
 
@@ -717,7 +739,7 @@ class GeometryPredicateLogic:
         """
         r1_ids, r1_items, r1_vars = r1
         if len(r1_ids) == 0:
-            return [], [], []
+            return [], [], r1_vars
         oppose = False  # indicate '&' or '&~'
         if "~" in r2_logic[0]:
             r2_logic[0] = r2_logic[0].replace("~", "")
@@ -764,7 +786,7 @@ class GeometryPredicateLogic:
         """
         r1_ids, r1_items, r1_vars = r1
         if len(r1_ids) == 0:
-            return [], [], []
+            return [], [], r1_vars
         oppose = False  # indicate '&' or '&~'
         if "~" in r2_algebra[0]:
             r2_algebra[0] = r2_algebra[0].replace("~", "")

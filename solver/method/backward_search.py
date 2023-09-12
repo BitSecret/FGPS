@@ -1,5 +1,4 @@
 from solver.aux_tools.output import get_used
-from solver.method.forward_search import Theorem
 from collections import deque
 from enum import Enum
 from func_timeout import func_set_timeout
@@ -427,7 +426,7 @@ class BackwardSearcher:
 
         self.id = 0
 
-    def init_problem(self, problem_CDL):
+    def init_search(self, problem_CDL):
         """Init and return a problem by problem_CDL."""
         s_start_time = time.time()
         self.problem = Problem()

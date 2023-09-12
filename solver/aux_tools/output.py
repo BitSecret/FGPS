@@ -1,10 +1,9 @@
 import time
-
-from solver.aux_tools.parser import InverseParserM2F
-from solver.aux_tools.utils import save_json
+import os
 from sympy import Float
 from graphviz import Digraph, Graph
-import os
+from solver.aux_tools.parser import InverseParserM2F
+from solver.aux_tools.utils import save_json
 
 
 def show(problem):
