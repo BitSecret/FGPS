@@ -13,3 +13,8 @@ def safe_save_json(data, path, filename):
         pass
 
     os.rename(path + filename + "_bk.json", path + filename + ".json")
+
+
+def debug_print(debug, msg):
+    if debug:
+        print(msg)
