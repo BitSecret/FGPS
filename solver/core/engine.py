@@ -1,7 +1,6 @@
 import copy
 from sympy import symbols, solve, Float
 from func_timeout import func_set_timeout, FunctionTimedOut
-from solver.aux_tools.utils import number_round
 from solver.aux_tools.parser import CDLParser
 from solver.aux_tools.utils import rough_equal
 import warnings
@@ -12,6 +11,9 @@ class EquationKiller:
     sym_simplify = True  # whether to apply symbol substitution simplification
     accurate_mode = False  # whether to use accurate mode
     solve_rank_deficient_eqs = False  # whether to solve rank deficient equations
+    use_cache = False  # whether to use cache to store solved target equations
+    cache_eqs = None  # <dict>, {tuple(str(eqs),): [(sym_str, value)]}
+    cache_target = None  # <dict>, {tuple(str(eqs),): value}
 
     @staticmethod
     def get_minimum_target_equations(target_expr, eqs):
@@ -20,7 +22,7 @@ class EquationKiller:
         :param target_expr: Target Expression.
         :param eqs: Existing Equations.
         :return target_sym: Target symbols.
-        :return mini_eqs_list: minimum equations lists rank by solving difficulty.
+        :return mini_eqs: minimum equations rank by solving difficulty.
         :return n_m: number of equations and syms.
         """
         target_sym = symbols("t_s")
@@ -378,6 +380,24 @@ class EquationKiller:
             if not EquationKiller.solve_rank_deficient_eqs and n_m[i][0] < n_m[i][1]:
                 continue
 
+            eqs_for_cache = None
+            if EquationKiller.use_cache:
+                eqs_for_cache = []
+                premise = []
+                str_to_sym = {}
+                for eq in mini_eqs_lists[i]:
+                    eqs_for_cache.append(str(eq))
+                    premise += problem.condition.simplified_equation[eq]
+                    for sym in eq.free_symbols:
+                        str_to_sym[str(sym)] = sym
+                eqs_for_cache = tuple(sorted(eqs_for_cache))
+
+                if eqs_for_cache in EquationKiller.cache_eqs:
+                    for sym_str, value in EquationKiller.cache_eqs[eqs_for_cache]:
+                        problem.set_value_of_sym(str_to_sym[sym_str], value, premise, "solve_eq")
+                    continue
+                EquationKiller.cache_eqs[eqs_for_cache] = []
+
             solved = False
             solved_results = None
             mini_eqs = None
@@ -418,14 +438,22 @@ class EquationKiller:
                     premise = []
                     for eq in sym_mini_eqs:
                         premise += problem.condition.simplified_equation[eq]
-                    problem.set_value_of_sym(sym, solved_results[sym], tuple(set(premise)), "solve_eq")
+                    problem.set_value_of_sym(sym, solved_results[sym], premise, "solve_eq")
+
+                    if EquationKiller.use_cache:
+                        EquationKiller.cache_eqs[eqs_for_cache].append((str(sym), solved_results[sym]))
+
             else:
                 premise = []
                 for eq in mini_eqs:
                     premise += problem.condition.simplified_equation[eq]
-                premise = tuple(set(premise))
+
                 for sym in solved_results:
                     problem.set_value_of_sym(sym, solved_results[sym], premise, "solve_eq")
+
+                if EquationKiller.use_cache:
+                    for sym in solved_results:
+                        EquationKiller.cache_eqs[eqs_for_cache].append((str(sym), solved_results[sym]))
 
     @staticmethod
     def solve_target(target_expr, problem):
@@ -455,7 +483,7 @@ class EquationKiller:
                 premise.append(problem.condition.get_id_by_predicate_and_item(
                     "Equation", sym - problem.condition.value_of_sym[sym]))
         if len(target_expr.free_symbols) == 0:
-            return number_round(target_expr), premise
+            return target_expr, premise
 
         target_sym, mini_eqs, n_m = EquationKiller.get_minimum_target_equations(  # get mini equations
             target_expr,
@@ -464,6 +492,21 @@ class EquationKiller:
 
         if len(mini_eqs) == 0:  # no mini equations, can't solve
             return None, []
+
+        eqs_for_cache = None
+        if EquationKiller.use_cache:
+            eqs_for_cache = [str(mini_eqs[0])]
+            for eq in mini_eqs[1:]:
+                eqs_for_cache.append(str(eq))
+                premise += problem.condition.simplified_equation[eq]
+            eqs_for_cache = tuple(sorted(eqs_for_cache))
+
+            if eqs_for_cache in EquationKiller.cache_target:
+                value = EquationKiller.cache_target[eqs_for_cache]
+                if value is None:
+                    return None, []
+                return value, premise
+            EquationKiller.cache_target[eqs_for_cache] = None
 
         head = 0  # can't solve
         tail = len(mini_eqs)  # can solve
@@ -494,6 +537,8 @@ class EquationKiller:
 
             if solved:
                 tail = p
+                if not EquationKiller.accurate_mode:
+                    break
             else:
                 head = p
 
@@ -523,7 +568,6 @@ class EquationKiller:
 
         for eq in solved_mini_eqs[1:]:
             premise += problem.condition.simplified_equation[eq]
-        premise = set(premise)
 
         eq = target_expr - solved_target_value
         value_added = False
@@ -535,12 +579,14 @@ class EquationKiller:
                 warnings.warn(msg)
             else:
                 for sym in results:
-                    problem.set_value_of_sym(sym, results[sym], tuple(premise), "solve_eq")
+                    problem.set_value_of_sym(sym, results[sym], premise, "solve_eq")
                     value_added = True
         if not value_added:
-            problem.condition.add("Equation", target_expr - solved_target_value, tuple(premise), "solve_eq")
+            problem.condition.add("Equation", target_expr - solved_target_value, premise, "solve_eq")
 
-        return solved_target_value, list(premise)
+        if EquationKiller.use_cache:
+            EquationKiller.cache_target[eqs_for_cache] = solved_target_value
+        return solved_target_value, premise
 
 
 class GeometryPredicateLogic:
@@ -588,7 +634,7 @@ class GeometryPredicateLogic:
             r_ids, r_items, r_vars = GeometryPredicateLogic.product(
                 (r_ids, r_items, r_vars), products[i], problem)
 
-        if letters is not None:   # select result according to letters
+        if letters is not None:  # select result according to letters
             for i in range(len(r_ids))[::-1]:
                 selected = True
                 for v in letters:
@@ -603,7 +649,7 @@ class GeometryPredicateLogic:
             r_ids, r_items, r_vars = GeometryPredicateLogic.constraint_logic(
                 (r_ids, r_items, r_vars), logic_constraints[i], problem)
 
-        if letters is not None:   # select result according to letters
+        if letters is not None:  # select result according to letters
             for i in range(len(r_ids))[::-1]:
                 selected = True
                 for v in letters:
@@ -742,7 +788,9 @@ class GeometryPredicateLogic:
             return [], [], r1_vars
         oppose = False  # indicate '&' or '&~'
         if "~" in r2_logic[0]:
+            r2_logic = list(r2_logic)
             r2_logic[0] = r2_logic[0].replace("~", "")
+            r2_logic = tuple(r2_logic)
             oppose = True
         index = [r1_vars.index(v) for v in r2_logic[1]]
         r_ids = []
@@ -789,7 +837,9 @@ class GeometryPredicateLogic:
             return [], [], r1_vars
         oppose = False  # indicate '&' or '&~'
         if "~" in r2_algebra[0]:
+            r2_algebra = list(r2_algebra)
             r2_algebra[0] = r2_algebra[0].replace("~", "")
+            r2_algebra = tuple(r2_algebra)
             oppose = True
         r_ids = []
         r_items = []

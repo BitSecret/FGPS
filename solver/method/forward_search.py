@@ -1,4 +1,3 @@
-import os
 import time
 import random
 import warnings
@@ -9,58 +8,12 @@ from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
 from solver.core.engine import GeometryPredicateLogic as GeoLogic
 from solver.aux_tools.output import get_used
-from solver.aux_tools.utils import load_json, save_json
+from solver.aux_tools.utils import load_json
+from utils.utils import debug_print
 
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
-path_raw_gdl = "../../utils/gdl/"
-path_search = "../../utils/search/"
-
-
-def get_p2t_map():
-    if "p2t_map.json" in os.listdir(path_search):
-        return load_json(path_search + "p2t_map.json")
-
-    t_msg = {}
-    gdl = load_json(path_raw_gdl + "theorem.json")["Theorems"]
-    for theorem in gdl:
-        t_name = theorem.split("(", 1)[0]
-        t_msg[t_name] = [gdl[theorem]["category"], 0]
-
-    for filename in os.listdir(path_problems):
-        for theorem in load_json(path_problems + filename)["theorem_seqs"]:
-            t_name = theorem.split("(", 1)[0]
-            t_msg[t_name][1] += 1
-
-    parsed_theorem_GDL = GDLParser.parse_theorem_gdl(
-        load_json(path_gdl + "theorem_GDL.json"),
-        GDLParser.parse_predicate_gdl(load_json(path_gdl + "predicate_GDL.json"))
-    )
-
-    p2t_map = {}
-    for t_name in t_msg:
-        if t_msg[t_name][1] == 0 or t_msg[t_name][0] == 3:  # skip no used and diff t
-            continue
-        for t_branch in parsed_theorem_GDL[t_name]["body"]:
-            theorem_unit = parsed_theorem_GDL[t_name]["body"][t_branch]
-            premises = list(theorem_unit["products"])
-            premises += list(theorem_unit["logic_constraints"])
-            premises += list(theorem_unit["attr_in_algebra_constraints"])
-            for predicate, p_vars in premises:
-                if predicate[0] == "~":  # skip oppose
-                    continue
-                if predicate not in p2t_map:
-                    p2t_map[predicate] = [(t_name, t_branch, p_vars)]
-                elif (t_name, t_branch, p_vars) not in p2t_map[predicate]:
-                    p2t_map[predicate].append((t_name, t_branch, p_vars))
-
-    save_json(p2t_map, path_search + "p2t_map.json")
-    return p2t_map
-
-
-def debug_print(debug, msg):
-    if debug:
-        print(msg)
+path_search_log = "../../utils/search/"
 
 
 class Node:
@@ -190,19 +143,14 @@ class Node:
 
         timing = time.time()
         related_pres = []  # new added predicates
-        related_eqs = []  # new added/updated equations
+        related_syms = []  # new added/updated equations
         for step in range(self.last_step, problem.condition.step_count):  # get related conditions
             for _id in problem.condition.ids_of_step[step]:
                 if problem.condition.items[_id][0] == "Equation":
-                    if problem.condition.items[_id][1] in related_eqs:
-                        continue
-                    related_eqs.append(problem.condition.items[_id][1])
-                    for simp_eq in problem.condition.simplified_equation:
-                        if simp_eq in related_eqs:
+                    for sym in problem.condition.items[_id][1].free_symbols:
+                        if sym in related_syms:
                             continue
-                        if _id not in problem.condition.simplified_equation[simp_eq]:
-                            continue
-                        related_eqs.append(simp_eq)
+                        related_syms.append(sym)
                 else:
                     if problem.condition.items[_id][0] not in self.p2t_map:
                         continue
@@ -218,14 +166,14 @@ class Node:
                             related_pres.append(related_pre)
         debug_print(self.debug, "(pos={}, timing={:.4f}s) Get Related.".format(self.pos, time.time() - timing))
         debug_print(self.debug, "(pos={}) Related predicates: {}.".format(self.pos, related_pres))
-        debug_print(self.debug, "(pos={}) Related equations: {}.".format(self.pos, related_eqs))
+        debug_print(self.debug, "(pos={}) Related syms: {}.".format(self.pos, related_syms))
 
         timing = time.time()
         logic_selections = self.try_theorem_logic(problem, related_pres)
         debug_print(self.debug, "(pos={}, timing={:.4f}s) Get {} logic-related selections: {}.".format(
             self.pos, time.time() - timing, len(logic_selections), logic_selections))
         timing = time.time()
-        algebra_selections = self.try_theorem_algebra(problem, related_eqs)
+        algebra_selections = self.try_theorem_algebra(problem, related_syms)
         debug_print(self.debug, "(pos={}, timing={:.4f}s) Get {} algebra-related selections: {}.".format(
             self.pos, time.time() - timing, len(algebra_selections), algebra_selections))
 
@@ -296,16 +244,15 @@ class Node:
 
         return selections
 
-    def try_theorem_algebra(self, problem, related_eqs):
+    def try_theorem_algebra(self, problem, related_syms):
         """
         Try a theorem and return can-added conclusions.
         :param problem: <Problem>, rebuild problem.
-        :param related_eqs: <list>, related equations.
+        :param related_syms: <list>, related syms.
         :return selections: <list> of ((t_name, t_branch, t_para, t_timing), ((predicate, item, premise))).
         """
-        syms = EqKiller.get_minimum_syms(related_eqs, list(problem.condition.simplified_equation))
         paras_of_attrs = {}  # <dict>, {attr: [para]}
-        for sym in syms:
+        for sym in related_syms:
             attr, paras = problem.condition.attr_of_sym[sym]
             if attr not in self.p2t_map:
                 continue
@@ -353,7 +300,7 @@ class ForwardSearcher:
         :param method: <str>, "dfs", "bfs", "rs", "bs".
         :param max_depth: max search depth.
         :param beam_size: beam search size.
-        :param p2t_map: <dict>, {predicate/attr: [(theorem_name, branch)]}, map predicate to theorem.
+        :param p2t_map: <dict>, {predicate/attr: [(theorem_name, branch, p_vars)]}, map predicate to theorem.
         :param debug: <bool>, set True when need print process information.
         """
         self.predicate_GDL = GDLParser.parse_predicate_gdl(predicate_GDL)
@@ -367,8 +314,15 @@ class ForwardSearcher:
         self.problem = None
         self.stack = None
 
+        self.step_size = 0
+
     def init_search(self, problem_CDL):
         """Initial problem by problem_CDL and build root Node."""
+        self.step_size = 0
+        EqKiller.use_cache = True    # use cache to speed up solving
+        EqKiller.cache_eqs = {}
+        EqKiller.cache_target = {}
+
         timing = time.time()  # timing
 
         self.problem = Problem()
@@ -383,7 +337,7 @@ class ForwardSearcher:
         debug_print(self.debug, "(pid={}, method={}, timing={:.4f}s) Initialize and start forward search...".format(
             problem_CDL["problem_id"], self.method, time.time() - timing))
 
-    @func_set_timeout(600)
+    @func_set_timeout(300)
     def search(self):
         """
         Search problem and return search result.
@@ -393,6 +347,7 @@ class ForwardSearcher:
         if self.method == "bfs":  # breadth-first search
             while len(self.stack) > 0:
                 node = self.stack.pop(0)
+                self.step_size += 1
                 debug_print(self.debug, "\n(depth={}, width={}, index={}) Current node.".format(
                     node.pos[0], node.pos[1], node.pos[2]))
                 timing = time.time()
@@ -414,6 +369,7 @@ class ForwardSearcher:
         elif self.method == "dfs":  # deep-first search
             while len(self.stack) > 0:
                 node = self.stack.pop()
+                self.step_size += 1
                 debug_print(self.debug, "\n(depth={}, width={}, index={}) Current node.".format(
                     node.pos[0], node.pos[1], node.pos[2]))
                 timing = time.time()
@@ -435,6 +391,7 @@ class ForwardSearcher:
         elif self.method == "rs":  # random search
             while len(self.stack) > 0:
                 node = self.stack.pop(random.randint(0, len(self.stack) - 1))
+                self.step_size += 1
                 debug_print(self.debug, "\n(depth={}, width={}, index={}) Current node.".format(
                     node.pos[0], node.pos[1], node.pos[2]))
                 timing = time.time()
@@ -463,6 +420,7 @@ class ForwardSearcher:
 
                 new_stack = []
                 for node in self.stack:  # expand all selected branch
+                    self.step_size += 1
                     debug_print(self.debug, "\n(depth={}, width={}, index={}) Current node.".format(
                         node.pos[0], node.pos[1], node.pos[2]))
                     timing = time.time()
@@ -492,9 +450,9 @@ if __name__ == '__main__':
     searcher = ForwardSearcher(
         load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
         method="bfs", max_depth=5, beam_size=5,
-        p2t_map=get_p2t_map(), debug=False
+        p2t_map=load_json(path_search_log + "p2t_map-fw.json"), debug=True
     )
     pid = 1
     searcher.init_search(load_json(path_problems + "{}.json".format(pid)))
     result = searcher.search()
-    print("pid: {}  solved: {}  seqs:{}\n".format(pid, result[0], result[1]))
+    print("pid: {}, solved: {}, seqs:{}, step_count: {}.\n".format(pid, result[0], result[1], searcher.step_size))

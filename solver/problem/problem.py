@@ -431,7 +431,7 @@ class Problem:
         if not skip_check and not self.check(predicate, item, premise, theorem):
             return False
 
-        added, _id = self.condition.add(predicate, item, tuple(premise), theorem)
+        added, _id = self.condition.add(predicate, item, premise, theorem)
         if added:
             if predicate == "Equation":  # preset Equation
                 return True

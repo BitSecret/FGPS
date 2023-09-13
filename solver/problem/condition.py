@@ -69,7 +69,7 @@ class Condition:
         """
 
         if not self.has(predicate, item):
-            self.items.append((predicate, item, tuple(set(premise)), theorem, self.step_count))
+            self.items.append((predicate, item, tuple(sorted(list(set(premise)))), theorem, self.step_count))
             self.items_group[predicate].append(item)
             self.ids_of_predicate[predicate].append(self.id_count)
             self.ids_of_step[self.step_count].append(self.id_count)

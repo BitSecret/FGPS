@@ -1,5 +1,4 @@
 from solver.aux_tools.output import get_used
-from collections import deque
 from enum import Enum
 from func_timeout import func_set_timeout
 from solver.problem.problem import Problem
@@ -15,26 +14,9 @@ import copy
 
 class GoalFinder:
 
-    def __init__(self, theorem_GDL, t_msg):
+    def __init__(self, theorem_GDL, p2t_map):
         self.theorem_GDL = theorem_GDL
-        self.p2t_map = {}
-        self.selected = ["midsegment_of_quadrilateral_property_length", "midsegment_of_quadrilateral_judgment_midpoint"]
-
-        for t_name in theorem_GDL:
-            # if t_name not in self.selected:
-            #     continue
-            if t_name in t_msg and (t_msg[t_name][1] == 0 or t_msg[t_name][0] == 3):  # skip no used and diff t
-                continue
-
-            for branch in theorem_GDL[t_name]["body"]:
-                theorem_unit = theorem_GDL[t_name]["body"][branch]
-                for predicate, _ in theorem_unit["conclusions"] + theorem_unit["attr_in_conclusions"]:
-                    if predicate == "Equal":
-                        continue
-                    if predicate not in self.p2t_map:
-                        self.p2t_map[predicate] = [(t_name, branch)]
-                    elif (t_name, branch) not in self.p2t_map[predicate]:
-                        self.p2t_map[predicate].append((t_name, branch))
+        self.p2t_map = p2t_map
 
     def find_all_sub_goals(self, predicate, item, problem):
         """return [(sub_goals, (t_name, t_para, t_branch))]"""
@@ -406,20 +388,27 @@ class SuperNode:
 
 class BackwardSearcher:
 
-    def __init__(self, predicate_GDL, theorem_GDL, max_depth, strategy):
+    def __init__(self, predicate_GDL, theorem_GDL, method, max_depth, beam_size, p2t_map, debug=False):
         """
-        Initialize Backward Searcher.
+        Initialize Forward Searcher.
         :param predicate_GDL: predicate GDL.
         :param theorem_GDL: theorem GDL.
+        :param method: <str>, "dfs", "bfs", "rs", "bs".
         :param max_depth: max search depth.
-        :param strategy: <str>, 'df' or 'bf', use deep-first or breadth-first.
+        :param beam_size: beam search size.
+        :param p2t_map: <dict>, {predicate/attr: [(theorem_name, branch)]}, map predicate to theorem.
+        :param debug: <bool>, set True when need print process information.
         """
         self.predicate_GDL = GDLParser.parse_predicate_gdl(predicate_GDL)
         self.theorem_GDL = GDLParser.parse_theorem_gdl(theorem_GDL, self.predicate_GDL)
         self.max_depth = max_depth
-        self.strategy = strategy
+        self.beam_size = beam_size
+        self.method = method
+        self.debug = debug
+        self.p2t_map = p2t_map
+
         self.node_map = {}
-        self.finder = GoalFinder(self.theorem_GDL, Theorem.t_msg)
+        self.finder = GoalFinder(self.theorem_GDL, p2t_map)
 
         self.problem = None
         self.root = None
@@ -482,14 +471,13 @@ class BackwardSearcher:
         return False, None
 
     def get_super_node(self):
-        search_stack = deque()
-        search_stack.append(self.root)
+        search_stack = [self.root]
 
         while len(search_stack) > 0:
-            if self.strategy == "df":
+            if self.method == "df":
                 super_node = search_stack.pop()
             else:
-                super_node = search_stack.popleft()
+                super_node = search_stack.pop(0)
 
             if super_node.pos[0] > self.max_depth:
                 continue
@@ -543,12 +531,11 @@ class BackwardSearcher:
         self.check_node(end_step_count)
 
     def save_backward_tree(self):
-        search_stack = deque()
-        search_stack.append((self.root, None))
+        search_stack = [(self.root, None)]
         dot = Digraph(name=str(self.problem.problem_CDL["id"]))
 
         while len(search_stack) > 0:
-            super_node, father_node_id = search_stack.popleft()
+            super_node, father_node_id = search_stack.pop(0)
             supernode_id, nodes_id = self.add_supernode(dot, super_node)
             if father_node_id is not None:
                 dot.edge(str(father_node_id), str(supernode_id))
