@@ -4,7 +4,9 @@ from solver.aux_tools.parser import GDLParser
 
 direction = ["fw", "bw"]  # forward, backward
 method = ["dfs", "bfs", "rs", "bs"]  # deep first, breadth first, random, beam
-data = {"start_pid": 1, "end_pid": 6981, "solved_pid": [], "unsolved_pid": [], "error_pid": []}
+data = {"solved": [], "unsolved": [], "timeout": [], "error": []}
+log = {"start_pid": 1, "end_pid": 6981, "solved_pid": [], "unsolved_pid": [], "timeout_pid": [], "error_pid": []}
+
 
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
@@ -12,13 +14,16 @@ path_search_data = "../../datasets/search/"
 path_raw_gdl = "../gdl/"
 
 
-def init_search():
+def init_search(force=False):
     for d in direction:
         for m in method:
             filename = "{}-{}.json".format(d, m)
-            if filename not in os.listdir():
-                save_json(data, filename)
-                save_json({}, path_search_data + filename)
+            if force:
+                save_json(log, filename)
+                save_json(data, path_search_data + filename)
+            elif filename not in os.listdir():
+                save_json(log, filename)
+                save_json(data, path_search_data + filename)
 
 
 def init_p2t_map():

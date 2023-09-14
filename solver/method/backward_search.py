@@ -11,6 +11,8 @@ from graphviz import Digraph
 from itertools import permutations
 import copy
 
+bw_timeout = 300
+
 
 class GoalFinder:
 

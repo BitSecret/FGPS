@@ -1,8 +1,9 @@
 from multiprocessing import Process, Queue
-from solver.method.forward_search import ForwardSearcher
-from solver.method.backward_search import BackwardSearcher
+from solver.method.forward_search import ForwardSearcher, fw_timeout
+from solver.method.backward_search import BackwardSearcher, bw_timeout
 from solver.aux_tools.utils import load_json
 from utils.utils import safe_save_json
+from func_timeout import FunctionTimedOut
 import warnings
 import os
 import psutil
@@ -45,12 +46,14 @@ def solve(direction, method, max_depth, beam_size, task_queue, reply_queue):
             method=method, max_depth=max_depth, beam_size=beam_size,
             p2t_map=load_json(path_search_log + "p2t_map-fw.json")
         )
+        timeout = str(fw_timeout)
     else:
         searcher = BackwardSearcher(
             load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
             method=method, max_depth=max_depth, beam_size=beam_size,
             p2t_map=load_json(path_search_log + "p2t_map-bw.json")
         )
+        timeout = str(bw_timeout)
 
     while True:
         if task_queue.empty():
@@ -64,6 +67,8 @@ def solve(direction, method, max_depth, beam_size, task_queue, reply_queue):
                 reply_queue.put((os.getpid(), problem_id, "solved", seqs, time.time() - timing, searcher.step_size))
             else:
                 reply_queue.put((os.getpid(), problem_id, "unsolved", "None", time.time() - timing, searcher.step_size))
+        except FunctionTimedOut:
+            reply_queue.put((os.getpid(), problem_id, "timeout", timeout, time.time() - timing, searcher.step_size))
         except BaseException as e:
             reply_queue.put((os.getpid(), problem_id, "error", repr(e), time.time() - timing, searcher.step_size))
 
@@ -90,18 +95,8 @@ def auto(direction, method, max_depth, beam_size):
         start_process(direction, method, max_depth, beam_size, pool, task_queue, reply_queue)  # run process
 
         process_id, problem_id, result, msg, timing, step_size = reply_queue.get()
-        data[str(problem_id)] = {
-            "result": result,
-            "msg": msg,
-            "timing": timing,
-            "step_size": step_size
-        }
-        if result == "solved":
-            log["solved_pid"].append(problem_id)
-        elif result == "unsolved":
-            log["unsolved_pid"].append(problem_id)
-        else:
-            log["error_pid"].append(problem_id)
+        data[result][str(problem_id)] = {"msg": msg, "timing": timing, "step_size": step_size}
+        log["{}_pid".format(result)].append(problem_id)
         safe_save_json(log, path_search_log, "{}-{}".format(direction, method))
         safe_save_json(data, path_search_data, "{}-{}".format(direction, method))
 

@@ -14,6 +14,7 @@ from utils.utils import debug_print
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
 path_search_log = "../../utils/search/"
+fw_timeout = 300
 
 
 class Node:
@@ -319,7 +320,7 @@ class ForwardSearcher:
     def init_search(self, problem_CDL):
         """Initial problem by problem_CDL and build root Node."""
         self.step_size = 0
-        EqKiller.use_cache = True    # use cache to speed up solving
+        EqKiller.use_cache = True  # use cache to speed up solving
         EqKiller.cache_eqs = {}
         EqKiller.cache_target = {}
 
@@ -337,7 +338,7 @@ class ForwardSearcher:
         debug_print(self.debug, "(pid={}, method={}, timing={:.4f}s) Initialize and start forward search...".format(
             problem_CDL["problem_id"], self.method, time.time() - timing))
 
-    @func_set_timeout(300)
+    @func_set_timeout(fw_timeout)
     def search(self):
         """
         Search problem and return search result.
