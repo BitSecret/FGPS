@@ -1,22 +1,24 @@
 from solver.method.interactive import Interactor
-from solver.method.forward_search import Theorem
 from solver.aux_tools.utils import *
 from solver.aux_tools.output import *
 from solver.aux_tools.parser import CDLParser
 from solver.aux_tools.parser import InverseParserM2F
+from solver.core.engine import EquationKiller
 from utils.utils import safe_save_json
 from func_timeout import FunctionTimedOut, func_set_timeout
 import warnings
 import os
 
+raw_problem_count = 6981
 path_problems = "../../datasets/problems/"
-path_problems_aug = "../../datasets/problems-aug/"
+path_problems_augment = "../../datasets/problems-augment/"
 path_gdl = "../../datasets/gdl/"
+path_search_log = "../search/"
 
 
 def init_aug_log():
     log = {
-        "pid_count": 1,    # augmentation pid
+        "pid_count": raw_problem_count + 1,    # augmentation pid
         "break_pid": {    # raw pid
             "interactive": 1,
             "search": 1
@@ -34,13 +36,15 @@ class Expander:
         self.solver = Interactor(load_json(path_gdl + "predicate_GDL.json"),
                                  load_json(path_gdl + "theorem_GDL.json"))
         self.method = method
-        if "aug_log.json" not in os.listdir():
-            init_aug_log()
+        if method == "search":
+            EquationKiller.use_cache = True
+
         self.log = load_json("aug_log.json")
-        self.data = []
+        self.t_msg = load_json(path_search_log + "t_msg.json")
+        self.data = None
 
     def expand(self):
-        while self.log["break_pid"][self.method] < 6982:
+        while self.log["break_pid"][self.method] < raw_problem_count + 1:
             problem_CDL = load_json(path_problems + "{}.json".format(self.log["break_pid"][self.method]))
 
             print("\033[36m(pid={})\033[0m Start Expanding.".format(self.log["break_pid"][self.method]))
@@ -50,33 +54,35 @@ class Expander:
             self.expand_algebra()
             self.save_expand()
 
-    @func_set_timeout(60)
+    @func_set_timeout(300)
     def apply_all_theorem(self):
         timing = time.time()
         count = 0
         update = True
         while update:
             update = False
-            for theorem_name in Theorem.t_msg:
-                if Theorem.t_msg[theorem_name][0] != 1:
+            for t_name in self.t_msg:
+                if self.t_msg[t_name][0] != 1:
                     continue
-                update = self.solver.apply_theorem(theorem_name) or update
+                update = self.solver.apply_theorem(t_name) or update
                 print("\033[34m(pid={},use_theorem=False,timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
-                    self.log["break_pid"][self.method], time.time() - timing, count, theorem_name))
+                    self.log["break_pid"][self.method], time.time() - timing, count, t_name))
                 count += 1
 
         update = True
         while update:
             update = False
-            for theorem_name in Theorem.t_msg:
-                if Theorem.t_msg[theorem_name][0] == 3:
+            for t_name in self.t_msg:
+                if self.t_msg[t_name][0] == 3:
                     continue
-                update = self.solver.apply_theorem(theorem_name) or update
+                update = self.solver.apply_theorem(t_name) or update
                 print("\033[34m(pid={},use_theorem=False,timing={:.4f}s,count={})\033[0m Apply theorem <{}>.".format(
-                    self.log["break_pid"][self.method], time.time() - timing, count, theorem_name))
+                    self.log["break_pid"][self.method], time.time() - timing, count, t_name))
                 count += 1
 
     def init_problem(self, problem_CDL):
+        EquationKiller.cache_eqs = {}    # init cache
+        EquationKiller.cache_target = {}
         self.solver.load_problem(problem_CDL)
         if self.method == "interactive":
             timing = time.time()
@@ -89,7 +95,7 @@ class Expander:
         else:
             try:
                 self.apply_all_theorem()
-            except FunctionTimedOut as e:
+            except FunctionTimedOut:
                 pass
 
     def expand_logic(self):
@@ -195,10 +201,10 @@ class Expander:
 
     def save_expand(self):
         all_expanded_data = set()
-        if "{}.json".format(self.log["break_pid"][self.method]) not in os.listdir(path_problems_aug):  # ensure no duplicate problems
+        if "{}.json".format(self.log["break_pid"][self.method]) not in os.listdir(path_problems_augment):  # ensure no duplicate problems
             expanded = {}
         else:
-            expanded = load_json(path_problems_aug + "{}.json".format(self.log["break_pid"][self.method]))
+            expanded = load_json(path_problems_augment + "{}.json".format(self.log["break_pid"][self.method]))
             for pid in expanded:
                 all_expanded_data.add((tuple(expanded[pid]["added_cdl"]), expanded[pid]["goal_cdl"]))
 
@@ -207,6 +213,7 @@ class Expander:
                 continue
 
             new_data = {
+                "problem_id": self.log["pid_count"],
                 "added_cdl": added_conditions,
                 "goal_cdl": goal_GDL,
                 "problem_answer": problem_answer,
@@ -215,17 +222,15 @@ class Expander:
             expanded[str(self.log["pid_count"])] = new_data
             self.log["pid_count"] += 1
 
-        save_json(expanded, path_problems_aug + "{}.json".format(self.log["break_pid"][self.method]))
+        save_json(expanded, path_problems_augment + "{}.json".format(self.log["break_pid"][self.method]))
         self.log["break_pid"][self.method] += 1
         safe_save_json(self.log, "", "aug_log")
         print("\033[34m(pid={},count={})\033[0m Save Expanded.\n".format(
             self.log["break_pid"][self.method] - 1, len(self.data)))
 
 
-def assemble(raw_pid, aug_pid):
-    raw_problem = load_json(path_problems + "{}.json".format(raw_pid))
-    aug_problem = load_json(path_problems_aug + "{}.json".format(raw_pid))[str(aug_pid)]
-    raw_problem["problem_id"] = aug_pid
+def assemble(raw_problem, aug_problem):
+    raw_problem["problem_id"] = aug_problem["problem_id"]
     raw_problem["text_cdl"] += aug_problem["added_cdl"]
     raw_problem["goal_cdl"] = aug_problem["goal_cdl"]
     raw_problem["problem_answer"] = aug_problem["problem_answer"]
@@ -234,5 +239,6 @@ def assemble(raw_pid, aug_pid):
 
 
 if __name__ == '__main__':
+    # init_aug_log()
     expander = Expander(method="interactive")
     expander.expand()

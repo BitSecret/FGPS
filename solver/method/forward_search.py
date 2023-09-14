@@ -453,7 +453,7 @@ if __name__ == '__main__':
         method="bfs", max_depth=5, beam_size=5,
         p2t_map=load_json(path_search_log + "p2t_map-fw.json"), debug=True
     )
-    pid = 1
+    pid = 60
     searcher.init_search(load_json(path_problems + "{}.json".format(pid)))
     result = searcher.search()
     print("pid: {}, solved: {}, seqs:{}, step_count: {}.\n".format(pid, result[0], result[1], searcher.step_size))

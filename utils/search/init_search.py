@@ -37,6 +37,7 @@ def init_p2t_map():
         for theorem in load_json(path_problems + filename)["theorem_seqs"]:
             t_name = theorem.split("(", 1)[0]
             t_msg[t_name][1] += 1
+    save_json(t_msg, "t_msg.json")
 
     parsed_theorem_GDL = GDLParser.parse_theorem_gdl(
         load_json(path_gdl + "theorem_GDL.json"),
