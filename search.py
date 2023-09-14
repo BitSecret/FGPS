@@ -1,137 +1,125 @@
-from solver.method.interactive import Interactor
-from solver.method.forward_search import ForwardSearcher
-from solver.method.backward_search import BackwardSearcher
-from solver.aux_tools.utils import *
-from solver.aux_tools.output import *
-from solver.aux_tools.parser import CDLParser
-from solver.core.engine import EquationKiller as EqKiller
+from multiprocessing import Process, Queue
+from solver.method.forward_search import ForwardSearcher, fw_timeout
+from solver.method.backward_search import BackwardSearcher, bw_timeout
+from solver.aux_tools.utils import load_json
+from utils.utils import safe_save_json
 from func_timeout import FunctionTimedOut
+import argparse
 import warnings
 import os
-import argparse
-from colorama import init
+import psutil
+import time
 
-init(autoreset=True)
+cpu_core = 10  # cpu core
 path_gdl = "datasets/gdl/"
 path_problems = "datasets/problems/"
-path_solved = "datasets/solved/"
+path_search_data = "datasets/search/"
+path_search_log = "utils/search/"
 
 
 def get_args():
-    parser = argparse.ArgumentParser(description="Welcome to use FormalGeo!")
+    parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
 
-    parser.add_argument("--start_pid", type=int, required=True, help="start problem id")
-    parser.add_argument("--end_pid", type=int, required=True, help="end problem id")
-    parser.add_argument("--direction", type=str, required=True, help="search direction")
+    parser.add_argument("--direction", type=str, required=True, choices=("fw", "bw"),  help="start problem id")
+    parser.add_argument("--method", type=str, required=True, choices=("bfs", "dfs", "rs", "bs"), help="end problem id")
+    parser.add_argument("--max_depth", type=int, required=True, help="search direction")
+    parser.add_argument("--beam_size", type=int, required=True, help="search direction")
 
     return parser.parse_args()
 
 
-def main(direction="fw", strategy="df", auto=False, save_seqs=True,
-         start_pid=1, end_pid=6981):
+def start_process(direction, method, max_depth, beam_size, pool, task_queue, reply_queue):
+    """Remove non-existent pid and start new process"""
+    for i in range(len(pool))[::-1]:  # remove non-existent pid
+        if pool[i] not in psutil.pids():
+            pool.pop(i)
+
+    if not task_queue.empty():  # start new process
+        for i in range(cpu_core - len(pool)):
+            process = Process(target=solve, args=(direction, method, max_depth, beam_size, task_queue, reply_queue))
+            process.start()
+            pool.append(process.pid)
+
+
+def solve(direction, method, max_depth, beam_size, task_queue, reply_queue):
     """
-    Solve problem by searching.
-    :param direction: 'fw' or 'bw', forward search or backward search.
-    :param strategy: 'df' or 'bf', deep-first search or breadth-first search.
-    :param auto: run all problems or run one problem.
-    :param save_seqs: save solved theorem seqs or not.
-    :param start_pid: start problem id.
-    :param end_pid: end problem id.
+    Start a process to solve problem.
+    :param direction: <str>, "fw", "bw".
+    :param method: <str>, "dfs", "bfs", "rs", "bs".
+    :param max_depth: max search depth.
+    :param beam_size: beam search size.
+    :param task_queue: <Queue>, get task id through this queue.
+    :param reply_queue: <Queue>, return solved result through this queue.
     """
     warnings.filterwarnings("ignore")
-    if direction == "fw":  # forward search
-        searcher = ForwardSearcher(load_json(path_gdl + "predicate_GDL.json"),  # init searcher
-                                   load_json(path_gdl + "theorem_GDL.json"),
-                                   max_depth=5,
-                                   strategy=strategy)
-        if auto:
-            for filename in os.listdir(path_problems):
-                pid = int(filename.split(".")[0])
-                if pid < start_pid or pid > end_pid:
-                    continue
+    if direction == "fw":
+        searcher = ForwardSearcher(
+            load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
+            method=method, max_depth=max_depth, beam_size=beam_size,
+            p2t_map=load_json(path_search_log + "p2t_map-fw.json")
+        )
+        timeout = str(fw_timeout)
+    else:
+        searcher = BackwardSearcher(
+            load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
+            method=method, max_depth=max_depth, beam_size=beam_size,
+            p2t_map=load_json(path_search_log + "p2t_map-bw.json")
+        )
+        timeout = str(bw_timeout)
 
-                problem_CDL = load_json(path_problems + filename)
-                if "notes" in problem_CDL or "forward_search" in problem_CDL:
-                    continue
+    while True:
+        if task_queue.empty():
+            break
+        problem_id = task_queue.get()
+        timing = time.time()
+        try:
+            searcher.init_search(load_json(path_problems + "{}.json".format(problem_id)))
+            solved, seqs = searcher.search()
+            if solved:
+                reply_queue.put((os.getpid(), problem_id, "solved", seqs, time.time() - timing, searcher.step_size))
+            else:
+                reply_queue.put((os.getpid(), problem_id, "unsolved", "None", time.time() - timing, searcher.step_size))
+        except FunctionTimedOut:
+            reply_queue.put((os.getpid(), problem_id, "timeout", timeout, time.time() - timing, searcher.step_size))
+        except BaseException as e:
+            reply_queue.put((os.getpid(), problem_id, "error", repr(e), time.time() - timing, searcher.step_size))
 
-                problem = searcher.get_problem(load_json(path_problems + filename))
 
-                try:
-                    solved, seqs = searcher.search(problem)
-                except FunctionTimedOut:
-                    print("\nFunctionTimedOut when search problem {}.\n".format(pid))
-                except Exception as e:
-                    print("Exception {} when search problem {}.".format(e, pid))
-                else:
-                    print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
-                    if solved and save_seqs:
-                        problem_CDL = load_json(path_problems + filename)
-                        problem_CDL["forward_search"] = seqs
-                        save_json(problem_CDL, path_problems + filename)
+def auto(direction, method, max_depth, beam_size):
+    """Auto run search on all problems."""
+    filename = "{}-{}.json".format(direction, method)
+    log = load_json(path_search_log + filename)
+    data = load_json(path_search_data + filename)
+    pool = []  # process id
+    task_count = 0  # problem id
 
-        else:
-            while True:
-                pid = input("pid:")
-                filename = "{}.json".format(pid)
-                if filename not in os.listdir(path_problems):
-                    print("No file \'{}\' in \'{}\'.\n".format(filename, path_problems))
-                    continue
+    task_queue = Queue()
+    reply_queue = Queue()
 
-                problem = searcher.get_problem(load_json(path_problems + filename))
-                solved, seqs = searcher.search(problem, strategy)
-                print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
-                if solved and save_seqs:  # clean theorem
-                    problem_CDL = load_json(path_problems + filename)
-                    if "forward_search" not in problem_CDL:
-                        problem_CDL["forward_search"] = seqs
-                        save_json(problem_CDL, path_problems + filename)
-    else:  # backward search
-        searcher = BackwardSearcher(load_json(path_gdl + "predicate_GDL.json"),  # init searcher
-                                    load_json(path_gdl + "theorem_GDL.json"),
-                                    max_depth=15,
-                                    strategy=strategy)
-        if auto:
-            for filename in os.listdir(path_problems):
-                pid = int(filename.split(".")[0])
-                if pid < start_pid or pid > end_pid:
-                    continue
+    for problem_id in range(log["start_pid"], log["end_pid"] + 1):  # assign tasks
+        if problem_id in log["solved_pid"] or problem_id in log["unsolved_pid"] or \
+                problem_id in log["timeout_pid"] or problem_id in log["error_pid"]:
+            continue
+        task_queue.put(problem_id)
+        task_count += 1
 
-                problem_CDL = load_json(path_problems + filename)
-                if "notes" in problem_CDL or "backward_search" in problem_CDL:
-                    continue
+    print("process_id\tproblem_id\tresult\tmsg")
+    while True:
+        start_process(direction, method, max_depth, beam_size, pool, task_queue, reply_queue)  # run process
 
-                searcher.init_problem(load_json(path_problems + filename))
+        process_id, problem_id, result, msg, timing, step_size = reply_queue.get()
+        data[result][str(problem_id)] = {"msg": msg, "timing": timing, "step_size": step_size}
+        log["{}_pid".format(result)].append(problem_id)
+        safe_save_json(log, path_search_log, "{}-{}".format(direction, method))
+        safe_save_json(data, path_search_data, "{}-{}".format(direction, method))
 
-                try:
-                    solved, seqs = searcher.search()
-                except FunctionTimedOut:
-                    print("\nFunctionTimedOut when search problem {}.\n".format(pid))
-                except Exception as e:
-                    print("Exception {} when search problem {}.".format(e, pid))
-                else:
-                    print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
-                    if solved and save_seqs:
-                        problem_CDL = load_json(path_problems + filename)
-                        problem_CDL["backward_search"] = seqs
-                        save_json(problem_CDL, path_problems + filename)
-        else:
-            while True:
-                pid = input("pid:")
-                filename = "{}.json".format(pid)
-                if filename not in os.listdir(path_problems):
-                    print("No file \'{}\' in \'{}\'.\n".format(filename, path_problems))
-                    continue
-                searcher.init_problem(load_json(path_problems + filename))
-                solved, seqs = searcher.search()
+        print("{}\t{}\t{}\t{}".format(process_id, problem_id, result, msg))
 
-                print("pid: {}  solved: {}  seqs:{}\n".format(pid, solved, seqs))
-
-                if solved and save_seqs:  # clean theorem
-                    problem_CDL = load_json(path_problems + filename)
-                    if "backward_search" not in problem_CDL:
-                        problem_CDL["backward_search"] = seqs
-                        save_json(problem_CDL, path_problems + filename)
+        task_count -= 1  # exit when all problem has been handled.
+        if task_count == 0:
+            break
 
 
 if __name__ == '__main__':
-    main()
+    # run(direction="fw", method="dfs")
+    auto(direction="fw", method="bfs", max_depth=5, beam_size=5)
