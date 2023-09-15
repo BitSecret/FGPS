@@ -5,12 +5,19 @@ from solver.problem.problem import Problem
 from solver.aux_tools.parser import GDLParser, CDLParser
 from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
-from solver.aux_tools.utils import rough_equal
+from solver.aux_tools.utils import load_json
+from utils.utils import debug_print
 import time
 from graphviz import Digraph
 from itertools import permutations
 import copy
+import random
+import warnings
 
+random.seed(619)
+path_gdl = "../../datasets/gdl/"
+path_problems = "../../datasets/problems/"
+path_search_log = "../../utils/search/"
 bw_timeout = 300
 
 
@@ -221,7 +228,7 @@ class Node:
             if result is None:
                 return False
 
-            if rough_equal(result, 0):
+            if result == 0:
                 self.state = NodeState.success
                 self.premise = premise
             else:
@@ -327,8 +334,8 @@ class SuperNode:
             return
 
         t_name, t_branch, t_para = self.theorem
-        theorem = InverseParserM2F.inverse_parse_logic(  # theorem + para
-            t_name, t_para, self.finder.theorem_GDL[t_name]["para_len"])
+        theorem = InverseParserM2F.inverse_parse_one_theorem(  # theorem + para
+            t_name, t_branch, t_para, self.finder.theorem_GDL)
 
         letters = {}  # used for vars-letters replacement
         for i in range(len(self.finder.theorem_GDL[t_name]["vars"])):
@@ -364,7 +371,7 @@ class SuperNode:
             solved_eq = False
 
             result, premise = EqKiller.solve_target(eq, self.problem)
-            if result is not None and rough_equal(result, 0):
+            if result is not None and result == 0:
                 solved_eq = True
             premises += premise
 
@@ -414,6 +421,7 @@ class BackwardSearcher:
 
         self.problem = None
         self.root = None
+        self.step_size = None
 
         self.id = 0
 
@@ -425,8 +433,9 @@ class BackwardSearcher:
         EqKiller.solve_equations(self.problem)
         self.problem.step("init_problem", time.time() - s_start_time)  # save applied theorem and update step
         SuperNode.snc = {}
+        self.step_size = 0
 
-    @func_set_timeout(300)
+    @func_set_timeout(bw_timeout)
     def search(self):
         """return seqs, <list> of theorem, solved theorem sequences."""
         pid = self.problem.problem_CDL["id"]
@@ -441,6 +450,7 @@ class BackwardSearcher:
 
         while self.root.state not in [NodeState.success, NodeState.fail]:
             super_node = self.get_super_node()
+            self.step_size += 1
             if super_node is None:
                 break
             start_step_count = self.problem.condition.step_count
@@ -476,7 +486,7 @@ class BackwardSearcher:
         search_stack = [self.root]
 
         while len(search_stack) > 0:
-            if self.method == "df":
+            if self.method == "dfs":
                 super_node = search_stack.pop()
             else:
                 super_node = search_stack.pop(0)
@@ -591,3 +601,17 @@ class BackwardSearcher:
             self.id += 1
 
         return supernode_id, nodes_id
+
+
+if __name__ == '__main__':
+    warnings.filterwarnings("ignore")
+    searcher = BackwardSearcher(
+        load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
+        method="bfs", max_depth=10, beam_size=10,
+        p2t_map=load_json(path_search_log + "p2t_map-bw.json"), debug=True
+    )
+    pid = 2
+    searcher.init_search(load_json(path_problems + "{}.json".format(pid)))
+    solved_result = searcher.search()
+    print("pid: {}, solved: {}, seqs:{}, step_count: {}.\n".format(
+        pid, solved_result[0], solved_result[1], searcher.step_size))

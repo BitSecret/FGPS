@@ -122,4 +122,5 @@ def auto(direction, method, max_depth, beam_size):
 
 if __name__ == '__main__':
     # run(direction="fw", method="dfs")
-    auto(direction="fw", method="bfs", max_depth=10, beam_size=10)
+    # auto(direction="fw", method="bfs", max_depth=10, beam_size=10)
+    auto(direction="bw", method="bfs", max_depth=10, beam_size=10)
