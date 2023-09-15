@@ -1,6 +1,6 @@
 {
-  "27078": {
-    "problem_id": 27078,
+  "27068": {
+    "problem_id": 27068,
     "added_cdl": [],
     "goal_cdl": "Relation(MirrorSimilarBetweenTriangle(BDA,CAB))",
     "problem_answer": "MirrorSimilarBetweenTriangle(BDA,CAB)",
@@ -8,8 +8,8 @@
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)"
     ]
   },
-  "27079": {
-    "problem_id": 27079,
+  "27069": {
+    "problem_id": 27069,
     "added_cdl": [],
     "goal_cdl": "Relation(MirrorSimilarBetweenTriangle(DAB,BCA))",
     "problem_answer": "MirrorSimilarBetweenTriangle(DAB,BCA)",
@@ -17,8 +17,8 @@
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)"
     ]
   },
-  "27080": {
-    "problem_id": 27080,
+  "27070": {
+    "problem_id": 27070,
     "added_cdl": [],
     "goal_cdl": "Relation(MirrorSimilarBetweenTriangle(ABD,ABC))",
     "problem_answer": "MirrorSimilarBetweenTriangle(ABD,ABC)",
@@ -26,8 +26,8 @@
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)"
     ]
   },
-  "27081": {
-    "problem_id": 27081,
+  "27071": {
+    "problem_id": 27071,
     "added_cdl": [],
     "goal_cdl": "Relation(RightTriangle(BDA))",
     "problem_answer": "RightTriangle(BDA)",
@@ -35,8 +35,8 @@
       "right_triangle_judgment_angle(1,BDA)"
     ]
   },
-  "27082": {
-    "problem_id": 27082,
+  "27072": {
+    "problem_id": 27072,
     "added_cdl": [
       "MirrorSimilarBetweenTriangle(BDA,CAB)",
       "Equation(-ll_bc*rmt_bdacab+ll_bd)",
@@ -48,8 +48,8 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
-  "27083": {
-    "problem_id": 27083,
+  "27073": {
+    "problem_id": 27073,
     "added_cdl": [
       "Equation(-ll_bc*rmt_bdacab+ll_bd)",
       "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
@@ -61,8 +61,8 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
-  "27084": {
-    "problem_id": 27084,
+  "27074": {
+    "problem_id": 27074,
     "added_cdl": [
       "MirrorSimilarBetweenTriangle(BDA,CAB)",
       "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
@@ -75,8 +75,8 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
-  "27085": {
-    "problem_id": 27085,
+  "27075": {
+    "problem_id": 27075,
     "added_cdl": [
       "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
     ],
@@ -89,8 +89,8 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
-  "27086": {
-    "problem_id": 27086,
+  "27076": {
+    "problem_id": 27076,
     "added_cdl": [
       "RightTriangle(BDA)"
     ],
@@ -104,14 +104,151 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
-  "27087": {
-    "problem_id": 27087,
+  "27077": {
+    "problem_id": 27077,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(AB))",
     "problem_answer": "12",
     "theorem_seqs": [
       "right_triangle_judgment_angle(1,BDA)",
       "right_triangle_property_pythagorean(1,BDA)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27078": {
+    "problem_id": 27078,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(BDA,CAB)",
+      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27079": {
+    "problem_id": 27079,
+    "added_cdl": [
+      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27080": {
+    "problem_id": 27080,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(BDA,CAB)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27081": {
+    "problem_id": 27081,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27082": {
+    "problem_id": 27082,
+    "added_cdl": [
+      "RightTriangle(BDA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BDA)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27083": {
+    "problem_id": 27083,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BDA)",
+      "right_triangle_property_pythagorean(1,BDA)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27084": {
+    "problem_id": 27084,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(BDA,CAB)",
+      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27085": {
+    "problem_id": 27085,
+    "added_cdl": [
+      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27086": {
+    "problem_id": 27086,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(BDA,CAB)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
+      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
+      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
+    ]
+  },
+  "27087": {
+    "problem_id": 27087,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "12*sqrt(11)/5",
+    "theorem_seqs": [
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
       "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
@@ -121,63 +258,9 @@
   "27088": {
     "problem_id": 27088,
     "added_cdl": [
-      "MirrorSimilarBetweenTriangle(BDA,CAB)",
-      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "12*sqrt(11)/5",
-    "theorem_seqs": [
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27089": {
-    "problem_id": 27089,
-    "added_cdl": [
-      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "12*sqrt(11)/5",
-    "theorem_seqs": [
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27090": {
-    "problem_id": 27090,
-    "added_cdl": [
-      "MirrorSimilarBetweenTriangle(BDA,CAB)",
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "12*sqrt(11)/5",
-    "theorem_seqs": [
-      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27091": {
-    "problem_id": 27091,
-    "added_cdl": [
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "12*sqrt(11)/5",
-    "theorem_seqs": [
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27092": {
-    "problem_id": 27092,
-    "added_cdl": [
       "RightTriangle(BDA)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
+    "goal_cdl": "Value(y)",
     "problem_answer": "12*sqrt(11)/5",
     "theorem_seqs": [
       "right_triangle_property_pythagorean(1,BDA)",
@@ -187,10 +270,10 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
-  "27093": {
-    "problem_id": 27093,
+  "27089": {
+    "problem_id": 27089,
     "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(BC))",
+    "goal_cdl": "Value(y)",
     "problem_answer": "12*sqrt(11)/5",
     "theorem_seqs": [
       "right_triangle_judgment_angle(1,BDA)",
@@ -201,6 +284,48 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
+  "27090": {
+    "problem_id": 27090,
+    "added_cdl": [
+      "RightTriangle(BDA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "2*sqrt(11)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BDA)"
+    ]
+  },
+  "27091": {
+    "problem_id": 27091,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "2*sqrt(11)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BDA)",
+      "right_triangle_property_pythagorean(1,BDA)"
+    ]
+  },
+  "27092": {
+    "problem_id": 27092,
+    "added_cdl": [
+      "RightTriangle(BDA)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "2*sqrt(11)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BDA)"
+    ]
+  },
+  "27093": {
+    "problem_id": 27093,
+    "added_cdl": [],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "2*sqrt(11)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BDA)",
+      "right_triangle_property_pythagorean(1,BDA)"
+    ]
+  },
   "27094": {
     "problem_id": 27094,
     "added_cdl": [
@@ -208,8 +333,8 @@
       "Equation(-ll_bc*rmt_bdacab+ll_bd)",
       "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "12*sqrt(11)/5",
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "10",
     "theorem_seqs": [
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
@@ -220,8 +345,8 @@
       "Equation(-ll_bc*rmt_bdacab+ll_bd)",
       "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "12*sqrt(11)/5",
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "10",
     "theorem_seqs": [
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
@@ -233,8 +358,8 @@
       "MirrorSimilarBetweenTriangle(BDA,CAB)",
       "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "12*sqrt(11)/5",
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "10",
     "theorem_seqs": [
       "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
@@ -246,8 +371,8 @@
     "added_cdl": [
       "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "12*sqrt(11)/5",
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "10",
     "theorem_seqs": [
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
       "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
@@ -260,8 +385,8 @@
     "added_cdl": [
       "RightTriangle(BDA)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "12*sqrt(11)/5",
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "10",
     "theorem_seqs": [
       "right_triangle_property_pythagorean(1,BDA)",
       "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
@@ -273,8 +398,8 @@
   "27099": {
     "problem_id": 27099,
     "added_cdl": [],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "12*sqrt(11)/5",
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "10",
     "theorem_seqs": [
       "right_triangle_judgment_angle(1,BDA)",
       "right_triangle_property_pythagorean(1,BDA)",
@@ -287,131 +412,6 @@
   "27100": {
     "problem_id": 27100,
     "added_cdl": [
-      "RightTriangle(BDA)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(BD))",
-    "problem_answer": "2*sqrt(11)",
-    "theorem_seqs": [
-      "right_triangle_property_pythagorean(1,BDA)"
-    ]
-  },
-  "27101": {
-    "problem_id": 27101,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(BD))",
-    "problem_answer": "2*sqrt(11)",
-    "theorem_seqs": [
-      "right_triangle_judgment_angle(1,BDA)",
-      "right_triangle_property_pythagorean(1,BDA)"
-    ]
-  },
-  "27102": {
-    "problem_id": 27102,
-    "added_cdl": [
-      "RightTriangle(BDA)"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "2*sqrt(11)",
-    "theorem_seqs": [
-      "right_triangle_property_pythagorean(1,BDA)"
-    ]
-  },
-  "27103": {
-    "problem_id": 27103,
-    "added_cdl": [],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "2*sqrt(11)",
-    "theorem_seqs": [
-      "right_triangle_judgment_angle(1,BDA)",
-      "right_triangle_property_pythagorean(1,BDA)"
-    ]
-  },
-  "27104": {
-    "problem_id": 27104,
-    "added_cdl": [
-      "MirrorSimilarBetweenTriangle(BDA,CAB)",
-      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
-    "problem_answer": "10",
-    "theorem_seqs": [
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27105": {
-    "problem_id": 27105,
-    "added_cdl": [
-      "Equation(-ll_bc*rmt_bdacab+ll_bd)",
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
-    "problem_answer": "10",
-    "theorem_seqs": [
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27106": {
-    "problem_id": 27106,
-    "added_cdl": [
-      "MirrorSimilarBetweenTriangle(BDA,CAB)",
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
-    "problem_answer": "10",
-    "theorem_seqs": [
-      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27107": {
-    "problem_id": 27107,
-    "added_cdl": [
-      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
-    "problem_answer": "10",
-    "theorem_seqs": [
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27108": {
-    "problem_id": 27108,
-    "added_cdl": [
-      "RightTriangle(BDA)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
-    "problem_answer": "10",
-    "theorem_seqs": [
-      "right_triangle_property_pythagorean(1,BDA)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27109": {
-    "problem_id": 27109,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(AD))",
-    "problem_answer": "10",
-    "theorem_seqs": [
-      "right_triangle_judgment_angle(1,BDA)",
-      "right_triangle_property_pythagorean(1,BDA)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,ABD,ABC)",
-      "mirror_similar_triangle_judgment_aa(1,BDA,CAB)",
-      "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
-    ]
-  },
-  "27110": {
-    "problem_id": 27110,
-    "added_cdl": [
       "MirrorSimilarBetweenTriangle(BDA,CAB)"
     ],
     "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(BDACAB))",
@@ -420,8 +420,8 @@
       "mirror_similar_triangle_property_line_ratio(1,BDA,CAB)"
     ]
   },
-  "27111": {
-    "problem_id": 27111,
+  "27101": {
+    "problem_id": 27101,
     "added_cdl": [],
     "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(BDACAB))",
     "problem_answer": "5/6",

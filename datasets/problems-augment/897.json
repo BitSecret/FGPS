@@ -1,6 +1,6 @@
 {
-  "25875": {
-    "problem_id": 25875,
+  "25865": {
+    "problem_id": 25865,
     "added_cdl": [],
     "goal_cdl": "Relation(ParallelBetweenLine(RY,XW))",
     "problem_answer": "ParallelBetweenLine(RY,XW)",
@@ -8,8 +8,8 @@
       "parallel_property_collinear_extend(3,RP,XW,Y)"
     ]
   },
-  "25876": {
-    "problem_id": 25876,
+  "25866": {
+    "problem_id": 25866,
     "added_cdl": [],
     "goal_cdl": "Relation(ParallelBetweenLine(WX,YR))",
     "problem_answer": "ParallelBetweenLine(WX,YR)",
@@ -17,8 +17,8 @@
       "parallel_property_collinear_extend(3,RP,XW,Y)"
     ]
   },
-  "25877": {
-    "problem_id": 25877,
+  "25867": {
+    "problem_id": 25867,
     "added_cdl": [],
     "goal_cdl": "Relation(ParallelBetweenLine(YP,XW))",
     "problem_answer": "ParallelBetweenLine(YP,XW)",
@@ -26,8 +26,8 @@
       "parallel_property_collinear_extend(3,RP,XW,Y)"
     ]
   },
-  "25878": {
-    "problem_id": 25878,
+  "25868": {
+    "problem_id": 25868,
     "added_cdl": [],
     "goal_cdl": "Relation(ParallelBetweenLine(WX,PY))",
     "problem_answer": "ParallelBetweenLine(WX,PY)",
@@ -35,8 +35,8 @@
       "parallel_property_collinear_extend(3,RP,XW,Y)"
     ]
   },
-  "25879": {
-    "problem_id": 25879,
+  "25869": {
+    "problem_id": 25869,
     "added_cdl": [
       "Equation(-ma_pys+ma_pyx-ma_syb)",
       "Equation(ma_pys+ma_spy+ma_ysp-180)",
@@ -49,8 +49,8 @@
       "cosine_theorem(1,XWY)"
     ]
   },
-  "25880": {
-    "problem_id": 25880,
+  "25870": {
+    "problem_id": 25870,
     "added_cdl": [
       "Equation(ma_pys+ma_spy+ma_ysp-180)",
       "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
@@ -63,8 +63,8 @@
       "cosine_theorem(1,XWY)"
     ]
   },
-  "25881": {
-    "problem_id": 25881,
+  "25871": {
+    "problem_id": 25871,
     "added_cdl": [
       "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
@@ -77,8 +77,8 @@
       "cosine_theorem(1,XWY)"
     ]
   },
-  "25882": {
-    "problem_id": 25882,
+  "25872": {
+    "problem_id": 25872,
     "added_cdl": [
       "Equation(ma_pyx+ma_yxw-180)"
     ],
@@ -91,8 +91,8 @@
       "cosine_theorem(1,XWY)"
     ]
   },
-  "25883": {
-    "problem_id": 25883,
+  "25873": {
+    "problem_id": 25873,
     "added_cdl": [
       "ParallelBetweenLine(YP,XW)"
     ],
@@ -106,14 +106,155 @@
       "cosine_theorem(1,XWY)"
     ]
   },
-  "25884": {
-    "problem_id": 25884,
+  "25874": {
+    "problem_id": 25874,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(WX))",
     "problem_answer": "10",
     "theorem_seqs": [
       "parallel_property_collinear_extend(3,RP,XW,Y)",
       "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25875": {
+    "problem_id": 25875,
+    "added_cdl": [
+      "Equation(-ma_pys+ma_pyx-ma_syb)",
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XY))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25876": {
+    "problem_id": 25876,
+    "added_cdl": [
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XY))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25877": {
+    "problem_id": 25877,
+    "added_cdl": [
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XY))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25878": {
+    "problem_id": 25878,
+    "added_cdl": [
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XY))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25879": {
+    "problem_id": 25879,
+    "added_cdl": [
+      "ParallelBetweenLine(YP,XW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XY))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25880": {
+    "problem_id": 25880,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(XY))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "parallel_property_collinear_extend(3,RP,XW,Y)",
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25881": {
+    "problem_id": 25881,
+    "added_cdl": [
+      "Equation(-ma_pys+ma_pyx-ma_syb)",
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WY))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25882": {
+    "problem_id": 25882,
+    "added_cdl": [
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WY))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25883": {
+    "problem_id": 25883,
+    "added_cdl": [
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WY))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
+      "cosine_theorem(1,XWY)"
+    ]
+  },
+  "25884": {
+    "problem_id": 25884,
+    "added_cdl": [
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WY))",
+    "problem_answer": "8",
+    "theorem_seqs": [
       "sine_theorem(1,SPY)",
       "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
@@ -123,27 +264,28 @@
   "25885": {
     "problem_id": 25885,
     "added_cdl": [
-      "Equation(-ma_pys+ma_pyx-ma_syb)",
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
+      "ParallelBetweenLine(YP,XW)"
     ],
-    "goal_cdl": "Value(LengthOfLine(XY))",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(WY))",
+    "problem_answer": "8",
     "theorem_seqs": [
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25886": {
     "problem_id": 25886,
-    "added_cdl": [
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(XY))",
-    "problem_answer": "6",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(WY))",
+    "problem_answer": "8",
     "theorem_seqs": [
+      "parallel_property_collinear_extend(3,RP,XW,Y)",
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
@@ -151,27 +293,27 @@
   "25887": {
     "problem_id": 25887,
     "added_cdl": [
+      "Equation(-ma_pys+ma_pyx-ma_syb)",
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
       "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(XY))",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(RY))",
+    "problem_answer": "5",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25888": {
     "problem_id": 25888,
     "added_cdl": [
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(XY))",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(RY))",
+    "problem_answer": "5",
     "theorem_seqs": [
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
@@ -179,13 +321,12 @@
   "25889": {
     "problem_id": 25889,
     "added_cdl": [
-      "ParallelBetweenLine(YP,XW)"
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(XY))",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(RY))",
+    "problem_answer": "5",
     "theorem_seqs": [
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "sine_theorem(1,SPY)",
       "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
@@ -193,12 +334,12 @@
   },
   "25890": {
     "problem_id": 25890,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(XY))",
-    "problem_answer": "6",
+    "added_cdl": [
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RY))",
+    "problem_answer": "5",
     "theorem_seqs": [
-      "parallel_property_collinear_extend(3,RP,XW,Y)",
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
       "sine_theorem(1,SPY)",
       "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
@@ -208,27 +349,28 @@
   "25891": {
     "problem_id": 25891,
     "added_cdl": [
-      "Equation(-ma_pys+ma_pyx-ma_syb)",
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
+      "ParallelBetweenLine(YP,XW)"
     ],
-    "goal_cdl": "Value(LengthOfLine(WY))",
-    "problem_answer": "8",
+    "goal_cdl": "Value(LengthOfLine(RY))",
+    "problem_answer": "5",
     "theorem_seqs": [
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25892": {
     "problem_id": 25892,
-    "added_cdl": [
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(WY))",
-    "problem_answer": "8",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(RY))",
+    "problem_answer": "5",
     "theorem_seqs": [
+      "parallel_property_collinear_extend(3,RP,XW,Y)",
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
@@ -236,27 +378,27 @@
   "25893": {
     "problem_id": 25893,
     "added_cdl": [
+      "Equation(-ma_pys+ma_pyx-ma_syb)",
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
       "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(WY))",
-    "problem_answer": "8",
+    "goal_cdl": "Value(LengthOfLine(PS))",
+    "problem_answer": "3",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25894": {
     "problem_id": 25894,
     "added_cdl": [
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(WY))",
-    "problem_answer": "8",
+    "goal_cdl": "Value(LengthOfLine(PS))",
+    "problem_answer": "3",
     "theorem_seqs": [
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
@@ -264,13 +406,12 @@
   "25895": {
     "problem_id": 25895,
     "added_cdl": [
-      "ParallelBetweenLine(YP,XW)"
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(WY))",
-    "problem_answer": "8",
+    "goal_cdl": "Value(LengthOfLine(PS))",
+    "problem_answer": "3",
     "theorem_seqs": [
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "sine_theorem(1,SPY)",
       "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
@@ -278,12 +419,12 @@
   },
   "25896": {
     "problem_id": 25896,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(WY))",
-    "problem_answer": "8",
+    "added_cdl": [
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PS))",
+    "problem_answer": "3",
     "theorem_seqs": [
-      "parallel_property_collinear_extend(3,RP,XW,Y)",
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
       "sine_theorem(1,SPY)",
       "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
@@ -293,27 +434,28 @@
   "25897": {
     "problem_id": 25897,
     "added_cdl": [
-      "Equation(-ma_pys+ma_pyx-ma_syb)",
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
+      "ParallelBetweenLine(YP,XW)"
     ],
-    "goal_cdl": "Value(LengthOfLine(RY))",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(PS))",
+    "problem_answer": "3",
     "theorem_seqs": [
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25898": {
     "problem_id": 25898,
-    "added_cdl": [
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(RY))",
-    "problem_answer": "5",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(PS))",
+    "problem_answer": "3",
     "theorem_seqs": [
+      "parallel_property_collinear_extend(3,RP,XW,Y)",
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
@@ -321,27 +463,27 @@
   "25899": {
     "problem_id": 25899,
     "added_cdl": [
+      "Equation(-ma_pys+ma_pyx-ma_syb)",
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
       "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(RY))",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(SY))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25900": {
     "problem_id": 25900,
     "added_cdl": [
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(RY))",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(SY))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
@@ -349,13 +491,12 @@
   "25901": {
     "problem_id": 25901,
     "added_cdl": [
-      "ParallelBetweenLine(YP,XW)"
+      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
+      "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(RY))",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(SY))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "sine_theorem(1,SPY)",
       "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
@@ -363,12 +504,12 @@
   },
   "25902": {
     "problem_id": 25902,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(RY))",
-    "problem_answer": "5",
+    "added_cdl": [
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(SY))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "parallel_property_collinear_extend(3,RP,XW,Y)",
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
       "sine_theorem(1,SPY)",
       "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
@@ -378,42 +519,38 @@
   "25903": {
     "problem_id": 25903,
     "added_cdl": [
-      "Equation(-ma_pys+ma_pyx-ma_syb)",
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
+      "ParallelBetweenLine(YP,XW)"
     ],
-    "goal_cdl": "Value(LengthOfLine(PS))",
-    "problem_answer": "3",
+    "goal_cdl": "Value(LengthOfLine(SY))",
+    "problem_answer": "4",
     "theorem_seqs": [
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25904": {
     "problem_id": 25904,
-    "added_cdl": [
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(PS))",
-    "problem_answer": "3",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(SY))",
+    "problem_answer": "4",
     "theorem_seqs": [
+      "parallel_property_collinear_extend(3,RP,XW,Y)",
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "sine_theorem(1,SPY)",
+      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25905": {
     "problem_id": 25905,
-    "added_cdl": [
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(PS))",
-    "problem_answer": "3",
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(YXQ))",
+    "problem_answer": "180*acos(3/5)/pi",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
@@ -422,12 +559,9 @@
     "added_cdl": [
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(PS))",
-    "problem_answer": "3",
+    "goal_cdl": "Value(MeasureOfAngle(PYB))",
+    "problem_answer": "-180*acos(3/5)/pi+180",
     "theorem_seqs": [
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
@@ -436,27 +570,21 @@
     "added_cdl": [
       "ParallelBetweenLine(YP,XW)"
     ],
-    "goal_cdl": "Value(LengthOfLine(PS))",
-    "problem_answer": "3",
+    "goal_cdl": "Value(MeasureOfAngle(PYB))",
+    "problem_answer": "-180*acos(3/5)/pi+180",
     "theorem_seqs": [
       "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25908": {
     "problem_id": 25908,
     "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(PS))",
-    "problem_answer": "3",
+    "goal_cdl": "Value(MeasureOfAngle(PYB))",
+    "problem_answer": "-180*acos(3/5)/pi+180",
     "theorem_seqs": [
       "parallel_property_collinear_extend(3,RP,XW,Y)",
       "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
@@ -464,12 +592,10 @@
     "problem_id": 25909,
     "added_cdl": [
       "Equation(-ma_pys+ma_pyx-ma_syb)",
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(SY))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(MeasureOfAngle(PYS))",
+    "problem_answer": "-180*acos(3/5)/pi+90",
     "theorem_seqs": [
       "cosine_theorem(1,XWY)"
     ]
@@ -477,12 +603,10 @@
   "25910": {
     "problem_id": 25910,
     "added_cdl": [
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
       "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(SY))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(MeasureOfAngle(PYS))",
+    "problem_answer": "-180*acos(3/5)/pi+90",
     "theorem_seqs": [
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
@@ -491,27 +615,24 @@
   "25911": {
     "problem_id": 25911,
     "added_cdl": [
-      "Equation(ll_ps*sin(pi*ma_spy/180)-ll_sy*sin(pi*ma_pys/180))",
-      "Equation(ma_pyx+ma_yxw-180)"
+      "ParallelBetweenLine(YP,XW)"
     ],
-    "goal_cdl": "Value(LengthOfLine(SY))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(MeasureOfAngle(PYS))",
+    "problem_answer": "-180*acos(3/5)/pi+90",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,PYS)",
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25912": {
     "problem_id": 25912,
-    "added_cdl": [
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(SY))",
-    "problem_answer": "4",
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(PYS))",
+    "problem_answer": "-180*acos(3/5)/pi+90",
     "theorem_seqs": [
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
+      "parallel_property_collinear_extend(3,RP,XW,Y)",
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
@@ -519,179 +640,58 @@
   "25913": {
     "problem_id": 25913,
     "added_cdl": [
-      "ParallelBetweenLine(YP,XW)"
+      "Equation(-ma_pys+ma_pyx-ma_syb)",
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ma_pyx+ma_yxw-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(SY))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(MeasureOfAngle(SPR))",
+    "problem_answer": "180*acos(3/5)/pi",
     "theorem_seqs": [
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25914": {
     "problem_id": 25914,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(SY))",
-    "problem_answer": "4",
+    "added_cdl": [
+      "Equation(ma_pys+ma_spy+ma_ysp-180)",
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SPR))",
+    "problem_answer": "180*acos(3/5)/pi",
     "theorem_seqs": [
-      "parallel_property_collinear_extend(3,RP,XW,Y)",
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "sine_theorem(1,SPY)",
-      "triangle_property_angle_sum(1,PYS)",
       "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25915": {
     "problem_id": 25915,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(YXQ))",
+    "added_cdl": [
+      "Equation(ma_pyx+ma_yxw-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SPR))",
     "problem_answer": "180*acos(3/5)/pi",
     "theorem_seqs": [
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25916": {
     "problem_id": 25916,
     "added_cdl": [
-      "Equation(ma_pyx+ma_yxw-180)"
+      "ParallelBetweenLine(YP,XW)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(PYB))",
-    "problem_answer": "-180*acos(3/5)/pi+180",
+    "goal_cdl": "Value(MeasureOfAngle(SPR))",
+    "problem_answer": "180*acos(3/5)/pi",
     "theorem_seqs": [
+      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
+      "triangle_property_angle_sum(1,PYS)",
+      "angle_addition(1,PYS,SYB)",
       "cosine_theorem(1,XWY)"
     ]
   },
   "25917": {
     "problem_id": 25917,
-    "added_cdl": [
-      "ParallelBetweenLine(YP,XW)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(PYB))",
-    "problem_answer": "-180*acos(3/5)/pi+180",
-    "theorem_seqs": [
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25918": {
-    "problem_id": 25918,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(PYB))",
-    "problem_answer": "-180*acos(3/5)/pi+180",
-    "theorem_seqs": [
-      "parallel_property_collinear_extend(3,RP,XW,Y)",
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25919": {
-    "problem_id": 25919,
-    "added_cdl": [
-      "Equation(-ma_pys+ma_pyx-ma_syb)",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(PYS))",
-    "problem_answer": "-180*acos(3/5)/pi+90",
-    "theorem_seqs": [
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25920": {
-    "problem_id": 25920,
-    "added_cdl": [
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(PYS))",
-    "problem_answer": "-180*acos(3/5)/pi+90",
-    "theorem_seqs": [
-      "angle_addition(1,PYS,SYB)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25921": {
-    "problem_id": 25921,
-    "added_cdl": [
-      "ParallelBetweenLine(YP,XW)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(PYS))",
-    "problem_answer": "-180*acos(3/5)/pi+90",
-    "theorem_seqs": [
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "angle_addition(1,PYS,SYB)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25922": {
-    "problem_id": 25922,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(PYS))",
-    "problem_answer": "-180*acos(3/5)/pi+90",
-    "theorem_seqs": [
-      "parallel_property_collinear_extend(3,RP,XW,Y)",
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "angle_addition(1,PYS,SYB)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25923": {
-    "problem_id": 25923,
-    "added_cdl": [
-      "Equation(-ma_pys+ma_pyx-ma_syb)",
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(SPR))",
-    "problem_answer": "180*acos(3/5)/pi",
-    "theorem_seqs": [
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25924": {
-    "problem_id": 25924,
-    "added_cdl": [
-      "Equation(ma_pys+ma_spy+ma_ysp-180)",
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(SPR))",
-    "problem_answer": "180*acos(3/5)/pi",
-    "theorem_seqs": [
-      "angle_addition(1,PYS,SYB)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25925": {
-    "problem_id": 25925,
-    "added_cdl": [
-      "Equation(ma_pyx+ma_yxw-180)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(SPR))",
-    "problem_answer": "180*acos(3/5)/pi",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25926": {
-    "problem_id": 25926,
-    "added_cdl": [
-      "ParallelBetweenLine(YP,XW)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(SPR))",
-    "problem_answer": "180*acos(3/5)/pi",
-    "theorem_seqs": [
-      "parallel_property_ipsilateral_internal_angle(1,YP,XW)",
-      "triangle_property_angle_sum(1,PYS)",
-      "angle_addition(1,PYS,SYB)",
-      "cosine_theorem(1,XWY)"
-    ]
-  },
-  "25927": {
-    "problem_id": 25927,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(SPR))",
     "problem_answer": "180*acos(3/5)/pi",

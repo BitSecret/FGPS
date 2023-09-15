@@ -1,6 +1,6 @@
 {
-  "28996": {
-    "problem_id": 28996,
+  "28986": {
+    "problem_id": 28986,
     "added_cdl": [],
     "goal_cdl": "Relation(IsoscelesTriangle(RQS))",
     "problem_answer": "IsoscelesTriangle(RQS)",
@@ -8,8 +8,8 @@
       "isosceles_triangle_judgment_line_equal(1,RQS)"
     ]
   },
-  "28997": {
-    "problem_id": 28997,
+  "28987": {
+    "problem_id": 28987,
     "added_cdl": [],
     "goal_cdl": "Relation(IsoscelesTriangle(TSQ))",
     "problem_answer": "IsoscelesTriangle(TSQ)",
@@ -17,8 +17,8 @@
       "isosceles_triangle_judgment_line_equal(1,TSQ)"
     ]
   },
-  "28998": {
-    "problem_id": 28998,
+  "28988": {
+    "problem_id": 28988,
     "added_cdl": [
       "IsoscelesTriangle(RQS)"
     ],
@@ -28,8 +28,8 @@
       "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
-  "28999": {
-    "problem_id": 28999,
+  "28989": {
+    "problem_id": 28989,
     "added_cdl": [],
     "goal_cdl": "Equal(MeasureOfAngle(RQS),MeasureOfAngle(QSR))",
     "problem_answer": "0",
@@ -38,8 +38,8 @@
       "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
-  "29000": {
-    "problem_id": 29000,
+  "28990": {
+    "problem_id": 28990,
     "added_cdl": [
       "IsoscelesTriangle(TSQ)"
     ],
@@ -49,8 +49,8 @@
       "isosceles_triangle_property_angle_equal(1,TSQ)"
     ]
   },
-  "29001": {
-    "problem_id": 29001,
+  "28991": {
+    "problem_id": 28991,
     "added_cdl": [],
     "goal_cdl": "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
     "problem_answer": "0",
@@ -59,8 +59,8 @@
       "isosceles_triangle_property_angle_equal(1,TSQ)"
     ]
   },
-  "29002": {
-    "problem_id": 29002,
+  "28992": {
+    "problem_id": 28992,
     "added_cdl": [
       "Equal(MeasureOfAngle(RQS),MeasureOfAngle(QSR))",
       "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
@@ -73,8 +73,8 @@
       "angle_addition(1,TSQ,QSR)"
     ]
   },
-  "29003": {
-    "problem_id": 29003,
+  "28993": {
+    "problem_id": 28993,
     "added_cdl": [
       "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
       "Equation(ma_qsr+ma_rqs+ma_srq-180)",
@@ -88,8 +88,8 @@
       "angle_addition(1,TSQ,QSR)"
     ]
   },
-  "29004": {
-    "problem_id": 29004,
+  "28994": {
+    "problem_id": 28994,
     "added_cdl": [
       "Equation(ma_qsr+ma_rqs+ma_srq-180)",
       "Equation(ma_qts+ma_sqt+ma_tsq-180)",
@@ -104,8 +104,8 @@
       "angle_addition(1,TSQ,QSR)"
     ]
   },
-  "29005": {
-    "problem_id": 29005,
+  "28995": {
+    "problem_id": 28995,
     "added_cdl": [
       "Equation(ma_qts+ma_sqt+ma_tsq-180)",
       "IsoscelesTriangle(RQS)",
@@ -114,6 +114,161 @@
     "goal_cdl": "Value(MeasureOfAngle(SRQ))",
     "problem_answer": "136",
     "theorem_seqs": [
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "28996": {
+    "problem_id": 28996,
+    "added_cdl": [
+      "IsoscelesTriangle(RQS)",
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SRQ))",
+    "problem_answer": "136",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,TSQ)",
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "28997": {
+    "problem_id": 28997,
+    "added_cdl": [
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SRQ))",
+    "problem_answer": "136",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,TSQ)",
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "28998": {
+    "problem_id": 28998,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(SRQ))",
+    "problem_answer": "136",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TSQ)",
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,TSQ)",
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "28999": {
+    "problem_id": 28999,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(RQS),MeasureOfAngle(QSR))",
+      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
+      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(QTS))",
+    "problem_answer": "68",
+    "theorem_seqs": [
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "29000": {
+    "problem_id": 29000,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
+      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
+      "IsoscelesTriangle(RQS)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(QTS))",
+    "problem_answer": "68",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "29001": {
+    "problem_id": 29001,
+    "added_cdl": [
+      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
+      "IsoscelesTriangle(RQS)",
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(QTS))",
+    "problem_answer": "68",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "29002": {
+    "problem_id": 29002,
+    "added_cdl": [
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
+      "IsoscelesTriangle(RQS)",
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(QTS))",
+    "problem_answer": "68",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "29003": {
+    "problem_id": 29003,
+    "added_cdl": [
+      "IsoscelesTriangle(RQS)",
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(QTS))",
+    "problem_answer": "68",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,TSQ)",
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "29004": {
+    "problem_id": 29004,
+    "added_cdl": [
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(QTS))",
+    "problem_answer": "68",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,TSQ)",
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
+      "angle_addition(1,TSQ,QSR)"
+    ]
+  },
+  "29005": {
+    "problem_id": 29005,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(QTS))",
+    "problem_answer": "68",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TSQ)",
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,TSQ)",
       "triangle_property_angle_sum(1,RQS)",
       "isosceles_triangle_property_angle_equal(1,TSQ)",
       "isosceles_triangle_property_angle_equal(1,RQS)",
@@ -123,45 +278,43 @@
   "29006": {
     "problem_id": 29006,
     "added_cdl": [
-      "IsoscelesTriangle(RQS)",
-      "IsoscelesTriangle(TSQ)"
+      "Equal(MeasureOfAngle(RQS),MeasureOfAngle(QSR))",
+      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
+      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(SRQ))",
-    "problem_answer": "136",
+    "goal_cdl": "Value(MeasureOfAngle(TSR))",
+    "problem_answer": "78",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,TSQ)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
       "angle_addition(1,TSQ,QSR)"
     ]
   },
   "29007": {
     "problem_id": 29007,
     "added_cdl": [
-      "IsoscelesTriangle(TSQ)"
+      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
+      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
+      "IsoscelesTriangle(RQS)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(SRQ))",
-    "problem_answer": "136",
+    "goal_cdl": "Value(MeasureOfAngle(TSR))",
+    "problem_answer": "78",
     "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,RQS)",
-      "triangle_property_angle_sum(1,TSQ)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
       "isosceles_triangle_property_angle_equal(1,RQS)",
       "angle_addition(1,TSQ,QSR)"
     ]
   },
   "29008": {
     "problem_id": 29008,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(SRQ))",
-    "problem_answer": "136",
+    "added_cdl": [
+      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
+      "IsoscelesTriangle(RQS)",
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(TSR))",
+    "problem_answer": "78",
     "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,TSQ)",
-      "isosceles_triangle_judgment_line_equal(1,RQS)",
-      "triangle_property_angle_sum(1,TSQ)",
-      "triangle_property_angle_sum(1,RQS)",
       "isosceles_triangle_property_angle_equal(1,TSQ)",
       "isosceles_triangle_property_angle_equal(1,RQS)",
       "angle_addition(1,TSQ,QSR)"
@@ -170,28 +323,31 @@
   "29009": {
     "problem_id": 29009,
     "added_cdl": [
-      "Equal(MeasureOfAngle(RQS),MeasureOfAngle(QSR))",
-      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
-      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)"
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
+      "IsoscelesTriangle(RQS)",
+      "IsoscelesTriangle(TSQ)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(QTS))",
-    "problem_answer": "68",
+    "goal_cdl": "Value(MeasureOfAngle(TSR))",
+    "problem_answer": "78",
     "theorem_seqs": [
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,RQS)",
       "angle_addition(1,TSQ,QSR)"
     ]
   },
   "29010": {
     "problem_id": 29010,
     "added_cdl": [
-      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
-      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
-      "IsoscelesTriangle(RQS)"
+      "IsoscelesTriangle(RQS)",
+      "IsoscelesTriangle(TSQ)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(QTS))",
-    "problem_answer": "68",
+    "goal_cdl": "Value(MeasureOfAngle(TSR))",
+    "problem_answer": "78",
     "theorem_seqs": [
+      "triangle_property_angle_sum(1,TSQ)",
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)",
       "isosceles_triangle_property_angle_equal(1,RQS)",
       "angle_addition(1,TSQ,QSR)"
     ]
@@ -199,14 +355,14 @@
   "29011": {
     "problem_id": 29011,
     "added_cdl": [
-      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
-      "IsoscelesTriangle(RQS)",
       "IsoscelesTriangle(TSQ)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(QTS))",
-    "problem_answer": "68",
+    "goal_cdl": "Value(MeasureOfAngle(TSR))",
+    "problem_answer": "78",
     "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,TSQ)",
+      "triangle_property_angle_sum(1,RQS)",
       "isosceles_triangle_property_angle_equal(1,TSQ)",
       "isosceles_triangle_property_angle_equal(1,RQS)",
       "angle_addition(1,TSQ,QSR)"
@@ -214,14 +370,13 @@
   },
   "29012": {
     "problem_id": 29012,
-    "added_cdl": [
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
-      "IsoscelesTriangle(RQS)",
-      "IsoscelesTriangle(TSQ)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(QTS))",
-    "problem_answer": "68",
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(TSR))",
+    "problem_answer": "78",
     "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TSQ)",
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,TSQ)",
       "triangle_property_angle_sum(1,RQS)",
       "isosceles_triangle_property_angle_equal(1,TSQ)",
       "isosceles_triangle_property_angle_equal(1,RQS)",
@@ -231,289 +386,134 @@
   "29013": {
     "problem_id": 29013,
     "added_cdl": [
-      "IsoscelesTriangle(RQS)",
-      "IsoscelesTriangle(TSQ)"
+      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
+      "IsoscelesTriangle(RQS)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(QTS))",
-    "problem_answer": "68",
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "22",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,TSQ)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
   "29014": {
     "problem_id": 29014,
     "added_cdl": [
-      "IsoscelesTriangle(TSQ)"
+      "IsoscelesTriangle(RQS)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(QTS))",
-    "problem_answer": "68",
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "22",
     "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,RQS)",
-      "triangle_property_angle_sum(1,TSQ)",
       "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
   "29015": {
     "problem_id": 29015,
     "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(QTS))",
-    "problem_answer": "68",
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "22",
     "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,TSQ)",
       "isosceles_triangle_judgment_line_equal(1,RQS)",
-      "triangle_property_angle_sum(1,TSQ)",
       "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
   "29016": {
     "problem_id": 29016,
     "added_cdl": [
-      "Equal(MeasureOfAngle(RQS),MeasureOfAngle(QSR))",
-      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
       "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)"
+      "IsoscelesTriangle(RQS)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(TSR))",
-    "problem_answer": "78",
+    "goal_cdl": "Value(MeasureOfAngle(QSR))",
+    "problem_answer": "22",
     "theorem_seqs": [
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
   "29017": {
     "problem_id": 29017,
     "added_cdl": [
-      "Equal(MeasureOfAngle(TSQ),MeasureOfAngle(SQT))",
-      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
       "IsoscelesTriangle(RQS)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(TSR))",
-    "problem_answer": "78",
+    "goal_cdl": "Value(MeasureOfAngle(QSR))",
+    "problem_answer": "22",
     "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
   "29018": {
     "problem_id": 29018,
-    "added_cdl": [
-      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
-      "IsoscelesTriangle(RQS)",
-      "IsoscelesTriangle(TSQ)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(TSR))",
-    "problem_answer": "78",
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(QSR))",
+    "problem_answer": "22",
     "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "triangle_property_angle_sum(1,RQS)",
+      "isosceles_triangle_property_angle_equal(1,RQS)"
     ]
   },
   "29019": {
     "problem_id": 29019,
     "added_cdl": [
       "Equation(ma_qts+ma_sqt+ma_tsq-180)",
-      "IsoscelesTriangle(RQS)",
       "IsoscelesTriangle(TSQ)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(TSR))",
-    "problem_answer": "78",
+    "goal_cdl": "Value(MeasureOfAngle(TSQ))",
+    "problem_answer": "56",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,TSQ)"
     ]
   },
   "29020": {
     "problem_id": 29020,
     "added_cdl": [
-      "IsoscelesTriangle(RQS)",
       "IsoscelesTriangle(TSQ)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(TSR))",
-    "problem_answer": "78",
+    "goal_cdl": "Value(MeasureOfAngle(TSQ))",
+    "problem_answer": "56",
     "theorem_seqs": [
       "triangle_property_angle_sum(1,TSQ)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,TSQ)"
     ]
   },
   "29021": {
     "problem_id": 29021,
-    "added_cdl": [
-      "IsoscelesTriangle(TSQ)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(TSR))",
-    "problem_answer": "78",
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(TSQ))",
+    "problem_answer": "56",
     "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,RQS)",
+      "isosceles_triangle_judgment_line_equal(1,TSQ)",
       "triangle_property_angle_sum(1,TSQ)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,TSQ)"
     ]
   },
   "29022": {
     "problem_id": 29022,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(TSR))",
-    "problem_answer": "78",
+    "added_cdl": [
+      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
+      "IsoscelesTriangle(TSQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SQT))",
+    "problem_answer": "56",
     "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,TSQ)",
-      "isosceles_triangle_judgment_line_equal(1,RQS)",
-      "triangle_property_angle_sum(1,TSQ)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,RQS)",
-      "angle_addition(1,TSQ,QSR)"
+      "isosceles_triangle_property_angle_equal(1,TSQ)"
     ]
   },
   "29023": {
     "problem_id": 29023,
     "added_cdl": [
-      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "IsoscelesTriangle(RQS)"
+      "IsoscelesTriangle(TSQ)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(RQS))",
-    "problem_answer": "22",
+    "goal_cdl": "Value(MeasureOfAngle(SQT))",
+    "problem_answer": "56",
     "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,RQS)"
+      "triangle_property_angle_sum(1,TSQ)",
+      "isosceles_triangle_property_angle_equal(1,TSQ)"
     ]
   },
   "29024": {
     "problem_id": 29024,
-    "added_cdl": [
-      "IsoscelesTriangle(RQS)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(RQS))",
-    "problem_answer": "22",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,RQS)"
-    ]
-  },
-  "29025": {
-    "problem_id": 29025,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(RQS))",
-    "problem_answer": "22",
-    "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,RQS)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,RQS)"
-    ]
-  },
-  "29026": {
-    "problem_id": 29026,
-    "added_cdl": [
-      "Equation(ma_qsr+ma_rqs+ma_srq-180)",
-      "IsoscelesTriangle(RQS)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(QSR))",
-    "problem_answer": "22",
-    "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,RQS)"
-    ]
-  },
-  "29027": {
-    "problem_id": 29027,
-    "added_cdl": [
-      "IsoscelesTriangle(RQS)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(QSR))",
-    "problem_answer": "22",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,RQS)"
-    ]
-  },
-  "29028": {
-    "problem_id": 29028,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(QSR))",
-    "problem_answer": "22",
-    "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,RQS)",
-      "triangle_property_angle_sum(1,RQS)",
-      "isosceles_triangle_property_angle_equal(1,RQS)"
-    ]
-  },
-  "29029": {
-    "problem_id": 29029,
-    "added_cdl": [
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
-      "IsoscelesTriangle(TSQ)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(TSQ))",
-    "problem_answer": "56",
-    "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,TSQ)"
-    ]
-  },
-  "29030": {
-    "problem_id": 29030,
-    "added_cdl": [
-      "IsoscelesTriangle(TSQ)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(TSQ))",
-    "problem_answer": "56",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)"
-    ]
-  },
-  "29031": {
-    "problem_id": 29031,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(TSQ))",
-    "problem_answer": "56",
-    "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,TSQ)",
-      "triangle_property_angle_sum(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)"
-    ]
-  },
-  "29032": {
-    "problem_id": 29032,
-    "added_cdl": [
-      "Equation(ma_qts+ma_sqt+ma_tsq-180)",
-      "IsoscelesTriangle(TSQ)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(SQT))",
-    "problem_answer": "56",
-    "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,TSQ)"
-    ]
-  },
-  "29033": {
-    "problem_id": 29033,
-    "added_cdl": [
-      "IsoscelesTriangle(TSQ)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(SQT))",
-    "problem_answer": "56",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,TSQ)",
-      "isosceles_triangle_property_angle_equal(1,TSQ)"
-    ]
-  },
-  "29034": {
-    "problem_id": 29034,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(SQT))",
     "problem_answer": "56",

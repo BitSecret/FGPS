@@ -1,6 +1,6 @@
 {
-  "21410": {
-    "problem_id": 21410,
+  "21400": {
+    "problem_id": 21400,
     "added_cdl": [
       "Equation(ma_abc+ma_bce+ma_ceb-180)",
       "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
@@ -12,8 +12,8 @@
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
-  "21411": {
-    "problem_id": 21411,
+  "21401": {
+    "problem_id": 21401,
     "added_cdl": [
       "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
       "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
@@ -21,6 +21,133 @@
     "goal_cdl": "Value(LengthOfLine(BE))",
     "problem_answer": "7*sqrt(3)",
     "theorem_seqs": [
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21402": {
+    "problem_id": 21402,
+    "added_cdl": [
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BE))",
+    "problem_answer": "7*sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,CEB)",
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21403": {
+    "problem_id": 21403,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BE))",
+    "problem_answer": "7*sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,BCE)",
+      "sine_theorem(1,CEB)",
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21404": {
+    "problem_id": 21404,
+    "added_cdl": [
+      "Equation(ma_abc+ma_bce+ma_ceb-180)",
+      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21405": {
+    "problem_id": 21405,
+    "added_cdl": [
+      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21406": {
+    "problem_id": 21406,
+    "added_cdl": [
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "sine_theorem(1,CEB)",
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21407": {
+    "problem_id": 21407,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "sine_theorem(1,BCE)",
+      "sine_theorem(1,CEB)",
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21408": {
+    "problem_id": 21408,
+    "added_cdl": [
+      "Equation(ma_abc+ma_bce+ma_ceb-180)",
+      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21409": {
+    "problem_id": 21409,
+    "added_cdl": [
+      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21410": {
+    "problem_id": 21410,
+    "added_cdl": [
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,CEB)",
+      "triangle_property_angle_sum(1,CEB)",
+      "adjacent_complementary_angle(1,AEC,CEB)"
+    ]
+  },
+  "21411": {
+    "problem_id": 21411,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,BCE)",
+      "sine_theorem(1,CEB)",
       "triangle_property_angle_sum(1,CEB)",
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
@@ -28,24 +155,25 @@
   "21412": {
     "problem_id": 21412,
     "added_cdl": [
+      "Equation(ma_abc+ma_bce+ma_ceb-180)",
+      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
       "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
     ],
-    "goal_cdl": "Value(LengthOfLine(BE))",
-    "problem_answer": "7*sqrt(3)",
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "21",
     "theorem_seqs": [
-      "sine_theorem(1,CEB)",
-      "triangle_property_angle_sum(1,CEB)",
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
   "21413": {
     "problem_id": 21413,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(BE))",
-    "problem_answer": "7*sqrt(3)",
+    "added_cdl": [
+      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
+      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "21",
     "theorem_seqs": [
-      "sine_theorem(1,BCE)",
-      "sine_theorem(1,CEB)",
       "triangle_property_angle_sum(1,CEB)",
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
@@ -53,158 +181,30 @@
   "21414": {
     "problem_id": 21414,
     "added_cdl": [
-      "Equation(ma_abc+ma_bce+ma_ceb-180)",
-      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
       "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(EBC))",
-    "problem_answer": "60",
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "21",
     "theorem_seqs": [
+      "sine_theorem(1,CEB)",
+      "triangle_property_angle_sum(1,CEB)",
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
   "21415": {
     "problem_id": 21415,
-    "added_cdl": [
-      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(EBC))",
-    "problem_answer": "60",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "21",
     "theorem_seqs": [
+      "sine_theorem(1,BCE)",
+      "sine_theorem(1,CEB)",
       "triangle_property_angle_sum(1,CEB)",
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
   "21416": {
     "problem_id": 21416,
-    "added_cdl": [
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(EBC))",
-    "problem_answer": "60",
-    "theorem_seqs": [
-      "sine_theorem(1,CEB)",
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21417": {
-    "problem_id": 21417,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(EBC))",
-    "problem_answer": "60",
-    "theorem_seqs": [
-      "sine_theorem(1,BCE)",
-      "sine_theorem(1,CEB)",
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21418": {
-    "problem_id": 21418,
-    "added_cdl": [
-      "Equation(ma_abc+ma_bce+ma_ceb-180)",
-      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(CAB))",
-    "problem_answer": "30",
-    "theorem_seqs": [
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21419": {
-    "problem_id": 21419,
-    "added_cdl": [
-      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(CAB))",
-    "problem_answer": "30",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21420": {
-    "problem_id": 21420,
-    "added_cdl": [
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(CAB))",
-    "problem_answer": "30",
-    "theorem_seqs": [
-      "sine_theorem(1,CEB)",
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21421": {
-    "problem_id": 21421,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(CAB))",
-    "problem_answer": "30",
-    "theorem_seqs": [
-      "sine_theorem(1,BCE)",
-      "sine_theorem(1,CEB)",
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21422": {
-    "problem_id": 21422,
-    "added_cdl": [
-      "Equation(ma_abc+ma_bce+ma_ceb-180)",
-      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(CE))",
-    "problem_answer": "21",
-    "theorem_seqs": [
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21423": {
-    "problem_id": 21423,
-    "added_cdl": [
-      "Equation(-ll_cb*sin(pi*ma_abc/180)+ll_ce*sin(pi*ma_ceb/180))",
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(CE))",
-    "problem_answer": "21",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21424": {
-    "problem_id": 21424,
-    "added_cdl": [
-      "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(CE))",
-    "problem_answer": "21",
-    "theorem_seqs": [
-      "sine_theorem(1,CEB)",
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21425": {
-    "problem_id": 21425,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(CE))",
-    "problem_answer": "21",
-    "theorem_seqs": [
-      "sine_theorem(1,BCE)",
-      "sine_theorem(1,CEB)",
-      "triangle_property_angle_sum(1,CEB)",
-      "adjacent_complementary_angle(1,AEC,CEB)"
-    ]
-  },
-  "21426": {
-    "problem_id": 21426,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(CEB))",
     "problem_answer": "90",
@@ -212,8 +212,8 @@
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
-  "21427": {
-    "problem_id": 21427,
+  "21417": {
+    "problem_id": 21417,
     "added_cdl": [
       "Equation(ma_abc+ma_bce+ma_ceb-180)"
     ],
@@ -223,8 +223,8 @@
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
-  "21428": {
-    "problem_id": 21428,
+  "21418": {
+    "problem_id": 21418,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(BCE))",
     "problem_answer": "30",
@@ -233,8 +233,8 @@
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
-  "21429": {
-    "problem_id": 21429,
+  "21419": {
+    "problem_id": 21419,
     "added_cdl": [
       "Equation(ma_abc+ma_bce+ma_ceb-180)",
       "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
@@ -245,8 +245,8 @@
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
-  "21430": {
-    "problem_id": 21430,
+  "21420": {
+    "problem_id": 21420,
     "added_cdl": [
       "Equation(-ll_be*sin(pi*ma_ceb/180)+ll_cb*sin(pi*ma_bce/180))"
     ],
@@ -257,8 +257,8 @@
       "adjacent_complementary_angle(1,AEC,CEB)"
     ]
   },
-  "21431": {
-    "problem_id": 21431,
+  "21421": {
+    "problem_id": 21421,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(CB))",
     "problem_answer": "14*sqrt(3)",

@@ -1,6 +1,6 @@
 {
-  "25698": {
-    "problem_id": 25698,
+  "25688": {
+    "problem_id": 25688,
     "added_cdl": [],
     "goal_cdl": "Relation(IsoscelesTriangle(ABC))",
     "problem_answer": "IsoscelesTriangle(ABC)",
@@ -8,8 +8,8 @@
       "isosceles_triangle_judgment_line_equal(1,ABC)"
     ]
   },
-  "25699": {
-    "problem_id": 25699,
+  "25689": {
+    "problem_id": 25689,
     "added_cdl": [
       "IsoscelesTriangle(ABC)"
     ],
@@ -19,8 +19,8 @@
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
-  "25700": {
-    "problem_id": 25700,
+  "25690": {
+    "problem_id": 25690,
     "added_cdl": [],
     "goal_cdl": "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))",
     "problem_answer": "0",
@@ -29,8 +29,8 @@
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
-  "25701": {
-    "problem_id": 25701,
+  "25691": {
+    "problem_id": 25691,
     "added_cdl": [
       "IsoscelesTriangle(ABC)",
       "Equation(ma_aeb+ma_bae+ma_eba-180)",
@@ -45,8 +45,8 @@
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
-  "25702": {
-    "problem_id": 25702,
+  "25692": {
+    "problem_id": 25692,
     "added_cdl": [
       "Equation(ma_aeb+ma_bae+ma_eba-180)",
       "Equation(ma_abc+ma_bca+ma_cab-180)",
@@ -61,8 +61,8 @@
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
-  "25703": {
-    "problem_id": 25703,
+  "25693": {
+    "problem_id": 25693,
     "added_cdl": [
       "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))",
       "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
@@ -77,8 +77,8 @@
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
-  "25704": {
-    "problem_id": 25704,
+  "25694": {
+    "problem_id": 25694,
     "added_cdl": [
       "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
       "Equation(ma_abc+ma_bca+ma_cab-180)",
@@ -87,6 +87,164 @@
     "goal_cdl": "Value(LengthOfLine(BE))",
     "problem_answer": "5",
     "theorem_seqs": [
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25695": {
+    "problem_id": 25695,
+    "added_cdl": [
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BE))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "sine_theorem(1,AEB)",
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25696": {
+    "problem_id": 25696,
+    "added_cdl": [
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BE))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,AEB)",
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25697": {
+    "problem_id": 25697,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BE))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "angle_addition(1,EBA,ABC)",
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,AEB)",
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25698": {
+    "problem_id": 25698,
+    "added_cdl": [
+      "IsoscelesTriangle(ABC)",
+      "Equation(ma_aeb+ma_bae+ma_eba-180)",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25699": {
+    "problem_id": 25699,
+    "added_cdl": [
+      "Equation(ma_aeb+ma_bae+ma_eba-180)",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25700": {
+    "problem_id": 25700,
+    "added_cdl": [
+      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25701": {
+    "problem_id": 25701,
+    "added_cdl": [
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25702": {
+    "problem_id": 25702,
+    "added_cdl": [
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "sine_theorem(1,AEB)",
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25703": {
+    "problem_id": 25703,
+    "added_cdl": [
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,AEB)",
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "25704": {
+    "problem_id": 25704,
+    "added_cdl": [],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "angle_addition(1,EBA,ABC)",
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,AEB)",
       "sine_theorem(1,EBA)",
       "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
@@ -96,45 +254,46 @@
   "25705": {
     "problem_id": 25705,
     "added_cdl": [
+      "IsoscelesTriangle(ABC)",
+      "Equation(ma_aeb+ma_bae+ma_eba-180)",
       "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
+      "Equation(-ma_abc-ma_eba+ma_ebc)",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
     ],
-    "goal_cdl": "Value(LengthOfLine(BE))",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "5*sqrt(2)",
     "theorem_seqs": [
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25706": {
     "problem_id": 25706,
     "added_cdl": [
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
+      "Equation(ma_aeb+ma_bae+ma_eba-180)",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
     ],
-    "goal_cdl": "Value(LengthOfLine(BE))",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "5*sqrt(2)",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,CAB)",
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25707": {
     "problem_id": 25707,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(BE))",
-    "problem_answer": "5",
+    "added_cdl": [
+      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "5*sqrt(2)",
     "theorem_seqs": [
-      "angle_addition(1,EBA,ABC)",
-      "triangle_property_angle_sum(1,CAB)",
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
       "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
@@ -143,31 +302,31 @@
   "25708": {
     "problem_id": 25708,
     "added_cdl": [
-      "IsoscelesTriangle(ABC)",
-      "Equation(ma_aeb+ma_bae+ma_eba-180)",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)",
       "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "5*sqrt(2)",
     "theorem_seqs": [
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25709": {
     "problem_id": 25709,
     "added_cdl": [
-      "Equation(ma_aeb+ma_bae+ma_eba-180)",
       "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)",
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "5*sqrt(2)",
     "theorem_seqs": [
+      "sine_theorem(1,AEB)",
+      "sine_theorem(1,EBA)",
+      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -175,14 +334,14 @@
   "25710": {
     "problem_id": 25710,
     "added_cdl": [
-      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))",
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
       "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "5",
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "5*sqrt(2)",
     "theorem_seqs": [
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,AEB)",
+      "sine_theorem(1,EBA)",
       "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
@@ -190,14 +349,13 @@
   },
   "25711": {
     "problem_id": 25711,
-    "added_cdl": [
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "5",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "5*sqrt(2)",
     "theorem_seqs": [
+      "angle_addition(1,EBA,ABC)",
+      "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,AEB)",
       "sine_theorem(1,EBA)",
       "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
@@ -207,31 +365,23 @@
   "25712": {
     "problem_id": 25712,
     "added_cdl": [
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
+      "IsoscelesTriangle(ABC)",
+      "Equation(ma_abc+ma_bca+ma_cab-180)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "5",
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "45",
     "theorem_seqs": [
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25713": {
     "problem_id": 25713,
     "added_cdl": [
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
+      "Equation(ma_abc+ma_bca+ma_cab-180)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "5",
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "45",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,CAB)",
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -239,14 +389,10 @@
   "25714": {
     "problem_id": 25714,
     "added_cdl": [],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "5",
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "45",
     "theorem_seqs": [
-      "angle_addition(1,EBA,ABC)",
       "triangle_property_angle_sum(1,CAB)",
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -255,14 +401,10 @@
     "problem_id": 25715,
     "added_cdl": [
       "IsoscelesTriangle(ABC)",
-      "Equation(ma_aeb+ma_bae+ma_eba-180)",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)",
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
+      "Equation(ma_abc+ma_bca+ma_cab-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BA))",
-    "problem_answer": "5*sqrt(2)",
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "45",
     "theorem_seqs": [
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -270,14 +412,10 @@
   "25716": {
     "problem_id": 25716,
     "added_cdl": [
-      "Equation(ma_aeb+ma_bae+ma_eba-180)",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)",
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))"
+      "Equation(ma_abc+ma_bca+ma_cab-180)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BA))",
-    "problem_answer": "5*sqrt(2)",
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "45",
     "theorem_seqs": [
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
@@ -285,16 +423,11 @@
   },
   "25717": {
     "problem_id": 25717,
-    "added_cdl": [
-      "Equation(-ll_ae*sin(pi*ma_bae/180)+ll_be*sin(pi*ma_eba/180))",
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(BA))",
-    "problem_answer": "5*sqrt(2)",
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "45",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,AEB)",
+      "triangle_property_angle_sum(1,CAB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -302,16 +435,13 @@
   "25718": {
     "problem_id": 25718,
     "added_cdl": [
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "IsoscelesTriangle(ABC)",
       "Equation(ma_abc+ma_bca+ma_cab-180)",
       "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BA))",
-    "problem_answer": "5*sqrt(2)",
+    "goal_cdl": "Value(MeasureOfAngle(EBA))",
+    "problem_answer": "45",
     "theorem_seqs": [
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
@@ -321,12 +451,9 @@
       "Equation(ma_abc+ma_bca+ma_cab-180)",
       "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BA))",
-    "problem_answer": "5*sqrt(2)",
+    "goal_cdl": "Value(MeasureOfAngle(EBA))",
+    "problem_answer": "45",
     "theorem_seqs": [
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -336,13 +463,10 @@
     "added_cdl": [
       "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BA))",
-    "problem_answer": "5*sqrt(2)",
+    "goal_cdl": "Value(MeasureOfAngle(EBA))",
+    "problem_answer": "45",
     "theorem_seqs": [
       "triangle_property_angle_sum(1,CAB)",
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -350,14 +474,11 @@
   "25721": {
     "problem_id": 25721,
     "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(BA))",
-    "problem_answer": "5*sqrt(2)",
+    "goal_cdl": "Value(MeasureOfAngle(EBA))",
+    "problem_answer": "45",
     "theorem_seqs": [
       "angle_addition(1,EBA,ABC)",
       "triangle_property_angle_sum(1,CAB)",
-      "sine_theorem(1,AEB)",
-      "sine_theorem(1,EBA)",
-      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -366,9 +487,11 @@
     "problem_id": 25722,
     "added_cdl": [
       "IsoscelesTriangle(ABC)",
-      "Equation(ma_abc+ma_bca+ma_cab-180)"
+      "Equation(ma_aeb+ma_bae+ma_eba-180)",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "goal_cdl": "Value(MeasureOfAngle(BAE))",
     "problem_answer": "45",
     "theorem_seqs": [
       "isosceles_triangle_property_angle_equal(1,ABC)"
@@ -377,9 +500,11 @@
   "25723": {
     "problem_id": 25723,
     "added_cdl": [
-      "Equation(ma_abc+ma_bca+ma_cab-180)"
+      "Equation(ma_aeb+ma_bae+ma_eba-180)",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "goal_cdl": "Value(MeasureOfAngle(BAE))",
     "problem_answer": "45",
     "theorem_seqs": [
       "isosceles_triangle_judgment_line_equal(1,ABC)",
@@ -388,11 +513,14 @@
   },
   "25724": {
     "problem_id": 25724,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "added_cdl": [
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BAE))",
     "problem_answer": "45",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,CAB)",
+      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -400,48 +528,55 @@
   "25725": {
     "problem_id": 25725,
     "added_cdl": [
-      "IsoscelesTriangle(ABC)",
-      "Equation(ma_abc+ma_bca+ma_cab-180)"
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "goal_cdl": "Value(MeasureOfAngle(BAE))",
     "problem_answer": "45",
     "theorem_seqs": [
+      "triangle_property_angle_sum(1,CAB)",
+      "triangle_property_angle_sum(1,AEB)",
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25726": {
     "problem_id": 25726,
-    "added_cdl": [
-      "Equation(ma_abc+ma_bca+ma_cab-180)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BAE))",
     "problem_answer": "45",
     "theorem_seqs": [
+      "angle_addition(1,EBA,ABC)",
+      "triangle_property_angle_sum(1,CAB)",
+      "triangle_property_angle_sum(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25727": {
     "problem_id": 25727,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(BCA))",
-    "problem_answer": "45",
+    "added_cdl": [
+      "IsoscelesTriangle(ABC)",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
+      "Equation(ma_abc+ma_bca+ma_cab-180)",
+      "Equation(-ma_abc-ma_eba+ma_ebc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "5",
     "theorem_seqs": [
-      "triangle_property_angle_sum(1,CAB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25728": {
     "problem_id": 25728,
     "added_cdl": [
-      "IsoscelesTriangle(ABC)",
+      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
       "Equation(ma_abc+ma_bca+ma_cab-180)",
       "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(EBA))",
-    "problem_answer": "45",
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "5",
     "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
@@ -451,9 +586,10 @@
       "Equation(ma_abc+ma_bca+ma_cab-180)",
       "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(EBA))",
-    "problem_answer": "45",
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "5",
     "theorem_seqs": [
+      "sine_theorem(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
@@ -463,153 +599,17 @@
     "added_cdl": [
       "Equation(-ma_abc-ma_eba+ma_ebc)"
     ],
-    "goal_cdl": "Value(MeasureOfAngle(EBA))",
-    "problem_answer": "45",
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "5",
     "theorem_seqs": [
       "triangle_property_angle_sum(1,CAB)",
+      "sine_theorem(1,AEB)",
       "isosceles_triangle_judgment_line_equal(1,ABC)",
       "isosceles_triangle_property_angle_equal(1,ABC)"
     ]
   },
   "25731": {
     "problem_id": 25731,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(EBA))",
-    "problem_answer": "45",
-    "theorem_seqs": [
-      "angle_addition(1,EBA,ABC)",
-      "triangle_property_angle_sum(1,CAB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25732": {
-    "problem_id": 25732,
-    "added_cdl": [
-      "IsoscelesTriangle(ABC)",
-      "Equation(ma_aeb+ma_bae+ma_eba-180)",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(BAE))",
-    "problem_answer": "45",
-    "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25733": {
-    "problem_id": 25733,
-    "added_cdl": [
-      "Equation(ma_aeb+ma_bae+ma_eba-180)",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(BAE))",
-    "problem_answer": "45",
-    "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25734": {
-    "problem_id": 25734,
-    "added_cdl": [
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(BAE))",
-    "problem_answer": "45",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25735": {
-    "problem_id": 25735,
-    "added_cdl": [
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(BAE))",
-    "problem_answer": "45",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,CAB)",
-      "triangle_property_angle_sum(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25736": {
-    "problem_id": 25736,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfAngle(BAE))",
-    "problem_answer": "45",
-    "theorem_seqs": [
-      "angle_addition(1,EBA,ABC)",
-      "triangle_property_angle_sum(1,CAB)",
-      "triangle_property_angle_sum(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25737": {
-    "problem_id": 25737,
-    "added_cdl": [
-      "IsoscelesTriangle(ABC)",
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AE))",
-    "problem_answer": "5",
-    "theorem_seqs": [
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25738": {
-    "problem_id": 25738,
-    "added_cdl": [
-      "Equation(ll_ae*sin(pi*ma_aeb/180)-ll_ba*sin(pi*ma_eba/180))",
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AE))",
-    "problem_answer": "5",
-    "theorem_seqs": [
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25739": {
-    "problem_id": 25739,
-    "added_cdl": [
-      "Equation(ma_abc+ma_bca+ma_cab-180)",
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AE))",
-    "problem_answer": "5",
-    "theorem_seqs": [
-      "sine_theorem(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25740": {
-    "problem_id": 25740,
-    "added_cdl": [
-      "Equation(-ma_abc-ma_eba+ma_ebc)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AE))",
-    "problem_answer": "5",
-    "theorem_seqs": [
-      "triangle_property_angle_sum(1,CAB)",
-      "sine_theorem(1,AEB)",
-      "isosceles_triangle_judgment_line_equal(1,ABC)",
-      "isosceles_triangle_property_angle_equal(1,ABC)"
-    ]
-  },
-  "25741": {
-    "problem_id": 25741,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(AE))",
     "problem_answer": "5",

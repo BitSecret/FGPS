@@ -1,6 +1,6 @@
 {
-  "25808": {
-    "problem_id": 25808,
+  "25798": {
+    "problem_id": 25798,
     "added_cdl": [],
     "goal_cdl": "Relation(IsAltitudeOfTriangle(BM,BAC))",
     "problem_answer": "IsAltitudeOfTriangle(BM,BAC)",
@@ -8,8 +8,8 @@
       "altitude_of_triangle_judgment(1,BM,BAC)"
     ]
   },
-  "25809": {
-    "problem_id": 25809,
+  "25799": {
+    "problem_id": 25799,
     "added_cdl": [],
     "goal_cdl": "Equal(LengthOfLine(BM),HeightOfTriangle(BAC))",
     "problem_answer": "0",
@@ -17,8 +17,8 @@
       "altitude_of_triangle_judgment(1,BM,BAC)"
     ]
   },
-  "25810": {
-    "problem_id": 25810,
+  "25800": {
+    "problem_id": 25800,
     "added_cdl": [],
     "goal_cdl": "Relation(PerpendicularBetweenLine(BM,CM))",
     "problem_answer": "PerpendicularBetweenLine(BM,CM)",
@@ -26,8 +26,8 @@
       "altitude_of_triangle_judgment(1,BM,BAC)"
     ]
   },
-  "25811": {
-    "problem_id": 25811,
+  "25801": {
+    "problem_id": 25801,
     "added_cdl": [],
     "goal_cdl": "Relation(IsAltitudeOfTriangle(DN,DEF))",
     "problem_answer": "IsAltitudeOfTriangle(DN,DEF)",
@@ -35,8 +35,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25812": {
-    "problem_id": 25812,
+  "25802": {
+    "problem_id": 25802,
     "added_cdl": [],
     "goal_cdl": "Equal(LengthOfLine(DN),HeightOfTriangle(DEF))",
     "problem_answer": "0",
@@ -44,8 +44,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25813": {
-    "problem_id": 25813,
+  "25803": {
+    "problem_id": 25803,
     "added_cdl": [],
     "goal_cdl": "Relation(PerpendicularBetweenLine(DN,FN))",
     "problem_answer": "PerpendicularBetweenLine(DN,FN)",
@@ -53,8 +53,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25814": {
-    "problem_id": 25814,
+  "25804": {
+    "problem_id": 25804,
     "added_cdl": [
       "Equation(at_bac-ht_bac*ll_ac/2)",
       "Equation(at_def-ht_def*ll_ef/2)",
@@ -68,8 +68,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25815": {
-    "problem_id": 25815,
+  "25805": {
+    "problem_id": 25805,
     "added_cdl": [
       "Equation(ll_ac-ll_ef*rst_bacdef)",
       "Equation(at_bac-at_def*rst_bacdef**2)",
@@ -83,8 +83,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25816": {
-    "problem_id": 25816,
+  "25806": {
+    "problem_id": 25806,
     "added_cdl": [
       "Equation(at_bac-at_def*rst_bacdef**2)",
       "IsAltitudeOfTriangle(BM,BAC)",
@@ -98,8 +98,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25817": {
-    "problem_id": 25817,
+  "25807": {
+    "problem_id": 25807,
     "added_cdl": [
       "IsAltitudeOfTriangle(BM,BAC)",
       "Equation(at_def-ht_def*ll_ef/2)"
@@ -113,8 +113,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25818": {
-    "problem_id": 25818,
+  "25808": {
+    "problem_id": 25808,
     "added_cdl": [
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
@@ -128,14 +128,163 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25819": {
-    "problem_id": 25819,
+  "25809": {
+    "problem_id": 25809,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(BM))",
     "problem_answer": "35",
     "theorem_seqs": [
       "triangle_area_formula_common(1,DEF)",
       "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25810": {
+    "problem_id": 25810,
+    "added_cdl": [
+      "Equation(at_bac-ht_bac*ll_ac/2)",
+      "Equation(at_def-ht_def*ll_ef/2)",
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "35",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25811": {
+    "problem_id": 25811,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "35",
+    "theorem_seqs": [
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25812": {
+    "problem_id": 25812,
+    "added_cdl": [
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "35",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25813": {
+    "problem_id": 25813,
+    "added_cdl": [
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "35",
+    "theorem_seqs": [
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25814": {
+    "problem_id": 25814,
+    "added_cdl": [
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "35",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25815": {
+    "problem_id": 25815,
+    "added_cdl": [],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "35",
+    "theorem_seqs": [
+      "triangle_area_formula_common(1,DEF)",
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25816": {
+    "problem_id": 25816,
+    "added_cdl": [
+      "Equation(at_bac-ht_bac*ll_ac/2)",
+      "Equation(at_def-ht_def*ll_ef/2)",
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DN))",
+    "problem_answer": "21",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25817": {
+    "problem_id": 25817,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DN))",
+    "problem_answer": "21",
+    "theorem_seqs": [
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25818": {
+    "problem_id": 25818,
+    "added_cdl": [
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DN))",
+    "problem_answer": "21",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
+      "altitude_of_triangle_judgment(1,DN,DEF)"
+    ]
+  },
+  "25819": {
+    "problem_id": 25819,
+    "added_cdl": [
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DN))",
+    "problem_answer": "21",
+    "theorem_seqs": [
       "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
@@ -145,29 +294,28 @@
   "25820": {
     "problem_id": 25820,
     "added_cdl": [
-      "Equation(at_bac-ht_bac*ll_ac/2)",
-      "Equation(at_def-ht_def*ll_ef/2)",
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)"
+      "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "35",
+    "goal_cdl": "Value(LengthOfLine(DN))",
+    "problem_answer": "21",
     "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25821": {
     "problem_id": 25821,
-    "added_cdl": [
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "35",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DN))",
+    "problem_answer": "21",
     "theorem_seqs": [
+      "triangle_area_formula_common(1,DEF)",
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
@@ -175,29 +323,29 @@
   "25822": {
     "problem_id": 25822,
     "added_cdl": [
+      "Equation(at_bac-ht_bac*ll_ac/2)",
+      "Equation(at_def-ht_def*ll_ef/2)",
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
       "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
+      "IsAltitudeOfTriangle(BM,BAC)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "35",
+    "goal_cdl": "Value(AreaOfTriangle(BAC))",
+    "problem_answer": "875",
     "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25823": {
     "problem_id": 25823,
     "added_cdl": [
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
+      "Equation(at_bac-at_def*rst_bacdef**2)",
       "IsAltitudeOfTriangle(BM,BAC)",
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "35",
+    "goal_cdl": "Value(AreaOfTriangle(BAC))",
+    "problem_answer": "875",
     "theorem_seqs": [
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
@@ -205,13 +353,13 @@
   "25824": {
     "problem_id": 25824,
     "added_cdl": [
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)",
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "35",
+    "goal_cdl": "Value(AreaOfTriangle(BAC))",
+    "problem_answer": "875",
     "theorem_seqs": [
-      "altitude_of_triangle_judgment(1,BM,BAC)",
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
@@ -219,12 +367,13 @@
   },
   "25825": {
     "problem_id": 25825,
-    "added_cdl": [],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "35",
+    "added_cdl": [
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(BAC))",
+    "problem_answer": "875",
     "theorem_seqs": [
-      "triangle_area_formula_common(1,DEF)",
-      "altitude_of_triangle_judgment(1,BM,BAC)",
       "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
@@ -234,29 +383,28 @@
   "25826": {
     "problem_id": 25826,
     "added_cdl": [
-      "Equation(at_bac-ht_bac*ll_ac/2)",
-      "Equation(at_def-ht_def*ll_ef/2)",
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)"
+      "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(LengthOfLine(DN))",
-    "problem_answer": "21",
+    "goal_cdl": "Value(AreaOfTriangle(BAC))",
+    "problem_answer": "875",
     "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25827": {
     "problem_id": 25827,
-    "added_cdl": [
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DN))",
-    "problem_answer": "21",
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfTriangle(BAC))",
+    "problem_answer": "875",
     "theorem_seqs": [
+      "triangle_area_formula_common(1,DEF)",
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
@@ -264,29 +412,29 @@
   "25828": {
     "problem_id": 25828,
     "added_cdl": [
+      "Equation(at_bac-ht_bac*ll_ac/2)",
+      "Equation(at_def-ht_def*ll_ef/2)",
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
       "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
+      "IsAltitudeOfTriangle(BM,BAC)"
     ],
-    "goal_cdl": "Value(LengthOfLine(DN))",
-    "problem_answer": "21",
+    "goal_cdl": "Value(AreaOfTriangle(DEF))",
+    "problem_answer": "315",
     "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25829": {
     "problem_id": 25829,
     "added_cdl": [
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
+      "Equation(at_bac-at_def*rst_bacdef**2)",
       "IsAltitudeOfTriangle(BM,BAC)",
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(LengthOfLine(DN))",
-    "problem_answer": "21",
+    "goal_cdl": "Value(AreaOfTriangle(DEF))",
+    "problem_answer": "315",
     "theorem_seqs": [
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
@@ -294,13 +442,13 @@
   "25830": {
     "problem_id": 25830,
     "added_cdl": [
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "IsAltitudeOfTriangle(BM,BAC)",
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(LengthOfLine(DN))",
-    "problem_answer": "21",
+    "goal_cdl": "Value(AreaOfTriangle(DEF))",
+    "problem_answer": "315",
     "theorem_seqs": [
-      "altitude_of_triangle_judgment(1,BM,BAC)",
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
@@ -308,12 +456,13 @@
   },
   "25831": {
     "problem_id": 25831,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(DN))",
-    "problem_answer": "21",
+    "added_cdl": [
+      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(DEF))",
+    "problem_answer": "315",
     "theorem_seqs": [
-      "triangle_area_formula_common(1,DEF)",
-      "altitude_of_triangle_judgment(1,BM,BAC)",
       "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
@@ -323,29 +472,28 @@
   "25832": {
     "problem_id": 25832,
     "added_cdl": [
-      "Equation(at_bac-ht_bac*ll_ac/2)",
-      "Equation(at_def-ht_def*ll_ef/2)",
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)"
+      "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(BAC))",
-    "problem_answer": "875",
+    "goal_cdl": "Value(AreaOfTriangle(DEF))",
+    "problem_answer": "315",
     "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
+      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25833": {
     "problem_id": 25833,
-    "added_cdl": [
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(AreaOfTriangle(BAC))",
-    "problem_answer": "875",
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfTriangle(DEF))",
+    "problem_answer": "315",
     "theorem_seqs": [
+      "triangle_area_formula_common(1,DEF)",
+      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
@@ -353,222 +501,74 @@
   "25834": {
     "problem_id": 25834,
     "added_cdl": [
+      "Equation(ll_ac-ll_ef*rst_bacdef)",
       "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_bac-ht_bac*ll_ac/2)",
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(BAC))",
-    "problem_answer": "875",
+    "goal_cdl": "Value(HeightOfTriangle(BAC))",
+    "problem_answer": "35",
     "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25835": {
     "problem_id": 25835,
     "added_cdl": [
-      "IsAltitudeOfTriangle(BM,BAC)",
+      "Equation(at_bac-at_def*rst_bacdef**2)",
+      "Equation(at_bac-ht_bac*ll_ac/2)",
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(BAC))",
-    "problem_answer": "875",
+    "goal_cdl": "Value(HeightOfTriangle(BAC))",
+    "problem_answer": "35",
     "theorem_seqs": [
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25836": {
     "problem_id": 25836,
     "added_cdl": [
+      "Equation(at_bac-ht_bac*ll_ac/2)",
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(BAC))",
-    "problem_answer": "875",
+    "goal_cdl": "Value(HeightOfTriangle(BAC))",
+    "problem_answer": "35",
     "theorem_seqs": [
-      "altitude_of_triangle_judgment(1,BM,BAC)",
       "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25837": {
     "problem_id": 25837,
-    "added_cdl": [],
-    "goal_cdl": "Value(AreaOfTriangle(BAC))",
-    "problem_answer": "875",
+    "added_cdl": [
+      "Equation(at_def-ht_def*ll_ef/2)"
+    ],
+    "goal_cdl": "Value(HeightOfTriangle(BAC))",
+    "problem_answer": "35",
     "theorem_seqs": [
-      "triangle_area_formula_common(1,DEF)",
-      "altitude_of_triangle_judgment(1,BM,BAC)",
+      "triangle_area_formula_common(1,BAC)",
       "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
       "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25838": {
     "problem_id": 25838,
-    "added_cdl": [
-      "Equation(at_bac-ht_bac*ll_ac/2)",
-      "Equation(at_def-ht_def*ll_ef/2)",
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)"
-    ],
-    "goal_cdl": "Value(AreaOfTriangle(DEF))",
-    "problem_answer": "315",
+    "added_cdl": [],
+    "goal_cdl": "Value(HeightOfTriangle(BAC))",
+    "problem_answer": "35",
     "theorem_seqs": [
+      "triangle_area_formula_common(1,DEF)",
+      "triangle_area_formula_common(1,BAC)",
+      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
+      "similar_triangle_property_line_ratio(1,BAC,DEF)",
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
   "25839": {
     "problem_id": 25839,
-    "added_cdl": [
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(AreaOfTriangle(DEF))",
-    "problem_answer": "315",
-    "theorem_seqs": [
-      "triangle_area_formula_common(1,BAC)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25840": {
-    "problem_id": 25840,
-    "added_cdl": [
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(AreaOfTriangle(DEF))",
-    "problem_answer": "315",
-    "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25841": {
-    "problem_id": 25841,
-    "added_cdl": [
-      "IsAltitudeOfTriangle(BM,BAC)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(AreaOfTriangle(DEF))",
-    "problem_answer": "315",
-    "theorem_seqs": [
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25842": {
-    "problem_id": 25842,
-    "added_cdl": [
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(AreaOfTriangle(DEF))",
-    "problem_answer": "315",
-    "theorem_seqs": [
-      "altitude_of_triangle_judgment(1,BM,BAC)",
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25843": {
-    "problem_id": 25843,
-    "added_cdl": [],
-    "goal_cdl": "Value(AreaOfTriangle(DEF))",
-    "problem_answer": "315",
-    "theorem_seqs": [
-      "triangle_area_formula_common(1,DEF)",
-      "altitude_of_triangle_judgment(1,BM,BAC)",
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "triangle_area_formula_common(1,BAC)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25844": {
-    "problem_id": 25844,
-    "added_cdl": [
-      "Equation(ll_ac-ll_ef*rst_bacdef)",
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "Equation(at_bac-ht_bac*ll_ac/2)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(HeightOfTriangle(BAC))",
-    "problem_answer": "35",
-    "theorem_seqs": [
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25845": {
-    "problem_id": 25845,
-    "added_cdl": [
-      "Equation(at_bac-at_def*rst_bacdef**2)",
-      "Equation(at_bac-ht_bac*ll_ac/2)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(HeightOfTriangle(BAC))",
-    "problem_answer": "35",
-    "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25846": {
-    "problem_id": 25846,
-    "added_cdl": [
-      "Equation(at_bac-ht_bac*ll_ac/2)",
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(HeightOfTriangle(BAC))",
-    "problem_answer": "35",
-    "theorem_seqs": [
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25847": {
-    "problem_id": 25847,
-    "added_cdl": [
-      "Equation(at_def-ht_def*ll_ef/2)"
-    ],
-    "goal_cdl": "Value(HeightOfTriangle(BAC))",
-    "problem_answer": "35",
-    "theorem_seqs": [
-      "triangle_area_formula_common(1,BAC)",
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25848": {
-    "problem_id": 25848,
-    "added_cdl": [],
-    "goal_cdl": "Value(HeightOfTriangle(BAC))",
-    "problem_answer": "35",
-    "theorem_seqs": [
-      "triangle_area_formula_common(1,DEF)",
-      "triangle_area_formula_common(1,BAC)",
-      "similar_triangle_property_area_square_ratio(1,BAC,DEF)",
-      "similar_triangle_property_line_ratio(1,BAC,DEF)",
-      "altitude_of_triangle_judgment(1,DN,DEF)"
-    ]
-  },
-  "25849": {
-    "problem_id": 25849,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(BMC))",
     "problem_answer": "90",
@@ -576,8 +576,8 @@
       "altitude_of_triangle_judgment(1,BM,BAC)"
     ]
   },
-  "25850": {
-    "problem_id": 25850,
+  "25840": {
+    "problem_id": 25840,
     "added_cdl": [],
     "goal_cdl": "Value(HeightOfTriangle(DEF))",
     "problem_answer": "21",
@@ -585,8 +585,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25851": {
-    "problem_id": 25851,
+  "25841": {
+    "problem_id": 25841,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(DNF))",
     "problem_answer": "90",
@@ -594,8 +594,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25852": {
-    "problem_id": 25852,
+  "25842": {
+    "problem_id": 25842,
     "added_cdl": [
       "IsAltitudeOfTriangle(DN,DEF)",
       "Equation(ll_ac-ll_ef*rst_bacdef)",
@@ -607,8 +607,8 @@
       "triangle_area_formula_common(1,DEF)"
     ]
   },
-  "25853": {
-    "problem_id": 25853,
+  "25843": {
+    "problem_id": 25843,
     "added_cdl": [
       "Equation(ll_ac-ll_ef*rst_bacdef)",
       "Equation(at_bac-at_def*rst_bacdef**2)"
@@ -620,8 +620,8 @@
       "triangle_area_formula_common(1,DEF)"
     ]
   },
-  "25854": {
-    "problem_id": 25854,
+  "25844": {
+    "problem_id": 25844,
     "added_cdl": [
       "Equation(at_bac-at_def*rst_bacdef**2)"
     ],
@@ -633,8 +633,8 @@
       "triangle_area_formula_common(1,DEF)"
     ]
   },
-  "25855": {
-    "problem_id": 25855,
+  "25845": {
+    "problem_id": 25845,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(AC))",
     "problem_answer": "50",
@@ -645,8 +645,8 @@
       "triangle_area_formula_common(1,DEF)"
     ]
   },
-  "25856": {
-    "problem_id": 25856,
+  "25846": {
+    "problem_id": 25846,
     "added_cdl": [
       "Equation(at_def-ht_def*ll_ef/2)"
     ],
@@ -656,8 +656,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25857": {
-    "problem_id": 25857,
+  "25847": {
+    "problem_id": 25847,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(EF))",
     "problem_answer": "30",
@@ -666,8 +666,8 @@
       "altitude_of_triangle_judgment(1,DN,DEF)"
     ]
   },
-  "25858": {
-    "problem_id": 25858,
+  "25848": {
+    "problem_id": 25848,
     "added_cdl": [],
     "goal_cdl": "Value(RatioOfSimilarTriangle(BACDEF))",
     "problem_answer": "5/3",

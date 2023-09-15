@@ -1,6 +1,6 @@
 {
-  "23149": {
-    "problem_id": 23149,
+  "23139": {
+    "problem_id": 23139,
     "added_cdl": [],
     "goal_cdl": "Relation(SimilarBetweenTriangle(EAC,BDC))",
     "problem_answer": "SimilarBetweenTriangle(EAC,BDC)",
@@ -8,8 +8,8 @@
       "similar_triangle_judgment_aa(1,EAC,BDC)"
     ]
   },
-  "23150": {
-    "problem_id": 23150,
+  "23140": {
+    "problem_id": 23140,
     "added_cdl": [],
     "goal_cdl": "Relation(SimilarBetweenTriangle(ACE,DCB))",
     "problem_answer": "SimilarBetweenTriangle(ACE,DCB)",
@@ -17,13 +17,149 @@
       "similar_triangle_judgment_aa(1,EAC,BDC)"
     ]
   },
-  "23151": {
-    "problem_id": 23151,
+  "23141": {
+    "problem_id": 23141,
     "added_cdl": [],
     "goal_cdl": "Relation(SimilarBetweenTriangle(CEA,CBD))",
     "problem_answer": "SimilarBetweenTriangle(CEA,CBD)",
     "theorem_seqs": [
       "similar_triangle_judgment_aa(1,EAC,BDC)"
+    ]
+  },
+  "23142": {
+    "problem_id": 23142,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_acedcb+ll_ce)",
+      "Equation(ll_ca-ll_dc*rst_acedcb)",
+      "Equation(ll_bc-ll_ce-ll_eb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "56",
+    "theorem_seqs": [
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23143": {
+    "problem_id": 23143,
+    "added_cdl": [
+      "Equation(ll_ca-ll_dc*rst_acedcb)",
+      "Equation(ll_bc-ll_ce-ll_eb)",
+      "SimilarBetweenTriangle(EAC,BDC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "56",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23144": {
+    "problem_id": 23144,
+    "added_cdl": [
+      "SimilarBetweenTriangle(EAC,BDC)",
+      "Equation(ll_bc-ll_ce-ll_eb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "56",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23145": {
+    "problem_id": 23145,
+    "added_cdl": [
+      "Equation(ll_bc-ll_ce-ll_eb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "56",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23146": {
+    "problem_id": 23146,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "56",
+    "theorem_seqs": [
+      "line_addition(1,BE,EC)",
+      "similar_triangle_judgment_aa(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23147": {
+    "problem_id": 23147,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_acedcb+ll_ce)",
+      "Equation(ll_ca-ll_dc*rst_acedcb)",
+      "Equation(ll_bc-ll_ce-ll_eb)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23148": {
+    "problem_id": 23148,
+    "added_cdl": [
+      "Equation(ll_ca-ll_dc*rst_acedcb)",
+      "Equation(ll_bc-ll_ce-ll_eb)",
+      "SimilarBetweenTriangle(EAC,BDC)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23149": {
+    "problem_id": 23149,
+    "added_cdl": [
+      "SimilarBetweenTriangle(EAC,BDC)",
+      "Equation(ll_bc-ll_ce-ll_eb)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23150": {
+    "problem_id": 23150,
+    "added_cdl": [
+      "Equation(ll_bc-ll_ce-ll_eb)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
+    ]
+  },
+  "23151": {
+    "problem_id": 23151,
+    "added_cdl": [],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "line_addition(1,BE,EC)",
+      "similar_triangle_judgment_aa(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
+      "line_addition(1,DA,AC)"
     ]
   },
   "23152": {
@@ -33,7 +169,7 @@
       "Equation(ll_ca-ll_dc*rst_acedcb)",
       "Equation(ll_bc-ll_ce-ll_eb)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
+    "goal_cdl": "Value(LengthOfLine(CA))",
     "problem_answer": "56",
     "theorem_seqs": [
       "line_addition(1,DA,AC)"
@@ -46,7 +182,7 @@
       "Equation(ll_bc-ll_ce-ll_eb)",
       "SimilarBetweenTriangle(EAC,BDC)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
+    "goal_cdl": "Value(LengthOfLine(CA))",
     "problem_answer": "56",
     "theorem_seqs": [
       "similar_triangle_property_line_ratio(1,ACE,DCB)",
@@ -59,7 +195,7 @@
       "SimilarBetweenTriangle(EAC,BDC)",
       "Equation(ll_bc-ll_ce-ll_eb)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
+    "goal_cdl": "Value(LengthOfLine(CA))",
     "problem_answer": "56",
     "theorem_seqs": [
       "similar_triangle_property_line_ratio(1,EAC,BDC)",
@@ -72,7 +208,7 @@
     "added_cdl": [
       "Equation(ll_bc-ll_ce-ll_eb)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AD))",
+    "goal_cdl": "Value(LengthOfLine(CA))",
     "problem_answer": "56",
     "theorem_seqs": [
       "similar_triangle_judgment_aa(1,EAC,BDC)",
@@ -84,7 +220,7 @@
   "23156": {
     "problem_id": 23156,
     "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(AD))",
+    "goal_cdl": "Value(LengthOfLine(CA))",
     "problem_answer": "56",
     "theorem_seqs": [
       "line_addition(1,BE,EC)",
@@ -96,41 +232,36 @@
   },
   "23157": {
     "problem_id": 23157,
-    "added_cdl": [
-      "Equation(-ll_bc*rst_acedcb+ll_ce)",
-      "Equation(ll_ca-ll_dc*rst_acedcb)",
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "8",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
     "theorem_seqs": [
-      "line_addition(1,DA,AC)"
+      "line_addition(1,BE,EC)"
     ]
   },
   "23158": {
     "problem_id": 23158,
     "added_cdl": [
+      "Equation(-ll_bc*rst_acedcb+ll_ce)",
       "Equation(ll_ca-ll_dc*rst_acedcb)",
-      "Equation(ll_bc-ll_ce-ll_eb)",
-      "SimilarBetweenTriangle(EAC,BDC)"
+      "Equation(ll_bc-ll_ce-ll_eb)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "8",
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "112",
     "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
       "line_addition(1,DA,AC)"
     ]
   },
   "23159": {
     "problem_id": 23159,
     "added_cdl": [
-      "SimilarBetweenTriangle(EAC,BDC)",
-      "Equation(ll_bc-ll_ce-ll_eb)"
+      "Equation(ll_ca-ll_dc*rst_acedcb)",
+      "Equation(ll_bc-ll_ce-ll_eb)",
+      "SimilarBetweenTriangle(EAC,BDC)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "8",
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "112",
     "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,EAC,BDC)",
       "similar_triangle_property_line_ratio(1,ACE,DCB)",
       "line_addition(1,DA,AC)"
     ]
@@ -138,12 +269,12 @@
   "23160": {
     "problem_id": 23160,
     "added_cdl": [
+      "SimilarBetweenTriangle(EAC,BDC)",
       "Equation(ll_bc-ll_ce-ll_eb)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "8",
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "112",
     "theorem_seqs": [
-      "similar_triangle_judgment_aa(1,EAC,BDC)",
       "similar_triangle_property_line_ratio(1,EAC,BDC)",
       "similar_triangle_property_line_ratio(1,ACE,DCB)",
       "line_addition(1,DA,AC)"
@@ -151,11 +282,12 @@
   },
   "23161": {
     "problem_id": 23161,
-    "added_cdl": [],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "8",
+    "added_cdl": [
+      "Equation(ll_bc-ll_ce-ll_eb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "112",
     "theorem_seqs": [
-      "line_addition(1,BE,EC)",
       "similar_triangle_judgment_aa(1,EAC,BDC)",
       "similar_triangle_property_line_ratio(1,EAC,BDC)",
       "similar_triangle_property_line_ratio(1,ACE,DCB)",
@@ -164,175 +296,43 @@
   },
   "23162": {
     "problem_id": 23162,
-    "added_cdl": [
-      "Equation(-ll_bc*rst_acedcb+ll_ce)",
-      "Equation(ll_ca-ll_dc*rst_acedcb)",
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(CA))",
-    "problem_answer": "56",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "112",
     "theorem_seqs": [
+      "line_addition(1,BE,EC)",
+      "similar_triangle_judgment_aa(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)",
       "line_addition(1,DA,AC)"
     ]
   },
   "23163": {
     "problem_id": 23163,
     "added_cdl": [
-      "Equation(ll_ca-ll_dc*rst_acedcb)",
-      "Equation(ll_bc-ll_ce-ll_eb)",
-      "SimilarBetweenTriangle(EAC,BDC)"
+      "SimilarBetweenTriangle(EAC,BDC)",
+      "Equation(ll_bc-ll_ce-ll_eb)"
     ],
-    "goal_cdl": "Value(LengthOfLine(CA))",
-    "problem_answer": "56",
+    "goal_cdl": "Value(RatioOfSimilarTriangle(ACEDCB))",
+    "problem_answer": "1/2",
     "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
+      "similar_triangle_property_line_ratio(1,ACE,DCB)"
     ]
   },
   "23164": {
     "problem_id": 23164,
     "added_cdl": [
-      "SimilarBetweenTriangle(EAC,BDC)",
       "Equation(ll_bc-ll_ce-ll_eb)"
     ],
-    "goal_cdl": "Value(LengthOfLine(CA))",
-    "problem_answer": "56",
+    "goal_cdl": "Value(RatioOfSimilarTriangle(ACEDCB))",
+    "problem_answer": "1/2",
     "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
+      "similar_triangle_judgment_aa(1,EAC,BDC)",
+      "similar_triangle_property_line_ratio(1,ACE,DCB)"
     ]
   },
   "23165": {
     "problem_id": 23165,
-    "added_cdl": [
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(CA))",
-    "problem_answer": "56",
-    "theorem_seqs": [
-      "similar_triangle_judgment_aa(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
-    ]
-  },
-  "23166": {
-    "problem_id": 23166,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(CA))",
-    "problem_answer": "56",
-    "theorem_seqs": [
-      "line_addition(1,BE,EC)",
-      "similar_triangle_judgment_aa(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
-    ]
-  },
-  "23167": {
-    "problem_id": 23167,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "12",
-    "theorem_seqs": [
-      "line_addition(1,BE,EC)"
-    ]
-  },
-  "23168": {
-    "problem_id": 23168,
-    "added_cdl": [
-      "Equation(-ll_bc*rst_acedcb+ll_ce)",
-      "Equation(ll_ca-ll_dc*rst_acedcb)",
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "112",
-    "theorem_seqs": [
-      "line_addition(1,DA,AC)"
-    ]
-  },
-  "23169": {
-    "problem_id": 23169,
-    "added_cdl": [
-      "Equation(ll_ca-ll_dc*rst_acedcb)",
-      "Equation(ll_bc-ll_ce-ll_eb)",
-      "SimilarBetweenTriangle(EAC,BDC)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "112",
-    "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
-    ]
-  },
-  "23170": {
-    "problem_id": 23170,
-    "added_cdl": [
-      "SimilarBetweenTriangle(EAC,BDC)",
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "112",
-    "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
-    ]
-  },
-  "23171": {
-    "problem_id": 23171,
-    "added_cdl": [
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "112",
-    "theorem_seqs": [
-      "similar_triangle_judgment_aa(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
-    ]
-  },
-  "23172": {
-    "problem_id": 23172,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "112",
-    "theorem_seqs": [
-      "line_addition(1,BE,EC)",
-      "similar_triangle_judgment_aa(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,ACE,DCB)",
-      "line_addition(1,DA,AC)"
-    ]
-  },
-  "23173": {
-    "problem_id": 23173,
-    "added_cdl": [
-      "SimilarBetweenTriangle(EAC,BDC)",
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(RatioOfSimilarTriangle(ACEDCB))",
-    "problem_answer": "1/2",
-    "theorem_seqs": [
-      "similar_triangle_property_line_ratio(1,ACE,DCB)"
-    ]
-  },
-  "23174": {
-    "problem_id": 23174,
-    "added_cdl": [
-      "Equation(ll_bc-ll_ce-ll_eb)"
-    ],
-    "goal_cdl": "Value(RatioOfSimilarTriangle(ACEDCB))",
-    "problem_answer": "1/2",
-    "theorem_seqs": [
-      "similar_triangle_judgment_aa(1,EAC,BDC)",
-      "similar_triangle_property_line_ratio(1,ACE,DCB)"
-    ]
-  },
-  "23175": {
-    "problem_id": 23175,
     "added_cdl": [],
     "goal_cdl": "Value(RatioOfSimilarTriangle(ACEDCB))",
     "problem_answer": "1/2",

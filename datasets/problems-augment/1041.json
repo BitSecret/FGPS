@@ -1,6 +1,6 @@
 {
-  "29493": {
-    "problem_id": 29493,
+  "29483": {
+    "problem_id": 29483,
     "added_cdl": [],
     "goal_cdl": "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))",
     "problem_answer": "0",
@@ -8,8 +8,8 @@
       "arc_property_center_angle(1,FAD,F)"
     ]
   },
-  "29494": {
-    "problem_id": 29494,
+  "29484": {
+    "problem_id": 29484,
     "added_cdl": [],
     "goal_cdl": "Equal(LengthOfLine(AF),RadiusOfCircle(F))",
     "problem_answer": "0",
@@ -17,8 +17,8 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29495": {
-    "problem_id": 29495,
+  "29485": {
+    "problem_id": 29485,
     "added_cdl": [],
     "goal_cdl": "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
     "problem_answer": "0",
@@ -26,8 +26,8 @@
       "radius_of_circle_property_length_equal(1,FD,F)"
     ]
   },
-  "29496": {
-    "problem_id": 29496,
+  "29486": {
+    "problem_id": 29486,
     "added_cdl": [
       "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
       "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
@@ -41,8 +41,8 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29497": {
-    "problem_id": 29497,
+  "29487": {
+    "problem_id": 29487,
     "added_cdl": [
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfAngle(DCA),60)",
@@ -56,8 +56,8 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29498": {
-    "problem_id": 29498,
+  "29488": {
+    "problem_id": 29488,
     "added_cdl": [
       "Equal(MeasureOfAngle(DCA),60)",
       "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
@@ -71,8 +71,8 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29499": {
-    "problem_id": 29499,
+  "29489": {
+    "problem_id": 29489,
     "added_cdl": [
       "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
@@ -86,8 +86,8 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29500": {
-    "problem_id": 29500,
+  "29490": {
+    "problem_id": 29490,
     "added_cdl": [
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
@@ -101,14 +101,163 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29501": {
-    "problem_id": 29501,
+  "29491": {
+    "problem_id": 29491,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(AD))",
     "problem_answer": "4*sqrt(3)",
     "theorem_seqs": [
       "arc_property_center_angle(1,FAD,F)",
       "cosine_theorem(1,FAD)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29492": {
+    "problem_id": 29492,
+    "added_cdl": [
+      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29493": {
+    "problem_id": 29493,
+    "added_cdl": [
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29494": {
+    "problem_id": 29494,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29495": {
+    "problem_id": 29495,
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "equilateral_triangle_property_angle(1,CAD)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29496": {
+    "problem_id": 29496,
+    "added_cdl": [
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "cosine_theorem(1,FAD)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29497": {
+    "problem_id": 29497,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,FAD,F)",
+      "cosine_theorem(1,FAD)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29498": {
+    "problem_id": 29498,
+    "added_cdl": [
+      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29499": {
+    "problem_id": 29499,
+    "added_cdl": [
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29500": {
+    "problem_id": 29500,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29501": {
+    "problem_id": 29501,
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "4*sqrt(3)",
+    "theorem_seqs": [
       "equilateral_triangle_property_angle(1,CAD)",
       "arc_property_circumference_angle_external(1,FAD,C)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -118,29 +267,28 @@
   "29502": {
     "problem_id": 29502,
     "added_cdl": [
-      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AC))",
+    "goal_cdl": "Value(LengthOfLine(DC))",
     "problem_answer": "4*sqrt(3)",
     "theorem_seqs": [
+      "cosine_theorem(1,FAD)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
   "29503": {
     "problem_id": 29503,
-    "added_cdl": [
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AC))",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DC))",
     "problem_answer": "4*sqrt(3)",
     "theorem_seqs": [
+      "arc_property_center_angle(1,FAD,F)",
+      "cosine_theorem(1,FAD)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
       "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
@@ -148,15 +296,18 @@
   "29504": {
     "problem_id": 29504,
     "added_cdl": [
-      "Equal(MeasureOfAngle(DCA),60)",
+      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
       "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equation(ac_f-pi*rc_f**2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AC))",
-    "problem_answer": "4*sqrt(3)",
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
@@ -164,13 +315,16 @@
     "problem_id": 29505,
     "added_cdl": [
       "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equation(ac_f-pi*rc_f**2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AC))",
-    "problem_answer": "4*sqrt(3)",
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "equilateral_triangle_property_angle(1,CAD)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
       "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
@@ -178,177 +332,23 @@
   "29506": {
     "problem_id": 29506,
     "added_cdl": [
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equation(ac_f-pi*rc_f**2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AC))",
-    "problem_answer": "4*sqrt(3)",
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
     "theorem_seqs": [
       "cosine_theorem(1,FAD)",
-      "equilateral_triangle_property_angle(1,CAD)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
       "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
   "29507": {
     "problem_id": 29507,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(AC))",
-    "problem_answer": "4*sqrt(3)",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,FAD,F)",
-      "cosine_theorem(1,FAD)",
-      "equilateral_triangle_property_angle(1,CAD)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29508": {
-    "problem_id": 29508,
-    "added_cdl": [
-      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "4*sqrt(3)",
-    "theorem_seqs": [
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29509": {
-    "problem_id": 29509,
-    "added_cdl": [
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "4*sqrt(3)",
-    "theorem_seqs": [
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29510": {
-    "problem_id": 29510,
-    "added_cdl": [
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "4*sqrt(3)",
-    "theorem_seqs": [
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29511": {
-    "problem_id": 29511,
-    "added_cdl": [
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "4*sqrt(3)",
-    "theorem_seqs": [
-      "equilateral_triangle_property_angle(1,CAD)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29512": {
-    "problem_id": 29512,
-    "added_cdl": [
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "4*sqrt(3)",
-    "theorem_seqs": [
-      "cosine_theorem(1,FAD)",
-      "equilateral_triangle_property_angle(1,CAD)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29513": {
-    "problem_id": 29513,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(DC))",
-    "problem_answer": "4*sqrt(3)",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,FAD,F)",
-      "cosine_theorem(1,FAD)",
-      "equilateral_triangle_property_angle(1,CAD)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29514": {
-    "problem_id": 29514,
-    "added_cdl": [
-      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
-      "Equation(ac_f-pi*rc_f**2)",
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
-    "theorem_seqs": [
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29515": {
-    "problem_id": 29515,
-    "added_cdl": [
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
-      "Equation(ac_f-pi*rc_f**2)",
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
-    "theorem_seqs": [
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29516": {
-    "problem_id": 29516,
-    "added_cdl": [
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
-      "Equation(ac_f-pi*rc_f**2)",
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
-    "theorem_seqs": [
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29517": {
-    "problem_id": 29517,
     "added_cdl": [
       "Equation(ac_f-pi*rc_f**2)",
       "Equal(MeasureOfAngle(CAD),60)",
@@ -360,6 +360,167 @@
     "problem_answer": "4",
     "theorem_seqs": [
       "triangle_area_formula_sine(1,ADC)",
+      "cosine_theorem(1,FAD)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29508": {
+    "problem_id": 29508,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "circle_area_formula(1,F)",
+      "triangle_area_formula_sine(1,ADC)",
+      "cosine_theorem(1,FAD)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29509": {
+    "problem_id": 29509,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
+      "triangle_area_formula_sine(1,ADC)",
+      "cosine_theorem(1,FAD)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29510": {
+    "problem_id": 29510,
+    "added_cdl": [
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "equilateral_triangle_property_angle(1,CAD)",
+      "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
+      "triangle_area_formula_sine(1,ADC)",
+      "cosine_theorem(1,FAD)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29511": {
+    "problem_id": 29511,
+    "added_cdl": [
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
+      "triangle_area_formula_sine(1,ADC)",
+      "cosine_theorem(1,FAD)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29512": {
+    "problem_id": 29512,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,FAD,F)",
+      "arc_property_circumference_angle_external(1,FAD,C)",
+      "equilateral_triangle_property_angle(1,CAD)",
+      "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
+      "triangle_area_formula_sine(1,ADC)",
+      "cosine_theorem(1,FAD)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29513": {
+    "problem_id": 29513,
+    "added_cdl": [
+      "Equation(ac_f-pi*rc_f**2)"
+    ],
+    "goal_cdl": "Value(AreaOfCircle(F))",
+    "problem_answer": "16*pi",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29514": {
+    "problem_id": 29514,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfCircle(F))",
+    "problem_answer": "16*pi",
+    "theorem_seqs": [
+      "circle_area_formula(1,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29515": {
+    "problem_id": 29515,
+    "added_cdl": [
+      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29516": {
+    "problem_id": 29516,
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,FD,F)",
+      "radius_of_circle_property_length_equal(1,FA,F)"
+    ]
+  },
+  "29517": {
+    "problem_id": 29517,
+    "added_cdl": [
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
+    "theorem_seqs": [
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
@@ -373,10 +534,9 @@
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
     "theorem_seqs": [
-      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -390,11 +550,10 @@
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
     "theorem_seqs": [
       "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -407,12 +566,11 @@
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
     "theorem_seqs": [
       "equilateral_triangle_property_angle(1,CAD)",
       "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -424,13 +582,12 @@
     "added_cdl": [
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
     "theorem_seqs": [
       "arc_property_circumference_angle_external(1,FAD,C)",
       "equilateral_triangle_property_angle(1,CAD)",
       "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -440,14 +597,13 @@
   "29522": {
     "problem_id": 29522,
     "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(AF))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(AreaOfTriangle(ADC))",
+    "problem_answer": "12*sqrt(3)",
     "theorem_seqs": [
       "arc_property_center_angle(1,FAD,F)",
       "arc_property_circumference_angle_external(1,FAD,C)",
       "equilateral_triangle_property_angle(1,CAD)",
       "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -457,54 +613,71 @@
   "29523": {
     "problem_id": 29523,
     "added_cdl": [
-      "Equation(ac_f-pi*rc_f**2)"
+      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equation(ac_f-pi*rc_f**2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(AreaOfCircle(F))",
-    "problem_answer": "16*pi",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
   "29524": {
     "problem_id": 29524,
-    "added_cdl": [],
-    "goal_cdl": "Value(AreaOfCircle(F))",
-    "problem_answer": "16*pi",
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
+      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equation(ac_f-pi*rc_f**2)",
+      "Equal(MeasureOfAngle(CAD),60)",
+      "Equal(MeasureOfAngle(DCA),60)",
+      "Equation(ma_dca-mar_fad/2)",
+      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
-      "circle_area_formula(1,F)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
   "29525": {
     "problem_id": 29525,
     "added_cdl": [
-      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
       "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equation(ac_f-pi*rc_f**2)",
       "Equal(MeasureOfAngle(CAD),60)",
       "Equal(MeasureOfAngle(DCA),60)",
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
+      "cosine_theorem(1,FAD)",
+      "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
   "29526": {
     "problem_id": 29526,
     "added_cdl": [
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
+      "Equation(ac_f-pi*rc_f**2)",
       "Equal(MeasureOfAngle(CAD),60)",
       "Equal(MeasureOfAngle(DCA),60)",
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
+      "triangle_area_formula_sine(1,ADC)",
+      "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
@@ -512,15 +685,16 @@
   "29527": {
     "problem_id": 29527,
     "added_cdl": [
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
       "Equal(MeasureOfAngle(CAD),60)",
       "Equal(MeasureOfAngle(DCA),60)",
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
+      "circle_area_formula(1,F)",
+      "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
       "radius_of_circle_property_length_equal(1,FA,F)"
@@ -529,14 +703,15 @@
   "29528": {
     "problem_id": 29528,
     "added_cdl": [
-      "Equal(MeasureOfAngle(CAD),60)",
       "Equal(MeasureOfAngle(DCA),60)",
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
+      "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -546,14 +721,15 @@
   "29529": {
     "problem_id": 29529,
     "added_cdl": [
-      "Equal(MeasureOfAngle(DCA),60)",
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
+      "equilateral_triangle_property_angle(1,CAD)",
       "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -563,14 +739,15 @@
   "29530": {
     "problem_id": 29530,
     "added_cdl": [
-      "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,FAD,C)",
       "equilateral_triangle_property_angle(1,CAD)",
       "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -579,15 +756,15 @@
   },
   "29531": {
     "problem_id": 29531,
-    "added_cdl": [
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
+    "added_cdl": [],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "-12*sqrt(3)+16*pi",
     "theorem_seqs": [
+      "arc_property_center_angle(1,FAD,F)",
       "arc_property_circumference_angle_external(1,FAD,C)",
       "equilateral_triangle_property_angle(1,CAD)",
       "equilateral_triangle_property_angle(1,ADC)",
+      "circle_area_formula(1,F)",
       "triangle_area_formula_sine(1,ADC)",
       "cosine_theorem(1,FAD)",
       "radius_of_circle_property_length_equal(1,FD,F)",
@@ -597,191 +774,14 @@
   "29532": {
     "problem_id": 29532,
     "added_cdl": [],
-    "goal_cdl": "Value(AreaOfTriangle(ADC))",
-    "problem_answer": "12*sqrt(3)",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,FAD,F)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "equilateral_triangle_property_angle(1,CAD)",
-      "equilateral_triangle_property_angle(1,ADC)",
-      "triangle_area_formula_sine(1,ADC)",
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29533": {
-    "problem_id": 29533,
-    "added_cdl": [
-      "Equal(LengthOfLine(FD),RadiusOfCircle(F))",
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
-      "Equation(ac_f-pi*rc_f**2)",
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29534": {
-    "problem_id": 29534,
-    "added_cdl": [
-      "Equation(ll_ad**2-ll_af**2+2*ll_af*ll_fd*cos(pi*ma_dfa/180)-ll_fd**2)",
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
-      "Equation(ac_f-pi*rc_f**2)",
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29535": {
-    "problem_id": 29535,
-    "added_cdl": [
-      "Equation(at_adc-ll_ac*ll_ad*sin(pi*ma_cad/180)/2)",
-      "Equation(ac_f-pi*rc_f**2)",
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29536": {
-    "problem_id": 29536,
-    "added_cdl": [
-      "Equation(ac_f-pi*rc_f**2)",
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "triangle_area_formula_sine(1,ADC)",
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29537": {
-    "problem_id": 29537,
-    "added_cdl": [
-      "Equal(MeasureOfAngle(CAD),60)",
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "circle_area_formula(1,F)",
-      "triangle_area_formula_sine(1,ADC)",
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29538": {
-    "problem_id": 29538,
-    "added_cdl": [
-      "Equal(MeasureOfAngle(DCA),60)",
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
-      "triangle_area_formula_sine(1,ADC)",
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29539": {
-    "problem_id": 29539,
-    "added_cdl": [
-      "Equation(ma_dca-mar_fad/2)",
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "equilateral_triangle_property_angle(1,CAD)",
-      "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
-      "triangle_area_formula_sine(1,ADC)",
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29540": {
-    "problem_id": 29540,
-    "added_cdl": [
-      "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "equilateral_triangle_property_angle(1,CAD)",
-      "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
-      "triangle_area_formula_sine(1,ADC)",
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29541": {
-    "problem_id": 29541,
-    "added_cdl": [],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "-12*sqrt(3)+16*pi",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,FAD,F)",
-      "arc_property_circumference_angle_external(1,FAD,C)",
-      "equilateral_triangle_property_angle(1,CAD)",
-      "equilateral_triangle_property_angle(1,ADC)",
-      "circle_area_formula(1,F)",
-      "triangle_area_formula_sine(1,ADC)",
-      "cosine_theorem(1,FAD)",
-      "radius_of_circle_property_length_equal(1,FD,F)",
-      "radius_of_circle_property_length_equal(1,FA,F)"
-    ]
-  },
-  "29542": {
-    "problem_id": 29542,
-    "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(CAD))",
     "problem_answer": "60",
     "theorem_seqs": [
       "equilateral_triangle_property_angle(1,ADC)"
     ]
   },
-  "29543": {
-    "problem_id": 29543,
+  "29533": {
+    "problem_id": 29533,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(DCA))",
     "problem_answer": "60",
@@ -789,8 +789,8 @@
       "equilateral_triangle_property_angle(1,CAD)"
     ]
   },
-  "29544": {
-    "problem_id": 29544,
+  "29534": {
+    "problem_id": 29534,
     "added_cdl": [
       "Equation(ma_dca-mar_fad/2)"
     ],
@@ -800,8 +800,8 @@
       "equilateral_triangle_property_angle(1,CAD)"
     ]
   },
-  "29545": {
-    "problem_id": 29545,
+  "29535": {
+    "problem_id": 29535,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfArc(FAD))",
     "problem_answer": "120",
@@ -810,8 +810,8 @@
       "equilateral_triangle_property_angle(1,CAD)"
     ]
   },
-  "29546": {
-    "problem_id": 29546,
+  "29536": {
+    "problem_id": 29536,
     "added_cdl": [
       "Equation(ma_dca-mar_fad/2)",
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
@@ -822,8 +822,8 @@
       "equilateral_triangle_property_angle(1,CAD)"
     ]
   },
-  "29547": {
-    "problem_id": 29547,
+  "29537": {
+    "problem_id": 29537,
     "added_cdl": [
       "Equal(MeasureOfArc(FAD),MeasureOfAngle(DFA))"
     ],
@@ -834,8 +834,8 @@
       "equilateral_triangle_property_angle(1,CAD)"
     ]
   },
-  "29548": {
-    "problem_id": 29548,
+  "29538": {
+    "problem_id": 29538,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(DFA))",
     "problem_answer": "120",
@@ -845,8 +845,8 @@
       "equilateral_triangle_property_angle(1,CAD)"
     ]
   },
-  "29549": {
-    "problem_id": 29549,
+  "29539": {
+    "problem_id": 29539,
     "added_cdl": [],
     "goal_cdl": "Value(RadiusOfCircle(F))",
     "problem_answer": "4",
@@ -854,8 +854,8 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29550": {
-    "problem_id": 29550,
+  "29540": {
+    "problem_id": 29540,
     "added_cdl": [
       "Equal(LengthOfLine(FD),RadiusOfCircle(F))"
     ],
@@ -865,8 +865,8 @@
       "radius_of_circle_property_length_equal(1,FA,F)"
     ]
   },
-  "29551": {
-    "problem_id": 29551,
+  "29541": {
+    "problem_id": 29541,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(FD))",
     "problem_answer": "4",

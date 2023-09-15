@@ -1,6 +1,6 @@
 {
-  "29087": {
-    "problem_id": 29087,
+  "29077": {
+    "problem_id": 29077,
     "added_cdl": [],
     "goal_cdl": "Equal(MeasureOfArc(EDC),MeasureOfAngle(CED))",
     "problem_answer": "0",
@@ -8,8 +8,8 @@
       "arc_property_center_angle(1,EDC,E)"
     ]
   },
-  "29088": {
-    "problem_id": 29088,
+  "29078": {
+    "problem_id": 29078,
     "added_cdl": [],
     "goal_cdl": "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
     "problem_answer": "0",
@@ -17,8 +17,8 @@
       "arc_property_center_angle(1,ECD,E)"
     ]
   },
-  "29089": {
-    "problem_id": 29089,
+  "29079": {
+    "problem_id": 29079,
     "added_cdl": [
       "Equal(MeasureOfArc(EDC),MeasureOfAngle(CED))",
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
@@ -30,8 +30,8 @@
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)"
     ]
   },
-  "29090": {
-    "problem_id": 29090,
+  "29080": {
+    "problem_id": 29080,
     "added_cdl": [
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
@@ -43,8 +43,8 @@
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)"
     ]
   },
-  "29091": {
-    "problem_id": 29091,
+  "29081": {
+    "problem_id": 29081,
     "added_cdl": [
       "Equation(ma_ced+ma_dec-360)"
     ],
@@ -56,8 +56,8 @@
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)"
     ]
   },
-  "29092": {
-    "problem_id": 29092,
+  "29082": {
+    "problem_id": 29082,
     "added_cdl": [],
     "goal_cdl": "Relation(CongruentBetweenArc(EAB,ECD))",
     "problem_answer": "CongruentBetweenArc(EAB,ECD)",
@@ -68,13 +68,145 @@
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)"
     ]
   },
-  "29093": {
-    "problem_id": 29093,
+  "29083": {
+    "problem_id": 29083,
     "added_cdl": [
       "CongruentBetweenArc(EAB,ECD)"
     ],
     "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
     "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29084": {
+    "problem_id": 29084,
+    "added_cdl": [
+      "Equal(MeasureOfArc(EDC),MeasureOfAngle(CED))",
+      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
+      "Equation(ma_ced+ma_dec-360)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29085": {
+    "problem_id": 29085,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
+      "Equation(ma_ced+ma_dec-360)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)",
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29086": {
+    "problem_id": 29086,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dec-360)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECD,E)",
+      "arc_property_center_angle(1,EDC,E)",
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29087": {
+    "problem_id": 29087,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "round_angle(1,CED,DEC)",
+      "arc_property_center_angle(1,ECD,E)",
+      "arc_property_center_angle(1,EDC,E)",
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29088": {
+    "problem_id": 29088,
+    "added_cdl": [
+      "CongruentBetweenArc(EAB,ECD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "41",
+    "theorem_seqs": [
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29089": {
+    "problem_id": 29089,
+    "added_cdl": [
+      "Equal(MeasureOfArc(EDC),MeasureOfAngle(CED))",
+      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
+      "Equation(ma_ced+ma_dec-360)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "41",
+    "theorem_seqs": [
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29090": {
+    "problem_id": 29090,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
+      "Equation(ma_ced+ma_dec-360)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "41",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)",
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29091": {
+    "problem_id": 29091,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dec-360)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "41",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECD,E)",
+      "arc_property_center_angle(1,EDC,E)",
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29092": {
+    "problem_id": 29092,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "41",
+    "theorem_seqs": [
+      "round_angle(1,CED,DEC)",
+      "arc_property_center_angle(1,ECD,E)",
+      "arc_property_center_angle(1,EDC,E)",
+      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
+      "congruent_arc_property_chord_equal(1,EAB,ECD)"
+    ]
+  },
+  "29093": {
+    "problem_id": 29093,
+    "added_cdl": [
+      "CongruentBetweenArc(EAB,ECD)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "16",
     "theorem_seqs": [
       "congruent_arc_property_chord_equal(1,EAB,ECD)"
     ]
@@ -86,8 +218,8 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
-    "problem_answer": "0",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "16",
     "theorem_seqs": [
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
       "congruent_arc_property_chord_equal(1,EAB,ECD)"
@@ -99,8 +231,8 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
-    "problem_answer": "0",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "16",
     "theorem_seqs": [
       "arc_property_center_angle(1,EDC,E)",
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
@@ -112,8 +244,8 @@
     "added_cdl": [
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
-    "problem_answer": "0",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "16",
     "theorem_seqs": [
       "arc_property_center_angle(1,ECD,E)",
       "arc_property_center_angle(1,EDC,E)",
@@ -124,8 +256,8 @@
   "29097": {
     "problem_id": 29097,
     "added_cdl": [],
-    "goal_cdl": "Equal(LengthOfLine(AB),LengthOfLine(CD))",
-    "problem_answer": "0",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "16",
     "theorem_seqs": [
       "round_angle(1,CED,DEC)",
       "arc_property_center_angle(1,ECD,E)",
@@ -139,7 +271,7 @@
     "added_cdl": [
       "CongruentBetweenArc(EAB,ECD)"
     ],
-    "goal_cdl": "Value(LengthOfLine(CD))",
+    "goal_cdl": "Value(LengthOfLine(AB))",
     "problem_answer": "41",
     "theorem_seqs": [
       "congruent_arc_property_chord_equal(1,EAB,ECD)"
@@ -152,7 +284,7 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(LengthOfLine(CD))",
+    "goal_cdl": "Value(LengthOfLine(AB))",
     "problem_answer": "41",
     "theorem_seqs": [
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
@@ -165,7 +297,7 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(LengthOfLine(CD))",
+    "goal_cdl": "Value(LengthOfLine(AB))",
     "problem_answer": "41",
     "theorem_seqs": [
       "arc_property_center_angle(1,EDC,E)",
@@ -178,7 +310,7 @@
     "added_cdl": [
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(LengthOfLine(CD))",
+    "goal_cdl": "Value(LengthOfLine(AB))",
     "problem_answer": "41",
     "theorem_seqs": [
       "arc_property_center_angle(1,ECD,E)",
@@ -190,7 +322,7 @@
   "29102": {
     "problem_id": 29102,
     "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(CD))",
+    "goal_cdl": "Value(LengthOfLine(AB))",
     "problem_answer": "41",
     "theorem_seqs": [
       "round_angle(1,CED,DEC)",
@@ -205,8 +337,8 @@
     "added_cdl": [
       "CongruentBetweenArc(EAB,ECD)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "16",
+    "goal_cdl": "Value(MeasureOfArc(EAB))",
+    "problem_answer": "76",
     "theorem_seqs": [
       "congruent_arc_property_chord_equal(1,EAB,ECD)"
     ]
@@ -218,8 +350,8 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "16",
+    "goal_cdl": "Value(MeasureOfArc(EAB))",
+    "problem_answer": "76",
     "theorem_seqs": [
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
       "congruent_arc_property_chord_equal(1,EAB,ECD)"
@@ -231,8 +363,8 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "16",
+    "goal_cdl": "Value(MeasureOfArc(EAB))",
+    "problem_answer": "76",
     "theorem_seqs": [
       "arc_property_center_angle(1,EDC,E)",
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
@@ -244,8 +376,8 @@
     "added_cdl": [
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "16",
+    "goal_cdl": "Value(MeasureOfArc(EAB))",
+    "problem_answer": "76",
     "theorem_seqs": [
       "arc_property_center_angle(1,ECD,E)",
       "arc_property_center_angle(1,EDC,E)",
@@ -256,8 +388,8 @@
   "29107": {
     "problem_id": 29107,
     "added_cdl": [],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "16",
+    "goal_cdl": "Value(MeasureOfArc(EAB))",
+    "problem_answer": "76",
     "theorem_seqs": [
       "round_angle(1,CED,DEC)",
       "arc_property_center_angle(1,ECD,E)",
@@ -271,8 +403,8 @@
     "added_cdl": [
       "CongruentBetweenArc(EAB,ECD)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AB))",
-    "problem_answer": "41",
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "284",
     "theorem_seqs": [
       "congruent_arc_property_chord_equal(1,EAB,ECD)"
     ]
@@ -284,8 +416,8 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AB))",
-    "problem_answer": "41",
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "284",
     "theorem_seqs": [
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
       "congruent_arc_property_chord_equal(1,EAB,ECD)"
@@ -297,8 +429,8 @@
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AB))",
-    "problem_answer": "41",
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "284",
     "theorem_seqs": [
       "arc_property_center_angle(1,EDC,E)",
       "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
@@ -310,8 +442,8 @@
     "added_cdl": [
       "Equation(ma_ced+ma_dec-360)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AB))",
-    "problem_answer": "41",
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "284",
     "theorem_seqs": [
       "arc_property_center_angle(1,ECD,E)",
       "arc_property_center_angle(1,EDC,E)",
@@ -322,8 +454,8 @@
   "29112": {
     "problem_id": 29112,
     "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(AB))",
-    "problem_answer": "41",
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "284",
     "theorem_seqs": [
       "round_angle(1,CED,DEC)",
       "arc_property_center_angle(1,ECD,E)",
@@ -334,138 +466,6 @@
   },
   "29113": {
     "problem_id": 29113,
-    "added_cdl": [
-      "CongruentBetweenArc(EAB,ECD)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EAB))",
-    "problem_answer": "76",
-    "theorem_seqs": [
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29114": {
-    "problem_id": 29114,
-    "added_cdl": [
-      "Equal(MeasureOfArc(EDC),MeasureOfAngle(CED))",
-      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
-      "Equation(ma_ced+ma_dec-360)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EAB))",
-    "problem_answer": "76",
-    "theorem_seqs": [
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29115": {
-    "problem_id": 29115,
-    "added_cdl": [
-      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
-      "Equation(ma_ced+ma_dec-360)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EAB))",
-    "problem_answer": "76",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,EDC,E)",
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29116": {
-    "problem_id": 29116,
-    "added_cdl": [
-      "Equation(ma_ced+ma_dec-360)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EAB))",
-    "problem_answer": "76",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,ECD,E)",
-      "arc_property_center_angle(1,EDC,E)",
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29117": {
-    "problem_id": 29117,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfArc(EAB))",
-    "problem_answer": "76",
-    "theorem_seqs": [
-      "round_angle(1,CED,DEC)",
-      "arc_property_center_angle(1,ECD,E)",
-      "arc_property_center_angle(1,EDC,E)",
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29118": {
-    "problem_id": 29118,
-    "added_cdl": [
-      "CongruentBetweenArc(EAB,ECD)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EDC))",
-    "problem_answer": "284",
-    "theorem_seqs": [
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29119": {
-    "problem_id": 29119,
-    "added_cdl": [
-      "Equal(MeasureOfArc(EDC),MeasureOfAngle(CED))",
-      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
-      "Equation(ma_ced+ma_dec-360)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EDC))",
-    "problem_answer": "284",
-    "theorem_seqs": [
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29120": {
-    "problem_id": 29120,
-    "added_cdl": [
-      "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
-      "Equation(ma_ced+ma_dec-360)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EDC))",
-    "problem_answer": "284",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,EDC,E)",
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29121": {
-    "problem_id": 29121,
-    "added_cdl": [
-      "Equation(ma_ced+ma_dec-360)"
-    ],
-    "goal_cdl": "Value(MeasureOfArc(EDC))",
-    "problem_answer": "284",
-    "theorem_seqs": [
-      "arc_property_center_angle(1,ECD,E)",
-      "arc_property_center_angle(1,EDC,E)",
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29122": {
-    "problem_id": 29122,
-    "added_cdl": [],
-    "goal_cdl": "Value(MeasureOfArc(EDC))",
-    "problem_answer": "284",
-    "theorem_seqs": [
-      "round_angle(1,CED,DEC)",
-      "arc_property_center_angle(1,ECD,E)",
-      "arc_property_center_angle(1,EDC,E)",
-      "congruent_arc_judgment_measure_equal(1,EAB,ECD)",
-      "congruent_arc_property_chord_equal(1,EAB,ECD)"
-    ]
-  },
-  "29123": {
-    "problem_id": 29123,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(CED))",
     "problem_answer": "284",
@@ -473,8 +473,8 @@
       "arc_property_center_angle(1,EDC,E)"
     ]
   },
-  "29124": {
-    "problem_id": 29124,
+  "29114": {
+    "problem_id": 29114,
     "added_cdl": [
       "Equal(MeasureOfArc(ECD),MeasureOfAngle(DEC))",
       "Equation(ma_ced+ma_dec-360)"
@@ -485,8 +485,8 @@
       "arc_property_center_angle(1,EDC,E)"
     ]
   },
-  "29125": {
-    "problem_id": 29125,
+  "29115": {
+    "problem_id": 29115,
     "added_cdl": [
       "Equation(ma_ced+ma_dec-360)"
     ],
@@ -497,8 +497,8 @@
       "arc_property_center_angle(1,EDC,E)"
     ]
   },
-  "29126": {
-    "problem_id": 29126,
+  "29116": {
+    "problem_id": 29116,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfArc(ECD))",
     "problem_answer": "76",
@@ -508,8 +508,8 @@
       "arc_property_center_angle(1,EDC,E)"
     ]
   },
-  "29127": {
-    "problem_id": 29127,
+  "29117": {
+    "problem_id": 29117,
     "added_cdl": [
       "Equation(ma_ced+ma_dec-360)"
     ],
@@ -519,8 +519,8 @@
       "arc_property_center_angle(1,EDC,E)"
     ]
   },
-  "29128": {
-    "problem_id": 29128,
+  "29118": {
+    "problem_id": 29118,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(DEC))",
     "problem_answer": "76",

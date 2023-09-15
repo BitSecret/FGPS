@@ -1,6 +1,6 @@
 {
-  "22379": {
-    "problem_id": 22379,
+  "22369": {
+    "problem_id": 22369,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMidpointOfLine(O,CA))",
     "problem_answer": "IsMidpointOfLine(O,CA)",
@@ -8,8 +8,8 @@
       "midpoint_of_line_judgment(1,O,CA)"
     ]
   },
-  "22380": {
-    "problem_id": 22380,
+  "22370": {
+    "problem_id": 22370,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMidpointOfLine(O,AC))",
     "problem_answer": "IsMidpointOfLine(O,AC)",
@@ -17,8 +17,8 @@
       "midpoint_of_line_judgment(1,O,CA)"
     ]
   },
-  "22381": {
-    "problem_id": 22381,
+  "22371": {
+    "problem_id": 22371,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMidpointOfLine(O,BT))",
     "problem_answer": "IsMidpointOfLine(O,BT)",
@@ -26,8 +26,8 @@
       "midpoint_of_line_judgment(1,O,BT)"
     ]
   },
-  "22382": {
-    "problem_id": 22382,
+  "22372": {
+    "problem_id": 22372,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMidpointOfLine(O,TB))",
     "problem_answer": "IsMidpointOfLine(O,TB)",
@@ -35,8 +35,8 @@
       "midpoint_of_line_judgment(1,O,BT)"
     ]
   },
-  "22383": {
-    "problem_id": 22383,
+  "22373": {
+    "problem_id": 22373,
     "added_cdl": [
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
@@ -47,154 +47,270 @@
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
-  "22384": {
-    "problem_id": 22384,
+  "22374": {
+    "problem_id": 22374,
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
     "goal_cdl": "Relation(Parallelogram(BCTA))",
     "problem_answer": "Parallelogram(BCTA)",
     "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22375": {
+    "problem_id": 22375,
+    "added_cdl": [],
+    "goal_cdl": "Relation(Parallelogram(BCTA))",
+    "problem_answer": "Parallelogram(BCTA)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22376": {
+    "problem_id": 22376,
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Parallelogram(CTAB))",
+    "problem_answer": "Parallelogram(CTAB)",
+    "theorem_seqs": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22377": {
+    "problem_id": 22377,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Parallelogram(CTAB))",
+    "problem_answer": "Parallelogram(CTAB)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22378": {
+    "problem_id": 22378,
+    "added_cdl": [],
+    "goal_cdl": "Relation(Parallelogram(CTAB))",
+    "problem_answer": "Parallelogram(CTAB)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22379": {
+    "problem_id": 22379,
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Parallelogram(TABC))",
+    "problem_answer": "Parallelogram(TABC)",
+    "theorem_seqs": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22380": {
+    "problem_id": 22380,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Parallelogram(TABC))",
+    "problem_answer": "Parallelogram(TABC)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22381": {
+    "problem_id": 22381,
+    "added_cdl": [],
+    "goal_cdl": "Relation(Parallelogram(TABC))",
+    "problem_answer": "Parallelogram(TABC)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22382": {
+    "problem_id": 22382,
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Parallelogram(ABCT))",
+    "problem_answer": "Parallelogram(ABCT)",
+    "theorem_seqs": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22383": {
+    "problem_id": 22383,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Parallelogram(ABCT))",
+    "problem_answer": "Parallelogram(ABCT)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22384": {
+    "problem_id": 22384,
+    "added_cdl": [],
+    "goal_cdl": "Relation(Parallelogram(ABCT))",
+    "problem_answer": "Parallelogram(ABCT)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22385": {
     "problem_id": 22385,
-    "added_cdl": [],
-    "goal_cdl": "Relation(Parallelogram(BCTA))",
-    "problem_answer": "Parallelogram(BCTA)",
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(ParallelBetweenLine(BA,CT))",
+    "problem_answer": "ParallelBetweenLine(BA,CT)",
     "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22386": {
     "problem_id": 22386,
     "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Parallelogram(CTAB))",
-    "problem_answer": "Parallelogram(CTAB)",
+    "goal_cdl": "Relation(ParallelBetweenLine(BA,CT))",
+    "problem_answer": "ParallelBetweenLine(BA,CT)",
     "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22387": {
     "problem_id": 22387,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(Parallelogram(CTAB))",
-    "problem_answer": "Parallelogram(CTAB)",
+    "added_cdl": [],
+    "goal_cdl": "Relation(ParallelBetweenLine(BA,CT))",
+    "problem_answer": "ParallelBetweenLine(BA,CT)",
     "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22388": {
     "problem_id": 22388,
-    "added_cdl": [],
-    "goal_cdl": "Relation(Parallelogram(CTAB))",
-    "problem_answer": "Parallelogram(CTAB)",
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(ParallelBetweenLine(TC,AB))",
+    "problem_answer": "ParallelBetweenLine(TC,AB)",
     "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22389": {
     "problem_id": 22389,
     "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Parallelogram(TABC))",
-    "problem_answer": "Parallelogram(TABC)",
+    "goal_cdl": "Relation(ParallelBetweenLine(TC,AB))",
+    "problem_answer": "ParallelBetweenLine(TC,AB)",
     "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22390": {
     "problem_id": 22390,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(Parallelogram(TABC))",
-    "problem_answer": "Parallelogram(TABC)",
+    "added_cdl": [],
+    "goal_cdl": "Relation(ParallelBetweenLine(TC,AB))",
+    "problem_answer": "ParallelBetweenLine(TC,AB)",
     "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22391": {
     "problem_id": 22391,
-    "added_cdl": [],
-    "goal_cdl": "Relation(Parallelogram(TABC))",
-    "problem_answer": "Parallelogram(TABC)",
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(ParallelBetweenLine(CB,TA))",
+    "problem_answer": "ParallelBetweenLine(CB,TA)",
     "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22392": {
     "problem_id": 22392,
     "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Parallelogram(ABCT))",
-    "problem_answer": "Parallelogram(ABCT)",
-    "theorem_seqs": [
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22393": {
-    "problem_id": 22393,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(Parallelogram(ABCT))",
-    "problem_answer": "Parallelogram(ABCT)",
+    "goal_cdl": "Relation(ParallelBetweenLine(CB,TA))",
+    "problem_answer": "ParallelBetweenLine(CB,TA)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
-  "22394": {
-    "problem_id": 22394,
+  "22393": {
+    "problem_id": 22393,
     "added_cdl": [],
-    "goal_cdl": "Relation(Parallelogram(ABCT))",
-    "problem_answer": "Parallelogram(ABCT)",
+    "goal_cdl": "Relation(ParallelBetweenLine(CB,TA))",
+    "problem_answer": "ParallelBetweenLine(CB,TA)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
-  "22395": {
-    "problem_id": 22395,
+  "22394": {
+    "problem_id": 22394,
     "added_cdl": [
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(ParallelBetweenLine(BA,CT))",
-    "problem_answer": "ParallelBetweenLine(BA,CT)",
+    "goal_cdl": "Relation(ParallelBetweenLine(AT,BC))",
+    "problem_answer": "ParallelBetweenLine(AT,BC)",
     "theorem_seqs": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
+    ]
+  },
+  "22395": {
+    "problem_id": 22395,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(ParallelBetweenLine(AT,BC))",
+    "problem_answer": "ParallelBetweenLine(AT,BC)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
   },
   "22396": {
     "problem_id": 22396,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(ParallelBetweenLine(BA,CT))",
-    "problem_answer": "ParallelBetweenLine(BA,CT)",
+    "added_cdl": [],
+    "goal_cdl": "Relation(ParallelBetweenLine(AT,BC))",
+    "problem_answer": "ParallelBetweenLine(AT,BC)",
     "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
     ]
@@ -202,130 +318,14 @@
   "22397": {
     "problem_id": 22397,
     "added_cdl": [],
-    "goal_cdl": "Relation(ParallelBetweenLine(BA,CT))",
-    "problem_answer": "ParallelBetweenLine(BA,CT)",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22398": {
-    "problem_id": 22398,
-    "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(ParallelBetweenLine(TC,AB))",
-    "problem_answer": "ParallelBetweenLine(TC,AB)",
-    "theorem_seqs": [
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22399": {
-    "problem_id": 22399,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(ParallelBetweenLine(TC,AB))",
-    "problem_answer": "ParallelBetweenLine(TC,AB)",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22400": {
-    "problem_id": 22400,
-    "added_cdl": [],
-    "goal_cdl": "Relation(ParallelBetweenLine(TC,AB))",
-    "problem_answer": "ParallelBetweenLine(TC,AB)",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22401": {
-    "problem_id": 22401,
-    "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(ParallelBetweenLine(CB,TA))",
-    "problem_answer": "ParallelBetweenLine(CB,TA)",
-    "theorem_seqs": [
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22402": {
-    "problem_id": 22402,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(ParallelBetweenLine(CB,TA))",
-    "problem_answer": "ParallelBetweenLine(CB,TA)",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22403": {
-    "problem_id": 22403,
-    "added_cdl": [],
-    "goal_cdl": "Relation(ParallelBetweenLine(CB,TA))",
-    "problem_answer": "ParallelBetweenLine(CB,TA)",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22404": {
-    "problem_id": 22404,
-    "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(ParallelBetweenLine(AT,BC))",
-    "problem_answer": "ParallelBetweenLine(AT,BC)",
-    "theorem_seqs": [
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22405": {
-    "problem_id": 22405,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Relation(ParallelBetweenLine(AT,BC))",
-    "problem_answer": "ParallelBetweenLine(AT,BC)",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22406": {
-    "problem_id": 22406,
-    "added_cdl": [],
-    "goal_cdl": "Relation(ParallelBetweenLine(AT,BC))",
-    "problem_answer": "ParallelBetweenLine(AT,BC)",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)"
-    ]
-  },
-  "22407": {
-    "problem_id": 22407,
-    "added_cdl": [],
     "goal_cdl": "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
     "problem_answer": "0",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)"
     ]
   },
-  "22408": {
-    "problem_id": 22408,
+  "22398": {
+    "problem_id": 22398,
     "added_cdl": [],
     "goal_cdl": "Relation(IsPerpendicularBisectorOfLine(BO,CA))",
     "problem_answer": "IsPerpendicularBisectorOfLine(BO,CA)",
@@ -333,8 +333,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)"
     ]
   },
-  "22409": {
-    "problem_id": 22409,
+  "22399": {
+    "problem_id": 22399,
     "added_cdl": [],
     "goal_cdl": "Relation(PerpendicularBetweenLine(BO,AO))",
     "problem_answer": "PerpendicularBetweenLine(BO,AO)",
@@ -342,8 +342,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)"
     ]
   },
-  "22410": {
-    "problem_id": 22410,
+  "22400": {
+    "problem_id": 22400,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
     ],
@@ -353,8 +353,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22411": {
-    "problem_id": 22411,
+  "22401": {
+    "problem_id": 22401,
     "added_cdl": [],
     "goal_cdl": "Relation(IsPerpendicularBisectorOfLine(TO,AC))",
     "problem_answer": "IsPerpendicularBisectorOfLine(TO,AC)",
@@ -363,8 +363,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22412": {
-    "problem_id": 22412,
+  "22402": {
+    "problem_id": 22402,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
     ],
@@ -374,8 +374,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22413": {
-    "problem_id": 22413,
+  "22403": {
+    "problem_id": 22403,
     "added_cdl": [],
     "goal_cdl": "Relation(PerpendicularBetweenLine(AO,TO))",
     "problem_answer": "PerpendicularBetweenLine(AO,TO)",
@@ -384,8 +384,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22414": {
-    "problem_id": 22414,
+  "22404": {
+    "problem_id": 22404,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
     ],
@@ -395,8 +395,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22415": {
-    "problem_id": 22415,
+  "22405": {
+    "problem_id": 22405,
     "added_cdl": [],
     "goal_cdl": "Relation(PerpendicularBetweenLine(TO,CO))",
     "problem_answer": "PerpendicularBetweenLine(TO,CO)",
@@ -405,8 +405,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22416": {
-    "problem_id": 22416,
+  "22406": {
+    "problem_id": 22406,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)"
     ],
@@ -416,8 +416,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22417": {
-    "problem_id": 22417,
+  "22407": {
+    "problem_id": 22407,
     "added_cdl": [],
     "goal_cdl": "Equal(LengthOfLine(BC),LengthOfLine(BA))",
     "problem_answer": "0",
@@ -426,8 +426,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22418": {
-    "problem_id": 22418,
+  "22408": {
+    "problem_id": 22408,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(TO,AC)"
     ],
@@ -437,8 +437,8 @@
       "perpendicular_bisector_property_distance_equal(1,TO,AC)"
     ]
   },
-  "22419": {
-    "problem_id": 22419,
+  "22409": {
+    "problem_id": 22409,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
     ],
@@ -449,8 +449,8 @@
       "perpendicular_bisector_property_distance_equal(1,TO,AC)"
     ]
   },
-  "22420": {
-    "problem_id": 22420,
+  "22410": {
+    "problem_id": 22410,
     "added_cdl": [],
     "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(TC))",
     "problem_answer": "0",
@@ -460,8 +460,8 @@
       "perpendicular_bisector_property_distance_equal(1,TO,AC)"
     ]
   },
-  "22421": {
-    "problem_id": 22421,
+  "22411": {
+    "problem_id": 22411,
     "added_cdl": [
       "Equal(LengthOfLine(BC),LengthOfLine(BA))",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))"
@@ -472,8 +472,8 @@
       "kite_judgment_equal_and_equal(1,BCTA)"
     ]
   },
-  "22422": {
-    "problem_id": 22422,
+  "22412": {
+    "problem_id": 22412,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))"
@@ -481,149 +481,149 @@
     "goal_cdl": "Relation(Kite(BCTA))",
     "problem_answer": "Kite(BCTA)",
     "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22413": {
+    "problem_id": 22413,
+    "added_cdl": [
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
+    ],
+    "goal_cdl": "Relation(Kite(BCTA))",
+    "problem_answer": "Kite(BCTA)",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22414": {
+    "problem_id": 22414,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(TO,AC)"
+    ],
+    "goal_cdl": "Relation(Kite(BCTA))",
+    "problem_answer": "Kite(BCTA)",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22415": {
+    "problem_id": 22415,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
+    ],
+    "goal_cdl": "Relation(Kite(BCTA))",
+    "problem_answer": "Kite(BCTA)",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22416": {
+    "problem_id": 22416,
+    "added_cdl": [],
+    "goal_cdl": "Relation(Kite(BCTA))",
+    "problem_answer": "Kite(BCTA)",
+    "theorem_seqs": [
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22417": {
+    "problem_id": 22417,
+    "added_cdl": [
+      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
+    ],
+    "goal_cdl": "Relation(Kite(TABC))",
+    "problem_answer": "Kite(TABC)",
+    "theorem_seqs": [
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22418": {
+    "problem_id": 22418,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(BO,CA)",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
+    ],
+    "goal_cdl": "Relation(Kite(TABC))",
+    "problem_answer": "Kite(TABC)",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22419": {
+    "problem_id": 22419,
+    "added_cdl": [
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
+    ],
+    "goal_cdl": "Relation(Kite(TABC))",
+    "problem_answer": "Kite(TABC)",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22420": {
+    "problem_id": 22420,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(TO,AC)"
+    ],
+    "goal_cdl": "Relation(Kite(TABC))",
+    "problem_answer": "Kite(TABC)",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22421": {
+    "problem_id": 22421,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
+    ],
+    "goal_cdl": "Relation(Kite(TABC))",
+    "problem_answer": "Kite(TABC)",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)"
+    ]
+  },
+  "22422": {
+    "problem_id": 22422,
+    "added_cdl": [],
+    "goal_cdl": "Relation(Kite(TABC))",
+    "problem_answer": "Kite(TABC)",
+    "theorem_seqs": [
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)"
     ]
   },
   "22423": {
     "problem_id": 22423,
-    "added_cdl": [
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
-    ],
-    "goal_cdl": "Relation(Kite(BCTA))",
-    "problem_answer": "Kite(BCTA)",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22424": {
-    "problem_id": 22424,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(TO,AC)"
-    ],
-    "goal_cdl": "Relation(Kite(BCTA))",
-    "problem_answer": "Kite(BCTA)",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22425": {
-    "problem_id": 22425,
-    "added_cdl": [
-      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
-    ],
-    "goal_cdl": "Relation(Kite(BCTA))",
-    "problem_answer": "Kite(BCTA)",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22426": {
-    "problem_id": 22426,
-    "added_cdl": [],
-    "goal_cdl": "Relation(Kite(BCTA))",
-    "problem_answer": "Kite(BCTA)",
-    "theorem_seqs": [
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22427": {
-    "problem_id": 22427,
-    "added_cdl": [
-      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
-    ],
-    "goal_cdl": "Relation(Kite(TABC))",
-    "problem_answer": "Kite(TABC)",
-    "theorem_seqs": [
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22428": {
-    "problem_id": 22428,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(BO,CA)",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
-    ],
-    "goal_cdl": "Relation(Kite(TABC))",
-    "problem_answer": "Kite(TABC)",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22429": {
-    "problem_id": 22429,
-    "added_cdl": [
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))"
-    ],
-    "goal_cdl": "Relation(Kite(TABC))",
-    "problem_answer": "Kite(TABC)",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22430": {
-    "problem_id": 22430,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(TO,AC)"
-    ],
-    "goal_cdl": "Relation(Kite(TABC))",
-    "problem_answer": "Kite(TABC)",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22431": {
-    "problem_id": 22431,
-    "added_cdl": [
-      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
-    ],
-    "goal_cdl": "Relation(Kite(TABC))",
-    "problem_answer": "Kite(TABC)",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22432": {
-    "problem_id": 22432,
-    "added_cdl": [],
-    "goal_cdl": "Relation(Kite(TABC))",
-    "problem_answer": "Kite(TABC)",
-    "theorem_seqs": [
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)"
-    ]
-  },
-  "22433": {
-    "problem_id": 22433,
     "added_cdl": [
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
@@ -634,8 +634,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22434": {
-    "problem_id": 22434,
+  "22424": {
+    "problem_id": 22424,
     "added_cdl": [
       "Equal(LengthOfLine(BC),LengthOfLine(BA))",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -648,8 +648,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22435": {
-    "problem_id": 22435,
+  "22425": {
+    "problem_id": 22425,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -663,8 +663,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22436": {
-    "problem_id": 22436,
+  "22426": {
+    "problem_id": 22426,
     "added_cdl": [
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
@@ -678,8 +678,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22437": {
-    "problem_id": 22437,
+  "22427": {
+    "problem_id": 22427,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
@@ -694,8 +694,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22438": {
-    "problem_id": 22438,
+  "22428": {
+    "problem_id": 22428,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
@@ -711,13 +711,175 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22439": {
-    "problem_id": 22439,
+  "22429": {
+    "problem_id": 22429,
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
     "goal_cdl": "Relation(Rhombus(BCTA))",
     "problem_answer": "Rhombus(BCTA)",
+    "theorem_seqs": [
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22430": {
+    "problem_id": 22430,
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Rhombus(BCTA))",
+    "problem_answer": "Rhombus(BCTA)",
+    "theorem_seqs": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22431": {
+    "problem_id": 22431,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BT)"
+    ],
+    "goal_cdl": "Relation(Rhombus(BCTA))",
+    "problem_answer": "Rhombus(BCTA)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22432": {
+    "problem_id": 22432,
+    "added_cdl": [],
+    "goal_cdl": "Relation(Rhombus(BCTA))",
+    "problem_answer": "Rhombus(BCTA)",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22433": {
+    "problem_id": 22433,
+    "added_cdl": [
+      "Kite(BCTA)",
+      "Parallelogram(BCTA)"
+    ],
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
+    "theorem_seqs": [
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22434": {
+    "problem_id": 22434,
+    "added_cdl": [
+      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "Parallelogram(BCTA)"
+    ],
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
+    "theorem_seqs": [
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22435": {
+    "problem_id": 22435,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(BO,CA)",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "Parallelogram(BCTA)"
+    ],
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22436": {
+    "problem_id": 22436,
+    "added_cdl": [
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "Parallelogram(BCTA)"
+    ],
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22437": {
+    "problem_id": 22437,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(TO,AC)",
+      "Parallelogram(BCTA)"
+    ],
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22438": {
+    "problem_id": 22438,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
+      "Parallelogram(BCTA)"
+    ],
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+    ]
+  },
+  "22439": {
+    "problem_id": 22439,
+    "added_cdl": [
+      "Parallelogram(BCTA)"
+    ],
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)",
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
@@ -734,8 +896,8 @@
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(BCTA))",
-    "problem_answer": "Rhombus(BCTA)",
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
     "theorem_seqs": [
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "vertical_angle(1,COB,AOT)",
@@ -752,8 +914,8 @@
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(BCTA))",
-    "problem_answer": "Rhombus(BCTA)",
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -769,8 +931,8 @@
   "22442": {
     "problem_id": 22442,
     "added_cdl": [],
-    "goal_cdl": "Relation(Rhombus(BCTA))",
-    "problem_answer": "Rhombus(BCTA)",
+    "goal_cdl": "Relation(Rhombus(CTAB))",
+    "problem_answer": "Rhombus(CTAB)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
@@ -790,8 +952,8 @@
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
@@ -803,8 +965,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "kite_judgment_equal_and_equal(1,BCTA)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
@@ -817,8 +979,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
@@ -831,8 +993,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
@@ -846,8 +1008,8 @@
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -862,8 +1024,8 @@
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -878,8 +1040,8 @@
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)",
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
@@ -896,8 +1058,8 @@
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "vertical_angle(1,COB,AOT)",
@@ -914,8 +1076,8 @@
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -931,8 +1093,8 @@
   "22452": {
     "problem_id": 22452,
     "added_cdl": [],
-    "goal_cdl": "Relation(Rhombus(CTAB))",
-    "problem_answer": "Rhombus(CTAB)",
+    "goal_cdl": "Relation(Rhombus(TABC))",
+    "problem_answer": "Rhombus(TABC)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
@@ -952,8 +1114,8 @@
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
@@ -965,8 +1127,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "kite_judgment_equal_and_equal(1,BCTA)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
@@ -979,8 +1141,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
@@ -993,8 +1155,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
@@ -1008,8 +1170,8 @@
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -1024,8 +1186,8 @@
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -1040,8 +1202,8 @@
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)",
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
@@ -1058,8 +1220,8 @@
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "vertical_angle(1,COB,AOT)",
@@ -1076,8 +1238,8 @@
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -1093,8 +1255,8 @@
   "22462": {
     "problem_id": 22462,
     "added_cdl": [],
-    "goal_cdl": "Relation(Rhombus(TABC))",
-    "problem_answer": "Rhombus(TABC)",
+    "goal_cdl": "Relation(Rhombus(ABCT))",
+    "problem_answer": "Rhombus(ABCT)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
@@ -1114,8 +1276,8 @@
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
@@ -1127,8 +1289,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "kite_judgment_equal_and_equal(1,BCTA)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
@@ -1141,8 +1303,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
@@ -1155,8 +1317,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
@@ -1170,8 +1332,8 @@
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -1186,8 +1348,8 @@
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -1202,8 +1364,8 @@
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)",
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
@@ -1220,8 +1382,8 @@
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "vertical_angle(1,COB,AOT)",
@@ -1238,8 +1400,8 @@
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -1255,8 +1417,8 @@
   "22472": {
     "problem_id": 22472,
     "added_cdl": [],
-    "goal_cdl": "Relation(Rhombus(ABCT))",
-    "problem_answer": "Rhombus(ABCT)",
+    "goal_cdl": "Relation(Kite(CTAB))",
+    "problem_answer": "Kite(CTAB)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
@@ -1276,8 +1438,8 @@
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
@@ -1289,8 +1451,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "kite_judgment_equal_and_equal(1,BCTA)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
@@ -1303,8 +1465,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
@@ -1317,8 +1479,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
@@ -1332,8 +1494,8 @@
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -1348,8 +1510,8 @@
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -1364,8 +1526,8 @@
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)",
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
@@ -1382,8 +1544,8 @@
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "vertical_angle(1,COB,AOT)",
@@ -1400,8 +1562,8 @@
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -1417,8 +1579,8 @@
   "22482": {
     "problem_id": 22482,
     "added_cdl": [],
-    "goal_cdl": "Relation(Kite(CTAB))",
-    "problem_answer": "Kite(CTAB)",
+    "goal_cdl": "Relation(Kite(ABCT))",
+    "problem_answer": "Kite(ABCT)",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
@@ -1438,8 +1600,8 @@
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
@@ -1451,8 +1613,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "kite_judgment_equal_and_equal(1,BCTA)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
@@ -1465,8 +1627,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
@@ -1479,8 +1641,8 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
@@ -1494,8 +1656,8 @@
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -1510,8 +1672,8 @@
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -1526,8 +1688,8 @@
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)",
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
@@ -1544,8 +1706,8 @@
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "vertical_angle(1,COB,AOT)",
@@ -1562,8 +1724,8 @@
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -1579,8 +1741,8 @@
   "22492": {
     "problem_id": 22492,
     "added_cdl": [],
-    "goal_cdl": "Relation(Kite(ABCT))",
-    "problem_answer": "Kite(ABCT)",
+    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "problem_answer": "0",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
       "midpoint_of_line_judgment(1,O,CA)",
@@ -1600,7 +1762,7 @@
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
@@ -1613,7 +1775,7 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "kite_judgment_equal_and_equal(1,BCTA)",
@@ -1627,7 +1789,7 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
@@ -1641,7 +1803,7 @@
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -1656,7 +1818,7 @@
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -1672,7 +1834,7 @@
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
@@ -1688,7 +1850,7 @@
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "vertical_angle(1,COB,AOT)",
@@ -1706,7 +1868,7 @@
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -1724,7 +1886,7 @@
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,CA)",
@@ -1741,7 +1903,7 @@
   "22502": {
     "problem_id": 22502,
     "added_cdl": [],
-    "goal_cdl": "Equal(LengthOfLine(TC),LengthOfLine(BC))",
+    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
     "problem_answer": "0",
     "theorem_seqs": [
       "midpoint_of_line_judgment(1,O,BT)",
@@ -1759,193 +1921,31 @@
   "22503": {
     "problem_id": 22503,
     "added_cdl": [
-      "Kite(BCTA)",
-      "Parallelogram(BCTA)"
+      "IsPerpendicularBisectorOfLine(BO,CA)",
+      "Rhombus(BCTA)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
+    "goal_cdl": "Value(MeasureOfAngle(ABO))",
+    "problem_answer": "58",
     "theorem_seqs": [
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
   "22504": {
     "problem_id": 22504,
     "added_cdl": [
-      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "Parallelogram(BCTA)"
+      "Rhombus(BCTA)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
+    "goal_cdl": "Value(MeasureOfAngle(ABO))",
+    "problem_answer": "58",
     "theorem_seqs": [
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
   "22505": {
     "problem_id": 22505,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(BO,CA)",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "Parallelogram(BCTA)"
-    ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22506": {
-    "problem_id": 22506,
-    "added_cdl": [
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "Parallelogram(BCTA)"
-    ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22507": {
-    "problem_id": 22507,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(TO,AC)",
-      "Parallelogram(BCTA)"
-    ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22508": {
-    "problem_id": 22508,
-    "added_cdl": [
-      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
-      "Parallelogram(BCTA)"
-    ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22509": {
-    "problem_id": 22509,
-    "added_cdl": [
-      "Parallelogram(BCTA)"
-    ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22510": {
-    "problem_id": 22510,
-    "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22511": {
-    "problem_id": 22511,
-    "added_cdl": [
-      "IsMidpointOfLine(O,BT)"
-    ],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22512": {
-    "problem_id": 22512,
-    "added_cdl": [],
-    "goal_cdl": "Equal(LengthOfLine(TA),LengthOfLine(BA))",
-    "problem_answer": "0",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "midpoint_of_line_judgment(1,O,CA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
-    ]
-  },
-  "22513": {
-    "problem_id": 22513,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(BO,CA)",
-      "Rhombus(BCTA)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(ABO))",
-    "problem_answer": "58",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22514": {
-    "problem_id": 22514,
-    "added_cdl": [
-      "Rhombus(BCTA)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(MeasureOfAngle(ABO))",
-    "problem_answer": "58",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22515": {
-    "problem_id": 22515,
     "added_cdl": [
       "Parallelogram(BCTA)",
       "Kite(BCTA)",
@@ -1959,8 +1959,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22516": {
-    "problem_id": 22516,
+  "22506": {
+    "problem_id": 22506,
     "added_cdl": [
       "Kite(BCTA)",
       "IsMidpointOfLine(O,BT)",
@@ -1976,8 +1976,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22517": {
-    "problem_id": 22517,
+  "22507": {
+    "problem_id": 22507,
     "added_cdl": [
       "Equal(LengthOfLine(BC),LengthOfLine(BA))",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -1995,8 +1995,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22518": {
-    "problem_id": 22518,
+  "22508": {
+    "problem_id": 22508,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -2015,8 +2015,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22519": {
-    "problem_id": 22519,
+  "22509": {
+    "problem_id": 22509,
     "added_cdl": [
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "IsMidpointOfLine(O,CA)",
@@ -2035,8 +2035,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22520": {
-    "problem_id": 22520,
+  "22510": {
+    "problem_id": 22510,
     "added_cdl": [
       "IsMidpointOfLine(O,CA)",
       "IsPerpendicularBisectorOfLine(TO,AC)",
@@ -2056,8 +2056,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22521": {
-    "problem_id": 22521,
+  "22511": {
+    "problem_id": 22511,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "IsMidpointOfLine(O,BT)",
@@ -2077,8 +2077,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22522": {
-    "problem_id": 22522,
+  "22512": {
+    "problem_id": 22512,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "IsMidpointOfLine(O,BT)",
@@ -2099,8 +2099,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22523": {
-    "problem_id": 22523,
+  "22513": {
+    "problem_id": 22513,
     "added_cdl": [
       "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
@@ -2121,8 +2121,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22524": {
-    "problem_id": 22524,
+  "22514": {
+    "problem_id": 22514,
     "added_cdl": [
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
@@ -2143,8 +2143,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22525": {
-    "problem_id": 22525,
+  "22515": {
+    "problem_id": 22515,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(ABO))",
     "problem_answer": "58",
@@ -2152,6 +2152,187 @@
       "quadrilateral_perimeter_formula(1,BCTA)",
       "midpoint_of_line_judgment(1,O,BT)",
       "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22516": {
+    "problem_id": 22516,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(BO,CA)",
+      "Rhombus(BCTA)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22517": {
+    "problem_id": 22517,
+    "added_cdl": [
+      "Rhombus(BCTA)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22518": {
+    "problem_id": 22518,
+    "added_cdl": [
+      "Parallelogram(BCTA)",
+      "Kite(BCTA)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22519": {
+    "problem_id": 22519,
+    "added_cdl": [
+      "Kite(BCTA)",
+      "IsMidpointOfLine(O,BT)",
+      "IsMidpointOfLine(O,CA)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22520": {
+    "problem_id": 22520,
+    "added_cdl": [
+      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22521": {
+    "problem_id": 22521,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(BO,CA)",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22522": {
+    "problem_id": 22522,
+    "added_cdl": [
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "IsMidpointOfLine(O,CA)",
+      "IsMidpointOfLine(O,BT)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22523": {
+    "problem_id": 22523,
+    "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsPerpendicularBisectorOfLine(TO,AC)",
+      "IsMidpointOfLine(O,BT)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22524": {
+    "problem_id": 22524,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(TO,AC)",
+      "IsMidpointOfLine(O,BT)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,CA)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
+    ]
+  },
+  "22525": {
+    "problem_id": 22525,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
+      "IsMidpointOfLine(O,BT)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "midpoint_of_line_judgment(1,O,CA)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -2167,39 +2348,63 @@
   "22526": {
     "problem_id": 22526,
     "added_cdl": [
-      "IsPerpendicularBisectorOfLine(BO,CA)",
-      "Rhombus(BCTA)",
+      "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
     "goal_cdl": "Value(LengthOfLine(BC))",
     "problem_answer": "4",
     "theorem_seqs": [
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
   "22527": {
     "problem_id": 22527,
     "added_cdl": [
-      "Rhombus(BCTA)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
     "goal_cdl": "Value(LengthOfLine(BC))",
     "problem_answer": "4",
     "theorem_seqs": [
+      "midpoint_of_line_judgment(1,O,BT)",
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
+      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
   "22528": {
     "problem_id": 22528,
-    "added_cdl": [
-      "Parallelogram(BCTA)",
-      "Kite(BCTA)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
+    "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(BC))",
     "problem_answer": "4",
     "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,BCTA)",
+      "midpoint_of_line_judgment(1,O,BT)",
+      "vertical_angle(1,COB,AOT)",
+      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
+      "midpoint_of_line_judgment(1,O,CA)",
+      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
+      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
+      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
+      "kite_judgment_equal_and_equal(1,BCTA)",
+      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
@@ -2208,35 +2413,25 @@
   "22529": {
     "problem_id": 22529,
     "added_cdl": [
-      "Kite(BCTA)",
-      "IsMidpointOfLine(O,BT)",
-      "IsMidpointOfLine(O,CA)",
+      "IsPerpendicularBisectorOfLine(BO,CA)",
+      "Rhombus(BCTA)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
   "22530": {
     "problem_id": 22530,
     "added_cdl": [
-      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)",
+      "Rhombus(BCTA)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
@@ -2244,18 +2439,13 @@
   "22531": {
     "problem_id": 22531,
     "added_cdl": [
-      "IsPerpendicularBisectorOfLine(BO,CA)",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)",
+      "Parallelogram(BCTA)",
+      "Kite(BCTA)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
@@ -2264,17 +2454,14 @@
   "22532": {
     "problem_id": 22532,
     "added_cdl": [
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "IsMidpointOfLine(O,CA)",
+      "Kite(BCTA)",
       "IsMidpointOfLine(O,BT)",
+      "IsMidpointOfLine(O,CA)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -2284,17 +2471,15 @@
   "22533": {
     "problem_id": 22533,
     "added_cdl": [
+      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "IsMidpointOfLine(O,CA)",
-      "IsPerpendicularBisectorOfLine(TO,AC)",
       "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
@@ -2305,16 +2490,15 @@
   "22534": {
     "problem_id": 22534,
     "added_cdl": [
-      "IsPerpendicularBisectorOfLine(TO,AC)",
+      "IsPerpendicularBisectorOfLine(BO,CA)",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,CA)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
       "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
@@ -2326,16 +2510,14 @@
   "22535": {
     "problem_id": 22535,
     "added_cdl": [
-      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
+      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
+      "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "midpoint_of_line_judgment(1,O,CA)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
       "kite_judgment_equal_and_equal(1,BCTA)",
@@ -2348,15 +2530,14 @@
   "22536": {
     "problem_id": 22536,
     "added_cdl": [
+      "IsMidpointOfLine(O,CA)",
+      "IsPerpendicularBisectorOfLine(TO,AC)",
       "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "midpoint_of_line_judgment(1,O,CA)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
       "perpendicular_bisector_property_distance_equal(1,BO,CA)",
@@ -2370,14 +2551,13 @@
   "22537": {
     "problem_id": 22537,
     "added_cdl": [
+      "IsPerpendicularBisectorOfLine(TO,AC)",
+      "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,BT)",
-      "vertical_angle(1,COB,AOT)",
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "midpoint_of_line_judgment(1,O,CA)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
@@ -2391,13 +2571,14 @@
   },
   "22538": {
     "problem_id": 22538,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(BC))",
-    "problem_answer": "4",
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
+      "IsMidpointOfLine(O,BT)",
+      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
+    "problem_answer": "16",
     "theorem_seqs": [
-      "quadrilateral_perimeter_formula(1,BCTA)",
-      "midpoint_of_line_judgment(1,O,BT)",
-      "vertical_angle(1,COB,AOT)",
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
       "midpoint_of_line_judgment(1,O,CA)",
       "perpendicular_bisector_property_distance_equal(1,TO,AC)",
@@ -2413,187 +2594,6 @@
   "22539": {
     "problem_id": 22539,
     "added_cdl": [
-      "IsPerpendicularBisectorOfLine(BO,CA)",
-      "Rhombus(BCTA)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22540": {
-    "problem_id": 22540,
-    "added_cdl": [
-      "Rhombus(BCTA)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22541": {
-    "problem_id": 22541,
-    "added_cdl": [
-      "Parallelogram(BCTA)",
-      "Kite(BCTA)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22542": {
-    "problem_id": 22542,
-    "added_cdl": [
-      "Kite(BCTA)",
-      "IsMidpointOfLine(O,BT)",
-      "IsMidpointOfLine(O,CA)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22543": {
-    "problem_id": 22543,
-    "added_cdl": [
-      "Equal(LengthOfLine(BC),LengthOfLine(BA))",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22544": {
-    "problem_id": 22544,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(BO,CA)",
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22545": {
-    "problem_id": 22545,
-    "added_cdl": [
-      "Equal(LengthOfLine(TA),LengthOfLine(TC))",
-      "IsMidpointOfLine(O,CA)",
-      "IsMidpointOfLine(O,BT)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22546": {
-    "problem_id": 22546,
-    "added_cdl": [
-      "IsMidpointOfLine(O,CA)",
-      "IsPerpendicularBisectorOfLine(TO,AC)",
-      "IsMidpointOfLine(O,BT)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22547": {
-    "problem_id": 22547,
-    "added_cdl": [
-      "IsPerpendicularBisectorOfLine(TO,AC)",
-      "IsMidpointOfLine(O,BT)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "midpoint_of_line_judgment(1,O,CA)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22548": {
-    "problem_id": 22548,
-    "added_cdl": [
-      "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
-      "IsMidpointOfLine(O,BT)",
-      "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
-    ],
-    "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
-    "problem_answer": "16",
-    "theorem_seqs": [
-      "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)",
-      "midpoint_of_line_judgment(1,O,CA)",
-      "perpendicular_bisector_property_distance_equal(1,TO,AC)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)",
-      "kite_judgment_equal_and_equal(1,BCTA)",
-      "parallelogram_judgment_diagonal_bisection(1,BCTA,O)",
-      "rhombus_judgment_parallelogram_and_kite(1,BCTA)",
-      "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)",
-      "perpendicular_bisector_property_distance_equal(1,BO,CA)"
-    ]
-  },
-  "22549": {
-    "problem_id": 22549,
-    "added_cdl": [
       "IsMidpointOfLine(O,BT)",
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
@@ -2613,8 +2613,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22550": {
-    "problem_id": 22550,
+  "22540": {
+    "problem_id": 22540,
     "added_cdl": [
       "Equation(ll_ba+ll_bc+ll_ta+ll_tc-pq_bcta)"
     ],
@@ -2635,8 +2635,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22551": {
-    "problem_id": 22551,
+  "22541": {
+    "problem_id": 22541,
     "added_cdl": [],
     "goal_cdl": "Value(PerimeterOfQuadrilateral(BCTA))",
     "problem_answer": "16",
@@ -2656,8 +2656,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22552": {
-    "problem_id": 22552,
+  "22542": {
+    "problem_id": 22542,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(AOT))",
     "problem_answer": "90",
@@ -2665,8 +2665,8 @@
       "vertical_angle(1,COB,AOT)"
     ]
   },
-  "22553": {
-    "problem_id": 22553,
+  "22543": {
+    "problem_id": 22543,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(BOA))",
     "problem_answer": "90",
@@ -2674,8 +2674,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,BO,CA)"
     ]
   },
-  "22554": {
-    "problem_id": 22554,
+  "22544": {
+    "problem_id": 22544,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))"
     ],
@@ -2685,8 +2685,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22555": {
-    "problem_id": 22555,
+  "22545": {
+    "problem_id": 22545,
     "added_cdl": [],
     "goal_cdl": "Value(MeasureOfAngle(TOC))",
     "problem_answer": "90",
@@ -2695,8 +2695,8 @@
       "perpendicular_bisector_judgment_per_and_mid(1,TO,AC)"
     ]
   },
-  "22556": {
-    "problem_id": 22556,
+  "22546": {
+    "problem_id": 22546,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)"
     ],
@@ -2706,8 +2706,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22557": {
-    "problem_id": 22557,
+  "22547": {
+    "problem_id": 22547,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(BA))",
     "problem_answer": "4",
@@ -2716,8 +2716,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22558": {
-    "problem_id": 22558,
+  "22548": {
+    "problem_id": 22548,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)",
       "Rhombus(BCTA)"
@@ -2728,8 +2728,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22559": {
-    "problem_id": 22559,
+  "22549": {
+    "problem_id": 22549,
     "added_cdl": [
       "Rhombus(BCTA)"
     ],
@@ -2740,8 +2740,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22560": {
-    "problem_id": 22560,
+  "22550": {
+    "problem_id": 22550,
     "added_cdl": [
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
@@ -2754,8 +2754,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22561": {
-    "problem_id": 22561,
+  "22551": {
+    "problem_id": 22551,
     "added_cdl": [
       "Equal(LengthOfLine(BC),LengthOfLine(BA))",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -2770,8 +2770,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22562": {
-    "problem_id": 22562,
+  "22552": {
+    "problem_id": 22552,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -2787,8 +2787,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22563": {
-    "problem_id": 22563,
+  "22553": {
+    "problem_id": 22553,
     "added_cdl": [
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
@@ -2804,8 +2804,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22564": {
-    "problem_id": 22564,
+  "22554": {
+    "problem_id": 22554,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
@@ -2822,8 +2822,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22565": {
-    "problem_id": 22565,
+  "22555": {
+    "problem_id": 22555,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
@@ -2841,8 +2841,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22566": {
-    "problem_id": 22566,
+  "22556": {
+    "problem_id": 22556,
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
@@ -2860,8 +2860,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22567": {
-    "problem_id": 22567,
+  "22557": {
+    "problem_id": 22557,
     "added_cdl": [
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
@@ -2881,8 +2881,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22568": {
-    "problem_id": 22568,
+  "22558": {
+    "problem_id": 22558,
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
@@ -2902,8 +2902,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22569": {
-    "problem_id": 22569,
+  "22559": {
+    "problem_id": 22559,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(TA))",
     "problem_answer": "4",
@@ -2922,8 +2922,8 @@
       "perpendicular_bisector_property_distance_equal(1,BO,CA)"
     ]
   },
-  "22570": {
-    "problem_id": 22570,
+  "22560": {
+    "problem_id": 22560,
     "added_cdl": [
       "Kite(BCTA)",
       "Parallelogram(BCTA)"
@@ -2934,8 +2934,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22571": {
-    "problem_id": 22571,
+  "22561": {
+    "problem_id": 22561,
     "added_cdl": [
       "Equal(LengthOfLine(BC),LengthOfLine(BA))",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -2948,8 +2948,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22572": {
-    "problem_id": 22572,
+  "22562": {
+    "problem_id": 22562,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(BO,CA)",
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
@@ -2963,8 +2963,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22573": {
-    "problem_id": 22573,
+  "22563": {
+    "problem_id": 22563,
     "added_cdl": [
       "Equal(LengthOfLine(TA),LengthOfLine(TC))",
       "Parallelogram(BCTA)"
@@ -2978,8 +2978,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22574": {
-    "problem_id": 22574,
+  "22564": {
+    "problem_id": 22564,
     "added_cdl": [
       "IsPerpendicularBisectorOfLine(TO,AC)",
       "Parallelogram(BCTA)"
@@ -2994,8 +2994,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22575": {
-    "problem_id": 22575,
+  "22565": {
+    "problem_id": 22565,
     "added_cdl": [
       "Equal(MeasureOfAngle(COB),MeasureOfAngle(AOT))",
       "Parallelogram(BCTA)"
@@ -3011,8 +3011,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22576": {
-    "problem_id": 22576,
+  "22566": {
+    "problem_id": 22566,
     "added_cdl": [
       "Parallelogram(BCTA)"
     ],
@@ -3028,8 +3028,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22577": {
-    "problem_id": 22577,
+  "22567": {
+    "problem_id": 22567,
     "added_cdl": [
       "IsMidpointOfLine(O,CA)",
       "IsMidpointOfLine(O,BT)"
@@ -3047,8 +3047,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22578": {
-    "problem_id": 22578,
+  "22568": {
+    "problem_id": 22568,
     "added_cdl": [
       "IsMidpointOfLine(O,BT)"
     ],
@@ -3066,8 +3066,8 @@
       "rhombus_judgment_parallelogram_and_kite(1,BCTA)"
     ]
   },
-  "22579": {
-    "problem_id": 22579,
+  "22569": {
+    "problem_id": 22569,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(TC))",
     "problem_answer": "4",

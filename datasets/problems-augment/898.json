@@ -1,6 +1,6 @@
 {
-  "25928": {
-    "problem_id": 25928,
+  "25918": {
+    "problem_id": 25918,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMedianOfTriangle(KP,KMH))",
     "problem_answer": "IsMedianOfTriangle(KP,KMH)",
@@ -8,13 +8,129 @@
       "median_of_triangle_judgment(1,KP,KMH)"
     ]
   },
-  "25929": {
-    "problem_id": 25929,
+  "25919": {
+    "problem_id": 25919,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMedianOfTriangle(HL,HKM))",
     "problem_answer": "IsMedianOfTriangle(HL,HKM)",
     "theorem_seqs": [
       "median_of_triangle_judgment(1,HL,HKM)"
+    ]
+  },
+  "25920": {
+    "problem_id": 25920,
+    "added_cdl": [
+      "IsMedianOfTriangle(KP,KMH)",
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,MHK))",
+    "problem_answer": "IsCentroidOfTriangle(Q,MHK)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25921": {
+    "problem_id": 25921,
+    "added_cdl": [
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,MHK))",
+    "problem_answer": "IsCentroidOfTriangle(Q,MHK)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25922": {
+    "problem_id": 25922,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,MHK))",
+    "problem_answer": "IsCentroidOfTriangle(Q,MHK)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,HL,HKM)",
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25923": {
+    "problem_id": 25923,
+    "added_cdl": [
+      "IsMedianOfTriangle(KP,KMH)",
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,HKM))",
+    "problem_answer": "IsCentroidOfTriangle(Q,HKM)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25924": {
+    "problem_id": 25924,
+    "added_cdl": [
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,HKM))",
+    "problem_answer": "IsCentroidOfTriangle(Q,HKM)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25925": {
+    "problem_id": 25925,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,HKM))",
+    "problem_answer": "IsCentroidOfTriangle(Q,HKM)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,HL,HKM)",
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25926": {
+    "problem_id": 25926,
+    "added_cdl": [
+      "IsMedianOfTriangle(KP,KMH)",
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,KMH))",
+    "problem_answer": "IsCentroidOfTriangle(Q,KMH)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25927": {
+    "problem_id": 25927,
+    "added_cdl": [
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,KMH))",
+    "problem_answer": "IsCentroidOfTriangle(Q,KMH)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25928": {
+    "problem_id": 25928,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,KMH))",
+    "problem_answer": "IsCentroidOfTriangle(Q,KMH)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,HL,HKM)",
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+    ]
+  },
+  "25929": {
+    "problem_id": 25929,
+    "added_cdl": [
+      "IsCentroidOfTriangle(Q,MHK)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(HQ))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25930": {
@@ -23,10 +139,11 @@
       "IsMedianOfTriangle(KP,KMH)",
       "IsMedianOfTriangle(HL,HKM)"
     ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,MHK))",
-    "problem_answer": "IsCentroidOfTriangle(Q,MHK)",
+    "goal_cdl": "Value(LengthOfLine(HQ))",
+    "problem_answer": "6",
     "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25931": {
@@ -34,114 +151,120 @@
     "added_cdl": [
       "IsMedianOfTriangle(HL,HKM)"
     ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,MHK))",
-    "problem_answer": "IsCentroidOfTriangle(Q,MHK)",
+    "goal_cdl": "Value(LengthOfLine(HQ))",
+    "problem_answer": "6",
     "theorem_seqs": [
       "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25932": {
     "problem_id": 25932,
     "added_cdl": [],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,MHK))",
-    "problem_answer": "IsCentroidOfTriangle(Q,MHK)",
+    "goal_cdl": "Value(LengthOfLine(HQ))",
+    "problem_answer": "6",
     "theorem_seqs": [
       "median_of_triangle_judgment(1,HL,HKM)",
       "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25933": {
     "problem_id": 25933,
     "added_cdl": [
-      "IsMedianOfTriangle(KP,KMH)",
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,HKM))",
-    "problem_answer": "IsCentroidOfTriangle(Q,HKM)",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
-    ]
-  },
-  "25934": {
-    "problem_id": 25934,
-    "added_cdl": [
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,HKM))",
-    "problem_answer": "IsCentroidOfTriangle(Q,HKM)",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
-    ]
-  },
-  "25935": {
-    "problem_id": 25935,
-    "added_cdl": [],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,HKM))",
-    "problem_answer": "IsCentroidOfTriangle(Q,HKM)",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,HL,HKM)",
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
-    ]
-  },
-  "25936": {
-    "problem_id": 25936,
-    "added_cdl": [
-      "IsMedianOfTriangle(KP,KMH)",
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,KMH))",
-    "problem_answer": "IsCentroidOfTriangle(Q,KMH)",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
-    ]
-  },
-  "25937": {
-    "problem_id": 25937,
-    "added_cdl": [
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,KMH))",
-    "problem_answer": "IsCentroidOfTriangle(Q,KMH)",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
-    ]
-  },
-  "25938": {
-    "problem_id": 25938,
-    "added_cdl": [],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(Q,KMH))",
-    "problem_answer": "IsCentroidOfTriangle(Q,KMH)",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,HL,HKM)",
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)"
-    ]
-  },
-  "25939": {
-    "problem_id": 25939,
-    "added_cdl": [
       "IsCentroidOfTriangle(Q,MHK)"
     ],
-    "goal_cdl": "Value(LengthOfLine(HQ))",
+    "goal_cdl": "Value(y)",
     "problem_answer": "6",
     "theorem_seqs": [
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
-  "25940": {
-    "problem_id": 25940,
+  "25934": {
+    "problem_id": 25934,
     "added_cdl": [
       "IsMedianOfTriangle(KP,KMH)",
       "IsMedianOfTriangle(HL,HKM)"
     ],
-    "goal_cdl": "Value(LengthOfLine(HQ))",
+    "goal_cdl": "Value(y)",
     "problem_answer": "6",
     "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
+    ]
+  },
+  "25935": {
+    "problem_id": 25935,
+    "added_cdl": [
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
+    ]
+  },
+  "25936": {
+    "problem_id": 25936,
+    "added_cdl": [],
+    "goal_cdl": "Value(y)",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,HL,HKM)",
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
+    ]
+  },
+  "25937": {
+    "problem_id": 25937,
+    "added_cdl": [
+      "IsCentroidOfTriangle(Q,MHK)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(KQ))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
+    ]
+  },
+  "25938": {
+    "problem_id": 25938,
+    "added_cdl": [
+      "IsMedianOfTriangle(KP,KMH)",
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(KQ))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
+    ]
+  },
+  "25939": {
+    "problem_id": 25939,
+    "added_cdl": [
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(KQ))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
+      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
+    ]
+  },
+  "25940": {
+    "problem_id": 25940,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(KQ))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,HL,HKM)",
+      "median_of_triangle_judgment(1,KP,KMH)",
       "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
@@ -149,24 +272,23 @@
   "25941": {
     "problem_id": 25941,
     "added_cdl": [
-      "IsMedianOfTriangle(HL,HKM)"
+      "IsCentroidOfTriangle(Q,MHK)"
     ],
-    "goal_cdl": "Value(LengthOfLine(HQ))",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(LQ))",
+    "problem_answer": "3",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25942": {
     "problem_id": 25942,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(HQ))",
-    "problem_answer": "6",
+    "added_cdl": [
+      "IsMedianOfTriangle(KP,KMH)",
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(LQ))",
+    "problem_answer": "3",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,HL,HKM)",
-      "median_of_triangle_judgment(1,KP,KMH)",
       "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
@@ -174,23 +296,24 @@
   "25943": {
     "problem_id": 25943,
     "added_cdl": [
-      "IsCentroidOfTriangle(Q,MHK)"
+      "IsMedianOfTriangle(HL,HKM)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(LQ))",
+    "problem_answer": "3",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25944": {
     "problem_id": 25944,
-    "added_cdl": [
-      "IsMedianOfTriangle(KP,KMH)",
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "6",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(LQ))",
+    "problem_answer": "3",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,HL,HKM)",
+      "median_of_triangle_judgment(1,KP,KMH)",
       "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
@@ -198,24 +321,23 @@
   "25945": {
     "problem_id": 25945,
     "added_cdl": [
-      "IsMedianOfTriangle(HL,HKM)"
+      "IsCentroidOfTriangle(Q,MHK)"
     ],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(QM))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25946": {
     "problem_id": 25946,
-    "added_cdl": [],
-    "goal_cdl": "Value(y)",
-    "problem_answer": "6",
+    "added_cdl": [
+      "IsMedianOfTriangle(KP,KMH)",
+      "IsMedianOfTriangle(HL,HKM)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(QM))",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,HL,HKM)",
-      "median_of_triangle_judgment(1,KP,KMH)",
       "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
@@ -223,140 +345,18 @@
   "25947": {
     "problem_id": 25947,
     "added_cdl": [
-      "IsCentroidOfTriangle(Q,MHK)"
+      "IsMedianOfTriangle(HL,HKM)"
     ],
-    "goal_cdl": "Value(LengthOfLine(KQ))",
-    "problem_answer": "7",
+    "goal_cdl": "Value(LengthOfLine(QM))",
+    "problem_answer": "4",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,KP,KMH)",
+      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
       "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
     ]
   },
   "25948": {
     "problem_id": 25948,
-    "added_cdl": [
-      "IsMedianOfTriangle(KP,KMH)",
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(KQ))",
-    "problem_answer": "7",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25949": {
-    "problem_id": 25949,
-    "added_cdl": [
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(KQ))",
-    "problem_answer": "7",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25950": {
-    "problem_id": 25950,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(KQ))",
-    "problem_answer": "7",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,HL,HKM)",
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25951": {
-    "problem_id": 25951,
-    "added_cdl": [
-      "IsCentroidOfTriangle(Q,MHK)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(LQ))",
-    "problem_answer": "3",
-    "theorem_seqs": [
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25952": {
-    "problem_id": 25952,
-    "added_cdl": [
-      "IsMedianOfTriangle(KP,KMH)",
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(LQ))",
-    "problem_answer": "3",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25953": {
-    "problem_id": 25953,
-    "added_cdl": [
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(LQ))",
-    "problem_answer": "3",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25954": {
-    "problem_id": 25954,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(LQ))",
-    "problem_answer": "3",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,HL,HKM)",
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25955": {
-    "problem_id": 25955,
-    "added_cdl": [
-      "IsCentroidOfTriangle(Q,MHK)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(QM))",
-    "problem_answer": "4",
-    "theorem_seqs": [
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25956": {
-    "problem_id": 25956,
-    "added_cdl": [
-      "IsMedianOfTriangle(KP,KMH)",
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(QM))",
-    "problem_answer": "4",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25957": {
-    "problem_id": 25957,
-    "added_cdl": [
-      "IsMedianOfTriangle(HL,HKM)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(QM))",
-    "problem_answer": "4",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,KP,KMH)",
-      "centroid_of_triangle_judgment_intersection(1,Q,MHK,P,L)",
-      "centroid_of_triangle_property_line_ratio(1,Q,HKM,L)"
-    ]
-  },
-  "25958": {
-    "problem_id": 25958,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(QM))",
     "problem_answer": "4",

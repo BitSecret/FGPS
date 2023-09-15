@@ -1,6 +1,6 @@
 {
-  "25387": {
-    "problem_id": 25387,
+  "25377": {
+    "problem_id": 25377,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMedianOfTriangle(DT,DFE))",
     "problem_answer": "IsMedianOfTriangle(DT,DFE)",
@@ -8,13 +8,129 @@
       "median_of_triangle_judgment(1,DT,DFE)"
     ]
   },
-  "25388": {
-    "problem_id": 25388,
+  "25378": {
+    "problem_id": 25378,
     "added_cdl": [],
     "goal_cdl": "Relation(IsMedianOfTriangle(EU,EDF))",
     "problem_answer": "IsMedianOfTriangle(EU,EDF)",
     "theorem_seqs": [
       "median_of_triangle_judgment(1,EU,EDF)"
+    ]
+  },
+  "25379": {
+    "problem_id": 25379,
+    "added_cdl": [
+      "IsMedianOfTriangle(DT,DFE)",
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,FED))",
+    "problem_answer": "IsCentroidOfTriangle(A,FED)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25380": {
+    "problem_id": 25380,
+    "added_cdl": [
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,FED))",
+    "problem_answer": "IsCentroidOfTriangle(A,FED)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25381": {
+    "problem_id": 25381,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,FED))",
+    "problem_answer": "IsCentroidOfTriangle(A,FED)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,EU,EDF)",
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25382": {
+    "problem_id": 25382,
+    "added_cdl": [
+      "IsMedianOfTriangle(DT,DFE)",
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,EDF))",
+    "problem_answer": "IsCentroidOfTriangle(A,EDF)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25383": {
+    "problem_id": 25383,
+    "added_cdl": [
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,EDF))",
+    "problem_answer": "IsCentroidOfTriangle(A,EDF)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25384": {
+    "problem_id": 25384,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,EDF))",
+    "problem_answer": "IsCentroidOfTriangle(A,EDF)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,EU,EDF)",
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25385": {
+    "problem_id": 25385,
+    "added_cdl": [
+      "IsMedianOfTriangle(DT,DFE)",
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,DFE))",
+    "problem_answer": "IsCentroidOfTriangle(A,DFE)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25386": {
+    "problem_id": 25386,
+    "added_cdl": [
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,DFE))",
+    "problem_answer": "IsCentroidOfTriangle(A,DFE)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25387": {
+    "problem_id": 25387,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(A,DFE))",
+    "problem_answer": "IsCentroidOfTriangle(A,DFE)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,EU,EDF)",
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+    ]
+  },
+  "25388": {
+    "problem_id": 25388,
+    "added_cdl": [
+      "IsCentroidOfTriangle(A,FED)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25389": {
@@ -23,10 +139,11 @@
       "IsMedianOfTriangle(DT,DFE)",
       "IsMedianOfTriangle(EU,EDF)"
     ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,FED))",
-    "problem_answer": "IsCentroidOfTriangle(A,FED)",
+    "goal_cdl": "Value(LengthOfLine(AT))",
+    "problem_answer": "3",
     "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25390": {
@@ -34,114 +151,120 @@
     "added_cdl": [
       "IsMedianOfTriangle(EU,EDF)"
     ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,FED))",
-    "problem_answer": "IsCentroidOfTriangle(A,FED)",
+    "goal_cdl": "Value(LengthOfLine(AT))",
+    "problem_answer": "3",
     "theorem_seqs": [
       "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25391": {
     "problem_id": 25391,
     "added_cdl": [],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,FED))",
-    "problem_answer": "IsCentroidOfTriangle(A,FED)",
+    "goal_cdl": "Value(LengthOfLine(AT))",
+    "problem_answer": "3",
     "theorem_seqs": [
       "median_of_triangle_judgment(1,EU,EDF)",
       "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25392": {
     "problem_id": 25392,
     "added_cdl": [
-      "IsMedianOfTriangle(DT,DFE)",
-      "IsMedianOfTriangle(EU,EDF)"
+      "IsCentroidOfTriangle(A,FED)"
     ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,EDF))",
-    "problem_answer": "IsCentroidOfTriangle(A,EDF)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25393": {
     "problem_id": 25393,
     "added_cdl": [
+      "IsMedianOfTriangle(DT,DFE)",
       "IsMedianOfTriangle(EU,EDF)"
     ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,EDF))",
-    "problem_answer": "IsCentroidOfTriangle(A,EDF)",
+    "goal_cdl": "Value(x)",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25394": {
     "problem_id": 25394,
-    "added_cdl": [],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,EDF))",
-    "problem_answer": "IsCentroidOfTriangle(A,EDF)",
+    "added_cdl": [
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,EU,EDF)",
       "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25395": {
     "problem_id": 25395,
-    "added_cdl": [
-      "IsMedianOfTriangle(DT,DFE)",
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,DFE))",
-    "problem_answer": "IsCentroidOfTriangle(A,DFE)",
+    "added_cdl": [],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "4",
     "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "median_of_triangle_judgment(1,EU,EDF)",
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25396": {
     "problem_id": 25396,
     "added_cdl": [
-      "IsMedianOfTriangle(EU,EDF)"
+      "IsCentroidOfTriangle(A,FED)"
     ],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,DFE))",
-    "problem_answer": "IsCentroidOfTriangle(A,DFE)",
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "6",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25397": {
     "problem_id": 25397,
-    "added_cdl": [],
-    "goal_cdl": "Relation(IsCentroidOfTriangle(A,DFE))",
-    "problem_answer": "IsCentroidOfTriangle(A,DFE)",
+    "added_cdl": [
+      "IsMedianOfTriangle(DT,DFE)",
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "6",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,EU,EDF)",
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)"
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
+      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25398": {
     "problem_id": 25398,
     "added_cdl": [
-      "IsCentroidOfTriangle(A,FED)"
+      "IsMedianOfTriangle(EU,EDF)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AT))",
-    "problem_answer": "3",
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "6",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25399": {
     "problem_id": 25399,
-    "added_cdl": [
-      "IsMedianOfTriangle(DT,DFE)",
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AT))",
-    "problem_answer": "3",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "6",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,EU,EDF)",
+      "median_of_triangle_judgment(1,DT,DFE)",
       "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
@@ -149,24 +272,23 @@
   "25400": {
     "problem_id": 25400,
     "added_cdl": [
-      "IsMedianOfTriangle(EU,EDF)"
+      "IsCentroidOfTriangle(A,FED)"
     ],
-    "goal_cdl": "Value(LengthOfLine(AT))",
-    "problem_answer": "3",
+    "goal_cdl": "Value(LengthOfLine(FA))",
+    "problem_answer": "4.60000000000000",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25401": {
     "problem_id": 25401,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(AT))",
-    "problem_answer": "3",
+    "added_cdl": [
+      "IsMedianOfTriangle(DT,DFE)",
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(FA))",
+    "problem_answer": "4.60000000000000",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,EU,EDF)",
-      "median_of_triangle_judgment(1,DT,DFE)",
       "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
@@ -174,23 +296,24 @@
   "25402": {
     "problem_id": 25402,
     "added_cdl": [
-      "IsCentroidOfTriangle(A,FED)"
+      "IsMedianOfTriangle(EU,EDF)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "4",
+    "goal_cdl": "Value(LengthOfLine(FA))",
+    "problem_answer": "4.60000000000000",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25403": {
     "problem_id": 25403,
-    "added_cdl": [
-      "IsMedianOfTriangle(DT,DFE)",
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "4",
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(FA))",
+    "problem_answer": "4.60000000000000",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,EU,EDF)",
+      "median_of_triangle_judgment(1,DT,DFE)",
       "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
@@ -198,24 +321,23 @@
   "25404": {
     "problem_id": 25404,
     "added_cdl": [
-      "IsMedianOfTriangle(EU,EDF)"
+      "IsCentroidOfTriangle(A,FED)"
     ],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "4",
+    "goal_cdl": "Value(LengthOfLine(AU))",
+    "problem_answer": "2.90000000000000",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25405": {
     "problem_id": 25405,
-    "added_cdl": [],
-    "goal_cdl": "Value(x)",
-    "problem_answer": "4",
+    "added_cdl": [
+      "IsMedianOfTriangle(DT,DFE)",
+      "IsMedianOfTriangle(EU,EDF)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AU))",
+    "problem_answer": "2.90000000000000",
     "theorem_seqs": [
-      "median_of_triangle_judgment(1,EU,EDF)",
-      "median_of_triangle_judgment(1,DT,DFE)",
       "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
@@ -223,140 +345,18 @@
   "25406": {
     "problem_id": 25406,
     "added_cdl": [
-      "IsCentroidOfTriangle(A,FED)"
+      "IsMedianOfTriangle(EU,EDF)"
     ],
-    "goal_cdl": "Value(LengthOfLine(DA))",
-    "problem_answer": "6",
+    "goal_cdl": "Value(LengthOfLine(AU))",
+    "problem_answer": "2.90000000000000",
     "theorem_seqs": [
+      "median_of_triangle_judgment(1,DT,DFE)",
+      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
       "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
     ]
   },
   "25407": {
     "problem_id": 25407,
-    "added_cdl": [
-      "IsMedianOfTriangle(DT,DFE)",
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DA))",
-    "problem_answer": "6",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25408": {
-    "problem_id": 25408,
-    "added_cdl": [
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(DA))",
-    "problem_answer": "6",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25409": {
-    "problem_id": 25409,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(DA))",
-    "problem_answer": "6",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,EU,EDF)",
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25410": {
-    "problem_id": 25410,
-    "added_cdl": [
-      "IsCentroidOfTriangle(A,FED)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(FA))",
-    "problem_answer": "4.60000000000000",
-    "theorem_seqs": [
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25411": {
-    "problem_id": 25411,
-    "added_cdl": [
-      "IsMedianOfTriangle(DT,DFE)",
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(FA))",
-    "problem_answer": "4.60000000000000",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25412": {
-    "problem_id": 25412,
-    "added_cdl": [
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(FA))",
-    "problem_answer": "4.60000000000000",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25413": {
-    "problem_id": 25413,
-    "added_cdl": [],
-    "goal_cdl": "Value(LengthOfLine(FA))",
-    "problem_answer": "4.60000000000000",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,EU,EDF)",
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25414": {
-    "problem_id": 25414,
-    "added_cdl": [
-      "IsCentroidOfTriangle(A,FED)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AU))",
-    "problem_answer": "2.90000000000000",
-    "theorem_seqs": [
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25415": {
-    "problem_id": 25415,
-    "added_cdl": [
-      "IsMedianOfTriangle(DT,DFE)",
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AU))",
-    "problem_answer": "2.90000000000000",
-    "theorem_seqs": [
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25416": {
-    "problem_id": 25416,
-    "added_cdl": [
-      "IsMedianOfTriangle(EU,EDF)"
-    ],
-    "goal_cdl": "Value(LengthOfLine(AU))",
-    "problem_answer": "2.90000000000000",
-    "theorem_seqs": [
-      "median_of_triangle_judgment(1,DT,DFE)",
-      "centroid_of_triangle_judgment_intersection(1,A,FED,T,U)",
-      "centroid_of_triangle_property_line_ratio(1,A,DFE,T)"
-    ]
-  },
-  "25417": {
-    "problem_id": 25417,
     "added_cdl": [],
     "goal_cdl": "Value(LengthOfLine(AU))",
     "problem_answer": "2.90000000000000",
