@@ -93,9 +93,21 @@ def check_augment(auto=False, start_pid=1, end_pid=6981, show_solved=True):
         print("raw_pid\tpid\tcorrect_answer\tsolved\tsolved_answer\ttiming(s)")
 
         for raw_pid in range(start_pid, end_pid + 1):
-            filename = "{}.json".format(raw_pid)
-            raw_problem = load_json(path_problems + filename)
-            augment_data = load_json(path_problems_augment + filename)
+            try:
+                filename = "{}.json".format(raw_pid)
+                raw_problem = load_json(path_problems + filename)
+                timing = time.time()
+                solver.load_problem(raw_problem)
+                for t_name, t_branch, t_para in CDLParser.parse_theorem_seqs(raw_problem["theorem_seqs"]):
+                    solver.apply_theorem(t_name, t_branch, t_para)
+                solver.problem.check_goal()  # check goal after applied theorem seqs
+                simple_show(raw_pid, solver.problem.goal.answer, solver.problem.goal.solved,
+                            solver.problem.goal.solved_answer, time.time() - timing, raw_pid)  # show solved msg
+                augment_data = load_json(path_problems_augment + filename)
+            except BaseException as e:
+                error_problems.append((raw_pid, raw_pid, repr(e)))
+                continue
+
             for pid in augment_data:
                 timing = time.time()
                 try:  # try solve

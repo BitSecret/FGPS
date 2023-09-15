@@ -1,0 +1,725 @@
+{
+  "24134": {
+    "problem_id": 24134,
+    "added_cdl": [],
+    "goal_cdl": "Relation(MirrorSimilarBetweenTriangle(SRT,QSR))",
+    "problem_answer": "MirrorSimilarBetweenTriangle(SRT,QSR)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)"
+    ]
+  },
+  "24135": {
+    "problem_id": 24135,
+    "added_cdl": [],
+    "goal_cdl": "Relation(MirrorSimilarBetweenTriangle(RTS,RQS))",
+    "problem_answer": "MirrorSimilarBetweenTriangle(RTS,RQS)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)"
+    ]
+  },
+  "24136": {
+    "problem_id": 24136,
+    "added_cdl": [],
+    "goal_cdl": "Relation(MirrorSimilarBetweenTriangle(TSR,SRQ))",
+    "problem_answer": "MirrorSimilarBetweenTriangle(TSR,SRQ)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)"
+    ]
+  },
+  "24137": {
+    "problem_id": 24137,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsAltitudeOfTriangle(ST,SRQ))",
+    "problem_answer": "IsAltitudeOfTriangle(ST,SRQ)",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24138": {
+    "problem_id": 24138,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(ST),HeightOfTriangle(SRQ))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24139": {
+    "problem_id": 24139,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(ST,QT))",
+    "problem_answer": "PerpendicularBetweenLine(ST,QT)",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24140": {
+    "problem_id": 24140,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(RTS))",
+    "problem_answer": "RightTriangle(RTS)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,RTS)"
+    ]
+  },
+  "24141": {
+    "problem_id": 24141,
+    "added_cdl": [
+      "Equation(-ll_rs**2+ll_rt**2+ll_st**2)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(QT))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24142": {
+    "problem_id": 24142,
+    "added_cdl": [
+      "RightTriangle(RTS)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(QT))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24143": {
+    "problem_id": 24143,
+    "added_cdl": [
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(QT))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24144": {
+    "problem_id": 24144,
+    "added_cdl": [
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(QT))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24145": {
+    "problem_id": 24145,
+    "added_cdl": [
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(QT))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24146": {
+    "problem_id": 24146,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(QT))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24147": {
+    "problem_id": 24147,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(QT))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)",
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24148": {
+    "problem_id": 24148,
+    "added_cdl": [
+      "Equation(-ll_rs**2+ll_rt**2+ll_st**2)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RT))",
+    "problem_answer": "34",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24149": {
+    "problem_id": 24149,
+    "added_cdl": [
+      "RightTriangle(RTS)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RT))",
+    "problem_answer": "34",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24150": {
+    "problem_id": 24150,
+    "added_cdl": [
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RT))",
+    "problem_answer": "34",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24151": {
+    "problem_id": 24151,
+    "added_cdl": [
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RT))",
+    "problem_answer": "34",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24152": {
+    "problem_id": 24152,
+    "added_cdl": [
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RT))",
+    "problem_answer": "34",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24153": {
+    "problem_id": 24153,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RT))",
+    "problem_answer": "34",
+    "theorem_seqs": [
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24154": {
+    "problem_id": 24154,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(RT))",
+    "problem_answer": "34",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)",
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24155": {
+    "problem_id": 24155,
+    "added_cdl": [
+      "Equation(-ll_rs**2+ll_rt**2+ll_st**2)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(HeightOfTriangle(SRQ))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24156": {
+    "problem_id": 24156,
+    "added_cdl": [
+      "RightTriangle(RTS)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(HeightOfTriangle(SRQ))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24157": {
+    "problem_id": 24157,
+    "added_cdl": [
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(HeightOfTriangle(SRQ))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24158": {
+    "problem_id": 24158,
+    "added_cdl": [
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(HeightOfTriangle(SRQ))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24159": {
+    "problem_id": 24159,
+    "added_cdl": [
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(HeightOfTriangle(SRQ))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24160": {
+    "problem_id": 24160,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(HeightOfTriangle(SRQ))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24161": {
+    "problem_id": 24161,
+    "added_cdl": [],
+    "goal_cdl": "Value(HeightOfTriangle(SRQ))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)",
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24162": {
+    "problem_id": 24162,
+    "added_cdl": [
+      "Equation(-ll_rs**2+ll_rt**2+ll_st**2)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ST))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24163": {
+    "problem_id": 24163,
+    "added_cdl": [
+      "RightTriangle(RTS)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ST))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24164": {
+    "problem_id": 24164,
+    "added_cdl": [
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ST))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24165": {
+    "problem_id": 24165,
+    "added_cdl": [
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ST))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24166": {
+    "problem_id": 24166,
+    "added_cdl": [
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ST))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24167": {
+    "problem_id": 24167,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ST))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24168": {
+    "problem_id": 24168,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(ST))",
+    "problem_answer": "6*sqrt(17)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)",
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24169": {
+    "problem_id": 24169,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(STQ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24170": {
+    "problem_id": 24170,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(QR))",
+    "problem_answer": "52",
+    "theorem_seqs": [
+      "line_addition(1,QT,TR)"
+    ]
+  },
+  "24171": {
+    "problem_id": 24171,
+    "added_cdl": [
+      "Equation(-ll_rs**2+ll_rt**2+ll_st**2)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RS))",
+    "problem_answer": "2*sqrt(442)",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24172": {
+    "problem_id": 24172,
+    "added_cdl": [
+      "RightTriangle(RTS)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RS))",
+    "problem_answer": "2*sqrt(442)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24173": {
+    "problem_id": 24173,
+    "added_cdl": [
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RS))",
+    "problem_answer": "2*sqrt(442)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24174": {
+    "problem_id": 24174,
+    "added_cdl": [
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RS))",
+    "problem_answer": "2*sqrt(442)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24175": {
+    "problem_id": 24175,
+    "added_cdl": [
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RS))",
+    "problem_answer": "2*sqrt(442)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24176": {
+    "problem_id": 24176,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(RS))",
+    "problem_answer": "2*sqrt(442)",
+    "theorem_seqs": [
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24177": {
+    "problem_id": 24177,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(RS))",
+    "problem_answer": "2*sqrt(442)",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)",
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24178": {
+    "problem_id": 24178,
+    "added_cdl": [
+      "Equation(-ll_rs**2+ll_rt**2+ll_st**2)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(SRTQSR))",
+    "problem_answer": "sqrt(442)/26",
+    "theorem_seqs": [
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24179": {
+    "problem_id": 24179,
+    "added_cdl": [
+      "RightTriangle(RTS)",
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(SRTQSR))",
+    "problem_answer": "sqrt(442)/26",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24180": {
+    "problem_id": 24180,
+    "added_cdl": [
+      "Equation(-ll_rs*rmt_srtqsr+ll_rt)",
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)"
+    ],
+    "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(SRTQSR))",
+    "problem_answer": "sqrt(442)/26",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24181": {
+    "problem_id": 24181,
+    "added_cdl": [
+      "Equation(-ll_qr*rmt_srtqsr+ll_rs)",
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(SRTQSR))",
+    "problem_answer": "sqrt(442)/26",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24182": {
+    "problem_id": 24182,
+    "added_cdl": [
+      "Equation(ll_qr-ll_qt-ll_rt)",
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(SRTQSR))",
+    "problem_answer": "sqrt(442)/26",
+    "theorem_seqs": [
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24183": {
+    "problem_id": 24183,
+    "added_cdl": [
+      "MirrorSimilarBetweenTriangle(SRT,QSR)"
+    ],
+    "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(SRTQSR))",
+    "problem_answer": "sqrt(442)/26",
+    "theorem_seqs": [
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  },
+  "24184": {
+    "problem_id": 24184,
+    "added_cdl": [],
+    "goal_cdl": "Value(RatioOfMirrorSimilarTriangle(SRTQSR))",
+    "problem_answer": "sqrt(442)/26",
+    "theorem_seqs": [
+      "mirror_similar_triangle_judgment_aa(1,SRT,QSR)",
+      "line_addition(1,QT,TR)",
+      "mirror_similar_triangle_property_line_ratio(1,TSR,SRQ)",
+      "mirror_similar_triangle_property_line_ratio(1,SRT,QSR)",
+      "right_triangle_judgment_angle(1,RTS)",
+      "right_triangle_property_pythagorean(1,RTS)",
+      "altitude_of_triangle_judgment(1,ST,SRQ)"
+    ]
+  }
+}

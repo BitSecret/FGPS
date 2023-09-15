@@ -1,0 +1,783 @@
+{
+  "99701": {
+    "problem_id": 99701,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(CDB))",
+    "problem_answer": "RightTriangle(CDB)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)"
+    ]
+  },
+  "99702": {
+    "problem_id": 99702,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(CD,BD))",
+    "problem_answer": "PerpendicularBetweenLine(CD,BD)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)"
+    ]
+  },
+  "99703": {
+    "problem_id": 99703,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(BCA))",
+    "problem_answer": "RightTriangle(BCA)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  },
+  "99704": {
+    "problem_id": 99704,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(BC,AC))",
+    "problem_answer": "PerpendicularBetweenLine(BC,AC)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  },
+  "99705": {
+    "problem_id": 99705,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99706": {
+    "problem_id": 99706,
+    "added_cdl": [
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99707": {
+    "problem_id": 99707,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99708": {
+    "problem_id": 99708,
+    "added_cdl": [
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99709": {
+    "problem_id": 99709,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99710": {
+    "problem_id": 99710,
+    "added_cdl": [
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99711": {
+    "problem_id": 99711,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "sine_theorem(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99712": {
+    "problem_id": 99712,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99713": {
+    "problem_id": 99713,
+    "added_cdl": [
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99714": {
+    "problem_id": 99714,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99715": {
+    "problem_id": 99715,
+    "added_cdl": [
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99716": {
+    "problem_id": 99716,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99717": {
+    "problem_id": 99717,
+    "added_cdl": [
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99718": {
+    "problem_id": 99718,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "sine_theorem(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99719": {
+    "problem_id": 99719,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99720": {
+    "problem_id": 99720,
+    "added_cdl": [
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99721": {
+    "problem_id": 99721,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99722": {
+    "problem_id": 99722,
+    "added_cdl": [
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99723": {
+    "problem_id": 99723,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99724": {
+    "problem_id": 99724,
+    "added_cdl": [
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99725": {
+    "problem_id": 99725,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "sine_theorem(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99726": {
+    "problem_id": 99726,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99727": {
+    "problem_id": 99727,
+    "added_cdl": [
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99728": {
+    "problem_id": 99728,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99729": {
+    "problem_id": 99729,
+    "added_cdl": [
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99730": {
+    "problem_id": 99730,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99731": {
+    "problem_id": 99731,
+    "added_cdl": [
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99732": {
+    "problem_id": 99732,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "sine_theorem(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99733": {
+    "problem_id": 99733,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "180*acos(12/13)/pi",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99734": {
+    "problem_id": 99734,
+    "added_cdl": [
+      "Equation(-ll_bc**2+2*ll_bc*ll_cd*cos(pi*ma_bcd/180)-ll_cd**2+ll_db**2)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))",
+      "RightTriangle(CDB)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "180*acos(12/13)/pi",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99735": {
+    "problem_id": 99735,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "180*acos(12/13)/pi",
+    "theorem_seqs": [
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99736": {
+    "problem_id": 99736,
+    "added_cdl": [
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "180*acos(12/13)/pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99737": {
+    "problem_id": 99737,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "180*acos(12/13)/pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99738": {
+    "problem_id": 99738,
+    "added_cdl": [
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "180*acos(12/13)/pi",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99739": {
+    "problem_id": 99739,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "180*acos(12/13)/pi",
+    "theorem_seqs": [
+      "sine_theorem(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CDB)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99740": {
+    "problem_id": 99740,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99741": {
+    "problem_id": 99741,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99742": {
+    "problem_id": 99742,
+    "added_cdl": [
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99743": {
+    "problem_id": 99743,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "sine_theorem(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99744": {
+    "problem_id": 99744,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "RightTriangle(CDB)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "25/13",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99745": {
+    "problem_id": 99745,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "RightTriangle(CDB)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "25/13",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99746": {
+    "problem_id": 99746,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "RightTriangle(CDB)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "25/13",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99747": {
+    "problem_id": 99747,
+    "added_cdl": [
+      "RightTriangle(CDB)",
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "25/13",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99748": {
+    "problem_id": 99748,
+    "added_cdl": [
+      "Equation(-ll_bc*sin(pi*ma_abc/180)+ll_cd*sin(pi*ma_cdb/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "25/13",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99749": {
+    "problem_id": 99749,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "25/13",
+    "theorem_seqs": [
+      "sine_theorem(1,CDB)",
+      "right_triangle_judgment_angle(1,CDB)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,CDB)"
+    ]
+  },
+  "99750": {
+    "problem_id": 99750,
+    "added_cdl": [
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99751": {
+    "problem_id": 99751,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99752": {
+    "problem_id": 99752,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+2*ll_ba*ll_bc*cos(pi*ma_abc/180)-ll_bc**2)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "180*acos(5/13)/pi",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99753": {
+    "problem_id": 99753,
+    "added_cdl": [
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "180*acos(5/13)/pi",
+    "theorem_seqs": [
+      "cosine_theorem(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "99754": {
+    "problem_id": 99754,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "180*acos(5/13)/pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "90480": {
+    "problem_id": 90480,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)"
+    ]
+  },
+  "90481": {
+    "problem_id": 90481,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OB),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,O)"
+    ]
+  },
+  "90482": {
+    "problem_id": 90482,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)"
+    ]
+  },
+  "90483": {
+    "problem_id": 90483,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(LengthOfLine(OB),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90484": {
+    "problem_id": 90484,
+    "added_cdl": [
+      "Equal(LengthOfLine(OB),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90485": {
+    "problem_id": 90485,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90486": {
+    "problem_id": 90486,
+    "added_cdl": [
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90487": {
+    "problem_id": 90487,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "cosine_theorem(1,OBC)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90488": {
+    "problem_id": 90488,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(LengthOfLine(OB),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90489": {
+    "problem_id": 90489,
+    "added_cdl": [
+      "Equal(LengthOfLine(OB),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90490": {
+    "problem_id": 90490,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90491": {
+    "problem_id": 90491,
+    "added_cdl": [
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90492": {
+    "problem_id": 90492,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "cosine_theorem(1,OBC)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90493": {
+    "problem_id": 90493,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(LengthOfLine(OB),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "2*sqrt(3)",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90494": {
+    "problem_id": 90494,
+    "added_cdl": [
+      "Equal(LengthOfLine(OB),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "2*sqrt(3)",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90495": {
+    "problem_id": 90495,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "2*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90496": {
+    "problem_id": 90496,
+    "added_cdl": [
+      "Equation(ll_bc**2-ll_ob**2+2*ll_ob*ll_oc*cos(pi*ma_cob/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "2*sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90497": {
+    "problem_id": 90497,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "2*sqrt(3)",
+    "theorem_seqs": [
+      "cosine_theorem(1,OBC)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OB,O)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90498": {
+    "problem_id": 90498,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(OBC))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "90499": {
+    "problem_id": 90499,
+    "added_cdl": [
+      "Equation(ma_cab-mar_obc/2)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(COB))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)"
+    ]
+  },
+  "90500": {
+    "problem_id": 90500,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(COB))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)",
+      "arc_property_center_angle(1,OBC,O)"
+    ]
+  },
+  "90501": {
+    "problem_id": 90501,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OB))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,O)"
+    ]
+  },
+  "90502": {
+    "problem_id": 90502,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)"
+    ]
+  }
+}

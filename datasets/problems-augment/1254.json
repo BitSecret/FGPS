@@ -1,0 +1,797 @@
+{
+  "33693": {
+    "problem_id": 33693,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,ABSC)"
+    ]
+  },
+  "33694": {
+    "problem_id": 33694,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,BSCA)"
+    ]
+  },
+  "33695": {
+    "problem_id": 33695,
+    "added_cdl": [
+      "Equation(ma_bec+ma_ces-180)"
+    ],
+    "goal_cdl": "Relation(RightTriangle(CES))",
+    "problem_answer": "RightTriangle(CES)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CES)"
+    ]
+  },
+  "33696": {
+    "problem_id": 33696,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(CES))",
+    "problem_answer": "RightTriangle(CES)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)"
+    ]
+  },
+  "33697": {
+    "problem_id": 33697,
+    "added_cdl": [
+      "Equation(ma_bec+ma_ces-180)"
+    ],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(CE,SE))",
+    "problem_answer": "PerpendicularBetweenLine(CE,SE)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CES)"
+    ]
+  },
+  "33698": {
+    "problem_id": 33698,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(CE,SE))",
+    "problem_answer": "PerpendicularBetweenLine(CE,SE)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)"
+    ]
+  },
+  "33699": {
+    "problem_id": 33699,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsAltitudeOfQuadrilateral(CE,ABSC))",
+    "problem_answer": "IsAltitudeOfQuadrilateral(CE,ABSC)",
+    "theorem_seqs": [
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)"
+    ]
+  },
+  "33700": {
+    "problem_id": 33700,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(CE),HeightOfQuadrilateral(ABSC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)"
+    ]
+  },
+  "33701": {
+    "problem_id": 33701,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(EC,AC))",
+    "problem_answer": "PerpendicularBetweenLine(EC,AC)",
+    "theorem_seqs": [
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)"
+    ]
+  },
+  "33702": {
+    "problem_id": 33702,
+    "added_cdl": [
+      "Equation(aq_absc-ll_ab*ll_ca*sin(pi*ma_cab/180))",
+      "Equation(aq_absc-hq_absc*ll_bs)",
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33703": {
+    "problem_id": 33703,
+    "added_cdl": [
+      "Equation(aq_absc-hq_absc*ll_bs)",
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33704": {
+    "problem_id": 33704,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33705": {
+    "problem_id": 33705,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33706": {
+    "problem_id": 33706,
+    "added_cdl": [
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33707": {
+    "problem_id": 33707,
+    "added_cdl": [
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33708": {
+    "problem_id": 33708,
+    "added_cdl": [
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33709": {
+    "problem_id": 33709,
+    "added_cdl": [
+      "RightTriangle(CES)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33710": {
+    "problem_id": 33710,
+    "added_cdl": [
+      "Equation(ma_bec+ma_ces-180)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33711": {
+    "problem_id": 33711,
+    "added_cdl": [
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33712": {
+    "problem_id": 33712,
+    "added_cdl": [
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,ABSC)",
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33713": {
+    "problem_id": 33713,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "32",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,BSCA)",
+      "parallelogram_area_formula_sine(1,ABSC)",
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33714": {
+    "problem_id": 33714,
+    "added_cdl": [
+      "Equation(aq_absc-ll_ab*ll_ca*sin(pi*ma_cab/180))",
+      "Equation(aq_absc-hq_absc*ll_bs)",
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33715": {
+    "problem_id": 33715,
+    "added_cdl": [
+      "Equation(aq_absc-hq_absc*ll_bs)",
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33716": {
+    "problem_id": 33716,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33717": {
+    "problem_id": 33717,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33718": {
+    "problem_id": 33718,
+    "added_cdl": [
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33719": {
+    "problem_id": 33719,
+    "added_cdl": [
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33720": {
+    "problem_id": 33720,
+    "added_cdl": [
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33721": {
+    "problem_id": 33721,
+    "added_cdl": [
+      "RightTriangle(CES)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33722": {
+    "problem_id": 33722,
+    "added_cdl": [
+      "Equation(ma_bec+ma_ces-180)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33723": {
+    "problem_id": 33723,
+    "added_cdl": [
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33724": {
+    "problem_id": 33724,
+    "added_cdl": [
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,ABSC)",
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33725": {
+    "problem_id": 33725,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(SCE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,BSCA)",
+      "parallelogram_area_formula_sine(1,ABSC)",
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33726": {
+    "problem_id": 33726,
+    "added_cdl": [
+      "Equation(aq_absc-ll_ab*ll_ca*sin(pi*ma_cab/180))",
+      "Equation(aq_absc-hq_absc*ll_bs)",
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33727": {
+    "problem_id": 33727,
+    "added_cdl": [
+      "Equation(aq_absc-hq_absc*ll_bs)",
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33728": {
+    "problem_id": 33728,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CAB),MeasureOfAngle(BSC))",
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33729": {
+    "problem_id": 33729,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABE),MeasureOfAngle(SCA))",
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33730": {
+    "problem_id": 33730,
+    "added_cdl": [
+      "Equation(-ll_ce**2+2*ll_ce*ll_cs*cos(pi*ma_sce/180)-ll_cs**2+ll_es**2)",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33731": {
+    "problem_id": 33731,
+    "added_cdl": [
+      "IsAltitudeOfQuadrilateral(CE,ABSC)",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))",
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33732": {
+    "problem_id": 33732,
+    "added_cdl": [
+      "Equation(ll_ce**2-ll_cs**2+ll_es**2)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33733": {
+    "problem_id": 33733,
+    "added_cdl": [
+      "RightTriangle(CES)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33734": {
+    "problem_id": 33734,
+    "added_cdl": [
+      "Equation(ma_bec+ma_ces-180)",
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33735": {
+    "problem_id": 33735,
+    "added_cdl": [
+      "Equation(aq_absc-ll_ab*ll_bs*sin(pi*ma_abs/180))",
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33736": {
+    "problem_id": 33736,
+    "added_cdl": [
+      "Equation(aq_absc-ll_bs*ll_cs*sin(pi*ma_bsc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,ABSC)",
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  },
+  "33737": {
+    "problem_id": 33737,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(ES))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,BSCA)",
+      "parallelogram_area_formula_sine(1,ABSC)",
+      "adjacent_complementary_angle(1,BEC,CES)",
+      "right_triangle_judgment_angle(1,CES)",
+      "right_triangle_property_pythagorean(1,CES)",
+      "altitude_of_quadrilateral_judgment_right_vertex(1,CE,ABSC)",
+      "cosine_theorem(1,CES)",
+      "parallelogram_property_opposite_angle_equal(1,BSCA)",
+      "parallelogram_property_opposite_angle_equal(1,ABSC)",
+      "parallelogram_area_formula_common(1,ABSC)",
+      "parallelogram_area_formula_sine(1,CABS)",
+      "parallelogram_area_formula_sine(1,SCAB)"
+    ]
+  }
+}

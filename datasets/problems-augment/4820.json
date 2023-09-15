@@ -1,0 +1,482 @@
+{
+  "117027": {
+    "problem_id": 117027,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  },
+  "117028": {
+    "problem_id": 117028,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBD,O)"
+    ]
+  },
+  "117029": {
+    "problem_id": 117029,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(CD,OD))",
+    "problem_answer": "PerpendicularBetweenLine(CD,OD)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  },
+  "117030": {
+    "problem_id": 117030,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117031": {
+    "problem_id": 117031,
+    "added_cdl": [
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117032": {
+    "problem_id": 117032,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117033": {
+    "problem_id": 117033,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117034": {
+    "problem_id": 117034,
+    "added_cdl": [
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117035": {
+    "problem_id": 117035,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "sine_theorem(1,DOC)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117036": {
+    "problem_id": 117036,
+    "added_cdl": [],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBD,O)",
+      "sine_theorem(1,DOC)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117037": {
+    "problem_id": 117037,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117038": {
+    "problem_id": 117038,
+    "added_cdl": [
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117039": {
+    "problem_id": 117039,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117040": {
+    "problem_id": 117040,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117041": {
+    "problem_id": 117041,
+    "added_cdl": [
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117042": {
+    "problem_id": 117042,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,DOC)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117043": {
+    "problem_id": 117043,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBD,O)",
+      "sine_theorem(1,DOC)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117044": {
+    "problem_id": 117044,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117045": {
+    "problem_id": 117045,
+    "added_cdl": [
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117046": {
+    "problem_id": 117046,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117047": {
+    "problem_id": 117047,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117048": {
+    "problem_id": 117048,
+    "added_cdl": [
+      "Equation(-ll_cd*sin(pi*ma_ocd/180)+ll_od*sin(pi*ma_dob/180))",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117049": {
+    "problem_id": 117049,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,DOC)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117050": {
+    "problem_id": 117050,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBD,O)",
+      "sine_theorem(1,DOC)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117051": {
+    "problem_id": 117051,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117052": {
+    "problem_id": 117052,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117053": {
+    "problem_id": 117053,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "117054": {
+    "problem_id": 117054,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(OBD))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBD,A)"
+    ]
+  },
+  "117055": {
+    "problem_id": 117055,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBD,A)"
+    ]
+  },
+  "117056": {
+    "problem_id": 117056,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBD,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)"
+    ]
+  },
+  "117057": {
+    "problem_id": 117057,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  },
+  "117058": {
+    "problem_id": 117058,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  },
+  "117059": {
+    "problem_id": 117059,
+    "added_cdl": [
+      "Equation(ma_dao-mar_obd/2)",
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  },
+  "117060": {
+    "problem_id": 117060,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBD),MeasureOfAngle(DOB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  },
+  "117061": {
+    "problem_id": 117061,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBD,O)",
+      "arc_property_circumference_angle_external(1,OBD,A)",
+      "triangle_property_angle_sum(1,DOC)",
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  }
+}

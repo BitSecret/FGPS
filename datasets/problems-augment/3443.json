@@ -1,0 +1,614 @@
+{
+  "81636": {
+    "problem_id": 81636,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)"
+    ]
+  },
+  "81637": {
+    "problem_id": 81637,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(CAD))",
+    "problem_answer": "IsoscelesTriangle(CAD)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CAD)"
+    ]
+  },
+  "81638": {
+    "problem_id": 81638,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(DBC))",
+    "problem_answer": "IsoscelesTriangle(DBC)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)"
+    ]
+  },
+  "81639": {
+    "problem_id": 81639,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(DBC))",
+    "problem_answer": "IsoscelesTriangle(DBC)",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)"
+    ]
+  },
+  "81640": {
+    "problem_id": 81640,
+    "added_cdl": [
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(CAD),MeasureOfAngle(ADC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81641": {
+    "problem_id": 81641,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(CAD),MeasureOfAngle(ADC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CAD)",
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81642": {
+    "problem_id": 81642,
+    "added_cdl": [
+      "IsoscelesTriangle(DBC)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81643": {
+    "problem_id": 81643,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81644": {
+    "problem_id": 81644,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81645": {
+    "problem_id": 81645,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CAD),MeasureOfAngle(ADC))",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81646": {
+    "problem_id": 81646,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81647": {
+    "problem_id": 81647,
+    "added_cdl": [
+      "IsoscelesTriangle(DBC)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81648": {
+    "problem_id": 81648,
+    "added_cdl": [
+      "Equation(ma_adc+ma_cdb-180)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81649": {
+    "problem_id": 81649,
+    "added_cdl": [
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81650": {
+    "problem_id": 81650,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81651": {
+    "problem_id": 81651,
+    "added_cdl": [
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81652": {
+    "problem_id": 81652,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CAD)",
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81653": {
+    "problem_id": 81653,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CAD),MeasureOfAngle(ADC))",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81654": {
+    "problem_id": 81654,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81655": {
+    "problem_id": 81655,
+    "added_cdl": [
+      "IsoscelesTriangle(DBC)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81656": {
+    "problem_id": 81656,
+    "added_cdl": [
+      "Equation(ma_adc+ma_cdb-180)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81657": {
+    "problem_id": 81657,
+    "added_cdl": [
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81658": {
+    "problem_id": 81658,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81659": {
+    "problem_id": 81659,
+    "added_cdl": [
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81660": {
+    "problem_id": 81660,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CAD)",
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)",
+      "triangle_property_angle_sum(1,CAD)"
+    ]
+  },
+  "81661": {
+    "problem_id": 81661,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(ECD))",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81662": {
+    "problem_id": 81662,
+    "added_cdl": [
+      "IsoscelesTriangle(DBC)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81663": {
+    "problem_id": 81663,
+    "added_cdl": [
+      "Equation(ma_adc+ma_cdb-180)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81664": {
+    "problem_id": 81664,
+    "added_cdl": [
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81665": {
+    "problem_id": 81665,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))",
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81666": {
+    "problem_id": 81666,
+    "added_cdl": [
+      "IsoscelesTriangle(CAD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81667": {
+    "problem_id": 81667,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CAD)",
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,CAD)"
+    ]
+  },
+  "81668": {
+    "problem_id": 81668,
+    "added_cdl": [
+      "IsoscelesTriangle(DBC)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equation(ma_adc+ma_cdb-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81669": {
+    "problem_id": 81669,
+    "added_cdl": [
+      "Equation(ma_adc+ma_cdb-180)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81670": {
+    "problem_id": 81670,
+    "added_cdl": [
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81671": {
+    "problem_id": 81671,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81672": {
+    "problem_id": 81672,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "adjacent_complementary_angle(1,ADC,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81673": {
+    "problem_id": 81673,
+    "added_cdl": [
+      "IsoscelesTriangle(DBC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ECD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81674": {
+    "problem_id": 81674,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ECD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81675": {
+    "problem_id": 81675,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ECD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81676": {
+    "problem_id": 81676,
+    "added_cdl": [
+      "IsoscelesTriangle(DBC)",
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81677": {
+    "problem_id": 81677,
+    "added_cdl": [
+      "Equation(ma_bcd+ma_cdb+ma_dbe-180)",
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81678": {
+    "problem_id": 81678,
+    "added_cdl": [
+      "Equal(LengthOfLine(DB),LengthOfLine(DC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  },
+  "81679": {
+    "problem_id": 81679,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CDB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "perpendicular_bisector_property_distance_equal(1,DE,BC)",
+      "triangle_property_angle_sum(1,CDB)",
+      "isosceles_triangle_judgment_line_equal(1,DBC)",
+      "isosceles_triangle_property_angle_equal(1,DBC)"
+    ]
+  }
+}

@@ -1,0 +1,647 @@
+{
+  "163634": {
+    "problem_id": 163634,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(CE),LengthOfLine(CF))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_triangle_property_line_equal(1,BCE,DCF)"
+    ]
+  },
+  "163635": {
+    "problem_id": 163635,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(BCD),MeasureOfAngle(DCF))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163636": {
+    "problem_id": 163636,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(CEB),MeasureOfAngle(BFD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)"
+    ]
+  },
+  "163637": {
+    "problem_id": 163637,
+    "added_cdl": [
+      "Equal(LengthOfLine(CE),LengthOfLine(CF))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(CFE))",
+    "problem_answer": "IsoscelesTriangle(CFE)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CFE)"
+    ]
+  },
+  "163638": {
+    "problem_id": 163638,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(CFE))",
+    "problem_answer": "IsoscelesTriangle(CFE)",
+    "theorem_seqs": [
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)"
+    ]
+  },
+  "163639": {
+    "problem_id": 163639,
+    "added_cdl": [
+      "IsoscelesTriangle(CFE)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CFE)"
+    ]
+  },
+  "163640": {
+    "problem_id": 163640,
+    "added_cdl": [
+      "Equal(LengthOfLine(CE),LengthOfLine(CF))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)"
+    ]
+  },
+  "163641": {
+    "problem_id": 163641,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)"
+    ]
+  },
+  "163642": {
+    "problem_id": 163642,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CEB),MeasureOfAngle(BFD))",
+      "Equation(ma_bce+ma_dcf-180)",
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163643": {
+    "problem_id": 163643,
+    "added_cdl": [
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163644": {
+    "problem_id": 163644,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163645": {
+    "problem_id": 163645,
+    "added_cdl": [
+      "IsoscelesTriangle(CFE)",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163646": {
+    "problem_id": 163646,
+    "added_cdl": [
+      "Equal(LengthOfLine(CE),LengthOfLine(CF))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163647": {
+    "problem_id": 163647,
+    "added_cdl": [
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163648": {
+    "problem_id": 163648,
+    "added_cdl": [
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163649": {
+    "problem_id": 163649,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CEB))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BCE,ECF)",
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163650": {
+    "problem_id": 163650,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CEB),MeasureOfAngle(BFD))",
+      "Equation(ma_bce+ma_dcf-180)",
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163651": {
+    "problem_id": 163651,
+    "added_cdl": [
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163652": {
+    "problem_id": 163652,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163653": {
+    "problem_id": 163653,
+    "added_cdl": [
+      "IsoscelesTriangle(CFE)",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163654": {
+    "problem_id": 163654,
+    "added_cdl": [
+      "Equal(LengthOfLine(CE),LengthOfLine(CF))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163655": {
+    "problem_id": 163655,
+    "added_cdl": [
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163656": {
+    "problem_id": 163656,
+    "added_cdl": [
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163657": {
+    "problem_id": 163657,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(EFD))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BCE,ECF)",
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163658": {
+    "problem_id": 163658,
+    "added_cdl": [
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163659": {
+    "problem_id": 163659,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCD))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BCE,ECF)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163660": {
+    "problem_id": 163660,
+    "added_cdl": [
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCF))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163661": {
+    "problem_id": 163661,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DCF))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BCE,ECF)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163662": {
+    "problem_id": 163662,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BFD))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)"
+    ]
+  },
+  "163663": {
+    "problem_id": 163663,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CEB),MeasureOfAngle(BFD))",
+      "Equation(ma_bce+ma_dcf-180)",
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163664": {
+    "problem_id": 163664,
+    "added_cdl": [
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163665": {
+    "problem_id": 163665,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163666": {
+    "problem_id": 163666,
+    "added_cdl": [
+      "IsoscelesTriangle(CFE)",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163667": {
+    "problem_id": 163667,
+    "added_cdl": [
+      "Equal(LengthOfLine(CE),LengthOfLine(CF))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163668": {
+    "problem_id": 163668,
+    "added_cdl": [
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163669": {
+    "problem_id": 163669,
+    "added_cdl": [
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163670": {
+    "problem_id": 163670,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BFE))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BCE,ECF)",
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163671": {
+    "problem_id": 163671,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(CEB),MeasureOfAngle(BFD))",
+      "Equation(ma_bce+ma_dcf-180)",
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163672": {
+    "problem_id": 163672,
+    "added_cdl": [
+      "Equation(ma_cfd-ma_cfe-ma_efd)",
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163673": {
+    "problem_id": 163673,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BFE),MeasureOfAngle(FEC))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163674": {
+    "problem_id": 163674,
+    "added_cdl": [
+      "IsoscelesTriangle(CFE)",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163675": {
+    "problem_id": 163675,
+    "added_cdl": [
+      "Equal(LengthOfLine(CE),LengthOfLine(CF))",
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163676": {
+    "problem_id": 163676,
+    "added_cdl": [
+      "Equation(ma_cfe+ma_dcf+ma_fec-180)",
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163677": {
+    "problem_id": 163677,
+    "added_cdl": [
+      "Equation(ma_bce+ma_dcf-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  },
+  "163678": {
+    "problem_id": 163678,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(FEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BCE,ECF)",
+      "triangle_property_angle_sum(1,CFE)",
+      "congruent_triangle_property_line_equal(1,BCE,DCF)",
+      "isosceles_triangle_judgment_line_equal(1,CFE)",
+      "isosceles_triangle_property_angle_equal(1,CFE)",
+      "angle_addition(1,CFE,EFD)",
+      "congruent_triangle_property_angle_equal(1,EBC,FDC)",
+      "congruent_triangle_property_angle_equal(1,CEB,CFD)"
+    ]
+  }
+}

@@ -1,0 +1,1679 @@
+{
+  "11461": {
+    "problem_id": 11461,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(EDC),MeasureOfAngle(CED))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11462": {
+    "problem_id": 11462,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)"
+    ]
+  },
+  "11463": {
+    "problem_id": 11463,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)"
+    ]
+  },
+  "11464": {
+    "problem_id": 11464,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)"
+    ]
+  },
+  "11465": {
+    "problem_id": 11465,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(ED),LengthOfLine(EC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)"
+    ]
+  },
+  "11466": {
+    "problem_id": 11466,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(ED),LengthOfLine(EC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)"
+    ]
+  },
+  "11467": {
+    "problem_id": 11467,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(EDC))",
+    "problem_answer": "IsoscelesTriangle(EDC)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ]
+  },
+  "11468": {
+    "problem_id": 11468,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(EDC))",
+    "problem_answer": "IsoscelesTriangle(EDC)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ]
+  },
+  "11469": {
+    "problem_id": 11469,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(EDC))",
+    "problem_answer": "IsoscelesTriangle(EDC)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)"
+    ]
+  },
+  "11470": {
+    "problem_id": 11470,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)"
+    ]
+  },
+  "11471": {
+    "problem_id": 11471,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)"
+    ]
+  },
+  "11472": {
+    "problem_id": 11472,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)"
+    ]
+  },
+  "11473": {
+    "problem_id": 11473,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)"
+    ]
+  },
+  "11474": {
+    "problem_id": 11474,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))",
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11475": {
+    "problem_id": 11475,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11476": {
+    "problem_id": 11476,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11477": {
+    "problem_id": 11477,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11478": {
+    "problem_id": 11478,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11479": {
+    "problem_id": 11479,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11480": {
+    "problem_id": 11480,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11481": {
+    "problem_id": 11481,
+    "added_cdl": [
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11482": {
+    "problem_id": 11482,
+    "added_cdl": [
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11483": {
+    "problem_id": 11483,
+    "added_cdl": [
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11484": {
+    "problem_id": 11484,
+    "added_cdl": [
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11485": {
+    "problem_id": 11485,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11486": {
+    "problem_id": 11486,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(EDC))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "flat_angle(1,GEK)",
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11487": {
+    "problem_id": 11487,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))",
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11488": {
+    "problem_id": 11488,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11489": {
+    "problem_id": 11489,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11490": {
+    "problem_id": 11490,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11491": {
+    "problem_id": 11491,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11492": {
+    "problem_id": 11492,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11493": {
+    "problem_id": 11493,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11494": {
+    "problem_id": 11494,
+    "added_cdl": [
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11495": {
+    "problem_id": 11495,
+    "added_cdl": [
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11496": {
+    "problem_id": 11496,
+    "added_cdl": [
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11497": {
+    "problem_id": 11497,
+    "added_cdl": [
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11498": {
+    "problem_id": 11498,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11499": {
+    "problem_id": 11499,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(GFC))",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "flat_angle(1,GEK)",
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11500": {
+    "problem_id": 11500,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))",
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11501": {
+    "problem_id": 11501,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11502": {
+    "problem_id": 11502,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11503": {
+    "problem_id": 11503,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11504": {
+    "problem_id": 11504,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11505": {
+    "problem_id": 11505,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11506": {
+    "problem_id": 11506,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11507": {
+    "problem_id": 11507,
+    "added_cdl": [
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11508": {
+    "problem_id": 11508,
+    "added_cdl": [
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11509": {
+    "problem_id": 11509,
+    "added_cdl": [
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11510": {
+    "problem_id": 11510,
+    "added_cdl": [
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11511": {
+    "problem_id": 11511,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11512": {
+    "problem_id": 11512,
+    "added_cdl": [],
+    "goal_cdl": "Value(x)",
+    "problem_answer": "20",
+    "theorem_seqs": [
+      "flat_angle(1,GEK)",
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11513": {
+    "problem_id": 11513,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))",
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11514": {
+    "problem_id": 11514,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11515": {
+    "problem_id": 11515,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11516": {
+    "problem_id": 11516,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11517": {
+    "problem_id": 11517,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11518": {
+    "problem_id": 11518,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11519": {
+    "problem_id": 11519,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11520": {
+    "problem_id": 11520,
+    "added_cdl": [
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "Equal(MeasureOfAngle(GEK),180)",
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11521": {
+    "problem_id": 11521,
+    "added_cdl": [
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11522": {
+    "problem_id": 11522,
+    "added_cdl": [
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11523": {
+    "problem_id": 11523,
+    "added_cdl": [
+      "Equation(ma_def+ma_fde+ma_kfd-180)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11524": {
+    "problem_id": 11524,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11525": {
+    "problem_id": 11525,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(ECG))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "flat_angle(1,GEK)",
+      "triangle_property_angle_sum(1,DEF)",
+      "angle_addition(1,GED,DEF)",
+      "angle_addition(1,GEC,CED)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,ECG,E)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11526": {
+    "problem_id": 11526,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CED))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11527": {
+    "problem_id": 11527,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(GEC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)"
+    ]
+  },
+  "11528": {
+    "problem_id": 11528,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EDC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11529": {
+    "problem_id": 11529,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EDC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11530": {
+    "problem_id": 11530,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EDC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11531": {
+    "problem_id": 11531,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EDC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11532": {
+    "problem_id": 11532,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EDC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11533": {
+    "problem_id": 11533,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(EDC))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11534": {
+    "problem_id": 11534,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCE))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11535": {
+    "problem_id": 11535,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCE))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11536": {
+    "problem_id": 11536,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCE))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11537": {
+    "problem_id": 11537,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCE))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11538": {
+    "problem_id": 11538,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCE))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11539": {
+    "problem_id": 11539,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DCE))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11540": {
+    "problem_id": 11540,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(FDC))",
+    "problem_answer": "180",
+    "theorem_seqs": [
+      "flat_angle(1,FDC)"
+    ]
+  },
+  "11541": {
+    "problem_id": 11541,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EDC),MeasureOfAngle(DCE))",
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11542": {
+    "problem_id": 11542,
+    "added_cdl": [
+      "Equation(ma_ced+ma_dce+ma_edc-180)",
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11543": {
+    "problem_id": 11543,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(FDC),180)",
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11544": {
+    "problem_id": 11544,
+    "added_cdl": [
+      "Equation(-ma_edc+ma_fdc-ma_fde)",
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11545": {
+    "problem_id": 11545,
+    "added_cdl": [
+      "IsoscelesTriangle(EDC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11546": {
+    "problem_id": 11546,
+    "added_cdl": [
+      "Equal(LengthOfLine(EC),RadiusOfCircle(E))",
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11547": {
+    "problem_id": 11547,
+    "added_cdl": [
+      "Equal(LengthOfLine(ED),RadiusOfCircle(E))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11548": {
+    "problem_id": 11548,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(FDE))",
+    "problem_answer": "155",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,ED,E)",
+      "radius_of_circle_property_length_equal(1,EC,E)",
+      "isosceles_triangle_judgment_line_equal(1,EDC)",
+      "angle_addition(1,FDE,EDC)",
+      "flat_angle(1,FDC)",
+      "triangle_property_angle_sum(1,DCE)",
+      "isosceles_triangle_property_angle_equal(1,EDC)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11549": {
+    "problem_id": 11549,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(GEK))",
+    "problem_answer": "180",
+    "theorem_seqs": [
+      "flat_angle(1,GEK)"
+    ]
+  },
+  "11550": {
+    "problem_id": 11550,
+    "added_cdl": [
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GED))",
+    "problem_answer": "175",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11551": {
+    "problem_id": 11551,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GED))",
+    "problem_answer": "175",
+    "theorem_seqs": [
+      "angle_addition(1,GEC,CED)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11552": {
+    "problem_id": 11552,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(GED))",
+    "problem_answer": "175",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)",
+      "angle_addition(1,GEC,CED)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11553": {
+    "problem_id": 11553,
+    "added_cdl": [
+      "Equation(-ma_ced-ma_gec+ma_ged)",
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DEK))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11554": {
+    "problem_id": 11554,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ECG),MeasureOfAngle(GEC))",
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DEK))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "angle_addition(1,GEC,CED)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11555": {
+    "problem_id": 11555,
+    "added_cdl": [
+      "Equation(-ma_def-ma_ged+ma_gek)",
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DEK))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ECG,E)",
+      "angle_addition(1,GEC,CED)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11556": {
+    "problem_id": 11556,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GEK),180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DEK))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "angle_addition(1,GED,DEF)",
+      "arc_property_center_angle(1,ECG,E)",
+      "angle_addition(1,GEC,CED)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  },
+  "11557": {
+    "problem_id": 11557,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DEK))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "flat_angle(1,GEK)",
+      "angle_addition(1,GED,DEF)",
+      "arc_property_center_angle(1,ECG,E)",
+      "angle_addition(1,GEC,CED)",
+      "arc_property_center_angle(1,EDC,E)"
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "166902": {
+    "problem_id": 166902,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsPerpendicularBisectorOfLine(AO,BD))",
+    "problem_answer": "IsPerpendicularBisectorOfLine(AO,BD)",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  },
+  "166903": {
+    "problem_id": 166903,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(BO,AO))",
+    "problem_answer": "PerpendicularBetweenLine(BO,AO)",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  },
+  "166904": {
+    "problem_id": 166904,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(AO,DO))",
+    "problem_answer": "PerpendicularBetweenLine(AO,DO)",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  },
+  "166905": {
+    "problem_id": 166905,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,BD))",
+    "problem_answer": "IsMidpointOfLine(O,BD)",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  },
+  "166906": {
+    "problem_id": 166906,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,DB))",
+    "problem_answer": "IsMidpointOfLine(O,DB)",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  },
+  "166907": {
+    "problem_id": 166907,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(BO),LengthOfLine(OD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  },
+  "166908": {
+    "problem_id": 166908,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(AO,BD)"
+    ],
+    "goal_cdl": "Relation(RightTriangle(BOA))",
+    "problem_answer": "RightTriangle(BOA)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BOA)"
+    ]
+  },
+  "166909": {
+    "problem_id": 166909,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(BOA))",
+    "problem_answer": "RightTriangle(BOA)",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "right_triangle_judgment_angle(1,BOA)"
+    ]
+  },
+  "166910": {
+    "problem_id": 166910,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMedianOfTriangle(OE,OAB))",
+    "problem_answer": "IsMedianOfTriangle(OE,OAB)",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,OE,OAB)"
+    ]
+  },
+  "166911": {
+    "problem_id": 166911,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  },
+  "166912": {
+    "problem_id": 166912,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  },
+  "166913": {
+    "problem_id": 166913,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CB))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  },
+  "166914": {
+    "problem_id": 166914,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,ABCD)"
+    ]
+  },
+  "166915": {
+    "problem_id": 166915,
+    "added_cdl": [
+      "RightTriangle(BOA)",
+      "IsMedianOfTriangle(OE,OAB)",
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166916": {
+    "problem_id": 166916,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(AO,BD)",
+      "IsMedianOfTriangle(OE,OAB)",
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166917": {
+    "problem_id": 166917,
+    "added_cdl": [
+      "IsMedianOfTriangle(OE,OAB)",
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166918": {
+    "problem_id": 166918,
+    "added_cdl": [
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,OE,OAB)",
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166919": {
+    "problem_id": 166919,
+    "added_cdl": [],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,ABCD)",
+      "median_of_triangle_judgment(1,OE,OAB)",
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166920": {
+    "problem_id": 166920,
+    "added_cdl": [
+      "RightTriangle(BOA)",
+      "IsMedianOfTriangle(OE,OAB)",
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166921": {
+    "problem_id": 166921,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(AO,BD)",
+      "IsMedianOfTriangle(OE,OAB)",
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166922": {
+    "problem_id": 166922,
+    "added_cdl": [
+      "IsMedianOfTriangle(OE,OAB)",
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166923": {
+    "problem_id": 166923,
+    "added_cdl": [
+      "Equation(ll_ab+ll_ad+ll_cb+ll_cd-pq_abcd)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "median_of_triangle_judgment(1,OE,OAB)",
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166924": {
+    "problem_id": 166924,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,ABCD)",
+      "median_of_triangle_judgment(1,OE,OAB)",
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)",
+      "right_triangle_judgment_angle(1,BOA)",
+      "right_triangle_property_length_of_median(1,BOA,E)"
+    ]
+  },
+  "166925": {
+    "problem_id": 166925,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BOA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  },
+  "166926": {
+    "problem_id": 166926,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(AOD))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "kite_property_diagonal_perpendicular_bisection(1,ABCD,O)"
+    ]
+  }
+}

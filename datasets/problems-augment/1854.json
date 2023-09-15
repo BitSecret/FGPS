@@ -1,0 +1,506 @@
+{
+  "47392": {
+    "problem_id": 47392,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(GKH))",
+    "problem_answer": "IsoscelesTriangle(GKH)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)"
+    ]
+  },
+  "47393": {
+    "problem_id": 47393,
+    "added_cdl": [
+      "IsoscelesTriangle(GKH)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(GKH),MeasureOfAngle(KHG))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47394": {
+    "problem_id": 47394,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(GKH),MeasureOfAngle(KHG))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47395": {
+    "problem_id": 47395,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(KJH))",
+    "problem_answer": "IsoscelesTriangle(KJH)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,KJH)"
+    ]
+  },
+  "47396": {
+    "problem_id": 47396,
+    "added_cdl": [
+      "IsoscelesTriangle(KJH)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,KJH)"
+    ]
+  },
+  "47397": {
+    "problem_id": 47397,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)"
+    ]
+  },
+  "47398": {
+    "problem_id": 47398,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GKH),MeasureOfAngle(KHG))",
+      "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HGK))",
+    "problem_answer": "42",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47399": {
+    "problem_id": 47399,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)",
+      "IsoscelesTriangle(GKH)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HGK))",
+    "problem_answer": "42",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47400": {
+    "problem_id": 47400,
+    "added_cdl": [
+      "IsoscelesTriangle(KJH)",
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HGK))",
+    "problem_answer": "42",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47401": {
+    "problem_id": 47401,
+    "added_cdl": [
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HGK))",
+    "problem_answer": "42",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47402": {
+    "problem_id": 47402,
+    "added_cdl": [
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HGK))",
+    "problem_answer": "42",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47403": {
+    "problem_id": 47403,
+    "added_cdl": [
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HGK))",
+    "problem_answer": "42",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,KJH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47404": {
+    "problem_id": 47404,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(HGK))",
+    "problem_answer": "42",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,GKH)",
+      "triangle_property_angle_sum(1,KJH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47405": {
+    "problem_id": 47405,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GKH),MeasureOfAngle(KHG))",
+      "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GJH))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47406": {
+    "problem_id": 47406,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)",
+      "IsoscelesTriangle(GKH)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GJH))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47407": {
+    "problem_id": 47407,
+    "added_cdl": [
+      "IsoscelesTriangle(KJH)",
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GJH))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47408": {
+    "problem_id": 47408,
+    "added_cdl": [
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GJH))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47409": {
+    "problem_id": 47409,
+    "added_cdl": [
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GJH))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47410": {
+    "problem_id": 47410,
+    "added_cdl": [
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GJH))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,KJH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47411": {
+    "problem_id": 47411,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(GJH))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,GKH)",
+      "triangle_property_angle_sum(1,KJH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47412": {
+    "problem_id": 47412,
+    "added_cdl": [
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GKH))",
+    "problem_answer": "69",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47413": {
+    "problem_id": 47413,
+    "added_cdl": [
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(GKH))",
+    "problem_answer": "69",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47414": {
+    "problem_id": 47414,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(GKH))",
+    "problem_answer": "69",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47415": {
+    "problem_id": 47415,
+    "added_cdl": [
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(KHG))",
+    "problem_answer": "69",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47416": {
+    "problem_id": 47416,
+    "added_cdl": [
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(KHG))",
+    "problem_answer": "69",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47417": {
+    "problem_id": 47417,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(KHG))",
+    "problem_answer": "69",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)"
+    ]
+  },
+  "47418": {
+    "problem_id": 47418,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GKH),MeasureOfAngle(KHG))",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HKJ))",
+    "problem_answer": "111",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47419": {
+    "problem_id": 47419,
+    "added_cdl": [
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HKJ))",
+    "problem_answer": "111",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47420": {
+    "problem_id": 47420,
+    "added_cdl": [
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(HKJ))",
+    "problem_answer": "111",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47421": {
+    "problem_id": 47421,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(HKJ))",
+    "problem_answer": "111",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47422": {
+    "problem_id": 47422,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GKH),MeasureOfAngle(KHG))",
+      "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(JHK))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47423": {
+    "problem_id": 47423,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(GJH),MeasureOfAngle(JHK))",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)",
+      "IsoscelesTriangle(GKH)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(JHK))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47424": {
+    "problem_id": 47424,
+    "added_cdl": [
+      "IsoscelesTriangle(KJH)",
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(JHK))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47425": {
+    "problem_id": 47425,
+    "added_cdl": [
+      "IsoscelesTriangle(GKH)",
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(JHK))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47426": {
+    "problem_id": 47426,
+    "added_cdl": [
+      "Equation(ma_hkj+ma_jhk+ma_kjh-180)",
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(JHK))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47427": {
+    "problem_id": 47427,
+    "added_cdl": [
+      "Equation(ma_gkh+ma_hgk+ma_khg-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(JHK))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,KJH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  },
+  "47428": {
+    "problem_id": 47428,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(JHK))",
+    "problem_answer": "69/2",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,GKH)",
+      "triangle_property_angle_sum(1,KJH)",
+      "isosceles_triangle_judgment_line_equal(1,GKH)",
+      "isosceles_triangle_judgment_line_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,KJH)",
+      "isosceles_triangle_property_angle_equal(1,GKH)",
+      "adjacent_complementary_angle(1,GKH,HKJ)"
+    ]
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "77515": {
+    "problem_id": 77515,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(ABC))",
+    "problem_answer": "IsoscelesTriangle(ABC)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)"
+    ]
+  },
+  "77516": {
+    "problem_id": 77516,
+    "added_cdl": [
+      "IsoscelesTriangle(ABC)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "77517": {
+    "problem_id": 77517,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)"
+    ]
+  },
+  "77518": {
+    "problem_id": 77518,
+    "added_cdl": [],
+    "goal_cdl": "Relation(MirrorCongruentBetweenTriangle(DEA,DBE))",
+    "problem_answer": "MirrorCongruentBetweenTriangle(DEA,DBE)",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)"
+    ]
+  },
+  "77519": {
+    "problem_id": 77519,
+    "added_cdl": [],
+    "goal_cdl": "Relation(MirrorCongruentBetweenTriangle(EAD,EDB))",
+    "problem_answer": "MirrorCongruentBetweenTriangle(EAD,EDB)",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)"
+    ]
+  },
+  "77520": {
+    "problem_id": 77520,
+    "added_cdl": [],
+    "goal_cdl": "Relation(MirrorCongruentBetweenTriangle(ADE,BED))",
+    "problem_answer": "MirrorCongruentBetweenTriangle(ADE,BED)",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)"
+    ]
+  },
+  "77521": {
+    "problem_id": 77521,
+    "added_cdl": [
+      "MirrorCongruentBetweenTriangle(DEA,DBE)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(EAD),MeasureOfAngle(ABE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)"
+    ]
+  },
+  "77522": {
+    "problem_id": 77522,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(EAD),MeasureOfAngle(ABE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)"
+    ]
+  },
+  "77523": {
+    "problem_id": 77523,
+    "added_cdl": [
+      "Equation(ma_abc+ma_bca+ma_ead-180)",
+      "Equal(MeasureOfAngle(EAD),MeasureOfAngle(ABE))",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77524": {
+    "problem_id": 77524,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EAD),MeasureOfAngle(ABE))",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77525": {
+    "problem_id": 77525,
+    "added_cdl": [
+      "MirrorCongruentBetweenTriangle(DEA,DBE)",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77526": {
+    "problem_id": 77526,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77527": {
+    "problem_id": 77527,
+    "added_cdl": [
+      "IsoscelesTriangle(ABC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77528": {
+    "problem_id": 77528,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77529": {
+    "problem_id": 77529,
+    "added_cdl": [
+      "Equation(ma_abc+ma_bca+ma_ead-180)",
+      "Equal(MeasureOfAngle(EAD),MeasureOfAngle(ABE))",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77530": {
+    "problem_id": 77530,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(EAD),MeasureOfAngle(ABE))",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77531": {
+    "problem_id": 77531,
+    "added_cdl": [
+      "MirrorCongruentBetweenTriangle(DEA,DBE)",
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77532": {
+    "problem_id": 77532,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77533": {
+    "problem_id": 77533,
+    "added_cdl": [
+      "IsoscelesTriangle(ABC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77534": {
+    "problem_id": 77534,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(EBC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)",
+      "triangle_property_angle_sum(1,ABC)",
+      "angle_addition(1,DBE,EBC)"
+    ]
+  },
+  "77535": {
+    "problem_id": 77535,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  },
+  "77536": {
+    "problem_id": 77536,
+    "added_cdl": [
+      "IsoscelesTriangle(ABC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  },
+  "77537": {
+    "problem_id": 77537,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ABC))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  },
+  "77538": {
+    "problem_id": 77538,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ABC),MeasureOfAngle(BCA))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  },
+  "77539": {
+    "problem_id": 77539,
+    "added_cdl": [
+      "IsoscelesTriangle(ABC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  },
+  "77540": {
+    "problem_id": 77540,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "70",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,ABC)",
+      "isosceles_triangle_property_angle_equal(1,ABC)",
+      "triangle_property_angle_sum(1,ABC)"
+    ]
+  },
+  "77541": {
+    "problem_id": 77541,
+    "added_cdl": [
+      "MirrorCongruentBetweenTriangle(DEA,DBE)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABE))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)"
+    ]
+  },
+  "77542": {
+    "problem_id": 77542,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ABE))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "mirror_congruent_triangle_judgment_sas(1,DEA,DBE)",
+      "mirror_congruent_triangle_property_angle_equal(1,ADE,BED)"
+    ]
+  }
+}

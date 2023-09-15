@@ -1,0 +1,737 @@
+{
+  "57035": {
+    "problem_id": 57035,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(C,AB))",
+    "problem_answer": "IsMidpointOfLine(C,AB)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)"
+    ]
+  },
+  "57036": {
+    "problem_id": 57036,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(C,BA))",
+    "problem_answer": "IsMidpointOfLine(C,BA)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)"
+    ]
+  },
+  "57037": {
+    "problem_id": 57037,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AC),LengthOfLine(CB))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)"
+    ]
+  },
+  "57038": {
+    "problem_id": 57038,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(DAB))",
+    "problem_answer": "IsoscelesTriangle(DAB)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)"
+    ]
+  },
+  "57039": {
+    "problem_id": 57039,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(DAC),MeasureOfAngle(ABD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57040": {
+    "problem_id": 57040,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(DAC),MeasureOfAngle(ABD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57041": {
+    "problem_id": 57041,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57042": {
+    "problem_id": 57042,
+    "added_cdl": [
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57043": {
+    "problem_id": 57043,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57044": {
+    "problem_id": 57044,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57045": {
+    "problem_id": 57045,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57046": {
+    "problem_id": 57046,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57047": {
+    "problem_id": 57047,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57048": {
+    "problem_id": 57048,
+    "added_cdl": [
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57049": {
+    "problem_id": 57049,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57050": {
+    "problem_id": 57050,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57051": {
+    "problem_id": 57051,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57052": {
+    "problem_id": 57052,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57053": {
+    "problem_id": 57053,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57054": {
+    "problem_id": 57054,
+    "added_cdl": [
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57055": {
+    "problem_id": 57055,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57056": {
+    "problem_id": 57056,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57057": {
+    "problem_id": 57057,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57058": {
+    "problem_id": 57058,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EA))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57059": {
+    "problem_id": 57059,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57060": {
+    "problem_id": 57060,
+    "added_cdl": [
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57061": {
+    "problem_id": 57061,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57062": {
+    "problem_id": 57062,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57063": {
+    "problem_id": 57063,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57064": {
+    "problem_id": 57064,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9*sqrt(2)",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "sine_theorem(1,ABD)",
+      "triangle_property_angle_sum(1,DAB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57065": {
+    "problem_id": 57065,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57066": {
+    "problem_id": 57066,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57067": {
+    "problem_id": 57067,
+    "added_cdl": [
+      "IsMidpointOfLine(C,AB)",
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57068": {
+    "problem_id": 57068,
+    "added_cdl": [
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57069": {
+    "problem_id": 57069,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,DAEB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57070": {
+    "problem_id": 57070,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "sine_theorem(1,ABD)",
+      "parallelogram_area_formula_sine(1,DAEB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57071": {
+    "problem_id": 57071,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "sine_theorem(1,ABD)",
+      "parallelogram_area_formula_sine(1,DAEB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57072": {
+    "problem_id": 57072,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DAEB))",
+    "problem_answer": "162",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57073": {
+    "problem_id": 57073,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "IsMidpointOfLine(C,AB)",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DAEB))",
+    "problem_answer": "162",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57074": {
+    "problem_id": 57074,
+    "added_cdl": [
+      "IsMidpointOfLine(C,AB)",
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DAEB))",
+    "problem_answer": "162",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57075": {
+    "problem_id": 57075,
+    "added_cdl": [
+      "Equation(aq_daeb-ll_da*ll_ea*sin(pi*ma_dae/180))",
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DAEB))",
+    "problem_answer": "162",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57076": {
+    "problem_id": 57076,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abd/180)-ll_da*sin(pi*ma_bda/180))",
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DAEB))",
+    "problem_answer": "162",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,DAEB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57077": {
+    "problem_id": 57077,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DAEB))",
+    "problem_answer": "162",
+    "theorem_seqs": [
+      "sine_theorem(1,ABD)",
+      "parallelogram_area_formula_sine(1,DAEB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57078": {
+    "problem_id": 57078,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DAEB))",
+    "problem_answer": "162",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "sine_theorem(1,ABD)",
+      "parallelogram_area_formula_sine(1,DAEB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)",
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57079": {
+    "problem_id": 57079,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CB))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)"
+    ]
+  },
+  "57080": {
+    "problem_id": 57080,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ac-ll_cb)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)"
+    ]
+  },
+  "57081": {
+    "problem_id": 57081,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "18",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "parallelogram_property_diagonal_bisection(1,AEBD,C)"
+    ]
+  },
+  "57082": {
+    "problem_id": 57082,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57083": {
+    "problem_id": 57083,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57084": {
+    "problem_id": 57084,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DAC))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57085": {
+    "problem_id": 57085,
+    "added_cdl": [
+      "IsoscelesTriangle(DAB)",
+      "Equation(ma_abd+ma_bda+ma_dab-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABD))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57086": {
+    "problem_id": 57086,
+    "added_cdl": [
+      "Equation(ma_abd+ma_bda+ma_dab-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABD))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  },
+  "57087": {
+    "problem_id": 57087,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ABD))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAB)",
+      "isosceles_triangle_judgment_line_equal(1,DAB)",
+      "isosceles_triangle_property_angle_equal(1,DAB)"
+    ]
+  }
+}

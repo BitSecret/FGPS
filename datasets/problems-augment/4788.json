@@ -1,0 +1,950 @@
+{
+  "116045": {
+    "problem_id": 116045,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(CD,OD))",
+    "problem_answer": "PerpendicularBetweenLine(CD,OD)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  },
+  "116046": {
+    "problem_id": 116046,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  },
+  "116047": {
+    "problem_id": 116047,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "116048": {
+    "problem_id": 116048,
+    "added_cdl": [
+      "Equation(ma_aod+ma_dao+ma_oda-180)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116049": {
+    "problem_id": 116049,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116050": {
+    "problem_id": 116050,
+    "added_cdl": [
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116051": {
+    "problem_id": 116051,
+    "added_cdl": [
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116052": {
+    "problem_id": 116052,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116053": {
+    "problem_id": 116053,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116054": {
+    "problem_id": 116054,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116055": {
+    "problem_id": 116055,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116056": {
+    "problem_id": 116056,
+    "added_cdl": [],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116057": {
+    "problem_id": 116057,
+    "added_cdl": [
+      "Equation(ma_aod+ma_dao+ma_oda-180)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116058": {
+    "problem_id": 116058,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116059": {
+    "problem_id": 116059,
+    "added_cdl": [
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116060": {
+    "problem_id": 116060,
+    "added_cdl": [
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116061": {
+    "problem_id": 116061,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116062": {
+    "problem_id": 116062,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116063": {
+    "problem_id": 116063,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116064": {
+    "problem_id": 116064,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116065": {
+    "problem_id": 116065,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ACD))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116066": {
+    "problem_id": 116066,
+    "added_cdl": [
+      "Equation(ma_aod+ma_dao+ma_oda-180)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116067": {
+    "problem_id": 116067,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116068": {
+    "problem_id": 116068,
+    "added_cdl": [
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116069": {
+    "problem_id": 116069,
+    "added_cdl": [
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116070": {
+    "problem_id": 116070,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116071": {
+    "problem_id": 116071,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116072": {
+    "problem_id": 116072,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116073": {
+    "problem_id": 116073,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116074": {
+    "problem_id": 116074,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "sqrt(3)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116075": {
+    "problem_id": 116075,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AOD))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116076": {
+    "problem_id": 116076,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AOD))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116077": {
+    "problem_id": 116077,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(AOD))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "triangle_property_angle_sum(1,DOC)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116078": {
+    "problem_id": 116078,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)"
+    ]
+  },
+  "116079": {
+    "problem_id": 116079,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "triangle_property_angle_sum(1,DOC)"
+    ]
+  },
+  "116080": {
+    "problem_id": 116080,
+    "added_cdl": [
+      "Equation(ma_aod+ma_dao+ma_oda-180)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116081": {
+    "problem_id": 116081,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116082": {
+    "problem_id": 116082,
+    "added_cdl": [
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116083": {
+    "problem_id": 116083,
+    "added_cdl": [
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116084": {
+    "problem_id": 116084,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116085": {
+    "problem_id": 116085,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116086": {
+    "problem_id": 116086,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116087": {
+    "problem_id": 116087,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116088": {
+    "problem_id": 116088,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DAO))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116089": {
+    "problem_id": 116089,
+    "added_cdl": [
+      "Equation(ma_aod+ma_dao+ma_oda-180)",
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116090": {
+    "problem_id": 116090,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_dob+ma_ocd-180)",
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116091": {
+    "problem_id": 116091,
+    "added_cdl": [
+      "Equation(-ll_ad*sin(pi*ma_oda/180)+ll_ao*sin(pi*ma_aod/180))",
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116092": {
+    "problem_id": 116092,
+    "added_cdl": [
+      "Equation(-ll_ao*sin(pi*ma_dao/180)+ll_od*sin(pi*ma_oda/180))",
+      "PerpendicularBetweenLine(CD,OD)",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116093": {
+    "problem_id": 116093,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116094": {
+    "problem_id": 116094,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116095": {
+    "problem_id": 116095,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116096": {
+    "problem_id": 116096,
+    "added_cdl": [
+      "PerpendicularBetweenLine(CD,OD)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116097": {
+    "problem_id": 116097,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "sine_theorem(1,ODA)",
+      "sine_theorem(1,AOD)",
+      "triangle_property_angle_sum(1,DOC)",
+      "triangle_property_angle_sum(1,DAO)",
+      "adjacent_complementary_angle(1,AOD,DOB)"
+    ]
+  },
+  "116098": {
+    "problem_id": 116098,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,CD,O,O)"
+    ]
+  },
+  "116099": {
+    "problem_id": 116099,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "116100": {
+    "problem_id": 116100,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "116101": {
+    "problem_id": 116101,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  },
+  "116102": {
+    "problem_id": 116102,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  },
+  "116103": {
+    "problem_id": 116103,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  }
+}

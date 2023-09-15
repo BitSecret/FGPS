@@ -1,0 +1,806 @@
+{
+  "111763": {
+    "problem_id": 111763,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(BCA))",
+    "problem_answer": "RightTriangle(BCA)",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)"
+    ]
+  },
+  "111764": {
+    "problem_id": 111764,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(BC,AC))",
+    "problem_answer": "PerpendicularBetweenLine(BC,AC)",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)"
+    ]
+  },
+  "111765": {
+    "problem_id": 111765,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(OM,BM))",
+    "problem_answer": "PerpendicularBetweenLine(OM,BM)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)"
+    ]
+  },
+  "111766": {
+    "problem_id": 111766,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(CM,O))",
+    "problem_answer": "IsDiameterOfCircle(CM,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)"
+    ]
+  },
+  "111767": {
+    "problem_id": 111767,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(MC,O))",
+    "problem_answer": "IsDiameterOfCircle(MC,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)"
+    ]
+  },
+  "111768": {
+    "problem_id": 111768,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(PQ,O))",
+    "problem_answer": "IsDiameterOfCircle(PQ,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)"
+    ]
+  },
+  "111769": {
+    "problem_id": 111769,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(QP,O))",
+    "problem_answer": "IsDiameterOfCircle(QP,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)"
+    ]
+  },
+  "111770": {
+    "problem_id": 111770,
+    "added_cdl": [
+      "IsDiameterOfCircle(CM,O)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(CM),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,CM,O)"
+    ]
+  },
+  "111771": {
+    "problem_id": 111771,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(CM),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)"
+    ]
+  },
+  "111772": {
+    "problem_id": 111772,
+    "added_cdl": [
+      "IsDiameterOfCircle(PQ,O)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,PQ,O)"
+    ]
+  },
+  "111773": {
+    "problem_id": 111773,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)"
+    ]
+  },
+  "111774": {
+    "problem_id": 111774,
+    "added_cdl": [
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111775": {
+    "problem_id": 111775,
+    "added_cdl": [
+      "IsDiameterOfCircle(CM,O)",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111776": {
+    "problem_id": 111776,
+    "added_cdl": [
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111777": {
+    "problem_id": 111777,
+    "added_cdl": [
+      "IsDiameterOfCircle(PQ,O)",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111778": {
+    "problem_id": 111778,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111779": {
+    "problem_id": 111779,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111780": {
+    "problem_id": 111780,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111781": {
+    "problem_id": 111781,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "13",
+    "theorem_seqs": [
+      "sine_theorem(1,ABC)",
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111782": {
+    "problem_id": 111782,
+    "added_cdl": [
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111783": {
+    "problem_id": 111783,
+    "added_cdl": [
+      "IsDiameterOfCircle(CM,O)",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111784": {
+    "problem_id": 111784,
+    "added_cdl": [
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111785": {
+    "problem_id": 111785,
+    "added_cdl": [
+      "IsDiameterOfCircle(PQ,O)",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111786": {
+    "problem_id": 111786,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111787": {
+    "problem_id": 111787,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111788": {
+    "problem_id": 111788,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111789": {
+    "problem_id": 111789,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "sine_theorem(1,ABC)",
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111790": {
+    "problem_id": 111790,
+    "added_cdl": [
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111791": {
+    "problem_id": 111791,
+    "added_cdl": [
+      "IsDiameterOfCircle(CM,O)",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111792": {
+    "problem_id": 111792,
+    "added_cdl": [
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111793": {
+    "problem_id": 111793,
+    "added_cdl": [
+      "IsDiameterOfCircle(PQ,O)",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111794": {
+    "problem_id": 111794,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111795": {
+    "problem_id": 111795,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111796": {
+    "problem_id": 111796,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111797": {
+    "problem_id": 111797,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "sine_theorem(1,ABC)",
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111798": {
+    "problem_id": 111798,
+    "added_cdl": [
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111799": {
+    "problem_id": 111799,
+    "added_cdl": [
+      "IsDiameterOfCircle(CM,O)",
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111800": {
+    "problem_id": 111800,
+    "added_cdl": [
+      "Equal(LengthOfLine(PQ),DiameterOfCircle(O))",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111801": {
+    "problem_id": 111801,
+    "added_cdl": [
+      "IsDiameterOfCircle(PQ,O)",
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111802": {
+    "problem_id": 111802,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111803": {
+    "problem_id": 111803,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111804": {
+    "problem_id": 111804,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111805": {
+    "problem_id": 111805,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(PQ))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "sine_theorem(1,ABC)",
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "diameter_of_circle_judgment_pass_centre(1,POQ,O)",
+      "diameter_of_circle_property_length_equal(1,PQ,O)",
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111806": {
+    "problem_id": 111806,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCP))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)"
+    ]
+  },
+  "111807": {
+    "problem_id": 111807,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CMB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)"
+    ]
+  },
+  "111808": {
+    "problem_id": 111808,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ABQ))",
+    "problem_answer": "180*asin(5/13)/pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)"
+    ]
+  },
+  "111809": {
+    "problem_id": 111809,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ABQ))",
+    "problem_answer": "180*asin(5/13)/pi",
+    "theorem_seqs": [
+      "sine_theorem(1,ABC)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)"
+    ]
+  },
+  "111810": {
+    "problem_id": 111810,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CM))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111811": {
+    "problem_id": 111811,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CM))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111812": {
+    "problem_id": 111812,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CM))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111813": {
+    "problem_id": 111813,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CM))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "sine_theorem(1,ABC)",
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111814": {
+    "problem_id": 111814,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))",
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111815": {
+    "problem_id": 111815,
+    "added_cdl": [
+      "Equation(ll_ab*sin(pi*ma_abc/180)-ll_ac*sin(pi*ma_bca/180))",
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111816": {
+    "problem_id": 111816,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OM,BM)",
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "sine_theorem(1,ABC)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111817": {
+    "problem_id": 111817,
+    "added_cdl": [
+      "Equal(LengthOfLine(CM),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "sine_theorem(1,ABC)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111818": {
+    "problem_id": 111818,
+    "added_cdl": [
+      "IsDiameterOfCircle(CM,O)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "sine_theorem(1,ABC)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  },
+  "111819": {
+    "problem_id": 111819,
+    "added_cdl": [],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "60/13",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,COM,O)",
+      "diameter_of_circle_property_length_equal(1,CM,O)",
+      "tangent_of_circle_property_perpendicular(1,BM,O,O)",
+      "sine_theorem(1,ABC)",
+      "right_triangle_judgment_pythagorean_inverse(1,BCA)",
+      "sine_theorem(1,CMB)"
+    ]
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "172934": {
+    "problem_id": 172934,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,AC))",
+    "problem_answer": "IsMidpointOfLine(O,AC)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172935": {
+    "problem_id": 172935,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,CA))",
+    "problem_answer": "IsMidpointOfLine(O,CA)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172936": {
+    "problem_id": 172936,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AO),LengthOfLine(OC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172937": {
+    "problem_id": 172937,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,BD))",
+    "problem_answer": "IsMidpointOfLine(O,BD)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172938": {
+    "problem_id": 172938,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,DB))",
+    "problem_answer": "IsMidpointOfLine(O,DB)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172939": {
+    "problem_id": 172939,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(BO),LengthOfLine(OD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172940": {
+    "problem_id": 172940,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)"
+    ]
+  },
+  "172941": {
+    "problem_id": 172941,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "24",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172942": {
+    "problem_id": 172942,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "24",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172943": {
+    "problem_id": 172943,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "24",
+    "theorem_seqs": [
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172944": {
+    "problem_id": 172944,
+    "added_cdl": [
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "24",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172945": {
+    "problem_id": 172945,
+    "added_cdl": [
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "24",
+    "theorem_seqs": [
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172946": {
+    "problem_id": 172946,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "24",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172947": {
+    "problem_id": 172947,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "38",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172948": {
+    "problem_id": 172948,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "38",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172949": {
+    "problem_id": 172949,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "38",
+    "theorem_seqs": [
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172950": {
+    "problem_id": 172950,
+    "added_cdl": [
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "38",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172951": {
+    "problem_id": 172951,
+    "added_cdl": [
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "38",
+    "theorem_seqs": [
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172952": {
+    "problem_id": 172952,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "38",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172953": {
+    "problem_id": 172953,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "28",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172954": {
+    "problem_id": 172954,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "28",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172955": {
+    "problem_id": 172955,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "28",
+    "theorem_seqs": [
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172956": {
+    "problem_id": 172956,
+    "added_cdl": [
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "28",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172957": {
+    "problem_id": 172957,
+    "added_cdl": [
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "28",
+    "theorem_seqs": [
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172958": {
+    "problem_id": 172958,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "28",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172959": {
+    "problem_id": 172959,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(PerimeterOfTriangle(COB))",
+    "problem_answer": "59",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172960": {
+    "problem_id": 172960,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ao-ll_oc)",
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(PerimeterOfTriangle(COB))",
+    "problem_answer": "59",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172961": {
+    "problem_id": 172961,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))",
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)"
+    ],
+    "goal_cdl": "Value(PerimeterOfTriangle(COB))",
+    "problem_answer": "59",
+    "theorem_seqs": [
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172962": {
+    "problem_id": 172962,
+    "added_cdl": [
+      "Equation(-ll_bo-ll_cb-ll_oc+pt_cob)",
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(PerimeterOfTriangle(COB))",
+    "problem_answer": "59",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172963": {
+    "problem_id": 172963,
+    "added_cdl": [
+      "Equal(LengthOfLine(CB),LengthOfLine(AD))"
+    ],
+    "goal_cdl": "Value(PerimeterOfTriangle(COB))",
+    "problem_answer": "59",
+    "theorem_seqs": [
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172964": {
+    "problem_id": 172964,
+    "added_cdl": [],
+    "goal_cdl": "Value(PerimeterOfTriangle(COB))",
+    "problem_answer": "59",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)",
+      "triangle_perimeter_formula(1,COB)",
+      "line_addition(1,BO,OD)",
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172965": {
+    "problem_id": 172965,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ao-ll_oc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172966": {
+    "problem_id": 172966,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172967": {
+    "problem_id": 172967,
+    "added_cdl": [
+      "Equation(ll_ac-ll_ao-ll_oc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172968": {
+    "problem_id": 172968,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "line_addition(1,AO,OC)",
+      "parallelogram_property_diagonal_bisection(1,ABCD,O)"
+    ]
+  },
+  "172969": {
+    "problem_id": 172969,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BO))",
+    "problem_answer": "19",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172970": {
+    "problem_id": 172970,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BO))",
+    "problem_answer": "19",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172971": {
+    "problem_id": 172971,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "19",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172972": {
+    "problem_id": 172972,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "19",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172973": {
+    "problem_id": 172973,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CB))",
+    "problem_answer": "28",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)"
+    ]
+  }
+}

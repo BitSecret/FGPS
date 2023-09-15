@@ -1,0 +1,584 @@
+{
+  "88699": {
+    "problem_id": 88699,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidsegmentOfTriangle(FG,OBC))",
+    "problem_answer": "IsMidsegmentOfTriangle(FG,OBC)",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)"
+    ]
+  },
+  "88700": {
+    "problem_id": 88700,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidsegmentOfTriangle(FE,BOA))",
+    "problem_answer": "IsMidsegmentOfTriangle(FE,BOA)",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BOA)"
+    ]
+  },
+  "88701": {
+    "problem_id": 88701,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidsegmentOfTriangle(DG,CAO))",
+    "problem_answer": "IsMidsegmentOfTriangle(DG,CAO)",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)"
+    ]
+  },
+  "88702": {
+    "problem_id": 88702,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidsegmentOfTriangle(ED,ABC))",
+    "problem_answer": "IsMidsegmentOfTriangle(ED,ABC)",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)"
+    ]
+  },
+  "88703": {
+    "problem_id": 88703,
+    "added_cdl": [
+      "Equation(-ll_ao/2+ll_fe)",
+      "Equation(-ll_ao/2+ll_dg)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88704": {
+    "problem_id": 88704,
+    "added_cdl": [
+      "Equation(-ll_ao/2+ll_dg)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88705": {
+    "problem_id": 88705,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(DG,CAO)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88706": {
+    "problem_id": 88706,
+    "added_cdl": [
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88707": {
+    "problem_id": 88707,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(ED,ABC)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88708": {
+    "problem_id": 88708,
+    "added_cdl": [
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88709": {
+    "problem_id": 88709,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88710": {
+    "problem_id": 88710,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)",
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88711": {
+    "problem_id": 88711,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BOA)",
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)",
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88712": {
+    "problem_id": 88712,
+    "added_cdl": [
+      "Equation(-ll_ao/2+ll_fe)",
+      "Equation(-ll_ao/2+ll_dg)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88713": {
+    "problem_id": 88713,
+    "added_cdl": [
+      "Equation(-ll_ao/2+ll_dg)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88714": {
+    "problem_id": 88714,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(DG,CAO)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88715": {
+    "problem_id": 88715,
+    "added_cdl": [
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88716": {
+    "problem_id": 88716,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(ED,ABC)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88717": {
+    "problem_id": 88717,
+    "added_cdl": [
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88718": {
+    "problem_id": 88718,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88719": {
+    "problem_id": 88719,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)",
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88720": {
+    "problem_id": 88720,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BOA)",
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)",
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88721": {
+    "problem_id": 88721,
+    "added_cdl": [
+      "Equation(-ll_ao/2+ll_fe)",
+      "Equation(-ll_ao/2+ll_dg)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88722": {
+    "problem_id": 88722,
+    "added_cdl": [
+      "Equation(-ll_ao/2+ll_dg)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88723": {
+    "problem_id": 88723,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(DG,CAO)",
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88724": {
+    "problem_id": 88724,
+    "added_cdl": [
+      "Equation(-ll_bc/2+ll_ed)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88725": {
+    "problem_id": 88725,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(ED,ABC)",
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88726": {
+    "problem_id": 88726,
+    "added_cdl": [
+      "Equation(ll_dg+ll_ed+ll_fe+ll_fg-pq_efgd)",
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88727": {
+    "problem_id": 88727,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FG,OBC)",
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88728": {
+    "problem_id": 88728,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)",
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88729": {
+    "problem_id": 88729,
+    "added_cdl": [],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(EFGD))",
+    "problem_answer": "7",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BOA)",
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)",
+      "quadrilateral_perimeter_formula(1,EFGD)",
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)",
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88730": {
+    "problem_id": 88730,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FG,OBC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(FG))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88731": {
+    "problem_id": 88731,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(FG))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FG,OBC)",
+      "midsegment_of_triangle_property_length(1,FG,OBC)"
+    ]
+  },
+  "88732": {
+    "problem_id": 88732,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(FE,BOA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(FE))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,FE,BOA)"
+    ]
+  },
+  "88733": {
+    "problem_id": 88733,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(FE))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,FE,BOA)",
+      "midsegment_of_triangle_property_length(1,FE,BOA)"
+    ]
+  },
+  "88734": {
+    "problem_id": 88734,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(DG,CAO)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DG))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,DG,CAO)"
+    ]
+  },
+  "88735": {
+    "problem_id": 88735,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DG))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,DG,CAO)",
+      "midsegment_of_triangle_property_length(1,DG,CAO)"
+    ]
+  },
+  "88736": {
+    "problem_id": 88736,
+    "added_cdl": [
+      "IsMidsegmentOfTriangle(ED,ABC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ED))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_property_length(1,ED,ABC)"
+    ]
+  },
+  "88737": {
+    "problem_id": 88737,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(ED))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "midsegment_of_triangle_judgment_midpoint(1,ED,ABC)",
+      "midsegment_of_triangle_property_length(1,ED,ABC)"
+    ]
+  }
+}

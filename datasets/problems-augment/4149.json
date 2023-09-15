@@ -1,0 +1,783 @@
+{
+  "99997": {
+    "problem_id": 99997,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(ADC))",
+    "problem_answer": "RightTriangle(ADC)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)"
+    ]
+  },
+  "99998": {
+    "problem_id": 99998,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(AD,CD))",
+    "problem_answer": "PerpendicularBetweenLine(AD,CD)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)"
+    ]
+  },
+  "99999": {
+    "problem_id": 99999,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(BCA))",
+    "problem_answer": "RightTriangle(BCA)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  },
+  "100000": {
+    "problem_id": 100000,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(BC,AC))",
+    "problem_answer": "PerpendicularBetweenLine(BC,AC)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  },
+  "100001": {
+    "problem_id": 100001,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100002": {
+    "problem_id": 100002,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100003": {
+    "problem_id": 100003,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100004": {
+    "problem_id": 100004,
+    "added_cdl": [
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100005": {
+    "problem_id": 100005,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100006": {
+    "problem_id": 100006,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100007": {
+    "problem_id": 100007,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "sine_theorem(1,CAD)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100008": {
+    "problem_id": 100008,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100009": {
+    "problem_id": 100009,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100010": {
+    "problem_id": 100010,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100011": {
+    "problem_id": 100011,
+    "added_cdl": [
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100012": {
+    "problem_id": 100012,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100013": {
+    "problem_id": 100013,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100014": {
+    "problem_id": 100014,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "sine_theorem(1,CAD)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100015": {
+    "problem_id": 100015,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100016": {
+    "problem_id": 100016,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100017": {
+    "problem_id": 100017,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100018": {
+    "problem_id": 100018,
+    "added_cdl": [
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100019": {
+    "problem_id": 100019,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100020": {
+    "problem_id": 100020,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100021": {
+    "problem_id": 100021,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "sine_theorem(1,CAD)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100022": {
+    "problem_id": 100022,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100023": {
+    "problem_id": 100023,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100024": {
+    "problem_id": 100024,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100025": {
+    "problem_id": 100025,
+    "added_cdl": [
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100026": {
+    "problem_id": 100026,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100027": {
+    "problem_id": 100027,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100028": {
+    "problem_id": 100028,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ADC))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "sine_theorem(1,CAD)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100029": {
+    "problem_id": 100029,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "180*acos(sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100030": {
+    "problem_id": 100030,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_dc*cos(pi*ma_dca/180)+ll_ad**2-ll_dc**2)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))",
+      "RightTriangle(ADC)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "180*acos(sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100031": {
+    "problem_id": 100031,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "180*acos(sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100032": {
+    "problem_id": 100032,
+    "added_cdl": [
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "180*acos(sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100033": {
+    "problem_id": 100033,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "180*acos(sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100034": {
+    "problem_id": 100034,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "180*acos(sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100035": {
+    "problem_id": 100035,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DCA))",
+    "problem_answer": "180*acos(sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "sine_theorem(1,CAD)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,CAD)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100036": {
+    "problem_id": 100036,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_ba**2+ll_bc**2)",
+      "RightTriangle(ADC)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "4*sqrt(5)/5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100037": {
+    "problem_id": 100037,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "RightTriangle(ADC)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "4*sqrt(5)/5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100038": {
+    "problem_id": 100038,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "RightTriangle(ADC)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "4*sqrt(5)/5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100039": {
+    "problem_id": 100039,
+    "added_cdl": [
+      "RightTriangle(ADC)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "4*sqrt(5)/5",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100040": {
+    "problem_id": 100040,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "4*sqrt(5)/5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADC)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100041": {
+    "problem_id": 100041,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "4*sqrt(5)/5",
+    "theorem_seqs": [
+      "sine_theorem(1,CAD)",
+      "right_triangle_judgment_angle(1,ADC)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "right_triangle_property_pythagorean(1,ADC)"
+    ]
+  },
+  "100042": {
+    "problem_id": 100042,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "2*sqrt(5)/5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100043": {
+    "problem_id": 100043,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "2*sqrt(5)/5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100044": {
+    "problem_id": 100044,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_cab/180)-ll_dc*sin(pi*ma_adc/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "2*sqrt(5)/5",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100045": {
+    "problem_id": 100045,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "2*sqrt(5)/5",
+    "theorem_seqs": [
+      "sine_theorem(1,CAD)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100046": {
+    "problem_id": 100046,
+    "added_cdl": [
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "sqrt(5)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100047": {
+    "problem_id": 100047,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BA))",
+    "problem_answer": "sqrt(5)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100048": {
+    "problem_id": 100048,
+    "added_cdl": [
+      "Equation(-ll_ac**2+2*ll_ac*ll_ba*cos(pi*ma_cab/180)-ll_ba**2+ll_bc**2)",
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "180*acos(2*sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100049": {
+    "problem_id": 100049,
+    "added_cdl": [
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "180*acos(2*sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "cosine_theorem(1,ABC)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "100050": {
+    "problem_id": 100050,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CAD))",
+    "problem_answer": "180*acos(2*sqrt(5)/5)/pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "cosine_theorem(1,ABC)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  }
+}

@@ -1,0 +1,765 @@
+{
+  "176091": {
+    "problem_id": 176091,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(BC,OC))",
+    "problem_answer": "PerpendicularBetweenLine(BC,OC)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,BC,M,O)"
+    ]
+  },
+  "176092": {
+    "problem_id": 176092,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(OC,AC))",
+    "problem_answer": "PerpendicularBetweenLine(OC,AC)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)"
+    ]
+  },
+  "176093": {
+    "problem_id": 176093,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OC),RadiusOfCircle(M))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176094": {
+    "problem_id": 176094,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OB),RadiusOfCircle(N))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,N)"
+    ]
+  },
+  "176095": {
+    "problem_id": 176095,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,N)"
+    ]
+  },
+  "176096": {
+    "problem_id": 176096,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,OC)"
+    ],
+    "goal_cdl": "Relation(RightTriangle(BCO))",
+    "problem_answer": "RightTriangle(BCO)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCO)"
+    ]
+  },
+  "176097": {
+    "problem_id": 176097,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(BCO))",
+    "problem_answer": "RightTriangle(BCO)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,BC,M,O)",
+      "right_triangle_judgment_angle(1,BCO)"
+    ]
+  },
+  "176098": {
+    "problem_id": 176098,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OC,AC)"
+    ],
+    "goal_cdl": "Relation(RightTriangle(OCA))",
+    "problem_answer": "RightTriangle(OCA)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,OCA)"
+    ]
+  },
+  "176099": {
+    "problem_id": 176099,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(OCA))",
+    "problem_answer": "RightTriangle(OCA)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "right_triangle_judgment_angle(1,OCA)"
+    ]
+  },
+  "176100": {
+    "problem_id": 176100,
+    "added_cdl": [
+      "Equal(LengthOfLine(OB),RadiusOfCircle(N))",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)",
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equation(ll_ab-ll_bc-ll_ca)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176101": {
+    "problem_id": 176101,
+    "added_cdl": [
+      "Equation(ll_ab-ll_bc-ll_ca)",
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176102": {
+    "problem_id": 176102,
+    "added_cdl": [
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176103": {
+    "problem_id": 176103,
+    "added_cdl": [
+      "RightTriangle(OCA)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176104": {
+    "problem_id": 176104,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "PerpendicularBetweenLine(OC,AC)",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176105": {
+    "problem_id": 176105,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OC,AC)",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176106": {
+    "problem_id": 176106,
+    "added_cdl": [
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176107": {
+    "problem_id": 176107,
+    "added_cdl": [
+      "RightTriangle(BCO)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176108": {
+    "problem_id": 176108,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,OC)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176109": {
+    "problem_id": 176109,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(M))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,BC,M,O)",
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176110": {
+    "problem_id": 176110,
+    "added_cdl": [
+      "Equal(LengthOfLine(OB),RadiusOfCircle(N))",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)",
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equation(ll_ab-ll_bc-ll_ca)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176111": {
+    "problem_id": 176111,
+    "added_cdl": [
+      "Equation(ll_ab-ll_bc-ll_ca)",
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176112": {
+    "problem_id": 176112,
+    "added_cdl": [
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176113": {
+    "problem_id": 176113,
+    "added_cdl": [
+      "RightTriangle(OCA)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176114": {
+    "problem_id": 176114,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "PerpendicularBetweenLine(OC,AC)",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176115": {
+    "problem_id": 176115,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OC,AC)",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176116": {
+    "problem_id": 176116,
+    "added_cdl": [
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176117": {
+    "problem_id": 176117,
+    "added_cdl": [
+      "RightTriangle(BCO)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176118": {
+    "problem_id": 176118,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,OC)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176119": {
+    "problem_id": 176119,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(N))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,BC,M,O)",
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176120": {
+    "problem_id": 176120,
+    "added_cdl": [
+      "Equal(LengthOfLine(OB),RadiusOfCircle(N))",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)",
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equation(ll_ab-ll_bc-ll_ca)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176121": {
+    "problem_id": 176121,
+    "added_cdl": [
+      "Equation(ll_ab-ll_bc-ll_ca)",
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176122": {
+    "problem_id": 176122,
+    "added_cdl": [
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176123": {
+    "problem_id": 176123,
+    "added_cdl": [
+      "RightTriangle(OCA)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176124": {
+    "problem_id": 176124,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "PerpendicularBetweenLine(OC,AC)",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176125": {
+    "problem_id": 176125,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OC,AC)",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176126": {
+    "problem_id": 176126,
+    "added_cdl": [
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176127": {
+    "problem_id": 176127,
+    "added_cdl": [
+      "RightTriangle(BCO)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176128": {
+    "problem_id": 176128,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,OC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176129": {
+    "problem_id": 176129,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,BC,M,O)",
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "line_addition(1,AC,CB)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176130": {
+    "problem_id": 176130,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCO))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,BC,M,O)"
+    ]
+  },
+  "176131": {
+    "problem_id": 176131,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(OCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)"
+    ]
+  },
+  "176132": {
+    "problem_id": 176132,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176133": {
+    "problem_id": 176133,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,N)"
+    ]
+  },
+  "176134": {
+    "problem_id": 176134,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,N)"
+    ]
+  },
+  "176135": {
+    "problem_id": 176135,
+    "added_cdl": [
+      "Equal(LengthOfLine(OB),RadiusOfCircle(N))",
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176136": {
+    "problem_id": 176136,
+    "added_cdl": [
+      "Equation(ll_bc**2-ll_ob**2+ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176137": {
+    "problem_id": 176137,
+    "added_cdl": [
+      "RightTriangle(BCO)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCO)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176138": {
+    "problem_id": 176138,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,OC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176139": {
+    "problem_id": 176139,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,BC,M,O)",
+      "right_triangle_judgment_angle(1,BCO)",
+      "right_triangle_property_pythagorean(1,BCO)",
+      "radius_of_circle_property_length_equal(1,OB,N)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176140": {
+    "problem_id": 176140,
+    "added_cdl": [
+      "Equation(ll_ca**2-ll_oa**2+ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176141": {
+    "problem_id": 176141,
+    "added_cdl": [
+      "RightTriangle(OCA)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,OCA)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176142": {
+    "problem_id": 176142,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(N))",
+      "PerpendicularBetweenLine(OC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176143": {
+    "problem_id": 176143,
+    "added_cdl": [
+      "PerpendicularBetweenLine(OC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  },
+  "176144": {
+    "problem_id": 176144,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(1,AC,M,O)",
+      "radius_of_circle_property_length_equal(1,OA,N)",
+      "right_triangle_judgment_angle(1,OCA)",
+      "right_triangle_property_pythagorean(1,OCA)",
+      "radius_of_circle_property_length_equal(1,OC,M)"
+    ]
+  }
+}

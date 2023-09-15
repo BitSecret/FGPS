@@ -1,0 +1,521 @@
+{
+  "7959": {
+    "problem_id": 7959,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(DH,O))",
+    "problem_answer": "IsDiameterOfCircle(DH,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)"
+    ]
+  },
+  "7960": {
+    "problem_id": 7960,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(HD,O))",
+    "problem_answer": "IsDiameterOfCircle(HD,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)"
+    ]
+  },
+  "7961": {
+    "problem_id": 7961,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(BC),LengthOfLine(HD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7962": {
+    "problem_id": 7962,
+    "added_cdl": [
+      "IsDiameterOfCircle(DH,O)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(HD),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,DH,O)"
+    ]
+  },
+  "7963": {
+    "problem_id": 7963,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(HD),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)"
+    ]
+  },
+  "7964": {
+    "problem_id": 7964,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ODH,O)"
+    ]
+  },
+  "7965": {
+    "problem_id": 7965,
+    "added_cdl": [
+      "Equal(LengthOfLine(HD),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BH))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7966": {
+    "problem_id": 7966,
+    "added_cdl": [
+      "IsDiameterOfCircle(DH,O)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BH))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7967": {
+    "problem_id": 7967,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BH))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7968": {
+    "problem_id": 7968,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BH))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7969": {
+    "problem_id": 7969,
+    "added_cdl": [
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BH))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7970": {
+    "problem_id": 7970,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BH))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "sector_area_formula(1,ODH)",
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7971": {
+    "problem_id": 7971,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BH))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "sector_area_formula(1,ODH)",
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7972": {
+    "problem_id": 7972,
+    "added_cdl": [
+      "Equal(LengthOfLine(HD),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7973": {
+    "problem_id": 7973,
+    "added_cdl": [
+      "IsDiameterOfCircle(DH,O)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7974": {
+    "problem_id": 7974,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7975": {
+    "problem_id": 7975,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7976": {
+    "problem_id": 7976,
+    "added_cdl": [
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7977": {
+    "problem_id": 7977,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "sector_area_formula(1,ODH)",
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7978": {
+    "problem_id": 7978,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "sector_area_formula(1,ODH)",
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7979": {
+    "problem_id": 7979,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfQuadrilateral(DCBH))",
+    "problem_answer": "96",
+    "theorem_seqs": [
+      "parallelogram_area_formula_sine(1,CBHD)"
+    ]
+  },
+  "7980": {
+    "problem_id": 7980,
+    "added_cdl": [
+      "Equal(LengthOfLine(HD),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ODH))",
+    "problem_answer": "8*pi",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7981": {
+    "problem_id": 7981,
+    "added_cdl": [
+      "IsDiameterOfCircle(DH,O)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ODH))",
+    "problem_answer": "8*pi",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7982": {
+    "problem_id": 7982,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(HOD),180)",
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ODH))",
+    "problem_answer": "8*pi",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7983": {
+    "problem_id": 7983,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))",
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ODH))",
+    "problem_answer": "8*pi",
+    "theorem_seqs": [
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7984": {
+    "problem_id": 7984,
+    "added_cdl": [
+      "Equation(as_odh-pi*mar_odh*rc_o**2/360)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ODH))",
+    "problem_answer": "8*pi",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7985": {
+    "problem_id": 7985,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ODH))",
+    "problem_answer": "8*pi",
+    "theorem_seqs": [
+      "sector_area_formula(1,ODH)",
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7986": {
+    "problem_id": 7986,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfSector(ODH))",
+    "problem_answer": "8*pi",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "sector_area_formula(1,ODH)",
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7987": {
+    "problem_id": 7987,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(HD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7988": {
+    "problem_id": 7988,
+    "added_cdl": [
+      "Equal(LengthOfLine(HD),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7989": {
+    "problem_id": 7989,
+    "added_cdl": [
+      "IsDiameterOfCircle(DH,O)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7990": {
+    "problem_id": 7990,
+    "added_cdl": [],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7991": {
+    "problem_id": 7991,
+    "added_cdl": [
+      "Equal(LengthOfLine(HD),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7992": {
+    "problem_id": 7992,
+    "added_cdl": [
+      "IsDiameterOfCircle(DH,O)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7993": {
+    "problem_id": 7993,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7994": {
+    "problem_id": 7994,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,DOH,O)",
+      "diameter_of_circle_property_length_equal(1,DH,O)",
+      "parallelogram_property_opposite_line_equal(1,CBHD)"
+    ]
+  },
+  "7995": {
+    "problem_id": 7995,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(HOD))",
+    "problem_answer": "180",
+    "theorem_seqs": [
+      "flat_angle(1,HOD)"
+    ]
+  },
+  "7996": {
+    "problem_id": 7996,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ODH),MeasureOfAngle(HOD))"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ODH))",
+    "problem_answer": "180",
+    "theorem_seqs": [
+      "flat_angle(1,HOD)"
+    ]
+  },
+  "7997": {
+    "problem_id": 7997,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(ODH))",
+    "problem_answer": "180",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ODH,O)",
+      "flat_angle(1,HOD)"
+    ]
+  }
+}

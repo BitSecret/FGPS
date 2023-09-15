@@ -1,0 +1,747 @@
+{
+  "93585": {
+    "problem_id": 93585,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)"
+    ]
+  },
+  "93586": {
+    "problem_id": 93586,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)"
+    ]
+  },
+  "93587": {
+    "problem_id": 93587,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  },
+  "93588": {
+    "problem_id": 93588,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(OC),LengthOfLine(OD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  },
+  "93589": {
+    "problem_id": 93589,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OC),LengthOfLine(OD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)"
+    ]
+  },
+  "93590": {
+    "problem_id": 93590,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(OCD))",
+    "problem_answer": "IsoscelesTriangle(OCD)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)"
+    ]
+  },
+  "93591": {
+    "problem_id": 93591,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(OCD))",
+    "problem_answer": "IsoscelesTriangle(OCD)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)"
+    ]
+  },
+  "93592": {
+    "problem_id": 93592,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(OCD))",
+    "problem_answer": "IsoscelesTriangle(OCD)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)"
+    ]
+  },
+  "93593": {
+    "problem_id": 93593,
+    "added_cdl": [
+      "IsoscelesTriangle(OCD)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,OCD)"
+    ]
+  },
+  "93594": {
+    "problem_id": 93594,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)"
+    ]
+  },
+  "93595": {
+    "problem_id": 93595,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)"
+    ]
+  },
+  "93596": {
+    "problem_id": 93596,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)"
+    ]
+  },
+  "93597": {
+    "problem_id": 93597,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallel_property_alternate_interior_angle(2,BO,CD)"
+    ]
+  },
+  "93598": {
+    "problem_id": 93598,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equation(-ma_cob+ma_dob-ma_doc)",
+      "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93599": {
+    "problem_id": 93599,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equation(-ma_cob+ma_dob-ma_doc)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93600": {
+    "problem_id": 93600,
+    "added_cdl": [
+      "IsoscelesTriangle(OCD)",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equation(-ma_cob+ma_dob-ma_doc)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93601": {
+    "problem_id": 93601,
+    "added_cdl": [
+      "Equation(-ma_cob+ma_dob-ma_doc)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93602": {
+    "problem_id": 93602,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93603": {
+    "problem_id": 93603,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93604": {
+    "problem_id": 93604,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,OCD)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93605": {
+    "problem_id": 93605,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93606": {
+    "problem_id": 93606,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CAB))",
+    "problem_answer": "25",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93607": {
+    "problem_id": 93607,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equation(-ma_cob+ma_dob-ma_doc)",
+      "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93608": {
+    "problem_id": 93608,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equation(-ma_cob+ma_dob-ma_doc)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93609": {
+    "problem_id": 93609,
+    "added_cdl": [
+      "IsoscelesTriangle(OCD)",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equation(-ma_cob+ma_dob-ma_doc)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93610": {
+    "problem_id": 93610,
+    "added_cdl": [
+      "Equation(-ma_cob+ma_dob-ma_doc)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93611": {
+    "problem_id": 93611,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93612": {
+    "problem_id": 93612,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93613": {
+    "problem_id": 93613,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,OCD)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93614": {
+    "problem_id": 93614,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93615": {
+    "problem_id": 93615,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DOB))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "angle_addition(1,DOC,COB)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93616": {
+    "problem_id": 93616,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(OBC))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93617": {
+    "problem_id": 93617,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(COB))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93618": {
+    "problem_id": 93618,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(COB))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93619": {
+    "problem_id": 93619,
+    "added_cdl": [
+      "Equation(ma_cdo+ma_doc+ma_ocd-180)",
+      "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93620": {
+    "problem_id": 93620,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93621": {
+    "problem_id": 93621,
+    "added_cdl": [
+      "IsoscelesTriangle(OCD)",
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93622": {
+    "problem_id": 93622,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93623": {
+    "problem_id": 93623,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93624": {
+    "problem_id": 93624,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93625": {
+    "problem_id": 93625,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93626": {
+    "problem_id": 93626,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "80",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "triangle_property_angle_sum(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93627": {
+    "problem_id": 93627,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(OCD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93628": {
+    "problem_id": 93628,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(OCD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93629": {
+    "problem_id": 93629,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(OCD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93630": {
+    "problem_id": 93630,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(OCD),MeasureOfAngle(CDO))",
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93631": {
+    "problem_id": 93631,
+    "added_cdl": [
+      "IsoscelesTriangle(OCD)",
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93632": {
+    "problem_id": 93632,
+    "added_cdl": [
+      "Equal(LengthOfLine(OD),RadiusOfCircle(O))",
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93633": {
+    "problem_id": 93633,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OBC),MeasureOfAngle(COB))",
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93634": {
+    "problem_id": 93634,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(COB),MeasureOfAngle(OCD))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OBC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93635": {
+    "problem_id": 93635,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  },
+  "93636": {
+    "problem_id": 93636,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CDO))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "parallel_property_alternate_interior_angle(2,BO,CD)",
+      "arc_property_center_angle(1,OBC,O)",
+      "radius_of_circle_property_length_equal(1,OD,O)",
+      "isosceles_triangle_judgment_line_equal(1,OCD)",
+      "isosceles_triangle_property_angle_equal(1,OCD)",
+      "arc_property_circumference_angle_external(1,OBC,A)"
+    ]
+  }
+}

@@ -1,0 +1,1196 @@
+{
+  "42001": {
+    "problem_id": 42001,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(WXZ))",
+    "problem_answer": "IsoscelesTriangle(WXZ)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,WXZ)"
+    ]
+  },
+  "42002": {
+    "problem_id": 42002,
+    "added_cdl": [
+      "IsoscelesTriangle(WXZ)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(WXT),MeasureOfAngle(XZW))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42003": {
+    "problem_id": 42003,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(WXT),MeasureOfAngle(XZW))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42004": {
+    "problem_id": 42004,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(T,XZ))",
+    "problem_answer": "IsMidpointOfLine(T,XZ)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42005": {
+    "problem_id": 42005,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(T,ZX))",
+    "problem_answer": "IsMidpointOfLine(T,ZX)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42006": {
+    "problem_id": 42006,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(XT),LengthOfLine(TZ))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42007": {
+    "problem_id": 42007,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(T,YW))",
+    "problem_answer": "IsMidpointOfLine(T,YW)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)"
+    ]
+  },
+  "42008": {
+    "problem_id": 42008,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(T,WY))",
+    "problem_answer": "IsMidpointOfLine(T,WY)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)"
+    ]
+  },
+  "42009": {
+    "problem_id": 42009,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(YT),LengthOfLine(WT))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)"
+    ]
+  },
+  "42010": {
+    "problem_id": 42010,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)"
+    ]
+  },
+  "42011": {
+    "problem_id": 42011,
+    "added_cdl": [
+      "IsMidpointOfLine(T,XZ)",
+      "IsMidpointOfLine(T,YW)",
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(TZW))",
+    "problem_answer": "IsoscelesTriangle(TZW)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42012": {
+    "problem_id": 42012,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(TZW))",
+    "problem_answer": "IsoscelesTriangle(TZW)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42013": {
+    "problem_id": 42013,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(TZW))",
+    "problem_answer": "IsoscelesTriangle(TZW)",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42014": {
+    "problem_id": 42014,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(TZW))",
+    "problem_answer": "IsoscelesTriangle(TZW)",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42015": {
+    "problem_id": 42015,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(TZW))",
+    "problem_answer": "IsoscelesTriangle(TZW)",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42016": {
+    "problem_id": 42016,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(TZW))",
+    "problem_answer": "IsoscelesTriangle(TZW)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42017": {
+    "problem_id": 42017,
+    "added_cdl": [
+      "IsMidpointOfLine(T,XZ)",
+      "IsMidpointOfLine(T,YW)",
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(TZ),LengthOfLine(WT))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42018": {
+    "problem_id": 42018,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(TZ),LengthOfLine(WT))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42019": {
+    "problem_id": 42019,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(TZ),LengthOfLine(WT))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42020": {
+    "problem_id": 42020,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(TZ),LengthOfLine(WT))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42021": {
+    "problem_id": 42021,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(TZ),LengthOfLine(WT))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42022": {
+    "problem_id": 42022,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(TZ),LengthOfLine(WT))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)"
+    ]
+  },
+  "42023": {
+    "problem_id": 42023,
+    "added_cdl": [
+      "IsoscelesTriangle(TZW)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ]
+  },
+  "42024": {
+    "problem_id": 42024,
+    "added_cdl": [
+      "IsMidpointOfLine(T,XZ)",
+      "IsMidpointOfLine(T,YW)",
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ]
+  },
+  "42025": {
+    "problem_id": 42025,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ]
+  },
+  "42026": {
+    "problem_id": 42026,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ]
+  },
+  "42027": {
+    "problem_id": 42027,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ]
+  },
+  "42028": {
+    "problem_id": 42028,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ]
+  },
+  "42029": {
+    "problem_id": 42029,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)"
+    ]
+  },
+  "42030": {
+    "problem_id": 42030,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(WXT),MeasureOfAngle(XZW))",
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42031": {
+    "problem_id": 42031,
+    "added_cdl": [
+      "IsoscelesTriangle(WXZ)",
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42032": {
+    "problem_id": 42032,
+    "added_cdl": [
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42033": {
+    "problem_id": 42033,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42034": {
+    "problem_id": 42034,
+    "added_cdl": [
+      "IsoscelesTriangle(TZW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42035": {
+    "problem_id": 42035,
+    "added_cdl": [
+      "IsMidpointOfLine(T,XZ)",
+      "IsMidpointOfLine(T,YW)",
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42036": {
+    "problem_id": 42036,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42037": {
+    "problem_id": 42037,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42038": {
+    "problem_id": 42038,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42039": {
+    "problem_id": 42039,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42040": {
+    "problem_id": 42040,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(WT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42041": {
+    "problem_id": 42041,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(WXT),MeasureOfAngle(XZW))",
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42042": {
+    "problem_id": 42042,
+    "added_cdl": [
+      "IsoscelesTriangle(WXZ)",
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42043": {
+    "problem_id": 42043,
+    "added_cdl": [
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42044": {
+    "problem_id": 42044,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42045": {
+    "problem_id": 42045,
+    "added_cdl": [
+      "IsoscelesTriangle(TZW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42046": {
+    "problem_id": 42046,
+    "added_cdl": [
+      "IsMidpointOfLine(T,XZ)",
+      "IsMidpointOfLine(T,YW)",
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42047": {
+    "problem_id": 42047,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42048": {
+    "problem_id": 42048,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42049": {
+    "problem_id": 42049,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42050": {
+    "problem_id": 42050,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42051": {
+    "problem_id": 42051,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(WTZ))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)",
+      "triangle_property_angle_sum(1,TZW)"
+    ]
+  },
+  "42052": {
+    "problem_id": 42052,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XZ))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)"
+    ]
+  },
+  "42053": {
+    "problem_id": 42053,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XZ))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "rectangle_property_diagonal_equal(1,XYZW)"
+    ]
+  },
+  "42054": {
+    "problem_id": 42054,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(XZ))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "rectangle_property_diagonal_equal(1,XYZW)"
+    ]
+  },
+  "42055": {
+    "problem_id": 42055,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42056": {
+    "problem_id": 42056,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42057": {
+    "problem_id": 42057,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42058": {
+    "problem_id": 42058,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(XT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42059": {
+    "problem_id": 42059,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(XT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42060": {
+    "problem_id": 42060,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(TZ))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42061": {
+    "problem_id": 42061,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(TZ))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42062": {
+    "problem_id": 42062,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(TZ))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42063": {
+    "problem_id": 42063,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(TZ))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42064": {
+    "problem_id": 42064,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(TZ))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)"
+    ]
+  },
+  "42065": {
+    "problem_id": 42065,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(YW))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)"
+    ]
+  },
+  "42066": {
+    "problem_id": 42066,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(YW))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)"
+    ]
+  },
+  "42067": {
+    "problem_id": 42067,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(YT))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)"
+    ]
+  },
+  "42068": {
+    "problem_id": 42068,
+    "added_cdl": [
+      "IsoscelesTriangle(WXZ)",
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WXT))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42069": {
+    "problem_id": 42069,
+    "added_cdl": [
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(WXT))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42070": {
+    "problem_id": 42070,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(WXT))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42071": {
+    "problem_id": 42071,
+    "added_cdl": [
+      "IsoscelesTriangle(WXZ)",
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(XZW))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42072": {
+    "problem_id": 42072,
+    "added_cdl": [
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(XZW))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42073": {
+    "problem_id": 42073,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(XZW))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42074": {
+    "problem_id": 42074,
+    "added_cdl": [
+      "IsoscelesTriangle(WXZ)",
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42075": {
+    "problem_id": 42075,
+    "added_cdl": [
+      "Equation(ma_wxz+ma_xzw+ma_zwx-180)",
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42076": {
+    "problem_id": 42076,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(XZW),MeasureOfAngle(ZWY))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42077": {
+    "problem_id": 42077,
+    "added_cdl": [
+      "IsoscelesTriangle(TZW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42078": {
+    "problem_id": 42078,
+    "added_cdl": [
+      "IsMidpointOfLine(T,XZ)",
+      "IsMidpointOfLine(T,YW)",
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42079": {
+    "problem_id": 42079,
+    "added_cdl": [
+      "Equal(LengthOfLine(XZ),LengthOfLine(YW))",
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42080": {
+    "problem_id": 42080,
+    "added_cdl": [
+      "Equation(-ll_tz-ll_xt+ll_xz)",
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42081": {
+    "problem_id": 42081,
+    "added_cdl": [
+      "Equation(-ll_wt-ll_yt+ll_yw)",
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42082": {
+    "problem_id": 42082,
+    "added_cdl": [
+      "IsMidpointOfLine(T,YW)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  },
+  "42083": {
+    "problem_id": 42083,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ZWY))",
+    "problem_answer": "45",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,YZWX,T)",
+      "line_addition(1,YT,TW)",
+      "line_addition(1,XT,TZ)",
+      "rectangle_property_diagonal_equal(1,XYZW)",
+      "parallelogram_property_diagonal_bisection(1,XYZW,T)",
+      "isosceles_triangle_judgment_line_equal(1,TZW)",
+      "isosceles_triangle_property_angle_equal(1,TZW)",
+      "triangle_property_angle_sum(1,WXZ)",
+      "isosceles_triangle_judgment_line_equal(1,WXZ)",
+      "isosceles_triangle_property_angle_equal(1,WXZ)"
+    ]
+  }
+}

@@ -1,0 +1,1000 @@
+{
+  "129317": {
+    "problem_id": 129317,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(AB,O))",
+    "problem_answer": "IsDiameterOfCircle(AB,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)"
+    ]
+  },
+  "129318": {
+    "problem_id": 129318,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(BA,O))",
+    "problem_answer": "IsDiameterOfCircle(BA,O)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)"
+    ]
+  },
+  "129319": {
+    "problem_id": 129319,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(AB),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129320": {
+    "problem_id": 129320,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AB),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129321": {
+    "problem_id": 129321,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "129322": {
+    "problem_id": 129322,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)"
+    ]
+  },
+  "129323": {
+    "problem_id": 129323,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsPerpendicularBisectorOfLine(OE,CD))",
+    "problem_answer": "IsPerpendicularBisectorOfLine(OE,CD)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)"
+    ]
+  },
+  "129324": {
+    "problem_id": 129324,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(OE,DE))",
+    "problem_answer": "PerpendicularBetweenLine(OE,DE)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)"
+    ]
+  },
+  "129325": {
+    "problem_id": 129325,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(E,CD))",
+    "problem_answer": "IsMidpointOfLine(E,CD)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)"
+    ]
+  },
+  "129326": {
+    "problem_id": 129326,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(E,DC))",
+    "problem_answer": "IsMidpointOfLine(E,DC)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)"
+    ]
+  },
+  "129327": {
+    "problem_id": 129327,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(CE),LengthOfLine(ED))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)"
+    ]
+  },
+  "129328": {
+    "problem_id": 129328,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(CEO))",
+    "problem_answer": "RightTriangle(CEO)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CEO)"
+    ]
+  },
+  "129329": {
+    "problem_id": 129329,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129330": {
+    "problem_id": 129330,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129331": {
+    "problem_id": 129331,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129332": {
+    "problem_id": 129332,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129333": {
+    "problem_id": 129333,
+    "added_cdl": [
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129334": {
+    "problem_id": 129334,
+    "added_cdl": [
+      "RightTriangle(CEO)",
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129335": {
+    "problem_id": 129335,
+    "added_cdl": [
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129336": {
+    "problem_id": 129336,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129337": {
+    "problem_id": 129337,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129338": {
+    "problem_id": 129338,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)",
+      "line_addition(1,CE,ED)",
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129339": {
+    "problem_id": 129339,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129340": {
+    "problem_id": 129340,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129341": {
+    "problem_id": 129341,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129342": {
+    "problem_id": 129342,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129343": {
+    "problem_id": 129343,
+    "added_cdl": [
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129344": {
+    "problem_id": 129344,
+    "added_cdl": [
+      "RightTriangle(CEO)",
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129345": {
+    "problem_id": 129345,
+    "added_cdl": [
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129346": {
+    "problem_id": 129346,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129347": {
+    "problem_id": 129347,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129348": {
+    "problem_id": 129348,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "8",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)",
+      "line_addition(1,CE,ED)",
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129349": {
+    "problem_id": 129349,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129350": {
+    "problem_id": 129350,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129351": {
+    "problem_id": 129351,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129352": {
+    "problem_id": 129352,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129353": {
+    "problem_id": 129353,
+    "added_cdl": [
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129354": {
+    "problem_id": 129354,
+    "added_cdl": [
+      "RightTriangle(CEO)",
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129355": {
+    "problem_id": 129355,
+    "added_cdl": [
+      "Equation(-ll_ae-ll_eo+ll_oa)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129356": {
+    "problem_id": 129356,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129357": {
+    "problem_id": 129357,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129358": {
+    "problem_id": 129358,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AE))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)",
+      "line_addition(1,CE,ED)",
+      "line_addition(1,AE,EO)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129359": {
+    "problem_id": 129359,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129360": {
+    "problem_id": 129360,
+    "added_cdl": [],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129361": {
+    "problem_id": 129361,
+    "added_cdl": [
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129362": {
+    "problem_id": 129362,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129363": {
+    "problem_id": 129363,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129364": {
+    "problem_id": 129364,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129365": {
+    "problem_id": 129365,
+    "added_cdl": [
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129366": {
+    "problem_id": 129366,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129367": {
+    "problem_id": 129367,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129368": {
+    "problem_id": 129368,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129369": {
+    "problem_id": 129369,
+    "added_cdl": [
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129370": {
+    "problem_id": 129370,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129371": {
+    "problem_id": 129371,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)"
+    ]
+  },
+  "129372": {
+    "problem_id": 129372,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(OED))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)"
+    ]
+  },
+  "129373": {
+    "problem_id": 129373,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)"
+    ]
+  },
+  "129374": {
+    "problem_id": 129374,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)",
+      "line_addition(1,CE,ED)"
+    ]
+  },
+  "129375": {
+    "problem_id": 129375,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(ED))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)"
+    ]
+  },
+  "129376": {
+    "problem_id": 129376,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(ED))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)",
+      "line_addition(1,CE,ED)"
+    ]
+  },
+  "129377": {
+    "problem_id": 129377,
+    "added_cdl": [
+      "IsDiameterOfCircle(AB,O)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129378": {
+    "problem_id": 129378,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129379": {
+    "problem_id": 129379,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129380": {
+    "problem_id": 129380,
+    "added_cdl": [
+      "Equation(ll_ce**2+ll_eo**2-ll_oc**2)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129381": {
+    "problem_id": 129381,
+    "added_cdl": [
+      "RightTriangle(CEO)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CEO)",
+      "line_addition(1,CE,ED)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129382": {
+    "problem_id": 129382,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "line_addition(1,CE,ED)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129383": {
+    "problem_id": 129383,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OE,CD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "line_addition(1,CE,ED)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "129384": {
+    "problem_id": 129384,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EO))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OE,CD)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "right_triangle_judgment_angle(1,CEO)",
+      "right_triangle_property_pythagorean(1,CEO)",
+      "line_addition(1,CE,ED)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_judgment_pass_centre(1,AOB,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  }
+}

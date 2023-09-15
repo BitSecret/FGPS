@@ -1,0 +1,774 @@
+{
+  "165045": {
+    "problem_id": 165045,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(FEB,DFC))",
+    "problem_answer": "SimilarBetweenTriangle(FEB,DFC)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)"
+    ]
+  },
+  "165046": {
+    "problem_id": 165046,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EBF,FCD))",
+    "problem_answer": "SimilarBetweenTriangle(EBF,FCD)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)"
+    ]
+  },
+  "165047": {
+    "problem_id": 165047,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(BFE,CDF))",
+    "problem_answer": "SimilarBetweenTriangle(BFE,CDF)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)"
+    ]
+  },
+  "165048": {
+    "problem_id": 165048,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(EBF))",
+    "problem_answer": "RightTriangle(EBF)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)"
+    ]
+  },
+  "165049": {
+    "problem_id": 165049,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(EB,FB))",
+    "problem_answer": "PerpendicularBetweenLine(EB,FB)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)"
+    ]
+  },
+  "165050": {
+    "problem_id": 165050,
+    "added_cdl": [
+      "RightTriangle(EBF)",
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165051": {
+    "problem_id": 165051,
+    "added_cdl": [
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165052": {
+    "problem_id": 165052,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165053": {
+    "problem_id": 165053,
+    "added_cdl": [
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165054": {
+    "problem_id": 165054,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165055": {
+    "problem_id": 165055,
+    "added_cdl": [
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165056": {
+    "problem_id": 165056,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165057": {
+    "problem_id": 165057,
+    "added_cdl": [
+      "RightTriangle(EBF)",
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165058": {
+    "problem_id": 165058,
+    "added_cdl": [
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165059": {
+    "problem_id": 165059,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165060": {
+    "problem_id": 165060,
+    "added_cdl": [
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165061": {
+    "problem_id": 165061,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165062": {
+    "problem_id": 165062,
+    "added_cdl": [
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165063": {
+    "problem_id": 165063,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165064": {
+    "problem_id": 165064,
+    "added_cdl": [
+      "RightTriangle(EBF)",
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165065": {
+    "problem_id": 165065,
+    "added_cdl": [
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165066": {
+    "problem_id": 165066,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165067": {
+    "problem_id": 165067,
+    "added_cdl": [
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165068": {
+    "problem_id": 165068,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165069": {
+    "problem_id": 165069,
+    "added_cdl": [
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165070": {
+    "problem_id": 165070,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165071": {
+    "problem_id": 165071,
+    "added_cdl": [
+      "RightTriangle(EBF)",
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165072": {
+    "problem_id": 165072,
+    "added_cdl": [
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165073": {
+    "problem_id": 165073,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165074": {
+    "problem_id": 165074,
+    "added_cdl": [
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165075": {
+    "problem_id": 165075,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165076": {
+    "problem_id": 165076,
+    "added_cdl": [
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165077": {
+    "problem_id": 165077,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(GF))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165078": {
+    "problem_id": 165078,
+    "added_cdl": [
+      "RightTriangle(EBF)",
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165079": {
+    "problem_id": 165079,
+    "added_cdl": [
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165080": {
+    "problem_id": 165080,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165081": {
+    "problem_id": 165081,
+    "added_cdl": [
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165082": {
+    "problem_id": 165082,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165083": {
+    "problem_id": 165083,
+    "added_cdl": [
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(GH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165084": {
+    "problem_id": 165084,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(GH))",
+    "problem_answer": "15/4",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165085": {
+    "problem_id": 165085,
+    "added_cdl": [
+      "RightTriangle(EBF)",
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BF))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165086": {
+    "problem_id": 165086,
+    "added_cdl": [
+      "Equation(ll_eb-ll_fc*rst_febdfc)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BF))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165087": {
+    "problem_id": 165087,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BF))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165088": {
+    "problem_id": 165088,
+    "added_cdl": [
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BF))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165089": {
+    "problem_id": 165089,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BF))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165090": {
+    "problem_id": 165090,
+    "added_cdl": [
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BF))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165091": {
+    "problem_id": 165091,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BF))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)",
+      "right_triangle_judgment_angle(1,EBF)",
+      "right_triangle_property_pythagorean(1,EBF)"
+    ]
+  },
+  "165092": {
+    "problem_id": 165092,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(FC))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)"
+    ]
+  },
+  "165093": {
+    "problem_id": 165093,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,FEB,DFC)"
+    ]
+  },
+  "165094": {
+    "problem_id": 165094,
+    "added_cdl": [
+      "Equation(ll_bf-ll_cd*rst_febdfc)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)"
+    ]
+  },
+  "165095": {
+    "problem_id": 165095,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)",
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)"
+    ]
+  },
+  "165096": {
+    "problem_id": 165096,
+    "added_cdl": [
+      "Equation(-ll_bf+ll_cb-ll_fc)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)"
+    ]
+  },
+  "165097": {
+    "problem_id": 165097,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EB))",
+    "problem_answer": "9/4",
+    "theorem_seqs": [
+      "line_addition(1,BF,FC)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)",
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,FEB,DFC)"
+    ]
+  },
+  "165098": {
+    "problem_id": 165098,
+    "added_cdl": [
+      "SimilarBetweenTriangle(FEB,DFC)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(FEBDFC))",
+    "problem_answer": "1/4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EBF,FCD)"
+    ]
+  },
+  "165099": {
+    "problem_id": 165099,
+    "added_cdl": [],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(FEBDFC))",
+    "problem_answer": "1/4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,FEB,DFC)",
+      "similar_triangle_property_line_ratio(1,EBF,FCD)"
+    ]
+  }
+}

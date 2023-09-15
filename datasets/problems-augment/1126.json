@@ -1,0 +1,354 @@
+{
+  "31574": {
+    "problem_id": 31574,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(ADB))",
+    "problem_answer": "RightTriangle(ADB)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADB)"
+    ]
+  },
+  "31575": {
+    "problem_id": 31575,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(BA,E))",
+    "problem_answer": "IsDiameterOfCircle(BA,E)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)"
+    ]
+  },
+  "31576": {
+    "problem_id": 31576,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsDiameterOfCircle(AB,E))",
+    "problem_answer": "IsDiameterOfCircle(AB,E)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)"
+    ]
+  },
+  "31577": {
+    "problem_id": 31577,
+    "added_cdl": [
+      "IsDiameterOfCircle(BA,E)"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(AB),DiameterOfCircle(E))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31578": {
+    "problem_id": 31578,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AB),DiameterOfCircle(E))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31579": {
+    "problem_id": 31579,
+    "added_cdl": [
+      "Equal(LengthOfLine(AB),DiameterOfCircle(E))",
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31580": {
+    "problem_id": 31580,
+    "added_cdl": [
+      "IsDiameterOfCircle(BA,E)",
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31581": {
+    "problem_id": 31581,
+    "added_cdl": [
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31582": {
+    "problem_id": 31582,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31583": {
+    "problem_id": 31583,
+    "added_cdl": [
+      "RightTriangle(ADB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADB)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31584": {
+    "problem_id": 31584,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADB)",
+      "right_triangle_property_pythagorean(1,ADB)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31585": {
+    "problem_id": 31585,
+    "added_cdl": [
+      "Equal(LengthOfLine(AB),DiameterOfCircle(E))",
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(PerimeterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)*pi",
+    "theorem_seqs": [
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31586": {
+    "problem_id": 31586,
+    "added_cdl": [
+      "IsDiameterOfCircle(BA,E)",
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(PerimeterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)*pi",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31587": {
+    "problem_id": 31587,
+    "added_cdl": [
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(PerimeterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)*pi",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31588": {
+    "problem_id": 31588,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(PerimeterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)*pi",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31589": {
+    "problem_id": 31589,
+    "added_cdl": [
+      "RightTriangle(ADB)"
+    ],
+    "goal_cdl": "Value(PerimeterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)*pi",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADB)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31590": {
+    "problem_id": 31590,
+    "added_cdl": [],
+    "goal_cdl": "Value(PerimeterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)*pi",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADB)",
+      "right_triangle_property_pythagorean(1,ADB)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)",
+      "circle_perimeter_formula(1,E)"
+    ]
+  },
+  "31591": {
+    "problem_id": 31591,
+    "added_cdl": [
+      "RightTriangle(ADB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5*sqrt(2)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADB)"
+    ]
+  },
+  "31592": {
+    "problem_id": 31592,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5*sqrt(2)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADB)",
+      "right_triangle_property_pythagorean(1,ADB)"
+    ]
+  },
+  "31593": {
+    "problem_id": 31593,
+    "added_cdl": [
+      "IsDiameterOfCircle(BA,E)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31594": {
+    "problem_id": 31594,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31595": {
+    "problem_id": 31595,
+    "added_cdl": [
+      "RightTriangle(ADB)"
+    ],
+    "goal_cdl": "Value(DiameterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADB)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31596": {
+    "problem_id": 31596,
+    "added_cdl": [],
+    "goal_cdl": "Value(DiameterOfCircle(E))",
+    "problem_answer": "5*sqrt(2)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADB)",
+      "right_triangle_property_pythagorean(1,ADB)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31597": {
+    "problem_id": 31597,
+    "added_cdl": [
+      "IsDiameterOfCircle(BA,E)",
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(E))",
+    "problem_answer": "5*sqrt(2)/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31598": {
+    "problem_id": 31598,
+    "added_cdl": [
+      "Equation(dc_e-2*rc_e)",
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(E))",
+    "problem_answer": "5*sqrt(2)/2",
+    "theorem_seqs": [
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31599": {
+    "problem_id": 31599,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_ad**2+ll_bd**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(E))",
+    "problem_answer": "5*sqrt(2)/2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31600": {
+    "problem_id": 31600,
+    "added_cdl": [
+      "RightTriangle(ADB)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(E))",
+    "problem_answer": "5*sqrt(2)/2",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADB)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  },
+  "31601": {
+    "problem_id": 31601,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(E))",
+    "problem_answer": "5*sqrt(2)/2",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADB)",
+      "right_triangle_property_pythagorean(1,ADB)",
+      "circle_property_length_of_radius_and_diameter(1,E)",
+      "diameter_of_circle_judgment_right_angle(1,ADB,E)",
+      "diameter_of_circle_property_length_equal(1,AB,E)"
+    ]
+  }
+}

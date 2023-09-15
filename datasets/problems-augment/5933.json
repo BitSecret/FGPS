@@ -1,0 +1,1028 @@
+{
+  "153838": {
+    "problem_id": 153838,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(CD),LengthOfLine(FE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153839": {
+    "problem_id": 153839,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)"
+    ]
+  },
+  "153840": {
+    "problem_id": 153840,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)"
+    ]
+  },
+  "153841": {
+    "problem_id": 153841,
+    "added_cdl": [
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153842": {
+    "problem_id": 153842,
+    "added_cdl": [
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153843": {
+    "problem_id": 153843,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153844": {
+    "problem_id": 153844,
+    "added_cdl": [
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153845": {
+    "problem_id": 153845,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153846": {
+    "problem_id": 153846,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153847": {
+    "problem_id": 153847,
+    "added_cdl": [
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153848": {
+    "problem_id": 153848,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CD))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "sine_theorem(1,ACG)",
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153849": {
+    "problem_id": 153849,
+    "added_cdl": [
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153850": {
+    "problem_id": 153850,
+    "added_cdl": [
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153851": {
+    "problem_id": 153851,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153852": {
+    "problem_id": 153852,
+    "added_cdl": [
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153853": {
+    "problem_id": 153853,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153854": {
+    "problem_id": 153854,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153855": {
+    "problem_id": 153855,
+    "added_cdl": [
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153856": {
+    "problem_id": 153856,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DF))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "sine_theorem(1,ACG)",
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153857": {
+    "problem_id": 153857,
+    "added_cdl": [
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153858": {
+    "problem_id": 153858,
+    "added_cdl": [
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153859": {
+    "problem_id": 153859,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153860": {
+    "problem_id": 153860,
+    "added_cdl": [
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153861": {
+    "problem_id": 153861,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153862": {
+    "problem_id": 153862,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153863": {
+    "problem_id": 153863,
+    "added_cdl": [
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153864": {
+    "problem_id": 153864,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ACE))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "sine_theorem(1,ACG)",
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153865": {
+    "problem_id": 153865,
+    "added_cdl": [
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153866": {
+    "problem_id": 153866,
+    "added_cdl": [
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153867": {
+    "problem_id": 153867,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153868": {
+    "problem_id": 153868,
+    "added_cdl": [
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153869": {
+    "problem_id": 153869,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153870": {
+    "problem_id": 153870,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153871": {
+    "problem_id": 153871,
+    "added_cdl": [
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153872": {
+    "problem_id": 153872,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(AEG))",
+    "problem_answer": "60",
+    "theorem_seqs": [
+      "sine_theorem(1,ACG)",
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153873": {
+    "problem_id": 153873,
+    "added_cdl": [
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153874": {
+    "problem_id": 153874,
+    "added_cdl": [
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153875": {
+    "problem_id": 153875,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153876": {
+    "problem_id": 153876,
+    "added_cdl": [
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153877": {
+    "problem_id": 153877,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153878": {
+    "problem_id": 153878,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153879": {
+    "problem_id": 153879,
+    "added_cdl": [
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153880": {
+    "problem_id": 153880,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CGA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "sine_theorem(1,ACG)",
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153881": {
+    "problem_id": 153881,
+    "added_cdl": [
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153882": {
+    "problem_id": 153882,
+    "added_cdl": [
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))",
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153883": {
+    "problem_id": 153883,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ag-ll_bg)",
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153884": {
+    "problem_id": 153884,
+    "added_cdl": [
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153885": {
+    "problem_id": 153885,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153886": {
+    "problem_id": 153886,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153887": {
+    "problem_id": 153887,
+    "added_cdl": [
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153888": {
+    "problem_id": 153888,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "1+60*sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,ACG)",
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "line_addition(1,AG,GB)",
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153889": {
+    "problem_id": 153889,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(FE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153890": {
+    "problem_id": 153890,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EC))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)"
+    ]
+  },
+  "153891": {
+    "problem_id": 153891,
+    "added_cdl": [
+      "Equal(LengthOfLine(FE),LengthOfLine(BG))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BG))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153892": {
+    "problem_id": 153892,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BG))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,EFBG)",
+      "parallelogram_property_opposite_line_equal(1,CDFE)"
+    ]
+  },
+  "153893": {
+    "problem_id": 153893,
+    "added_cdl": [
+      "Equation(ma_aeg+ma_cea-180)",
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AG))",
+    "problem_answer": "60*sqrt(3)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)"
+    ]
+  },
+  "153894": {
+    "problem_id": 153894,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AG))",
+    "problem_answer": "60*sqrt(3)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)"
+    ]
+  },
+  "153895": {
+    "problem_id": 153895,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))",
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AG))",
+    "problem_answer": "60*sqrt(3)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)"
+    ]
+  },
+  "153896": {
+    "problem_id": 153896,
+    "added_cdl": [
+      "Equation(-ll_ag*sin(pi*ma_ega/180)+ll_ca*sin(pi*ma_ace/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AG))",
+    "problem_answer": "60*sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)"
+    ]
+  },
+  "153897": {
+    "problem_id": 153897,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AG))",
+    "problem_answer": "60*sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,ACG)",
+      "sine_theorem(1,CEA)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)"
+    ]
+  },
+  "153898": {
+    "problem_id": 153898,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CEA))",
+    "problem_answer": "120",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)"
+    ]
+  },
+  "153899": {
+    "problem_id": 153899,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)"
+    ]
+  },
+  "153900": {
+    "problem_id": 153900,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(EAC))",
+    "problem_answer": "30",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)"
+    ]
+  },
+  "153901": {
+    "problem_id": 153901,
+    "added_cdl": [
+      "Equation(ma_ace+ma_cea+ma_eac-180)",
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "120*sqrt(3)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CEA,AEG)"
+    ]
+  },
+  "153902": {
+    "problem_id": 153902,
+    "added_cdl": [
+      "Equal(LengthOfLine(DF),LengthOfLine(EC))",
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "120*sqrt(3)",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)"
+    ]
+  },
+  "153903": {
+    "problem_id": 153903,
+    "added_cdl": [
+      "Equation(-ll_ca*sin(pi*ma_eac/180)+ll_ec*sin(pi*ma_cea/180))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "120*sqrt(3)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)"
+    ]
+  },
+  "153904": {
+    "problem_id": 153904,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "120*sqrt(3)",
+    "theorem_seqs": [
+      "sine_theorem(1,CEA)",
+      "parallelogram_property_opposite_line_equal(1,DFEC)",
+      "triangle_property_angle_sum(1,ACE)",
+      "adjacent_complementary_angle(1,CEA,AEG)"
+    ]
+  }
+}

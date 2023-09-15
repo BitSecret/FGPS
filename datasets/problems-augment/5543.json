@@ -1,0 +1,538 @@
+{
+  "139989": {
+    "problem_id": 139989,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "139990": {
+    "problem_id": 139990,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "139991": {
+    "problem_id": 139991,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)",
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139992": {
+    "problem_id": 139992,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139993": {
+    "problem_id": 139993,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139994": {
+    "problem_id": 139994,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139995": {
+    "problem_id": 139995,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139996": {
+    "problem_id": 139996,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139997": {
+    "problem_id": 139997,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)",
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfArc(OAB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139998": {
+    "problem_id": 139998,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfArc(OAB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "139999": {
+    "problem_id": 139999,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfArc(OAB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140000": {
+    "problem_id": 140000,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfArc(OAB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140001": {
+    "problem_id": 140001,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfArc(OAB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140002": {
+    "problem_id": 140002,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfArc(OAB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140003": {
+    "problem_id": 140003,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)",
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140004": {
+    "problem_id": 140004,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140005": {
+    "problem_id": 140005,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140006": {
+    "problem_id": 140006,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140007": {
+    "problem_id": 140007,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140008": {
+    "problem_id": 140008,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140009": {
+    "problem_id": 140009,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)",
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(OAC))",
+    "problem_answer": "-3*sqrt(-2+18*cos(1))*sin(1/2)+9*sin(1)",
+    "theorem_seqs": [
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140010": {
+    "problem_id": 140010,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(COA))",
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(OAC))",
+    "problem_answer": "-3*sqrt(-2+18*cos(1))*sin(1/2)+9*sin(1)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140011": {
+    "problem_id": 140011,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(OAC))",
+    "problem_answer": "-3*sqrt(-2+18*cos(1))*sin(1/2)+9*sin(1)",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140012": {
+    "problem_id": 140012,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(OAC))",
+    "problem_answer": "-3*sqrt(-2+18*cos(1))*sin(1/2)+9*sin(1)",
+    "theorem_seqs": [
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140013": {
+    "problem_id": 140013,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(AreaOfTriangle(OAC))",
+    "problem_answer": "-3*sqrt(-2+18*cos(1))*sin(1/2)+9*sin(1)",
+    "theorem_seqs": [
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140014": {
+    "problem_id": 140014,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfTriangle(OAC))",
+    "problem_answer": "-3*sqrt(-2+18*cos(1))*sin(1/2)+9*sin(1)",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "sine_theorem(1,ACO)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "triangle_area_formula_sine(1,COA)"
+    ]
+  },
+  "140015": {
+    "problem_id": 140015,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(OAB))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "sector_area_formula(1,OAB)"
+    ]
+  },
+  "140016": {
+    "problem_id": 140016,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfSector(OAB))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "sector_area_formula(1,OAB)"
+    ]
+  },
+  "140017": {
+    "problem_id": 140017,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "140018": {
+    "problem_id": 140018,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(OAB))",
+    "problem_answer": "90/pi",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)"
+    ]
+  },
+  "140019": {
+    "problem_id": 140019,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(COA))",
+    "problem_answer": "90/pi",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140020": {
+    "problem_id": 140020,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(COA))",
+    "problem_answer": "90/pi",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140021": {
+    "problem_id": 140021,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)",
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACB))",
+    "problem_answer": "180*asin(3*sin(1/2)/2)/pi",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140022": {
+    "problem_id": 140022,
+    "added_cdl": [
+      "Equation(ll_ac*sin(pi*ma_aco/180)-ll_oa*sin(pi*ma_boa/180))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACB))",
+    "problem_answer": "180*asin(3*sin(1/2)/2)/pi",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140023": {
+    "problem_id": 140023,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ACB))",
+    "problem_answer": "180*asin(3*sin(1/2)/2)/pi",
+    "theorem_seqs": [
+      "sine_theorem(1,ACO)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140024": {
+    "problem_id": 140024,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ACB))",
+    "problem_answer": "180*asin(3*sin(1/2)/2)/pi",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "sine_theorem(1,ACO)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140025": {
+    "problem_id": 140025,
+    "added_cdl": [
+      "Equation(ll_ac**2-ll_oa**2+2*ll_oa*ll_oc*cos(pi*ma_boa/180)-ll_oc**2)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "-sqrt(-2+18*cos(1))+6*cos(1/2)",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140026": {
+    "problem_id": 140026,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "-sqrt(-2+18*cos(1))+6*cos(1/2)",
+    "theorem_seqs": [
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140027": {
+    "problem_id": 140027,
+    "added_cdl": [
+      "Equation(la_oab-pi*mar_oab*rc_o/180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "-sqrt(-2+18*cos(1))+6*cos(1/2)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "140028": {
+    "problem_id": 140028,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "-sqrt(-2+18*cos(1))+6*cos(1/2)",
+    "theorem_seqs": [
+      "arc_length_formula(1,OAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "cosine_theorem(1,OAC)",
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  }
+}

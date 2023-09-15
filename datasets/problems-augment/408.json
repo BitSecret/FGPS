@@ -1,0 +1,700 @@
+{
+  "14952": {
+    "problem_id": 14952,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(DQS),MeasureOfAngle(SDQ))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14953": {
+    "problem_id": 14953,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(DS),RadiusOfCircle(D))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)"
+    ]
+  },
+  "14954": {
+    "problem_id": 14954,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)"
+    ]
+  },
+  "14955": {
+    "problem_id": 14955,
+    "added_cdl": [
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Equal(LengthOfLine(DS),LengthOfLine(DQ))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)"
+    ]
+  },
+  "14956": {
+    "problem_id": 14956,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(DS),LengthOfLine(DQ))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "radius_of_circle_property_length_equal(1,DQ,D)"
+    ]
+  },
+  "14957": {
+    "problem_id": 14957,
+    "added_cdl": [
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(DSQ))",
+    "problem_answer": "IsoscelesTriangle(DSQ)",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DSQ)"
+    ]
+  },
+  "14958": {
+    "problem_id": 14958,
+    "added_cdl": [
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Relation(IsoscelesTriangle(DSQ))",
+    "problem_answer": "IsoscelesTriangle(DSQ)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)"
+    ]
+  },
+  "14959": {
+    "problem_id": 14959,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsoscelesTriangle(DSQ))",
+    "problem_answer": "IsoscelesTriangle(DSQ)",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)"
+    ]
+  },
+  "14960": {
+    "problem_id": 14960,
+    "added_cdl": [
+      "IsoscelesTriangle(DSQ)"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14961": {
+    "problem_id": 14961,
+    "added_cdl": [
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14962": {
+    "problem_id": 14962,
+    "added_cdl": [
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14963": {
+    "problem_id": 14963,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14964": {
+    "problem_id": 14964,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(RQ,DQ))",
+    "problem_answer": "PerpendicularBetweenLine(RQ,DQ)",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,RQ,D,D)"
+    ]
+  },
+  "14965": {
+    "problem_id": 14965,
+    "added_cdl": [
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)",
+      "Equation(ma_rqd-ma_rqs-ma_sqd)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14966": {
+    "problem_id": 14966,
+    "added_cdl": [
+      "Equation(ma_rqd-ma_rqs-ma_sqd)",
+      "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14967": {
+    "problem_id": 14967,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14968": {
+    "problem_id": 14968,
+    "added_cdl": [
+      "IsoscelesTriangle(DSQ)",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14969": {
+    "problem_id": 14969,
+    "added_cdl": [
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14970": {
+    "problem_id": 14970,
+    "added_cdl": [
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14971": {
+    "problem_id": 14971,
+    "added_cdl": [
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14972": {
+    "problem_id": 14972,
+    "added_cdl": [
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14973": {
+    "problem_id": 14973,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(DQS))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,RQ,D,D)",
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14974": {
+    "problem_id": 14974,
+    "added_cdl": [
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)",
+      "Equation(ma_rqd-ma_rqs-ma_sqd)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14975": {
+    "problem_id": 14975,
+    "added_cdl": [
+      "Equation(ma_rqd-ma_rqs-ma_sqd)",
+      "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14976": {
+    "problem_id": 14976,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(DSQ),MeasureOfAngle(SQD))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14977": {
+    "problem_id": 14977,
+    "added_cdl": [
+      "IsoscelesTriangle(DSQ)",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14978": {
+    "problem_id": 14978,
+    "added_cdl": [
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "PerpendicularBetweenLine(RQ,DQ)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14979": {
+    "problem_id": 14979,
+    "added_cdl": [
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14980": {
+    "problem_id": 14980,
+    "added_cdl": [
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))",
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14981": {
+    "problem_id": 14981,
+    "added_cdl": [
+      "PerpendicularBetweenLine(RQ,DQ)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14982": {
+    "problem_id": 14982,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(RQS))",
+    "problem_answer": "61",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,RQ,D,D)",
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)",
+      "angle_addition(1,RQS,SQD)",
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14983": {
+    "problem_id": 14983,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(SDQ))",
+    "problem_answer": "238",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14984": {
+    "problem_id": 14984,
+    "added_cdl": [
+      "Equation(ma_qds+ma_sdq-360)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(QDS))",
+    "problem_answer": "122",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14985": {
+    "problem_id": 14985,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(QDS))",
+    "problem_answer": "122",
+    "theorem_seqs": [
+      "round_angle(1,QDS,SDQ)",
+      "arc_property_center_angle(1,DQS,D)"
+    ]
+  },
+  "14986": {
+    "problem_id": 14986,
+    "added_cdl": [
+      "IsoscelesTriangle(DSQ)",
+      "Equal(MeasureOfArc(DQS),MeasureOfAngle(SDQ))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equation(ma_qds+ma_sdq-360)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DSQ))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14987": {
+    "problem_id": 14987,
+    "added_cdl": [
+      "Equal(MeasureOfArc(DQS),MeasureOfAngle(SDQ))",
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))",
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DSQ))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14988": {
+    "problem_id": 14988,
+    "added_cdl": [
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DSQ))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14989": {
+    "problem_id": 14989,
+    "added_cdl": [
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DSQ))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14990": {
+    "problem_id": 14990,
+    "added_cdl": [
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DSQ))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14991": {
+    "problem_id": 14991,
+    "added_cdl": [
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DSQ))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "round_angle(1,QDS,SDQ)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14992": {
+    "problem_id": 14992,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DSQ))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "round_angle(1,QDS,SDQ)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14993": {
+    "problem_id": 14993,
+    "added_cdl": [
+      "IsoscelesTriangle(DSQ)",
+      "Equal(MeasureOfArc(DQS),MeasureOfAngle(SDQ))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equation(ma_qds+ma_sdq-360)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SQD))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14994": {
+    "problem_id": 14994,
+    "added_cdl": [
+      "Equal(MeasureOfArc(DQS),MeasureOfAngle(SDQ))",
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))",
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SQD))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14995": {
+    "problem_id": 14995,
+    "added_cdl": [
+      "Equal(LengthOfLine(DQ),RadiusOfCircle(D))",
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SQD))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14996": {
+    "problem_id": 14996,
+    "added_cdl": [
+      "Equation(ma_dsq+ma_qds+ma_sqd-180)",
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SQD))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14997": {
+    "problem_id": 14997,
+    "added_cdl": [
+      "Equation(ma_qds+ma_sdq-360)",
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SQD))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14998": {
+    "problem_id": 14998,
+    "added_cdl": [
+      "Equal(LengthOfLine(DS),RadiusOfCircle(D))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(SQD))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "round_angle(1,QDS,SDQ)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "14999": {
+    "problem_id": 14999,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(SQD))",
+    "problem_answer": "29",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,DS,D)",
+      "round_angle(1,QDS,SDQ)",
+      "triangle_property_angle_sum(1,DSQ)",
+      "radius_of_circle_property_length_equal(1,DQ,D)",
+      "arc_property_center_angle(1,DQS,D)",
+      "isosceles_triangle_judgment_line_equal(1,DSQ)",
+      "isosceles_triangle_property_angle_equal(1,DSQ)"
+    ]
+  },
+  "15000": {
+    "problem_id": 15000,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(RQD))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "tangent_of_circle_property_perpendicular(2,RQ,D,D)"
+    ]
+  }
+}

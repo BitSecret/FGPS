@@ -1,0 +1,436 @@
+{
+  "172216": {
+    "problem_id": 172216,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)"
+    ]
+  },
+  "172217": {
+    "problem_id": 172217,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(CB),LengthOfLine(DA))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,BCDA)"
+    ]
+  },
+  "172218": {
+    "problem_id": 172218,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,BD))",
+    "problem_answer": "IsMidpointOfLine(O,BD)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172219": {
+    "problem_id": 172219,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(O,DB))",
+    "problem_answer": "IsMidpointOfLine(O,DB)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172220": {
+    "problem_id": 172220,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(BO),LengthOfLine(OD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)"
+    ]
+  },
+  "172221": {
+    "problem_id": 172221,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DOE,DBC))",
+    "problem_answer": "SimilarBetweenTriangle(DOE,DBC)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172222": {
+    "problem_id": 172222,
+    "added_cdl": [
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DOE,DBC))",
+    "problem_answer": "SimilarBetweenTriangle(DOE,DBC)",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172223": {
+    "problem_id": 172223,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DOE,DBC))",
+    "problem_answer": "SimilarBetweenTriangle(DOE,DBC)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172224": {
+    "problem_id": 172224,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DOE,DBC))",
+    "problem_answer": "SimilarBetweenTriangle(DOE,DBC)",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172225": {
+    "problem_id": 172225,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DOE,DBC))",
+    "problem_answer": "SimilarBetweenTriangle(DOE,DBC)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172226": {
+    "problem_id": 172226,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(OED,BCD))",
+    "problem_answer": "SimilarBetweenTriangle(OED,BCD)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172227": {
+    "problem_id": 172227,
+    "added_cdl": [
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(OED,BCD))",
+    "problem_answer": "SimilarBetweenTriangle(OED,BCD)",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172228": {
+    "problem_id": 172228,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(OED,BCD))",
+    "problem_answer": "SimilarBetweenTriangle(OED,BCD)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172229": {
+    "problem_id": 172229,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(OED,BCD))",
+    "problem_answer": "SimilarBetweenTriangle(OED,BCD)",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172230": {
+    "problem_id": 172230,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(OED,BCD))",
+    "problem_answer": "SimilarBetweenTriangle(OED,BCD)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172231": {
+    "problem_id": 172231,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EDO,CDB))",
+    "problem_answer": "SimilarBetweenTriangle(EDO,CDB)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172232": {
+    "problem_id": 172232,
+    "added_cdl": [
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EDO,CDB))",
+    "problem_answer": "SimilarBetweenTriangle(EDO,CDB)",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172233": {
+    "problem_id": 172233,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EDO,CDB))",
+    "problem_answer": "SimilarBetweenTriangle(EDO,CDB)",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172234": {
+    "problem_id": 172234,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EDO,CDB))",
+    "problem_answer": "SimilarBetweenTriangle(EDO,CDB)",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172235": {
+    "problem_id": 172235,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EDO,CDB))",
+    "problem_answer": "SimilarBetweenTriangle(EDO,CDB)",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)"
+    ]
+  },
+  "172236": {
+    "problem_id": 172236,
+    "added_cdl": [],
+    "goal_cdl": "Value(PerimeterOfQuadrilateral(ABCD))",
+    "problem_answer": "36",
+    "theorem_seqs": [
+      "triangle_perimeter_formula(1,DOE)"
+    ]
+  },
+  "172237": {
+    "problem_id": 172237,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BD))",
+    "problem_answer": "12",
+    "theorem_seqs": [
+      "triangle_perimeter_formula(1,DOE)"
+    ]
+  },
+  "172238": {
+    "problem_id": 172238,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BO))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172239": {
+    "problem_id": 172239,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BO))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172240": {
+    "problem_id": 172240,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172241": {
+    "problem_id": 172241,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172242": {
+    "problem_id": 172242,
+    "added_cdl": [
+      "Equation(-ll_bd*rst_edocdb+ll_od)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172243": {
+    "problem_id": 172243,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)",
+      "SimilarBetweenTriangle(DOE,DBC)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EDO,CDB)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172244": {
+    "problem_id": 172244,
+    "added_cdl": [
+      "SimilarBetweenTriangle(DOE,DBC)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "similar_triangle_property_line_ratio(1,EDO,CDB)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172245": {
+    "problem_id": 172245,
+    "added_cdl": [
+      "Equation(ll_bd-ll_bo-ll_od)",
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_sas(1,DOE,DBC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "similar_triangle_property_line_ratio(1,EDO,CDB)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172246": {
+    "problem_id": 172246,
+    "added_cdl": [
+      "Equal(LengthOfLine(BA),LengthOfLine(CD))",
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "similar_triangle_property_line_ratio(1,EDO,CDB)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172247": {
+    "problem_id": 172247,
+    "added_cdl": [
+      "Equation(ll_cd-ll_ce-ll_ed)",
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "similar_triangle_property_line_ratio(1,EDO,CDB)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172248": {
+    "problem_id": 172248,
+    "added_cdl": [
+      "IsMidpointOfLine(O,BD)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "similar_triangle_property_line_ratio(1,EDO,CDB)",
+      "line_addition(1,BO,OD)"
+    ]
+  },
+  "172249": {
+    "problem_id": 172249,
+    "added_cdl": [],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(EDOCDB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "line_addition(1,CE,ED)",
+      "parallelogram_property_opposite_line_equal(1,ABCD)",
+      "line_addition(1,BO,OD)",
+      "similar_triangle_judgment_sas(1,DOE,DBC)",
+      "parallelogram_property_diagonal_bisection(1,BCDA,O)",
+      "similar_triangle_property_line_ratio(1,EDO,CDB)",
+      "line_addition(1,BO,OD)"
+    ]
+  }
+}

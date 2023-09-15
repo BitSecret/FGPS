@@ -1,0 +1,302 @@
+{
+  "9973": {
+    "problem_id": 9973,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AC),RadiusOfCircle(A))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9974": {
+    "problem_id": 9974,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(ACD),MeasureOfAngle(DAC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ACD,A)"
+    ]
+  },
+  "9975": {
+    "problem_id": 9975,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(AEB),MeasureOfAngle(BAE))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,AEB,A)"
+    ]
+  },
+  "9976": {
+    "problem_id": 9976,
+    "added_cdl": [
+      "Equation(as_aeb-pi*mar_aeb*rc_a**2/360)",
+      "Equal(MeasureOfArc(AEB),MeasureOfAngle(BAE))",
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9977": {
+    "problem_id": 9977,
+    "added_cdl": [
+      "Equal(MeasureOfArc(AEB),MeasureOfAngle(BAE))",
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9978": {
+    "problem_id": 9978,
+    "added_cdl": [
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,AEB,A)",
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9979": {
+    "problem_id": 9979,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)",
+      "arc_property_center_angle(1,AEB,A)",
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9980": {
+    "problem_id": 9980,
+    "added_cdl": [
+      "Equation(as_aeb-pi*mar_aeb*rc_a**2/360)",
+      "Equal(MeasureOfArc(AEB),MeasureOfAngle(BAE))",
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9981": {
+    "problem_id": 9981,
+    "added_cdl": [
+      "Equal(MeasureOfArc(AEB),MeasureOfAngle(BAE))",
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9982": {
+    "problem_id": 9982,
+    "added_cdl": [
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,AEB,A)",
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9983": {
+    "problem_id": 9983,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(EAD))",
+    "problem_answer": "130",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)",
+      "arc_property_center_angle(1,AEB,A)",
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9984": {
+    "problem_id": 9984,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DAC))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)"
+    ]
+  },
+  "9985": {
+    "problem_id": 9985,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BAE))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)"
+    ]
+  },
+  "9986": {
+    "problem_id": 9986,
+    "added_cdl": [
+      "Equal(MeasureOfArc(ACD),MeasureOfAngle(DAC))",
+      "Equation(ma_bae+ma_ead-180)",
+      "Equation(as_acd-pi*mar_acd*rc_a**2/360)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ACD))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9987": {
+    "problem_id": 9987,
+    "added_cdl": [
+      "Equation(ma_bae+ma_ead-180)",
+      "Equation(as_acd-pi*mar_acd*rc_a**2/360)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ACD))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ACD,A)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9988": {
+    "problem_id": 9988,
+    "added_cdl": [
+      "Equation(as_acd-pi*mar_acd*rc_a**2/360)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(ACD))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)",
+      "arc_property_center_angle(1,ACD,A)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9989": {
+    "problem_id": 9989,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfSector(ACD))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "sector_area_formula(1,ACD)",
+      "adjacent_complementary_angle(1,BAE,EAD)",
+      "arc_property_center_angle(1,ACD,A)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9990": {
+    "problem_id": 9990,
+    "added_cdl": [
+      "Equation(as_aeb-pi*mar_aeb*rc_a**2/360)",
+      "Equal(MeasureOfArc(AEB),MeasureOfAngle(BAE))",
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(AEB))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9991": {
+    "problem_id": 9991,
+    "added_cdl": [
+      "Equal(MeasureOfArc(AEB),MeasureOfAngle(BAE))",
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(AEB))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9992": {
+    "problem_id": 9992,
+    "added_cdl": [
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(AreaOfSector(AEB))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,AEB,A)",
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9993": {
+    "problem_id": 9993,
+    "added_cdl": [],
+    "goal_cdl": "Value(AreaOfSector(AEB))",
+    "problem_answer": "5*pi/4",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)",
+      "arc_property_center_angle(1,AEB,A)",
+      "sector_area_formula(1,AEB)",
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9994": {
+    "problem_id": 9994,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(A))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,AC,A)"
+    ]
+  },
+  "9995": {
+    "problem_id": 9995,
+    "added_cdl": [
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(ACD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,ACD,A)"
+    ]
+  },
+  "9996": {
+    "problem_id": 9996,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(ACD))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)",
+      "arc_property_center_angle(1,ACD,A)"
+    ]
+  },
+  "9997": {
+    "problem_id": 9997,
+    "added_cdl": [
+      "Equation(ma_bae+ma_ead-180)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(AEB))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,AEB,A)"
+    ]
+  },
+  "9998": {
+    "problem_id": 9998,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(AEB))",
+    "problem_answer": "50",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,BAE,EAD)",
+      "arc_property_center_angle(1,AEB,A)"
+    ]
+  }
+}

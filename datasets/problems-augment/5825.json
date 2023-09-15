@@ -1,0 +1,754 @@
+{
+  "150095": {
+    "problem_id": 150095,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)"
+    ]
+  },
+  "150096": {
+    "problem_id": 150096,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)"
+    ]
+  },
+  "150097": {
+    "problem_id": 150097,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(ADE,ABC))",
+    "problem_answer": "SimilarBetweenTriangle(ADE,ABC)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150098": {
+    "problem_id": 150098,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(ADE,ABC))",
+    "problem_answer": "SimilarBetweenTriangle(ADE,ABC)",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150099": {
+    "problem_id": 150099,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(ADE,ABC))",
+    "problem_answer": "SimilarBetweenTriangle(ADE,ABC)",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150100": {
+    "problem_id": 150100,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DEA,BCA))",
+    "problem_answer": "SimilarBetweenTriangle(DEA,BCA)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150101": {
+    "problem_id": 150101,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DEA,BCA))",
+    "problem_answer": "SimilarBetweenTriangle(DEA,BCA)",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150102": {
+    "problem_id": 150102,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DEA,BCA))",
+    "problem_answer": "SimilarBetweenTriangle(DEA,BCA)",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150103": {
+    "problem_id": 150103,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EAD,CAB))",
+    "problem_answer": "SimilarBetweenTriangle(EAD,CAB)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150104": {
+    "problem_id": 150104,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EAD,CAB))",
+    "problem_answer": "SimilarBetweenTriangle(EAD,CAB)",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150105": {
+    "problem_id": 150105,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(EAD,CAB))",
+    "problem_answer": "SimilarBetweenTriangle(EAD,CAB)",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)"
+    ]
+  },
+  "150106": {
+    "problem_id": 150106,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_adeabc+ll_ad)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150107": {
+    "problem_id": 150107,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150108": {
+    "problem_id": 150108,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150109": {
+    "problem_id": 150109,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150110": {
+    "problem_id": 150110,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150111": {
+    "problem_id": 150111,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150112": {
+    "problem_id": 150112,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150113": {
+    "problem_id": 150113,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150114": {
+    "problem_id": 150114,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150115": {
+    "problem_id": 150115,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_adeabc+ll_ad)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150116": {
+    "problem_id": 150116,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150117": {
+    "problem_id": 150117,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150118": {
+    "problem_id": 150118,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150119": {
+    "problem_id": 150119,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150120": {
+    "problem_id": 150120,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150121": {
+    "problem_id": 150121,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150122": {
+    "problem_id": 150122,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150123": {
+    "problem_id": 150123,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DE))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150124": {
+    "problem_id": 150124,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_adeabc+ll_ad)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150125": {
+    "problem_id": 150125,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150126": {
+    "problem_id": 150126,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150127": {
+    "problem_id": 150127,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150128": {
+    "problem_id": 150128,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150129": {
+    "problem_id": 150129,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150130": {
+    "problem_id": 150130,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150131": {
+    "problem_id": 150131,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150132": {
+    "problem_id": 150132,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150133": {
+    "problem_id": 150133,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_adeabc+ll_ad)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150134": {
+    "problem_id": 150134,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150135": {
+    "problem_id": 150135,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150136": {
+    "problem_id": 150136,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))",
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150137": {
+    "problem_id": 150137,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_adeabc+ll_de)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150138": {
+    "problem_id": 150138,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150139": {
+    "problem_id": 150139,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150140": {
+    "problem_id": 150140,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150141": {
+    "problem_id": 150141,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,ADE,ABC)",
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150142": {
+    "problem_id": 150142,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150143": {
+    "problem_id": 150143,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_adeabc+ll_ad)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(ADEABC))",
+    "problem_answer": "2/5",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150144": {
+    "problem_id": 150144,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ADE,ABC)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(ADEABC))",
+    "problem_answer": "2/5",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150145": {
+    "problem_id": 150145,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(ADE),MeasureOfAngle(ABC))",
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(ADEABC))",
+    "problem_answer": "2/5",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150146": {
+    "problem_id": 150146,
+    "added_cdl": [
+      "Equal(MeasureOfAngle(BCA),MeasureOfAngle(DEA))"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(ADEABC))",
+    "problem_answer": "2/5",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "150147": {
+    "problem_id": 150147,
+    "added_cdl": [],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(ADEABC))",
+    "problem_answer": "2/5",
+    "theorem_seqs": [
+      "parallel_property_corresponding_angle(2,CB,ED,A)",
+      "parallel_property_corresponding_angle(1,DE,BC,A)",
+      "similar_triangle_judgment_aa(1,ADE,ABC)",
+      "similar_triangle_property_line_ratio(1,EAD,CAB)",
+      "line_addition(1,AD,DB)"
+    ]
+  }
+}

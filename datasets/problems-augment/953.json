@@ -1,0 +1,696 @@
+{
+  "27614": {
+    "problem_id": 27614,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(F,BAC))",
+    "problem_answer": "IsCentroidOfTriangle(F,BAC)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)"
+    ]
+  },
+  "27615": {
+    "problem_id": 27615,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(F,ACB))",
+    "problem_answer": "IsCentroidOfTriangle(F,ACB)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)"
+    ]
+  },
+  "27616": {
+    "problem_id": 27616,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsCentroidOfTriangle(F,CBA))",
+    "problem_answer": "IsCentroidOfTriangle(F,CBA)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)"
+    ]
+  },
+  "27617": {
+    "problem_id": 27617,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(AFE))",
+    "problem_answer": "RightTriangle(AFE)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,AFE)"
+    ]
+  },
+  "27618": {
+    "problem_id": 27618,
+    "added_cdl": [
+      "Equation(ma_afe+ma_cfa-180)"
+    ],
+    "goal_cdl": "Relation(RightTriangle(CFA))",
+    "problem_answer": "RightTriangle(CFA)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CFA)"
+    ]
+  },
+  "27619": {
+    "problem_id": 27619,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(CFA))",
+    "problem_answer": "RightTriangle(CFA)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CFA,AFE)",
+      "right_triangle_judgment_angle(1,CFA)"
+    ]
+  },
+  "27620": {
+    "problem_id": 27620,
+    "added_cdl": [
+      "Equation(ma_afe+ma_cfa-180)"
+    ],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(CF,AF))",
+    "problem_answer": "PerpendicularBetweenLine(CF,AF)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CFA)"
+    ]
+  },
+  "27621": {
+    "problem_id": 27621,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(CF,AF))",
+    "problem_answer": "PerpendicularBetweenLine(CF,AF)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CFA,AFE)",
+      "right_triangle_judgment_angle(1,CFA)"
+    ]
+  },
+  "27622": {
+    "problem_id": 27622,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BE))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27623": {
+    "problem_id": 27623,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(EA))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27624": {
+    "problem_id": 27624,
+    "added_cdl": [
+      "Equation(ll_af**2-ll_ea**2+ll_fe**2)",
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27625": {
+    "problem_id": 27625,
+    "added_cdl": [
+      "RightTriangle(AFE)",
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27626": {
+    "problem_id": 27626,
+    "added_cdl": [
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27627": {
+    "problem_id": 27627,
+    "added_cdl": [
+      "IsCentroidOfTriangle(F,BAC)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27628": {
+    "problem_id": 27628,
+    "added_cdl": [
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27629": {
+    "problem_id": 27629,
+    "added_cdl": [
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27630": {
+    "problem_id": 27630,
+    "added_cdl": [
+      "RightTriangle(CFA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27631": {
+    "problem_id": 27631,
+    "added_cdl": [
+      "Equation(ma_afe+ma_cfa-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CFA)",
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27632": {
+    "problem_id": 27632,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "10",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CFA,AFE)",
+      "right_triangle_judgment_angle(1,CFA)",
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27633": {
+    "problem_id": 27633,
+    "added_cdl": [
+      "Equation(ll_af**2-ll_ea**2+ll_fe**2)",
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27634": {
+    "problem_id": 27634,
+    "added_cdl": [
+      "RightTriangle(AFE)",
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27635": {
+    "problem_id": 27635,
+    "added_cdl": [
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27636": {
+    "problem_id": 27636,
+    "added_cdl": [
+      "IsCentroidOfTriangle(F,BAC)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27637": {
+    "problem_id": 27637,
+    "added_cdl": [
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27638": {
+    "problem_id": 27638,
+    "added_cdl": [
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27639": {
+    "problem_id": 27639,
+    "added_cdl": [
+      "RightTriangle(CFA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27640": {
+    "problem_id": 27640,
+    "added_cdl": [
+      "Equation(ma_afe+ma_cfa-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CFA)",
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27641": {
+    "problem_id": 27641,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CE))",
+    "problem_answer": "9",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CFA,AFE)",
+      "right_triangle_judgment_angle(1,CFA)",
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27642": {
+    "problem_id": 27642,
+    "added_cdl": [
+      "Equation(ll_af**2-ll_ea**2+ll_fe**2)",
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27643": {
+    "problem_id": 27643,
+    "added_cdl": [
+      "RightTriangle(AFE)",
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27644": {
+    "problem_id": 27644,
+    "added_cdl": [
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27645": {
+    "problem_id": 27645,
+    "added_cdl": [
+      "IsCentroidOfTriangle(F,BAC)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27646": {
+    "problem_id": 27646,
+    "added_cdl": [
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27647": {
+    "problem_id": 27647,
+    "added_cdl": [
+      "Equation(ll_af**2-ll_ca**2+ll_fc**2)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27648": {
+    "problem_id": 27648,
+    "added_cdl": [
+      "RightTriangle(CFA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27649": {
+    "problem_id": 27649,
+    "added_cdl": [
+      "Equation(ma_afe+ma_cfa-180)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,CFA)",
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27650": {
+    "problem_id": 27650,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "2*sqrt(13)",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CFA,AFE)",
+      "right_triangle_judgment_angle(1,CFA)",
+      "right_triangle_property_pythagorean(1,CFA)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)",
+      "line_addition(1,AE,EB)"
+    ]
+  },
+  "27651": {
+    "problem_id": 27651,
+    "added_cdl": [
+      "IsCentroidOfTriangle(F,BAC)",
+      "Equation(ll_ce-ll_fc-ll_fe)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(FC))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)"
+    ]
+  },
+  "27652": {
+    "problem_id": 27652,
+    "added_cdl": [
+      "Equation(ll_ce-ll_fc-ll_fe)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(FC))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)"
+    ]
+  },
+  "27653": {
+    "problem_id": 27653,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(FC))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)"
+    ]
+  },
+  "27654": {
+    "problem_id": 27654,
+    "added_cdl": [
+      "IsCentroidOfTriangle(F,BAC)",
+      "Equation(ll_ce-ll_fc-ll_fe)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(FE))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)"
+    ]
+  },
+  "27655": {
+    "problem_id": 27655,
+    "added_cdl": [
+      "Equation(ll_ce-ll_fc-ll_fe)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(FE))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)"
+    ]
+  },
+  "27656": {
+    "problem_id": 27656,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(FE))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)"
+    ]
+  },
+  "27657": {
+    "problem_id": 27657,
+    "added_cdl": [
+      "RightTriangle(AFE)",
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_ab-ll_be-ll_ea)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,AFE)"
+    ]
+  },
+  "27658": {
+    "problem_id": 27658,
+    "added_cdl": [
+      "Equation(ll_fc-2*ll_fe)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_ab-ll_be-ll_ea)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)"
+    ]
+  },
+  "27659": {
+    "problem_id": 27659,
+    "added_cdl": [
+      "IsCentroidOfTriangle(F,BAC)",
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_ab-ll_be-ll_ea)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)"
+    ]
+  },
+  "27660": {
+    "problem_id": 27660,
+    "added_cdl": [
+      "Equation(ll_ce-ll_fc-ll_fe)",
+      "Equation(ll_ab-ll_be-ll_ea)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)"
+    ]
+  },
+  "27661": {
+    "problem_id": 27661,
+    "added_cdl": [
+      "Equation(ll_ab-ll_be-ll_ea)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)"
+    ]
+  },
+  "27662": {
+    "problem_id": 27662,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AF))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "line_addition(1,AE,EB)",
+      "line_addition(1,CF,FE)",
+      "centroid_of_triangle_judgment_intersection(1,F,BAC,E,D)",
+      "centroid_of_triangle_property_line_ratio(1,F,CBA,E)",
+      "right_triangle_judgment_angle(1,AFE)",
+      "right_triangle_property_pythagorean(1,AFE)"
+    ]
+  },
+  "27663": {
+    "problem_id": 27663,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(CFA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "adjacent_complementary_angle(1,CFA,AFE)"
+    ]
+  }
+}

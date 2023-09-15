@@ -1,0 +1,660 @@
+{
+  "69953": {
+    "problem_id": 69953,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsPerpendicularBisectorOfLine(OD,AB))",
+    "problem_answer": "IsPerpendicularBisectorOfLine(OD,AB)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69954": {
+    "problem_id": 69954,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(OD,BD))",
+    "problem_answer": "PerpendicularBetweenLine(OD,BD)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69955": {
+    "problem_id": 69955,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(D,AB))",
+    "problem_answer": "IsMidpointOfLine(D,AB)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69956": {
+    "problem_id": 69956,
+    "added_cdl": [],
+    "goal_cdl": "Relation(IsMidpointOfLine(D,BA))",
+    "problem_answer": "IsMidpointOfLine(D,BA)",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69957": {
+    "problem_id": 69957,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AD),LengthOfLine(DB))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69958": {
+    "problem_id": 69958,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(ADO))",
+    "problem_answer": "RightTriangle(ADO)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADO)"
+    ]
+  },
+  "69959": {
+    "problem_id": 69959,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "69960": {
+    "problem_id": 69960,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)"
+    ]
+  },
+  "69961": {
+    "problem_id": 69961,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "Equation(ll_ad**2-ll_ao**2+ll_od**2)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69962": {
+    "problem_id": 69962,
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_ao**2+ll_od**2)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69963": {
+    "problem_id": 69963,
+    "added_cdl": [
+      "RightTriangle(ADO)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69964": {
+    "problem_id": 69964,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69965": {
+    "problem_id": 69965,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69966": {
+    "problem_id": 69966,
+    "added_cdl": [
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69967": {
+    "problem_id": 69967,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "6",
+    "theorem_seqs": [
+      "line_addition(1,OD,DC)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69968": {
+    "problem_id": 69968,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "Equation(ll_ad**2-ll_ao**2+ll_od**2)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69969": {
+    "problem_id": 69969,
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_ao**2+ll_od**2)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69970": {
+    "problem_id": 69970,
+    "added_cdl": [
+      "RightTriangle(ADO)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69971": {
+    "problem_id": 69971,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69972": {
+    "problem_id": 69972,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69973": {
+    "problem_id": 69973,
+    "added_cdl": [
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69974": {
+    "problem_id": 69974,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OD))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "line_addition(1,OD,DC)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69975": {
+    "problem_id": 69975,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "Equation(ll_ad**2-ll_ao**2+ll_od**2)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69976": {
+    "problem_id": 69976,
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_ao**2+ll_od**2)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69977": {
+    "problem_id": 69977,
+    "added_cdl": [
+      "RightTriangle(ADO)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69978": {
+    "problem_id": 69978,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69979": {
+    "problem_id": 69979,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))",
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69980": {
+    "problem_id": 69980,
+    "added_cdl": [
+      "Equation(-ll_dc+ll_oc-ll_od)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69981": {
+    "problem_id": 69981,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DC))",
+    "problem_answer": "1",
+    "theorem_seqs": [
+      "line_addition(1,OD,DC)",
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "line_addition(1,AD,DB)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69982": {
+    "problem_id": 69982,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ODB))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69983": {
+    "problem_id": 69983,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "69984": {
+    "problem_id": 69984,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AD))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "69985": {
+    "problem_id": 69985,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "69986": {
+    "problem_id": 69986,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DB))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)",
+      "line_addition(1,AD,DB)"
+    ]
+  },
+  "69987": {
+    "problem_id": 69987,
+    "added_cdl": [
+      "RightTriangle(ADO)",
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69988": {
+    "problem_id": 69988,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69989": {
+    "problem_id": 69989,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69990": {
+    "problem_id": 69990,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AO))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)",
+      "line_addition(1,AD,DB)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69991": {
+    "problem_id": 69991,
+    "added_cdl": [
+      "RightTriangle(ADO)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69992": {
+    "problem_id": 69992,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69993": {
+    "problem_id": 69993,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69994": {
+    "problem_id": 69994,
+    "added_cdl": [
+      "IsPerpendicularBisectorOfLine(OD,AB)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69995": {
+    "problem_id": 69995,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)",
+      "line_addition(1,AD,DB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)"
+    ]
+  },
+  "69996": {
+    "problem_id": 69996,
+    "added_cdl": [
+      "Equation(ll_ad**2-ll_ao**2+ll_od**2)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69997": {
+    "problem_id": 69997,
+    "added_cdl": [
+      "RightTriangle(ADO)",
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,ADO)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69998": {
+    "problem_id": 69998,
+    "added_cdl": [
+      "Equal(LengthOfLine(AO),RadiusOfCircle(O))",
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "69999": {
+    "problem_id": 69999,
+    "added_cdl": [
+      "Equation(ll_ab-ll_ad-ll_db)",
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "70000": {
+    "problem_id": 70000,
+    "added_cdl": [
+      "Equal(LengthOfLine(OC),RadiusOfCircle(O))"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "line_addition(1,AD,DB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  },
+  "70001": {
+    "problem_id": 70001,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OC))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OC,O)",
+      "line_addition(1,AD,DB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "right_triangle_judgment_angle(1,ADO)",
+      "right_triangle_property_pythagorean(1,ADO)",
+      "circle_property_chord_perpendicular_bisect_chord(1,O,OD,AB)"
+    ]
+  }
+}

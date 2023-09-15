@@ -1,0 +1,1099 @@
+{
+  "159294": {
+    "problem_id": 159294,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(AB),DiameterOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159295": {
+    "problem_id": 159295,
+    "added_cdl": [],
+    "goal_cdl": "Relation(PerpendicularBetweenLine(BC,AC))",
+    "problem_answer": "PerpendicularBetweenLine(BC,AC)",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ]
+  },
+  "159296": {
+    "problem_id": 159296,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Relation(RightTriangle(BCA))",
+    "problem_answer": "RightTriangle(BCA)",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  },
+  "159297": {
+    "problem_id": 159297,
+    "added_cdl": [],
+    "goal_cdl": "Relation(RightTriangle(BCA))",
+    "problem_answer": "RightTriangle(BCA)",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)"
+    ]
+  },
+  "159298": {
+    "problem_id": 159298,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(ODA,BCA))",
+    "problem_answer": "SimilarBetweenTriangle(ODA,BCA)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)"
+    ]
+  },
+  "159299": {
+    "problem_id": 159299,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(ODA,BCA))",
+    "problem_answer": "SimilarBetweenTriangle(ODA,BCA)",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)"
+    ]
+  },
+  "159300": {
+    "problem_id": 159300,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DAO,CAB))",
+    "problem_answer": "SimilarBetweenTriangle(DAO,CAB)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)"
+    ]
+  },
+  "159301": {
+    "problem_id": 159301,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(DAO,CAB))",
+    "problem_answer": "SimilarBetweenTriangle(DAO,CAB)",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)"
+    ]
+  },
+  "159302": {
+    "problem_id": 159302,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(AOD,ABC))",
+    "problem_answer": "SimilarBetweenTriangle(AOD,ABC)",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)"
+    ]
+  },
+  "159303": {
+    "problem_id": 159303,
+    "added_cdl": [],
+    "goal_cdl": "Relation(SimilarBetweenTriangle(AOD,ABC))",
+    "problem_answer": "SimilarBetweenTriangle(AOD,ABC)",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)"
+    ]
+  },
+  "159304": {
+    "problem_id": 159304,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159305": {
+    "problem_id": 159305,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_bc**2+ll_ca**2)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159306": {
+    "problem_id": 159306,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159307": {
+    "problem_id": 159307,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159308": {
+    "problem_id": 159308,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159309": {
+    "problem_id": 159309,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159310": {
+    "problem_id": 159310,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159311": {
+    "problem_id": 159311,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159312": {
+    "problem_id": 159312,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159313": {
+    "problem_id": 159313,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159314": {
+    "problem_id": 159314,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159315": {
+    "problem_id": 159315,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(AB))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159316": {
+    "problem_id": 159316,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_bc**2+ll_ca**2)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159317": {
+    "problem_id": 159317,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159318": {
+    "problem_id": 159318,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159319": {
+    "problem_id": 159319,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159320": {
+    "problem_id": 159320,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159321": {
+    "problem_id": 159321,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159322": {
+    "problem_id": 159322,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159323": {
+    "problem_id": 159323,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159324": {
+    "problem_id": 159324,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159325": {
+    "problem_id": 159325,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159326": {
+    "problem_id": 159326,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(CA))",
+    "problem_answer": "4",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159327": {
+    "problem_id": 159327,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_bc**2+ll_ca**2)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159328": {
+    "problem_id": 159328,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159329": {
+    "problem_id": 159329,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159330": {
+    "problem_id": 159330,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159331": {
+    "problem_id": 159331,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159332": {
+    "problem_id": 159332,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159333": {
+    "problem_id": 159333,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159334": {
+    "problem_id": 159334,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159335": {
+    "problem_id": 159335,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159336": {
+    "problem_id": 159336,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159337": {
+    "problem_id": 159337,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(ODA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159338": {
+    "problem_id": 159338,
+    "added_cdl": [
+      "Equation(-ll_ab**2+ll_bc**2+ll_ca**2)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159339": {
+    "problem_id": 159339,
+    "added_cdl": [
+      "RightTriangle(BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159340": {
+    "problem_id": 159340,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)",
+      "Equation(dc_o-2*rc_o)",
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159341": {
+    "problem_id": 159341,
+    "added_cdl": [
+      "Equal(LengthOfLine(OA),RadiusOfCircle(O))",
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159342": {
+    "problem_id": 159342,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159343": {
+    "problem_id": 159343,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159344": {
+    "problem_id": 159344,
+    "added_cdl": [
+      "Equation(-ll_bc*rst_daocab+ll_do)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159345": {
+    "problem_id": 159345,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159346": {
+    "problem_id": 159346,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159347": {
+    "problem_id": 159347,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159348": {
+    "problem_id": 159348,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(DO))",
+    "problem_answer": "3/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,AOD,ABC)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159349": {
+    "problem_id": 159349,
+    "added_cdl": [],
+    "goal_cdl": "Value(DiameterOfCircle(O))",
+    "problem_answer": "5",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159350": {
+    "problem_id": 159350,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BCA))",
+    "problem_answer": "90",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)"
+    ]
+  },
+  "159351": {
+    "problem_id": 159351,
+    "added_cdl": [
+      "RightTriangle(BCA)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "159352": {
+    "problem_id": 159352,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "159353": {
+    "problem_id": 159353,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(BC))",
+    "problem_answer": "3",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "right_triangle_judgment_angle(1,BCA)",
+      "right_triangle_property_pythagorean(1,BCA)"
+    ]
+  },
+  "159354": {
+    "problem_id": 159354,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159355": {
+    "problem_id": 159355,
+    "added_cdl": [],
+    "goal_cdl": "Value(RadiusOfCircle(O))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)"
+    ]
+  },
+  "159356": {
+    "problem_id": 159356,
+    "added_cdl": [
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159357": {
+    "problem_id": 159357,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159358": {
+    "problem_id": 159358,
+    "added_cdl": [],
+    "goal_cdl": "Value(LengthOfLine(OA))",
+    "problem_answer": "5/2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159359": {
+    "problem_id": 159359,
+    "added_cdl": [
+      "Equation(-ll_ab*rst_daocab+ll_oa)",
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(DAOCAB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159360": {
+    "problem_id": 159360,
+    "added_cdl": [
+      "SimilarBetweenTriangle(ODA,BCA)",
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(DAOCAB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159361": {
+    "problem_id": 159361,
+    "added_cdl": [
+      "Equal(LengthOfLine(AB),DiameterOfCircle(O))",
+      "Equation(dc_o-2*rc_o)",
+      "PerpendicularBetweenLine(BC,AC)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(DAOCAB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159362": {
+    "problem_id": 159362,
+    "added_cdl": [
+      "PerpendicularBetweenLine(BC,AC)",
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(DAOCAB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159363": {
+    "problem_id": 159363,
+    "added_cdl": [
+      "Equation(dc_o-2*rc_o)"
+    ],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(DAOCAB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  },
+  "159364": {
+    "problem_id": 159364,
+    "added_cdl": [],
+    "goal_cdl": "Value(RatioOfSimilarTriangle(DAOCAB))",
+    "problem_answer": "1/2",
+    "theorem_seqs": [
+      "circle_property_length_of_radius_and_diameter(1,O)",
+      "diameter_of_circle_property_right_angle(1,BCA,O)",
+      "diameter_of_circle_property_length_equal(1,AB,O)",
+      "similar_triangle_judgment_aa(1,ODA,BCA)",
+      "similar_triangle_property_line_ratio(1,DAO,CAB)",
+      "radius_of_circle_property_length_equal(1,OA,O)"
+    ]
+  }
+}

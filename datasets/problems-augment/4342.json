@@ -1,0 +1,375 @@
+{
+  "104380": {
+    "problem_id": 104380,
+    "added_cdl": [
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Equal(LengthOfArc(OAB),LengthOfArc(OCD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_addition_length(1,OAB,OBC)"
+    ]
+  },
+  "104381": {
+    "problem_id": 104381,
+    "added_cdl": [],
+    "goal_cdl": "Equal(LengthOfArc(OAB),LengthOfArc(OCD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_addition_length(1,OBC,OCD)",
+      "arc_addition_length(1,OAB,OBC)"
+    ]
+  },
+  "104382": {
+    "problem_id": 104382,
+    "added_cdl": [
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Relation(CongruentBetweenArc(OAB,OCD))",
+    "problem_answer": "CongruentBetweenArc(OAB,OCD)",
+    "theorem_seqs": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)"
+    ]
+  },
+  "104383": {
+    "problem_id": 104383,
+    "added_cdl": [
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Relation(CongruentBetweenArc(OAB,OCD))",
+    "problem_answer": "CongruentBetweenArc(OAB,OCD)",
+    "theorem_seqs": [
+      "arc_addition_length(1,OAB,OBC)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)"
+    ]
+  },
+  "104384": {
+    "problem_id": 104384,
+    "added_cdl": [],
+    "goal_cdl": "Relation(CongruentBetweenArc(OAB,OCD))",
+    "problem_answer": "CongruentBetweenArc(OAB,OCD)",
+    "theorem_seqs": [
+      "arc_addition_length(1,OBC,OCD)",
+      "arc_addition_length(1,OAB,OBC)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)"
+    ]
+  },
+  "104385": {
+    "problem_id": 104385,
+    "added_cdl": [
+      "CongruentBetweenArc(OAB,OCD)"
+    ],
+    "goal_cdl": "Equal(MeasureOfArc(OAB),MeasureOfArc(OCD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104386": {
+    "problem_id": 104386,
+    "added_cdl": [
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Equal(MeasureOfArc(OAB),MeasureOfArc(OCD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104387": {
+    "problem_id": 104387,
+    "added_cdl": [
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Equal(MeasureOfArc(OAB),MeasureOfArc(OCD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_addition_length(1,OAB,OBC)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104388": {
+    "problem_id": 104388,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(OAB),MeasureOfArc(OCD))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_addition_length(1,OBC,OCD)",
+      "arc_addition_length(1,OAB,OBC)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104389": {
+    "problem_id": 104389,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(OAB),MeasureOfAngle(BOA))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "104390": {
+    "problem_id": 104390,
+    "added_cdl": [],
+    "goal_cdl": "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))",
+    "problem_answer": "0",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OCD,O)"
+    ]
+  },
+  "104391": {
+    "problem_id": 104391,
+    "added_cdl": [
+      "CongruentBetweenArc(OAB,OCD)",
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(BOA))",
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BOA))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104392": {
+    "problem_id": 104392,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(BOA))",
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BOA))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104393": {
+    "problem_id": 104393,
+    "added_cdl": [
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equation(-la_obc+la_obd-la_ocd)",
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BOA))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104394": {
+    "problem_id": 104394,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BOA))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104395": {
+    "problem_id": 104395,
+    "added_cdl": [
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(BOA))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104396": {
+    "problem_id": 104396,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(BOA))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_addition_length(1,OBC,OCD)",
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104397": {
+    "problem_id": 104397,
+    "added_cdl": [
+      "CongruentBetweenArc(OAB,OCD)",
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(BOA))",
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104398": {
+    "problem_id": 104398,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(BOA))",
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104399": {
+    "problem_id": 104399,
+    "added_cdl": [
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equation(-la_obc+la_obd-la_ocd)",
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104400": {
+    "problem_id": 104400,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OCD),MeasureOfAngle(DOC))",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104401": {
+    "problem_id": 104401,
+    "added_cdl": [
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104402": {
+    "problem_id": 104402,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfAngle(DOC))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_addition_length(1,OBC,OCD)",
+      "arc_property_center_angle(1,OCD,O)",
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104403": {
+    "problem_id": 104403,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(OAB))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)"
+    ]
+  },
+  "104404": {
+    "problem_id": 104404,
+    "added_cdl": [
+      "CongruentBetweenArc(OAB,OCD)",
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(BOA))"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(OCD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104405": {
+    "problem_id": 104405,
+    "added_cdl": [
+      "Equal(MeasureOfArc(OAB),MeasureOfAngle(BOA))",
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(OCD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104406": {
+    "problem_id": 104406,
+    "added_cdl": [
+      "Equation(-la_oab+la_oac-la_obc)",
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(OCD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104407": {
+    "problem_id": 104407,
+    "added_cdl": [
+      "Equation(-la_obc+la_obd-la_ocd)"
+    ],
+    "goal_cdl": "Value(MeasureOfArc(OCD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  },
+  "104408": {
+    "problem_id": 104408,
+    "added_cdl": [],
+    "goal_cdl": "Value(MeasureOfArc(OCD))",
+    "problem_answer": "40",
+    "theorem_seqs": [
+      "arc_addition_length(1,OBC,OCD)",
+      "arc_addition_length(1,OAB,OBC)",
+      "arc_property_center_angle(1,OAB,O)",
+      "congruent_arc_judgment_length_equal(1,OAB,OCD)",
+      "congruent_arc_property_measure_equal(1,OAB,OCD)"
+    ]
+  }
+}
