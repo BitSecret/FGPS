@@ -18,6 +18,7 @@ path_search_log = "utils/search/"
 
 
 def get_args():
+    """python search.py --direction fw --method bfs --max_depth 10 --beam_size 10"""
     parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
 
     parser.add_argument("--direction", type=str, required=True, choices=("fw", "bw"),  help="start problem id")
@@ -121,6 +122,4 @@ def auto(direction, method, max_depth, beam_size):
 
 
 if __name__ == '__main__':
-    # run(direction="fw", method="dfs")
-    # auto(direction="fw", method="bfs", max_depth=10, beam_size=10)
-    auto(direction="bw", method="bfs", max_depth=10, beam_size=10)
+    auto(direction="fw", method="bfs", max_depth=10, beam_size=10)

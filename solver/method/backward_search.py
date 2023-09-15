@@ -160,7 +160,7 @@ class NodeState(Enum):
 
 
 class Node:
-    def __init__(self, super_node, problem, predicate, item, node_map, finder):
+    def __init__(self, super_node, problem, predicate, item, node_map, finder, debug):
         """Init node and set node state."""
         self.state = NodeState.to_be_expanded
         self.super_node = super_node  # class <SuperNode>
@@ -174,6 +174,8 @@ class Node:
 
         self.finder = finder
         self.node_map = node_map
+        
+        self.debug = debug
 
         if predicate == "Equation":  # process 1
             for sym in self.item.free_symbols:
@@ -253,7 +255,8 @@ class Node:
                 continue
             self.children_t_msg.add((t_name, t_branch, t_para))
 
-            super_node = SuperNode(self, self.problem, (t_name, t_branch, t_para), depth, self.node_map, self.finder)
+            super_node = SuperNode(self, self.problem, (t_name, t_branch, t_para), depth,
+                                   self.node_map, self.finder, self.debug)
             self.children.append(super_node)
             super_node.add_nodes(sub_goals)
 
@@ -261,7 +264,7 @@ class Node:
 class SuperNode:
     snc = {}  # {depth: super_node_count}
 
-    def __init__(self, father_node, problem, theorem, depth, node_map, finder):
+    def __init__(self, father_node, problem, theorem, depth, node_map, finder, debug):
         self.state = NodeState.to_be_expanded
         self.nodes = []  # list of class <Node>
         self.father_node = father_node  # class <Node>
@@ -273,6 +276,7 @@ class SuperNode:
         SuperNode.snc[depth] += 1
         self.node_map = node_map
         self.finder = finder
+        self.debug = debug
 
     def add_nodes(self, sub_goals):
         father_super_nodes = []  # ensure no ring
@@ -288,7 +292,7 @@ class SuperNode:
                 father_super_nodes.append(super_node.father_node.super_node)
 
         for predicate, item in sub_goals:
-            node = Node(self, self.problem, predicate, item, self.node_map, self.finder)
+            node = Node(self, self.problem, predicate, item, self.node_map, self.finder, self.debug)
             self.nodes.append(node)
             if node.state == NodeState.fail:
                 break
@@ -324,7 +328,7 @@ class SuperNode:
         for i in range(len(self.nodes)):
             if self.state == NodeState.success:
                 break
-            print("\033[34m(pid={},depth={},branch={}/{},nodes={}/{})\033[0m Expanding Node ({}, {})".format(
+            debug_print(self.debug, "(pid={},depth={},branch={}/{},nodes={}/{}) Expanding Node ({}, {})".format(
                 self.problem.problem_CDL["id"], self.pos[0], self.pos[1], SuperNode.snc[self.pos[0]],
                 i + 1, len(self.nodes), self.nodes[i].predicate, self.nodes[i].item))
             self.nodes[i].expand()
@@ -439,9 +443,9 @@ class BackwardSearcher:
     def search(self):
         """return seqs, <list> of theorem, solved theorem sequences."""
         pid = self.problem.problem_CDL["id"]
-        print("\033[36m(pid={})\033[0m Start Searching".format(pid))
+        debug_print(self.debug, "(pid={}) Start Searching".format(pid))
 
-        self.root = SuperNode(None, self.problem, None, 1, self.node_map, self.finder)
+        self.root = SuperNode(None, self.problem, None, 1, self.node_map, self.finder, self.debug)
         if self.problem.goal.type == "algebra":
             eq = self.problem.goal.item - self.problem.goal.answer
             self.root.add_nodes([("Equation", eq)])
@@ -456,18 +460,18 @@ class BackwardSearcher:
             start_step_count = self.problem.condition.step_count
 
             timing = time.time()
-            print("\033[35m(pid={},depth={},branch={}/{})\033[0m Expanding SuperNode Start".format(
+            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Start".format(
                 pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
             super_node.expand()
 
-            print("\033[35m(pid={},depth={},branch={}/{})\033[0m Expanding SuperNode Done (timing={:.4f})".format(
+            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Done (timing={:.4f})".format(
                 pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]], time.time() - timing))
 
             timing = time.time()
-            print("\033[35m(pid={},depth={},branch={}/{})\033[0m Checking Node Start".format(
+            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node Start".format(
                 pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
             self.check_node(start_step_count)
-            print("\033[35m(pid={},depth={},branch={}/{})\033[0m Checking Node End (timing={:.4f})".format(
+            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node End (timing={:.4f})".format(
                 pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
                 time.time() - timing))
 
@@ -475,11 +479,11 @@ class BackwardSearcher:
         # self.save_backward_tree()
 
         if self.problem.goal.solved:
-            print("\033[32m(pid={})\033[0m End Searching".format(self.problem.problem_CDL["id"]))
+            debug_print(self.debug, "(pid={}) End Searching".format(self.problem.problem_CDL["id"]))
             _, seqs = get_used(self.problem)
             return True, seqs
 
-        print("\033[31m(pid={})\033[0m End Searching".format(self.problem.problem_CDL["id"]))
+        debug_print(self.debug, "(pid={}) End Searching".format(self.problem.problem_CDL["id"]))
         return False, None
 
     def get_super_node(self):
@@ -610,7 +614,7 @@ if __name__ == '__main__':
         method="bfs", max_depth=10, beam_size=10,
         p2t_map=load_json(path_search_log + "p2t_map-bw.json"), debug=True
     )
-    pid = 2
+    pid = 1
     searcher.init_search(load_json(path_problems + "{}.json".format(pid)))
     solved_result = searcher.search()
     print("pid: {}, solved: {}, seqs:{}, step_count: {}.\n".format(

@@ -1,25 +1,44 @@
 import random
+from solver.aux_tools.utils import save_json
 
 
-def split(start_pid, end_pid, seed, ratio):
-    """train:validation:test = 6:2:2"""
+def split(start_pid, end_pid, seed, ratio, save_file=False):
+    """train:validation:test = ratio[0]:ratio[1]:ratio[2]"""
     total = ratio[0] + ratio[1] + ratio[2]
     random.seed(seed)
     data = list(range(start_pid, end_pid + 1))
-    train_set = sorted(random.sample(data, int(end_pid * ratio[0] / total)))
+    test = sorted(random.sample(data, int(end_pid * ratio[2] / total)))
     for i in range(len(data))[::-1]:
-        if data[i] in train_set:
+        if data[i] in test:
             data.pop(i)
-    validation_set = sorted(random.sample(data, int(end_pid * ratio[1] / total)))
+    val = sorted(random.sample(data, int(end_pid * ratio[1] / total)))
     for i in range(len(data))[::-1]:
-        if data[i] in validation_set:
+        if data[i] in val:
             data.pop(i)
-    test_set = data
-    return train_set, validation_set, test_set
+    train = data
+
+    total = len(train) + len(val) + len(test)
+    print("train({}/{}): {}".format(len(train), total, train))
+    print("val({}/{}): {}".format(len(val), total, val))
+    print("test({}/{}): {}".format(len(test), total, test))
+
+    if save_file:
+        data = {
+            "msg": {
+                "total": total,
+                "train": len(train),
+                "val": len(val),
+                "test": len(test)
+            },
+            "split": {
+                "train": train,
+                "val": val,
+                "test": test
+            }
+        }
+        save_json(data, "{}k.json".format(str(int(total / 1000))))
 
 
 if __name__ == '__main__':
-    train, val, test = split(start_pid=1, end_pid=6981, seed=619, ratio=(6, 2, 2))
-    print("train({}/6981): {}".format(len(train), train))
-    print("val({}/6981): {}".format(len(val), val))
-    print("test({}/6981): {}".format(len(test), test))
+    split(start_pid=1, end_pid=6981, seed=619, ratio=(6, 2, 2), save_file=True)
+    # split(start_pid=1, end_pid=186832, seed=619, ratio=(15, 2, 1), save_file=True)
