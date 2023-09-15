@@ -211,6 +211,6 @@ def check_search(direction, method, auto=False, start_pid=1, end_pid=6981):
 
 
 if __name__ == '__main__':
-    # check_raw(auto=True)
-    check_augment(auto=True, show_solved=False)
+    check_raw(auto=True)
+    # check_augment(auto=True, show_solved=False)
     # check_search(direction="fw", method="bfs", auto=False)

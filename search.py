@@ -13,7 +13,7 @@ import time
 cpu_core = 10  # cpu core
 path_gdl = "datasets/gdl/"
 path_problems = "datasets/problems/"
-path_search_data = "datasets/search/"
+path_search_data = "datasets/solved/search/"
 path_search_log = "utils/search/"
 
 
@@ -122,4 +122,4 @@ def auto(direction, method, max_depth, beam_size):
 
 if __name__ == '__main__':
     # run(direction="fw", method="dfs")
-    auto(direction="fw", method="bfs", max_depth=5, beam_size=5)
+    auto(direction="fw", method="bfs", max_depth=10, beam_size=10)

@@ -4,13 +4,13 @@ from solver.aux_tools.parser import GDLParser
 
 direction = ["fw", "bw"]  # forward, backward
 method = ["dfs", "bfs", "rs", "bs"]  # deep first, breadth first, random, beam
-data = {"solved": [], "unsolved": [], "timeout": [], "error": []}
+data = {"solved": {}, "unsolved": {}, "timeout": {}, "error": {}}
 log = {"start_pid": 1, "end_pid": 6981, "solved_pid": [], "unsolved_pid": [], "timeout_pid": [], "error_pid": []}
 
 
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
-path_search_data = "../../datasets/search/"
+path_search_data = "../../datasets/solved/search/"
 path_raw_gdl = "../gdl/"
 
 
@@ -82,5 +82,5 @@ def init_p2t_map():
 
 
 if __name__ == '__main__':
-    # init_search()
-    init_p2t_map()
+    init_search(force=True)
+    # init_p2t_map()
