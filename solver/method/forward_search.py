@@ -15,7 +15,7 @@ random.seed(619)
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
 path_search_log = "../../utils/search/"
-fw_timeout = 300
+fw_timeout = 200
 
 
 class ForwardSearcher:
@@ -169,9 +169,7 @@ class ForwardSearcher:
                     self.stack = stack
                     beam_count = self.beam_size
 
-                i = 0
-                while i < beam_count:
-                    i += 1
+                for i in range(beam_count):
                     pos, selection = self.stack.pop(0)
                     self.step_size += 1
                     debug_print(self.debug, "\n(pos={}, node_count={}) Current node.".format(pos, self.node_count))

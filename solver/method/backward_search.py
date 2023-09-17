@@ -18,7 +18,7 @@ random.seed(619)
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
 path_search_log = "../../utils/search/"
-bw_timeout = 300
+bw_timeout = 200
 
 
 class GoalFinder:
@@ -174,7 +174,7 @@ class Node:
 
         self.finder = finder
         self.node_map = node_map
-        
+
         self.debug = debug
 
         if predicate == "Equation":  # process 1
@@ -243,7 +243,7 @@ class Node:
 
         return True
 
-    def expand(self):  # process 1
+    def expand(self, search_stack):  # process 1
         if self.state in [NodeState.success, NodeState.fail]:
             return False
         self.state = NodeState.expanded
@@ -256,7 +256,7 @@ class Node:
             self.children_t_msg.add((t_name, t_branch, t_para))
 
             super_node = SuperNode(self, self.problem, (t_name, t_branch, t_para), depth,
-                                   self.node_map, self.finder, self.debug)
+                                   self.node_map, self.finder, self.debug, search_stack)
             self.children.append(super_node)
             super_node.add_nodes(sub_goals)
 
@@ -264,7 +264,7 @@ class Node:
 class SuperNode:
     snc = {}  # {depth: super_node_count}
 
-    def __init__(self, father_node, problem, theorem, depth, node_map, finder, debug):
+    def __init__(self, father_node, problem, theorem, depth, node_map, finder, debug, search_stack):
         self.state = NodeState.to_be_expanded
         self.nodes = []  # list of class <Node>
         self.father_node = father_node  # class <Node>
@@ -277,6 +277,9 @@ class SuperNode:
         self.node_map = node_map
         self.finder = finder
         self.debug = debug
+
+        self.search_stack = search_stack
+        search_stack.append(self)
 
     def add_nodes(self, sub_goals):
         father_super_nodes = []  # ensure no ring
@@ -331,7 +334,7 @@ class SuperNode:
             debug_print(self.debug, "(pid={},depth={},branch={}/{},nodes={}/{}) Expanding Node ({}, {})".format(
                 self.problem.problem_CDL["id"], self.pos[0], self.pos[1], SuperNode.snc[self.pos[0]],
                 i + 1, len(self.nodes), self.nodes[i].predicate, self.nodes[i].item))
-            self.nodes[i].expand()
+            self.nodes[i].expand(self.search_stack)
 
     def apply_theorem(self):
         if self.theorem is None or self.theorem[0].endswith("definition"):
@@ -418,62 +421,162 @@ class BackwardSearcher:
         self.beam_size = beam_size
         self.method = method
         self.debug = debug
-        self.p2t_map = p2t_map
 
-        self.node_map = {}
+        self.node_map = None
         self.finder = GoalFinder(self.theorem_GDL, p2t_map)
 
+        self.step_size = None
         self.problem = None
         self.root = None
-        self.step_size = None
+        self.search_stack = None
 
         self.id = 0
 
     def init_search(self, problem_CDL):
         """Init and return a problem by problem_CDL."""
         s_start_time = time.time()
+        self.node_map = {}
+        self.step_size = 0
+        SuperNode.snc = {}
+
         self.problem = Problem()
         self.problem.load_problem_by_fl(self.predicate_GDL, CDLParser.parse_problem(problem_CDL))  # load problem
         EqKiller.solve_equations(self.problem)
         self.problem.step("init_problem", time.time() - s_start_time)  # save applied theorem and update step
-        SuperNode.snc = {}
-        self.step_size = 0
 
-    @func_set_timeout(bw_timeout)
-    def search(self):
-        """return seqs, <list> of theorem, solved theorem sequences."""
-        pid = self.problem.problem_CDL["id"]
-        debug_print(self.debug, "(pid={}) Start Searching".format(pid))
-
-        self.root = SuperNode(None, self.problem, None, 1, self.node_map, self.finder, self.debug)
+        self.search_stack = []
+        self.root = SuperNode(None, self.problem, None, 1, self.node_map, self.finder, self.debug, self.search_stack)
         if self.problem.goal.type == "algebra":
             eq = self.problem.goal.item - self.problem.goal.answer
             self.root.add_nodes([("Equation", eq)])
         else:
             self.root.add_nodes([(self.problem.goal.item, self.problem.goal.answer)])
 
-        while self.root.state not in [NodeState.success, NodeState.fail]:
-            super_node = self.get_super_node()
-            self.step_size += 1
-            if super_node is None:
-                break
-            start_step_count = self.problem.condition.step_count
+        self.search_stack.append(self.root)
 
-            timing = time.time()
-            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Start".format(
-                pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
-            super_node.expand()
+    @func_set_timeout(bw_timeout)
+    def search(self):
+        """return seqs, <list> of theorem, solved theorem sequences."""
+        pid = self.problem.problem_CDL["id"]
+        debug_print(self.debug, "(pid={}) Start Searching".format(pid))
+        if self.method == "bfs":
+            while self.root.state not in [NodeState.success, NodeState.fail]:
+                self.clean_search_stack()
+                if len(self.search_stack) == 0:
+                    break
+                super_node = self.search_stack.pop(0)
+                self.step_size += 1
+                start_step_count = self.problem.condition.step_count
 
-            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Done (timing={:.4f})".format(
-                pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]], time.time() - timing))
+                timing = time.time()
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Start".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                super_node.expand()
 
-            timing = time.time()
-            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node Start".format(
-                pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
-            self.check_node(start_step_count)
-            debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node End (timing={:.4f})".format(
-                pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
-                time.time() - timing))
+                debug_print(self.debug,
+                            "(pid={},depth={},branch={}/{}) Expanding SuperNode Done (timing={:.4f})".format(
+                                pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                                time.time() - timing))
+
+                timing = time.time()
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node Start".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                self.check_node(start_step_count)
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node End (timing={:.4f})".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                    time.time() - timing))
+        elif self.method == "dfs":
+            while self.root.state not in [NodeState.success, NodeState.fail]:
+                self.clean_search_stack()
+                if len(self.search_stack) == 0:
+                    break
+                super_node = self.search_stack.pop()
+                self.step_size += 1
+                start_step_count = self.problem.condition.step_count
+
+                timing = time.time()
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Start".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                super_node.expand()
+
+                debug_print(self.debug,
+                            "(pid={},depth={},branch={}/{}) Expanding SuperNode Done (timing={:.4f})".format(
+                                pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                                time.time() - timing))
+
+                timing = time.time()
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node Start".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                self.check_node(start_step_count)
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node End (timing={:.4f})".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                    time.time() - timing))
+        elif self.method == "rs":
+            while self.root.state not in [NodeState.success, NodeState.fail]:
+                self.clean_search_stack()
+                if len(self.search_stack) == 0:
+                    break
+                super_node = self.search_stack.pop(random.randint(0, len(self.search_stack) - 1))
+                self.step_size += 1
+                start_step_count = self.problem.condition.step_count
+
+                timing = time.time()
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Start".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                super_node.expand()
+
+                debug_print(self.debug,
+                            "(pid={},depth={},branch={}/{}) Expanding SuperNode Done (timing={:.4f})".format(
+                                pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                                time.time() - timing))
+
+                timing = time.time()
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node Start".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                self.check_node(start_step_count)
+                debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node End (timing={:.4f})".format(
+                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                    time.time() - timing))
+        else:
+            while self.root.state not in [NodeState.success, NodeState.fail]:
+                self.clean_search_stack()
+                if len(self.search_stack) == 0:
+                    break
+                beam_count = len(self.search_stack)
+                if len(self.search_stack) > self.beam_size:  # select branch with beam size
+                    search_stack = []
+                    for i in random.sample(range(len(self.search_stack)), self.beam_size):
+                        search_stack.append(self.search_stack[i])
+                    self.search_stack = search_stack
+                    beam_count = self.beam_size
+
+                for i in range(beam_count):
+                    super_node = self.search_stack.pop(0)
+                    if super_node.state != NodeState.to_be_expanded:
+                        continue
+                    self.step_size += 1
+                    start_step_count = self.problem.condition.step_count
+
+                    timing = time.time()
+                    debug_print(self.debug, "(pid={},depth={},branch={}/{}) Expanding SuperNode Start".format(
+                        pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                    super_node.expand()
+
+                    debug_print(self.debug,
+                                "(pid={},depth={},branch={}/{}) Expanding SuperNode Done (timing={:.4f})".format(
+                                    pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                                    time.time() - timing))
+
+                    timing = time.time()
+                    debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node Start".format(
+                        pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]]))
+                    self.check_node(start_step_count)
+                    debug_print(self.debug, "(pid={},depth={},branch={}/{}) Checking Node End (timing={:.4f})".format(
+                        pid, super_node.pos[0], super_node.pos[1], SuperNode.snc[super_node.pos[0]],
+                        time.time() - timing))
+
+                    if self.root.state in [NodeState.success, NodeState.fail]:
+                        break
 
         self.problem.check_goal()
         # self.save_backward_tree()
@@ -486,28 +589,11 @@ class BackwardSearcher:
         debug_print(self.debug, "(pid={}) End Searching".format(self.problem.problem_CDL["id"]))
         return False, None
 
-    def get_super_node(self):
-        search_stack = [self.root]
-
-        while len(search_stack) > 0:
-            if self.method == "dfs":
-                super_node = search_stack.pop()
-            else:
-                super_node = search_stack.pop(0)
-
-            if super_node.pos[0] > self.max_depth:
+    def clean_search_stack(self):
+        for i in range(len(self.search_stack))[::-1]:
+            if self.search_stack[i].state == NodeState.to_be_expanded:
                 continue
-
-            if super_node.state == NodeState.to_be_expanded:
-                return super_node
-            elif super_node.state == NodeState.expanded:
-                for node in super_node.nodes:
-                    if node.state != NodeState.expanded:
-                        continue
-                    for child_super_node in node.children[::-1]:
-                        search_stack.append(child_super_node)
-
-        return None
+            self.search_stack.pop(i)
 
     def check_node(self, start_step_count):
         end_step_count = self.problem.condition.step_count
@@ -542,7 +628,7 @@ class BackwardSearcher:
             for node in self.node_map[related]:
                 if node.state in [NodeState.fail, NodeState.success]:
                     continue
-                node.expand()
+                node.expand(self.search_stack)
 
         self.check_node(end_step_count)
 
@@ -611,11 +697,11 @@ if __name__ == '__main__':
     warnings.filterwarnings("ignore")
     searcher = BackwardSearcher(
         load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
-        method="bfs", max_depth=10, beam_size=10,
+        method="bs", max_depth=10, beam_size=10,
         p2t_map=load_json(path_search_log + "p2t_map-bw.json"), debug=True
     )
-    pid = 1
-    searcher.init_search(load_json(path_problems + "{}.json".format(pid)))
+    problem_id = 6
+    searcher.init_search(load_json(path_problems + "{}.json".format(problem_id)))
     solved_result = searcher.search()
     print("pid: {}, solved: {}, seqs:{}, step_count: {}.\n".format(
-        pid, solved_result[0], solved_result[1], searcher.step_size))
+        problem_id, solved_result[0], solved_result[1], searcher.step_size))

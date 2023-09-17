@@ -10,7 +10,7 @@ import os
 import psutil
 import time
 
-cpu_core = 10  # cpu core
+process_count = 10  # logical cpu core - 2
 path_gdl = "datasets/gdl/"
 path_problems = "datasets/problems/"
 path_search_data = "datasets/solved/search/"
@@ -21,10 +21,10 @@ def get_args():
     """python search.py --direction fw --method bfs --max_depth 10 --beam_size 10"""
     parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
 
-    parser.add_argument("--direction", type=str, required=True, choices=("fw", "bw"),  help="start problem id")
-    parser.add_argument("--method", type=str, required=True, choices=("bfs", "dfs", "rs", "bs"), help="end problem id")
-    parser.add_argument("--max_depth", type=int, required=True, help="search direction")
-    parser.add_argument("--beam_size", type=int, required=True, help="search direction")
+    parser.add_argument("--direction", type=str, required=True, choices=("fw", "bw"), help="search direction")
+    parser.add_argument("--method", type=str, required=True, choices=("bfs", "dfs", "rs", "bs"), help="search method")
+    parser.add_argument("--max_depth", type=int, required=True, help="max search depth")
+    parser.add_argument("--beam_size", type=int, required=True, help="search beam size")
 
     return parser.parse_args()
 
@@ -34,9 +34,16 @@ def start_process(direction, method, max_depth, beam_size, pool, task_queue, rep
     for i in range(len(pool))[::-1]:  # remove non-existent pid
         if pool[i] not in psutil.pids():
             pool.pop(i)
+        else:
+            process = psutil.Process(os.getpid())
+            memory = process.memory_info().rss / (1024 * 1024)
+            cpu_times = process.cpu_times().user
+            if memory > 300 or cpu_times > 2000:
+                process.terminate()
+                pool.pop(i)
 
     if not task_queue.empty():  # start new process
-        for i in range(cpu_core - len(pool)):
+        for i in range(process_count - len(pool)):
             process = Process(target=solve, args=(direction, method, max_depth, beam_size, task_queue, reply_queue))
             process.start()
             pool.append(process.pid)
@@ -68,7 +75,7 @@ def solve(direction, method, max_depth, beam_size, task_queue, reply_queue):
         )
         timeout = str(bw_timeout)
 
-    while True:
+    for i in range(5):  # Restart after processing 5 tasks to prevent memory explosion
         if task_queue.empty():
             break
         problem_id = task_queue.get()
@@ -104,7 +111,6 @@ def auto(direction, method, max_depth, beam_size):
         task_queue.put(problem_id)
         task_count += 1
 
-    print("process_id\tproblem_id\tresult\tmsg")
     while True:
         start_process(direction, method, max_depth, beam_size, pool, task_queue, reply_queue)  # run process
 
@@ -114,7 +120,7 @@ def auto(direction, method, max_depth, beam_size):
         safe_save_json(log, path_search_log, "{}-{}".format(direction, method))
         safe_save_json(data, path_search_data, "{}-{}".format(direction, method))
 
-        print("{}\t{}\t{}\t{}".format(process_id, problem_id, result, msg))
+        print("process_id={}, problem_id={}, result={}, msg={}".format(process_id, problem_id, result, msg))
 
         task_count -= 1  # exit when all problem has been handled.
         if task_count == 0:
@@ -122,4 +128,6 @@ def auto(direction, method, max_depth, beam_size):
 
 
 if __name__ == '__main__':
-    auto(direction="fw", method="bfs", max_depth=10, beam_size=10)
+    args = get_args()
+    auto(direction=args.direction, method=args.method, max_depth=args.max_depth, beam_size=args.beam_size)
+    # auto(direction="fw", method="bfs", max_depth=10, beam_size=10)
