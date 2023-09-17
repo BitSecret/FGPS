@@ -10,7 +10,7 @@ import os
 import psutil
 import time
 
-process_count = 10  # logical cpu core - 2
+process_count = 10  # logical cpu core - 2 / cpu 100%
 path_gdl = "datasets/gdl/"
 path_problems = "datasets/problems/"
 path_search_data = "datasets/solved/search/"
@@ -34,13 +34,6 @@ def start_process(direction, method, max_depth, beam_size, pool, task_queue, rep
     for i in range(len(pool))[::-1]:  # remove non-existent pid
         if pool[i] not in psutil.pids():
             pool.pop(i)
-        else:
-            process = psutil.Process(os.getpid())
-            memory = process.memory_info().rss / (1024 * 1024)
-            cpu_times = process.cpu_times().user
-            if memory > 300 or cpu_times > 2000:
-                process.terminate()
-                pool.pop(i)
 
     if not task_queue.empty():  # start new process
         for i in range(process_count - len(pool)):
@@ -75,22 +68,22 @@ def solve(direction, method, max_depth, beam_size, task_queue, reply_queue):
         )
         timeout = str(bw_timeout)
 
-    for i in range(5):  # Restart after processing 5 tasks to prevent memory explosion
-        if task_queue.empty():
-            break
-        problem_id = task_queue.get()
-        timing = time.time()
-        try:
-            searcher.init_search(load_json(path_problems + "{}.json".format(problem_id)))
-            solved, seqs = searcher.search()
-            if solved:
-                reply_queue.put((os.getpid(), problem_id, "solved", seqs, time.time() - timing, searcher.step_size))
-            else:
-                reply_queue.put((os.getpid(), problem_id, "unsolved", "None", time.time() - timing, searcher.step_size))
-        except FunctionTimedOut:
-            reply_queue.put((os.getpid(), problem_id, "timeout", timeout, time.time() - timing, searcher.step_size))
-        except BaseException as e:
-            reply_queue.put((os.getpid(), problem_id, "error", repr(e), time.time() - timing, searcher.step_size))
+    if task_queue.empty():
+        exit(0)
+
+    problem_id = task_queue.get()
+    timing = time.time()
+    try:
+        searcher.init_search(load_json(path_problems + "{}.json".format(problem_id)))
+        solved, seqs = searcher.search()
+        if solved:
+            reply_queue.put((os.getpid(), problem_id, "solved", seqs, time.time() - timing, searcher.step_size))
+        else:
+            reply_queue.put((os.getpid(), problem_id, "unsolved", "None", time.time() - timing, searcher.step_size))
+    except FunctionTimedOut:
+        reply_queue.put((os.getpid(), problem_id, "timeout", timeout, time.time() - timing, searcher.step_size))
+    except BaseException as e:
+        reply_queue.put((os.getpid(), problem_id, "error", repr(e), time.time() - timing, searcher.step_size))
 
 
 def auto(direction, method, max_depth, beam_size):
@@ -111,6 +104,7 @@ def auto(direction, method, max_depth, beam_size):
         task_queue.put(problem_id)
         task_count += 1
 
+    print("process_id\tproblem_id\tresult\tmsg\t")
     while True:
         start_process(direction, method, max_depth, beam_size, pool, task_queue, reply_queue)  # run process
 
@@ -120,7 +114,7 @@ def auto(direction, method, max_depth, beam_size):
         safe_save_json(log, path_search_log, "{}-{}".format(direction, method))
         safe_save_json(data, path_search_data, "{}-{}".format(direction, method))
 
-        print("process_id={}, problem_id={}, result={}, msg={}".format(process_id, problem_id, result, msg))
+        print("{}\t{}\t{}\t{}".format(process_id, problem_id, result, msg))
 
         task_count -= 1  # exit when all problem has been handled.
         if task_count == 0:
