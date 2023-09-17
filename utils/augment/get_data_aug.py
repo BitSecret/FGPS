@@ -8,6 +8,7 @@ from utils.utils import safe_save_json
 from func_timeout import FunctionTimedOut, func_set_timeout
 import warnings
 import os
+import copy
 
 raw_problem_count = 6981
 path_problems = "../../datasets/problems/"
@@ -18,8 +19,8 @@ path_search_log = "../search/"
 
 def init_aug_log():
     log = {
-        "pid_count": raw_problem_count + 1,    # augmentation pid
-        "break_pid": {    # raw pid
+        "pid_count": raw_problem_count + 1,  # augmentation pid
+        "break_pid": {  # raw pid
             "interactive": 1,
             "search": 1
         }
@@ -81,7 +82,7 @@ class Expander:
                 count += 1
 
     def init_problem(self, problem_CDL):
-        EquationKiller.cache_eqs = {}    # init cache
+        EquationKiller.cache_eqs = {}  # init cache
         EquationKiller.cache_target = {}
         self.solver.load_problem(problem_CDL)
         if self.method == "interactive":
@@ -201,7 +202,8 @@ class Expander:
 
     def save_expand(self):
         all_expanded_data = set()
-        if "{}.json".format(self.log["break_pid"][self.method]) not in os.listdir(path_problems_augment):  # ensure no duplicate problems
+        if "{}.json".format(self.log["break_pid"][self.method]) not in os.listdir(
+                path_problems_augment):  # ensure no duplicate problems
             expanded = {}
         else:
             expanded = load_json(path_problems_augment + "{}.json".format(self.log["break_pid"][self.method]))
@@ -212,12 +214,17 @@ class Expander:
             if (tuple(added_conditions), goal_GDL) in all_expanded_data:
                 continue
 
+            cleaned_theorem_seqs = []
+            for theorem in theorem_seqs:
+                if theorem not in cleaned_theorem_seqs:
+                    cleaned_theorem_seqs.append(theorem)
+
             new_data = {
                 "problem_id": self.log["pid_count"],
                 "added_cdl": added_conditions,
                 "goal_cdl": goal_GDL,
                 "problem_answer": problem_answer,
-                "theorem_seqs": theorem_seqs
+                "theorem_seqs": cleaned_theorem_seqs
             }
             expanded[str(self.log["pid_count"])] = new_data
             self.log["pid_count"] += 1
@@ -230,6 +237,7 @@ class Expander:
 
 
 def assemble(raw_problem, aug_problem):
+    raw_problem = copy.copy(raw_problem)
     raw_problem["problem_id"] = aug_problem["problem_id"]
     raw_problem["text_cdl"] += aug_problem["added_cdl"]
     raw_problem["goal_cdl"] = aug_problem["goal_cdl"]
