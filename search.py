@@ -7,10 +7,10 @@ from func_timeout import FunctionTimedOut
 import argparse
 import warnings
 import os
-import psutil
 import time
+import psutil
 
-process_count = 10  # logical cpu core - 2 / cpu 100%
+process_count = int(psutil.cpu_count() * 2 / 3)
 path_gdl = "datasets/gdl/"
 path_problems = "datasets/problems/"
 path_search_data = "datasets/solved/search/"
@@ -29,27 +29,20 @@ def get_args():
     return parser.parse_args()
 
 
-def start_process(direction, method, max_depth, beam_size, pool, task_queue, reply_queue):
+def start_a_process(direction, method, max_depth, beam_size, problem_id, reply_queue):
     """Remove non-existent pid and start new process"""
-    for i in range(len(pool))[::-1]:  # remove non-existent pid
-        if pool[i] not in psutil.pids():
-            pool.pop(i)
-
-    if not task_queue.empty():  # start new process
-        for i in range(process_count - len(pool)):
-            process = Process(target=solve, args=(direction, method, max_depth, beam_size, task_queue, reply_queue))
-            process.start()
-            pool.append(process.pid)
+    process = Process(target=solve, args=(direction, method, max_depth, beam_size, problem_id, reply_queue))
+    process.start()
 
 
-def solve(direction, method, max_depth, beam_size, task_queue, reply_queue):
+def solve(direction, method, max_depth, beam_size, problem_id, reply_queue):
     """
     Start a process to solve problem.
     :param direction: <str>, "fw", "bw".
     :param method: <str>, "dfs", "bfs", "rs", "bs".
     :param max_depth: max search depth.
     :param beam_size: beam search size.
-    :param task_queue: <Queue>, get task id through this queue.
+    :param problem_id: <int>, problem.
     :param reply_queue: <Queue>, return solved result through this queue.
     """
     warnings.filterwarnings("ignore")
@@ -68,10 +61,6 @@ def solve(direction, method, max_depth, beam_size, task_queue, reply_queue):
         )
         timeout = str(bw_timeout)
 
-    if task_queue.empty():
-        exit(0)
-
-    problem_id = task_queue.get()
     timing = time.time()
     try:
         searcher.init_search(load_json(path_problems + "{}.json".format(problem_id)))
@@ -91,37 +80,38 @@ def auto(direction, method, max_depth, beam_size):
     filename = "{}-{}.json".format(direction, method)
     log = load_json(path_search_log + filename)
     data = load_json(path_search_data + filename)
-    pool = []  # process id
-    task_count = 0  # problem id
+    problem_ids = []  # problem id
 
-    task_queue = Queue()
     reply_queue = Queue()
 
     for problem_id in range(log["start_pid"], log["end_pid"] + 1):  # assign tasks
         if problem_id in log["solved_pid"] or problem_id in log["unsolved_pid"] or \
                 problem_id in log["timeout_pid"] or problem_id in log["error_pid"]:
             continue
-        task_queue.put(problem_id)
-        task_count += 1
+        problem_ids.append(problem_id)
+    problem_ids = problem_ids[::-1]
+
+    for i in range(process_count):
+        if len(problem_ids) == 0:
+            break
+        problem_id = problem_ids.pop()
+        start_a_process(direction, method, max_depth, beam_size, problem_id, reply_queue)  # run process
 
     print("process_id\tproblem_id\tresult\tmsg\t")
     while True:
-        start_process(direction, method, max_depth, beam_size, pool, task_queue, reply_queue)  # run process
-
         process_id, problem_id, result, msg, timing, step_size = reply_queue.get()
         data[result][str(problem_id)] = {"msg": msg, "timing": timing, "step_size": step_size}
         log["{}_pid".format(result)].append(problem_id)
         safe_save_json(log, path_search_log, "{}-{}".format(direction, method))
         safe_save_json(data, path_search_data, "{}-{}".format(direction, method))
-
         print("{}\t{}\t{}\t{}".format(process_id, problem_id, result, msg))
 
-        task_count -= 1  # exit when all problem has been handled.
-        if task_count == 0:
-            break
+        if len(problem_ids) > 0:
+            problem_id = problem_ids.pop()
+            start_a_process(direction, method, max_depth, beam_size, problem_id, reply_queue)
 
 
 if __name__ == '__main__':
     args = get_args()
     auto(direction=args.direction, method=args.method, max_depth=args.max_depth, beam_size=args.beam_size)
-    # auto(direction="fw", method="bfs", max_depth=10, beam_size=10)
+    # auto(direction="fw", method="bs", max_depth=15, beam_size=15)
