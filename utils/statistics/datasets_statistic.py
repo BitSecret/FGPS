@@ -40,9 +40,6 @@ def statistic_predicate(augment=False):
 
         print("problem {} ok.".format(pid))
 
-    print("predicate_used: {}".format(predicate_used))
-    print("goal_used: {}".format(goal_used))
-
     print()
     predicate_used = sorted(predicate_used.items(), key=lambda x: x[1], reverse=True)
     print("predicate\tused_count")
@@ -97,5 +94,5 @@ def statistic_theorem(augment=False):
 
 
 if __name__ == '__main__':
-    statistic_predicate(augment=True)
     # statistic_theorem(augment=True)
+    statistic_predicate(augment=True)

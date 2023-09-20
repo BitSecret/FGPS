@@ -18,9 +18,9 @@ def split(start_pid, end_pid, seed, ratio, save_file=False):
     train = data
 
     total = len(train) + len(val) + len(test)
-    print("train({}/{}): {}".format(len(train), total, train))
-    print("val({}/{}): {}".format(len(val), total, val))
-    print("test({}/{}): {}".format(len(test), total, test))
+    print("train({}/{}): {}...".format(len(train), total, train[0:20]))
+    print("val({}/{}): {}...".format(len(val), total, val[0:20]))
+    print("test({}/{}): {}...".format(len(test), total, test[0:20]))
 
     if save_file:
         data = {
@@ -40,5 +40,5 @@ def split(start_pid, end_pid, seed, ratio, save_file=False):
 
 
 if __name__ == '__main__':
-    split(start_pid=1, end_pid=6981, seed=619, ratio=(6, 2, 2), save_file=True)
-    # split(start_pid=1, end_pid=186832, seed=619, ratio=(15, 2, 1), save_file=True)
+    split(start_pid=1, end_pid=6981, seed=619, ratio=(3, 1, 1), save_file=False)
+    split(start_pid=1, end_pid=186832, seed=619, ratio=(15, 2, 1), save_file=False)

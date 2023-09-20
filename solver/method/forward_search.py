@@ -191,6 +191,20 @@ class ForwardSearcher:
                         debug_print(self.debug, "(timing={:.4f}s) Expand {} child node.".
                                     format(time.time() - timing, len(selections)))
 
+        if self.method == "bfs":  # breadth-first search
+            supernode = self.stack.pop(0)
+        elif self.method == "dfs":  # deep-first search
+            supernode = self.stack.pop()
+        elif self.method == "rs":  # random search
+            supernode = self.stack.pop(
+                random.randint(0, len(self.stack) - 1))
+        elif self.method == "bs":  # beam search
+            beam_count = self.beam_size \
+                if len(self.stack) > self.beam_size\
+                else len(self.stack)
+            for i in range(beam_count):
+                supernode = self.stack.pop(0)
+
         return False, None
 
     def get_theorem_selection(self):
