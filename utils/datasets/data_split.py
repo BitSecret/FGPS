@@ -2,7 +2,7 @@ import random
 from solver.aux_tools.utils import save_json
 
 
-def split(start_pid, end_pid, seed, ratio, save_file=False):
+def datasets_split(start_pid, end_pid, seed, ratio, save_file=False):
     """train:validation:test = ratio[0]:ratio[1]:ratio[2]"""
     total = ratio[0] + ratio[1] + ratio[2]
     random.seed(seed)
@@ -40,5 +40,5 @@ def split(start_pid, end_pid, seed, ratio, save_file=False):
 
 
 if __name__ == '__main__':
-    split(start_pid=1, end_pid=6981, seed=619, ratio=(3, 1, 1), save_file=False)
-    split(start_pid=1, end_pid=186832, seed=619, ratio=(15, 2, 1), save_file=False)
+    datasets_split(start_pid=1, end_pid=6981, seed=619, ratio=(3, 1, 1), save_file=False)
+    datasets_split(start_pid=1, end_pid=186832, seed=619, ratio=(15, 2, 1), save_file=False)
