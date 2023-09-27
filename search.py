@@ -29,23 +29,14 @@ def get_args():
     return parser.parse_args()
 
 
-def start_a_process(direction, method, max_depth, beam_size, problem_id, reply_queue):
-    """Remove non-existent pid and start new process"""
-    process = Process(target=solve, args=(direction, method, max_depth, beam_size, problem_id, reply_queue))
-    process.start()
-    return process.pid
-
-
-def solve(direction, method, max_depth, beam_size, problem_id, reply_queue):
+def solve(search_config, problem_id, reply_queue):
     """
     Start a process to solve problem.
-    :param direction: <str>, "fw", "bw".
-    :param method: <str>, "dfs", "bfs", "rs", "bs".
-    :param max_depth: max search depth.
-    :param beam_size: beam search size.
+    :param search_config: <tuple>, direction("fw", "bw"), method("dfs", "bfs", "rs", "bs"), max_depth, beam_size.
     :param problem_id: <int>, problem.
     :param reply_queue: <Queue>, return solved result through this queue.
     """
+    direction, method, max_depth, beam_size = search_config
     warnings.filterwarnings("ignore")
     if direction == "fw":
         searcher = ForwardSearcher(
@@ -75,9 +66,24 @@ def solve(direction, method, max_depth, beam_size, problem_id, reply_queue):
         reply_queue.put((os.getpid(), problem_id, "error", repr(e), time.time() - timing, searcher.step_size))
 
 
-def auto(direction, method, max_depth, beam_size):
+def start_process(search_config, problem_ids, process_ids, reply_queue):
+    """Remove non-existent pid and start new process"""
+    while len(problem_ids) > 0 and process_count - len(process_ids) > 0:
+        problem_id = problem_ids.pop()
+        process = Process(target=solve, args=(search_config, problem_id, reply_queue))
+        process.start()
+        process_ids.append(process.pid)
+
+
+def clean_process(process_ids):
+    for i in range(len(process_ids))[::-1]:
+        if process_ids[i] not in psutil.pids():
+            process_ids.pop(i)
+
+
+def auto(search_config):
     """Auto run search on all problems."""
-    filename = "{}-{}.json".format(direction, method)
+    filename = "{}-{}.json".format(search_config[0], search_config[1])
     log = load_json(path_search_log + filename)
     data = load_json(path_search_data + filename)
     problem_ids = []  # problem id
@@ -92,27 +98,25 @@ def auto(direction, method, max_depth, beam_size):
         problem_ids.append(problem_id)
     problem_ids = problem_ids[::-1]
 
-    for i in range(process_count):
-        if len(problem_ids) == 0:
-            break
-        problem_id = problem_ids.pop()
-        start_a_process(direction, method, max_depth, beam_size, problem_id, reply_queue)  # run process
-
+    clean_count = 0
     print("process_id\tproblem_id\tresult\tmsg\t")
     while True:
+        start_process(search_config, problem_ids, process_ids, reply_queue)  # run multiprocess
+
         process_id, problem_id, result, msg, timing, step_size = reply_queue.get()
         data[result][str(problem_id)] = {"msg": msg, "timing": timing, "step_size": step_size}
         log["{}_pid".format(result)].append(problem_id)
-        safe_save_json(log, path_search_log, "{}-{}".format(direction, method))
-        safe_save_json(data, path_search_data, "{}-{}".format(direction, method))
+        safe_save_json(log, path_search_log, "{}-{}".format(search_config[0], search_config[1]))
+        safe_save_json(data, path_search_data, "{}-{}".format(search_config[0], search_config[1]))
         print("{}\t{}\t{}\t{}".format(process_id, problem_id, result, msg))
 
-        if len(problem_ids) > 0:
-            problem_id = problem_ids.pop()
-            start_a_process(direction, method, max_depth, beam_size, problem_id, reply_queue)
+        process_ids.pop(process_ids.index(process_id))
+        clean_count += 1
+        if clean_count == int(process_count / 3):
+            clean_process(process_ids)
+            clean_count = 0
 
 
 if __name__ == '__main__':
     args = get_args()
-    auto(direction=args.direction, method=args.method, max_depth=args.max_depth, beam_size=args.beam_size)
-    # auto(direction="fw", method="bs", max_depth=15, beam_size=15)
+    auto((args.direction, args.method, args.max_depth, args.beam_size))
