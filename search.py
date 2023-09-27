@@ -1,7 +1,7 @@
 from multiprocessing import Process, Queue
-from solver.method.forward_search import ForwardSearcher, fw_timeout
-from solver.method.backward_search import BackwardSearcher, bw_timeout
-from solver.aux_tools.utils import load_json
+from solver.method.forward_search import ForwardSearcher
+from solver.method.backward_search import BackwardSearcher
+from solver.aux_tools.utils import load_json, search_timout
 from utils.utils import safe_save_json
 from func_timeout import FunctionTimedOut
 import argparse
@@ -10,7 +10,7 @@ import os
 import time
 import psutil
 
-process_count = int(psutil.cpu_count() * 2 / 3)
+process_count = int(psutil.cpu_count() * 0.8)
 path_gdl = "datasets/gdl/"
 path_problems = "datasets/problems/"
 path_search_data = "datasets/solved/search/"
@@ -33,6 +33,7 @@ def start_a_process(direction, method, max_depth, beam_size, problem_id, reply_q
     """Remove non-existent pid and start new process"""
     process = Process(target=solve, args=(direction, method, max_depth, beam_size, problem_id, reply_queue))
     process.start()
+    return process.pid
 
 
 def solve(direction, method, max_depth, beam_size, problem_id, reply_queue):
@@ -52,15 +53,14 @@ def solve(direction, method, max_depth, beam_size, problem_id, reply_queue):
             method=method, max_depth=max_depth, beam_size=beam_size,
             p2t_map=load_json(path_search_log + "p2t_map-fw.json")
         )
-        timeout = str(fw_timeout)
     else:
         searcher = BackwardSearcher(
             load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
             method=method, max_depth=max_depth, beam_size=beam_size,
             p2t_map=load_json(path_search_log + "p2t_map-bw.json")
         )
-        timeout = str(bw_timeout)
 
+    timeout = str(search_timout)
     timing = time.time()
     try:
         searcher.init_search(load_json(path_problems + "{}.json".format(problem_id)))
@@ -81,6 +81,7 @@ def auto(direction, method, max_depth, beam_size):
     log = load_json(path_search_log + filename)
     data = load_json(path_search_data + filename)
     problem_ids = []  # problem id
+    process_ids = []  # process id
 
     reply_queue = Queue()
 

@@ -23,21 +23,13 @@ def clean_error(error_msg):
             safe_save_json(data, path_search_data, "{}-{}".format(d, m))
 
 
-def clean_timeout(timeout):
-    timeout = str(timeout)
+def clean_timeout():
     for d in direction:
         for m in method:
             log = load_json("{}-{}.json".format(d, m))
             data = load_json(path_search_data + "{}-{}.json".format(d, m))
-            pop_pids = []
-            for pid in data["timeout"]:
-                if data["timeout"][pid]["msg"] == timeout:
-                    pop_pids.append(pid)
-
-            for pid in pop_pids:
-                data["timeout"].pop(pid)
-                log["timeout_pid"].pop(log["error_pid"].index(int(pid)))
-
+            data["timeout"] = {}
+            log["timeout_pid"] = []
             safe_save_json(log, "", "{}-{}".format(d, m))
             safe_save_json(data, path_search_data, "{}-{}".format(d, m))
 
@@ -75,7 +67,7 @@ def show_unhandled():
 
 if __name__ == '__main__':
     # clean_error(error_msg="RuntimeError(\"can't start new thread\")")
-    clean_error(error_msg="TypeError")
-    # clean_timeout(timeout=200)
+    # clean_error(error_msg="TypeError")
+    clean_timeout()
     # clean_unsolved()
     show_unhandled()

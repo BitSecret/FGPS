@@ -5,7 +5,7 @@ from solver.problem.problem import Problem
 from solver.aux_tools.parser import GDLParser, CDLParser
 from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
-from solver.aux_tools.utils import load_json
+from solver.aux_tools.utils import load_json, search_timout
 from utils.utils import debug_print
 import time
 from graphviz import Digraph
@@ -18,7 +18,6 @@ random.seed(619)
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
 path_search_log = "../../utils/search/"
-bw_timeout = 200
 
 
 class GoalFinder:
@@ -454,7 +453,7 @@ class BackwardSearcher:
 
         self.search_stack.append(self.root)
 
-    @func_set_timeout(bw_timeout)
+    @func_set_timeout(search_timout)
     def search(self):
         """return seqs, <list> of theorem, solved theorem sequences."""
         pid = self.problem.problem_CDL["id"]

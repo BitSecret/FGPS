@@ -8,14 +8,13 @@ from solver.aux_tools.parser import InverseParserM2F
 from solver.core.engine import EquationKiller as EqKiller
 from solver.core.engine import GeometryPredicateLogic as GeoLogic
 from solver.aux_tools.output import get_used
-from solver.aux_tools.utils import load_json
+from solver.aux_tools.utils import load_json, search_timout
 from utils.utils import debug_print
 
 random.seed(619)
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
 path_search_log = "../../utils/search/"
-fw_timeout = 200
 
 
 class ForwardSearcher:
@@ -86,7 +85,7 @@ class ForwardSearcher:
         debug_print(self.debug, "(timing={:.4f}s) Expand {} child node.".
                     format(time.time() - timing, len(selections)))
 
-    @func_set_timeout(fw_timeout)
+    @func_set_timeout(search_timout)
     def search(self):
         """
         Search problem and return search result.

@@ -38,6 +38,8 @@ greek_alp = [
     'Ω', 'ω'
 ]
 
+search_timout = 300
+
 
 def load_json(filename):
     with open(filename, "r", encoding="utf-8") as f:
