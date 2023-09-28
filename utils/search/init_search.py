@@ -3,7 +3,7 @@ from solver.aux_tools.utils import load_json, save_json
 from solver.aux_tools.parser import GDLParser
 
 direction = ["fw", "bw"]  # forward, backward
-method = ["dfs", "bfs", "rs", "bs"]  # deep first, breadth first, random, beam
+method = ["bfs", "dfs", "rs", "bs"]  # deep first, breadth first, random, beam
 data = {"solved": {}, "unsolved": {}, "timeout": {}, "error": {}}
 log = {"start_pid": 1, "end_pid": 6981, "solved_pid": [], "unsolved_pid": [], "timeout_pid": [], "error_pid": []}
 

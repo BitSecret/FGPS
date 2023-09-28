@@ -45,29 +45,38 @@ def clean_unsolved():
             safe_save_json(data, path_search_data, "{}-{}".format(d, m))
 
 
-def show_unhandled():
+def in_order():
     print("direction\tmethod\tunhandled")
     for d in direction:
         for m in method:
             unhandled = []
-            log = load_json("{}-{}.json".format(d, m))
+            data = load_json(path_search_data + "{}-{}.json".format(d, m))
+            new_data = {"solved": {}, "unsolved": {}, "timeout": {}, "error": {}}
+            new_log = {"start_pid": 1, "end_pid": 6981,
+                       "solved_pid": [], "unsolved_pid": [], "timeout_pid": [], "error_pid": []}
             for pid in range(1, 6982):
-                if pid in log["solved_pid"]:
-                    continue
-                if pid in log["unsolved_pid"]:
-                    continue
-                if pid in log["error_pid"]:
-                    continue
-                if pid in log["timeout_pid"]:
-                    continue
-                unhandled.append(pid)
+                if str(pid) in data["solved"]:
+                    new_data["solved"][str(pid)] = data["solved"][str(pid)]
+                    new_log["solved_pid"].append(pid)
+                elif str(pid) in data["unsolved"]:
+                    new_data["unsolved"][str(pid)] = data["unsolved"][str(pid)]
+                    new_log["unsolved_pid"].append(pid)
+                elif str(pid) in data["error"]:
+                    new_data["error"][str(pid)] = data["error"][str(pid)]
+                    new_log["error_pid"].append(pid)
+                elif str(pid) in data["timeout"]:
+                    new_data["timeout"][str(pid)] = data["timeout"][str(pid)]
+                    new_log["timeout_pid"].append(pid)
+                else:
+                    unhandled.append(pid)
+            safe_save_json(new_data, path_search_data, "{}-{}".format(d, m))
+            safe_save_json(new_log, "", "{}-{}".format(d, m))
 
             print("{}\t{}\t{}".format(d, m, unhandled))
 
 
 if __name__ == '__main__':
-    # clean_error(error_msg="RuntimeError(\"can't start new thread\")")
     # clean_error(error_msg="TypeError")
-    clean_timeout()
+    # clean_timeout()
     # clean_unsolved()
-    show_unhandled()
+    in_order()
