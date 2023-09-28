@@ -110,7 +110,8 @@ def auto(search_config):
         safe_save_json(data, path_search_data, "{}-{}".format(search_config[0], search_config[1]))
         print("{}\t{}\t{}\t{}".format(process_id, problem_id, result, msg))
 
-        process_ids.pop(process_ids.index(process_id))
+        if process_id in process_ids:
+            process_ids.pop(process_ids.index(process_id))
         clean_count += 1
         if clean_count == int(process_count / 3):
             clean_process(process_ids)

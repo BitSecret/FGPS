@@ -58,6 +58,8 @@ class GoalFinder:
                         t_paras, problem.condition.get_items_by_predicate("Point"))
                     theorem_and_para[(t_name, t_branch)] |= t_paras
         else:  # logic goal
+            if predicate not in self.p2t_map:
+                return []
             for t_name, t_branch in self.p2t_map[predicate]:
                 if (t_name, t_branch) not in theorem_and_para:
                     theorem_and_para[(t_name, t_branch)] = set()
@@ -696,10 +698,10 @@ if __name__ == '__main__':
     warnings.filterwarnings("ignore")
     searcher = BackwardSearcher(
         load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
-        method="bs", max_depth=10, beam_size=10,
+        method="bfs", max_depth=15, beam_size=20,
         p2t_map=load_json(path_search_log + "p2t_map-bw.json"), debug=True
     )
-    problem_id = 6
+    problem_id = 7
     searcher.init_search(load_json(path_problems + "{}.json".format(problem_id)))
     solved_result = searcher.search()
     print("pid: {}, solved: {}, seqs:{}, step_count: {}.\n".format(
