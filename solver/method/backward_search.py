@@ -698,7 +698,7 @@ if __name__ == '__main__':
     warnings.filterwarnings("ignore")
     searcher = BackwardSearcher(
         load_json(path_gdl + "predicate_GDL.json"), load_json(path_gdl + "theorem_GDL.json"),
-        method="bfs", max_depth=15, beam_size=20,
+        method="rs", max_depth=15, beam_size=20,
         p2t_map=load_json(path_search_log + "p2t_map-bw.json"), debug=True
     )
     problem_id = 7

@@ -5,43 +5,12 @@ from utils.utils import safe_save_json
 path_search_data = "../../datasets/solved/search/"
 
 
-def clean_error(error_msg):
-    """error_name: [KeyError, RuntimeError, MemoryError, TypeError, IndexError, KeyboardInterrupt]"""
+def clean_data(clean_type):
+    """clean_type: 'error', 'timeout', 'unsolved'."""
     for d in direction:
         for m in method:
-            log = load_json("{}-{}.json".format(d, m))
             data = load_json(path_search_data + "{}-{}.json".format(d, m))
-            pop_pids = []
-            for pid in data["error"]:
-                if data["error"][pid]["msg"].startswith(error_msg):
-                    pop_pids.append(pid)
-            for pid in pop_pids:
-                data["error"].pop(pid)
-                log["error_pid"].pop(log["error_pid"].index(int(pid)))
-
-            safe_save_json(log, "", "{}-{}".format(d, m))
-            safe_save_json(data, path_search_data, "{}-{}".format(d, m))
-
-
-def clean_timeout():
-    for d in direction:
-        for m in method:
-            log = load_json("{}-{}.json".format(d, m))
-            data = load_json(path_search_data + "{}-{}.json".format(d, m))
-            data["timeout"] = {}
-            log["timeout_pid"] = []
-            safe_save_json(log, "", "{}-{}".format(d, m))
-            safe_save_json(data, path_search_data, "{}-{}".format(d, m))
-
-
-def clean_unsolved():
-    for d in direction:
-        for m in method:
-            log = load_json("{}-{}.json".format(d, m))
-            data = load_json(path_search_data + "{}-{}.json".format(d, m))
-            data["unsolved"] = {}
-            log["unsolved_pid"] = []
-            safe_save_json(log, "", "{}-{}".format(d, m))
+            data[clean_type] = {}
             safe_save_json(data, path_search_data, "{}-{}".format(d, m))
 
 
@@ -72,11 +41,9 @@ def in_order():
             safe_save_json(new_data, path_search_data, "{}-{}".format(d, m))
             safe_save_json(new_log, "", "{}-{}".format(d, m))
 
-            print("{}\t{}\t{}".format(d, m, unhandled))
+            print("{}\t{}\t({}){}".format(d, m, len(unhandled), unhandled))
 
 
 if __name__ == '__main__':
-    # clean_error(error_msg="TypeError")
-    # clean_timeout()
-    # clean_unsolved()
+    clean_data(clean_type="error")    # error, timeout, unsolved
     in_order()

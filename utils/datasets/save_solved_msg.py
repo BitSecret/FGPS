@@ -8,8 +8,8 @@ import warnings
 
 path_gdl = "../../datasets/gdl/"
 path_problems = "../../datasets/problems/"
-path_search = "../../datasets/search/"
-path_solved = "../../datasets/solved/"
+path_solved = "../../datasets/solved/check/"
+path_search = "../../datasets/solved/search/"
 
 
 def add_theorem_dag(auto=False, start_pid=1, end_pid=6981):

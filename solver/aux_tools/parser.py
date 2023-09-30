@@ -457,6 +457,9 @@ class GDLParser(Parser):
             algebra_constraint = []
             existing_paras = set()
             for j in range(len(premise_GDL[i])):
+                if premise_GDL[i][j][0][0] == "~":
+                    continue
+
                 if premise_GDL[i][j][0] == "Equal":
                     algebra_constraint.append(premise_GDL[i][j])
                 elif len(set(premise_GDL[i][j][1]) - existing_paras) == 0:
@@ -464,6 +467,7 @@ class GDLParser(Parser):
                 else:
                     existing_paras = existing_paras | set(premise_GDL[i][j][1])
                     product.append(premise_GDL[i][j])
+
             premise_GDL[i] = {
                 "products": tuple(product),
                 "logic_constraints": tuple(logic_constraint),
