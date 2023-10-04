@@ -18,13 +18,33 @@ def main():
             timeout = len(data["timeout_pid"])
             error = len(data["error_pid"])
             unhandled = total - (solved + unsolved + timeout + error)
-            print("{}\t{}\t{}/{}({:.3f}%)\t{}/{}({:.3f}%)\t{}/{}({:.3f}%)\t{}/{}({:.3f}%)\t{}/{}({:.3f}%)".format(
+            print("{}\t{}\t{}/{}\t{}/{}\t{}/{}\t{}/{}\t{}/{}".format(
                 d, m,
-                solved, total, solved / total * 100,
-                unsolved, total, unsolved / total * 100,
-                timeout, total, timeout / total * 100,
-                error, total, error / total * 100,
-                unhandled, total, unhandled / total * 100))
+                solved, total,
+                unsolved, total,
+                timeout, total,
+                error, total,
+                unhandled, total))
+    print()
+
+    print("roughly (percent)")
+    print("direction\tmethod\tsolved\tunsolved\ttimeout\terror\tunhandled")
+    for d in direction:
+        for m in method:
+            data = load_json(path_search_log + "{}-{}.json".format(d, m))
+            total = 6981
+            solved = len(data["solved_pid"])
+            unsolved = len(data["unsolved_pid"])
+            timeout = len(data["timeout_pid"])
+            error = len(data["error_pid"])
+            unhandled = total - (solved + unsolved + timeout + error)
+            print("{}\t{}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}".format(
+                d, m,
+                solved / total * 100,
+                unsolved / total * 100,
+                timeout / total * 100,
+                error / total * 100,
+                unhandled / total * 100))
     print()
 
     j_map = {}  # map pid to column
@@ -87,7 +107,6 @@ def main():
                 solving[i][0][1] += solving[i][j][1]
                 timing[i][0][1] += timing[i][j][1]
                 step_size[i][0][1] += step_size[i][j][1]
-    print()
 
     print("solving")
     print("direction\tmethod\t"

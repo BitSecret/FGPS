@@ -45,5 +45,5 @@ def in_order():
 
 
 if __name__ == '__main__':
-    # clean_data(clean_type="error")    # error, timeout, unsolved
+    # clean_data(clean_type="timeout")    # error, timeout, unsolved
     in_order()
