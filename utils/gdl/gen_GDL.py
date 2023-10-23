@@ -1,4 +1,5 @@
 from solver.aux_tools.utils import load_json, save_json, load_text, save_text
+
 doc_path = "../../doc/"
 gdl_path = "../../datasets/gdl/"
 
@@ -21,8 +22,10 @@ def gen_predicate_gdl():
             "VariableLength": ["Shape", "Collinear", "Cocircular", "Polygon"],
             "Construction": ["Shape", "Collinear", "Cocircular"],
             "BasicEntity": ["Point", "Line", "Arc", "Angle", "Polygon", "Circle"],
-            "Attribution": ["Free"],
-            "Algebra": ["Equal"]
+            "Algebra": ["Equal", "Equation"],
+            "Operation": ["Free"],
+            "Attribution": ["Add", "Sub ", "Mul", "Div", "Pow", "Mod", "Sqrt", "Sin", "Cos", "Tan"],
+            "Target": ["Value", "Equal", "Relation"]
         },
         "Entity": entity,
         "Relation": relation,

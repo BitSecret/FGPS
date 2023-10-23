@@ -513,7 +513,7 @@ class GDLParser(Parser):
         """
         Return attrs in parsed equal tree.
         >> find_attrs_in_tree((('Equal', (('Add', (('LengthOfLine', ('o', 'a')), 'x+1')), 'y+2'))))
-        [('LengthOfLine', ('o', 'a'))]
+        [('LengthOfLine', ('o', 'a')]
         """
         attrs = []
         stack = [tree[1][0], tree[1][1]]
