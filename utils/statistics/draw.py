@@ -165,7 +165,7 @@ def draw_diff():
     fig.text(0.75, 0.94, "Average Time of Interactive verification", ha='center', fontsize=fontsize)
     plt.tight_layout()
 
-    plt.savefig('8-chart_problem_level.pdf', format='pdf')
+    plt.savefig('chart_problem_level.pdf', format='pdf')
     plt.show()
 
 
@@ -249,7 +249,7 @@ def draw_solved_results():
     plt.legend(loc="upper left")
 
     plt.tight_layout()
-    plt.savefig('10-chart_search_results.pdf', format='pdf')
+    plt.savefig('chart_search_results.pdf', format='pdf')
     plt.show()
 
 
