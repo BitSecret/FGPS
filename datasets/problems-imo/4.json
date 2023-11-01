@@ -1,0 +1,45 @@
+{
+  "problem_id": 30009,
+  "annotation": "XiaokaiZhang_2023-04-13",
+  "source": "IMO-Test",
+  "problem_level": 9,
+  "problem_text_cn": "IMO测试 (初中)",
+  "problem_text_en": "",
+  "problem_img": "30009.png",
+  "construction_cdl": [
+    "Shape(OAE,ED,DA)",
+    "Shape(OEB,BD,DE)",
+    "Shape(AD,DI,IA)",
+    "Shape(AI,IC,CA)",
+    "Shape(OCA,AC)",
+    "Shape(DB,BC,CD)",
+    "Shape(OBC,CB)",
+    "Shape(CI,IO)",
+    "Shape(OI,ID)",
+    "Collinear(EDIC)",
+    "Collinear(ADB)",
+    "Cocircular(O,AEBC)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(O,O)",
+    "IsBisectorOfAngle(CD,BCA)",
+    "IsBisectorOfAngle(AI,CAD)",
+    "Equal(LengthOfLine(AB),5)",
+    "Equal(LengthOfLine(BC),5)",
+    "Equal(LengthOfLine(CA),5)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Relation(IsPerpendicularBisectorOfLine(OI,CE))",
+  "problem_answer": "IsPerpendicularBisectorOfLine(OI,CE)",
+  "theorem_seqs": [
+    "line_addition(1,AD,DB)",
+    "bisector_of_angle_property_line_ratio(1,CD,BCA)",
+    "bisector_of_angle_property_length_formula(1,CD,BCA)",
+    "circle_property_circular_power_chord_and_chord(1,BDA,EDC,O)",
+    "bisector_of_angle_property_line_ratio(1,AI,CAD)",
+    "line_addition(1,DI,IC)",
+    "line_addition(1,ED,DI)",
+    "midpoint_of_line_judgment(1,I,EC)",
+    "circle_property_chord_perpendicular_bisect_chord(2,O,OI,CE)"
+  ]
+}

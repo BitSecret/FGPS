@@ -1,0 +1,39 @@
+{
+  "problem_id": 30014,
+  "annotation": "YimingHe_2023-06-20",
+  "source": "IMO-Test",
+  "problem_level": 12,
+  "problem_text_cn": "中考题",
+  "problem_text_en": "",
+  "problem_img": "30013.png",
+  "construction_cdl": [
+    "Shape()",
+    "Collinear()"
+  ],
+  "text_cdl": [
+    "IsoscelesTriangle(ABC)",
+    "IsMidpointOfLine(F,OB)",
+    "Equal(LengthOfLine(OB),LengthOfLine(OD))",
+    "Equal(LengthOfLine(OD),LengthOfLine(OE))",
+    "Equal(LengthOfLine(AO),LengthOfLine(OF))"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Value(Div(LengthOfLine(OG),LengthOfLine(OD)))",
+  "problem_answer": "1/2",
+  "theorem_seqs": [
+    "isosceles_triangle_judgment_line_equal(OBD)",
+    "isosceles_triangle_property_angle_equal(ABC)",
+    "isosceles_triangle_property_angle_equal(OBD)",
+    "parallel_judgment_corresponding_angle(DO,CA,B)",
+    "parallel_property_collinear_extend(AC,OD,E)",
+    "parallel_property_alternate_interior_angle(AE,OD)",
+    "mirror_similar_triangle_judgment_aa(OEA,EAF)",
+    "mirror_similar_triangle_property_line_ratio(OEA,EAF)",
+    "mirror_similar_triangle_property_line_ratio(EAO,FEA)",
+    "right_triangle_judgment_angle(EAO)",
+    "right_triangle_property_pythagorean(EAO)",
+    "line_addition(OF,FB)",
+    "line_addition(AO,OF)"
+  ],
+  "notes": "Not annotated and without notes added."
+}
