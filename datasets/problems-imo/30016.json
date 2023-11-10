@@ -1,0 +1,70 @@
+{
+  "problem_id": 30016,
+  "annotation": "YimingHe_2023-06-19",
+  "source": "IMO-Test",
+  "problem_level": 16,
+  "problem_text_cn": "美国奥林匹克",
+  "problem_text_en": "",
+  "problem_img": "30015.png",
+  "construction_cdl": [
+    "Shape(AB,BN,NA)",
+    "Shape(NB,BQ,QN)",
+    "Shape(AN,NG,GA)",
+    "Shape(NM,MP,PG,GN)",
+    "Shape(NQ,QM,MN)",
+    "Shape(MQ,QB,BD,DM)",
+    "Shape(AG,GC,CA)",
+    "Shape(GP,PC,CG)",
+    "Shape(PM,ME,EC,CP)",
+    "Shape(AM,ME,EA)",
+    "Shape(AN,NQ,QM,ME,EA)",
+    "Shape(AE,EC,CA)",
+    "Shape(PQ,QM,MP)",
+    "Shape(EM,MD,DE)",
+
+
+
+    "Collinear(ANQ)",
+    "Collinear(AGPMD)",
+    "Collinear(NGC)",
+    "Collinear(BQMEC)",
+    "Cocircular(X,BQPA)",
+    "Cocircular(Y,BDEA)"
+  ],
+  "text_cdl": [
+    "IsCentreOfCircle(X,X)",
+    "IsCentreOfCircle(Y,Y)",
+    "IsDiameterOfCircle(AB,Y)",
+    "IsMidpointOfLine(M,BC)",
+    "PerpendicularBetweenLine(AP,CP)",
+    "PerpendicularBetweenLine(CP,MP)",
+    "PerpendicularBetweenLine(BD,MD)",
+    "PerpendicularBetweenLine(QE,AE)",
+    "IsMidpointOfLine(N,AQ)"
+  ],
+  "image_cdl": [],
+  "goal_cdl": "Equal(LengthOfLine(BN),LengthOfLine(CN))",
+  "problem_answer": "0",
+  "theorem_seqs": [
+    "arc_property_circumference_angle_external(YBD,A)",
+    "arc_property_circumference_angle_external(YBD,E)",
+    "arc_property_circumference_angle_external(XBP,A)",
+    "arc_property_circumference_angle_internal(XBP,Q)",
+    "adjacent_complementary_angle(BQP,PQC)",
+
+    "vertical_angle(DMB,PMC)",
+    "congruent_triangle_judgment_aas(BDM,CPM)",
+    "congruent_triangle_property_line_equal(BDM,CPM)",
+
+    "vertical_angle(QMP,EMD)",
+    "congruent_triangle_judgment_aas(PQM,DEM)",
+     "congruent_triangle_property_line_equal(PQM,DEM)",
+
+    "midsegment_of_triangle_judgment_midpoint(MN,QEA)",
+    "midsegment_of_triangle_property_parallel(MN,QEA)",
+    "parallel_property_corresponding_angle(MN,EA,Q)",
+    "adjacent_complementary_angle(BMN,NMC)",
+    "mirror_congruent_triangle_judgment_sas(MNB,MCN)",
+    "mirror_congruent_triangle_property_line_equal(MNB,MCN)"
+  ]
+}
