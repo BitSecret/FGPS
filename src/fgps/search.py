@@ -24,17 +24,18 @@ def init_search(file_path=""):
 
 
 def get_args():
-    """python search.py --direction fw --method bfs --max_depth 10 --beam_size 10"""
+    """python search.py --direction fw --method bfs"""
     parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
 
+    parser.add_argument("--dataset", type=str, required=True, help="dataset")
     parser.add_argument("--direction", type=str, required=True, choices=("fw", "bw"), help="search direction")
     parser.add_argument("--method", type=str, required=True, choices=("bfs", "dfs", "rs", "bs"), help="search method")
-    parser.add_argument("--max_depth", type=int, required=True, help="max search depth")
-    parser.add_argument("--beam_size", type=int, required=True, help="search beam size")
+    parser.add_argument("--max_depth", type=int, required=False, default=15, help="max search depth")
+    parser.add_argument("--beam_size", type=int, required=False, default=20, help="search beam size")
     parser.add_argument("--timeout", type=int, required=False, default=300, help="search timeout")
     parser.add_argument("--process_count", type=int, required=False, default=int(psutil.cpu_count() * 0.8),
                         help="multi process count")
-    parser.add_argument("--file_path", type=str, required=False, default="", help="file save search result")
+    parser.add_argument("--file_path", type=str, required=False, default="", help="file that save search result")
     parser.add_argument("--random_seed", type=int, required=False, default=619, help="random seed")
 
     return parser.parse_args()
@@ -93,8 +94,9 @@ def clean_process(process_ids):
             process_ids.pop(i)
 
 
-def search(args, dl):
+def search(args):
     """Auto run search on all problems."""
+    dl = DatasetLoader(args.dataset)
     log_filename = os.path.join(args.file_path, "log-{}-{}.json".format(args.direction, args.method))
     data_filename = os.path.join(args.file_path, "data-{}-{}.json".format(args.direction, args.method))
     log = load_json(log_filename)
@@ -132,4 +134,4 @@ def search(args, dl):
 
 
 if __name__ == '__main__':
-    search(get_args(), DatasetLoader("formalgeo7k-v1"))
+    search(get_args())

@@ -2,10 +2,10 @@
 
 [![Version](https://img.shields.io/badge/Version-1.0-brightgreen)](https://github.com/BitSecret/FGPS)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
-[![Survey](https://img.shields.io/badge/Survey-FormalGeo-blue)](https://github.com/BitSecret/FGPS)  
+[![Survey](https://img.shields.io/badge/Survey-FormalGeo-blue)](https://github.com/FormalGeo/FormalGeo)  
 Formal geometric problem solver based on FormalGeo.  
 This project is based on the [Geometry Formalization Theory](https://arxiv.org/abs/2310.18021) and
-utilizes [FormalGeo](https://github.com/BitSecret/FormalGeo) as its problem solver.
+utilizes [FormalGeo](https://github.com/FormalGeo/FormalGeo) as its problem solver.
 
 ## Installation
 
@@ -26,31 +26,42 @@ Install python dependencies:
 
 ## Run
 
-Check our search results on formalgeo7k-v1:
+Enter the path where the code is located:
 
-    $ python src/static.py --file_path 231016
+    $ cd src/fgps/search
+
+Check our search results on formalgeo7k-v1 dataset:
+
+    $ python check.py --dataset formalgeo7k-v1 --file_path 231016
+
+Run the search method on your own computer:
+
+    $ python search.py --dataset formalgeo7k-v1 --direction fw --method bfs --file_path my_search
+
+View help information for personalizing configuration of search methods:
+
+    $ python search.py --help
 
 ## Results
 
-## Related Project
-
 ## Acknowledge
 
-This project is developed and maintained
-by [Geometric Cognitive Reasoning Group of Shanghai University (GCRG, SHU)](https://euclidesprobationem.github.io/).   
-**FormalGeo** is an extended version of **[GeoMechanical](https://github.com/BitSecret/GeoMechanical)**. It supports
-solving more types of plane geometric problems.  
-Some original problems come from the following dataset, which
-are: [Geometry3K](https://github.com/lupantech/InterGPS), [GeoQA](https://github.com/chen-judge/GeoQA), [GeometryQA](https://github.com/doublebite/Sequence-to-General-tree/), [GeoQA+](https://github.com/SCNU203/GeoQA-Plus), [UniGeo](https://github.com/chen-judge/UniGeo).  
-Thank you for participating in the dataset annotation. They are: [XiaokaiZhang](https://github.com/BitSecret)(
-11.4%), [NaZhu](https://github.com/RuRuo0)(10.8%), [YimingHe](https://github.com/748978460)(
-10.5%), [JiaZou](https://github.com/PersonNoName)(10.4%), [QikeHuang](https://github.com/huangqaqqk)(
-6.9%), [XiaoxiaoJin](https://github.com/J1372628520)(6.6%), [YanjunGuo](https://github.com/g826796047)(
-6.4%), [ChenyangMao](https://github.com/shadymcy)(6.3%), [ZheZhu](https://github.com/zz863474396)(
-6.0%), [DengfengYue](https://github.com/331368068)(5.9%), [FangzhenZhu](https://github.com/pigsquare)(
-3.9%), [YangLi](https://github.com/leeyoung628)(3.8%), [YifanWang](https://github.com/yf0216)(
-3.2%), [YiwenHuang](https://github.com/Eaven21)(2.7%), [RunanWang](https://github.com/RunanW)(
-2.6%), [ChengQin](https://github.com/https://github.com/Vench115)(2.5%).   
+This project is maintained by
+[Geometric Cognitive Reasoning Group of Shanghai University (GCRG, SHU)](https://euclidesprobationem.github.io/)
+and Supported by
+[Geometric Cognitive Reasoning Group of Shanghai University (GCRG, SHU)](https://euclidesprobationem.github.io/).  
 Please contact with the author (xiaokaizhang1999@163.com) if you encounter any issues.
 
 ## Citation
+
+A BibTeX entry for LaTeX users is:
+> @misc{arxiv2023formalgeo,  
+> title={FormalGeo: The First Step Toward Human-like IMO-level Geometric Automated Reasoning},  
+> author={Xiaokai Zhang and Na Zhu and Yiming He and Jia Zou and Qike Huang and Xiaoxiao Jin and Yanjun Guo and Chenyang
+> Mao and Zhe Zhu and Dengfeng Yue and Fangzhen Zhu and Yang Li and Yifan Wang and Yiwen Huang and Runan Wang and Cheng
+> Qin and Zhenbing Zeng and Shaorong Xie and Xiangfeng Luo and Tuo Leng},  
+> year={2023},  
+> eprint={2310.18021},  
+> archivePrefix={arXiv},  
+> primaryClass={cs.AI}  
+> }

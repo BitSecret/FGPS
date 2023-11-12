@@ -1,14 +1,26 @@
-from utils.search.init_search import direction, method
-from solver.aux_tools.utils import load_json
+import os.path
+from fgps import direction, method
+from formalgeo.tools import load_json
+from formalgeo.data import DatasetLoader
+import argparse
 
 path_problems = "../../datasets/problems/"
 path_search_data = "../../datasets/solved/search/"
-path_search_log = "../search/"
+path_search_log = "search/"
 
 
-def main():
-    config_count = 8   # search configuration count
-    level_count = 6    # problem level count
+def get_args():
+    parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
+    parser.add_argument("--dataset", type=str, required=True, help="dataset")
+    parser.add_argument("--file_path", type=str, required=False, default="", help="file that save search result")
+
+    return parser.parse_args()
+
+
+def check(dataset, file_path):
+    dl = DatasetLoader(dataset)
+    config_count = 8  # search configuration count
+    level_count = 6  # problem level count
     problem_total = [0 for _ in range(level_count + 1)]
     i_map = {}
     j_map = {}
@@ -18,9 +30,8 @@ def main():
         for m in method:
             i_map[(d, m)] = count
             count += 1
-    for pid in range(1, 6982):
-        problem_CDL = load_json(path_problems + "{}.json".format(pid))
-        t_length = len(problem_CDL["theorem_seqs"])
+    for pid in range(1, dl.problem_number + 1):
+        t_length = dl.get_problem(pid)["problem_level"]
         if t_length <= 2:
             j_map[pid] = 1
         elif t_length <= 4:
@@ -46,11 +57,11 @@ def main():
     print("\n\nroughly\nmethod\tstrategy\tsolved\tunsolved\ttimeout\terror\tunhandled")
     for d in direction:
         for m in method:
-            data = load_json(path_search_log + "{}-{}.json".format(d, m))
-            solved = len(data["solved_pid"])
-            unsolved = len(data["unsolved_pid"])
-            timeout = len(data["timeout_pid"])
-            error = len(data["error_pid"])
+            log = load_json(os.path.join(file_path, "log-{}-{}.json".format(d, m)))
+            solved = len(log["solved_pid"])
+            unsolved = len(log["unsolved_pid"])
+            timeout = len(log["timeout_pid"])
+            error = len(log["error_pid"])
             unhandled = problem_total[0] - (solved + unsolved + timeout + error)
             print("{}\t{}\t{:.2f}\t{:.2f}\t{:.2f}\t{:.2f}\t{:.2f}".format(
                 d.upper(), m.upper(),
@@ -68,20 +79,20 @@ def main():
 
     for d in direction:
         for m in method:
-            search_data = load_json(path_search_data + "{}-{}.json".format(d, m))
-            search_data["unsolved"].update(search_data["timeout"])
-            search_data["unsolved"].update(search_data["error"])
+            data = load_json(os.path.join(file_path, "data-{}-{}.json".format(d, m)))
+            data["unsolved"].update(data["timeout"])
+            data["unsolved"].update(data["error"])
             i = i_map[(d, m)]
 
             for pid in range(1, 6982):
                 j = j_map[pid]
-                if str(pid) in search_data["solved"]:
-                    problem_data = search_data["solved"][str(pid)]
+                if str(pid) in data["solved"]:
+                    problem_data = data["solved"][str(pid)]
                     solved_count[i][j] += 1
                     timing_solved[i][j] += problem_data["timing"]
                     step_size_solved[i][j] += problem_data["step_size"]
-                elif str(pid) in search_data["unsolved"]:
-                    problem_data = search_data["unsolved"][str(pid)]
+                elif str(pid) in data["unsolved"]:
+                    problem_data = data["unsolved"][str(pid)]
                     timing_unsolved[i][j] += problem_data["timing"]
                     step_size_unsolved[i][j] += problem_data["step_size"]
 
@@ -140,7 +151,8 @@ def main():
                     print("\t{:.2f}".format(step_size_solved[i][j]), end="")
             print()
 
-    print("\nstep_size_unsolved\nmethod\tstrategy\ttotal" + "".join(["\tl{}".format(i + 1) for i in range(level_count)]))
+    print(
+        "\nstep_size_unsolved\nmethod\tstrategy\ttotal" + "".join(["\tl{}".format(i + 1) for i in range(level_count)]))
     for d in direction:
         for m in method:
             print("{}\t{}".format(d, m).upper(), end="")
@@ -154,4 +166,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    args = get_args()
+    check(args.dataset, args.file_path)

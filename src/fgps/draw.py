@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-from search_statistic import main
-from fgps.search import method
+from fgps import check
+from fgps import method
 
 
 def draw_diff():
@@ -170,7 +170,7 @@ def draw_diff():
 
 
 def draw_solved_results():
-    i_map, timing_solved, timing_unsolved, step_size_solved, step_size_unsolved = main()
+    i_map, timing_solved, timing_unsolved, step_size_solved, step_size_unsolved = check("formalgeo7k-v1", "231016")
     x = [1, 2, 3, 4, 5, 6]
 
     plt.figure(figsize=(16, 8))

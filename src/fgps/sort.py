@@ -1,5 +1,5 @@
 import os.path
-from fgps.search import direction, method
+from fgps import direction, method
 from formalgeo.tools import load_json, safe_save_json
 
 
@@ -31,3 +31,7 @@ def sort_search_result(file_path):
             safe_save_json(new_log, os.path.join(file_path, "log-{}-{}.json".format(d, m)))
 
             print("{}\t{}\t({}){}".format(d, m, len(unhandled), unhandled))
+
+
+if __name__ == '__main__':
+    sort_search_result("231016")
