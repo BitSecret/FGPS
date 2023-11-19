@@ -14,7 +14,7 @@ direction = ["fw", "bw"]  # forward, backward
 method = ["bfs", "dfs", "rs", "bs"]  # deep first, breadth first, random, beam
 
 
-def init_search(file_path=""):
+def init_search(file_path):
     data = {"solved": {}, "unsolved": {}, "timeout": {}, "error": {}}
     log = {"start_pid": 1, "end_pid": 6981, "solved_pid": [], "unsolved_pid": [], "timeout_pid": [], "error_pid": []}
     for d in direction:
@@ -27,7 +27,7 @@ def get_args():
     """python search.py --direction fw --method bfs"""
     parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
 
-    parser.add_argument("--dataset", type=str, required=True, help="dataset")
+    parser.add_argument("--datasets_path", type=str, required=True, help="datasets path")
     parser.add_argument("--direction", type=str, required=True, choices=("fw", "bw"), help="search direction")
     parser.add_argument("--method", type=str, required=True, choices=("bfs", "dfs", "rs", "bs"), help="search method")
     parser.add_argument("--max_depth", type=int, required=False, default=15, help="max search depth")
@@ -35,7 +35,8 @@ def get_args():
     parser.add_argument("--timeout", type=int, required=False, default=300, help="search timeout")
     parser.add_argument("--process_count", type=int, required=False, default=int(psutil.cpu_count() * 0.8),
                         help="multi process count")
-    parser.add_argument("--file_path", type=str, required=False, default="", help="file that save search result")
+    parser.add_argument("--file_path", type=str, required=False, default="./search_log",
+                        help="file that save search result")
     parser.add_argument("--random_seed", type=int, required=False, default=619, help="random seed")
 
     return parser.parse_args()
@@ -96,7 +97,10 @@ def clean_process(process_ids):
 
 def search(args):
     """Auto run search on all problems."""
-    dl = DatasetLoader(args.dataset)
+    if not os.path.exists(args.file_path):
+        os.makedirs(args.file_path)
+        init_search(args.file_path)
+    dl = DatasetLoader("formalgeo7k_v1", args.datasets_path)
     log_filename = os.path.join(args.file_path, "log-{}-{}.json".format(args.direction, args.method))
     data_filename = os.path.join(args.file_path, "data-{}-{}.json".format(args.direction, args.method))
     log = load_json(log_filename)

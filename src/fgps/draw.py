@@ -1,9 +1,11 @@
 import matplotlib.pyplot as plt
-from fgps import check
+from fgps import check_search
 from fgps import method
+import argparse
 
 
 def draw_diff():
+    """fig.8"""
     diff_data_7k = [
         [1, 1064, 15.24136943],
         [2, 1343, 19.23793153],
@@ -169,8 +171,9 @@ def draw_diff():
     plt.show()
 
 
-def draw_solved_results():
-    i_map, timing_solved, timing_unsolved, step_size_solved, step_size_unsolved = check("formalgeo7k-v1", "231016")
+def draw_solved_results(datasets_path, file_path):
+    """fig.9"""
+    i_map, timing_solved, timing_unsolved, step_size_solved, step_size_unsolved = check_search(datasets_path, file_path)
     x = [1, 2, 3, 4, 5, 6]
 
     plt.figure(figsize=(16, 8))
@@ -254,5 +257,10 @@ def draw_solved_results():
 
 
 if __name__ == '__main__':
-    # draw_diff()
-    draw_solved_results()
+    parser = argparse.ArgumentParser(description="Welcome to use FGPS!")
+    parser.add_argument("--datasets_path", type=str, required=True, help="datasets path")
+    parser.add_argument("--file_path", type=str, required=True, help="file that save search result")
+    args = parser.parse_args()
+
+    draw_diff()
+    draw_solved_results(args.datasets_path, args.file_path)

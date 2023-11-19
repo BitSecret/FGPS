@@ -3,8 +3,8 @@
 # Contact: xiaokaizhang1999@163.com
 
 __all__ = [
-    "direction", "method", "search", "check"
+    "direction", "method", "search", "check_search"
 ]
 
 from fgps.search import direction, method, search
-from fgps.check import check
+from fgps.check_search import check_search

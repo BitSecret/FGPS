@@ -4,21 +4,9 @@ from formalgeo.tools import load_json
 from formalgeo.data import DatasetLoader
 import argparse
 
-path_problems = "../../datasets/problems/"
-path_search_data = "../../datasets/solved/search/"
-path_search_log = "search/"
 
-
-def get_args():
-    parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
-    parser.add_argument("--dataset", type=str, required=True, help="dataset")
-    parser.add_argument("--file_path", type=str, required=False, default="", help="file that save search result")
-
-    return parser.parse_args()
-
-
-def check(dataset, file_path):
-    dl = DatasetLoader(dataset)
+def check_search(datasets_path, file_path):
+    dl = DatasetLoader("formalgeo7k_v1", datasets_path)
     config_count = 8  # search configuration count
     level_count = 6  # problem level count
     problem_total = [0 for _ in range(level_count + 1)]
@@ -30,7 +18,7 @@ def check(dataset, file_path):
         for m in method:
             i_map[(d, m)] = count
             count += 1
-    for pid in range(1, dl.problem_number + 1):
+    for pid in range(1, dl.info["problem_number"] + 1):
         t_length = dl.get_problem(pid)["problem_level"]
         if t_length <= 2:
             j_map[pid] = 1
@@ -166,5 +154,9 @@ def check(dataset, file_path):
 
 
 if __name__ == '__main__':
-    args = get_args()
-    check(args.dataset, args.file_path)
+    parser = argparse.ArgumentParser(description="Welcome to use FGPS!")
+    parser.add_argument("--datasets_path", type=str, required=True, help="datasets path")
+    parser.add_argument("--file_path", type=str, required=True, help="file that save search result")
+    args = parser.parse_args()
+
+    check_search(args.datasets_path, args.file_path)
