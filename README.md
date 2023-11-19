@@ -9,7 +9,7 @@ on datasets [formalgeo7k](https://github.com/FormalGeo/Datasets/tree/main/projec
 [formalgeo-imo](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo-imo).  
 For more information, please visit the FormalGeo [homepage](https://formalgeo.github.io/).  
 **Considering that the code and dataset of FormalGeo are not yet open-source, this project cannot be deployed at the
-moment. FormalGeo will be open-sourced as soon as possible.(Sep 19, 2023)**
+moment. FormalGeo will be open-sourced as soon as possible.(Nov 19, 2023)**
 
 ## Installation
 
@@ -83,13 +83,13 @@ to 15, and the beam size was set to 20. The total duration of the experiments wa
 for each problem was 300 seconds, the best success rate for problem-solving was approximately 30\%. When the timeout for
 each problem was increased to 600 seconds, the specific results are as follows.
 
-### The number of problems for different levels.
+**The number of problems for different levels.**
 
 | total | l1   | l2   | l3   | l4  | l5  | l6  |
 |-------|------|------|------|-----|-----|-----|
 | 6981  | 2409 | 1896 | 1248 | 824 | 313 | 291 |
 
-### Results of search-based problem-solving success rates
+**Results of search-based problem-solving success rates**
 
 | method | strategy | solved | unsolved | timeout |
 |--------|----------|--------|----------|---------|
@@ -102,7 +102,7 @@ each problem was increased to 600 seconds, the specific results are as follows.
 | BW     | RS       | 34.05  | 2.65     | 63.30   |
 | BW     | BS       | 34.39  | 12.86    | 52.74   |
 
-### Detail results of search-based problem-solving success rates
+**Detail results of search-based problem-solving success rates**
 
 | method | strategy | total | l1    | l2    | l3    | l4    | l5   | l6   |
 |--------|----------|-------|-------|-------|-------|-------|------|------|
@@ -115,7 +115,7 @@ each problem was increased to 600 seconds, the specific results are as follows.
 | BW     | RS       | 34.05 | 66.58 | 31.70 | 8.65  | 5.83  | 4.47 | 0.69 |
 | BW     | BS       | 34.39 | 67.08 | 31.33 | 9.46  | 6.31  | 5.75 | 1.03 |
 
-### timing (solved)
+**Timing (solved)**
 
 | method | strategy | total  | l1     | l2     | l3     | l4     | l5     | l6     |
 |--------|----------|--------|--------|--------|--------|--------|--------|--------|
@@ -128,7 +128,7 @@ each problem was increased to 600 seconds, the specific results are as follows.
 | BW     | RS       | 65.82  | 42.79  | 101.71 | 156.27 | 145.50 | 202.37 | 3.37   |
 | BW     | BS       | 75.55  | 47.44  | 120.53 | 172.50 | 165.80 | 207.28 | 146.26 |
 
-### timing (unsolved)
+**Timing (unsolved)**
 
 | method | strategy | total  | l1     | l2     | l3     | l4     | l5     | l6     |
 |--------|----------|--------|--------|--------|--------|--------|--------|--------|
@@ -141,7 +141,7 @@ each problem was increased to 600 seconds, the specific results are as follows.
 | BW     | RS       | 580.74 | 554.28 | 578.62 | 589.06 | 588.93 | 592.29 | 597.23 |
 | BW     | BS       | 513.86 | 338.82 | 508.33 | 566.67 | 574.09 | 585.96 | 578.35 |
 
-### step size (solved)
+**Step size (solved)**
 
 | method | strategy | total | l1    | l2    | l3     | l4     | l5     | l6     |
 |--------|----------|-------|-------|-------|--------|--------|--------|--------|
@@ -154,7 +154,7 @@ each problem was increased to 600 seconds, the specific results are as follows.
 | BW     | RS       | 4.34  | 5.02  | 3.13  | 2.81   | 1.27   | 1.00   | 1.00   |
 | BW     | BS       | 1.67  | 1.49  | 1.95  | 3.08   | 1.25   | 1.00   | 1.00   |
 
-### step size (unsolved)
+**Step size (unsolved)**
 
 | method | strategy | total  | l1      | l2     | l3     | l4     | l5     | l6     |
 |--------|----------|--------|---------|--------|--------|--------|--------|--------|
