@@ -1,45 +1,65 @@
 from formalgeo.solver import ForwardSearcher, BackwardSearcher
 from formalgeo.tools import load_json, save_json, safe_save_json
 from formalgeo.data import DatasetLoader
+from fgps import method, strategy, get_args
 from multiprocessing import Process, Queue
 from func_timeout import func_timeout, FunctionTimedOut
 import random
-import argparse
 import warnings
 import os
 import time
 import psutil
 
-direction = ["fw", "bw"]  # forward, backward
-method = ["bfs", "dfs", "rs", "bs"]  # deep first, breadth first, random, beam
 
-
-def init_search(file_path):
+def init_search_log(args, dl):
     data = {"solved": {}, "unsolved": {}, "timeout": {}, "error": {}}
-    log = {"start_pid": 1, "end_pid": 6981, "solved_pid": [], "unsolved_pid": [], "timeout_pid": [], "error_pid": []}
-    for d in direction:
-        for m in method:
-            save_json(log, os.path.join(file_path, "log-{}-{}.json".format(d, m)))
-            save_json(data, os.path.join(file_path, "data-{}-{}.json".format(d, m)))
+    log = {"start_pid": 1, "end_pid": dl.info["problem_number"], "solved_pid": [], "unsolved_pid": [],
+           "timeout_pid": [], "error_pid": []}
+
+    log_filename = os.path.join(
+        args.path_logs, "search", "{}-log-{}-{}.json".format(args.dataset_name, args.method, args.strategy))
+    data_filename = os.path.join(
+        args.path_logs, "search", "{}-data-{}-{}.json".format(args.dataset_name, args.method, args.strategy))
+
+    if log_filename not in os.listdir(os.path.join(args.path_logs, "search")):
+        save_json(log, log_filename)
+        save_json(data, data_filename)
+
+    return log_filename, data_filename
 
 
-def get_args():
-    """python search.py --direction fw --method bfs"""
-    parser = argparse.ArgumentParser(description="Welcome to use FormalGeo Searcher!")
+def sort_search_result(args):
+    print("direction\tmethod\tunhandled")
+    for m in method:
+        for s in strategy:
+            unhandled = []
+            log_filename = os.path.join(args.path_logs, "search", "{}-log-{}-{}.json".format(args.dataset_name, m, s))
+            data_filename = os.path.join(args.path_logs, "search", "{}-data-{}-{}.json".format(args.dataset_name, m, s))
+            log = load_json(log_filename)
+            data = load_json(data_filename)
+            new_log = {"start_pid": 1, "end_pid": log["end_pid"],
+                       "solved_pid": [], "unsolved_pid": [], "timeout_pid": [], "error_pid": []}
+            new_data = {"solved": {}, "unsolved": {}, "timeout": {}, "error": {}}
 
-    parser.add_argument("--datasets_path", type=str, required=True, help="datasets path")
-    parser.add_argument("--direction", type=str, required=True, choices=("fw", "bw"), help="search direction")
-    parser.add_argument("--method", type=str, required=True, choices=("bfs", "dfs", "rs", "bs"), help="search method")
-    parser.add_argument("--max_depth", type=int, required=False, default=15, help="max search depth")
-    parser.add_argument("--beam_size", type=int, required=False, default=20, help="search beam size")
-    parser.add_argument("--timeout", type=int, required=False, default=300, help="search timeout")
-    parser.add_argument("--process_count", type=int, required=False, default=int(psutil.cpu_count() * 0.8),
-                        help="multi process count")
-    parser.add_argument("--file_path", type=str, required=False, default="./search_log",
-                        help="file that save search result")
-    parser.add_argument("--random_seed", type=int, required=False, default=619, help="random seed")
+            for pid in range(1, log["end_pid"] + 1):
+                if str(pid) in data["solved"]:
+                    new_data["solved"][str(pid)] = data["solved"][str(pid)]
+                    new_log["solved_pid"].append(pid)
+                elif str(pid) in data["unsolved"]:
+                    new_data["unsolved"][str(pid)] = data["unsolved"][str(pid)]
+                    new_log["unsolved_pid"].append(pid)
+                elif str(pid) in data["error"]:
+                    new_data["error"][str(pid)] = data["error"][str(pid)]
+                    new_log["error_pid"].append(pid)
+                elif str(pid) in data["timeout"]:
+                    new_data["timeout"][str(pid)] = data["timeout"][str(pid)]
+                    new_log["timeout_pid"].append(pid)
+                else:
+                    unhandled.append(pid)
+            safe_save_json(new_log, log_filename)
+            safe_save_json(new_data, data_filename)
 
-    return parser.parse_args()
+            print("{}\t{}\t({}){}".format(m, s, len(unhandled), unhandled))
 
 
 def solve(args, dl, problem_id, reply_queue):
@@ -97,12 +117,8 @@ def clean_process(process_ids):
 
 def search(args):
     """Auto run search on all problems."""
-    if not os.path.exists(args.file_path):
-        os.makedirs(args.file_path)
-        init_search(args.file_path)
-    dl = DatasetLoader("formalgeo7k_v1", args.datasets_path)
-    log_filename = os.path.join(args.file_path, "log-{}-{}.json".format(args.direction, args.method))
-    data_filename = os.path.join(args.file_path, "data-{}-{}.json".format(args.direction, args.method))
+    dl = DatasetLoader(args.dataset_name, args.path_datasets)
+    log_filename, data_filename = init_search_log(args, dl)
     log = load_json(log_filename)
     data = load_json(data_filename)
     problem_ids = []  # problem id

@@ -7,7 +7,8 @@ Formal geometric problem solver based on FormalGeo.
 This project utilizes [FormalGeo](https://github.com/FormalGeo/FormalGeo) as its problem solver and conduct experiments
 on datasets [formalgeo7k](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo7k) and
 [formalgeo-imo](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo-imo).  
-For more information, please visit the FormalGeo [homepage](https://formalgeo.github.io/).  
+More information about FormalGeo will be found in [homepage](https://formalgeo.github.io/). FormalGeo is in its early
+stages and brimming with potential. We welcome anyone to join us in this exciting endeavor.  
 **Considering that the code and dataset of FormalGeo are not yet open-source, this project cannot be deployed at the
 moment. FormalGeo will be open-sourced as soon as possible.(Nov 19, 2023)**
 
@@ -34,35 +35,54 @@ Enter the path:
 
     $ cd src/fgps
 
-Download datasets formalgeo7k_v1 and formalgeo-imo_v1:
+Download datasets _formalgeo7k_v1_ and _formalgeo-imo_v1_:
 
-    $ python download.py --datasets_path <your_datasets_path>
+    $ python utils.py --func download_datasets --path_datasets ./user_datasets
 
-Check our search results on formalgeo7k_v1 dataset:
+Create logs dir:
 
-    $ python check_search.py --file_path 231016 --datasets_path <your_datasets_path>
+    $ python utils.py --func create_log_archi --path_logs ./user_logs
+
+View help information for personalizing configuration:
+
+    $ python utils.py --help
+
+### Auto problem-solving based on search
+
+Check our search results on _formalgeo7k_v1_ dataset:
+
+    $ python check_search.py --func check_search --path_datasets ./user_datasets
 
 Run the search method on your own computer:
 
-    $ python search.py --datasets_path <your_datasets_path> --direction fw --method bfs --file_path <your_search_log_path>
+    $ python search.py --path_datasets ./user_datasets --path_logs ./user_logs --dataset_name formalgeo7k_v1 --method fw --strategy bfs 
 
-View help information for personalizing configuration of search methods:
+### Interactive problem-solving
 
-    $ python search.py --help
+Check our results:
 
-Draw fig.8. and fig.9.:
-
-    $ python draw.py --file_path 231016 --datasets_path <your_datasets_path>
+    $ python check_run.py --func check_run --path_datasets ./user_datasets
 
 Verify the annotated problems in the dataset:
 
-    $ python check_problems.py --datasets_path <your_datasets_path> --dataset formalgeo7k_v1 --auto True
-    $ python check_problems.py --datasets_path <your_datasets_path> --dataset formalgeo-imo_v1 --auto True
+    $ python run.py --func auto_run --path_datasets ./user_datasets --path_logs ./user_logs --dataset_name formalgeo7k_v1
+    $ python run.py --func auto_run --path_datasets ./user_datasets --path_logs ./user_logs --dataset_name formalgeo-imo_v1
 
-Run interactively:
+Run interactively and show detail solution:
 
-    $ python check_problems.py --datasets_path <your_datasets_path> --dataset formalgeo7k_v1 --auto False
-    $ python check_problems.py --datasets_path <your_datasets_path> --dataset formalgeo-imo_v1 --auto False
+    $ python run.py --func run --path_datasets ./user_datasets --path_logs ./user_logs --dataset_name formalgeo7k_v1
+    $ python run.py --func run --path_datasets ./user_datasets --path_logs ./user_logs --dataset_name formalgeo-imo_v1
+
+You can find detail solution output in `./user_logs/run/problems`.
+
+### Others
+
+Draw fig.8 and fig.9:
+
+    $ python check_run.py --func draw_run_results --path_datasets ./user_datasets
+    $ python check_search.py --func draw_search_results --path_datasets ./user_datasets
+
+The image will be saved to `./user_logs/run/auto_logs`.
 
 ## Results
 

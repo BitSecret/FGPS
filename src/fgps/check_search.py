@@ -1,12 +1,12 @@
 import os.path
-from fgps import direction, method
+from fgps import method, strategy, get_args
 from formalgeo.tools import load_json
 from formalgeo.data import DatasetLoader
-import argparse
+import matplotlib.pyplot as plt
 
 
-def check_search(datasets_path, file_path):
-    dl = DatasetLoader("formalgeo7k_v1", datasets_path)
+def check_search(path_datasets, dataset_name, path_logs):
+    dl = DatasetLoader(dataset_name, path_datasets)
     config_count = 8  # search configuration count
     level_count = 6  # problem level count
     problem_total = [0 for _ in range(level_count + 1)]
@@ -14,9 +14,9 @@ def check_search(datasets_path, file_path):
     j_map = {}
 
     count = 0
-    for d in direction:
-        for m in method:
-            i_map[(d, m)] = count
+    for m in method:
+        for s in strategy:
+            i_map[(m, s)] = count
             count += 1
     for pid in range(1, dl.info["problem_number"] + 1):
         t_length = dl.get_problem(pid)["problem_level"]
@@ -43,16 +43,16 @@ def check_search(datasets_path, file_path):
         print("{}\t".format(problem_total[i]), end="")
 
     print("\n\nroughly\nmethod\tstrategy\tsolved\tunsolved\ttimeout\terror\tunhandled")
-    for d in direction:
-        for m in method:
-            log = load_json(os.path.join(file_path, "log-{}-{}.json".format(d, m)))
+    for m in method:
+        for s in strategy:
+            log = load_json(os.path.join(path_logs, "search", "{}-log-{}-{}.json".format(dataset_name, m, s)))
             solved = len(log["solved_pid"])
             unsolved = len(log["unsolved_pid"])
             timeout = len(log["timeout_pid"])
             error = len(log["error_pid"])
             unhandled = problem_total[0] - (solved + unsolved + timeout + error)
             print("{}\t{}\t{:.2f}\t{:.2f}\t{:.2f}\t{:.2f}\t{:.2f}".format(
-                d.upper(), m.upper(),
+                m.upper(), s.upper(),
                 solved / problem_total[0] * 100,
                 unsolved / problem_total[0] * 100,
                 timeout / problem_total[0] * 100,
@@ -65,14 +65,14 @@ def check_search(datasets_path, file_path):
     step_size_solved = [[0 for _ in range(level_count + 1)] for _ in range(config_count)]
     step_size_unsolved = [[0 for _ in range(level_count + 1)] for _ in range(config_count)]
 
-    for d in direction:
-        for m in method:
-            data = load_json(os.path.join(file_path, "data-{}-{}.json".format(d, m)))
+    for m in method:
+        for s in strategy:
+            data = load_json(os.path.join(path_logs, "search", "{}-data-{}-{}.json".format(dataset_name, m, s)))
             data["unsolved"].update(data["timeout"])
             data["unsolved"].update(data["error"])
-            i = i_map[(d, m)]
+            i = i_map[(m, s)]
 
-            for pid in range(1, 6982):
+            for pid in range(1, dl.info["problem_number"] + 1):
                 j = j_map[pid]
                 if str(pid) in data["solved"]:
                     problem_data = data["solved"][str(pid)]
@@ -84,9 +84,9 @@ def check_search(datasets_path, file_path):
                     timing_unsolved[i][j] += problem_data["timing"]
                     step_size_unsolved[i][j] += problem_data["step_size"]
 
-    for d in direction:
-        for m in method:
-            i = i_map[(d, m)]
+    for m in method:
+        for s in strategy:
+            i = i_map[(m, s)]
             for j in range(level_count):
                 solved_count[i][0] += solved_count[i][j + 1]
                 timing_solved[i][0] += timing_solved[i][j + 1]
@@ -95,19 +95,19 @@ def check_search(datasets_path, file_path):
                 step_size_unsolved[i][0] += step_size_unsolved[i][j + 1]
 
     print("\nsolved\nmethod\tstrategy\ttotal" + "".join(["\tl{}".format(i + 1) for i in range(level_count)]))
-    for d in direction:
-        for m in method:
-            print("{}\t{}".format(d, m).upper(), end="")
-            i = i_map[(d, m)]
+    for m in method:
+        for s in strategy:
+            print("{}\t{}".format(m, s).upper(), end="")
+            i = i_map[(m, s)]
             for j in range(level_count + 1):
                 print("\t{:.2f}".format(solved_count[i][j] / problem_total[j] * 100), end="")
             print()
 
     print("\ntiming_solved\nmethod\tstrategy\ttotal" + "".join(["\tl{}".format(i + 1) for i in range(level_count)]))
-    for d in direction:
-        for m in method:
-            print("{}\t{}".format(d, m).upper(), end="")
-            i = i_map[(d, m)]
+    for m in method:
+        for s in strategy:
+            print("{}\t{}".format(m, s).upper(), end="")
+            i = i_map[(m, s)]
             for j in range(level_count + 1):
                 if solved_count[i][j] == 0:
                     print("\tNaN", end="")
@@ -117,20 +117,20 @@ def check_search(datasets_path, file_path):
             print()
 
     print("\ntiming_unsolved\nmethod\tstrategy\ttotal" + "".join(["\tl{}".format(i + 1) for i in range(level_count)]))
-    for d in direction:
-        for m in method:
-            print("{}\t{}".format(d, m).upper(), end="")
-            i = i_map[(d, m)]
+    for m in method:
+        for s in strategy:
+            print("{}\t{}".format(m, s).upper(), end="")
+            i = i_map[(m, s)]
             for j in range(level_count + 1):
                 timing_unsolved[i][j] = timing_unsolved[i][j] / (problem_total[j] - solved_count[i][j])
                 print("\t{:.2f}".format(timing_unsolved[i][j]), end="")
             print()
 
     print("\nstep_size_solved\nmethod\tstrategy\ttotal" + "".join(["\tl{}".format(i + 1) for i in range(level_count)]))
-    for d in direction:
-        for m in method:
-            print("{}\t{}".format(d, m).upper(), end="")
-            i = i_map[(d, m)]
+    for m in method:
+        for s in strategy:
+            print("{}\t{}".format(m, s).upper(), end="")
+            i = i_map[(m, s)]
             for j in range(level_count + 1):
                 if solved_count[i][j] == 0:
                     print("\tNaN", end="")
@@ -141,10 +141,10 @@ def check_search(datasets_path, file_path):
 
     print(
         "\nstep_size_unsolved\nmethod\tstrategy\ttotal" + "".join(["\tl{}".format(i + 1) for i in range(level_count)]))
-    for d in direction:
-        for m in method:
-            print("{}\t{}".format(d, m).upper(), end="")
-            i = i_map[(d, m)]
+    for m in method:
+        for s in strategy:
+            print("{}\t{}".format(m, s).upper(), end="")
+            i = i_map[(m, s)]
             for j in range(level_count + 1):
                 step_size_unsolved[i][j] = step_size_unsolved[i][j] / (problem_total[j] - solved_count[i][j])
                 print("\t{:.2f}".format(step_size_unsolved[i][j]), end="")
@@ -153,10 +153,100 @@ def check_search(datasets_path, file_path):
     return i_map, timing_solved, timing_unsolved, step_size_solved, step_size_unsolved
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Welcome to use FGPS!")
-    parser.add_argument("--datasets_path", type=str, required=True, help="datasets path")
-    parser.add_argument("--file_path", type=str, required=True, help="file that save search result")
-    args = parser.parse_args()
+def draw_search_results(path_datasets, dataset_name, path_logs):
+    i_map, timing_solved, timing_unsolved, step_size_solved, step_size_unsolved = check_search(
+        path_datasets, dataset_name, path_logs)
+    x = [1, 2, 3, 4, 5, 6]
 
-    check_search(args.datasets_path, args.file_path)
+    plt.figure(figsize=(16, 8))
+    fontsize = 14
+
+    plt.subplot(241)
+    for s in strategy:
+        y = timing_solved[i_map[("fw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("fw", s).upper())
+    plt.title("Time (forward, solved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average time (s)", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.subplot(242)
+    for s in strategy:
+        y = timing_unsolved[i_map[("fw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("fw", s).upper())
+    plt.title("Time (forward, unsolved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average time (s)", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.subplot(243)
+    for s in strategy:
+        y = timing_solved[i_map[("bw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("bw", s).upper())
+    plt.title("Time (backward, solved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average time (s)", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.subplot(244)
+    for s in strategy:
+        y = timing_unsolved[i_map[("bw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("bw", s).upper())
+    plt.title("Time (backward, unsolved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average time (s)", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.subplot(245)
+    for s in strategy:
+        y = step_size_solved[i_map[("fw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("fw", s).upper())
+    plt.title("Step (forward, solved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average step", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.subplot(246)
+    for s in strategy:
+        y = step_size_unsolved[i_map[("fw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("fw", s).upper())
+    plt.title("Step (forward, unsolved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average step", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.subplot(247)
+    for s in strategy:
+        y = step_size_solved[i_map[("bw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("bw", s).upper())
+    plt.title("Step (backward, solved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average step", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.subplot(248)
+    for s in strategy:
+        y = step_size_unsolved[i_map[("bw", s)]][1:]
+        plt.plot(x, y, label="{}-{}".format("bw", s).upper())
+    plt.title("Step (backward, unsolved)", fontsize=fontsize)
+    plt.xlabel("Problem Difficulty", fontsize=fontsize)
+    plt.ylabel("Average step", fontsize=fontsize)
+    plt.legend(loc="upper left")
+
+    plt.tight_layout()
+    plt.savefig(os.path.join(path_logs, "run/auto_logs/chart_search_results.pdf"), format='pdf')
+    plt.show()
+
+
+if __name__ == '__main__':
+    args = get_args()
+    if args.func == "check_search":
+        check_search(args.path_datasets, "formalgeo7k_v1", "./231016")
+    elif args.func == "draw_search_results":
+        draw_search_results(args.path_datasets, "formalgeo7k_v1", "./231016")
+    else:
+        msg = "No function name {}.".format(args.func)
+        raise Exception(msg)
+
+    # check_search("F:/Datasets/released", "formalgeo7k_v1", "./231016")
+    # draw_search_results("F:/Datasets/released", "formalgeo7k_v1", "./231016")

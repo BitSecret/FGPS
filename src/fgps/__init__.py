@@ -3,8 +3,9 @@
 # Contact: xiaokaizhang1999@163.com
 
 __all__ = [
-    "direction", "method", "search", "check_search"
+    "method", "strategy", "get_args", "check_search", "check_run"
 ]
 
-from fgps.search import direction, method, search
+from fgps.utils import method, strategy, get_args
 from fgps.check_search import check_search
+from fgps.check_run import check_run

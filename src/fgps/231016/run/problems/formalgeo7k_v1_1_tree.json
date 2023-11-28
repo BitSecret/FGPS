@@ -1,0 +1,192 @@
+{
+  "0": {
+    "conditions": [
+      "Shape(RS,ST,TR)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Shape(ST,TR,RS)",
+      "Shape(TR,RS,ST)"
+    ]
+  },
+  "1": {
+    "conditions": [
+      "Line(RS)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(SR)",
+      "Point(R)",
+      "Point(S)"
+    ]
+  },
+  "2": {
+    "conditions": [
+      "Angle(RST)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(ST)",
+      "Angle(TSR)"
+    ]
+  },
+  "3": {
+    "conditions": [
+      "Line(ST)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(TS)",
+      "Point(T)"
+    ]
+  },
+  "4": {
+    "conditions": [
+      "Angle(STR)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(TR)",
+      "Angle(RTS)"
+    ]
+  },
+  "5": {
+    "conditions": [
+      "Line(TR)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(RT)"
+    ]
+  },
+  "6": {
+    "conditions": [
+      "Polygon(RST)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Polygon(STR)",
+      "Polygon(TRS)"
+    ]
+  },
+  "7": {
+    "conditions": [
+      "Shape(XY,YZ,ZX)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Shape(YZ,ZX,XY)",
+      "Shape(ZX,XY,YZ)"
+    ]
+  },
+  "8": {
+    "conditions": [
+      "Line(XY)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(YX)",
+      "Point(X)",
+      "Point(Y)"
+    ]
+  },
+  "9": {
+    "conditions": [
+      "Angle(XYZ)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(YZ)",
+      "Angle(ZYX)"
+    ]
+  },
+  "10": {
+    "conditions": [
+      "Line(YZ)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(ZY)",
+      "Point(Z)"
+    ]
+  },
+  "11": {
+    "conditions": [
+      "Angle(YZX)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(ZX)",
+      "Angle(XZY)"
+    ]
+  },
+  "12": {
+    "conditions": [
+      "Line(ZX)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Line(XZ)"
+    ]
+  },
+  "13": {
+    "conditions": [
+      "Polygon(XYZ)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Polygon(YZX)",
+      "Polygon(ZXY)"
+    ]
+  },
+  "14": {
+    "conditions": [
+      "Angle(TRS)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Angle(SRT)"
+    ]
+  },
+  "15": {
+    "conditions": [
+      "Angle(ZXY)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "Angle(YXZ)"
+    ]
+  },
+  "16": {
+    "conditions": [
+      "CongruentBetweenTriangle(RST,XYZ)"
+    ],
+    "theorem": "extended",
+    "conclusion": [
+      "CongruentBetweenTriangle(STR,YZX)",
+      "CongruentBetweenTriangle(TRS,ZXY)"
+    ]
+  },
+  "17": {
+    "conditions": [
+      "CongruentBetweenTriangle(RST,XYZ)"
+    ],
+    "theorem": "congruent_triangle_property_angle_equal(1,RST,XYZ)",
+    "conclusion": [
+      "Equal(MeasureOfAngle(TRS),MeasureOfAngle(ZXY))"
+    ]
+  },
+  "18": {
+    "conditions": [
+      "Equation(ma_trs-4*y+10)",
+      "Equation(ma_zxy-3*y-5)",
+      "Equal(MeasureOfAngle(TRS),MeasureOfAngle(ZXY))"
+    ],
+    "theorem": "solve_eq",
+    "conclusion": [
+      "Value(MeasureOfAngle(TRS),50)",
+      "Value(MeasureOfAngle(ZXY),50)",
+      "Value(y,15)"
+    ]
+  }
+}
