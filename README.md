@@ -8,9 +8,7 @@ This project utilizes [FormalGeo](https://github.com/FormalGeo/FormalGeo) as its
 on datasets [formalgeo7k](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo7k) and
 [formalgeo-imo](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo-imo).  
 More information about FormalGeo will be found in [homepage](https://formalgeo.github.io/). FormalGeo is in its early
-stages and brimming with potential. We welcome anyone to join us in this exciting endeavor.  
-**Considering that the code and dataset of FormalGeo are not yet open-source, this project cannot be deployed at the
-moment. FormalGeo will be open-sourced as soon as possible.(Nov 19, 2023)**
+stages and brimming with potential. We welcome anyone to join us in this exciting endeavor. 
 
 ## Installation
 
