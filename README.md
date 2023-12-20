@@ -82,7 +82,7 @@ Draw fig.8 and fig.9:
     $ python check_run.py --func draw_run_results --path_datasets ./user_datasets
     $ python check_search.py --func draw_search_results --path_datasets ./user_datasets
 
-The image will be saved to `./user_logs/run/auto_logs`.
+The image will be saved to `./231016/run/auto_logs`.
 
 ## Results
 

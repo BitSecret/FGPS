@@ -62,27 +62,30 @@ def sort_search_result(args):
             print("{}\t{}\t({}){}".format(m, s, len(unhandled), unhandled))
 
 
-def solve(args, dl, problem_id, reply_queue):
+def solve(args, dl, problem_id, reply_queue, debug=False):
     """
     Start a process to solve problem.
-    :param args: <argparse>, (args.direction, args.method, args.max_depth, args.beam_size, args.timeout).
+    :param args: <argparse>, (args.method, args.strategy, args.max_depth, args.beam_size, args.timeout).
     :param problem_id: <int>, problem id.
     :param dl: <DatasetLoader>, use dl loading predicate_GDL, theorem_GDL and t_info.
     :param reply_queue: <Queue>, return solved result through this queue.
+    :param debug: <Bool>, debug output.
     """
     warnings.filterwarnings("ignore")
     random.seed(args.random_seed)
-    if args.direction == "fw":
+    if args.method == "fw":
         searcher = ForwardSearcher(
             dl.predicate_GDL, dl.theorem_GDL,
-            args.method, args.max_depth, args.beam_size,
-            load_json(os.path.join(dl.datasets_path, "files/t_info.json"))
+            args.strategy, args.max_depth, args.beam_size,
+            load_json(os.path.join(dl.dataset_path, "files/t_info.json")),
+            debug=debug
         )
     else:
         searcher = BackwardSearcher(
             dl.predicate_GDL, dl.theorem_GDL,
-            args.method, args.max_depth, args.beam_size,
-            load_json(os.path.join(dl.datasets_path, "files/t_info.json"))
+            args.strategy, args.max_depth, args.beam_size,
+            load_json(os.path.join(dl.dataset_path, "files/t_info.json")),
+            debug=debug
         )
 
     timing = time.time()
@@ -155,3 +158,15 @@ def search(args):
 
 if __name__ == '__main__':
     search(get_args())
+    # random.seed(619)
+    # warnings.filterwarnings("ignore")
+    # dl = DatasetLoader("formalgeo-imo_v1", "F:/Datasets/released/")
+    # searcher = ForwardSearcher(
+    #     dl.predicate_GDL, dl.theorem_GDL,
+    #     "bfs", 60, 30,
+    #     load_json(os.path.join(dl.dataset_path, "files/t_info.json")),
+    #     debug=False
+    # )
+    # searcher.init_search(dl.get_problem(3))
+    # solved, seqs = func_timeout(3600, searcher.search())
+

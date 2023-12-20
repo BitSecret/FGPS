@@ -143,8 +143,13 @@ def draw_run_results(path_datasets, path_logs):
 if __name__ == '__main__':
     args = get_args()
     if args.func == "check_run":
-        check_run(args.path_datasets, args.dataset_name, args.path_logs)
-        check_run(args.path_datasets, args.dataset_name, args.path_logs, True)
+        check_run(args.path_datasets, "formalgeo7k_v1", "./231016")
+        print()
+        check_run(args.path_datasets, "formalgeo7k_v1", "./231016", True)
+        print()
+        check_run(args.path_datasets, "formalgeo-imo_v1", "./231016")
+        print()
+        check_run(args.path_datasets, "formalgeo-imo_v1", "./231016", True)
     elif args.func == "draw_run_results":
         draw_run_results(args.path_datasets, "./231016")
     else:
