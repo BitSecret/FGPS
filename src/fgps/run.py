@@ -1,6 +1,6 @@
 from formalgeo.data import DatasetLoader
 from formalgeo.tools import load_json, save_json, safe_save_json, simple_show, show_solution
-from formalgeo.tools import get_solution_step, get_solution_hypertree, get_theorem_dag
+from formalgeo.tools import get_solution_hypertree, get_theorem_dag
 from formalgeo.parse import parse_theorem_seqs
 from formalgeo.solver import Interactor
 from fgps import get_args
@@ -69,8 +69,6 @@ def run(path_datasets, dataset_name, path_logs):
 
         save_json(solver.problem.parsed_problem_CDL,
                   os.path.join(path_logs, "run/problems/{}_{}_parsed_cdl.json".format(dataset_name, pid)))
-        save_json(get_solution_step(solver.problem),
-                  os.path.join(path_logs, "run/problems/{}_{}_step.json".format(dataset_name, pid)))
         save_json(get_solution_hypertree(solver.problem),
                   os.path.join(path_logs, "run/problems/{}_{}_tree.json".format(dataset_name, pid)))
         save_json(get_theorem_dag(solver.problem),

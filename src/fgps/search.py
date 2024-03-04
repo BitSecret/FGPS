@@ -89,18 +89,19 @@ def solve(args, dl, problem_id, reply_queue, debug=False):
         )
 
     timing = time.time()
-    try:
-        searcher.init_search(dl.get_problem(problem_id))
-        solved, seqs = func_timeout(args.timeout, searcher.search())
-        if solved:
-            reply_queue.put((os.getpid(), problem_id, "solved", seqs, time.time() - timing, searcher.step_size))
-        else:
-            reply_queue.put((os.getpid(), problem_id, "unsolved", "None", time.time() - timing, searcher.step_size))
-    except FunctionTimedOut:
-        reply_queue.put(
-            (os.getpid(), problem_id, "timeout", str(args.timeout), time.time() - timing, searcher.step_size))
-    except BaseException as e:
-        reply_queue.put((os.getpid(), problem_id, "error", repr(e), time.time() - timing, searcher.step_size))
+    if not debug:
+        try:
+            searcher.init_search(dl.get_problem(problem_id))
+            solved, seqs = func_timeout(args.timeout, searcher.search)
+            if solved:
+                reply_queue.put((os.getpid(), problem_id, "solved", seqs, time.time() - timing, searcher.step_size))
+            else:
+                reply_queue.put((os.getpid(), problem_id, "unsolved", "None", time.time() - timing, searcher.step_size))
+        except FunctionTimedOut:
+            reply_queue.put(
+                (os.getpid(), problem_id, "timeout", str(args.timeout), time.time() - timing, searcher.step_size))
+        except BaseException as e:
+            reply_queue.put((os.getpid(), problem_id, "error", repr(e), time.time() - timing, searcher.step_size))
 
 
 def start_process(args, dl, problem_ids, process_ids, reply_queue):
@@ -156,17 +157,11 @@ def search(args):
             clean_count = 0
 
 
-if __name__ == '__main__':
-    search(get_args())
-    # random.seed(619)
-    # warnings.filterwarnings("ignore")
-    # dl = DatasetLoader("formalgeo-imo_v1", "F:/Datasets/released/")
-    # searcher = ForwardSearcher(
-    #     dl.predicate_GDL, dl.theorem_GDL,
-    #     "bfs", 60, 30,
-    #     load_json(os.path.join(dl.dataset_path, "files/t_info.json")),
-    #     debug=False
-    # )
-    # searcher.init_search(dl.get_problem(3))
-    # solved, seqs = func_timeout(3600, searcher.search())
+def test_search(args, problem_id):
+    dl = DatasetLoader(args.dataset_name, args.path_datasets)
+    solve(args, dl, problem_id, None, True)
 
+
+if __name__ == '__main__':
+    # test_search(get_args(), problem_id=4)
+    search(get_args())
