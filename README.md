@@ -3,12 +3,15 @@
 [![Version](https://img.shields.io/badge/Version-1.0-brightgreen)](https://github.com/BitSecret/FGPS)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 [![Survey](https://img.shields.io/badge/Survey-FormalGeo-blue)](https://github.com/FormalGeo/FormalGeo)  
-Formal geometric problem solver based on FormalGeo.  
+Formal geometric problem solver (FGPS) based on FormalGeo.
+
 This project utilizes [FormalGeo](https://github.com/FormalGeo/FormalGeo) as its problem solver and conduct experiments
 on datasets [formalgeo7k](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo7k) and
-[formalgeo-imo](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo-imo).  
+[formalgeo-imo](https://github.com/FormalGeo/Datasets/tree/main/projects/formalgeo-imo). Our paper introducing the
+functions and implementation of FGPS can be obtained at [Symmetry 2024](https://www.mdpi.com/2073-8994/16/4/404).
+
 More information about FormalGeo will be found in [homepage](https://formalgeo.github.io/). FormalGeo is in its early
-stages and brimming with potential. We welcome anyone to join us in this exciting endeavor. 
+stages and brimming with potential. We welcome anyone to join us in this exciting endeavor.
 
 ## Installation
 
@@ -196,13 +199,15 @@ Please contact with the author (xiaokaizhang1999@163.com) if you encounter any i
 ## Citation
 
 A BibTeX entry for LaTeX users is:
-> @misc{arxiv2023formalgeo,  
-> title={FormalGeo: The First Step Toward Human-like IMO-level Geometric Automated Reasoning},  
-> author={Xiaokai Zhang and Na Zhu and Yiming He and Jia Zou and Qike Huang and Xiaoxiao Jin and Yanjun Guo and Chenyang
-> Mao and Zhe Zhu and Dengfeng Yue and Fangzhen Zhu and Yang Li and Yifan Wang and Yiwen Huang and Runan Wang and Cheng
-> Qin and Zhenbing Zeng and Shaorong Xie and Xiangfeng Luo and Tuo Leng},  
-> year={2023},  
-> eprint={2310.18021},  
-> archivePrefix={arXiv},  
-> primaryClass={cs.AI}  
+> @article{zhang2024fgeosss,  
+> AUTHOR = {Zhang, Xiaokai and Zhu, Na and He, Yiming and Zou, Jia and Qin, Cheng and Li, Yang and Leng, Tuo},  
+> TITLE = {FGeo-SSS: A Search-Based Symbolic Solver for Human-like Automated Geometric Reasoning},  
+> JOURNAL = {Symmetry},  
+> VOLUME = {16},  
+> YEAR = {2024},  
+> NUMBER = {4},  
+> ARTICLE-NUMBER = {404},  
+> URL = {https://www.mdpi.com/2073-8994/16/4/404},  
+> ISSN = {2073-8994},  
+> DOI = {10.3390/sym16040404}  
 > }

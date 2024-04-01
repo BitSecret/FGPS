@@ -3,6 +3,15 @@ from fgps import get_args
 from formalgeo.tools import load_json
 from formalgeo.data import DatasetLoader
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+
+def add_commas(x, pos):
+    """Add commas to large numbers."""
+    return f'{x:,.0f}'
+
+
+formatter = FuncFormatter(add_commas)
 
 
 def check_run(path_datasets, dataset_name, path_logs, expanded=False):
@@ -113,6 +122,8 @@ def draw_run_results(path_datasets, path_logs):
     plt.ylabel("Average Time (ms)", fontsize=fontsize)
     plt.title(" ", fontsize=fontsize)
     plt.legend(loc="upper left")
+    plt.gca().xaxis.set_major_formatter(formatter)
+    plt.gca().yaxis.set_major_formatter(formatter)
 
     plt.subplot(246)
     plt.plot(level_7k_e, timing_7k_e, label='formalgeo7k(DA)')
@@ -120,6 +131,8 @@ def draw_run_results(path_datasets, path_logs):
     plt.ylabel("Average Time (ms)", fontsize=fontsize)
     plt.title(" ", fontsize=fontsize)
     plt.legend(loc="upper left")
+    plt.gca().xaxis.set_major_formatter(formatter)
+    plt.gca().yaxis.set_major_formatter(formatter)
 
     plt.subplot(247)
     plt.plot(level_imo, timing_imo, label='formalgeo-imo')
@@ -127,6 +140,8 @@ def draw_run_results(path_datasets, path_logs):
     plt.ylabel("Average Time (ms)", fontsize=fontsize)
     plt.title(" ", fontsize=fontsize)
     plt.legend(loc="upper left")
+    plt.gca().xaxis.set_major_formatter(formatter)
+    plt.gca().yaxis.set_major_formatter(formatter)
 
     plt.subplot(248)
     plt.plot(level_imo_e, timing_imo_e, label='formalgeo-imo(DA)')
@@ -134,6 +149,8 @@ def draw_run_results(path_datasets, path_logs):
     plt.ylabel("Average Time (ms)", fontsize=fontsize)
     plt.title(" ", fontsize=fontsize)
     plt.legend(loc="upper left")
+    plt.gca().xaxis.set_major_formatter(formatter)
+    plt.gca().yaxis.set_major_formatter(formatter)
 
     plt.tight_layout()
     plt.savefig(os.path.join(path_logs, "run/auto_logs/chart_problem_level.pdf"), format='pdf')
