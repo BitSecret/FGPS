@@ -1,6 +1,6 @@
 # FGPS
 
-[![Version](https://img.shields.io/badge/Version-1.0-brightgreen)](https://github.com/BitSecret/FGPS)
+[![Version](https://img.shields.io/badge/Version-0.0.2-brightgreen)](https://github.com/BitSecret/FGPS)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 [![Survey](https://img.shields.io/badge/Survey-FormalGeo-blue)](https://github.com/FormalGeo/FormalGeo)  
 Formal geometric problem solver (FGPS) based on FormalGeo.
@@ -59,6 +59,12 @@ Run the search method on your own computer:
     $ python search.py --path_datasets ./user_datasets --path_logs ./user_logs --dataset_name formalgeo7k_v1 --method fw --strategy bfs 
 
 ### Interactive problem-solving
+
+Notes: In the latest update, `formalgeo7k_v1` has removed the expanded problem. This will cause functions
+in `check_run.py` with the `expanded` parameter to throw errors. Please access the
+project [formalgeo7k](https://github.com/BitSecret/formalgeo7k) to obtain the original `formalgeo7k_v1` dataset.
+Additionally, versions of `FormalGeo` starting from 0.0.4 have also removed functions related to the expanded problem.
+Please revert back to version 0.0.3.
 
 Check our results:
 

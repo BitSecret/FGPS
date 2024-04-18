@@ -20,7 +20,7 @@ def auto_run(path_datasets, dataset_name, path_logs):
     warnings.filterwarnings("ignore")
     print("pid\tcorrect_answer\tsolved\tsolved_answer\ttiming(s)")
 
-    for pid in range(log["start_pid"], dl.info["expanded_problem_number"] + 1):
+    for pid in range(log["start_pid"], dl.info["problem_number"] + 1):
         try:  # try solve
             timing = time.time()
             problem_CDL = dl.get_problem(pid)
